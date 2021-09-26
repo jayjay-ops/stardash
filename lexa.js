@@ -446,7 +446,7 @@ case 'me':
 case 'premium':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
-  capt = `Total Hits : ${reqcmd} \nInsta: johann.oo7 Snapchat: joewilliams007 \nUser: ${_user.length}`
+  capt = `Hii here Shiba Menu \nWuff Wuff \nUser: ${_user.length}`
   thum = await fs.readFileSync('./docs/mrf.jpeg').toString('base64')
   if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   if (args[0] === 'fun' ) {
