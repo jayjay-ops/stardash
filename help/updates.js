@@ -29,6 +29,11 @@ ver. 11 -> 12
 [+++] New Menu 
 [+++] Premium is now VIP
 ─────────────────
+[NEW] .animal
+[NEW] .pokemon
+[NEW] .love Name Name
+[NEW] .ass 
+─────────────────
 `
 
 
@@ -45,6 +50,11 @@ ver. 11 -> 12
 [+++] Verify in EN
 [+++] New Menu 
 [+++] Premium is now VIP
+─────────────────
+[NEW] .animal
+[NEW] .pokemon
+[NEW] .love Name Name
+[NEW] .ass 
 ─────────────────
 `
 
