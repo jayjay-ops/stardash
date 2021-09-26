@@ -487,7 +487,7 @@ case 'simi':
 if (!isVerify) return reply(userB())
 		if (args.length < 1) return reply(`Hai ${pushname}`)
 		sims = value
-		simt = await fs.readFileSync('./media/mrf.jpeg').toString('base64')
+		simt = await fs.readFileSync('./media/shiba.jpg').toString('base64')
 					try {
 		anu = await fetchJson(`https://fdciabdul.tech/api/ayla/?pesan=${sims}`, {method: 'get'})
     jawab = anu.jawab
