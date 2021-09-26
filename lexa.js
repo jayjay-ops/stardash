@@ -468,7 +468,7 @@ case 'premium':
 case 'updates':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
-  capt = `Total Hits : ${reqcmd} \nInsta: shiba Snapchat: joewilliams007 \nUser: ${_user.length}`
+  capt = `Hi i am Shiba \nHere are the Updates\nStarDust`
   thum = await fs.readFileSync('./media/shiba.jpg').toString('base64')
   if (args.length < 1) return replyimg(updates(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
 	  
