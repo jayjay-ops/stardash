@@ -102,7 +102,9 @@ const { negara } = require('./result/kodenegara');
 const _lapor = JSON.parse(fs.readFileSync('./report/lapor.json'));
 const _request = JSON.parse(fs.readFileSync('./report/request.json'));
 
-const _update = JSON.parse(fs.readFileSync('./result/update.json'));
+
+//-- UPDATE CHANGELOG
+const _update = JSON.parse(fs.readFileSync('./report/update.json'));
 
 //-- Help
 const { menu, menu1, menu2, menuOwner, menuGrup} = require('./help/menu');
@@ -380,7 +382,7 @@ console.error(err)
 }
 
 // ---- Antilink 
-const linkwa = 'htt'
+const linkwa = 'http'
 		if (budy.includes(`${linkwa}`)){
 		if (!isGroup) return
 		if (!isAnti) return
@@ -429,12 +431,6 @@ case 'ily':
 reply('ily2')
 }	
 	
-//--Auto response
-switch(is) {
-case 'Hii':
-reply('Hiii')
-}	
-		
 	
 	
 //-- Command
