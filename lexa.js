@@ -1161,7 +1161,7 @@ mentionedJid: jids
   quoted: mek
 }
 await Lxa.sendMessage(from, options, text)
-} catch (e) {
+ catch (e) {
   reply(err())
   console.log('Error : %s', color(e, 'orange'))
 }
