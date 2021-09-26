@@ -598,6 +598,12 @@ break
 
 //-- ENGLISH
 
+//-- Tod truth
+case 'truth':
+  if (!isVerify) return reply(userB())
+  const truthen = _truthen[Math.floor(Math.random() * _truthen.length)]
+  reply(`★ *Truth*\n${truthen}`)
+break
 
 
 //-- Fakt
@@ -609,6 +615,13 @@ case 'fact':
 break
 
 
+
+//-- Tod dare
+case 'dare':
+  if (!isVerify) return reply(userB())
+  const dareen = _dareen[Math.floor(Math.random() * _dareen.length)]
+  reply(`★ *Dare*\n${dareen}`)
+break
 
 
 
@@ -741,29 +754,12 @@ buffer = fs.readFileSync('./media/shiba.jpg')
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 break
 
-//-- truth
-case 'truth':
+case 'dog':
   if (!isVerify) return reply(userB())
-sendMess(from, value)
-  const truthen = _truthen[Math.floor(Math.random() * _truthen.length)]
+
 buffer = fs.readFileSync('./media/shiba.jpg')
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: ${truthen}})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 break
-
-
-//-- dare
-case 'dare':
-  if (!isVerify) return reply(userB())
-sendMess(from, value)
-const dareen = _dareen[Math.floor(Math.random() * _dareen.length)]
-buffer = fs.readFileSync('./media/shiba.jpg')
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '★ *Dare*\n${dareen}'})
-break
-
-
-
-
-
 
 
 
