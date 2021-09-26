@@ -16,8 +16,10 @@ const updates = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptim
     admin = "Member Group"
   }
 		if (isGroup) return `${tanggal()}
+		
 𝔘𝔭𝔡𝔞𝔱𝔢 𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥
-ver. 11 -> 12.0.0.0
+
+ver. 11 -> 12
 ─── ᴄʜᴀɴɢᴇʟᴏɢ ───
 [NEW] Name StarDash
 [NEW] Repository
@@ -31,8 +33,10 @@ ver. 11 -> 12.0.0.0
 
 
 else if (!isGroup) return`▢ ${tanggal()}
+
 𝔘𝔭𝔡𝔞𝔱𝔢 𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥
-ver. 11 -> 12.0.0.0
+
+ver. 11 -> 12
 ─── ᴄʜᴀɴɢᴇʟᴏɢ ───
 [NEW] Name StarDash
 [NEW] Repository
