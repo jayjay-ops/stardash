@@ -498,18 +498,6 @@ replyimg(jawab, text, sims, simt)
 }
 break
   
-//-- Sprachcode
-case 'Sprachcode':
-  if (!isVerify) return reply(userB())
-  reply(bahasa())
-  break
-
-//-- Landesvorwahl
-case 'Landesvorwahl':
-  if (!isVerify) return reply(userB())
-  reply(negara())
-  break
-
 
 
 //--Auto response
@@ -1173,6 +1161,10 @@ mentionedJid: jids
   quoted: mek
 }
 await Lxa.sendMessage(from, options, text)
+} catch (e) {
+  reply(err())
+  console.log('Error : %s', color(e, 'orange'))
+}
 break
 
 //-- Bot gruppe verlassen
