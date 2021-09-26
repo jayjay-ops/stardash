@@ -60,9 +60,6 @@ const _dare = JSON.parse(fs.readFileSync('./result/dare.json'));
 const _fakten = JSON.parse(fs.readFileSync('./result/fakten.json'));
 const _nsfw = JSON.parse(fs.readFileSync('./result/nsfw.json'));
 const _emoji = JSON.parse(fs.readFileSync('./result/emoji.json'));
-const _slot = JSON.parse(fs.readFileSync('./result/emoji.json'));
-const _slot1 = JSON.parse(fs.readFileSync('./result/emoji.json'));
-const _slot2 = JSON.parse(fs.readFileSync('./result/emoji.json'));
 
 const _papier = JSON.parse(fs.readFileSync('./result/papier.json'));
 const _schere = JSON.parse(fs.readFileSync('./result/schere.json'));
@@ -682,7 +679,7 @@ break
 case 'love':
   if (!isVerify) return reply(userB())
   const love = _love[Math.floor(Math.random() * _love.length)]
-  reply(`${animal}`)
+  reply(`${love}`)
 break
 
 //-- nsfw 
@@ -758,18 +755,6 @@ case 'smiley':
   reply(`*Your Emojii:*\n${emoji}`)
 break
 
-
-//-- slot
-case 'slot':
-case 'game':
-  if (!isVerify) return reply(userB())
-  const slot = _emoji[Math.floor(Math.random() * _emoji.length)]
-  reply(`${emoji}`)
-    const slot1 = _emoji[Math.floor(Math.random() * _emoji.length)]
-  reply(`${emoji}`)
-    const slot2 = _emoji[Math.floor(Math.random() * _emoji.length)]
-  reply(`${emoji}`)
-break
 
 
 
