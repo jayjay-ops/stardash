@@ -109,7 +109,7 @@ const _update = JSON.parse(fs.readFileSync('./report/update.json'));
 //-- Help
 const { menu, menu1, menu2, menuOwner, menuGrup} = require('./help/menu');
 
-const { updates } = require('./help/updates');
+const { updates} = require('./help/updates');
 
 const { info } = require('./help/info');
 const { termux } = require('./help/termux');
@@ -955,18 +955,6 @@ case 'addneu':
   
 	break
 	
-
-//-- list update
-case 'update':
-case 'updates':
-			if (!isVerify) return reply(userB())
-				teks = `  *UPDATES*\nDatum *${tanggal()}* mit der Anzahl der Updates *${_update.length}*\n\n· *LISTE* \n`
-				for (let update of _update) {
-					teks += ` ${update} \n`
-				}
-				teks  += `-`
-				reply(teks.trim())
-				break
 
 
 //--- Bericht
