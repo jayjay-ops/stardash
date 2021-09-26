@@ -113,4 +113,4 @@ https://chat.whatsapp.com/BBAwr3RY6O77DOhJ8fuBnn
 > .𝚖𝚎𝚗𝚞`
 }
 
-module.exports = { menu, menufun, menusticker, menuadmin, menuvip, menuagb}
+module.exports = { menu, menufun, menusticker, menuadmin, menuowner, menuvip, menuagb}
