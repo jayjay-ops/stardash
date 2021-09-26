@@ -756,7 +756,17 @@ case 'smiley':
 break
 
 
-
+//-- slot
+case 'slot':
+case 'game':
+  if (!isVerify) return reply(userB())
+  const emoji = _emoji[Math.floor(Math.random() * _emoji.length)]
+  reply(`${emoji}`)
+    const emoji = _emoji[Math.floor(Math.random() * _emoji.length)]
+  reply(`${emoji}`)
+    const emoji = _emoji[Math.floor(Math.random() * _emoji.length)]
+  reply(`${emoji}`)
+break
 
 
 
