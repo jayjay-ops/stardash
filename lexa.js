@@ -450,17 +450,17 @@ case 'premium':
   thum = await fs.readFileSync('./docs/mrf.jpeg').toString('base64')
   if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   if (args[0] === 'fun' ) {
-   return replyimg(fun(prefix, tanggal, jam), text, capt, thum)
+   return replyimg(menufun(prefix, tanggal, jam), text, capt, thum)
   } else if (args[0] === 'sticker' ) {
-    return replyimg(sticker(prefix, tanggal, jam), text, capt, thum)
+    return replyimg(menusticker(prefix, tanggal, jam), text, capt, thum)
   } else if (args[0] === 'admin' ) {
-    return reply(admin(prefix, tanggal, jam))
+    return reply(menuadmin(prefix, tanggal, jam))
   } else if (args[0] === 'vip' ) { 
-    return reply(vip(prefix, tanggal, jam))
+    return reply(menuvip(prefix, tanggal, jam))
   } else if (args[0] === 'owner' ) {
-    return replyimg(owner(prefix, tanggal, jam), text, capt, thum)
+    return replyimg(menuowner(prefix, tanggal, jam), text, capt, thum)
   } else if (args[0] === 'agb' ) {
-    return replyimg(agb(prefix, tanggal, jam), text, capt, thum)
+    return replyimg(menuagb(prefix, tanggal, jam), text, capt, thum)
   }
           break
 		  
