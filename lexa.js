@@ -464,7 +464,7 @@ case 'premium':
   }
           break
 		  
-//-- List menu
+//-- List Updates
 case 'updates':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
@@ -512,12 +512,6 @@ replyimg(jawab, text, sims, simt)
 break
   
 
-
-//--Auto response
-switch(is) {
-case 'wop':
-reply('*Wahrheit oder Pflicht?* n\.wahrheit für Wahrheit .pflicht für Pflicht')
-}
 
 
 //-- DEUTSCH
@@ -837,10 +831,28 @@ case 'image':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '𝙲𝚑𝚒𝚕𝚕𝚘𝚌𝚝𝚒 ✯'})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
 					break
+					
+
+//-- stiker to image
+case 'dog':
+  if (!isVerify) return reply(UserB())
+					if (!isQuotedSticker) return reply('Answer Sticker')
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+					ran= getRandom('.png')
+					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync('./media/shiba.jpg')
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break
+					
 
 //-- owner bot
 case 'owner':
@@ -1220,7 +1232,7 @@ case 'all':
 //-- Delet message
 case 'delete':
 case 'del':
-case 'lösch':
+case 'burn':
 					if (!isGroup)return reply(group())
 					if (!isPrem) return reply(premi())
 					try {
