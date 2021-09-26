@@ -71,6 +71,8 @@ const _roll = JSON.parse(fs.readFileSync('./result/roll.json'));
 
 //-- Result ENGLISH
 const _truthen = JSON.parse(fs.readFileSync('./result/en/truthen.json'));
+const _pokemon = JSON.parse(fs.readFileSync('./result/pokemon.json'));
+const _animal = JSON.parse(fs.readFileSync('./result/animal.json'));
 const _dareen = JSON.parse(fs.readFileSync('./result/en/dareen.json'));
 
 const _facten = JSON.parse(fs.readFileSync('./result/en/facten.json'));
@@ -648,7 +650,18 @@ case 'dare':
   reply(`★ *Dare*\n${dareen}`)
 break
 
-
+//-- pokemon
+case 'pokemon':
+  if (!isVerify) return reply(userB())
+  const pokemon = _pokemon[Math.floor(Math.random() * _pokemon.length)]
+  reply(`★ *Your Pokemon Pet* ♕︎\n${pokemon}`)
+break
+//-- animal
+case 'animal':
+  if (!isVerify) return reply(userB())
+  const animal = _animal[Math.floor(Math.random() * _animal.length)]
+  reply(`★ *Your Animal Pet* ♕︎\n${animal}`)
+break
 
 //-- nsfw 
 case 'nsfwen':
