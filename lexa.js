@@ -110,6 +110,7 @@ const _update = JSON.parse(fs.readFileSync('./report/update.json'));
 const { menu, menufun, menusticker, menuowner, menuvip, menuadmin, menuagb} = require('./help/menu');
 
 const { updates} = require('./help/updates');
+const { ass} = require('./help/ass');
 
 const { info } = require('./help/info');
 const { termux } = require('./help/termux');
@@ -472,7 +473,16 @@ case 'updates':
   thum = await fs.readFileSync('./media/shiba.jpg').toString('base64')
   if (args.length < 1) return replyimg(updates(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
 	  
-          break		  
+          break
+//-- nsfw ass
+case 'ass':
+  if (!isVerify) return reply(userB(prefix))
+	uptime = process.uptime()
+  capt = `Hi itz mee \n♕︎\nStarDust`
+  thum = await fs.readFileSync('./media/shiba.jpg').toString('base64')
+  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+	  
+          break			  
 
 //-- information bot
 case 'info':
@@ -808,7 +818,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 								console.log(`Error : ${err}`)
 								fs.unlinkSync(media)
 								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								reply(`Gagal, pada saat mengkonversi ${tipe} ke stiker`)
+								reply(`falsch`)
 							})
 							.on('end', function () {
 								console.log('Finish')
@@ -823,7 +833,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 							.toFormat('webp')
 							.save(ran)
 					} else {
-						reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim`)
+						reply(`falsch`)
 					}
 					break
 

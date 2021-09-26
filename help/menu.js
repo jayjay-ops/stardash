@@ -21,7 +21,7 @@ const menu = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, 
 > .𝚖𝚎𝚗𝚞 𝚊𝚍𝚖𝚒𝚗
 > .𝚖𝚎𝚗𝚞 𝚟𝚒𝚙
 > .𝚖𝚎𝚗𝚞 𝚘𝚠𝚗𝚎𝚛
-> .𝚊𝚐𝚋
+> .𝚖𝚎𝚗𝚞 𝚊𝚐𝚋
 > .𝚞𝚙𝚍𝚊𝚝𝚎𝚜
 𝔯𝔢𝔱𝔲𝔯𝔫 𝔱𝔬 𝔪𝔢𝔫𝔲
 > .𝚖𝚎𝚗𝚞		

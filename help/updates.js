@@ -15,9 +15,7 @@ const updates = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptim
   } else if (!isGroupAdmins){
     admin = "Member Group"
   }
-		if (isGroup) return `${tanggal()}
-		
-𝔘𝔭𝔡𝔞𝔱𝔢 𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥
+		if (isGroup) return `𝔘𝔭𝔡𝔞𝔱𝔢 𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥
 
 ver. 11 -> 12
 ─── ᴄʜᴀɴɢᴇʟᴏɢ ───
