@@ -747,7 +747,7 @@ case 'truth':
 sendMess(from, value)
   const truthen = _truthen[Math.floor(Math.random() * _truthen.length)]
 buffer = fs.readFileSync('./media/shiba.jpg')
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '★ *Truth*\n${truthen}'})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: ${truthen}})
 break
 
 
