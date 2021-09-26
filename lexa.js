@@ -71,6 +71,10 @@ const _roll = JSON.parse(fs.readFileSync('./result/roll.json'));
 
 //-- Result ENGLISH
 const _truthen = JSON.parse(fs.readFileSync('./result/en/truthen.json'));
+
+const _gay = JSON.parse(fs.readFileSync('./result/gaymeter.json'));
+const _love = JSON.parse(fs.readFileSync('./result/lovemeter.json'));
+
 const _pokemon = JSON.parse(fs.readFileSync('./result/pokemon.json'));
 const _animal = JSON.parse(fs.readFileSync('./result/animal.json'));
 const _dareen = JSON.parse(fs.readFileSync('./result/en/dareen.json'));
@@ -658,9 +662,24 @@ case 'pokemon':
 break
 //-- animal
 case 'animal':
+case 'pet':
   if (!isVerify) return reply(userB())
   const animal = _animal[Math.floor(Math.random() * _animal.length)]
   reply(`★ *Your Animal Pet* ♕︎\n${animal}`)
+break
+
+//-- gay
+case 'gay':
+case 'gaymeter':
+  if (!isVerify) return reply(userB())
+  const gay = _gay[Math.floor(Math.random() * _gay.length)]
+  reply(`${gay}`)
+break
+//-- love
+case 'love':
+  if (!isVerify) return reply(userB())
+  const love = _love[Math.floor(Math.random() * _love.length)]
+  reply(`${animal}`)
 break
 
 //-- nsfw 
