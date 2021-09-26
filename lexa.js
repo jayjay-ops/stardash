@@ -449,18 +449,18 @@ case 'premium':
   capt = `Total Hits : ${reqcmd} \nInsta: johann.oo7 Snapchat: joewilliams007 \nUser: ${_user.length}`
   thum = await fs.readFileSync('./docs/mrf.jpeg').toString('base64')
   if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-  if (args[0] === '1' ) {
-   return replyimg(menu1(prefix, tanggal, jam), text, capt, thum)
-  } else if (args[0] === '2' ) {
-    return replyimg(menu2(prefix, tanggal, jam), text, capt, thum)
- /* } else if (args[0] === '3' ) {
-    return reply(menu3(prefix, tanggal, jam))
-  } else if (args[0] === 'premium' ) { 
-    return reply(menuPrem(prefix, tanggal, jam))
- */} else if (args[0] === 'owner' ) {
-    return replyimg(menuOwner(prefix, tanggal, jam), text, capt, thum)
-  } else if (args[0] === 'group' ) {
-    return replyimg(menuGrup(prefix, tanggal, jam), text, capt, thum)
+  if (args[0] === 'fun' ) {
+   return replyimg(fun(prefix, tanggal, jam), text, capt, thum)
+  } else if (args[0] === 'sticker' ) {
+    return replyimg(sticker(prefix, tanggal, jam), text, capt, thum)
+  } else if (args[0] === 'admin' ) {
+    return reply(admin(prefix, tanggal, jam))
+  } else if (args[0] === 'vip' ) { 
+    return reply(vip(prefix, tanggal, jam))
+  } else if (args[0] === 'owner' ) {
+    return replyimg(owner(prefix, tanggal, jam), text, capt, thum)
+  } else if (args[0] === 'agb' ) {
+    return replyimg(agb(prefix, tanggal, jam), text, capt, thum)
   }
           break
 		  
@@ -713,7 +713,7 @@ case 'ultimateroll':
 case 'premiumroll':
 case 'premiumwürfel':
   if (!isVerify) return reply(userB())
-  if (!isPrem) return reply(premi())
+
   const ultimateroll = _ultimateroll[Math.floor(Math.random() * _ultimateroll.length)]
   reply(ultimateroll)
 break
@@ -724,7 +724,7 @@ case 'legendarywurf':
 case 'legendaryroll':
 case 'legendärwürfel':
   if (!isVerify) return reply(userB())
-  if (!isOwner) return reply(ownerB())
+
   const legendaryroll = _legendaryroll[Math.floor(Math.random() * _legendaryroll.length)]
   reply(legendaryroll)
 break
@@ -1049,9 +1049,9 @@ case 'online':
 //--- Add member
 case 'add':
 				  if (!isVerify) return reply(userB())
-				  if (!isPrem) return reply(premi())
+			
 					if (!isGroup) return reply(group())
-					if (!isGroupAdmins && !isOwner) return reply(admin())
+			
 					if (!isBotGroupAdmins) return reply(Badmin())
 					if (args.length < 1) return reply('Zielnummer hinzufügen')
 					if (args[0].startsWith('0')) return reply('Ländercode verwenden')
@@ -1068,7 +1068,7 @@ case 'add':
 //--- Kick member
 case 'kick':
 			    if (!isVerify) return reply(userB())
-			    if (!isPrem) return reply(premi())
+			 
 					if (!isGroup) return reply(group())
 					if (!isGroupAdmins) return reply(admin())
 					if (!isBotGroupAdmins) return reply(Badmin())
@@ -1093,7 +1093,7 @@ case 'promote':
 					if (!isGroup) return reply(group())
 					if (!isGroupAdmins && !isOwner) return reply(admin())
 					if (!isBotGroupAdmins) return reply(Badmin())
-					if (!isPrem) return reply(premi())
+			
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di jadi admin!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
@@ -1116,7 +1116,7 @@ case 'demote':
 					if (!isGroup) return reply(group())
 					if (!isGroupAdmins && !isOwner) return reply(admin())
 					if (!isBotGroupAdmins) return reply(Badmin())
-					if (!isPrem) return reply(premi())
+			
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Markier Benutzer')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
@@ -1138,7 +1138,7 @@ case 'linkgc':
 case 'gruppenlink':
 case 'link':
   if (!isVerify) return reply(userB())
-			  if (!isPrem) return reply(premi())
+			 if (!isGroupAdmins) return reply(admin())
 				if (!isGroup) return reply(group())
 				if (!isBotGroupAdmins) return reply(Badmin())
 				linkgc = await Lxa.groupInviteCode (from)
@@ -1177,7 +1177,6 @@ break
 case 'leave': 
 case 'verlass':
 				if (!isGroup) return reply(group())
-				if (!isPrem) return reply(premi())
 				if (!isGroupAdmins) return reply(ownerB())
 				anu = await Lxa.groupLeave(from, `Bye *${groupMetadata.subject}*`, groupId)
 				break
@@ -1231,7 +1230,7 @@ case 'delete':
 case 'del':
 case 'burn':
 					if (!isGroup)return reply(group())
-					if (!isPrem) return reply(premi())
+					if (!isGroupAdmins) return reply(admin())
 					try {
 					Lxa.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					} catch (e) {
@@ -1277,7 +1276,7 @@ case 'willkommen':
 
 //--- on/off antilink
 				case 'antilink':
-				if (!isPrem) return reply(premi())
+				if (!isGroupAdmins) return reply(admin())
 				if (!isGroup) return reply(group())
 					if (!isGroupAdmins && !isOwner) return reply(admin())
 					if (!isBotGroupAdmins) return reply(Badmin())

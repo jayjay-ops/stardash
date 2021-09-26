@@ -28,6 +28,8 @@ ver. 11 -> 12
 [FIX] AL htt -> http
 [+++] AD delete via .burn
 [+++] Verify in EN
+[+++] New Menu 
+[+++] Premium is now VIP
 ─────────────────
 `
 
@@ -45,6 +47,8 @@ ver. 11 -> 12
 [FIX] AL htt -> http
 [+++] AD delete via .burn
 [+++] Verify in EN
+[+++] New Menu 
+[+++] Premium is now VIP
 ─────────────────
 `
 

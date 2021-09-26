@@ -12,12 +12,12 @@ const stick = () => {
 
 //--
 const err = (prefix) => {
-  return '🪨 Hmm das Haus ist eingestürzt.'
+  return '🪨 Failed'
 }
 
 //-- 
 const group = () => {
-  return '🕸 Diese Funktion ist nur für Gruppen.'
+  return 'Only 4 groups'
 }
 
 //-- 
@@ -37,7 +37,7 @@ const premi = () => {
 
 //--
 const userB = (prefix) => {
-  return `🦁: *.Verify* eingeben um zu registrieren. 🇬🇧: Type *.verify* to register.`
+  return `🦁: *.register* eingeben um zu registrieren. 🇬🇧: Type *.register* to register.`
 }
 
 //--
