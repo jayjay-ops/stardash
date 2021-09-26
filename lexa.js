@@ -431,6 +431,21 @@ reply('hahahaha')
 
 //--Auto response
 switch(is) {
+case '.mimi':
+reply('I wana live in Korea😭💜')
+reply('Taes wifey💜💍✨😫')
+reply('🤕💜')
+}
+//--Auto response
+switch(is) {
+case '.nata':
+reply('Legi ❤️🦔🐺')
+reply('I love Redbull 💙😼')
+reply('🍉🍉🍉')
+}
+
+//--Auto response
+switch(is) {
 case 'ily':
 reply('ily2')
 }	
