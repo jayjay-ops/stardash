@@ -107,7 +107,7 @@ const _request = JSON.parse(fs.readFileSync('./report/request.json'));
 const _update = JSON.parse(fs.readFileSync('./report/update.json'));
 
 //-- Help
-const { menu, menufun, menusticker, menuowner, menuadmin, menuagb} = require('./help/menu');
+const { menu, menufun, menusticker, menuowner, menuvip, menuadmin, menuagb} = require('./help/menu');
 
 const { updates} = require('./help/updates');
 
