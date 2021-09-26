@@ -1216,7 +1216,7 @@ case 'bc':
 case 'totaluser':
 case 'all':
   if (!isPrem) return reply(premi())
-					teks = `TOTAL USER ${name}*\n`
+					teks = `TOTAL USER\n`
 					no = 0
 					for (let hehehe of _user) {
 						no += 1
@@ -1247,7 +1247,7 @@ case 'register':
 			if (isVerify) return reply('Du bist schon registiert 🔓')
 					_user.push(sender)
 			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
-			capt = `🔓 Registrierung erfolgreich *${pushname}* \n\n🎟 Benutzer registriert am ${tanggal()} = *${_user.length}*`
+			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}* \nYou are User nr. *${_user.length}*`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 					break
 
@@ -1281,17 +1281,17 @@ case 'willkommen':
 				if (!isGroup) return reply(group())
 					if (!isGroupAdmins && !isOwner) return reply(admin())
 					if (!isBotGroupAdmins) return reply(Badmin())
-					if (args.length < 1) return reply(`On zum aktivieren off zum deaktivieren`)
+					if (args.length < 1) return reply(`.antilink on to activate .antilink off to deactivate`)
 					if ((args[0]) === 'on') {
-						if (isAnti) return reply('Antilink aktiv 🔮')
+						if (isAnti) return reply('Antilink active')
 						_antilink.push(from)
 						fs.writeFileSync('./data/antilink.json', JSON.stringify(_antilink))
-						reply(`Antilink Aktiv fÃ¼r *${groupMetadata.subject}*`)
+						reply(`Antilink active in *${groupMetadata.subject}*`)
 					} else if ((args[0]) === 'off') {
 						if (!isAnti) return reply('Antilink off')
 						_antilink.splice(from, 1)
 						fs.writeFileSync('./data/antilink.json', JSON.stringify(_antilink))
-						reply(`Antilink aus *${groupMetadata.subject}*`)
+						reply(`Antilink off *${groupMetadata.subject}*`)
 					} else {
 						reply('On zum aktivieren und off zum deaktivieren.')
 					}
