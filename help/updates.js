@@ -9,7 +9,7 @@ function kyun(seconds){
   return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 }
 
-const menu = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process) => { 
+const updates = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process) => { 
   if (isGroupAdmins){
     admin = "Admin Group"
   } else if (!isGroupAdmins){
