@@ -749,6 +749,9 @@ case 'say':
 case 'sag':
   if (!isVerify) return reply(userB())
 sendMess(from, value)
+
+buffer = fs.readFileSync('./media/shiba.jpg')
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 break
 
 
@@ -853,6 +856,22 @@ case 'dog':
 					})
 					break
 					
+//-- stiker to image
+case 'dog':
+  if (!isVerify) return reply(UserB())
+					if (!isQuotedSticker) return reply('Answer Sticker')
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+					ran= getRandom('.png')
+					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync('./media/shiba.jpg')
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break
+										
 
 //-- owner bot
 case 'owner':
