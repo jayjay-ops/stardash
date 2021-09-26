@@ -16,22 +16,32 @@ const updates = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptim
     admin = "Member Group"
   }
 		if (isGroup) return `${tanggal()}
-*CHILLOCTI*
-┌───⊷ *USER* ⊶
-├╼ Nummer : *${sender.split("@")[0]}*
-├╼ Premium : ${prem_}
-└──────────────
-kkk
+𝔘𝔭𝔡𝔞𝔱𝔢 𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥
+ver. 11 -> 12.0.0.0
+─── ᴄʜᴀɴɢᴇʟᴏɢ ───
+[NEW] Name StarDash
+[NEW] Repository
+[NEW] Changelog
+[NEW] Shiba Inu Theme
+[FIX] AL htt -> http
+[+++] AD delete via .burn
+[+++] Verify in EN
+─────────────────
 `
 
 
 else if (!isGroup) return`▢ ${tanggal()}
-*CHILLOCTI*
-┌───⊷ *USER* ⊶
-├╼ Nummer : *${sender.split("@")[0]}*
-├╼ Premium : ${prem_}
-└──────────────
-kkk
+𝔘𝔭𝔡𝔞𝔱𝔢 𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥
+ver. 11 -> 12.0.0.0
+─── ᴄʜᴀɴɢᴇʟᴏɢ ───
+[NEW] Name StarDash
+[NEW] Repository
+[NEW] Changelog
+[NEW] Shiba Inu Theme
+[FIX] AL htt -> http
+[+++] AD delete via .burn
+[+++] Verify in EN
+─────────────────
 `
 
 }
