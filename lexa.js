@@ -750,8 +750,7 @@ case 'sag':
   if (!isVerify) return reply(userB())
 sendMess(from, value)
 
-buffer = fs.readFileSync('./media/shiba.jpg')
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+
 break
 
 case 'dog':
