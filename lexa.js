@@ -478,7 +478,7 @@ case 'updates':
 case 'ass':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
-  capt = `Hi itz mee \n♕︎\nStarDust`
+  capt = `♕︎ \n♕︎\n♕︎`
   thum = await fs.readFileSync('./media/ass.jpg').toString('base64')
   if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
 	  
