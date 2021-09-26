@@ -108,6 +108,9 @@ const _update = JSON.parse(fs.readFileSync('./report/update.json'));
 
 //-- Help
 const { menu, menu1, menu2, menuOwner, menuGrup} = require('./help/menu');
+
+const { updates } = require('./help/updates');
+
 const { info } = require('./help/info');
 const { termux } = require('./help/termux');
 const { wait, stick, err, group, ban, ownerB, premi, userB, admin, Badmin } = require('./help/respon');
@@ -460,6 +463,16 @@ case 'premium':
     return replyimg(menuGrup(prefix, tanggal, jam), text, capt, thum)
   }
           break
+		  
+//-- List menu
+case 'updates':
+  if (!isVerify) return reply(userB(prefix))
+	uptime = process.uptime()
+  capt = `Total Hits : ${reqcmd} \nInsta: shiba Snapchat: joewilliams007 \nUser: ${_user.length}`
+  thum = await fs.readFileSync('./media/shiba.jpg').toString('base64')
+  if (args.length < 1) return replyimg(updates(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+	  
+          break		  
 
 //-- information bot
 case 'info':
@@ -1161,10 +1174,6 @@ mentionedJid: jids
   quoted: mek
 }
 await Lxa.sendMessage(from, options, text)
- catch (e) {
-  reply(err())
-  console.log('Error : %s', color(e, 'orange'))
-}
 break
 
 //-- Bot gruppe verlassen
