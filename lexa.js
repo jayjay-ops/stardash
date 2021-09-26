@@ -60,6 +60,7 @@ const _dare = JSON.parse(fs.readFileSync('./result/dare.json'));
 const _fakten = JSON.parse(fs.readFileSync('./result/fakten.json'));
 const _nsfw = JSON.parse(fs.readFileSync('./result/nsfw.json'));
 const _emoji = JSON.parse(fs.readFileSync('./result/emoji.json'));
+const _slot = JSON.parse(fs.readFileSync('./result/emoji.json'));
 
 const _papier = JSON.parse(fs.readFileSync('./result/papier.json'));
 const _schere = JSON.parse(fs.readFileSync('./result/schere.json'));
@@ -760,11 +761,11 @@ break
 case 'slot':
 case 'game':
   if (!isVerify) return reply(userB())
-  const emoji = _emoji[Math.floor(Math.random() * _emoji.length)]
+  const slot = _emoji[Math.floor(Math.random() * _emoji.length)]
   reply(`${emoji}`)
-    const emoji = _emoji[Math.floor(Math.random() * _emoji.length)]
+    const slot = _emoji[Math.floor(Math.random() * _emoji.length)]
   reply(`${emoji}`)
-    const emoji = _emoji[Math.floor(Math.random() * _emoji.length)]
+    const slot = _emoji[Math.floor(Math.random() * _emoji.length)]
   reply(`${emoji}`)
 break
 
