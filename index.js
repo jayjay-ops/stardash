@@ -4,12 +4,12 @@ let path = require('path')
 let fs = require('fs')
 let package = JSON.parse(fs.readFileSync('./package.json'))
 const CFonts  = require('cfonts')
-CFonts.say('CHILLOCTI', {
+CFonts.say('StarDash', {
   font: 'pallet',
   align: 'center',
   gradient: ['red', 'magenta']
 })
-CFonts.say(`'instagram: johann.oo7'`, {
+CFonts.say(`'powered by Shiba'`, {
   font: 'console',
   align: 'center',
   colors: ['yellow']

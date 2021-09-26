@@ -1,6 +1,6 @@
 {
-  "name": "termux-wabot",
-  "version": "0.0.2",
+  "name": "StarDash",
+  "version": "12",
   "description": "No comment",
   "main": "index.js",
   "directories": {
@@ -14,8 +14,8 @@
     "termux",
     "whatsapp",
     "bot",
-    "whatsapp",
-    "bot"
+    "Shiba",
+    "StarDash"
   ],
   "author": "johann.oo7",
   "license": "ISC",
@@ -41,10 +41,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrfzvx12/lexav3.git"
+    "url": "git+https://github.com/joewilliams007/StarDash.git"
   },
   "bugs": {
-    "url": "https://github.com/mrfzvx12/lexav3/issues"
+    "url": "git+https://github.com/joewilliams007/StarDash.git"
   },
-  "homepage": "https://github.com/mrfzvx12/lexav3#readme"
+  "homepage": "git+https://github.com/joewilliams007/StarDash#readme"
 }

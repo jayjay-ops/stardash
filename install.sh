@@ -10,5 +10,5 @@ wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-oc
 npm i imgbb-uploader
 npm i
 
-echo "[*] All dependencies have been installed, please run the command \"npm start\" to immediately start the script"
-echo "Updates : fix Bugs"
+echo "[*] Shiba has installed all dependencies, please run the command \"npm start\" to start the script"
+echo "Updates : avaible in command .updates"
