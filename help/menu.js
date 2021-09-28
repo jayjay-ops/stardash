@@ -136,9 +136,9 @@ const menusymbol = (prefix, tanggal, jam) => {
 
 const menutool = (prefix, tanggal, jam) => {
   return `𝔪𝔢𝔫𝔲 𝔱𝔬𝔬𝔩
-> .𝚜𝚑𝚘𝚠 dailynews
 > .𝚠𝚒𝚜𝚑
 > .𝚠𝚒𝚜𝚑𝚎𝚜
+> .𝚜𝚑𝚘𝚠 dailynews
 > .𝚜𝚑𝚘𝚠 𝚐𝚒𝚝𝚑𝚞𝚋
 > .𝚜𝚑𝚘𝚠 𝚊𝚙𝚔
 𝔯𝔢𝔱𝔲𝔯𝔫 𝔱𝔬 𝔪𝔢𝔫𝔲
@@ -150,7 +150,6 @@ const menusecret = (prefix, tanggal, jam) => {
 ♕︎ 𝙳𝙾𝙽𝚃 𝚃𝙴𝙻𝙻 𝙰𝙽𝚈𝙾𝙽𝙴 ♕︎
 > .𝚊𝚜𝚜
 > .𝚋𝚘𝚘𝚋𝚜
-> .𝚐𝚒𝚛𝚕
 > .𝚜𝚝𝚎𝚕𝚕𝚊1
 > .𝚜𝚝𝚎𝚕𝚕𝚊2
 > .𝚜𝚝𝚎𝚕𝚕𝚊3
@@ -161,6 +160,7 @@ const menusecret = (prefix, tanggal, jam) => {
 > .𝚜𝚝𝚎𝚕𝚕𝚊8
 > .𝚜𝚝𝚎𝚕𝚕𝚊9
 > .𝚜𝚝𝚎𝚕𝚕𝚊10
+> .𝚐𝚒𝚛𝚕
 𝔯𝔢𝔱𝔲𝔯𝔫 𝔱𝔬 𝔪𝔢𝔫𝔲
 > .𝚖𝚎𝚗𝚞`
 }
