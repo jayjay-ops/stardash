@@ -702,10 +702,7 @@ case 'boobs':
           break		
 
 //-- information bot
-case 'info':
-case 'premiuminfo':
-case 'paypal':
-case 'premium':
+case 'girl':
   uptime = process.uptime()
   reply(info(Lxa, uptime, process, wa_version, mcc, mnc, os_version, device_manufacturer, device_model))
 					break
