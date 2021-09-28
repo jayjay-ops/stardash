@@ -547,7 +547,7 @@ case 'updates':
   
   if (args.length < 1) 
 	return replyimg(updates(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-  } else if (args[0] === 'old' ) {
+  if (args[0] === 'old' ) {
     return reply(updatesold(prefix, tanggal, jam))
   } 
 	  
