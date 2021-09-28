@@ -145,5 +145,24 @@ const menutool = (prefix, tanggal, jam) => {
 > .𝚖𝚎𝚗𝚞`
 }
 
+const menusecret = (prefix, tanggal, jam) => {
+  return `𝔪𝔢𝔫𝔲 𝔰𝔢𝔠𝔯𝔢𝔱
+♕︎ 𝙳𝙾𝙽𝚃 𝚃𝙴𝙻𝙻 𝙰𝙽𝚈𝙾𝙽𝙴 ♕︎
+> .𝚊𝚜𝚜
+> .𝚋𝚘𝚘𝚋𝚜
+> .𝚜𝚝𝚎𝚕𝚕𝚊1
+> .𝚜𝚝𝚎𝚕𝚕𝚊2
+> .𝚜𝚝𝚎𝚕𝚕𝚊3
+> .𝚜𝚝𝚎𝚕𝚕𝚊4
+> .𝚜𝚝𝚎𝚕𝚕𝚊5
+> .𝚜𝚝𝚎𝚕𝚕𝚊6
+> .𝚜𝚝𝚎𝚕𝚕𝚊7
+> .𝚜𝚝𝚎𝚕𝚕𝚊8
+> .𝚜𝚝𝚎𝚕𝚕𝚊9
+> .𝚜𝚝𝚎𝚕𝚕𝚊10
+𝔯𝔢𝔱𝔲𝔯𝔫 𝔱𝔬 𝔪𝔢𝔫𝔲
+> .𝚖𝚎𝚗𝚞`
+}
 
-module.exports = { menu, menufun, menusticker, menuadmin, menuowner, menuvip, menuagb, menusymbol, menutool}
+
+module.exports = { menu, menufun, menusticker, menuadmin, menuowner, menuvip, menuagb, menusymbol, menutool, menusecret}

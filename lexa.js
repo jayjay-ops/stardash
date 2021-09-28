@@ -113,7 +113,7 @@ const _request = JSON.parse(fs.readFileSync('./report/request.json'));
 const _update = JSON.parse(fs.readFileSync('./report/update.json'));
 
 //-- Help
-const { menu, menufun, menusticker, menuowner, menuvip, menuadmin, menuagb, menusymbol, menutool} = require('./help/menu');
+const { menu, menufun, menusticker, menuowner, menuvip, menuadmin, menuagb, menusymbol, menutooly menusecret} = require('./help/menu');
 
 const { updates, updatesold} = require('./help/updates');
 
@@ -123,6 +123,12 @@ const { stella1} = require('./help/stella1');
 const { stella2} = require('./help/stella2');
 const { stella3} = require('./help/stella3');
 const { stella4} = require('./help/stella4');
+const { stella5} = require('./help/stella5');
+const { stella6} = require('./help/stella6');
+const { stella7} = require('./help/stella7');
+const { stella8} = require('./help/stella8');
+const { stella9} = require('./help/stella9');
+const { stella10} = require('./help/stella10');
 
 const { showgithub, showapk, showdailynews} = require('./help/show');
 
@@ -519,8 +525,9 @@ case 'premium':
     return replyimg(menusymbol(prefix, tanggal, jam), text, capt, thum) 
   } else if (args[0] === 'tool' ) {
     return replyimg(menutool(prefix, tanggal, jam), text, capt, thum)
-  }        
-
+  } else if (args[0] === 'secret' ) {
+    return replyimg(menusecret(prefix, tanggal, jam), text, capt, thum)
+  }  
 	   break
 	   
 //-- List show
@@ -609,6 +616,78 @@ case 'stella4':
   if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
 	  
           break		
+
+//-- nsfw stella
+case 'stella5':
+  if (!isVerify) return reply(userB(prefix))
+	uptime = process.uptime()
+  capt = `Stella \n♕︎\n♕︎`
+  thum = await fs.readFileSync('./media/stella5.jpg').toString('base64')
+  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+	  
+          break	
+		  
+//-- nsfw stella
+case 'stella6':
+  if (!isVerify) return reply(userB(prefix))
+	uptime = process.uptime()
+  capt = `Stella \n♕︎\n♕︎`
+  thum = await fs.readFileSync('./media/stella6.jpg').toString('base64')
+  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+	  
+          break			  
+		  
+//-- nsfw stella
+case 'stella7':
+  if (!isVerify) return reply(userB(prefix))
+	uptime = process.uptime()
+  capt = `Stella \n♕︎\n♕︎`
+  thum = await fs.readFileSync('./media/stella7.jpg').toString('base64')
+  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+	  
+          break			  
+		  
+//-- nsfw stella
+case 'stella8':
+  if (!isVerify) return reply(userB(prefix))
+	uptime = process.uptime()
+  capt = `Stella \n♕︎\n♕︎`
+  thum = await fs.readFileSync('./media/stella8.jpg').toString('base64')
+  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+	  
+          break			  
+		  
+
+//-- nsfw stella
+case 'stella9':
+  if (!isVerify) return reply(userB(prefix))
+	uptime = process.uptime()
+  capt = `Stella \n♕︎\n♕︎`
+  thum = await fs.readFileSync('./media/stella9.jpg').toString('base64')
+  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+	  
+          break	
+
+
+//-- nsfw stella
+case 'stella10':
+  if (!isVerify) return reply(userB(prefix))
+	uptime = process.uptime()
+  capt = `Stella \n♕︎\n♕︎`
+  thum = await fs.readFileSync('./media/stella10.jpg').toString('base64')
+  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+	  
+          break	
+
+
+
+
+
+
+
+
+
+
 		  
 
 //-- nsfw boobs
