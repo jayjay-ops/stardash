@@ -1,4 +1,4 @@
-<img align="center" height="auto" src="https://github.com/joewilliams007/StarDash/media/shiba.jpg"/>
+<img align="center" height="auto" src="https://github.com/joewilliams007/StarDash/media/shiba2.jpg"/>
 <summary>Bot has some fsk 18 commands</summary>
  
  
