@@ -113,10 +113,14 @@ const _request = JSON.parse(fs.readFileSync('./report/request.json'));
 const _update = JSON.parse(fs.readFileSync('./report/update.json'));
 
 //-- Help
-const { menu, menufun, menusticker, menuowner, menuvip, menuadmin, menuagb} = require('./help/menu');
+const { menu, menufun, menusticker, menuowner, menuvip, menuadmin, menuagb, menusymbol, menutool} = require('./help/menu');
 
-const { updates} = require('./help/updates');
+const { updates, updatesold} = require('./help/updates');
+
 const { ass} = require('./help/ass');
+const { boob} = require('./help/boob');
+
+const { showgithub, showapk, showdailynews} = require('./help/show');
 
 const { info } = require('./help/info');
 const { termux } = require('./help/termux');
@@ -424,16 +428,7 @@ switch(is) {
 case 'chillocti':
 reply('Willkommen in unserer Gruppe')
 }
-//--Auto response
-switch(is) {
-case 'haha':
-reply('hahaha')
-}
-//--Auto response
-switch(is) {
-case 'hahaha':
-reply('hahahaha')
-}	
+
 
 //--Auto response
 switch(is) {
@@ -456,6 +451,39 @@ case 'ily':
 reply('ily2')
 }	
 	
+//--Auto response
+switch(is) {
+case '.stars':
+case '.sterne':
+reply('𝔰𝔱𝔞𝔯𝔰 ★✰✯☆✩✵✫𖣔۞⍟✪')
+}	
+		
+//--Auto response
+switch(is) {
+case '.textmojie':
+case '.textemojie':
+reply('𝔱𝔢𝔵𝔱𝔪𝔬𝔧𝔦𝔢 ʕ•ᴥ•ʔ ฅ^•ﻌ•^ฅ ʕ •́؈•̀ ₎ ༼ つ ◕◡◕ ༽つ  ♡´･ᴗ･`♡')
+}	
+
+//--Auto response
+switch(is) {
+case '.others':
+case '.other':
+reply('𝔬𝔱𝔥𝔢𝔯𝔰 ☽︎☾︎♡︎♫︎𓂸𓂺シ︎㋛︎ت︎༒︎☏︎𓂀☻︎❦︎ꨄ︎ఌ︎❥︎᯾𖣘Ꙭ𖦹߷༄༆𖧷᪥☼︎␈♕︎♔︎𖠌♲︎︎︎')
+}			
+
+//--Auto response
+switch(is) {
+case '.gender':
+case '.genders':
+reply('𝔤𝔢𝔫𝔡𝔢𝔯𝔰 ⚣︎⚢︎⚣︎⚥︎⚤︎')
+}			
+	
+//--Auto response
+switch(is) {
+case '.wild':
+reply('𝔞𝔫𝔦𝔪𝔞𝔩𝔰 𓅓𓆙𓅷𓆏𓃰𓄁𓀐𓀿𓃠𓅿𓃟𓆈𓀬𓃗𓃱𓀡𓅰𓆉︎𓁹')
+}			
 	
 	
 //-- Command
@@ -483,8 +511,31 @@ case 'premium':
     return replyimg(menuowner(prefix, tanggal, jam), text, capt, thum)
   } else if (args[0] === 'agb' ) {
     return replyimg(menuagb(prefix, tanggal, jam), text, capt, thum)
-  }
-          break
+  } else if (args[0] === 'symbol' ) {
+    return replyimg(menusymbol(prefix, tanggal, jam), text, capt, thum) 
+  } else if (args[0] === 'tool' ) {
+    return replyimg(menutool(prefix, tanggal, jam), text, capt, thum)
+  }        
+
+	   break
+	   
+//-- List show
+case 'show':
+  if (!isVerify) return reply(userB(prefix))
+	uptime = process.uptime()
+  capt = `Hii here Shiba  \nWuff Wuff \nUser: ${_user.length}`
+  thum = await fs.readFileSync('./media/shiba2.jpeg').toString('base64')
+  
+  if (args[0] === 'dailynews' ) {
+   return replyimg(showdailynews(prefix, tanggal, jam), text, capt, thum)
+  } else if (args[0] === 'github' ) {
+    return replyimg(showgithub(prefix, tanggal, jam), text, capt, thum)
+  } else if (args[0] === 'apk' ) {
+    return reply(showapk(prefix, tanggal, jam))
+  } 
+
+	   break	   
+	   
 		  
 //-- List Updates
 case 'updates':
@@ -493,6 +544,10 @@ case 'updates':
   capt = `Hi i am Shiba \nHere are the Updates\nStarDust`
   thum = await fs.readFileSync('./media/shiba.jpg').toString('base64')
   if (args.length < 1) return replyimg(updates(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+  } 
+   else if (args[0] === 'old' ) {
+    return reply(updatesold(prefix, tanggal, jam))
+  } 
 	  
           break
 //-- nsfw ass
@@ -504,6 +559,17 @@ case 'ass':
   if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
 	  
           break			  
+
+//-- nsfw boobs
+case 'boob':
+case 'boobs':
+  if (!isVerify) return reply(userB(prefix))
+	uptime = process.uptime()
+  capt = `♕︎ \n♕︎\n♕︎`
+  thum = await fs.readFileSync('./media/boob.jpg').toString('base64')
+  if (args.length < 1) return replyimg(boob(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+	  
+          break		
 
 //-- information bot
 case 'info':
@@ -991,30 +1057,16 @@ case 'banlist':
 					break
 
 //--- request
-case 'request':
-case 'save':
-case 'anfrage':
+case 'wish':
+case 'command':
+case 'wunsch':
   if (!isVerify) return reply(userB())
   yoi = value
-  if (args.length < 1) return reply('Geben Sie die gewünschten Funktionen in den Bot ein')
-  if (yoi.length > 200 ) return reply('Der Text überschreitet das Limit, Ihre Anfrage wird abgelehnt !')
+  if (args.length < 1) return reply('𝚊𝚍𝚍 𝚠𝚒𝚜𝚑 𝚠𝚒𝚝𝚑 .addwish 𝚎𝚡𝚊𝚖𝚙𝚕𝚎:  .wish i want a command to get a dog picture')
+  if (yoi.length > 200 ) return reply('𝚝𝚎𝚡𝚝 𝚒𝚜 𝚝𝚘𝚘 𝚕𝚘𝚗𝚐 !')
   _request.push(yoi)
   fs.writeFileSync('./report/request.json', JSON.stringify(_request))
-  reply(`Danke *${pushname}*, Ihre Anfrage wurde in der Datenbank gespeichert`)
-  
-	break
-	
-//--- update
-case 'addupdate':
-case 'addupdates':
-case 'addneu':
-  if (!isVerify) return reply(userB())
-  yoi = value
-  if (args.length < 1) return reply('Geben Sie das update in den Bot ein')
-  if (yoi.length > 300 ) return reply('Der Text überschreitet das Limit, Ihre Anfrage wird abgelehnt !')
-  _request.push(yoi)
-  fs.writeFileSync('./result/update.json', JSON.stringify(_update))
-  reply(`Danke *${pushname}*, Das Update wurde in der Datenbank gespeichert`)
+  reply(`𝔰𝔱𝔞𝔯𝔡𝔞𝔰𝔥 𝚃𝚑𝚡 ${pushname}, 𝚄𝚛 𝚠𝚒𝚜𝚑 𝚑𝚊𝚜 𝚋𝚎𝚎𝚗 𝚊𝚍𝚍𝚎𝚍. 𝚃𝚢𝚙𝚎 .wishes 𝚝𝚘 𝚟𝚒𝚎𝚠 𝚊𝚕𝚕 𝚠𝚒𝚜𝚑𝚎𝚜`)
   
 	break
 	
@@ -1045,15 +1097,15 @@ case 'listfehler':
 				reply(teks.trim())
 				break
 
-//-- list request
-case 'listreq':
-case 'listrequest':
-			if (!isOwner) return reply(ownerB())
-				teks = `  *LIST REQUEST*\nIm Folgenden finden Sie eine Liste der eingegangenen Meldungen nach Datum *${tanggal()}* mit der Anzahl der Berichte *${_request.length}*\n\n· *LIST* \n`
+//-- list wish
+case 'wishes':
+case 'listwish':
+			if (!isVerify) return reply(userB())
+				teks = `  𝔴𝔦𝔰𝔥𝔢𝔰\n𝙽𝚞𝚖𝚋𝚎𝚛 𝚘𝚏 𝚠𝚒𝚜𝚑𝚎𝚜 𝚏𝚘𝚛 𝚋𝚘𝚝 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜 *${_request.length}*\n\n- - - - - - - - -\n 𝚊𝚕𝚕 𝚠𝚒𝚜𝚑𝚎𝚜 \n`
 				for (let req of _request) {
 					teks += ` ${req}\n`
 				}
-				teks  += `-`
+				teks  += `- - - - - - - - -`
 				reply(teks.trim())
 				break
 
@@ -1136,7 +1188,7 @@ case 'kick':
 						mentions(teks, mentioned, true)
 						Lxa.groupRemove(from, mentioned)
 					} else {
-						mentions(`🪄 : @${mentioned[0].split('@')[0]}`, mentioned, true)
+						mentions(`𝙱𝚢𝚎 : @${mentioned[0].split('@')[0]}`, mentioned, true)
 				 Lxa.groupRemove(from, mentioned)
 					}
 					break

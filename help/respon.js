@@ -27,27 +27,27 @@ const ban = () => {
 
 //--
 const ownerB = () => {
-  return '💎 Diese Funktion ist nur für Legendäre Benutzer. Mehr infos? : *.menu* - 🇬🇧: This function is only for legendary users. More information: *.menu*'
+  return '𝔰𝔬𝔯𝔯𝔶 𝚘𝚗𝚕𝚢 𝚏𝚘𝚛 𝚘𝚠𝚗𝚎𝚛'
 }
 
 //--
 const premi = () => {
-  return '💎 Diese Funktion ist nur für Premium Benutzer. Premium Befehle: *.menu* 🇬🇧: This function is only for premium Users.'
+  return '𝔰𝔬𝔯𝔯𝔶 𝚘𝚗𝚕𝚢 𝚏𝚘𝚛 𝚟𝚒𝚙 𝚞𝚜𝚎𝚛𝚜'
 }
 
 //--
 const userB = (prefix) => {
-  return `🦁: *.register* eingeben um zu registrieren. 🇬🇧: Type *.register* to register.`
+  return `𝔰𝔱𝔞𝔯𝔡𝔞𝔰𝔥 𝚈𝚘𝚞 𝚊𝚛𝚎 𝚗𝚘𝚝 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍! 𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚢𝚙𝚎:       .𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛`
 }
 
 //--
 const admin = () => {
-  return '🐉 Sorry ... nur für Gruppen Admins 🇬🇧: Sorry. Only 4Admins'
+  return '𝔰𝔬𝔯𝔯𝔶 𝚘𝚗𝚕𝚢 𝚏𝚘𝚛 𝚊𝚍𝚖𝚒𝚗𝚜'
 }
 
 //--
 const Badmin = () => {
-  return '🦭 Machen sie mich erst Admin um die Funktion zu benutzen!'
+  return '𝔰𝔬𝔯𝔯𝔶 𝚒 𝚗𝚎𝚎𝚍 𝚊𝚍𝚖𝚒𝚗 𝚝𝚘 𝚞𝚜𝚎 𝚝𝚑𝚒𝚜 𝚏𝚞𝚗𝚌𝚝𝚒𝚘𝚗'
 }
 
 
