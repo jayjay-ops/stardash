@@ -556,7 +556,7 @@ case 'updates':
 case 'ass':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
-  capt = `♕︎ \n♕︎\n♕︎`
+  capt = `Luna \n♕︎\n♕︎`
   thum = await fs.readFileSync('./media/ass.jpg').toString('base64')
   if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
 	  
@@ -567,7 +567,7 @@ case 'boob':
 case 'boobs':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
-  capt = `♕︎ \n♕︎\n♕︎`
+  capt = `Stella \n♕︎\n♕︎`
   thum = await fs.readFileSync('./media/boob.jpg').toString('base64')
   if (args.length < 1) return replyimg(boob(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
 	  
