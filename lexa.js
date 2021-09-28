@@ -1349,7 +1349,7 @@ case 'verify':
 case 'daftar':
 case 'registrieren':
 case 'register':
-			if (isVerify) return reply('Du bist schon registiert 🔓')
+			if (isVerify) return reply('𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍 🔓')
 					_user.push(sender)
 			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
 			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}* \nYou are User nr. *${_user.length}*`
