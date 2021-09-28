@@ -1,4 +1,5 @@
- <summary>Bot has some fsk 18 commands</summary>
+<img align="center" height="auto" src="https://github.com/joewilliams007/stardash/media/shiba.jpg"/>
+<summary>Bot has some fsk 18 commands</summary>
  
  
 <details close="close">
