@@ -36,6 +36,9 @@ const updates = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptim
 [𝙽𝙴𝚆] .updates old
 [++] .register is redesigned
 [++] premium is now called vip
+[++] added more truths! .truth
+[++] added more dares! .dare
+[++] minor changes
 - - - - - - - - - - - - - - -
 `
 
@@ -61,6 +64,9 @@ else if (!isGroup) return`𝚄𝚙𝚍𝚊𝚝𝚎 𝙽𝚊𝚖𝚎
 [𝙽𝙴𝚆] .updates old
 [++] .register is redesigned
 [++] premium is now called vip
+[++] added more truths! .truth
+[++] added more dares! .dare
+[++] minor changes
 - - - - - - - - - - - - - - -
 `
 
