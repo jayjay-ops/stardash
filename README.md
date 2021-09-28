@@ -1,4 +1,4 @@
-
+ <summary>Bot has some fsk 18 commands</summary>
 <details close="close">
   <summary>TOOLS & INSTALLATION</summary>
   
