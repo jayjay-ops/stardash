@@ -1,4 +1,6 @@
  <summary>Bot has some fsk 18 commands</summary>
+ 
+ 
 <details close="close">
   <summary>TOOLS & INSTALLATION</summary>
   
@@ -46,10 +48,9 @@ Contact me for Questions
 
 ### List Menu
 
-<details close="close">
-  <summary>ABOUT NAOMI</summary>
+<details close="open">
   
-| ABOUT LEXA |Yes/No|
+| .menu |Yes/No|
 | ------------- | ------------- |
   </details>
   
