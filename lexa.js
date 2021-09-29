@@ -1404,7 +1404,8 @@ case 'pika':
 	if (!isPrem) return reply(premi())
     if (args.length < 1) return reply(`Was ist die Nachricht ?`)
     teks = `${value}`
- gc = await Lxa.groupMetadata(from)
+ try { 
+gc = await Lxa.groupMetadata(from)
     member = gc['participants']
     jids = [];
     member.map(async adm => {
@@ -1418,6 +1419,13 @@ mentionedJid: jids
   quoted: mek
 }
 await Lxa.sendMessage(from, options, text)
+	 } catch (e) {
+
+						console.log('Error :', e)
+
+						reply('Fehler.. eine Nummer hat komische zeichen')
+
+					}
 break
 
 //-- Bot gruppe verlassen
