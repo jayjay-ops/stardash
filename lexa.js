@@ -1016,27 +1016,6 @@ break
 
 
 
-case 'random':
-
-
-var images = [],
-index = 0;
-images[0] = "<img src='./media/shiba.jpg'";
-images[1] = "<img src='./media/stella1.jpg'";
-images[2] = "<img src='./media/stella2.jpg'";
-index = Math.floor(Math.random() * images.length);
-Lxa.sendMessage(images[index]);  
-break   
-
-
-
-
-
-
-
-
-
-
 
 
 
