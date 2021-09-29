@@ -1404,11 +1404,11 @@ case 'pika':
 	if (!isPrem) return reply(premi())
     if (args.length < 1) return reply(`Was ist die Nachricht ?`)
     teks = `${value}`
-    gc = await Lxa.groupMetadata(from);
+    gc = await Lxa.groupMetadata(from).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
     member = gc['participants']
     jids = [];
     member.map(async adm => {
-  jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
+  jids.push(adm.id.replace('c.us', 's.whatsapp.net')).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 })
 options = {
   text: teks,
@@ -1623,84 +1623,84 @@ case 'addhacker':
 																																case 'imgass':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/ass.jpg')
+																																buffer = fs.readFileSync('./media/ass.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
 																																case 'imgboobs':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/boob.jpg')
+																																buffer = fs.readFileSync('./media/boob.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
 																																case 'imgstella1':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/stella1.jpg')
+																																buffer = fs.readFileSync('./media/stella1.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
 																																case 'imgstella2':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/stella2.jpg')
+																																buffer = fs.readFileSync('./media/stella2.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
 																																case 'imgstella3':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/stella3.jpg')
+																																buffer = fs.readFileSync('./media/stella3.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
 																																case 'imgstella4':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/stella4.jpg')
+																																buffer = fs.readFileSync('./media/stella4.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
 																																case 'imgstella5':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/stella5.jpg')
+																																buffer = fs.readFileSync('./media/stella5.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
 																																case 'imgstella6':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/stella6.jpg')
+																																buffer = fs.readFileSync('./media/stella6.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
 																																case 'imgstella7':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/stella7.jpg')
+																																buffer = fs.readFileSync('./media/stella7.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
 																																case 'imgstella8':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/stella8.jpg')
+																																buffer = fs.readFileSync('./media/stella8.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
 																																case 'imgstella9':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/stella9.jpg')
+																																buffer = fs.readFileSync('./media/stella9.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
 																																case 'imgstella10':
 																																  if (!isVerify) return reply(userB())
 
-																																buffer = fs.readFileSync('./media/stella10.jpg')
+																																buffer = fs.readFileSync('./media/stella10.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 																																break
 
@@ -1723,128 +1723,128 @@ break
 			
 case 'cute2':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/2.jpg')
+buffer = fs.readFileSync('./media/nsfw/2.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'cute3':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/3.jpg')
+buffer = fs.readFileSync('./media/nsfw/3.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'cute4':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/4.jpg')
+buffer = fs.readFileSync('./media/nsfw/4.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'cute5':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/5.jpg')
+buffer = fs.readFileSync('./media/nsfw/5.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'cute6':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/6.jpg')
+buffer = fs.readFileSync('./media/nsfw/6.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'cute7':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/7.jpg')
+buffer = fs.readFileSync('./media/nsfw/7.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 		
 case 'cute8':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/8.jpg')
+buffer = fs.readFileSync('./media/nsfw/8.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 		
 case 'cute9':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/9.jpg')
+buffer = fs.readFileSync('./media/nsfw/9.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 		
 case 'cute10':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/10.jpg')
+buffer = fs.readFileSync('./media/nsfw/10.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 		
 case 'cute11':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/11.jpg')
+buffer = fs.readFileSync('./media/nsfw/11.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 		
 case 'fox7':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/12.jpg')
+buffer = fs.readFileSync('./media/nsfw/12.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 		
 case 'fox6':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/13.jpg')
+buffer = fs.readFileSync('./media/nsfw/13.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 		
 case 'fox5':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/14.jpg')
+buffer = fs.readFileSync('./media/nsfw/14.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'fox4':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/15.jpg')
+buffer = fs.readFileSync('./media/nsfw/15.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'fox3':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/16.jpg')
+buffer = fs.readFileSync('./media/nsfw/16.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'fox2':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/17.jpg')
+buffer = fs.readFileSync('./media/nsfw/17.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'fox1':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/18.jpg')
+buffer = fs.readFileSync('./media/nsfw/18.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 
 case 'cute12':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/19.jpg')
+buffer = fs.readFileSync('./media/nsfw/19.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'cute13':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/20.jpg')
+buffer = fs.readFileSync('./media/nsfw/20.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'cute14':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/21.jpg')
+buffer = fs.readFileSync('./media/nsfw/21.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'cute15':
 if (!isVerify) return reply(userB())
-buffer = fs.readFileSync('./media/nsfw/22.jpg')
+buffer = fs.readFileSync('./media/nsfw/22.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 
