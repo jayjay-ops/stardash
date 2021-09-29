@@ -1711,7 +1711,7 @@ case 'cute1':
 if (!isVerify) return reply(userB())
 
 
-Function(buffer = fs.readFileSync('./media/nsfw/1.jpg')).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
+Function1(buffer = fs.readFileSync('./media/nsfw/1.jpg')).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 
 
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
@@ -1747,12 +1747,13 @@ break
 	
 case 'cute6':
 if (!isVerify) return reply(userB())
-Function(buffer = fs.readFileSync('./media/nsfw/6.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) )
+Function2(buffer = fs.readFileSync('./media/nsfw/6.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) )
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 	
 case 'cute7':
 if (!isVerify) return reply(userB())
-Function(uffer = fs.readFileSync('./media/nsfw/7.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) )
+Function(buffer = fs.readFileSync('./media/nsfw/7.jpg').catch((e) => {console.log(`*ERROR:* ${e}`)}) )
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 		
