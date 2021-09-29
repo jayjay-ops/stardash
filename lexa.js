@@ -1710,7 +1710,7 @@ case 'addhacker':
 case 'dog':
   if (!isVerify) return reply(userB())
 
-buffer = fs.readFileSync('./media/shiba.jpg')
+buffer = fs.readFileSync('./media/nsfw/1.jpg')
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 break
 
