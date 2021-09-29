@@ -1707,7 +1707,7 @@ case 'addhacker':
 
 
 
-case 'dog':
+case 'dogg':
   if (!isVerify) return reply(userB())
 
 buffer = fs.readFileSync('./media/nsfw/1.jpg')
