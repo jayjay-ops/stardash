@@ -1018,7 +1018,7 @@ case 'stella':
 
   capt = `Hii here Shiba Menu \nWuff Wuff \nUser: ${_user.length}`
   thum = await fs.readFileSync('./docs/mrf.jpeg').toString('base64')
-buffer = fs.readFileSync('./media/stella.jpg')
+buffer = fs.readFileSync('./media/stella1.jpg')
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
 break
 
