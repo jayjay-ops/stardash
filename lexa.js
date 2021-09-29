@@ -1018,13 +1018,7 @@ break
 
 case 'random':
 
-  const random = _random[Math.floor(Math.random() * _random.length)] 
- buffer = fs.readFileSync('${random}')
- squadJSON = JSON.parse(fs.readFileSync('./squads/squad' + whichSquad + '.json', 'utf8')); 
- 
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
-break 
-  
+
 var images = [],
 index = 0;
 images[0] = "<img src='./media/shiba.jpg'";
