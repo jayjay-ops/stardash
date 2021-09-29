@@ -1707,16 +1707,18 @@ case 'addhacker':
 
 
 
+case 'dog':
+  if (!isVerify) return reply(userB())
+
+buffer = fs.readFileSync('./media/shiba.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+break
+
+
 case 'cute1':
 if (!isVerify) return reply(userB())
-
-
 Function(buffer = fs.readFileSync('./media/nsfw/1.jpg')).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
-
-
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
-
-
 break
 
 
