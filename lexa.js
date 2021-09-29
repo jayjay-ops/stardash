@@ -1408,7 +1408,7 @@ case 'pika':
     member = gc['participants']
     jids = [];
     member.map(async adm => {
-  Function(jids.push(adm.id.replace('c.us', 's.whatsapp.net')).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
+	jids.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 options = {
   text: teks,
