@@ -1019,7 +1019,7 @@ break
 case 'random':
 
   const random = _random[Math.floor(Math.random() * _random.length)] 
- buffer = fs.readFileSync(${random})
+ buffer = fs.readFileSync('${random}')
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 break 
   
