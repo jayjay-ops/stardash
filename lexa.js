@@ -1707,14 +1707,20 @@ case 'addhacker':
 
 
 
-
-
-
 case 'cute1':
 if (!isVerify) return reply(userB())
+
+try {
 buffer = fs.readFileSync('./media/nsfw/1.jpg')
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+} catch (error) {
+  console.error(error);
+
+}
+
 break
+
+
 			
 case 'cute2':
 if (!isVerify) return reply(userB())
