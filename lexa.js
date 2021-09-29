@@ -1404,7 +1404,7 @@ case 'pika':
 	if (!isPrem) return reply(premi())
     if (args.length < 1) return reply(`Was ist die Nachricht ?`)
     teks = `${value}`
-   Function( gc = await Lxa.groupMetadata(from).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
+   Function( gc = await Lxa.groupMetadata(from).catch((e) => {console.log(`*ERROR:* ${e}`)}) )
     member = gc['participants']
     jids = [];
     member.map(async adm => {
