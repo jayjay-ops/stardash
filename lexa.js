@@ -68,7 +68,7 @@ const _stein = JSON.parse(fs.readFileSync('./result/stein.json'));
 
 
 const _roll = JSON.parse(fs.readFileSync('./result/roll.json'));
-const _random = JSON.parse(fs.readFileSync('./result/random.json'));
+
 
 //-- Result ENGLISH
 const _truthen = JSON.parse(fs.readFileSync('./result/en/truthen.json'));
