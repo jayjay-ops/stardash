@@ -1714,10 +1714,6 @@ case 'cute1':
 if (!isVerify) return reply(userB())
 buffer = fs.readFileSync('./media/nsfw/1.jpg')
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
-(err) => {
-						fs.unlinkSync(media)
-						if (err) return reply('Error')
-							}
 break
 			
 case 'cute2':
