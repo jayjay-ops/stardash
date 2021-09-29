@@ -57,6 +57,8 @@ const _img = JSON.parse(fs.readFileSync('./media/image.json'))
 const _truth = JSON.parse(fs.readFileSync('./result/truth.json'));
 const _dare = JSON.parse(fs.readFileSync('./result/dare.json'));
 
+const _song = JSON.parse(fs.readFileSync('./result/song.json'));
+
 const _fakten = JSON.parse(fs.readFileSync('./result/fakten.json'));
 const _nsfw = JSON.parse(fs.readFileSync('./result/nsfw.json'));
 const _emoji = JSON.parse(fs.readFileSync('./result/emoji.json'));
@@ -823,6 +825,17 @@ break
 
 //-- ENGLISH
 
+
+
+//-- song
+case 'song':
+case 'lied':
+  if (!isVerify) return reply(userB())
+  const song = _song[Math.floor(Math.random() * _song.length)]
+  reply(`𝚁𝚊𝚗𝚍𝚘𝚖 𝚂𝚘𝚗𝚐 ♕︎\n\n${song}`)
+break
+
+
 //-- Tod truth
 case 'truth':
   if (!isVerify) return reply(userB())
@@ -847,6 +860,8 @@ case 'dare':
   const dareen = _dareen[Math.floor(Math.random() * _dareen.length)]
   reply(`★ *Dare*\n${dareen}`)
 break
+
+
 
 //-- pokemon
 case 'pokemon':
@@ -1010,52 +1025,8 @@ Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 break
 
 
-//-- Stella
-
-
-case 'stella':
-  if (!isVerify) return reply(userB())
-
-  capt = `Hii here Shiba Menu \nWuff Wuff \nUser: ${_user.length}`
-  thum = await fs.readFileSync('./docs/mrf.jpeg').toString('base64')
-buffer = fs.readFileSync('./media/stella1.jpg')
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
-break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
 //-- pict to sticker
 case 'stiker': case 's': case 'stikergif':
 case 'sticker': case 'stickergif': case 'sgif':
@@ -1237,34 +1208,33 @@ case 'wunsch':
   if (yoi.length > 200 ) return reply('𝚝𝚎𝚡𝚝 𝚒𝚜 𝚝𝚘𝚘 𝚕𝚘𝚗𝚐 !')
   _request.push(yoi)
   fs.writeFileSync('./report/request.json', JSON.stringify(_request))
-  reply(`𝔰𝔱𝔞𝔯𝔡𝔞𝔰𝔥 𝚃𝚑𝚡 ${pushname}, 𝚄𝚛 𝚠𝚒𝚜𝚑 𝚑𝚊𝚜 𝚋𝚎𝚎𝚗 𝚊𝚍𝚍𝚎𝚍. 𝚃𝚢𝚙𝚎 .wishes 𝚝𝚘 𝚟𝚒𝚎𝚠 𝚊𝚕𝚕 𝚠𝚒𝚜𝚑𝚎𝚜`)
+  reply(`𝙰𝚍𝚍𝚎𝚍!     > .𝚠𝚒𝚜𝚑𝚎𝚜`)
   
 	break
 	
 
 
-//--- Bericht
-case 'lapor':
-case 'fehler':
-case 'bericht':
+//--- Note
+case 'note':
+case 'type':
+
   if (!isVerify) return reply(userB())
   yoi = value
-  if (args.length < 1) return reply('Geben Sie den Namen der Fehlerfunktion ein, die beim Ausprobieren auftritt')
-  if (yoi.length > 100) return reply('Der Text überschreitet das Limit, Ihre Anfrage wird abgelehnt !')
+  if (args.length < 1) return reply('𝙴𝚗𝚝𝚎𝚛 𝙽𝚘𝚝𝚎. 𝙴𝚡𝚊𝚖𝚙𝚕𝚎:        .note i am God')
+  if (yoi.length > 100) return reply('𝚃𝚎𝚡𝚝 𝚒𝚜 𝚝𝚘𝚘 𝚕𝚘𝚗𝚐 :0')
   _lapor.push(yoi)
   fs.writeFileSync('./report/lapor.json', JSON.stringify(_lapor))
-  reply(`Terimakasih *${pushname}*, Laporan kamu telah tersimpan dalam database`)
+  reply(`𝙰𝚍𝚍𝚎𝚍!     > .𝚗𝚘𝚝𝚎𝚜`)
 	break
 
-//-- liste Bericht
-case 'listlapor':
-case 'listfehler':
+//-- list Notes
+case 'notes':
+case 'list note':
 			if (!isOwner) return reply(ownerB())
-				teks = `  *LIST FEHLER*\nIm Folgenden finden Sie eine Liste der eingegangenen Meldungen nach Datum *${tanggal()}* mit der Anzahl der Berichte *${_lapor.length}*\n\n· *LIST* \n`
+				teks = `𝙽𝚘𝚝𝚎𝚜: ${_lapor.length}\n\n- - - - - - - - -\n`
 				for (let lap of _lapor) {
-					teks += `# ${lap}\n`
+					teks += `${lap}\n`
 				}
-				teks  += `########################`
 				reply(teks.trim())
 				break
 
@@ -1272,7 +1242,7 @@ case 'listfehler':
 case 'wishes':
 case 'listwish':
 			if (!isVerify) return reply(userB())
-				teks = `  𝔴𝔦𝔰𝔥𝔢𝔰\n𝙽𝚞𝚖𝚋𝚎𝚛 𝚘𝚏 𝚠𝚒𝚜𝚑𝚎𝚜 𝚏𝚘𝚛 𝚋𝚘𝚝 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜 *${_request.length}*\n\n- - - - - - - - -\n𝚊𝚕𝚕 𝚠𝚒𝚜𝚑𝚎𝚜 \n- - - - - - - - -\n`
+				teks = `𝚠𝚒𝚜𝚑𝚎𝚜: ${_request.length}\n\n- - - - - - - - -\n`
 				for (let req of _request) {
 					teks += ` ${req}\n`
 				}
@@ -1643,6 +1613,235 @@ case 'addhacker':
   fs.writeFileSync('./result/hacker.json', JSON.stringify(_hacker))
   reply(`Done`)
   break
+
+
+
+
+//-- Stella
+
+
+																																case 'img ass':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/ass.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+																																case 'img boobs':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/boob.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+																																case 'img stella1':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/stella1.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+																																case 'img stella2':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/stella2.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+																																case 'img stella3':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/stella3.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+																																case 'img stella4':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/stella4.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+																																case 'img stella5':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/stella5.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+																																case 'img stella6':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/stella6.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+																																case 'img stella7':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/stella7.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+																																case 'img stella8':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/stella8.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+																																case 'img stella9':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/stella9.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+																																case 'img stella10':
+																																  if (!isVerify) return reply(userB())
+
+																																buffer = fs.readFileSync('./media/stella10.jpg')
+																																Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+																																break
+
+
+
+
+
+
+
+case 'cute1':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/1.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+			
+case 'cute2':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/.2jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'cute3':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/.j3pg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'cute4':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/4.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'cute5':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/5.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'cute6':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/6.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'cute7':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/7.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+		
+case 'cute8':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/8.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+		
+case 'cute9':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/9.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+		
+case 'cute10':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/10.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+		
+case 'cute11':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/11.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+		
+case 'fox7':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/12.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+		
+case 'fox6':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/13.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+		
+case 'fox5':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/14.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'fox4':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/15.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'fox3':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/16.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'fox2':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/17.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'fox1':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/18.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+
+case 'cute12':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/19.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'cute13':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/20.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'cute14':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/21.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+	
+case 'cute15':
+if (!isVerify) return reply(userB())
+buffer = fs.readFileSync('./media/nsfw/22.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
 
 
 

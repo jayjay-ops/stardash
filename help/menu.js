@@ -16,6 +16,7 @@ const menu = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, 
     admin = "Member Group"
   }
 		if (isGroup) return `𝔖𝔱𝔞𝔯𝔡𝔞𝔰𝔥
+- - - - - - - - - - - - -
 > .𝚖𝚎𝚗𝚞 𝚏𝚞𝚗
 > .𝚖𝚎𝚗𝚞 𝚝𝚘𝚘𝚕
 > .𝚖𝚎𝚗𝚞 𝚜𝚢𝚖𝚋𝚘𝚕
@@ -32,10 +33,12 @@ const menu = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, 
 
 
 else if (!isGroup) return`𝔖𝔱𝔞𝔯𝔡𝔞𝔰𝔥
+- - - - - - - - - - - - -
 > .𝚖𝚎𝚗𝚞 𝚏𝚞𝚗
 > .𝚖𝚎𝚗𝚞 𝚝𝚘𝚘𝚕
 > .𝚖𝚎𝚗𝚞 𝚜𝚢𝚖𝚋𝚘𝚕
 > .𝚖𝚎𝚗𝚞 𝚜𝚝𝚒𝚌𝚔𝚎𝚛
+- - - - - - - - - - - - -  
 > .𝚖𝚎𝚗𝚞 𝚊𝚍𝚖𝚒𝚗
 > .𝚖𝚎𝚗𝚞 𝚟𝚒𝚙
 > .𝚖𝚎𝚗𝚞 𝚘𝚠𝚗𝚎𝚛
@@ -51,16 +54,22 @@ else if (!isGroup) return`𝔖𝔱𝔞𝔯𝔡𝔞𝔰𝔥
 //---
 const menufun = (prefix, tanggal, jam) => {
   return `𝔐𝔢𝔫𝔲 𝔣𝔲𝔫
+- - - - - - - - - - - - -  
 > .𝚝𝚛𝚞𝚝𝚑
 > .𝚍𝚊𝚛𝚎
+> .𝚗𝚜𝚏𝚠𝙴𝙽
+- - - - - - - - - - - - - 
+> .𝚗𝚘𝚝𝚎
+> .𝚗𝚘𝚝𝚎𝚜
 > .𝚜𝚊𝚢
+- - - - - - - - - - - - - 
+> .𝚜𝚘𝚗𝚐
+> .𝚊𝚗𝚒𝚖𝚊𝚕
+> .𝚙𝚘𝚔𝚎𝚖𝚘𝚗
 > .𝚏𝚊𝚌𝚝
 > .𝚎𝚖𝚘𝚓𝚒𝚎
 > .𝚍𝚒𝚌𝚎
-> .𝚋𝚘𝚝
-> .𝚗𝚜𝚏𝚠𝙴𝙽
-> .𝚊𝚗𝚒𝚖𝚊𝚕
-> .𝚙𝚘𝚔𝚎𝚖𝚘𝚗
+- - - - - - - - - - - - - 
 > .𝚕𝚘𝚟𝚎 𝚗𝚊𝚖𝚎 𝚗𝚊𝚖𝚎
 > .𝚐𝚊𝚢
 𝔯𝔢𝔱𝔲𝔯𝔫 𝔱𝔬 𝔪𝔢𝔫𝔲
@@ -69,6 +78,7 @@ const menufun = (prefix, tanggal, jam) => {
 
 const menusticker = (prefix, tanggal, jam) => {
   return `𝔐𝔢𝔫𝔲 𝔰𝔱𝔦𝔠𝔨𝔢𝔯
+- - - - - - - - - - - - -  
 > .𝚜𝚝𝚒𝚌𝚔𝚎𝚛
 > .𝚒𝚖𝚊𝚐𝚎𝚜𝚝𝚒𝚌𝚔𝚎𝚛
 𝔯𝔢𝔱𝔲𝔯𝔫 𝔱𝔬 𝔪𝔢𝔫𝔲
@@ -79,6 +89,7 @@ const menusticker = (prefix, tanggal, jam) => {
 
 const menuadmin = (prefix, tanggal, jam) => {
   return `𝔐𝔢𝔫𝔲 𝔞𝔡𝔪𝔦𝔫
+- - - - - - - - - - - - -  
 > .𝚔𝚒𝚌𝚔
 > .𝚙𝚛𝚘𝚖𝚘𝚝𝚎
 > .𝚍𝚎𝚖𝚘𝚝𝚎
@@ -92,6 +103,7 @@ const menuadmin = (prefix, tanggal, jam) => {
 }
 const menuvip = (prefix, tanggal, jam) => {
   return `𝔐𝔢𝔫𝔲 𝔳𝔦𝔭
+- - - - - - - - - - - - -  
 > .𝚝𝚊𝚐𝚊𝚕𝚕
 > .𝚗𝚊𝚌𝚑𝚛𝚒𝚌𝚑𝚝
 > .𝚞𝚕𝚝𝚒𝚖𝚊𝚝𝚎𝚛𝚘𝚕𝚕
@@ -104,6 +116,7 @@ const menuvip = (prefix, tanggal, jam) => {
 
 const menuowner = (prefix, tanggal, jam) => {
   return `𝔐𝔢𝔫𝔲 𝔬𝔴𝔫𝔢𝔯
+- - - - - - - - - - - - -  
 > .𝚋𝚌
 > .𝚌𝚕𝚎𝚊𝚛𝚌𝚑𝚊𝚝
 𝔯𝔢𝔱𝔲𝔯𝔫 𝔱𝔬 𝔪𝔢𝔫𝔲
@@ -112,6 +125,7 @@ const menuowner = (prefix, tanggal, jam) => {
 
 const menuagb = (prefix, tanggal, jam) => {
   return `𝔞𝔤𝔟
+- - - - - - - - - - - - -
 • 𝚈𝚘𝚞𝚛 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜 𝚖𝚒𝚐𝚑𝚝 𝚋𝚎 𝚜𝚝𝚘𝚛𝚎𝚍 𝚒𝚏 𝚢𝚘𝚞 𝚑𝚊𝚟𝚎 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍
 • 𝚍𝚘𝚗𝚝 𝚊𝚋𝚞𝚜𝚎 𝚋𝚘𝚝 𝚠𝚒𝚝𝚑 𝚒𝚕𝚕𝚎𝚐𝚊𝚕 𝚌𝚘𝚗𝚝𝚎𝚗𝚝
 • 𝚌𝚑𝚊𝚝 𝚠𝚒𝚝𝚑 𝚋𝚘𝚝 𝚘𝚠𝚗𝚎𝚛 𝚝𝚘 𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛 𝚊𝚌𝚌𝚘𝚞𝚗𝚝
@@ -125,6 +139,7 @@ https://chat.whatsapp.com/BBAwr3RY6O77DOhJ8fuBnn
 
 const menusymbol = (prefix, tanggal, jam) => {
   return `𝔪𝔢𝔫𝔲 𝔰𝔶𝔪𝔟𝔬𝔩
+- - - - - - - - - - - - -  
 > .𝚜𝚝𝚊𝚛𝚜
 > .𝚠𝚒𝚕𝚍
 > .𝚝𝚎𝚡𝚝𝚖𝚘𝚓𝚒𝚎
@@ -136,6 +151,7 @@ const menusymbol = (prefix, tanggal, jam) => {
 
 const menutool = (prefix, tanggal, jam) => {
   return `𝔪𝔢𝔫𝔲 𝔱𝔬𝔬𝔩
+- - - - - - - - - - - - -  
 > .𝚠𝚒𝚜𝚑
 > .𝚠𝚒𝚜𝚑𝚎𝚜
 > .𝚜𝚑𝚘𝚠 dailynews
@@ -147,20 +163,57 @@ const menutool = (prefix, tanggal, jam) => {
 
 const menusecret = (prefix, tanggal, jam) => {
   return `𝔪𝔢𝔫𝔲 𝔰𝔢𝔠𝔯𝔢𝔱
+- - - - - - - - - - - - -  
 ♕︎ 𝙳𝙾𝙽𝚃 𝚃𝙴𝙻𝙻 𝙰𝙽𝚈𝙾𝙽𝙴 ♕︎
+- - - - - - - - - - - - -  
 > .𝚊𝚜𝚜
 > .𝚋𝚘𝚘𝚋𝚜
+- - - - - - - - - - - - -  
 > .𝚜𝚝𝚎𝚕𝚕𝚊1
+> .𝚒𝚖𝚐 𝚜𝚝𝚎𝚕𝚕𝚊1
 > .𝚜𝚝𝚎𝚕𝚕𝚊2
+> .𝚒𝚖𝚐 𝚜𝚝𝚎𝚕𝚕𝚊2
 > .𝚜𝚝𝚎𝚕𝚕𝚊3
+> .𝚒𝚖𝚐 𝚜𝚝𝚎𝚕𝚕𝚊3
 > .𝚜𝚝𝚎𝚕𝚕𝚊4
+> .𝚒𝚖𝚐 𝚜𝚝𝚎𝚕𝚕𝚊4
 > .𝚜𝚝𝚎𝚕𝚕𝚊5
+> .𝚒𝚖𝚐 𝚜𝚝𝚎𝚕𝚕𝚊5
 > .𝚜𝚝𝚎𝚕𝚕𝚊6
+> .𝚒𝚖𝚐 𝚜𝚝𝚎𝚕𝚕𝚊6
 > .𝚜𝚝𝚎𝚕𝚕𝚊7
+> .𝚒𝚖𝚐 𝚜𝚝𝚎𝚕𝚕𝚊7
 > .𝚜𝚝𝚎𝚕𝚕𝚊8
+> .𝚒𝚖𝚐 𝚜𝚝𝚎𝚕𝚕𝚊8
 > .𝚜𝚝𝚎𝚕𝚕𝚊9
+> .𝚒𝚖𝚐 𝚜𝚝𝚎𝚕𝚕𝚊9
 > .𝚜𝚝𝚎𝚕𝚕𝚊10
-> .𝚐𝚒𝚛𝚕
+> .𝚒𝚖𝚐 𝚜𝚝𝚎𝚕𝚕𝚊10
+- - - - - - - - - - - - -  
+> .𝚌𝚞𝚝𝚎1
+> .𝚌𝚞𝚝𝚎2
+> .𝚌𝚞𝚝𝚎3
+> .𝚌𝚞𝚝𝚎4
+> .𝚌𝚞𝚝𝚎5
+> .𝚌𝚞𝚝𝚎6
+> .𝚌𝚞𝚝𝚎7
+> .𝚌𝚞𝚝𝚎8
+> .𝚌𝚞𝚝𝚎9
+> .𝚌𝚞𝚝𝚎10
+> .𝚌𝚞𝚝𝚎11
+> .𝚌𝚞𝚝𝚎12
+> .𝚌𝚞𝚝𝚎13
+> .𝚌𝚞𝚝𝚎14
+> .𝚌𝚞𝚝𝚎15
+- - - - - - - - - - - - -  
+> .𝚏𝚘𝚡1
+> .𝚏𝚘𝚡2
+> .𝚏𝚘𝚡3
+> .𝚏𝚘𝚡4
+> .𝚏𝚘𝚡5
+> .𝚏𝚘𝚡6
+> .𝚏𝚘𝚡7
+- - - - - - - - - - - - -  
 𝔯𝔢𝔱𝔲𝔯𝔫 𝔱𝔬 𝔪𝔢𝔫𝔲
 > .𝚖𝚎𝚗𝚞`
 }
