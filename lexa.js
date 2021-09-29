@@ -1711,12 +1711,14 @@ case 'cute1':
 if (!isVerify) return reply(userB())
 
 try {
-buffer = fs.readFileSync('./media/nsfw/1.jpg')
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+Function(buffer = fs.readFileSync('./media/nsfw/1.jpg'));
+
 } catch (error) {
   console.error(error);
 
 }
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+
 
 break
 
