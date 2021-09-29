@@ -117,18 +117,18 @@ const { menu, menufun, menusticker, menuowner, menuvip, menuadmin, menuagb, menu
 
 const { updates, updatesold} = require('./help/updates');
 
-const { ass} = require('./help/ass');
-const { boob} = require('./help/boob');
-const { stella1} = require('./help/stella1');
-const { stella2} = require('./help/stella2');
-const { stella3} = require('./help/stella3');
-const { stella4} = require('./help/stella4');
-const { stella5} = require('./help/stella5');
-const { stella6} = require('./help/stella6');
-const { stella7} = require('./help/stella7');
-const { stella8} = require('./help/stella8');
-const { stella9} = require('./help/stella9');
-const { stella10} = require('./help/stella10');
+const { ass} = require('./help/nsfw/ass');
+const { boob} = require('./help/nsfw/boob');
+const { stella1} = require('./help/nsfw/stella1');
+const { stella2} = require('./help/nsfw/stella2');
+const { stella3} = require('./help/nsfw/stella3');
+const { stella4} = require('./help/nsfw/stella4');
+const { stella5} = require('./help/nsfw/stella5');
+const { stella6} = require('./help/nsfw/stella6');
+const { stella7} = require('./help/nsfw/stella7');
+const { stella8} = require('./help/nsfw/stella8');
+const { stella9} = require('./help/nsfw/stella9');
+const { stella10} = require('./help/nsfw/stella10');
 
 const { showgithub, showapk, showdailynews} = require('./help/show');
 

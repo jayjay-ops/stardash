@@ -33,7 +33,7 @@ const updates = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptim
 • [𝙽𝙴𝚆] .wishes
 • [𝙽𝙴𝚆] .show github
 • [𝙽𝙴𝚆] .show apk
-[𝙽𝙴𝚆] For the boys!!  .secret menu
+[𝙽𝙴𝚆] For the boys!!  .menu secret 
 [𝙽𝙴𝚆] .updates old
 [++] .register is redesigned
 [++] premium is now called vip
@@ -62,7 +62,7 @@ else if (!isGroup) return`𝚄𝚙𝚍𝚊𝚝𝚎 𝙽𝚊𝚖𝚎
 • [𝙽𝙴𝚆] .wishes
 • [𝙽𝙴𝚆] .show github
 • [𝙽𝙴𝚆] .show apk
-[𝙽𝙴𝚆] For the boys!!  .secret menu
+[𝙽𝙴𝚆] For the boys!!  .menu secret 
 [𝙽𝙴𝚆] .updates old
 [++] .register is redesigned
 [++] premium is now called vip
