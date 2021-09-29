@@ -1015,18 +1015,6 @@ break
 
 
 
-
-
-
-//-- Tod dare
-case 'dare':
-  if (!isVerify) return reply(userB())
-	  
-  const dareen = _dareen[Math.floor(Math.random() * _dareen.length)]
-  reply(`★ *Dare*\n${dareen}`)
-break
-
-
 case 'random':
 function getRandomImage() {
 //declare an array to store the images
