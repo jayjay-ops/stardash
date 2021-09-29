@@ -1404,11 +1404,11 @@ case 'pika':
 	if (!isPrem) return reply(premi())
     if (args.length < 1) return reply(`Was ist die Nachricht ?`)
     teks = `${value}`
-    gc = await Lxa.groupMetadata(from);
+   Function( gc = await Lxa.groupMetadata(from)).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
     member = gc['participants']
     jids = [];
     member.map(async adm => {
-  jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
+  Function(jids.push(adm.id.replace('c.us', 's.whatsapp.net'))).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 })
 options = {
   text: teks,
