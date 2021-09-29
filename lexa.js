@@ -1010,6 +1010,42 @@ Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 break
 
 
+//-- Stella
+
+
+case 'stella':
+  if (!isVerify) return reply(userB())
+
+  capt = `Hii here Shiba Menu \nWuff Wuff \nUser: ${_user.length}`
+  thum = await fs.readFileSync('./docs/mrf.jpeg').toString('base64')
+buffer = fs.readFileSync('./media/stella.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: '♕︎'})
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
