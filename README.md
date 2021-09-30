@@ -105,13 +105,13 @@ Contact me for Questions
   </details>
 
 <details close="close">
-  <summary>ANIME</summary>
+  <summary>secret menu</summary>
 | Others |Yes|
 | ------------- | ------------- |
   </details>
   
   <details close="close">
-  <summary>ISLAM</summary>
+  <summary>tagall</summary>
   
 | Groups |Yes|
 | ------------- | ------------- |
@@ -125,7 +125,7 @@ Contact me for Questions
   </details>
   
   <details close="close">
-  <summary>WEATHER</summary>
+  <summary>blind tagall</summary>
   
 | Groups |Yes|
 | ------------- | ------------- |
