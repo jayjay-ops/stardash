@@ -42,7 +42,7 @@ function start(file) {
     }
   })
   p.on('exit', code => {
-    console.error('Exited with code:', code)
+    console.error('There was an Error. However shiba inu was so nice and will restart the bot automaticly now. code:', code)
 	start(file)
     if (code === 0) return
     fs.watchFile(args[0], () => {
