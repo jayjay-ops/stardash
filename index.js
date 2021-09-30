@@ -43,13 +43,8 @@ function start(file) {
   })
   p.on('exit', code => {
     console.error('Exited with code:', code)
+	start(file)
     if (code === 0) return
-    fs.watchFile(args[0], () => {
-      fs.unwatchFile(args[0])
-      start(file)
-    })
-	if (code === 1) return
-	return
     fs.watchFile(args[0], () => {
       fs.unwatchFile(args[0])
       start(file)
