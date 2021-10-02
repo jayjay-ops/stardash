@@ -190,16 +190,16 @@ async function starts() {
 	const Lxa = new WAConnection()
 	Lxa.logger.level = 'warn'
 	Lxa.on('qr', () => {
-		console.log(color('[CHILLOCTI]','aqua'), color("Qr Code scannen zum verbinden...", "yellow"))
+		console.log(color('[DOGGO]','aqua'), color("Scan QR code to connect...", "yellow"))
 	})
 	fs.existsSync('./session/Lexa.json') && Lxa.loadAuthInfo('./session/Lexa.json')
 Lxa.on('connecting', () => {
         const time_connecting = moment.tz('Asia/Jakarta').format('HH:mm:ss')
-        console.log(color('[CHILLOCTI]','aqua'), color("Verbindet bro...", "yellow"))
+        console.log(color('[DOGGO]','aqua'), color("Verbindet bro...", "yellow"))
     })
 Lxa.on('open', () => {
         const time_connect = moment.tz('Asia/Jakarta').format('HH:mm:ss')
-        console.log(color('[CHILLOCTI]','aqua'), color(`Done Connecting`, "aqua"))
+        console.log(color('[DOGGO]','aqua'), color(`Done Connecting`, "aqua"))
         start('')
     })
 	await Lxa.connect({timeoutMs: 30*1000})
