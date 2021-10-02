@@ -1935,7 +1935,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 							})
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕︎', pushname)} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('StarDash', pushname)} ${ran} -o ${ran}`, async (error) => {
 									if (error) return reply(stick())
 									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)	
@@ -1963,7 +1963,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 							})
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕︎', pushname)} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('StarDash', pushname)} ${ran} -o ${ran}`, async (error) => {
 									if (error) return reply(stick())
 									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)
