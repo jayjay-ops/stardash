@@ -1741,14 +1741,14 @@ case 'europa':
 case 'flagge':
   if (!isVerify) return reply(userB())
   const euf = _euf[Math.floor(Math.random() * _euf.length)]
-  reply(`𝙶𝚞𝚎𝚜𝚜 𝚝𝚑𝚎 𝚏𝚕𝚊𝚐 𝚊𝚗𝚍 𝚜𝚎𝚗𝚍 𝚒𝚝! 𝚈𝚘𝚞𝚛 𝚌𝚘𝚞𝚗𝚝𝚛𝚢 𝚒𝚜:\n${euf}`)
+  reply(`𝙶𝚞𝚎𝚜𝚜 𝚝𝚑𝚎 𝚏𝚕𝚊𝚐 𝚊𝚗𝚍 𝚜𝚎𝚗𝚍 𝚒𝚝! 𝚈𝚘𝚞𝚛 𝚌𝚘𝚞𝚗𝚝𝚛𝚢 𝚒𝚜:\n\n${euf}`)
 break
 //-- Tod worldflags
 case 'flag':
 case 'flags':
   if (!isVerify) return reply(userB())
   const wf = _wf[Math.floor(Math.random() * _wf.length)]
-  reply(`𝙶𝚞𝚎𝚜𝚜 𝚝𝚑𝚎 𝚏𝚕𝚊𝚐 𝚊𝚗𝚍 𝚜𝚎𝚗𝚍 𝚒𝚝! 𝚈𝚘𝚞𝚛 𝚌𝚘𝚞𝚗𝚝𝚛𝚢 𝚒𝚜:\n${wf}`)
+  reply(`𝙶𝚞𝚎𝚜𝚜 𝚝𝚑𝚎 𝚏𝚕𝚊𝚐 𝚊𝚗𝚍 𝚜𝚎𝚗𝚍 𝚒𝚝! 𝚈𝚘𝚞𝚛 𝚌𝚘𝚞𝚗𝚝𝚛𝚢 𝚒𝚜:\n\n${wf}`)
 break
 //-- nsfw 
 case 'nsfw':
