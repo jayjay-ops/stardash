@@ -58,7 +58,7 @@ const _truth = JSON.parse(fs.readFileSync('./result/truth.json'));
 const _dare = JSON.parse(fs.readFileSync('./result/dare.json'));
 
 const _euf = JSON.parse(fs.readFileSync('./result/euflags.json'));
-const _wf = JSON.parse(fs.readFileSync('./result/worldflags.json'));
+const _wf = JSON.parse(fs.readFileSync('./result/worldflag.json'));
 
 const _song = JSON.parse(fs.readFileSync('./result/song.json'));
 
