@@ -1556,7 +1556,7 @@ case 'imgstella':
   if (!isVerify) return reply(userB(prefix))
 	  
   const imgstella = _imgstella[Math.floor(Math.random() * _imgstella.length)]
-	buffer = fs.readFileSync('${imgstella}')
+	buffer = fs.readFileSync(`${imgstella}`)
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'STELLA ✯'})
 break	
 
@@ -1566,7 +1566,7 @@ case 'cute':
 	  
   const cute = _cute[Math.floor(Math.random() * _cute.length)]
  
-	buffer = fs.readFileSync('${cute}')
+	buffer = fs.readFileSync(`${cute}`)
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'CUTE :0 ✯'})
 break
 
@@ -1575,7 +1575,7 @@ case 'dog':
   if (!isVerify) return reply(userB(prefix))
 	  
   const dog = _dog[Math.floor(Math.random() * _dog.length)]
-	buffer = fs.readFileSync('${dog}')
+	buffer = fs.readFileSync(`${dog}`)
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'Wuff ✯'})
 break
 
