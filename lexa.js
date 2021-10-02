@@ -2203,7 +2203,7 @@ case 'type':
 //-- list Notes
 case 'notes':
 case 'list note':
-			if (!isOwner) return reply(ownerB())
+			
 				teks = `𝙽𝚘𝚝𝚎𝚜: ${_lapor.length}\n\n- - - - - - - - -\n`
 				for (let lap of _lapor) {
 					teks += `${lap}\n`
