@@ -148,6 +148,7 @@ const premium = [
    "4915231886122@s.whatsapp.net",
    "49491728568032@s.whatsapp.net",
 	  "27609580734@s.whatsapp.net",
+	  "4949017637630668@s.whatsapp.net",
    
   ];
 const ownerNumber = [
