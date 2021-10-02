@@ -57,6 +57,9 @@ const _img = JSON.parse(fs.readFileSync('./media/image.json'))
 const _truth = JSON.parse(fs.readFileSync('./result/truth.json'));
 const _dare = JSON.parse(fs.readFileSync('./result/dare.json'));
 
+const _euf = JSON.parse(fs.readFileSync('./result/euflags.json'));
+const _wf = JSON.parse(fs.readFileSync('./result/worldflags.json'));
+
 const _song = JSON.parse(fs.readFileSync('./result/song.json'));
 
 const _fakten = JSON.parse(fs.readFileSync('./result/fakten.json'));
@@ -91,7 +94,7 @@ const _stoneen = JSON.parse(fs.readFileSync('./result/en/stoneen.json'));
 
 const _rollen = JSON.parse(fs.readFileSync('./result/en/dice.json'));
 
-
+const _rboob = JSON.parse(fs.readFileSync('./result/rboob.json'));
 
 
 const _ultimateroll = JSON.parse(fs.readFileSync('./result/ultimateroll.json'));
@@ -317,7 +320,7 @@ const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stic
 
 //-- watermark stiker
 			function addMetadata(packname, author) {	
-				if (!packname) packname = '𝙲𝚑𝚒𝚕𝚕𝚘𝚌𝚝𝚒 ✯'; if (!author) author = pushname ;	
+				if (!packname) packname = '𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕︎'; if (!author) author = pushname ;	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
 				if (fs.existsSync(`./exif/${name}.exif`)) return `./exif/${name}.exif`
@@ -361,10 +364,10 @@ const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stic
 colors = ['red','white','black','blue','yellow','green']
 
 //--Console log grup
-if (!isGroup && isCmd) console.log(color('[Chillocti]','aqua'), "CP", color(command, "orange"), "from", (sender.split('@')[0]),  args.length)
+if (!isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕︎]','aqua'), "CP", color(command, "green"), "from", (sender.split('@')[0]),  args.length)
 			
 //--Private Chat-Log-Konsole
-if (isGroup && isCmd) console.log(color('[Chillocti]','aqua'), "GC", color(command, "orange"), "from", (sender.split('@')[0]), "in", (groupName), args.length)
+if (isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕︎]','aqua'), "GC", color(command, "green"), "from", (sender.split('@')[0]), "in", (groupName), args.length)
 
 
 //-- Status
@@ -441,6 +444,945 @@ switch(is) {
 case 'chillocti':
 reply('Willkommen in unserer Gruppe')
 }
+
+
+//--Auto response
+switch(is) {
+case '/menu':
+reply('𝙿𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎:  >    .menu')
+}
+
+//--Auto response
+switch(is) {
+case '#menu':
+reply('𝙿𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎:  >    .menu')
+}
+
+//--Auto response
+switch(is) {
+case '*menu':
+reply('𝙿𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎:  >    .menu')
+}
+
+
+
+
+
+
+
+
+//--Auto response
+switch(is) {
+case '🇦🇫':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Afghanistan')
+}
+
+//--Auto response
+switch(is) {
+case '🇦🇽':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Åland Islands')
+}
+
+//--Auto response
+switch(is) {
+case '🇦🇱':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Albania')
+}
+//--Auto response
+switch(is) {
+case '🇩🇿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Algeria')
+}
+//--Auto response
+switch(is) {
+case '🇦🇸':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: American Samoa')
+}
+//--Auto response
+switch(is) {
+case '🇦🇩':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Andorra')
+}
+//--Auto response
+switch(is) {
+case '🇦🇴':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Angola')
+}
+//--Auto response
+switch(is) {
+case '🇦🇮':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Anguilla')
+}
+//--Auto response
+switch(is) {
+case '🇦🇶':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Antarctica')
+}
+//--Auto response
+switch(is) {
+case '🇦🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Antigua and Barbuda')
+}
+
+switch(is) {
+case '🇦🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Argentina')
+}
+
+switch(is) {
+case '🇦🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Armenia')
+}
+switch(is) {
+case '🇦🇼':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Aruba')
+}
+switch(is) {
+case '🇦🇺':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Australia')
+}
+switch(is) {
+case '🇦🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Austria')
+}
+switch(is) {
+case '🇦🇿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Azerbaijan')
+}
+switch(is) {
+case '🇧🇸':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Bahamas')
+}
+switch(is) {
+case '🇧🇭':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: 🇧🇭')
+}
+switch(is) {
+case '🇧🇩':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Bangladesh')
+}
+switch(is) {
+case '🇧🇧':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Barbados')
+}
+switch(is) {
+case '🇧🇾':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Belarus')
+}
+switch(is) {
+case '🇧🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Belgium')
+}
+switch(is) {
+case '🇧🇿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Belize')
+}
+switch(is) {
+case '🇧🇯':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Benin')
+}
+switch(is) {
+case '🇧🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Bermuda')
+}
+switch(is) {
+case '🇧🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Bhutan')
+}
+switch(is) {
+case '🇧🇴':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Bolivia')
+}
+switch(is) {
+case '🇧🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Bosnia and Herzegovina')
+}
+switch(is) {
+case '🇧🇼':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Botswana')
+}
+switch(is) {
+case '🇧🇻':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Bouvet Island')
+}
+switch(is) {
+case '🇧🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Brazil')
+}
+switch(is) {
+case '🇮🇴':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: British Indian Ocean Territory')
+}
+switch(is) {
+case '🇧🇳':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Brunei')
+}
+switch(is) {
+case '🇧🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Bulgaria')
+}
+switch(is) {
+case '🇧🇫':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Burkina Faso')
+}
+switch(is) {
+case '🇧🇮':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Burundi')
+}
+switch(is) {
+case '🇰🇭':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Cambodia')
+}
+switch(is) {
+case '🇨🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Cameroon')
+}
+switch(is) {
+case '🇨🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Canada')
+}
+switch(is) {
+case '🇨🇻':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Cape Verde')
+}
+switch(is) {
+case '🇧🇶	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Caribbean Netherlands')
+}
+switch(is) {
+case '🇰🇾':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Cayman Islands')
+}switch(is) {
+case '🇨🇫':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Central African Republic')
+}
+switch(is) {
+case '🇹🇩':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Chad')
+}
+switch(is) {
+case '🇨🇱':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Chile')
+}
+switch(is) {
+case '🇨🇳':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: China')
+}
+switch(is) {
+case '🇨🇽':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Christmas Island')
+}
+switch(is) {
+case '🇨🇨':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Cocos (Keeling) Islands')
+}
+switch(is) {
+case '🇨🇴':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Colombia')
+}
+switch(is) {
+case '🇰🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Comoros')
+}
+switch(is) {
+case '🇨🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Republic of the Congo')
+}
+switch(is) {
+case '🇨🇩':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: DR Congo')
+}
+switch(is) {
+case '🇨🇰':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Cook Islands')
+}
+switch(is) {
+case '🇨🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Costa Rica')
+}
+switch(is) {
+case '🇨🇮':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Côte dIvoire Ivory Coast')
+}
+switch(is) {
+case '🇭🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Croatia')
+}
+switch(is) {
+case '🇨🇺':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Cuba')
+}
+switch(is) {
+case '🇨🇼':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Curaçao')
+}
+switch(is) {
+case '🇨🇾':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Cyprus')
+}
+switch(is) {
+case '🇨🇿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Czechia')
+}
+switch(is) {
+case '🇩🇰':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Denmark')
+}
+switch(is) {
+case '🇩🇯':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Djibouti')
+}
+switch(is) {
+case '🇩🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Dominica')
+}
+switch(is) {
+case '🇩🇴':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Dominican Republic')
+}
+switch(is) {
+case '🇪🇨':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: 	Ecuador')
+}
+switch(is) {
+case '🇪🇬	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Egypt')
+}
+switch(is) {
+case '🏴󠁧󠁢󠁥󠁮󠁧󠁿	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: England')
+}
+switch(is) {
+case '🇬🇶':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Equatorial Guinea')
+}
+switch(is) {
+case '🇪🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Eritrea')
+}
+switch(is) {
+case '🇪🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Estonia')
+}
+switch(is) {
+case '🇸🇿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Eswatini Swaziland')
+}
+switch(is) {
+case '🇪🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Ethiopia')
+}
+switch(is) {
+case '🇫🇰	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Falkland Islands')
+}
+switch(is) {
+case '🇫🇴':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: 	Faroe Islands')
+}
+switch(is) {
+case '🇫🇯	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Fiji')
+}
+switch(is) {
+case '🇫🇮':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Finland')
+}
+switch(is) {
+case '🇫🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: France')
+}
+switch(is) {
+case '🇬🇫':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: French Guiana')
+}
+switch(is) {
+case '🇵🇫':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: French Polynesia')
+}
+switch(is) {
+case '🇹🇫':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: French Southern and Antarctic Lands')
+}
+switch(is) {
+case '🇬🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Gabon')
+}
+switch(is) {
+case '🇬🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Gambia')
+}
+switch(is) {
+case '🇬🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Georgia')
+}
+switch(is) {
+case '🇩🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Germany')
+}
+switch(is) {
+case '🇬🇭':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Ghana')
+}
+switch(is) {
+case '🇬🇮':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Gibraltar')
+}
+switch(is) {
+case '🇬🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Greece')
+}
+switch(is) {
+case '🇬🇱':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Greenland')
+}
+switch(is) {
+case '🇬🇩':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Grenada')
+}
+switch(is) {
+case '🇬🇵':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Guadeloupe')
+}
+switch(is) {
+case '🇬🇺':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Guam')
+}
+switch(is) {
+case '🇬🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Guatemala')
+}
+switch(is) {
+case '🇬🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Guernsey')
+}
+switch(is) {
+case '🇬🇳':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Guinea')
+}
+switch(is) {
+case '🇬🇼':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Guinea-Bissau')
+}
+switch(is) {
+case '🇬🇾':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Guyana')
+}
+switch(is) {
+case '🇭🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Haiti')
+}
+switch(is) {
+case '🇭🇲	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Heard Island and McDonald Islands')
+}
+switch(is) {
+case '🇭🇳':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Honduras')
+}
+switch(is) {
+case '🇭🇰':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Hong Kong')
+}
+switch(is) {
+case '🇭🇺':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Hungary')
+}
+switch(is) {
+case '🇮🇸':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: 	Iceland')
+}
+switch(is) {
+case '🇮🇳':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: India')
+}
+switch(is) {
+case '🇮🇩':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Indonesia')
+}
+switch(is) {
+case '🇮🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Iran')
+}switch(is) {
+case '🇮🇶':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Iraq')
+}switch(is) {
+case '🇮🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Ireland')
+}switch(is) {
+case '🇮🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Isle of Man')
+}switch(is) {
+case '🇮🇱':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Israel')
+}switch(is) {
+case '🇮🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Italy')
+}switch(is) {
+case '🇯🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Jamaica')
+}switch(is) {
+case '🇯🇵':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Japan')
+}switch(is) {
+case '🇯🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Jersey')
+}switch(is) {
+case '🇯🇴':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Jordan')
+}switch(is) {
+case '🇰🇿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Kazakhstan')
+}switch(is) {
+case '🇰🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Kenya')
+}switch(is) {
+case '🇰🇮':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Kiribati')
+}switch(is) {
+case '🇰🇵':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: North Korea')
+}switch(is) {
+case '🇰🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: South Korea')
+}switch(is) {
+case '🇽🇰':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Kosovo')
+}switch(is) {
+case '🇰🇼':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Kuwait')
+}switch(is) {
+case '🇰🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Kyrgyzstan')
+}switch(is) {
+case '🇱🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Laos')
+}switch(is) {
+case '🇱🇻':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Latvia')
+}switch(is) {
+case '🇱🇧':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Lebanon')
+}switch(is) {
+case '🇱🇸':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Lesotho')
+}switch(is) {
+case '🇱🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Liberia')
+}switch(is) {
+case '🇱🇾':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Libya')
+}switch(is) {
+case '🇱🇮':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Liechtenstein')
+}switch(is) {
+case '🇱🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Lithuania')
+}switch(is) {
+case '🇱🇺':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Luxembourg')
+}
+switch(is) {
+case '🇲🇴	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Macau')
+}
+switch(is) {
+case '🇲🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Madagascar')
+}switch(is) {
+case '🇲🇼':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Malawi')
+}switch(is) {
+case '🇲🇾':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Malaysia')
+}switch(is) {
+case '🇲🇻':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Maldives')
+}switch(is) {
+case '🇲🇱':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Mali')
+}switch(is) {
+case '🇲🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Malta')
+}switch(is) {
+case '🇲🇭':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Marshall Islands')
+}switch(is) {
+case '🇲🇶	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Martinique')
+}switch(is) {
+case '🇲🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Mauritania')
+}switch(is) {
+case '🇲🇺	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Mauritius')
+}switch(is) {
+case '🇾🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Mayotte')
+}switch(is) {
+case '🇲🇽':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Mexico')
+}switch(is) {
+case '🇫🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Micronesia')
+}switch(is) {
+case '🇲🇩':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Moldova')
+}switch(is) {
+case '🇲🇨':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Monaco')
+}
+switch(is) {
+case '🇲🇳	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Mongolia')
+}switch(is) {
+case '🇲🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Montenegro')
+}switch(is) {
+case '🇲🇸':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Montserrat')
+}switch(is) {
+case '🇲🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Morocco')
+}switch(is) {
+case '🇲🇿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Mozambique')
+}switch(is) {
+case '🇲🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Myanmar')
+}switch(is) {
+case '🇳🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Namibia')
+}switch(is) {
+case '🇳🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Nauru')
+}switch(is) {
+case '🇳🇵':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Nepal')
+}switch(is) {
+case '🇳🇱':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Netherlands')
+}switch(is) {
+case '🇳🇨':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: New Caledonia')
+}switch(is) {
+case '🇳🇿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: New Zealand')
+}switch(is) {
+case '🇳🇮':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Nicaragua')
+}switch(is) {
+case '🇳🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Niger')
+}switch(is) {
+case '🇳🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Nigeria')
+}switch(is) {
+case '🇳🇺':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Niue')
+}switch(is) {
+case '🇳🇫':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Norfolk Island')
+}switch(is) {
+case '🇲🇰	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: North Macedonia')
+}switch(is) {
+case '🇲🇵':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Northern Mariana Islands')
+}switch(is) {
+case '🇳🇴':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Norway')
+}switch(is) {
+case '🇴🇲	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Oman')
+}switch(is) {
+case '🇵🇰':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Pakistan')
+}switch(is) {
+case '🇵🇼':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Palau')
+}switch(is) {
+case '🇵🇸':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Palestine')
+}switch(is) {
+case '🇵🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Panama')
+}switch(is) {
+case '🇵🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Papua New Guinea')
+}switch(is) {
+case '🇵🇾':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Paraguay')
+}switch(is) {
+case '':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: ')
+}
+switch(is) {
+case '🇵🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Peru')
+}switch(is) {
+case '🇵🇭':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Philippines')
+}switch(is) {
+case '🇵🇳':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Pitcairn Islands')
+}switch(is) {
+case '🇵🇱':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Poland')
+}switch(is) {
+case '🇵🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Portugal')
+}switch(is) {
+case '🇵🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Puerto Rico')
+}switch(is) {
+case '🇶🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Qatar')
+}switch(is) {
+case '🇷🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Réunion')
+}switch(is) {
+case '🇷🇴':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Romania')
+}switch(is) {
+case '🇷🇺':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Russia')
+}switch(is) {
+case '🇷🇼':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Rwanda')
+}switch(is) {
+case '🇧🇱':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Saint Barthélemy')
+}switch(is) {
+case '🇸🇭':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Saint Helena, Ascension and Tristan da Cunha')
+}switch(is) {
+case '🇰🇳':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Saint Kitts and Nevis')
+}switch(is) {
+case '🇱🇨':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Saint Lucia')
+}switch(is) {
+case '🇲🇫':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Saint Martin')
+}switch(is) {
+case '🇵🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Saint Pierre and Miquelon')
+}switch(is) {
+case '🇻🇨':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Saint Vincent and the Grenadines')
+}switch(is) {
+case '🇼🇸	':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Samoa')
+}switch(is) {
+case '🇸🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: San Marino')
+}switch(is) {
+case '🇸🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: São Tomé and Príncipe')
+}switch(is) {
+case '🇸🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Saudi Arabia')
+}switch(is) {
+case '🏴󠁧󠁢󠁳󠁣󠁴󠁿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Scotland')
+}
+switch(is) {
+case '🇸🇳':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Senegal')
+}switch(is) {
+case '🇷🇸':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Serbia')
+}switch(is) {
+case '🇸🇨':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Seychelles')
+}switch(is) {
+case '🇸🇱':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Sierra Leone')
+}switch(is) {
+case '🇸🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Singapore')
+}switch(is) {
+case '🇸🇽':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Sint Maarten')
+}switch(is) {
+case '🇸🇰':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Slovakia')
+}switch(is) {
+case '🇸🇮':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Slovenia')
+}switch(is) {
+case '🇸🇧':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Solomon Islands')
+}switch(is) {
+case '🇸🇴':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Somalia')
+}switch(is) {
+case '🇿🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: South Africa')
+}switch(is) {
+case '🇬🇸':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: South Georgia')
+}switch(is) {
+case '🇸🇸':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: South Sudan')
+}switch(is) {
+case '🇪🇸':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Spain')
+}switch(is) {
+case '🇱🇰':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Sri Lanka')
+}switch(is) {
+case '🇸🇩':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Sudan')
+}switch(is) {
+case '🇸🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Suriname')
+}switch(is) {
+case '🇸🇯':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Svalbard and Jan Mayen')
+}switch(is) {
+case '🇸🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Sweden')
+}switch(is) {
+case '🇨🇭':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Switzerland')
+}switch(is) {
+case '🇸🇾':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Syria')
+}switch(is) {
+case '🇹🇼':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Taiwan')
+}switch(is) {
+case '🇹🇯':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Tajikistan')
+}switch(is) {
+case '🇹🇿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Tanzania')
+}switch(is) {
+case '🇹🇭':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Thailand')
+}switch(is) {
+case '🇹🇱':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Timor-Leste')
+}switch(is) {
+case '🇹🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Togo')
+}switch(is) {
+case '🇹🇰':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Tokelau')
+}switch(is) {
+case '🇹🇴':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Tonga')
+}
+switch(is) {
+case '🇹🇹':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Trinidad and Tobago ')
+}
+switch(is) {
+case '🇹🇳':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Tunisia')
+}
+switch(is) {
+case '🇹🇷':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Turkey')
+}
+switch(is) {
+case '🇹🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Turkmenistan')
+}
+switch(is) {
+case '🇹🇨':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Turks and Caicos Islands')
+}
+switch(is) {
+case '🇹🇻':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Tuvalu')
+}
+switch(is) {
+case '🇺🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Uganda')
+}
+switch(is) {
+case '🇺🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Ukraine')
+}
+switch(is) {
+case '🇦🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: United Arab Emirates')
+}
+switch(is) {
+case '🇬🇧':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: United Kingdom')
+}
+switch(is) {
+case '🇺🇸':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: United States')
+}
+switch(is) {
+case '🇺🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: United States Minor Outlying Islands')
+}
+switch(is) {
+case '🇺🇾':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Uruguay')
+}
+switch(is) {
+case '🇺🇿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Uzbekistan')
+}
+switch(is) {
+case '🇻🇺':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Vanuatu')
+}
+switch(is) {
+case '🇻🇦':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Vatican City (Holy See)')
+}
+switch(is) {
+case '🇻🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Venezuela')
+}
+switch(is) {
+case '🇻🇳':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Vietnam')
+}
+switch(is) {
+case '🇻🇬':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: British Virgin Islands')
+}
+switch(is) {
+case '🇻🇮':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: United States Virgin Islands')
+}
+switch(is) {
+case '🏴󠁧󠁢󠁷󠁬󠁳󠁿':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Wales')
+}
+switch(is) {
+case '🇼🇫':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Wallis and Futuna')
+}
+switch(is) {
+case '🇪🇭':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Western Sahara')
+}
+switch(is) {
+case '🇾🇪':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Yemen')
+}
+switch(is) {
+case '🇿🇲':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Zambia')
+}
+switch(is) {
+case '🇿🇼':
+reply('𝚃𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘: Zimbabwe')
+}
+
+
+
+
 
 
 //--Auto response
@@ -703,6 +1645,25 @@ case 'boobs':
   if (args.length < 1) return replyimg(boob(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
 	  
           break		
+		  
+		  
+case 'rboob':
+case 'rboobs':
+  if (!isVerify) return reply(userB(prefix))
+	  
+  const rboob = _rboob[Math.floor(Math.random() * _rboob.length)]
+	uptime = process.uptime()
+  capt = `Stella \n♕︎\n♕︎`
+  thum = await fs.readFileSync(`${rboob}`).toString('base64')
+  if (args.length < 1) return replyimg(boob(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+	  
+          break		
+
+
+
+
+		  
+		  
 
 //-- information bot
 case 'girl':
@@ -774,8 +1735,21 @@ case 'p':
   reply(`★ *Pflicht*\n${dare}`)
 break
 
-
-
+//-- Tod flag world
+case 'euflag':
+case 'europa':
+case 'flagge':
+  if (!isVerify) return reply(userB())
+  const euf = _euf[Math.floor(Math.random() * _euf.length)]
+  reply(`𝙶𝚞𝚎𝚜𝚜 𝚝𝚑𝚎 𝚏𝚕𝚊𝚐 𝚊𝚗𝚍 𝚜𝚎𝚗𝚍 𝚒𝚝! 𝚈𝚘𝚞𝚛 𝚌𝚘𝚞𝚗𝚝𝚛𝚢 𝚒𝚜:\n${euf}`)
+break
+//-- Tod worldflags
+case 'flag':
+case 'flags':
+  if (!isVerify) return reply(userB())
+  const wf = _wf[Math.floor(Math.random() * _wf.length)]
+  reply(`𝙶𝚞𝚎𝚜𝚜 𝚝𝚑𝚎 𝚏𝚕𝚊𝚐 𝚊𝚗𝚍 𝚜𝚎𝚗𝚍 𝚒𝚝! 𝚈𝚘𝚞𝚛 𝚌𝚘𝚞𝚗𝚝𝚛𝚢 𝚒𝚜:\n${wf}`)
+break
 //-- nsfw 
 case 'nsfw':
 case '18':
@@ -961,7 +1935,7 @@ case 'emojie':
 case 'smiley':
   if (!isVerify) return reply(userB())
   const emoji = _emoji[Math.floor(Math.random() * _emoji.length)]
-  reply(`*Your Emojii:*\n${emoji}`)
+  reply(`𝚈𝚘𝚞𝚛 𝙴𝚖𝚘𝚓𝚒𝚎:\n${emoji}`)
 break
 
 
@@ -1004,7 +1978,6 @@ break
 case 'wame':
 case 'mylink':
   if (!isVerify) return reply(userB())
-	   if (!isPrem) return reply(premi())
 					reply(`wa.me/${sender.split('@')[0]}`)
 			break
 
@@ -1047,7 +2020,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 							})
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('Chillocti', pushname)} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕︎', pushname)} ${ran} -o ${ran}`, async (error) => {
 									if (error) return reply(stick())
 									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)	
@@ -1075,7 +2048,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 							})
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('Chillocti', pushname)} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕︎', pushname)} ${ran} -o ${ran}`, async (error) => {
 									if (error) return reply(stick())
 									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)
@@ -1086,7 +2059,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 							.toFormat('webp')
 							.save(ran)
 					} else {
-						reply(`falsch`)
+						reply(`𝑇𝑎𝑔 𝑝𝑖𝑐𝑡𝑢𝑟𝑒`)
 					}
 					break
 
@@ -1096,7 +2069,7 @@ case 'toimg':
 case 'imagesticker':
 case 'image':
   if (!isVerify) return reply(UserB())
-					if (!isQuotedSticker) return reply('Answer Sticker')
+					if (!isQuotedSticker) return reply('𝚊𝚗𝚜𝚠𝚎𝚛 (𝚒𝚖𝚐)𝚜𝚝𝚒𝚌𝚔𝚎𝚛')
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 					ran= getRandom('.png')
@@ -1120,7 +2093,7 @@ case 'besitzer':
     owner = await fs.readFileSync('./docs/mrf.jpeg').toString('base64')
     capt = "𝙲𝚑𝚒𝚕𝚕𝚘𝚌𝚝𝚒 ✯"
     const been = {
-    text: `@${nomor.split("@")[0]} Hier ist mein Besitzer, chatte einfach, wenn du es brauchst`,
+    text: `@${nomor.split("@")[0]} 𝚃𝚑𝚒𝚜 𝚒𝚜 𝚖𝚢 𝙾𝚠𝚗𝚎𝚛. 𝙲𝚑𝚊𝚝 𝚠𝚒𝚝𝚑 𝚑𝚒𝚖 𝚒𝚏 𝚢𝚘𝚞 𝚠𝚊𝚗𝚝.`,
   contextInfo: {
 mentionedJid: [nomor]
   }
@@ -1137,7 +2110,7 @@ case 'clear':
     for (let chat of list_chat) {
     Lxa.modifyChat(chat.jid, "delete")
     }
-    reply("success clear all chat")
+    reply("𝙰𝚕𝚕 𝚖𝚎𝚜𝚜𝚊𝚐𝚎𝚜 𝚌𝚕𝚎𝚊𝚛𝚎𝚍. 𝚂𝚑𝚒𝚋𝚊 𝙸𝚗𝚞 𝚠𝚒𝚕𝚕 𝚗𝚘𝚠 𝚛𝚎𝚜𝚝𝚊𝚛𝚝 𝚝𝚑𝚎 𝚋𝚘𝚝 ✯")
    break
 
 //-- mentions all members
@@ -1148,7 +2121,7 @@ case 'makier':
 		  if (!isGroup) return reply(group())
 			if (!isPrem) return reply(premi())
 					members_id = []
-			teks = `\n★ Gruppe : *${groupName}*\n★ Teilnehmer : *${groupMetadata.participants.length}*\n${value}\n★☆☆☆★· *MENTIONS* \n`
+			teks = `\n★ 𝚐𝚛𝚘𝚞𝚙 : *${groupName}*\n★ 𝚞𝚜𝚎𝚛𝚜 : *${groupMetadata.participants.length}*\n${value}\n★☆☆☆★· 𝚖𝚎𝚗𝚝𝚒𝚘𝚗𝚜 \n`
 			for (let mem of groupMembers) {
 						teks += `☆ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
