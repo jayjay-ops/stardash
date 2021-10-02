@@ -96,6 +96,10 @@ const _rollen = JSON.parse(fs.readFileSync('./result/en/dice.json'));
 
 const _rboob = JSON.parse(fs.readFileSync('./result/rboob.json'));
 
+const _imgstella = JSON.parse(fs.readFileSync('./result/imgstella.json'));
+const _cute = JSON.parse(fs.readFileSync('./result/cute.json'));
+const _dog = JSON.parse(fs.readFileSync('./result/dog.json'));
+
 
 const _ultimateroll = JSON.parse(fs.readFileSync('./result/ultimateroll.json'));
 const _legendaryroll = JSON.parse(fs.readFileSync('./result/legendaryroll.json'));
@@ -125,16 +129,8 @@ const { updates, updatesold} = require('./help/updates');
 
 const { ass} = require('./help/nsfw/ass');
 const { boob} = require('./help/nsfw/boob');
-const { stella1} = require('./help/nsfw/stella1');
-const { stella2} = require('./help/nsfw/stella2');
-const { stella3} = require('./help/nsfw/stella3');
-const { stella4} = require('./help/nsfw/stella4');
-const { stella5} = require('./help/nsfw/stella5');
-const { stella6} = require('./help/nsfw/stella6');
-const { stella7} = require('./help/nsfw/stella7');
-const { stella8} = require('./help/nsfw/stella8');
-const { stella9} = require('./help/nsfw/stella9');
-const { stella10} = require('./help/nsfw/stella10');
+
+
 
 const { showgithub, showapk, showdailynews} = require('./help/show');
 
@@ -1519,110 +1515,6 @@ case 'ass':
           break	
 
 
-//-- nsfw stella
-case 'stella1':
-  if (!isVerify) return reply(userB(prefix))
-	uptime = process.uptime()
-  capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/stella1.jpg').toString('base64')
-  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-	  
-          break	
-
-
-//-- nsfw stella
-case 'stella2':
-  if (!isVerify) return reply(userB(prefix))
-	uptime = process.uptime()
-  capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/stella2.jpg').toString('base64')
-  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-	  
-          break	
-
-
-//-- nsfw stella
-case 'stella3':
-  if (!isVerify) return reply(userB(prefix))
-	uptime = process.uptime()
-  capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/stella3.jpg').toString('base64')
-  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-	  
-          break	
-	
-
-//-- nsfw stella
-case 'stella4':
-  if (!isVerify) return reply(userB(prefix))
-	uptime = process.uptime()
-  capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/stella4.jpg').toString('base64')
-  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-	  
-          break		
-
-//-- nsfw stella
-case 'stella5':
-  if (!isVerify) return reply(userB(prefix))
-	uptime = process.uptime()
-  capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/stella5.jpg').toString('base64')
-  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-	  
-          break	
-		  
-//-- nsfw stella
-case 'stella6':
-  if (!isVerify) return reply(userB(prefix))
-	uptime = process.uptime()
-  capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/stella6.jpg').toString('base64')
-  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-	  
-          break			  
-		  
-//-- nsfw stella
-case 'stella7':
-  if (!isVerify) return reply(userB(prefix))
-	uptime = process.uptime()
-  capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/stella7.jpg').toString('base64')
-  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-	  
-          break			  
-		  
-//-- nsfw stella
-case 'stella8':
-  if (!isVerify) return reply(userB(prefix))
-	uptime = process.uptime()
-  capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/stella8.jpg').toString('base64')
-  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-	  
-          break			  
-		  
-
-//-- nsfw stella
-case 'stella9':
-  if (!isVerify) return reply(userB(prefix))
-	uptime = process.uptime()
-  capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/stella9.jpg').toString('base64')
-  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-	  
-          break	
-
-
-//-- nsfw stella
-case 'stella10':
-  if (!isVerify) return reply(userB(prefix))
-	uptime = process.uptime()
-  capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/stella10.jpg').toString('base64')
-  if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-	  
-          break	
 
 
 
@@ -1647,8 +1539,8 @@ case 'boobs':
           break		
 		  
 		  
-case 'rboob':
-case 'rboobs':
+case 'stella':
+
   if (!isVerify) return reply(userB(prefix))
 	  
   const rboob = _rboob[Math.floor(Math.random() * _rboob.length)]
@@ -1659,11 +1551,33 @@ case 'rboobs':
 	  
           break		
 
+case 'imgstella':
 
+  if (!isVerify) return reply(userB(prefix))
+	  
+  const imgstella = _imgstella[Math.floor(Math.random() * _imgstella.length)]
+	buffer = fs.readFileSync('${imgstella}')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'STELLA ✯'})
+break	
 
+case 'cute':
 
-		  
-		  
+  if (!isVerify) return reply(userB(prefix))
+	  
+  const cute = _cute[Math.floor(Math.random() * _cute.length)]
+ 
+	buffer = fs.readFileSync('${cute}')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'CUTE :0 ✯'})
+break
+
+case 'dog':
+
+  if (!isVerify) return reply(userB(prefix))
+	  
+  const dog = _dog[Math.floor(Math.random() * _dog.length)]
+	buffer = fs.readFileSync('${dog}')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'Wuff ✯'})
+break
 
 //-- information bot
 case 'girl':
