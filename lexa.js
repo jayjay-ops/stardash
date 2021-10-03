@@ -384,6 +384,7 @@ let Welcome_ = 'Off'
 let AntiLink_ = 'Off'
 			if (isAnti) {
 			AntiLink_ 
+			}
 
 //--- Total command
 const cmdadd = () => {
