@@ -2783,7 +2783,7 @@ reply(res)
 break
 				default:
 }
-	})
+	}
 }
 starts()
 
