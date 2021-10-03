@@ -131,6 +131,8 @@ const menuadmin = (prefix, tanggal, jam) => {
 - - - - - - - - - - - - -  
 𝚜𝚞𝚙𝚙𝚘𝚛𝚝 𝚐𝚛𝚘𝚞𝚙
 https://chat.whatsapp.com/BBAwr3RY6O77DOhJ8fuBnn
+𝚂𝚎𝚌𝚘𝚗𝚍 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝙶𝚛𝚘𝚞𝚙
+https://chat.whatsapp.com/KvqaZbeT69X46Lo6G650ht
 - - - - - - - - - - - - -  
 𝔯𝔢𝔱𝔲𝔯𝔫 𝔱𝔬 𝔪𝔢𝔫𝔲
 - - - - - - - - - - - - -  
@@ -147,6 +149,8 @@ const menuvip = (prefix, tanggal, jam) => {
 - - - - - - - - - - - - -  
 𝚜𝚞𝚙𝚙𝚘𝚛𝚝 𝚐𝚛𝚘𝚞𝚙
 https://chat.whatsapp.com/BBAwr3RY6O77DOhJ8fuBnn
+𝚂𝚎𝚌𝚘𝚗𝚍 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝙶𝚛𝚘𝚞𝚙
+https://chat.whatsapp.com/KvqaZbeT69X46Lo6G650ht
 - - - - - - - - - - - - - 
 𝔯𝔢𝔱𝔲𝔯𝔫 𝔱𝔬 𝔪𝔢𝔫𝔲
 - - - - - - - - - - - - -  
@@ -162,6 +166,8 @@ const menuowner = (prefix, tanggal, jam) => {
 - - - - - - - - - - - - -  
 𝚜𝚞𝚙𝚙𝚘𝚛𝚝 𝚐𝚛𝚘𝚞𝚙
 https://chat.whatsapp.com/BBAwr3RY6O77DOhJ8fuBnn
+𝚂𝚎𝚌𝚘𝚗𝚍 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝙶𝚛𝚘𝚞𝚙
+https://chat.whatsapp.com/KvqaZbeT69X46Lo6G650ht
 - - - - - - - - - - - - - 
 𝔯𝔢𝔱𝔲𝔯𝔫 𝔱𝔬 𝔪𝔢𝔫𝔲
 - - - - - - - - - - - - -  
@@ -175,7 +181,11 @@ const menuagb = (prefix, tanggal, jam) => {
 • 𝚍𝚘𝚗𝚝 𝚊𝚋𝚞𝚜𝚎 𝚋𝚘𝚝 𝚠𝚒𝚝𝚑 𝚒𝚕𝚕𝚎𝚐𝚊𝚕 𝚌𝚘𝚗𝚝𝚎𝚗𝚝
 • 𝚌𝚑𝚊𝚝 𝚠𝚒𝚝𝚑 𝚋𝚘𝚝 𝚘𝚠𝚗𝚎𝚛 𝚝𝚘 𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛 𝚊𝚌𝚌𝚘𝚞𝚗𝚝
 • 𝚒𝚏 𝚢𝚘𝚞 𝚑𝚊𝚟𝚎 𝚖𝚘𝚛𝚎 𝚚𝚞𝚎𝚜𝚝𝚒𝚘𝚗 𝚢𝚘𝚞 𝚖𝚊𝚢 𝚊𝚜𝚠𝚎𝚕𝚕 𝚓𝚘𝚒𝚗 𝚘𝚞𝚛 𝚜𝚞𝚙𝚙𝚘𝚛𝚝 𝚐𝚛𝚘𝚞𝚙
+- - - - - - - - - - - - -
 https://chat.whatsapp.com/BBAwr3RY6O77DOhJ8fuBnn
+𝚂𝚎𝚌𝚘𝚗𝚍 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝙶𝚛𝚘𝚞𝚙
+https://chat.whatsapp.com/KvqaZbeT69X46Lo6G650ht
+- - - - - - - - - - - - -
 • 𝚘𝚛 𝚌𝚘𝚗𝚝𝚊𝚌𝚝 𝚖𝚎
 4917626388837
 - - - - - - - - - - - - -  
