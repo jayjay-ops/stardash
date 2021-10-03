@@ -15,61 +15,24 @@ const updates = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptim
   } else if (!isGroupAdmins){
     admin = "Member Group"
   }
-		if (isGroup) return `𝚄𝚙𝚍𝚊𝚝𝚎 𝙽𝚊𝚖𝚎
-♕︎ 𝙲𝚘𝚜𝚖𝚘𝚠𝚊𝚢
-𝚅𝚎𝚛𝚜𝚒𝚘𝚗
-¹²'⁰'¹'⁵ -> ¹²'¹'⁰'¹
+		if (isGroup) return `[𝚄𝚙𝚍𝚊𝚝𝚎 𝚜𝚒𝚣𝚎: 𝚜𝚖𝚊𝚕𝚕]
 
-- - - - ᴄʜᴀɴɢᴇʟᴏɢ - - - -
-[𝙽𝙴𝚆] .menu symbol
-• [𝙽𝙴𝚆] .stars 
-• [𝙽𝙴𝚆] .wild
-• [𝙽𝙴𝚆] .textmojie
-• [𝙽𝙴𝚆] .others
-• [𝙽𝙴𝚆] .genders
-[𝙽𝙴𝚆] .menu tool
-• [𝙽𝙴𝚆] .show dailynews
-• [𝙽𝙴𝚆] .wish
-• [𝙽𝙴𝚆] .wishes
-• [𝙽𝙴𝚆] .show github
-• [𝙽𝙴𝚆] .show apk
-[𝙽𝙴𝚆] For the boys!!  .menu secret 
-[𝙽𝙴𝚆] .updates old
-[++] .register is redesigned
-[++] premium is now called vip
-[++] added more truths! .truth
-[++] added more dares! .dare
-[++] minor changes
-- - - - - - - - - - - - - - -
+» 𝚗𝚎𝚠 «
+
+𝚔𝚒𝚌𝚔 𝚜𝚝𝚒𝚌𝚔𝚎𝚛
+> .𝚎𝚟𝚎𝚛𝚢𝚘𝚗𝚎 / > .𝚊𝚕𝚕
+𝚖𝚒𝚗𝚘𝚛 𝚌𝚑𝚊𝚗𝚐𝚎𝚜
+		
 `
 
 
-else if (!isGroup) return`𝚄𝚙𝚍𝚊𝚝𝚎 𝙽𝚊𝚖𝚎
-♕︎ 𝙲𝚘𝚜𝚖𝚘𝚠𝚊𝚢
-𝚅𝚎𝚛𝚜𝚒𝚘𝚗
-¹²'⁰'¹'⁵ -> ¹²'¹'⁰'¹
+else if (!isGroup) return`[𝚄𝚙𝚍𝚊𝚝𝚎 𝚜𝚒𝚣𝚎: 𝚜𝚖𝚊𝚕𝚕]
 
-- - - - ᴄʜᴀɴɢᴇʟᴏɢ - - - -
-[𝙽𝙴𝚆] .menu symbol
-• [𝙽𝙴𝚆] .stars 
-• [𝙽𝙴𝚆] .wild
-• [𝙽𝙴𝚆] .textmojie
-• [𝙽𝙴𝚆] .others
-• [𝙽𝙴𝚆] .genders
-[𝙽𝙴𝚆] .menu tool
-• [𝙽𝙴𝚆] .show dailynews
-• [𝙽𝙴𝚆] .wish
-• [𝙽𝙴𝚆] .wishes
-• [𝙽𝙴𝚆] .show github
-• [𝙽𝙴𝚆] .show apk
-[𝙽𝙴𝚆] For the boys!!  .menu secret 
-[𝙽𝙴𝚆] .updates old
-[++] .register is redesigned
-[++] premium is now called vip
-[++] added more truths! .truth
-[++] added more dares! .dare
-[++] minor changes
-- - - - - - - - - - - - - - -
+» 𝚗𝚎𝚠 «
+
+𝚔𝚒𝚌𝚔 𝚜𝚝𝚒𝚌𝚔𝚎𝚛
+> .𝚎𝚟𝚎𝚛𝚢𝚘𝚗𝚎 / > .𝚊𝚕𝚕
+𝚖𝚒𝚗𝚘𝚛 𝚌𝚑𝚊𝚗𝚐𝚎𝚜
 `
 
 }
@@ -100,7 +63,34 @@ const updatesold = (prefix, tanggal, jam) => {
 [𝙽𝙴𝚆] .pokemon
 [𝙽𝙴𝚆] .love Name Name
 [𝙽𝙴𝚆] .gay
-- - - - - - - - - - - - - - - - - - - - -`
+- - - - - - - - - - - - - - - - - - - - -
+𝚄𝚙𝚍𝚊𝚝𝚎 𝙽𝚊𝚖𝚎
+♕︎ 𝙲𝚘𝚜𝚖𝚘𝚠𝚊𝚢
+𝚅𝚎𝚛𝚜𝚒𝚘𝚗
+¹²'⁰'¹'⁵ -> ¹²'¹'⁰'¹
+
+- - - - ᴄʜᴀɴɢᴇʟᴏɢ - - - -
+[𝙽𝙴𝚆] .menu symbol
+• [𝙽𝙴𝚆] .stars 
+• [𝙽𝙴𝚆] .wild
+• [𝙽𝙴𝚆] .textmojie
+• [𝙽𝙴𝚆] .others
+• [𝙽𝙴𝚆] .genders
+[𝙽𝙴𝚆] .menu tool
+• [𝙽𝙴𝚆] .show dailynews
+• [𝙽𝙴𝚆] .wish
+• [𝙽𝙴𝚆] .wishes
+• [𝙽𝙴𝚆] .show github
+• [𝙽𝙴𝚆] .show apk
+[𝙽𝙴𝚆] For the boys!!  .menu secret 
+[𝙽𝙴𝚆] .updates old
+[++] .register is redesigned
+[++] premium is now called vip
+[++] added more truths! .truth
+[++] added more dares! .dare
+[++] minor changes
+- - - - - - - - - - - - - - - - - - - - -
+`
 }
 
 module.exports = { updates, updatesold}
