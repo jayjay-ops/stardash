@@ -18,7 +18,6 @@ const menu = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, 
 		if (isGroup) return `𝔖𝔱𝔞𝔯𝔡𝔞𝔰𝔥
 - - - - - - - - - - - - -
 » 𝚗𝚊𝚖𝚎 ${pushname}
-» 𝚗𝚞𝚖𝚋𝚎𝚛 ${sender.split("@")[0]}
 » 𝚜𝚝𝚊𝚝𝚞𝚜 ${prem_}
 - - - - - - - - - - - - -
 » 𝚠𝚎𝚕𝚌𝚘𝚖𝚎 ${Welcome_}
@@ -55,7 +54,6 @@ https://chat.whatsapp.com/BBAwr3RY6O77DOhJ8fuBnn
 else if (!isGroup) return`𝔖𝔱𝔞𝔯𝔡𝔞𝔰𝔥
 - - - - - - - - - - - - -
 » 𝚗𝚊𝚖𝚎 ${pushname}
-» 𝚗𝚞𝚖𝚋𝚎𝚛 ${sender.split("@")[0]}
 » 𝚜𝚝𝚊𝚝𝚞𝚜 ${prem_}
 - - - - - - - - - - - - -
 > .𝚖𝚎𝚗𝚞 𝚏𝚞𝚗
