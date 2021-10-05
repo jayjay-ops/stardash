@@ -16,7 +16,6 @@ const bgithub = (prefix, tanggal, jam) => {
 ⑅  https://github.com/joewilliams007/StarDash
 ⑅  𝙷𝚘𝚠 𝚝𝚘 𝚒𝚗𝚜𝚝𝚊𝚕𝚕
 ⑅  https://youtu.be/CxMrqZJxyt4`
--
 
 }
 
