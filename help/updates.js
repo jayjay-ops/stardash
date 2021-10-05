@@ -15,24 +15,38 @@ const updates = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptim
   } else if (!isGroupAdmins){
     admin = "Member Group"
   }
-		if (isGroup) return `[𝚄𝚙𝚍𝚊𝚝𝚎 𝚜𝚒𝚣𝚎: 𝚜𝚖𝚊𝚕𝚕]
+		if (isGroup) return `﹝https://chat.whatsapp.com/KvqaZbeT69X46Lo6G650ht﹞
 
-» 𝚗𝚎𝚠 «
+𝚈𝚘𝚞𝚛 𝚅𝚎𝚛𝚜𝚒𝚘𝚗: ﹝13.0.0.0﹞
 
-𝚔𝚒𝚌𝚔 𝚜𝚝𝚒𝚌𝚔𝚎𝚛
-> .𝚎𝚟𝚎𝚛𝚢𝚘𝚗𝚎 / > .𝚊𝚕𝚕
-𝚖𝚒𝚗𝚘𝚛 𝚌𝚑𝚊𝚗𝚐𝚎𝚜
+⇝ 𝙽𝚊𝚖𝚎: 𝚂𝚝𝚊𝚛𝙳𝚞𝚜𝚝
+⌬  𝚏𝚘𝚌𝚞𝚜: 𝚌𝚕𝚎𝚊𝚗
+
+⌯   ﹝𝚘𝚟𝚎𝚛𝚊𝚕𝚕 𝚕𝚘𝚘𝚔 𝚌𝚑𝚊𝚗𝚐𝚎𝚍.﹞
+⑅
+⌯   ﹝𝚍𝚒𝚌𝚎 𝚒𝚜 𝚗𝚘𝚠 𝚊𝚜 𝚜𝚝𝚒𝚌𝚔𝚎𝚛𝚜.﹞
+⑅
+⌯   ﹝𝚞𝚙𝚍𝚊𝚝𝚎 𝚜𝚝𝚊𝚝𝚞𝚜.﹞
+⑅
+⌯   𝙿𝚕𝚎𝚊𝚜𝚎 𝚊𝚕𝚠𝚊𝚢𝚜 𝚌𝚑𝚎𝚌𝚔 𝚏𝚘𝚛 𝚄𝚙𝚍𝚊𝚝𝚎!
 		
 `
 
 
-else if (!isGroup) return`[𝚄𝚙𝚍𝚊𝚝𝚎 𝚜𝚒𝚣𝚎: 𝚜𝚖𝚊𝚕𝚕]
+else if (!isGroup) return`﹝https://chat.whatsapp.com/KvqaZbeT69X46Lo6G650ht﹞
 
-» 𝚗𝚎𝚠 «
+𝚈𝚘𝚞𝚛 𝚅𝚎𝚛𝚜𝚒𝚘𝚗: ﹝13.0.0.0﹞
 
-𝚔𝚒𝚌𝚔 𝚜𝚝𝚒𝚌𝚔𝚎𝚛
-> .𝚎𝚟𝚎𝚛𝚢𝚘𝚗𝚎 / > .𝚊𝚕𝚕
-𝚖𝚒𝚗𝚘𝚛 𝚌𝚑𝚊𝚗𝚐𝚎𝚜
+⇝ 𝙽𝚊𝚖𝚎: 𝚂𝚝𝚊𝚛𝙳𝚞𝚜𝚝
+⌬  𝚏𝚘𝚌𝚞𝚜: 𝚌𝚕𝚎𝚊𝚗
+
+⌯   ﹝𝚘𝚟𝚎𝚛𝚊𝚕𝚕 𝚕𝚘𝚘𝚔 𝚌𝚑𝚊𝚗𝚐𝚎𝚍.﹞
+⑅
+⌯   ﹝𝚍𝚒𝚌𝚎 𝚒𝚜 𝚗𝚘𝚠 𝚊𝚜 𝚜𝚝𝚒𝚌𝚔𝚎𝚛𝚜.﹞
+⑅
+⌯   ﹝𝚞𝚙𝚍𝚊𝚝𝚎 𝚜𝚝𝚊𝚝𝚞𝚜.﹞
+⑅
+⌯   𝙿𝚕𝚎𝚊𝚜𝚎 𝚊𝚕𝚠𝚊𝚢𝚜 𝚌𝚑𝚎𝚌𝚔 𝚏𝚘𝚛 𝚄𝚙𝚍𝚊𝚝𝚎!
 `
 
 }
@@ -90,6 +104,13 @@ const updatesold = (prefix, tanggal, jam) => {
 [++] added more dares! .dare
 [++] minor changes
 - - - - - - - - - - - - - - - - - - - - -
+[𝚄𝚙𝚍𝚊𝚝𝚎 𝚜𝚒𝚣𝚎: 𝚜𝚖𝚊𝚕𝚕]
+
+» 𝚗𝚎𝚠 «
+
+𝚔𝚒𝚌𝚔 𝚜𝚝𝚒𝚌𝚔𝚎𝚛
+> .𝚎𝚟𝚎𝚛𝚢𝚘𝚗𝚎 / > .𝚊𝚕𝚕
+𝚖𝚒𝚗𝚘𝚛 𝚌𝚑𝚊𝚗𝚐𝚎𝚜
 `
 }
 

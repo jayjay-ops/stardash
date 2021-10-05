@@ -11,21 +11,23 @@ function kyun(seconds){
 
 
 //---
-const showgithub = (prefix, tanggal, jam) => {
-  return `𝔤𝔦𝔱𝔥𝔲𝔟 𝔯𝔢𝔭𝔬𝔰𝔦𝔱𝔬𝔯𝔶
+const bgithub = (prefix, tanggal, jam) => {
+  return `⌯   ﹝𝙷𝚎𝚛𝚎 𝚒𝚜 𝚝𝚑𝚎 𝚐𝚒𝚝𝚑𝚞𝚋 𝚕𝚒𝚗𝚔.﹞
+⑅  https://github.com/joewilliams007/StarDash
+⑅  𝙷𝚘𝚠 𝚝𝚘 𝚒𝚗𝚜𝚝𝚊𝚕𝚕
+⑅  https://youtu.be/CxMrqZJxyt4`
+-
 
--𝚆𝚊𝚗𝚝 𝚝𝚘 𝚋𝚎 𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚋𝚘𝚝 𝙷𝚘𝚜𝚝?
-https://github.com/joewilliams007/StarDash
-
--𝙷𝚘𝚠 𝚝𝚘 𝚒𝚗𝚜𝚝𝚊𝚕𝚕
-https://youtu.be/CxMrqZJxyt4`
 }
 
 
 //---
-const showdailynews = (prefix, tanggal, jam) => {
-  return `𝙳𝚊𝚒𝚕𝚢 𝙽𝚎𝚠𝚜 𝚠𝚒𝚕𝚕 𝚋𝚎 𝚍𝚒𝚜𝚙𝚕𝚊𝚢𝚎𝚍 𝚑𝚎𝚛𝚎
-• 𝚂𝚙𝚍 𝚑𝚊𝚜 𝚝𝚑𝚎 𝚖𝚘𝚜𝚝 𝚟𝚘𝚝𝚎𝚜 𝚒𝚗 𝚝𝚑𝚎 𝚐𝚎𝚛𝚖𝚊𝚗 𝙱𝚞𝚗𝚍𝚎𝚜𝚝𝚊𝚐!`
+const bnews = (prefix, tanggal, jam) => {
+  return `⌯   ﹝𝚃𝚑𝚎 𝚗𝚎𝚠𝚜.﹞
+⑅  𝚃𝚑𝚎𝚛𝚎 𝚛𝚎𝚌𝚎𝚗𝚝𝚕𝚢 𝚠𝚊𝚜 𝚊 𝚑𝚞𝚐𝚎 𝚏𝚊𝚌𝚎𝚋𝚘𝚘𝚔 𝚌𝚛𝚊𝚜𝚑
+    𝚂𝚘𝚖𝚎 𝚙𝚎𝚘𝚙𝚕𝚎 𝚝𝚑𝚒𝚗𝚔 𝚒𝚝 𝚠𝚊𝚜 𝚘𝚗 𝚙𝚞𝚛𝚙𝚘𝚜𝚎
+⑅  𝙰𝚗𝚐𝚎𝚔𝚊 𝙼𝚎𝚛𝚔𝚎𝚕 𝚠𝚘𝚗𝚝 𝚋𝚎 𝚐𝚎𝚛𝚖𝚊𝚗𝚢 𝚗𝚎𝚠 𝚕𝚎𝚊𝚍𝚎𝚛
+⑅  𝚃𝚑𝚎 𝚠𝚒𝚗𝚝𝚎𝚛 𝚒𝚜 𝚌𝚘𝚖𝚖𝚒𝚗𝚐. 𝙸 𝚑𝚘𝚙𝚎 𝚢𝚘𝚞 𝚊𝚛𝚎 𝚠𝚊𝚛𝚖!`
 }
 
 //---
@@ -49,4 +51,4 @@ https://rexdl.com/android/apk-extractor-premium-apk.html/`
 }
 
 
-module.exports = { showgithub, showdailynews, showapk}
+module.exports = { bgithub, bnews, showapk}
