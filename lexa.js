@@ -1453,7 +1453,7 @@ case 'premium':
    return replyimg(menus(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'sticker' ) {
     return replyimg(menusticker(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-  } else if (args[0] === 'x' ) {
+  } else if (args[0] === 'x' )) {
     return reply(menux(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'y' ) { 
     return reply(menuy(prefix, tanggal, jam))
