@@ -1447,7 +1447,7 @@ case 'premium':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
   capt = `Hii here Shiba Menu \nWuff Wuff \nUser: ${_user.length}`
-  thum = await fs.readFileSync('./docs/mrf.jpeg').toString('base64')
+  thum = await fs.readFileSync('./docs/mrf.jpg').toString('base64')
   if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   if (args[0] === 's' ) {
    return replyimg(menus(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
