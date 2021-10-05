@@ -134,7 +134,7 @@ const { boob} = require('./help/nsfw/boob');
 
 
 
-const { bgithub, bapk, bnews} = require('./help/show');
+const { bgithub, showapk, bnews} = require('./help/show');
 
 const { info } = require('./help/info');
 const { termux } = require('./help/termux');
@@ -1472,7 +1472,7 @@ case 'premium':
 	   break
 	   
 //-- List show
-case 'show':
+case 'b':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
   capt = `Hii here Shiba  \nWuff Wuff \nUser: ${_user.length}`
@@ -1482,7 +1482,7 @@ case 'show':
    return replyimg(bnews(prefix, tanggal, jam), text, capt, thum)
   } else if (args[0] === 'github' ) {
     return replyimg(bgithub(prefix, tanggal, jam), text, capt, thum)
-  } else if (args[0] === 'apk' ) {
+  } else if (args[0] === 'support' ) {
     return reply(showapk(prefix, tanggal, jam))
   } 
 

@@ -31,22 +31,8 @@ const bnews = (prefix, tanggal, jam) => {
 
 //---
 const showapk = (prefix, tanggal, jam) => {
-  return `𝔞𝔭𝔨
-
-𝚈𝚘𝚞𝚝𝚞𝚋𝚎 𝚅𝚊𝚗𝚌𝚎𝚍 
-https://vancedapp.com/
-
-𝙶𝙱𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙
-https://androidwaves.com/download-gbwhatsapp-pro/
-
-𝙷𝚊𝚙𝚙𝚢 𝙼𝚘𝚍 
-https://www.happymod.com/
-
-𝙰𝚞𝚛𝚘𝚛𝚊 𝚂𝚝𝚘𝚛𝚎
- https://www.chip.de/downloads/Aurora-Store-APK-Android-App_183135643.html
-
-𝙰𝚙𝚔 𝙴𝚡𝚝𝚛𝚊𝚌𝚝𝚘𝚛 𝙼𝚘𝚍
-https://rexdl.com/android/apk-extractor-premium-apk.html/`
+  return `https://chat.whatsapp.com/BBAwr3RY6O77DOhJ8fuBnn
+  `
 }
 
 
