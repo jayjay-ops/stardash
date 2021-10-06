@@ -1921,7 +1921,7 @@ const res = str.startsWith("9");
 							}
 						}
 						
-					} else {
+					} 
 					
 									
 					buffer = fs.readFileSync('./docs/flash.webp')
@@ -1930,7 +1930,7 @@ Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 					
 					
 				 Lxa.groupRemove(from, mentioned)
-					}
+					
 				
 			break			
 
