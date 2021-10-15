@@ -95,6 +95,7 @@ const _sissorsen = JSON.parse(fs.readFileSync('./result/en/sissorsen.json'));
 const _stoneen = JSON.parse(fs.readFileSync('./result/en/stoneen.json'));
 
 const _rollen = JSON.parse(fs.readFileSync('./result/en/dice.json'));
+const _meme = JSON.parse(fs.readFileSync('./result/meme.json'));
 
 const _rboob = JSON.parse(fs.readFileSync('./result/rboob.json'));
 
@@ -215,9 +216,8 @@ Lxa.on('group-participants-update', async (anu) => {
 			if (anu.action == 'add') {
 				num = anu.participants[0]
 				hai = `Hallo @${num.split('@')[0]}
-Willkommen in der 
-Gruppe *${mdata.subject}*
-Bitte Vorstellen mit Bild, Name und Alter.`
+Willkommen in *${mdata.subject}*
+Bitte Vorstellen`
 				Lxa.sendMessage(mdata.id, hai, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
@@ -1446,24 +1446,24 @@ case 'me':
 case 'premium':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
-  capt = `Hii here Shiba Menu \nWuff Wuff \nUser: ${_user.length}`
+  capt = `☆\nMenu \nUser: ${_user.length}`
   thum = await fs.readFileSync('./docs/mrf.jpg').toString('base64')
   if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-  if (args[0] === 's' ) {
+  if (args[0] === 'one' ) {
    return replyimg(menus(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'sticker' ) {
     return replyimg(menusticker(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-  } else if (args[0] === 'x' ) {
+  } else if (args[0] === 'ad' ) {
     return reply(menux(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'y' ) { 
     return reply(menuy(prefix, tanggal, jam))
-  } else if (args[0] === 'owner' ) {
+  } else if (args[0] === 'ow' ) {
     return replyimg(menuowner(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'agb' ) {
     return replyimg(menuagb(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'symbol' ) {
     return replyimg(menusymbol(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-  } else if (args[0] === '3' ) {
+  } else if (args[0] === 'two' ) {
     return replyimg(menu3(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'secret' ) {
     return replyimg(menusecret(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
@@ -1798,6 +1798,18 @@ Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 
 break
 
+//-- MEME
+case 'meme':
+case 'memes':
+case 'joke':
+  if (!isVerify) return reply(userB())
+  const meme = _meme[Math.floor(Math.random() * _meme.length)]
+
+  buffer = fs.readFileSync(`./media/meme/${rollen}.webp`)
+Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
+
+break
+
 
 //-- Schere
 
@@ -1974,7 +1986,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 								console.log('Finish')
 								exec(`webpmux -set exif ${addMetadata('StarDash', pushname)} ${ran} -o ${ran}`, async (error) => {
 									if (error) return reply(stick())
-									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
+									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})			
 									fs.unlinkSync(media)
 									fs.unlinkSync(ran)
 								})
