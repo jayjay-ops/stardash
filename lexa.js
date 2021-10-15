@@ -1805,7 +1805,7 @@ case 'joke':
   if (!isVerify) return reply(userB())
   const meme = _meme[Math.floor(Math.random() * _meme.length)]
 
-  buffer = fs.readFileSync(`./media/meme/${rollen}.webp`)
+  buffer = fs.readFileSync(`./media/meme/${meme}.webp`)
 Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 
 break

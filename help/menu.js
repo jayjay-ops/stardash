@@ -70,7 +70,7 @@ const menus = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime,
 ⌯   .𝚜𝚘𝚗𝚐
 ............................
 ⌯   .𝚖𝚎𝚗𝚞 𝚜𝚢𝚖𝚋𝚘𝚕
-⑅`
+`
 }
 
 const menusticker = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process) => { 
