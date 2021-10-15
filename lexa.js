@@ -2141,7 +2141,7 @@ case 'type':
 //-- list Notes
 case 'notes':
 case 'list note':
-			
+			if (!isVerify) return reply(userB())
 				teks = `⇝ 𝙽𝚘𝚝𝚎𝚜\n⌬  𝚝𝚘𝚝𝚊𝚕: ${_lapor.length}\n\n⌯ \n`
 				for (let lap of _lapor) {
 					teks += `⑅ ${lap}\n`
