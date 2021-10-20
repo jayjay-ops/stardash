@@ -2025,11 +2025,11 @@ case 'image':
 case 'togif':
 case 'gif':
   if (!isVerify) return reply(UserB())
-					if (!isQuotedVideo) return reply('⌯   ﹝𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚊𝚐 𝚊 Video.﹞')
+					
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.mp3')
-				exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+				exec(`ffmpeg -i ${media} ${ran} -af 'volume=0.5' output.mp3  `, (err) => {
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
@@ -2038,7 +2038,7 @@ case 'gif':
 					})
 					break
 
-										
+									
 
 //-- owner bot
 case 'owner':
