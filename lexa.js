@@ -2029,7 +2029,7 @@ case 'gif':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.mp3')
-				exec(`ffmpeg -i -af 'volume=4' ${media} ${ran} -af 'volume=4' output.mp3  `, (err) => {
+				exec(`ffmpeg -i ${media} -af  'volume=4'  ${ran} -af 'volume=4' output.mp3  `, (err) => {
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
