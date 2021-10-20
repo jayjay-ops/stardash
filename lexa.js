@@ -316,7 +316,7 @@ const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageM
 const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
 const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
 const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
-
+const isQuotedGif = type === 'extendedTextMessage' && content.includes('gifMessage')
 
 //-- watermark stiker
 			function addMetadata(packname, author) {	
