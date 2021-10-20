@@ -2069,14 +2069,14 @@ case 'sound':
 					})
 					break
 					
-//-- video speed
+//-- speed
 case 'speed':
 case 'fast':
   if (!isVerify) return reply(UserB())
 	  
-			
-				 if (args.length < 1) return reply('⌯   ﹝Enter Number how loud. example:    .volume 200﹞')
-					
+			yoi = value
+				 if (args.length < 1) return reply('⌯   ﹝Enter Number how fast. from 0.5 - 4 example:    .speed 2﹞')
+  if (yoi.length > 4 ) return reply('⌯   ﹝Choose between 0.5 and 4﹞')
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -2086,7 +2086,7 @@ case 'fast':
 					
 					
 						fs.unlinkSync(media)
-						if (err) return reply('Error')
+						if (err) return reply('Choose between 0.5 and 4')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
