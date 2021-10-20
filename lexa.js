@@ -2191,8 +2191,30 @@ case 'crush':
 					
 							
 			break	
+			
+//-- tts
+case 'tts':
+  if (!isVerify) return reply(UserB())
+	   if (args.length < 1) return reply('⌯   ﹝Add Text﹞')
+ const tts = value
 
-
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.mp3')
+				exec(`ffmpeg -f lavfi -i flite=text='${tts}'  ${ran} `, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break			
+			
+ffmpeg -f lavfi -i flite=text='Hello World!' output.mp3 
+const truth =
 			
 //-- owner bot
 case 'owner':
