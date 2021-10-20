@@ -2074,13 +2074,13 @@ case 'speed':
 case 'fast':
   if (!isVerify) return reply(UserB())
 	  
-			if (!isQuotedVideo) return reply('⌯   ﹝Please tag an video.﹞')
+			
 				 if (args.length < 1) return reply('⌯   ﹝Enter Number how loud. example:    .volume 200﹞')
 					
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.mp4')
+				ran= getRandom('.mp3')
 				exec(`ffmpeg -i ${media}  -filter:a "atempo=${value}" -vn  ${ran} `, (err) => {
 					
 					
