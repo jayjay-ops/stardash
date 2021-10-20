@@ -2074,7 +2074,7 @@ case 'speed':
 case 'fast':
   if (!isVerify) return reply(UserB())
 	  
-				 if (args.length < 1) return reply('⌯   ﹝Enter Number how fast. from 0.5 - 4 example:    .speed 2﹞')
+				 if (args.length < 1) return reply('⌯   ﹝Tag Video or Audio AND Enter Number how fast. from 0.5 - 4 example:    .speed 2﹞')
 
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
