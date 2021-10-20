@@ -2213,8 +2213,7 @@ case 'tts':
 					})
 					break			
 			
-ffmpeg -f lavfi -i flite=text='Hello World!' output.mp3 
-const truth =
+
 			
 //-- owner bot
 case 'owner':
