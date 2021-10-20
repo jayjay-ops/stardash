@@ -1495,7 +1495,7 @@ case 'updates':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
 
-  capt = `Hi. Welcome to Updates \nYour Version is:\n13.0.0.0`
+  capt = `Hi. Welcome to Updates \nYour Version is:\n15.0.0.0`
   thum = await fs.readFileSync('./docs/update.jpg').toString('base64')
   
   if (args.length < 1) 
