@@ -2092,32 +2092,29 @@ case 'fast':
 					})
 					break					
 
-
-//-- rotate video
-case 'rotate':
-case 'spin':
-  if (!isVerify) return reply(UserB())
-	  if (!isQuotedVideo) return reply('⌯   ﹝Please tag a video.﹞')
 	
- 
+//-- cover song
+case 'cover':
+
+  if (!isVerify) return reply(UserB())
+	  
+         if (!isQuotedAudio) return reply('⌯   ﹝Please tag an audio.﹞')
+
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.gif')
-				exec(`ffmpeg -i ${media}  -vf scale=500:-1 -t 10 -r 10  ${ran} `, (err) => {
+				ran= getRandom('.mp4')
+				exec(`ffmpeg -loop 1 -i /docs/mrf.jpg -i ${media}  -c:v libx264 -c:a aac -strict experimental -b:a 192k -shortest  ${ran} `, (err) => {
 					
-				
+					
 					
 						fs.unlinkSync(media)
-						if (err) return reply('Error')
+						if (err) return reply('Choose between 0.5 and 4')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
-					break			
-
-
-
+					break
 
 
 
