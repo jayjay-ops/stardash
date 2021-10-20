@@ -2058,7 +2058,7 @@ case 'mp3':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.mp3')
-				exec(`ffmpeg -i ${media} -af  -vn  ${ran} `, (err) => {
+				exec(`ffmpeg -i ${media} -af  -vn  output${ran} `, (err) => {
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
