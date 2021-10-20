@@ -2116,12 +2116,12 @@ case 'cover':
 					})
 					break
  
-//-- watermark {	}
-case 'watermark':
+//-- watermark 
+case 'watermarkvideo':
 
   if (!isVerify) return reply(UserB())
 	  
-           if (!isQuotedVideo) {
+           if (!isQuotedVideo)  return reply('⌯   ﹝Please tag an video.﹞')
 
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -2138,9 +2138,15 @@ case 'watermark':
 						fs.unlinkSync(ran)
 					})
 					
-					}
-				
-				else if (!isQuotedImage) {
+					break	
+			
+//-- watermark 
+case 'watermarkimage':
+
+  if (!isVerify) return reply(UserB())
+	  
+			
+				if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
 					
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -2157,7 +2163,7 @@ case 'watermark':
 						fs.unlinkSync(ran)
 					})
 					
-					}
+					
 				
 				
 				
