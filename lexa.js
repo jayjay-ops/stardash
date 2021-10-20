@@ -2104,12 +2104,12 @@ case 'cover':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.mp4')
-				exec(`ffmpeg -loop 1 -i mrf.jpg -i ${media}  -c:v libx264 -c:a aac -strict experimental -b:a 192k -shortest  ${ran} `, (err) => {
+				exec(`ffmpeg -loop 1 -i coverfox.jpg -i ${media}  -c:v libx264 -c:a aac -strict experimental -b:a 192k -shortest  ${ran} `, (err) => {
 					
 					
 					
 						fs.unlinkSync(media)
-						if (err) return reply('Choose between 0.5 and 4')
+						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
