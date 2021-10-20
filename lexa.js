@@ -2020,7 +2020,22 @@ case 'image':
 					})
 					break
 					
-
+//-- video to gif
+case 'togif':
+case 'gif':
+  if (!isVerify) return reply(UserB())
+					if (!isQuotedVideo) return reply('⌯   ﹝𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚊𝚐 𝚊 Video.﹞')
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.gif')
+				exec(`ffmpeg -i ${media} ${ran} -ss 00:00:00.000 -pix_fmt rgb24 -r 10 -s 320x240 -t 00:00:10.000 output.gif `, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, gif, {quoted:mek, caption: 'StarDash ✯'})
+						
+					})
+					break
 
 										
 
