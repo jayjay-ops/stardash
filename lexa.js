@@ -2094,50 +2094,29 @@ case 'fast':
 
 
 //-- rotate video
-case 'vrotate':
-case 'vspin':
+case 'rotate':
+case 'spin':
   if (!isVerify) return reply(UserB())
 	  if (!isQuotedVideo) return reply('⌯   ﹝Please tag a video.﹞')
-				 if (args.length < 1) return reply('⌯   ﹝tag video. AND set number. 1, 2 or 3﹞')
+	
  
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.mp4')
-				exec(`ffmpeg -i ${media}  -vf "transpose=${value}" -vn  ${ran} `, (err) => {
+				ran= getRandom('.gif')
+				exec(`ffmpeg -i ${media}  -vf scale=500:-1 -t 10 -r 10  ${ran} `, (err) => {
 					
-					
+				
 					
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
+						Lxa.sendMessage(from, buffer,  {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
 					break			
 
-//-- rotate image
-case 'irotate':
-case 'ispin':
-  if (!isVerify) return reply(UserB())
-	  if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
-				 if (args.length < 1) return reply('⌯   ﹝tag image. AND set number. 1, 2 or 3﹞')
 
-
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.png')
-				exec(`ffmpeg -i ${media}  -vf "transpose=${value}" -vn  ${ran} `, (err) => {
-					
-					
-					
-						fs.unlinkSync(media)
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
-						fs.unlinkSync(ran)
-					})
-					break	
 
 
 
