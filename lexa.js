@@ -2028,7 +2028,7 @@ case 'gif':
 	  
 			if (!isQuotedAudio) return reply('⌯   ﹝Please tag an audio.﹞')
 					 if (args.length < 1) return reply('⌯   ﹝Enter Number how loud. example: .audiolevel 200﹞')
-  if (yoi.length > 20000 ) return reply('⌯   ﹝This is way to loud.﹞')
+  if (args.length > 20000 ) return reply('⌯   ﹝This is way to loud.﹞')
 	  
   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
