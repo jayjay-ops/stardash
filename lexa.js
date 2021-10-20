@@ -1587,7 +1587,6 @@ case 'girl':
 					break
 
 //-- ping
-case 'speed':
 case 'ping':
  if (!isPrem) return reply(premi())
 const timestamp = speed();
