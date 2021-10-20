@@ -2049,7 +2049,7 @@ case 'volume':
 									
 //-- video to mp3
 case 'mp3':
-
+case 'sound':
   if (!isVerify) return reply(UserB())
 	  
 			if (!isQuotedVideo) return reply('⌯   ﹝Please tag an video.﹞')
@@ -2062,8 +2062,6 @@ case 'mp3':
 					
 					
 					
-					
-					
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
@@ -2071,6 +2069,31 @@ case 'mp3':
 						fs.unlinkSync(ran)
 					})
 					break
+					
+//-- video speed
+case 'speed':
+case 'fast':
+  if (!isVerify) return reply(UserB())
+	  
+			if (!isQuotedVideo) return reply('⌯   ﹝Please tag an video.﹞')
+				 if (args.length < 1) return reply('⌯   ﹝Enter Number how loud. example:    .volume 200﹞')
+					
+
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.mp4')
+				exec(`ffmpeg -i ${media}  -filter:a "atempo=${value}" -vn  ${ran} `, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break					
+										
 					
 //-- owner bot
 case 'owner':
