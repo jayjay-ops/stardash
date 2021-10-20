@@ -2069,30 +2069,29 @@ case 'sound':
 					})
 					break
 					
-//-- speed
-case 'speed':
-case 'fast':
+//-- videotext
+case 'text':
+case 'videotext':
   if (!isVerify) return reply(UserB())
-	  
-				 if (args.length < 1) return reply('⌯   ﹝Tag Video or Audio AND Enter Number how fast. from 0.5 - 4 example:    .speed 2﹞')
+	  if (!isQuotedVideo) return reply('⌯   ﹝Please tag an video.﹞')
+				 if (args.length < 1) return reply('⌯   ﹝Add text.﹞')
 
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.mp3')
-				exec(`ffmpeg -i ${media}  -filter:a "atempo=${value}" -vn  ${ran} `, (err) => {
+				ran= getRandom('.mp4')
+				exec(`ffmpeg -i ${media}  -vf "drawtext=fontfile=/path/to/font.ttf:text='${value}':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy  ${ran} `, (err) => {
 					
 					
 					
 						fs.unlinkSync(media)
-						if (err) return reply('Choose between 0.5 and 4')
+						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
 					break					
 
-	
 //-- cover song
 case 'cover':
 
@@ -2192,27 +2191,7 @@ case 'crush':
 							
 			break	
 			
-//-- tts
-case 'tts':
-  if (!isVerify) return reply(UserB())
 
- const tts = args
-
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.mp3')
-				exec(`ffmpeg -f lavfi -i flite=text='${tts}'  ${ran} `, (err) => {
-					
-					
-					
-						fs.unlinkSync(media)
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
-						fs.unlinkSync(ran)
-					})
-					break			
-			
 
 			
 //-- owner bot
