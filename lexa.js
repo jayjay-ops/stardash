@@ -2034,7 +2034,7 @@ case 'gif':
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
-						
+						fs.unlinkSync(ran)
 					})
 					break
 
