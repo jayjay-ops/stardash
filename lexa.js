@@ -52,6 +52,7 @@ const _stik = JSON.parse(fs.readFileSync('./media/stik.json'))
 const _vid = JSON.parse(fs.readFileSync('./media/vid.json'))
 const _vn = JSON.parse(fs.readFileSync('./media/vn.json'))
 const _img = JSON.parse(fs.readFileSync('./media/image.json'))
+const _gif = JSON.parse(fs.readFileSync('./media/gif.json'))
 
 //-- Result GERMAN
 const _truth = JSON.parse(fs.readFileSync('./result/truth.json'));
@@ -1705,9 +1706,9 @@ case 'parpier':
   if (!isVerify) return reply(userB())
   const papier = _papier[Math.floor(Math.random() * _papier.length)]
   reply(papier)
+  
+
 break
-
-
 
 
 
