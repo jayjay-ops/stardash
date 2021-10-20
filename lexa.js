@@ -2080,7 +2080,7 @@ case 'videotext':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.mp4')
-				exec(`ffmpeg -i ${media}  -vf "drawtext=fontfile=/path/to/font.ttf:text='${value}':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy  ${ran} `, (err) => {
+				exec(`ffmpeg -i ${media}  -vf "drawtext=text='${value}':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy  ${ran} `, (err) => {
 					
 					
 					
