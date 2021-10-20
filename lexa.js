@@ -2074,7 +2074,6 @@ case 'speed':
 case 'fast':
   if (!isVerify) return reply(UserB())
 	  
-  if (!isMedia) return reply('⌯   ﹝tag audio or video﹞')
 				 if (args.length < 1) return reply('⌯   ﹝Enter Number how fast. from 0.5 - 4 example:    .speed 2﹞')
 
 
@@ -2092,7 +2091,7 @@ case 'fast':
 						fs.unlinkSync(ran)
 					})
 					break					
-										
+
 					
 //-- owner bot
 case 'owner':
