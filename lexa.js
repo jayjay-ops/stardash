@@ -2069,28 +2069,7 @@ case 'sound':
 					})
 					break
 					
-//-- videotext
-case 'text':
-case 'videotext':
-  if (!isVerify) return reply(UserB())
-	  if (!isQuotedVideo) return reply('⌯   ﹝Please tag an video.﹞')
-				 if (args.length < 1) return reply('⌯   ﹝Add text.﹞')
-
-
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.mp4')
-				exec(`ffmpeg -i ${media}  -vf "drawtext=text='hallo':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy  ${ran} `, (err) => {
-					
-					
-					
-						fs.unlinkSync(media)
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
-						fs.unlinkSync(ran)
-					})
-					break					
+				
 
 //-- cover song
 case 'cover':
@@ -2114,6 +2093,29 @@ case 'cover':
 						fs.unlinkSync(ran)
 					})
 					break
+ 
+//-- watermark 
+case 'watermarkvideo':
+
+  if (!isVerify) return reply(UserB())
+	  
+           if (!isQuotedVideo)  return reply('⌯   ﹝Please tag an video.﹞')
+
+
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.mp4')
+				exec(`ffmpeg -y -f rawvideo -pix_fmt rgb32 -s 1920x1080 -i /dev/zero -r 30 -filter_complex "movie='square.png'[sqr];[0:][sqr]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2[canvas];[canvas]chromakey=0x008000:blend=0:similarity=0.15[canvas2];[0:][canvas2]overlay[canvas3];movie='${media}',scale=1920:1080[i1];[0:][i1]overlay='if(gt(random(0), 0.2), 1, 4)':'if(gt(random(0), 0.1), 1, 2)',colorchannelmixer=.393:.769:.189:0:.349:.686:.168:0:.272:.534:.131[i2];[i2][canvas3]overlay[mix1];movie='9v9VVN1RE84.mp4',scale=1920:1080[grit_i1];[grit_i1]chromakey=0x16FF0A:blend=0.2:similarity=0.3,colorchannelmixer=.3:.4:.3:0:.3:.4:.3:0:.3:.4:.3[grit1];[0:][mix1]overlay[o1];[o1][grit1]overlay[o]" -map "[o]" -c:v libx264 -crf 31 -frames:v 300  ${ran} `, (err) => {
+					
+		
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					
+					break 
  
 //-- watermark 
 case 'watermarkvideo':
