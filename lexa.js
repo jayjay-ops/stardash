@@ -2195,8 +2195,8 @@ case 'crush':
 //-- tts
 case 'tts':
   if (!isVerify) return reply(UserB())
-	   if (args.length < 1) return reply('⌯   ﹝Add Text﹞')
- const tts = value
+
+ const tts = args
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
