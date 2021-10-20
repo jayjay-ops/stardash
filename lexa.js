@@ -2163,12 +2163,37 @@ case 'watermarkimage':
 						fs.unlinkSync(ran)
 					})
 					
+							
+			break	
+
+//-- crusher
+case 'crush':
+
+  if (!isVerify) return reply(UserB())
+	  
+			
+				if (!isQuotedAudio)  return reply('⌯   ﹝Please tag an audio.﹞')
 					
 				
-				
-				
-				
-			break			
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.wav')
+				exec(`ffmpeg  -i ${media} -filter_complex "acrusher=level_in=8:level_out=18:bits=8:mode=log:aa=1"  ${ran} `, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					
+							
+			break	
+
+
+			
 //-- owner bot
 case 'owner':
 case 'besitzer':
