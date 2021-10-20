@@ -2008,7 +2008,7 @@ case 'toimg':
 case 'imagesticker':
 case 'image':
   if (!isVerify) return reply(UserB())
-					if (!isQuotedSticker) return reply('⌯   ﹝𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚊𝚐 𝚊 𝚜𝚝𝚒𝚌𝚔𝚎𝚛.﹞')
+					if (!isQuotedAudio) return reply('⌯   ﹝Please tag an audio.﹞')
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 					ran= getRandom('.png')
@@ -2022,10 +2022,14 @@ case 'image':
 					break
 					
 //-- video to gif
-case 'togif':
+case 'audiolevel':
 case 'gif':
   if (!isVerify) return reply(UserB())
-					
+	  	if (!isQuotedSticker) return reply('⌯   ﹝𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚊𝚐 𝚊 𝚜𝚝𝚒𝚌𝚔𝚎𝚛.﹞')
+					 if (args.length < 1) return reply('⌯   ﹝Enter Number how loud. example: .audiolevel 200﹞')
+  if (yoi.length > 20000 ) return reply('⌯   ﹝This is way to loud.﹞')
+	  
+  
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.mp3')
