@@ -2021,14 +2021,16 @@ case 'image':
 					})
 					break
 					
-//-- video to gif
+//-- audio volume
 case 'audiolevel':
-case 'gif':
+case 'level':
+case 'loud':
+case 'volume':
   if (!isVerify) return reply(UserB())
 	  
 			if (!isQuotedAudio) return reply('⌯   ﹝Please tag an audio.﹞')
-					 if (args.length < 1) return reply('⌯   ﹝Enter Number how loud. example: .audiolevel 200﹞')
-  if (args.length > 20000 ) return reply('⌯   ﹝This is way to loud.﹞')
+					 if (args.length < 1) return reply('⌯   ﹝Enter Number how loud. example:    .volume 200﹞')
+
 	  
   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -2045,7 +2047,26 @@ case 'gif':
 					
 
 									
+//-- video to mp3
+case 'mp3':
 
+  if (!isVerify) return reply(UserB())
+	  
+			if (!isQuotedVideo) return reply('⌯   ﹝Please tag an video.﹞')
+					
+
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.mp3')
+				exec(`ffmpeg -i ${media} -af  -vn output.mp3  ${ran} `, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break
+					
 //-- owner bot
 case 'owner':
 case 'besitzer':
@@ -2079,7 +2100,7 @@ case 'tagall':
 case 'makier':
       if (!isVerify) return reply(userB())
 		  if (!isGroup) return reply(group())
-			if (!isPrem) return reply(premi())
+			if (!isGroupAdmins) return reply(admin())
 					members_id = []
 			teks = `\n★ 𝚐𝚛𝚘𝚞𝚙 : *${groupName}*\n★ 𝚞𝚜𝚎𝚛𝚜 : *${groupMetadata.participants.length}*\n${value}\n★☆☆☆★· 𝚖𝚎𝚗𝚝𝚒𝚘𝚗𝚜 \n`
 			for (let mem of groupMembers) {
@@ -2090,6 +2111,21 @@ case 'makier':
 			mentions(teks, members_id, true)
 			break
 
+case 'pika2': 
+
+      if (!isVerify) return reply(userB())
+		  if (!isGroup) return reply(group())
+			if (!isGroupAdmins) return reply(admin())
+					members_id = []
+			teks = `\n★ 𝚐𝚛𝚘𝚞𝚙 : *${groupName}*\n★ 𝚞𝚜𝚎𝚛𝚜 : *${groupMetadata.participants.length}*\n${value}\n★☆☆☆★· 𝚖𝚎𝚗𝚝𝚒𝚘𝚗𝚜 \n`
+			for (let mem of groupMembers) {
+						teks += `☆ @${mem.jid.split('@')[0]}\n`
+						members_id.push(mem.jid)
+					}
+			teks += `★☆☆☆☆☆☆☆☆☆☆☆☆☆☆★`
+			mentions(teks, members_id, true)
+			break
+			
 //-- blocklist user
 case 'blocklist':
   if (!isVerify) return reply(userB())
