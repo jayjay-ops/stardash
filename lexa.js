@@ -2078,7 +2078,7 @@ case 'cover':
 	  
          if (!isQuotedAudio) return reply('⌯   ﹝Please tag an audio.﹞')
 
-
+       reply('⌯   ﹝Please wait.﹞')
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.mp4')
@@ -2100,9 +2100,9 @@ case 'cover':
 case 'watermarkvideo':
 
   if (!isVerify) return reply(UserB())
-	  
+	
            if (!isQuotedVideo)  return reply('⌯   ﹝Please tag an video.﹞')
-
+   reply('⌯   ﹝Please wait.﹞')
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -2127,7 +2127,7 @@ case 'watermarkimage':
 	  
 			
 				if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
-					
+					   reply('⌯   ﹝Please wait.﹞')
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
