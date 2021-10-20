@@ -2074,9 +2074,9 @@ case 'speed':
 case 'fast':
   if (!isVerify) return reply(UserB())
 	  
-			yoi = value
+  if (!isMedia) return reply('⌯   ﹝tag audio or video﹞')
 				 if (args.length < 1) return reply('⌯   ﹝Enter Number how fast. from 0.5 - 4 example:    .speed 2﹞')
-  if (yoi.length > 4 ) return reply('⌯   ﹝Choose between 0.5 and 4﹞')
+
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
