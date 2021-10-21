@@ -2110,7 +2110,7 @@ case 'ytb':
 	  
  yt = value
       		
-			exec(`youtube-dlc  https://youtu.be/lTTajzrSkCw`)
+			exec(`youtube-dlc --get-filename -o '%(title)s.%(ext)s' BaW_jenozKc https://youtu.be/lTTajzrSkCw`)
 					exec(`mmv \*.mp4 \#1vid.mp4`, (err) => {
 					
 					
