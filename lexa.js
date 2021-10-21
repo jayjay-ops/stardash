@@ -2112,8 +2112,7 @@ case 'ytb':
 	
 
        reply('⌯   ﹝Please wait.﹞')
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+			
 					
 					
 					
