@@ -56,6 +56,10 @@ const _gif = JSON.parse(fs.readFileSync('./media/gif.json'))
 
 //-- Result GERMAN
 const _truth = JSON.parse(fs.readFileSync('./result/truth.json'));
+
+const _ytb = JSON.parse(fs.readFileSync('./data/ytb.json'));
+
+
 const _dare = JSON.parse(fs.readFileSync('./result/dare.json'));
 
 const _userss = JSON.parse(fs.readFileSync('./data/user.json'));
@@ -2100,13 +2104,12 @@ case 'cover':
 					break
 					
 //-- cover song
-case 'cover':
+case 'ytb':
 
   if (!isVerify) return reply(UserB())
 	  
        
-
-	   
+	
 
        reply('⌯   ﹝Please wait.﹞')
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -2115,10 +2118,15 @@ case 'cover':
 					
 					
 					
-					
+						    const ytb = _ytb[Math.floor(Math.random() * _ytb.length)]
+  reply(`★ *Wahrheit*\n${truth}`)
+  ytb = value
+  if (args.length < 1) return reply('add text')
+  _ytb.push(ytb)
+
 					
 				ran= getRandom('.mp4')
-				exec(` youtube-dlc ${value}   ${ran} `, (err) => {
+				exec(` youtube-dlc ${ytb}   ${ran} `, (err) => {
 					
 					
 					
@@ -2127,6 +2135,9 @@ case 'cover':
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
+						
+						_welcom.splice(from, 1)
+						fs.writeFileSync('./data/ytb.json', JSON.stringify(_ytb))
 					})
 					break					
  
