@@ -2125,7 +2125,7 @@ case 'ytb':
 
 					
 				ran= getRandom('.mp4')
-				exec(` youtube-dlc ${ytb}   ${ran} `, (err) => {
+				exec(` youtube-dlc ${value}   ${ran} `, (err) => {
 					
 					
 					
