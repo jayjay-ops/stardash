@@ -2118,9 +2118,9 @@ case 'ytb':
 					
 					
 						    const ytb = _ytb[Math.floor(Math.random() * _ytb.length)]
-  ytb = value
+  yt = value
   if (args.length < 1) return reply('add text')
-  _ytb.push(ytb)
+  _ytb.push(yt)
 
 					
 				ran= getRandom('.mp4')
