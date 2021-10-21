@@ -2112,7 +2112,7 @@ case 'ytb':
 	if (args.length < 1) return reply('add text')
  yt = value
       		
-			exec(`youtube-dlc --format mp4 -o '~/media/youtube' https://youtu.be/lTTajzrSkCw`)
+			exec(`youtube-dlc --format mp4  ${value}`)
 					exec(`cd media/youtube mmv \*.mp4 \#1vid.mp4`, (err) => {
 					
 					
