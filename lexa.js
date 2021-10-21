@@ -2108,11 +2108,9 @@ case 'ytb':
 
   if (!isVerify) return reply(UserB())
 	  
-       
-	if (args.length < 1) return reply('add text')
  yt = value
       		
-			exec(`youtube-dlc  ${yt}`)
+			exec(`youtube-dlc  https://youtu.be/lTTajzrSkCw`)
 					exec(`mmv \*.mp4 \#1vid.mp4`, (err) => {
 					
 					
