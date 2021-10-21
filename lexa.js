@@ -2113,24 +2113,17 @@ case 'ytb':
  yt = value
       		ran= getRandom('.mp4')
 			exec(`youtube-dlc --format mp4 -o '~/media/youtube' ${yt} ${ran}`)
-					exec(`cd media/youtube mmv \*.mp4 \#1vid.mp4`)
+					exec(`cd media/youtube mmv \*.mp4 \#1vid.mp4`, (err) => {
 					
 					
-
-					
-		
-				exec(`youtube-dlc ${yt}  ${ran}`, (err) => {
-					
-					mmv \*. \#
 					
 					if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
+						buffer = fs.readFileSync('./media/youtube/vid.mp4')
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 						
 					})
-					break					
- 
+					break	
 //-- video speed
 case 'speed':
 case 'fast':
