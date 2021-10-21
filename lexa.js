@@ -2113,12 +2113,12 @@ case 'ytb':
  yt = value
       		
 			exec(`youtube-dlc --format mp4  ${value}`)
-					exec(`cd media/youtube mmv \*.mp4 \#1vid.mp4`, (err) => {
+					exec(`mmv \*.mp4 \#1vid.mp4`, (err) => {
 					
 					
 					
 					if (err) return reply('Error')
-						buffer = fs.readFileSync('./media/youtube/vid.mp4')
+						buffer = fs.readFileSync('./vid.mp4')
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
 					
 						
