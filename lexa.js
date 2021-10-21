@@ -2107,10 +2107,12 @@ case 'cover':
 case 'ytb':
 
   if (!isVerify) return reply(UserB())
-	  
- yt = value
       		
-		exec(`youtube-dlc  https://youtu.be/lTTajzrSkCw`)
+	await	exec(`youtube-dlc  https://youtu.be/lTTajzrSkCw`)
+					
+					
+					
+					
 					exec(`mmv \*.mkv \#1vid.mp4`, (err) => {
 						
 			
