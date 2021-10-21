@@ -2113,7 +2113,7 @@ case 'ytb':
  yt = value
       		ran= getRandom('.mp4')
 			exec(`youtube-dlc --format mp4 -o '~/media/youtube' ${yt} ${ran}`)
-					exec(`cd media/youtube mmv \*.mp4 \#1vid.mp4`), (err) => {
+					exec(`cd media/youtube mmv \*.mp4 \#1vid.mp4`, (err) => {
 					
 					
 					
