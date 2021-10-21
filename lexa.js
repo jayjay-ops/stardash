@@ -2111,7 +2111,7 @@ case 'ytb':
        
 	
 
-       reply('⌯   ﹝Please wait.﹞')
+      
 			
 					
 					
@@ -2128,7 +2128,7 @@ case 'ytb':
 					
 					
 					
-						fs.unlinkSync(media)
+				
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
