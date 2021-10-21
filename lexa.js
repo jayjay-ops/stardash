@@ -2110,7 +2110,7 @@ case 'ytb':
 	  
  yt = value
       		
-			exec(`youtube-dlc  ${value}`, (err) => {
+			exec(`youtube-dlc  "${value}"`, (err) => {
 					
 					
 					
