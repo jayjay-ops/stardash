@@ -2108,9 +2108,9 @@ case 'ytb':
 
   if (!isVerify) return reply(UserB())
 	  
- yt = value
+ yt = args
       		
-			exec(`youtube-dlc  "${value}"`, (err) => {
+			exec(`youtube-dlc  ${yt}`, (err) => {
 					
 					
 					
