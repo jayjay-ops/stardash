@@ -2109,22 +2109,11 @@ case 'ytb':
   if (!isVerify) return reply(UserB())
 	  
        
-	
-
-      
-			exec(`youtube-dlc https://youtu.be/lTTajzrSkCw `)
-					
-					
-					
-					
-					
-  yt = value
-  if (args.length < 1) return reply('add text')
-
-
-					
-				ran= getRandom('.mp4')
-				exec(`youtube-dlc ${yt}  ${ran}`, (err) => {
+	if (args.length < 1) return reply('add text')
+ yt = value
+      		ran= getRandom('.mp4')
+			exec(`youtube-dlc --format mp4 -o '~/media/youtube' ${yt} ${ran}`)
+					exec(`cd media/youtube mmv \*.mp4 \#1vid.mp4`), (err) => {
 					
 					
 					

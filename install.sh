@@ -5,6 +5,7 @@ apt-get install libwebp
 apt-get install ffmpeg
 apt-get install wget
 apt-get install tesseract
+apt-get install mmv
 wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-ocr/tessdata/blob/master/ind.traineddata?raw=true"
 apt-get install python
 python -m pip install --upgrade youtube-dlc
