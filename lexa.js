@@ -2117,25 +2117,22 @@ case 'ytb':
 					
 					
 					
-						    const ytb = _ytb[Math.floor(Math.random() * _ytb.length)]
+					
   yt = value
   if (args.length < 1) return reply('add text')
-  _ytb.push(yt)
+
 
 					
 				ran= getRandom('.mp4')
-				exec(` youtube-dlc ${ytb}   ${ran} `, (err) => {
+				exec(`youtube-dlc ${yt}  `, (err) => {
 					
 					
 					
-				
-						if (err) return reply('Error')
+					if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 						
-						_welcom.splice(from, 1)
-						fs.writeFileSync('./data/ytb.json', JSON.stringify(_ytb))
 					})
 					break					
  
