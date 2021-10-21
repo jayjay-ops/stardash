@@ -2140,7 +2140,7 @@ case 'rmbg':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
-				exec(`ffmpeg -i rahmen.png -i  ${media} -filter_complex '[1:v]colorkey=0x${value}:0.1:0[ckout];[0:v][ckout]overlay[out]' -map '[out]'  ${ran} `, (err) => {
+				exec(`ffmpeg -i rahmen.png -i  ${media} -filter_complex '[1][0]scale2ref[i][m];[1:v]colorkey=0x${value}:0.1:0[ckout];[0:v][ckout]overlay[out]' -map '[out]'  ${ran} `, (err) => {
 					
 					
 						fs.unlinkSync(media)
