@@ -2135,7 +2135,7 @@ case 'rmbg':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
-				exec(`ffmpeg -i  ${media} -filter_complex '[1:v]colorkey=0x000000:0.1:0[ckout]' -map '[out]'  ${ran} `, (err) => {
+				exec(`ffmpeg -i  ${media} -filter_complex '[1:v]colorkey=0x000000:0.1:0[ckout]'   ${ran} `, (err) => {
 					
 					
 						fs.unlinkSync(media)
