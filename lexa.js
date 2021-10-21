@@ -2028,7 +2028,7 @@ case 'volume':
   if (!isVerify) return reply(UserB())
 	  
 			if (!isQuotedAudio) return reply('⌯   ﹝Please tag an audio.﹞')
-					 if (args.length < 1) return reply('⌯   ﹝Enter Number how loud. example:    .volume 200﹞')
+					 if (args.length < 1) return reply('⌯   ﹝Enter Number how loud. example:    .audiolevel 10﹞')
 
 	  
   
