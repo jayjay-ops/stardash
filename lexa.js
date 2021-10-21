@@ -2108,16 +2108,17 @@ case 'ytb':
 
   if (!isVerify) return reply(UserB())
 	  
- yt = args
+ran= getRandom('.mkv')
       		
-			exec(`youtube-dlc  ${args}`, (err) => {
+			exec(`youtube-dlc  ${value} ${ran}`, (err) => {
 					
 					
-					
-					if (err) return reply('Error')
-						buffer = fs.readFileSync('./*.mkv')
+
+					fs.unlinkSync(media)
+						if (err) return reply('Speed must be from 0.5 to 4')
+						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
-					
+						fs.unlinkSync(ran)
 						
 					})
 					break	
