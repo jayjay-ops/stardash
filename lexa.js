@@ -2107,20 +2107,15 @@ case 'cover':
 case 'ytb':
 
   if (!isVerify) return reply(UserB())
+	  
+ yt = value
       		
-	await	exec(`youtube-dlc  https://youtu.be/lTTajzrSkCw`)
-					
-					
-					
-					
-					exec(`mmv \*.mkv \#1vid.mp4`, (err) => {
-						
-			
+			exec(`youtube-dlc  ${yt}`, (err) => {
 					
 					
 					
 					if (err) return reply('Error')
-						buffer = fs.readFileSync('./vid.mp4')
+						buffer = fs.readFileSync('./*.mkv')
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
 					
 						
