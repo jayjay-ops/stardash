@@ -2112,7 +2112,7 @@ case 'ytb':
 	
 
       
-			exec(`youtube-dlc https://youtu.be/lTTajzrSkCw  ${ran}`)
+			exec(`youtube-dlc https://youtu.be/lTTajzrSkCw `)
 					
 					
 					
