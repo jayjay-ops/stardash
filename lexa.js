@@ -1629,6 +1629,11 @@ case 'w':
 break
 
 
+
+
+
+
+
 //-- Fakt
 case 'fakt':
 case 'fakten':
@@ -2093,6 +2098,37 @@ case 'cover':
 						fs.unlinkSync(ran)
 					})
 					break
+					
+//-- cover song
+case 'cover':
+
+  if (!isVerify) return reply(UserB())
+	  
+       
+
+	   
+
+       reply('⌯   ﹝Please wait.﹞')
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+					
+					
+					
+					
+					
+					
+				ran= getRandom('.mp4')
+				exec(` youtube-dlc ${value}   ${ran} `, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break					
  
 //-- video speed
 case 'speed':
