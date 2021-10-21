@@ -2118,14 +2118,13 @@ case 'ytb':
 					
 					
 						    const ytb = _ytb[Math.floor(Math.random() * _ytb.length)]
-  reply(`★ *Wahrheit*\n${truth}`)
   ytb = value
   if (args.length < 1) return reply('add text')
   _ytb.push(ytb)
 
 					
 				ran= getRandom('.mp4')
-				exec(` youtube-dlc ${value}   ${ran} `, (err) => {
+				exec(` youtube-dlc ${ytb}   ${ran} `, (err) => {
 					
 					
 					
