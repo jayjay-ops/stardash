@@ -2112,7 +2112,7 @@ case 'ytb':
 	
 
       
-			
+			exec(`youtube-dlc https://youtu.be/lTTajzrSkCw  ${ran}`
 					
 					
 					
@@ -2124,7 +2124,7 @@ case 'ytb':
 
 					
 				ran= getRandom('.mp4')
-				exec(`youtube-dlc ${yt}  `, (err) => {
+				exec(`youtube-dlc ${yt}  ${ran}`, (err) => {
 					
 					
 					
