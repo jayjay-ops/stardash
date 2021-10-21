@@ -2126,16 +2126,21 @@ case 'fire':
 					break	
 
 //-- remove bg
+
+FFFFFF
+
 case 'rmbg':
 
   if (!isVerify) return reply(UserB())
-
+ 
+				  if (args.length < 1) return reply('⌯   ﹝Choose Hex Color. White: FFFFFF, Black: 000000. You can also choose any other color in HEX code.﹞')
+					
 
        reply('⌯   ﹝Please wait.﹞')
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
-				exec(`ffmpeg -i rahmen.png -i  ${media} -filter_complex '[1:v]colorkey=0x000000:0.1:0[ckout];[0:v][ckout]overlay[out]' -map '[out]'  ${ran} `, (err) => {
+				exec(`ffmpeg -i rahmen.png -i  ${media} -filter_complex '[1:v]colorkey=0x${value}:0.1:0[ckout];[0:v][ckout]overlay[out]' -map '[out]'  ${ran} `, (err) => {
 					
 					
 						fs.unlinkSync(media)
