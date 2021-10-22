@@ -374,6 +374,18 @@ if (!isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕�
 if (isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕︎]','aqua'), "GC", color(command, "green"), "from", (sender.split('@')[0]), "in", (groupName), args.length)
 
 
+
+
+if (!isGroup && isCmd) 
+	
+	_user.push(sender, args[0], command)
+			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
+			
+if (isGroup && isCmd) 
+   _user.push(sender, args[0], command)
+			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
+
+
 //-- Status
 let prem_ = '𝙵𝚛𝚎𝚎'
 			if (isPrem) {
@@ -2685,6 +2697,24 @@ case 'register':
 			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}* \nYou are User nr. *${_user.length}*`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 					break
+					
+//--- verify
+case 'verify':
+case 'daftar':
+case 'registrieren':
+case 'register':
+			if (isVerify) return 
+					_user.push(sender, args[0])
+			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
+			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}* \nYou are User nr. *${_user.length}*`
+			Lxa.sendMessage(from, capt, text, {quoted: mek})
+					break					
+					
+					
+					
+
+
+
 
 
 //--- Welcome on/off
