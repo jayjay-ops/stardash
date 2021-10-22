@@ -2652,7 +2652,7 @@ case 'userss':
 					teks += `Total User : ${_user.length}`
 					Lxa.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": _user}})
 					
-					 const userss = _userss
+					
 						reply(`★ *all*\n${userss}`)
 						
 					break
