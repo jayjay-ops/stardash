@@ -2653,7 +2653,6 @@ case 'userss':
 					Lxa.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": _user}})
 					
 					
-						reply(`★ *all*\n${userss}`)
 						
 					break
 
