@@ -2660,11 +2660,15 @@ case 'userss':
 //-- number
 case 'number':
 case 'nummer':
+										 const userss = _userss
+				
+					
+					
 					teks = `Everyone\n`
 					no = 0
 					for (let hehehe of _user) {
 						no += 1
-						teks += `[${no.toString()}] [0]}\n`
+						teks += `${userss}\n`
 					}
 					teks += `Total User : ${_user.length}`
 					Lxa.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": _user}})
