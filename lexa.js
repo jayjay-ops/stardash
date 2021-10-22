@@ -2664,7 +2664,7 @@ case 'nummer':
 					no = 0
 					for (let hehehe of _user) {
 						no += 1
-						teks += `[${no.toString()}] @${hehehe.split('@')[0]}\n`
+						teks += `[${no.toString()}] [0]}\n`
 					}
 					teks += `Total User : ${_user.length}`
 					Lxa.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": _user}})
