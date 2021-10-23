@@ -2213,10 +2213,10 @@ case 'stext':
 
   if (!isVerify) return reply(UserB())
 	  
-	
+	if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
 					   reply('⌯   ﹝Please wait.﹞')
 				
-				
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
 				exec(`ffmpeg  -i ${media} -vf "drawtext=text='${value}':fontcolor=green:fontsize=75:x=1002:y=100:"  ${ran} `, (err) => {
