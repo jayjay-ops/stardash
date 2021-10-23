@@ -1174,10 +1174,6 @@ reply('⌯  ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 �
 case '.🇵🇾':
 reply('⌯  ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Paraguay')
 }switch(is) {
-case '.':
-reply('𓁹')
-}
-switch(is) {
 case '.🇵🇪':
 reply('⌯  ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Peru')
 }switch(is) {
@@ -2169,7 +2165,7 @@ case 'gif':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
 					break					
