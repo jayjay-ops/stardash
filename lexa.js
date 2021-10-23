@@ -2233,12 +2233,12 @@ case 'blur':
 	  
 			
 				if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
-					   reply('⌯   ﹝Please wait.﹞')
+					   
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
-				exec(`ffmpeg  -i ${media} -filter_complex "[0:v]boxblur=luma_radius=10:chroma_radius=10:luma_power=${value}[blurred]" -map "[blurred]"   ${ran} `, (err) => {
+				exec(`ffmpeg  -i ${media} -filter_complex "[0:v]boxblur=luma_radius=10:chroma_radius=10:luma_power=2[blurred]" -map "[blurred]"   ${ran} `, (err) => {
 					
 					
 					
@@ -2252,7 +2252,31 @@ case 'blur':
 							
 			break
 			
+//-- exec
+case 'ecec':
+case 'ececute':
 
+  if (!isVerify) return reply(UserB())
+	  
+			if (!isPrem) return reply(premi())			
+					   if (args.length < 1) return reply('⌯   ﹝What shall i execute Master?﹞')
+				
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.png')
+				exec(`${value}`, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					
+							
+			break
 			
 //-- watermark 
 case 'watermarkimage':
