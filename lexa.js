@@ -2222,7 +2222,7 @@ case 'stext':
 					
 					
 					
-						fs.unlinkSync(media)
+				
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
