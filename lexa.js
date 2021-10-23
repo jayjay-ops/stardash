@@ -2115,7 +2115,7 @@ case 'textimage':
        reply('⌯   ﹝Please wait.﹞')
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.png')
+				ran= getRandom('.webp')
 				exec(`ffmpeg -ss 00:00:15 -t 5 -i ${media} -vf drawtext="fontsize=200:fontcolor=white:box=1:boxcolor=black@0.8:x=w-tw-100:y=100:text='${value}'"  ${ran} `, (err) => {
 					
 					
@@ -2123,11 +2123,32 @@ case 'textimage':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						Lxa.sendMessage(from, buffer, sticker, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
 					break
+//-- zoom
+case 'zoom':
 
+  if (!isVerify) return reply(UserB())
+	  
+         if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
+
+       reply('⌯   ﹝Please wait.﹞')
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.webp')
+				exec(`ffmpeg -i ${media} -vf "zoompan=z='if(lte(mod(time,10),3),2,1)':d=1:x=iw/2-(iw/zoom/2):y=ih/2-(ih/zoom/2):fps=30"  ${ran} `, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, sticker, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break			
 
 				
 
