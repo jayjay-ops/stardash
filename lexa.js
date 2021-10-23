@@ -2022,30 +2022,14 @@ case 'image':
 					ran= getRandom('.png')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('⌯   ﹝If you want to convert an animated sticker, type    .videosticker﹞')
+						if (err) return reply('⌯   ﹝Doesnt work with animated stickers.﹞')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
 					break
 					
-//-- stiker to image
-case 'tovideo':
-case 'videosticker':
-case 'video':
-  if (!isVerify) return reply(UserB())
-						if (!isQuotedSticker) return reply('⌯   ﹝𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚊𝚐 𝚊 𝚜𝚝𝚒𝚌𝚔𝚎𝚛.﹞')
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-					ran= getRandom('.mp4')
-					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
-						fs.unlinkSync(media)
-						if (err) return reply('⌯   ﹝If you want to convert an image sticker, type    .imagesticker﹞')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
-						fs.unlinkSync(ran)
-					})
-					break					
+				
 					
 //-- audio volume
 case 'audiolevel':
@@ -2121,7 +2105,28 @@ case 'cover':
 					})
 					break
 
+//-- textimage
+case 'textimage':
 
+  if (!isVerify) return reply(UserB())
+	  
+         if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
+
+       reply('⌯   ﹝Please wait.﹞')
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.png')
+				exec(`ffmpeg -ss 00:00:15 -t 5 -i ${media} -vf drawtext="fontsize=200:fontcolor=white:box=1:boxcolor=black@0.8:x=w-tw-100:y=100:text='${value}'"  ${ran} `, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break
 
 
 				
