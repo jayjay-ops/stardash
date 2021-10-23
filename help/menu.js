@@ -86,6 +86,11 @@ const menusticker = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, u
 const menu3 = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process) => { 
   return `⇝  ${pushname}
 ⇝   ${prem_}
+⌯   .𝚛𝚖𝚋𝚐
+⌯   .𝚛𝚖𝚋𝚐𝚜
+⌯   .𝚋𝚕𝚞𝚛
+⌯   .𝚜𝚊𝚝𝚞𝚛𝚊𝚝𝚒𝚘𝚗
+⌯   .𝚏𝚒𝚕𝚝𝚎𝚛
 ............................
 ⌯   .𝚊𝚞𝚍𝚒𝚘𝚕𝚎𝚟𝚎𝚕
 ⌯   .𝚖𝚙3
@@ -132,6 +137,7 @@ const menuy = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime,
 ⌯   .𝚝𝚊𝚐𝚊𝚕𝚕
 ⌯   .𝚙𝚒𝚔𝚊 𝚝𝚎𝚡𝚝
 ⌯   .𝚙𝚒𝚗𝚐
+⌯   .𝚎𝚡𝚎𝚌𝚞𝚝𝚎
 ............................
 ⌯   .𝚞𝚕𝚝𝚒𝚖𝚊𝚝𝚎𝚛𝚘𝚕𝚕
 ⌯   .𝚕𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢𝚛𝚘𝚕𝚕
