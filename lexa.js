@@ -2101,7 +2101,31 @@ case 'saturation':
 						fs.unlinkSync(ran)
 					})
 					break					
-				
+
+
+//-- saturation
+case 'saturation':
+
+  
+	  
+			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
+					 if (args.length < 1) return reply('⌯   ﹝Enter Filter. vintage, negate, strong_contrast, lighter﹞')
+
+	  
+  
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.png')
+				exec(`ffmpeg -i ${media} -vf curves=${value}   ${ran} `, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('⌯   ﹝failed﹞')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break
+
+curves=vintage				
 									
 //-- video to mp3
 case 'mp3':
