@@ -2104,26 +2104,7 @@ case 'cover':
 					break
 
 
-//-- fire
-case 'fire':
 
-  if (!isVerify) return reply(UserB())
-
-
-       reply('⌯   ﹝Please wait.﹞')
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.mp4')
-				exec(`ffmpeg -i fire.mp4 -i  ${media} -filter_complex '[1:v]colorkey=0x000000:0.1:0[ckout];[0:v][ckout]overlay[out]' -map '[out]'  ${ran} `, (err) => {
-					
-					
-						fs.unlinkSync(media)
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
-						fs.unlinkSync(ran)
-					})
-					break	
 
 //-- remove bg
 
