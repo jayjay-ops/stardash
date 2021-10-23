@@ -2105,50 +2105,8 @@ case 'cover':
 					})
 					break
 
-//-- textimage
-case 'textimage':
 
-  if (!isVerify) return reply(UserB())
-	  
-         if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
-
-       reply('⌯   ﹝Please wait.﹞')
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.webp')
-				exec(`ffmpeg -ss 00:00:15 -t 5 -i ${media} -vf drawtext="fontsize=200:fontcolor=white:box=1:boxcolor=black@0.8:x=w-tw-100:y=100:text='${value}'"  ${ran} `, (err) => {
-					
-					
-					
-						fs.unlinkSync(media)
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
-						fs.unlinkSync(ran)
-					})
-					break
-//-- zoom
-case 'zoom':
-
-  if (!isVerify) return reply(UserB())
-	  
-        
-
-       reply('⌯   ﹝Please wait.﹞')
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.webp')
-				exec(`ffmpeg -loop 1 -i ${media} -vf "zoompan=z='if(lte(zoom,1.0),1.5,max(1.001,zoom-0.0015))':d=125" -c:v libx264 -t 5 -s "800x450"  ${ran} `, (err) => {
-					
-					
-					
-						fs.unlinkSync(media)
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
-						fs.unlinkSync(ran)
-					})
-					break			
+		
 
 				
 
