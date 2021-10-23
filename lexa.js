@@ -223,12 +223,12 @@ Lxa.on('group-participants-update', async (anu) => {
 			if (anu.action == 'add') {
 				num = anu.participants[0]
 				hai = `Hallo @${num.split('@')[0]}
-Willkommen in *${mdata.subject}*
-Bitte Vorstellen`
+Welcome in *${mdata.subject}*
+Please introduce yourself :)`
 				Lxa.sendMessage(mdata.id, hai, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				bye = `@${num.split('@')[0]} Ist ein Opfer 🤣`
+				bye = `@${num.split('@')[0]} Goodbye :)`
 				Lxa.sendMessage(mdata.id, bye, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
