@@ -2055,7 +2055,73 @@ case 'volume':
 					})
 					break
 					
+//-- color
+case 'color':
 
+  
+	  
+			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
+					 if (args.length < 1) return reply('⌯   ﹝Enter Number of color﹞')
+
+	  
+  
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.png')
+				exec(`ffmpeg -i ${media} -vf colorblance=gs=${value}:rh=0.1:bh=0.1  ${ran} `, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break
+
+//-- brightness
+case 'brightness':
+
+  
+	  
+			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
+					 if (args.length < 1) return reply('⌯   ﹝Enter Number of color﹞')
+
+	  
+  
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.png')
+				exec(`ffmpeg -i ${media} -vf eq=brightness=${value} -c:a copy  ${ran} `, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break
+					
+					
+//-- saturation
+case 'saturation':
+
+  
+	  
+			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
+					 if (args.length < 1) return reply('⌯   ﹝Enter Number of color﹞')
+
+	  
+  
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.png')
+				exec(`ffmpeg -i ${media} -vf eq=saturation=${value} -c:a copy  ${ran} `, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break					
+				
 									
 //-- video to mp3
 case 'mp3':
