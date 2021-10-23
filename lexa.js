@@ -2205,7 +2205,7 @@ case 'watermarkimage':
 			break	
 
 
-ffmpeg -i inputorblankimage.jpg -vf "drawtext=text='Test Text':fontcolor=white:fontsize=75:x=1002:y=100:" output.jpg
+
 
 
 //-- text sticker 
