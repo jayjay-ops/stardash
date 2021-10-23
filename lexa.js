@@ -2420,7 +2420,7 @@ case 'ban':
 					if (args.length < 1) return
 					if (!isPrem) return reply(ownerB())
 					banned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-			       
+			        banned = mentioned
 					reply(`🔒 Gebannt : ${banned}`)
 					break
 
