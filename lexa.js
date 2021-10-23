@@ -2103,8 +2103,8 @@ case 'saturation':
 					break					
 
 
-//-- saturation
-case 'saturation':
+//-- filter
+case 'filter':
 
   
 	  
