@@ -2213,7 +2213,7 @@ case 'stext':
 
   if (!isVerify) return reply(UserB())
 	  
-	if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
+
 					   reply('⌯   ﹝Please wait.﹞')
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
