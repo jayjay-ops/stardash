@@ -2226,7 +2226,7 @@ case 'stext':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, sticker, {quoted:mek, caption: 'StarDash ✯'})
+						Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
 					
