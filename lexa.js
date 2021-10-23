@@ -2147,28 +2147,7 @@ case 'sound':
 					break
 
 
-//-- video to mp3
-case 'gif':
-
-  if (!isVerify) return reply(UserB())
-	  
-			if (!isQuotedVideo) return reply('⌯   ﹝Please tag an video.﹞')
-					
-
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.gif')
-				exec(`ffmpeg -i ${media}  -ss 00:00:00 -t 10  ${ran} `, (err) => {
-					
-					
-					
-						fs.unlinkSync(media)
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
-						fs.unlinkSync(ran)
-					})
-					break					
+				
 			
 
 //-- cover song
