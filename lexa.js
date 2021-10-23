@@ -2219,7 +2219,7 @@ case 'stext':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
-				exec(`ffmpeg -i ${media} -vf "chromakey=000000:0.01:${value}" -c copy -c:v png ${ran} `, (err) => {
+				exec(`ffmpeg -i ${media} -vf "chromakey=000000:${value}:0" -c copy -c:v png ${ran} `, (err) => {
 					
 					
 					
