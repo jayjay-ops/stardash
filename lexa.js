@@ -2216,13 +2216,14 @@ case 'stext':
 	if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
 					   reply('⌯   ﹝Please wait.﹞')
 				
-			
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
-				exec(`ffmpeg  -i watermark.png -vf "drawtext=text='${value}':fontcolor=green:fontsize=75:x=1002:y=100:"  ${ran} `, (err) => {
+				exec(`ffmpeg  -i ${media} -vf "drawtext=text='hii':fontcolor=white:fontsize=75:x=1002:y=100:"  ${ran} `, (err) => {
 					
 					
 					
-				
+						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
