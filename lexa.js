@@ -2043,7 +2043,7 @@ case 'volume':
   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.mp3')
+				ran= getRandom('.opus')
 				exec(`ffmpeg -i ${media} -af  'volume=${value}'  ${ran} `, (err) => {
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
@@ -2065,7 +2065,7 @@ case 'sound':
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.mp3')
+				ran= getRandom('.opus')
 				exec(`ffmpeg -i ${media}  -vn  ${ran} `, (err) => {
 					
 					
@@ -2160,7 +2160,7 @@ case 'fast':
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.mp3')
+				ran= getRandom('.opus')
 				exec(`ffmpeg -i ${media}  -filter:a "atempo=${value}" -vn  ${ran} `, (err) => {
 					
 					
@@ -2234,7 +2234,7 @@ case 'crush':
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.wav')
+				ran= getRandom('.opus')
 				exec(`ffmpeg  -i ${media} -filter_complex "acrusher=level_in=8:level_out=18:bits=8:mode=log:aa=1"  ${ran} `, (err) => {
 					
 					
