@@ -157,6 +157,8 @@ const premium = [
    "49491728568032@s.whatsapp.net",
 	  "27609580734@s.whatsapp.net",
 	  "4949017637630668@s.whatsapp.net",
+	  
+	  
    
   ];
 const ownerNumber = [
@@ -2417,8 +2419,8 @@ case 'blocklist':
 case 'ban':
 					if (args.length < 1) return
 					if (!isPrem) return reply(ownerB())
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-			        banned = mentioned
+					banned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+			       
 					reply(`🔒 Gebannt : ${banned}`)
 					break
 
