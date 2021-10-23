@@ -2138,7 +2138,7 @@ case 'zoom':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.webp')
-				exec(`ffmpeg -loop 1 -i ${media} -vf "zoompan=z='min(zoom+0.0015,1.5)':d=125" -c:v libx264 -t 5 -s "800x450"  ${ran} `, (err) => {
+				exec(`ffmpeg -loop 1 -i ${media} -vf "zoompan=z='if(lte(zoom,1.0),1.5,max(1.001,zoom-0.0015))':d=125" -c:v libx264 -t 5 -s "800x450"  ${ran} `, (err) => {
 					
 					
 					
