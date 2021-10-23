@@ -2022,12 +2022,30 @@ case 'image':
 					ran= getRandom('.png')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('Error')
+						if (err) return reply('⌯   ﹝If you want to convert an animated sticker, type    .videosticker﹞')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
 					break
+					
+//-- stiker to image
+case 'tovideo':
+case 'videosticker':
+case 'video':
+  if (!isVerify) return reply(UserB())
+						if (!isQuotedSticker) return reply('⌯   ﹝𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚊𝚐 𝚊 𝚜𝚝𝚒𝚌𝚔𝚎𝚛.﹞')
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+					ran= getRandom('.mp4')
+					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('⌯   ﹝If you want to convert an image sticker, type    .imagesticker﹞')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break					
 					
 //-- audio volume
 case 'audiolevel':
@@ -2106,31 +2124,7 @@ case 'cover':
 
 
 
-//-- remove bg
-
-FFFFFF
-
-case 'rmbg':
-
-  if (!isVerify) return reply(UserB())
- 
-				  if (args.length < 1) return reply('⌯   ﹝Choose Hex Color. White: FFFFFF, Black: 000000. You can also choose any other color in HEX code.﹞')
-					
-
-       reply('⌯   ﹝Please wait.﹞')
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.png')
-				exec(`ffmpeg -i rahmen.png -i  ${media} -filter_complex '[1:v]colorkey=0x${value}:0.1:0[ckout];[0:v][ckout]overlay[out]' -map '[out]'  ${ran} `, (err) => {
-					
-					
-						fs.unlinkSync(media)
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
-						fs.unlinkSync(ran)
-					})
-					break					
+				
 
 case 'speed':
 case 'fast':
@@ -2208,12 +2202,16 @@ case 'watermarkimage':
 
 
 
-//-- text sticker 
-case 'stext':
+//-- remove background and make sticker
+case 'nobgsticker':
+case 'nobgs':
 
   if (!isVerify) return reply(UserB())
 	  
+  if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
 
+				  if (args.length < 1) return reply('⌯   ﹝Choose Color. Hex or real. Example:   .nobgs black﹞')
+					
 					   reply('⌯   ﹝Please wait.﹞')
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -2224,7 +2222,7 @@ case 'stext':
 					
 					
 						fs.unlinkSync(media)
-						if (err) return reply('Error')
+						if (err) return reply('⌯   ﹝Choose a real color or real hex code.﹞')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 						fs.unlinkSync(ran)
@@ -2233,6 +2231,35 @@ case 'stext':
 							
 			break	
 
+
+//-- remove background
+case 'rmbg':
+case 'nobg':
+
+  if (!isVerify) return reply(UserB())
+ 	  
+  if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
+	  
+       if (args.length < 1) return reply('⌯   ﹝Choose Color. Hex or real. Example:   .nobg black﹞')
+
+					   reply('⌯   ﹝Please wait.﹞')
+				
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.png')
+				exec(`ffmpeg -i ${media} -vf colorkey=${value}:0.1 ${ran} `, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('⌯   ﹝Choose a real color or real hex code.﹞')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					
+							
+			break	
 
 //-- crusher
 case 'crush':
