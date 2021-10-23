@@ -2036,7 +2036,7 @@ case 'audiolevel':
 case 'level':
 case 'loud':
 case 'volume':
-  if (!isVerify) return reply(UserB())
+  
 	  
 			if (!isQuotedAudio) return reply('⌯   ﹝Please tag an audio.﹞')
 					 if (args.length < 1) return reply('⌯   ﹝Enter Number how loud. example:    .audiolevel 10﹞')
@@ -2138,7 +2138,7 @@ case 'zoom':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.webp')
-				exec(`ffmpeg -i ${media} -vf "zoompan=z='if(lte(mod(time,10),3),2,1)':d=1:x=iw/2-(iw/zoom/2):y=ih/2-(ih/zoom/2):fps=30"  ${ran} `, (err) => {
+				exec(`ffmpeg -loop 1 -i ${media} -vf "zoompan=z='min(zoom+0.0015,1.5)':d=125" -c:v libx264 -t 5 -s "800x450"  ${ran} `, (err) => {
 					
 					
 					
