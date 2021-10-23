@@ -2204,6 +2204,36 @@ case 'watermarkimage':
 							
 			break	
 
+
+ffmpeg -i inputorblankimage.jpg -vf "drawtext=text='Test Text':fontcolor=white:fontsize=75:x=1002:y=100:" output.jpg
+
+
+//-- text sticker 
+case 'stext':
+
+  if (!isVerify) return reply(UserB())
+	  
+	
+					   reply('⌯   ﹝Please wait.﹞')
+				
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.png')
+				exec(`ffmpeg  -i ${media} -vf "drawtext=text='${value}':fontcolor=green:fontsize=75:x=1002:y=100:"  ${ran} `, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					
+							
+			break	
+
+
 //-- crusher
 case 'crush':
 
