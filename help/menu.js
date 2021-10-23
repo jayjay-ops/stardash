@@ -86,6 +86,7 @@ const menusticker = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, u
 const menu3 = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process) => { 
   return `⇝  ${pushname}
 ⇝   ${prem_}
+............................
 ⌯   .𝚛𝚖𝚋𝚐
 ⌯   .𝚛𝚖𝚋𝚐𝚜
 ⌯   .𝚋𝚕𝚞𝚛
