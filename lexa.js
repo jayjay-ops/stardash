@@ -2109,7 +2109,7 @@ case 'filter':
   
 	  
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
-					 if (args.length < 1) return reply('⌯   ﹝Enter Filter. vintage, negate, strong_contrast, lighter﹞')
+					 if (args.length < 1) return reply('⌯   ﹝Enter Filter. vintage, strong_contrast, lighter, darker﹞')
 
 	  
   
@@ -2125,7 +2125,7 @@ case 'filter':
 					})
 					break
 
-curves=vintage				
+			
 									
 //-- video to mp3
 case 'mp3':
@@ -2149,8 +2149,31 @@ case 'sound':
 						fs.unlinkSync(ran)
 					})
 					break
+
+
+//-- video to mp3
+case 'gif':
+
+  if (!isVerify) return reply(UserB())
+	  
+			if (!isQuotedVideo) return reply('⌯   ﹝Please tag an video.﹞')
 					
-				
+
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.gif')
+				exec(`ffmpeg -i ${media}  -ss 00:00:00 -t 10  ${ran} `, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break					
+			
 
 //-- cover song
 case 'cover':
