@@ -2218,7 +2218,7 @@ case 'stext':
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.png')
+				ran= getRandom('.mp4')
 				exec(`ffmpeg  -i ${media} -vf "drawtext=text='hii':fontcolor=white:fontsize=75:x=1002:y=100:"  ${ran} `, (err) => {
 					
 					
@@ -2226,7 +2226,7 @@ case 'stext':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
 					
