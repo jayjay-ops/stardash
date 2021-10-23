@@ -2225,6 +2225,34 @@ case 'watermarkvideo':
 					})
 					
 					break	
+
+//-- blur
+case 'blur':
+
+  if (!isVerify) return reply(UserB())
+	  
+			
+				if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
+					   reply('⌯   ﹝Please wait.﹞')
+				
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.png')
+				exec(`ffmpeg  -i ${media} -filter_complex "[0:v]boxblur=luma_radius=10:chroma_radius=10:luma_power=${value}[blurred]" -map "[blurred]"   ${ran} `, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					
+							
+			break
+			
+
 			
 //-- watermark 
 case 'watermarkimage':
