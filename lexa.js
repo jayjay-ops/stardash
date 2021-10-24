@@ -2336,9 +2336,8 @@ case 'rmbgs':
 
   if (!isVerify) return reply(UserB())
 	  
-  if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
 
-				  if (args.length < 1) return reply('⌯   ﹝Choose Color. Hex or real. Example:   .nobgs black﹞')
+				  if (args.length < 1) return reply('⌯   ﹝Tag an image or Sticker and Choose Color. Hex or real. Example:   .nobgs black﹞')
 					
 					   reply('⌯   ﹝Please wait.﹞')
 				
