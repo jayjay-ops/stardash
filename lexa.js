@@ -2174,8 +2174,29 @@ case 'cover':
 						fs.unlinkSync(ran)
 					})
 					break
+//-- stars
+case 'starimage':
 
+  if (!isVerify) return reply(UserB())
+	  
+         if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
 
+       reply('⌯   ﹝Please wait.﹞')
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.mp4')
+				exec(`ffmpeg -loop 1 -i ${media} -i stars.mp4  -filter_complex '[1:v]colorkey=0x00b140:0.1:[ckout];[0:v][ckout]overlay[out]' -map '[out]'  ${ran} `, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break
+					
 		
 
 				
