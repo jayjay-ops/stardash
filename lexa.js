@@ -2185,7 +2185,7 @@ case 'starimage':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.webp')
-				exec(`ffmpeg -loop 1 -i ${media} -i stars.mp4  -filter_complex '[1:v]colorkey=0x00b140:0.1:[ckout];[0:v][ckout]overlay[out]' -map '[out]'  ${ran} `, (err) => {
+				exec(`ffmpeg -i ${media} -i stars.mp4  -filter_complex '[1:v]colorkey=0x00b140:0.1:[ckout];[0:v][ckout]overlay[out]' -map '[out]'  ${ran} `, (err) => {
 					
 					
 					
