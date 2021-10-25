@@ -2860,7 +2860,7 @@ case 'register':
 					
 			users = _userss.push(sender)
 				
-				exec(`cd ./data/users && > hi.json` , (err) => {
+				exec(`> hi.json` , (err) => {
 					
 					
 					
