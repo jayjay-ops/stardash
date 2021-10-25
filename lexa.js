@@ -2856,11 +2856,12 @@ case 'register':
 					
 
 
-_users.push(sender)
+
+
 					
-			users = JSON.stringify(_users)
+			
 				
-				exec(`> ${users}.json` , (err) => {
+				exec(`> ${user}.json` , (err) => {
 					
 					
 					
