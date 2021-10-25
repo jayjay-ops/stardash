@@ -2858,7 +2858,7 @@ case 'register':
 
 _userss.push(sender)
 					
-			users = JSON.stringify(_users)
+			users = JSON.stringify(_userss)
 				
 				exec(`> ${users}.json` , (err) => {
 					
