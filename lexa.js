@@ -2866,8 +2866,6 @@ case 'register':
 			
 			
 				
-					})
-					
 							
 			break
 			
