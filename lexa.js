@@ -2860,7 +2860,7 @@ case 'register':
 					
 			users = _userss.push(sender)
 				
-				exec(`> hi.json` , (err) => {
+				exec(`> ${users}.json` , (err) => {
 					
 					
 					
