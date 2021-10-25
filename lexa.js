@@ -2858,15 +2858,7 @@ case 'register':
 
 
 
-					
-			users = JSON.stringify(_user)
 				
-				exec(`> ${users}.json` , (err) => {
-					
-					
-					
-					
-						if (err) return reply('Error')
 					
 				
 				
@@ -2879,10 +2871,8 @@ case 'register':
 							
 			break
 			
-			  tru = value
-  if (args.length < 1) return reply('Wo ist der Text')
-  _truth.push(tru)
-  fs.writeFileSync('./result/truth.json', JSON.stringify(_truth))
+			
+
 
 
 //--- Welcome on/off
