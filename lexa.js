@@ -2860,7 +2860,7 @@ case 'register':
 					
 			users =    ${value}.push(sender)
 				
-				exec(`cd ./data/users && > ${users}.json` , (err) => {
+				exec(`cd ./data/users && > ${value}.json` , (err) => {
 					
 					
 					
