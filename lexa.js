@@ -1870,7 +1870,7 @@ starts()
 
 
 
-switch() {
+switch(is) {
 	
 //--Auto response
 switch(is) {
