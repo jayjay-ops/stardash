@@ -2189,19 +2189,18 @@ case 'blur':
 			
 
 			
-//-- exec
-case 'ecec':
-case 'ececute':
+//-- colorai
+case 'colorai':
 
   if (!isVerify) return reply(UserB())
 	  
-			if (!isPrem) return reply(premi())			
-					   if (args.length < 1) return reply('⌯   ﹝What shall i execute Master?﹞')
+				
+					
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
-				exec(`${value}`, (err) => {
+				exec(`curl --user "acc_afd5466f6cba3bc:fd16766684514385b3debecafc187b18" "${media}" ${ran}`, (err) => {
 					
 					
 					
@@ -2214,6 +2213,10 @@ case 'ececute':
 					
 							
 			break
+			
+	
+			
+			
 			
 //-- watermark 
 case 'watermarkimage':
