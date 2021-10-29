@@ -56,10 +56,6 @@ const _gif = JSON.parse(fs.readFileSync('./media/gif.json'))
 
 //-- Result GERMAN
 const _truth = JSON.parse(fs.readFileSync('./result/truth.json'));
-
-const _ytb = JSON.parse(fs.readFileSync('./data/ytb.json'));
-
-
 const _dare = JSON.parse(fs.readFileSync('./result/dare.json'));
 
 const _userss = JSON.parse(fs.readFileSync('./data/user.json'));
