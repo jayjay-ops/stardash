@@ -27,7 +27,6 @@ const {_wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, star
 
 //-- Modules
 const fs = require('fs');
-const deepai = require('deepai'); 
 const moment = require('moment-timezone');
 const {exec} = require('child_process');
 const fetch = require('node-fetch');
