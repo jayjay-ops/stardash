@@ -2094,23 +2094,24 @@ case 'colorai':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 					
-					deepai.setApiKey('bb557b98-0371-4dea-8261-8b1748a7f1e3');
-			
 			ran= getRandom('.png')
 				exec(`ffmpeg -i ${media} -preset ultrafast output.png`)
 						fs.unlinkSync(media)
+						
+					deepai.setApiKey('bb557b98-0371-4dea-8261-8b1748a7f1e3');
+			
 						
 
     (async function() {
     var resp = await deepai.callStandardApi("colorizer", {
             image: fs.createReadStream("./output.png"),
     });
-   
+   }
 	
 	buffer = fs.readFileSync(resp)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(resp)
-})()
+)()
 
 				
 					break
