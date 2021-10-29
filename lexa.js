@@ -2088,14 +2088,14 @@ let x = Number(args[0]);
 let y = Number(args[2]);
 
  if (args[0] === '+' ) {
-   return 
+   let z = x + y;
    
    
   } else if (args[0] === '*' ) {
-    return let z = x * y;
+  let z = x * y;
 	
   } else if (args[0] === '/' ) {
-    return z = x * y;
+    let z = x / y;
 	
   } 
 
