@@ -27,6 +27,7 @@ const {_wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, star
 
 //-- Modules
 const fs = require('fs');
+const deepai = require('deepai'); 
 const moment = require('moment-timezone');
 const {exec} = require('child_process');
 const fetch = require('node-fetch');
@@ -171,6 +172,9 @@ const ownerNumber = [
 const Vkey = 'apivinz'
 const Xinz = 'XinzBot'
 const Pkode = 'pais'
+
+
+
 
 //-- Zeit und Datum
 function kyun(seconds){
@@ -2076,6 +2080,38 @@ case 'brightness':
 						fs.unlinkSync(ran)
 					})
 					break
+
+//-- Colorai
+case 'colorai':
+
+  
+	  
+			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
+				
+
+	  
+  
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+					
+					deepai.setApiKey('quickstart-bb557b98-0371-4dea-8261-8b1748a7f1e3');
+			
+
+
+    (async function() {
+    var resp = await deepai.callStandardApi("colorizer", {
+            image: fs.createReadStream("${media}"),
+    });
+    console.log(resp);
+	
+	buffer = fs.readFileSync(resp)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(resp)
+})()
+
+				
+					break
+
 					
 					
 //-- saturation
