@@ -2088,7 +2088,7 @@ let x = Number(args[0]);
 let y = Number(args[2]);
 
 let cake = args[1]
-let z = x cake y;
+let z = x `${cake}` y;
 		
 
 reply('⌯   The sum of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');
