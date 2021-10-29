@@ -2084,8 +2084,9 @@ case 'brightness':
 
 case 'calc':
 
-const num1 = args[0]
-const num2 = args[1]
+let num1 = Number("args[0]")
+let num2 = Number("args[1]")
+
 		
 const sum = num1 + num2;	
 
