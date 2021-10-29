@@ -2096,11 +2096,14 @@ case 'colorai':
 					
 					deepai.setApiKey('bb557b98-0371-4dea-8261-8b1748a7f1e3');
 			
-
+			ran= getRandom('.png')
+				exec(`ffmpeg -i ${media} -preset ultrafast output.png`)
+						fs.unlinkSync(media)
+						
 
     (async function() {
     var resp = await deepai.callStandardApi("colorizer", {
-            image: fs.createReadStream(`${media}`),
+            image: fs.createReadStream("./output.png"),
     });
    
 	
