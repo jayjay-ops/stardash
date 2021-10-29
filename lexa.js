@@ -2084,8 +2084,8 @@ case 'brightness':
 
 case 'calc':
 
-let x = Number("args[0]");
-let y = Number("args[1]");
+let x = Number(args[0]);
+let y = Number(args[1]);
 let z = x + y;
 		
 
