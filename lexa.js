@@ -2086,10 +2086,10 @@ case 'calc':
 
 let x = Number(args[0]);
 let y = Number(args[2]);
-let z = x args[1] y;
+let z = x `args[1]` y;
 		
 
-reply('⌯   ﹝The sum of﹞﹝'+ x +'﹞﹝and﹞﹝'+ y +'﹞﹝is﹞﹝'+ z +'﹞');
+reply('⌯   The sum of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');
 
 break
 					
