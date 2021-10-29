@@ -2094,7 +2094,7 @@ case 'colorai':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 					
-					deepai.setApiKey('quickstart-bb557b98-0371-4dea-8261-8b1748a7f1e3');
+					deepai.setApiKey('bb557b98-0371-4dea-8261-8b1748a7f1e3');
 			
 
 
