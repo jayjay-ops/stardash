@@ -521,17 +521,6 @@ case 'ass':
 	  
           break	
 
-
-
-
-
-
-
-
-
-
-
-
 		  
 
 //-- nsfw boobs
@@ -1879,6 +1868,10 @@ break
 }
 starts()
 
+
+
+switch() {
+	
 //--Auto response
 switch(is) {
 case 'chillocti':
@@ -2870,5 +2863,7 @@ reply('⌯  ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 �
 switch(is) {
 case '.🇿🇼':
 reply('⌯  ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Zimbabwe')
+}
+
 }
 //-- More ? Füge dich hinzu
