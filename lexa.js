@@ -119,8 +119,7 @@ const _lapor = JSON.parse(fs.readFileSync('./report/lapor.json'));
 const _request = JSON.parse(fs.readFileSync('./report/request.json'));
 
 
-//-- UPDATE CHANGELOG
-const _update = JSON.parse(fs.readFileSync('./report/update.json'));
+
 
 //-- Help
 const { menu, menus, menusticker, menuowner, menuy, menux, menuagb, menusymbol, menu3, menusecret} = require('./help/menu');
@@ -1489,6 +1488,7 @@ case 'b':
 		  
 //-- List Updates
 case 'updates':
+case 'update':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
 
@@ -1507,23 +1507,10 @@ case 'ass':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
   capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/ass.jpg').toString('base64')
+  thum = await fs.readFileSync('./media/nsfw/ass.jpg').toString('base64')
   if (args.length < 1) return replyimg(ass(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
 	  
-          break	
-
-
-
-
-
-
-
-
-
-
-
-
-		  
+          break			  
 
 //-- nsfw boobs
 case 'boob':
@@ -1531,7 +1518,7 @@ case 'boobs':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
   capt = `Stella \n♕︎\n♕︎`
-  thum = await fs.readFileSync('./media/boob.jpg').toString('base64')
+  thum = await fs.readFileSync('./media/nsfw/boob.jpg').toString('base64')
   if (args.length < 1) return replyimg(boob(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
 	  
           break		
@@ -1577,11 +1564,6 @@ case 'dog':
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'Wuff ✯'})
 break
 
-//-- information bot
-case 'girl':
-  uptime = process.uptime()
-  reply(info(Lxa, uptime, process, wa_version, mcc, mnc, os_version, device_manufacturer, device_model))
-					break
 
 //-- ping
 case 'ping':
@@ -1610,8 +1592,6 @@ replyimg(jawab, text, sims, simt)
 }
 break
   
-
-
 
 //-- DEUTSCH
 
