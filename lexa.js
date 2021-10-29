@@ -73,12 +73,6 @@ const _fakten = JSON.parse(fs.readFileSync('./result/fakten.json'));
 const _nsfw = JSON.parse(fs.readFileSync('./result/nsfw.json'));
 const _emoji = JSON.parse(fs.readFileSync('./result/emoji.json'));
 
-const _papier = JSON.parse(fs.readFileSync('./result/papier.json'));
-const _schere = JSON.parse(fs.readFileSync('./result/schere.json'));
-const _stein = JSON.parse(fs.readFileSync('./result/stein.json'));
-
-
-
 const _roll = JSON.parse(fs.readFileSync('./result/roll.json'));
 
 
@@ -95,9 +89,7 @@ const _dareen = JSON.parse(fs.readFileSync('./result/en/dareen.json'));
 const _facten = JSON.parse(fs.readFileSync('./result/en/facten.json'));
 const _nsfwen = JSON.parse(fs.readFileSync('./result/en/nsfwen.json'));
 
-const _paperen = JSON.parse(fs.readFileSync('./result/en/paperen.json'));
-const _sissorsen = JSON.parse(fs.readFileSync('./result/en/sissorsen.json'));
-const _stoneen = JSON.parse(fs.readFileSync('./result/en/stoneen.json'));
+
 
 const _rollen = JSON.parse(fs.readFileSync('./result/en/dice.json'));
 const _meme = JSON.parse(fs.readFileSync('./result/meme.json'));
@@ -1632,13 +1624,6 @@ case 'w':
   const truth = _truth[Math.floor(Math.random() * _truth.length)]
   reply(`★ *Wahrheit*\n${truth}`)
 break
-
-
-
-
-
-
-
 //-- Fakt
 case 'fakt':
 case 'fakten':
@@ -1647,9 +1632,6 @@ case 'f':
   const fakten = _fakten[Math.floor(Math.random() * _fakten.length)]
   reply(`🐺  *Fakt:*\n${fakten}`)
 break
-
-
-
 //-- Tod dare
 case 'pflicht':
 case 'plicht':
@@ -1658,7 +1640,6 @@ case 'p':
   const dare = _dare[Math.floor(Math.random() * _dare.length)]
   reply(`★ *Pflicht*\n${dare}`)
 break
-
 //-- Tod flag world
 case 'euflag':
 case 'europa':
@@ -1682,7 +1663,6 @@ case 'n':
   const nsfw = _nsfw[Math.floor(Math.random() * _nsfw.length)]
   reply(`💦 *UHHHH* 😏\n${nsfw}`)
 break
-
 //-- Würfel
 case 'würfel':
 case 'wurf':
@@ -1690,35 +1670,6 @@ case 'wurf':
   const roll = _roll[Math.floor(Math.random() * _roll.length)]
   reply(roll)
 break
-
-
-//-- Schere
-case 'schere':
-case 'scherre':
-  if (!isVerify) return reply(userB())
-  const schere = _schere[Math.floor(Math.random() * _schere.length)]
-  reply(schere)
-break
-
-
-//-- Stein
-case 'stein':
-  if (!isVerify) return reply(userB())
-  const stein = _stein[Math.floor(Math.random() * _stein.length)]
-  reply(stein)
-break
-
-
-//-- Papier
-case 'papier':
-case 'parpier':
-  if (!isVerify) return reply(userB())
-  const papier = _papier[Math.floor(Math.random() * _papier.length)]
-  reply(papier)
-  
-
-break
-
 
 
 //-- ENGLISH
@@ -1820,51 +1771,35 @@ Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 
 break
 
+//-- Horny Jailed.
+case 'porn':
+case 'sex':
+case 'sexy':
+case 'hentai':
+case 'waifu':
+case 'naked':
 
-//-- Schere
+  buffer = fs.readFileSync(`./media/dog/hornyjail.webp`)
+Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 
-case 'cut':
-  if (!isVerify) return reply(userB())
-  const sissorsen = _scissorsen[Math.floor(Math.random() * _sissorsen.length)]
-  reply(sissorsen)
 break
 
+//-- Why are yu geh
+case '🏳️‍🌈':
+case 'gay':
 
-//-- Stein
-case 'rock':
-case 'stone':
-  if (!isVerify) return reply(userB())
-  const stoneen = _stoneen[Math.floor(Math.random() * _stoneen.length)]
-  reply(stoneen)
+  buffer = fs.readFileSync(`./media/cringe/whygeh.webp`)
+Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
+
 break
 
+//-- What is this eh
+case '🏳‍⚧':
 
-//-- Papier
-case 'paper':
-  if (!isVerify) return reply(userB())
-  const paperen = _paperen[Math.floor(Math.random() * _paperen.length)]
-  reply(paperen)
+  buffer = fs.readFileSync(`./media/cringe/cringe1.webp`)
+Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
+
 break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //-- emoji 
@@ -1876,11 +1811,6 @@ case 'smiley':
   const emoji = _emoji[Math.floor(Math.random() * _emoji.length)]
   reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝙴𝚖𝚘𝚓𝚒𝚎﹞\n${emoji}`)
 break
-
-
-
-
-
 
 
 //-- Würfel Ultimate
@@ -1895,6 +1825,7 @@ case 'premiumwürfel':
   reply(ultimateroll)
 break
 
+
 //-- Würfel legendär
 case 'legendarywürfel':
 case 'legendarywurf':
@@ -1907,12 +1838,6 @@ case 'legendärwürfel':
 break
 
 
-
-
-
-
-
-
 //-- link whatsapp
 case 'wame':
 case 'mylink':
@@ -1920,21 +1845,15 @@ case 'mylink':
 					reply(`wa.me/${sender.split('@')[0]}`)
 			break
 			
-
-
-
-
-
-
-
+			
 //-- Aussprache wiederholen
 case 'say':
 case 'sag':
   if (!isVerify) return reply(userB())
 sendMess(from, value)
 
-
 break
+
 
 case 'dog':
   if (!isVerify) return reply(userB())
@@ -1943,8 +1862,6 @@ buffer = fs.readFileSync('./media/shiba.jpg')
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 break
 
-
-	
 	
 //-- pict to sticker
 case 'stiker': case 's': case 'stikergif':
@@ -2102,10 +2019,6 @@ let y = Number(args[2]);
   } 
 
 
-		
-
-
-
 break
 					
 //-- saturation
@@ -2177,11 +2090,7 @@ case 'sound':
 						fs.unlinkSync(ran)
 					})
 					break
-
-
-				
-			
-
+					
 //-- cover song
 case 'cover':
 
