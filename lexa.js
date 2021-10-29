@@ -2200,7 +2200,7 @@ case 'colorai':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
-				exec(`curl --user "acc_afd5466f6cba3bc:fd16766684514385b3debecafc187b18" ${media} ${ran}`, (err) => {
+				exec(`curl --user "acc_afd5466f6cba3bc:fd16766684514385b3debecafc187b18" ${media}`, (err) => {
 					
 					
 					
