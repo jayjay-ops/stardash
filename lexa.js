@@ -2089,20 +2089,22 @@ let y = Number(args[2]);
 
  if (args[0] === '+' ) {
    let z = x + y;
+   reply('⌯   The sum of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');
    
    
   } else if (args[0] === '*' ) {
   let z = x * y;
+  reply('⌯   The sum of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');
 	
   } else if (args[0] === '/' ) {
     let z = x / y;
-	
+	reply('⌯   The sum of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');	
   } 
 
 
 		
 
-reply('⌯   The sum of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');
+
 
 break
 					
