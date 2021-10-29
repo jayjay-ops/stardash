@@ -2084,13 +2084,12 @@ case 'brightness':
 
 case 'calc':
 
-let num1 = Number("args[0]")
-let num2 = Number("args[1]")
-
+let x = Number("args[0]");
+let y = Number("args[1]");
+let z = x + y;
 		
-const sum = num1 + num2;	
 
-reply('⌯   ﹝The sum of﹞﹝'+ num1 +'﹞﹝and﹞﹝'+ num2 +'﹞﹝is﹞﹝'+ sum +'﹞');
+reply('⌯   ﹝The sum of﹞﹝'+ x +'﹞﹝and﹞﹝'+ y +'﹞﹝is﹞﹝'+ z +'﹞');
 
 break
 					
