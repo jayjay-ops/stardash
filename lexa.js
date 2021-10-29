@@ -2087,7 +2087,7 @@ case 'calc':
 const num1 = args[0]
 const num2 = args[1]
 		
-const sum = num1 + num2		
+const sum = num1 + num2;	
 
 reply('⌯   ﹝The sum of﹞﹝'+ num1 +'﹞﹝and﹞﹝'+ num2 +'﹞﹝is﹞﹝'+ sum +'﹞');
 
