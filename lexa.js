@@ -2102,7 +2102,7 @@ case 'colorai':
     var resp = await deepai.callStandardApi("colorizer", {
             image: fs.createReadStream(`${media}`),
     });
-    console.log(resp);
+   
 	
 	buffer = fs.readFileSync(resp)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
