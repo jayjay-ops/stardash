@@ -2087,8 +2087,19 @@ case 'calc':
 let x = Number(args[0]);
 let y = Number(args[2]);
 
-let cake = args[1] + y
-let z = x `${cake}`;
+ if (args[0] === '+' ) {
+   return 
+   
+   
+  } else if (args[0] === '*' ) {
+    return let z = x * y;
+	
+  } else if (args[0] === '/' ) {
+    return z = x * y;
+	
+  } 
+
+
 		
 
 reply('⌯   The sum of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');
