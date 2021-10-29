@@ -2081,42 +2081,18 @@ case 'brightness':
 					})
 					break
 
-//-- Colorai
-case 'colorai':
+//-- Calculator
 
-  
-	  
-			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
-				
+case 'calc':
 
-	  
-  
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-					
-			ran= getRandom('.png')
-				exec(`ffmpeg -i ${media} -preset ultrafast output.png`)
-						fs.unlinkSync(media)
-						
-					deepai.setApiKey('bb557b98-0371-4dea-8261-8b1748a7f1e3');
-			
-						
+const num1 = args[0]
+const num2 = args[1]
+		
+const sum = num1 + num2		
 
-    (async function() {
-    var resp = await deepai.callStandardApi("colorizer", {
-            image: fs.createReadStream("./output.png"),
-    });
-   
-	
-	buffer = fs.readFileSync(resp)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
-						fs.unlinkSync(resp)
-})()
+reply('⌯   ﹝The sum of﹞﹝'+ num1 +'﹞﹝and﹞﹝'+ num2 +'﹞﹝is﹞﹝'+ sum +'﹞');
 
-				
-					break
-
-					
+break
 					
 //-- saturation
 case 'saturation':

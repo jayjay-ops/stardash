@@ -9,7 +9,7 @@ apt-get install mmv
 wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-ocr/tessdata/blob/master/ind.traineddata?raw=true"
 
 
-npm install --save deepai
+
 npm i imgbb-uploader
 npm i
 node index
