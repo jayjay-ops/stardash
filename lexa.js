@@ -129,7 +129,6 @@ const { boob} = require('./help/nsfw/boob');
 
 const { bgithub, showapk, bnews} = require('./help/show');
 
-const { info } = require('./help/info');
 const { termux } = require('./help/termux');
 const { wait, stick, err, group, ban, ownerB, premi, userB, admin, Badmin } = require('./help/respon');
 
