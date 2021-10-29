@@ -8,7 +8,7 @@ apt-get install tesseract
 apt-get install mmv
 wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-ocr/tessdata/blob/master/ind.traineddata?raw=true"
 
-git clone https://github.com/deepai-org/deepai-js-client && cd stardash && npm install --save deepai
+
 
 npm i imgbb-uploader
 npm i
