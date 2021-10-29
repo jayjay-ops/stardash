@@ -2100,7 +2100,7 @@ case 'colorai':
 
     (async function() {
     var resp = await deepai.callStandardApi("colorizer", {
-            image: fs.createReadStream("${media}"),
+            image: fs.createReadStream(`${media}`),
     });
     console.log(resp);
 	
