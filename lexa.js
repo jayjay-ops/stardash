@@ -1488,7 +1488,7 @@ case 'update':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
 
-  capt = `Welcome to Update Center \nYour Version is:\n16.0.0.0`
+  capt = `Welcome to Update Center \nYour Version is:\n17.0.0.0`
   thum = await fs.readFileSync('./docs/update.jpg').toString('base64')
   
   if (args.length < 1) 
@@ -1991,6 +1991,10 @@ let y = Number(args[2]);
   reply('⌯   The result of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');
   } else if (args[1] === '/' ) {
 		let z = x / y;
+	reply('⌯   The result of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');	
+  } 
+  else if (args[1] === '-' ) {
+		let z = x - y;
 	reply('⌯   The result of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');	
   } 
 
