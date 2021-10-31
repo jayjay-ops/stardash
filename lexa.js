@@ -1440,7 +1440,7 @@ case 'premium':
 	uptime = process.uptime()
   capt = `☆\nMenu \nUser: ${_user.length}`
   thum = await fs.readFileSync('./docs/mrf.jpg').toString('base64')
-  if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+  if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, website), text, capt, thum)
   if (args[0] === 'one' ) {
    return replyimg(menus(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'sticker' ) {
