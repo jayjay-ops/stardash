@@ -2486,7 +2486,10 @@ case 'website':
   if (args.length < 1) return reply('Enter Link.')
   if (yoi.length > 1000) return reply('⌯   ﹝𝚃𝚎𝚡𝚝 𝚒𝚜 𝚝𝚘𝚘 𝚕𝚘𝚗𝚐.﹞')
   _website.push(yoi)
-  fs.writeFileSync('./report/website.json', JSON.stringify(_website))
+  fs.writeFileSync('./report/website.json', JSON.stringify(_website), 'utf8')
+  
+  
+  
   reply(`⌯   ﹝𝙰𝚍𝚍𝚎𝚍!﹞`)
 	break
 			
