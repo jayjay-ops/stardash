@@ -2484,7 +2484,7 @@ case 'website':
   if (!isPrem) return reply(userPremi())
   yoi = value
   if (args.length < 1) return reply('Enter Link.')
-  if (yoi.length > 100) return reply('⌯   ﹝𝚃𝚎𝚡𝚝 𝚒𝚜 𝚝𝚘𝚘 𝚕𝚘𝚗𝚐.﹞')
+  if (yoi.length > 1000) return reply('⌯   ﹝𝚃𝚎𝚡𝚝 𝚒𝚜 𝚝𝚘𝚘 𝚕𝚘𝚗𝚐.﹞')
   _website.push(yoi)
   fs.writeFileSync('./report/website.json', JSON.stringify(_website))
   reply(`⌯   ﹝𝙰𝚍𝚍𝚎𝚍!﹞`)
