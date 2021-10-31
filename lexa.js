@@ -114,7 +114,7 @@ const { negara } = require('./result/kodenegara');
 const _lapor = JSON.parse(fs.readFileSync('./report/lapor.json'));
 const _request = JSON.parse(fs.readFileSync('./report/request.json'));
 
-
+const _website = JSON.parse(fs.readFileSync('./report/website.json'));
 
 
 //-- Help
@@ -2475,6 +2475,20 @@ case 'list note':
 				}
 				reply(teks.trim())
 				break
+				
+//--- Website
+case 'addweb':
+case 'website':
+
+  if (!isPrem) return reply(userPremi())
+  yoi = value
+  if (args.length < 1) return reply('Enter Link.')
+  if (yoi.length > 100) return reply('⌯   ﹝𝚃𝚎𝚡𝚝 𝚒𝚜 𝚝𝚘𝚘 𝚕𝚘𝚗𝚐.﹞')
+  _website.push(yoi)
+  fs.writeFileSync('./report/website.json', JSON.stringify(_website))
+  reply(`⌯   ﹝𝙰𝚍𝚍𝚎𝚍!﹞`)
+	break
+			
 
 //-- list wish
 case 'wishes':
@@ -2770,7 +2784,7 @@ case 'register':
 					_user.push(sender)
 			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
 			
-			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}* \nYou are User nr. *${_user.length}*`
+			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}*`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 					
 							
