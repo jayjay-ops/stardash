@@ -1,5 +1,5 @@
 <img align="center" height="auto" src="https://github.com/joewilliams007/StarDash/blob/main/media/shiba.jpg"/>
-<summary>Bot has some fsk 18 commands</summary>
+
  
  
 <details close="close">
