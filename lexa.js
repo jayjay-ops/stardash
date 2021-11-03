@@ -2108,17 +2108,18 @@ case 'ytbsong':
 					
 
 
+
        reply('⌯   ﹝Please wait.﹞')
 				
-			
-				exec(`youtube-dl -x --audio-format mp3 -o, --output output.mp3 ${value}`, (err) => {
+				ran= getRandom('.opus')
+				exec(`youtube-dl -x --audio-format opus -o, --output ${ran} ${value}`, (err) => {
 					
 					
 					
 						if (err) return reply('Error')
-						buffer = fs.readFileSync(output.mp3)
+						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
-					
+						fs.unlinkSync(ran)
 					})
 					break
 					
