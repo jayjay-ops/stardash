@@ -2112,7 +2112,7 @@ case 'updatebot':
 
        reply('⌯   ﹝Please wait.﹞')
 				
-				exec(`git pull https://github.com/joewilliams007/stardash`, (err) => {
+			await	exec(`git pull https://github.com/joewilliams007/stardash`, (err) => {
 					
 					
 					
