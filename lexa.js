@@ -1653,9 +1653,10 @@ break
 
 
 
-//-- song
-case 'song':
-case 'lied':
+//-- randomsong
+case 'rsong':
+case 'randomsong':
+case 'rlied':
   if (!isVerify) return reply(userB())
   const song = _song[Math.floor(Math.random() * _song.length)]
   reply(`⌯   ﹝𝚁𝚊𝚗𝚍𝚘𝚖 𝚜𝚘𝚗𝚐﹞\n\n⑅ ${song}`)
@@ -2094,6 +2095,34 @@ case 'cover':
 						fs.unlinkSync(ran)
 					})
 					break
+					
+					
+//-- youtube song
+case 'song':
+case 'youtubesong':
+case 'ytbsong':
+
+  if (!isVerify) return reply(UserB())
+	  
+          if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')
+					
+let text = Number(args[0] + args[1] + args[3]);
+
+
+       reply('⌯   ﹝Please wait.﹞')
+				
+				ran= getRandom('.opus')
+				exec(`youtube-dl -x --audio-format opus -o, --output ${ran} ${text}`, (err) => {
+					
+					
+					
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
+						fs.unlinkSync(ran)
+					})
+					break
+					
 //-- stars
 case 'starimage':
 
