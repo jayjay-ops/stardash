@@ -457,7 +457,7 @@ reply('⌯  ﹝𝚙𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎﹞﹝.𝚖𝚎𝚗𝚞﹞')
 //--Auto response
 switch(is) {
 case '*menu':
-reply('⌯  ﹝𝚙𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎﹞﹝.𝚖𝚎𝚗𝚞 lol jj lolasdasd asdasd kuchen﹞')
+reply('⌯  ﹝𝚙𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎﹞﹝.𝚖𝚎𝚗𝚞﹞')
 }
 
 switch(is) {
@@ -2110,7 +2110,7 @@ case 'updatebot':
   if (!isVerify) return reply(UserB())
 	  
 
-       reply('⌯   ﹝Please wait.﹞')
+      await reply('⌯   ﹝Please wait.﹞')
 				
 				exec(`git pull https://github.com/joewilliams007/stardash`, (err) => {
 					
