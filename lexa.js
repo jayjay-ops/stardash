@@ -2135,7 +2135,6 @@ case 'song':
 case 'youtubesong':
 case 'tbsong':
 
-  if (!isVerify) return reply(UserB())
 	  
           if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')
 					
