@@ -27,8 +27,8 @@ Open App Termux
 > pkg install git
 > apt update
 > apt upgrade -y
-> git clone https://github.com/joewilliams007/StarDash
-> cd StarDash
+> git clone https://github.com/joewilliams007/stardash
+> cd stardash
 > bash install.sh
 > npm start
 ```
