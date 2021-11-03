@@ -2110,7 +2110,7 @@ case 'updatebot':
   if (!isVerify) return reply(UserB())
 	  
 
-      await reply('⌯   ﹝Please wait.﹞')
+       reply('⌯   ﹝Please wait.﹞')
 				
 				exec(`git pull https://github.com/joewilliams007/stardash`, (err) => {
 					
