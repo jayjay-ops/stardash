@@ -2121,9 +2121,12 @@ case 'updatebot':
 							
 					     reply('⌯   ﹝Bot has been updated to newest version. It will now restart.﹞')
 						 
-						 process.exit(Updated Bot)
+						
 				
 					})
+					
+					 process.exit(Updated Bot);
+					 
 					break					
 					
 					
