@@ -7,6 +7,8 @@ apt-get install wget
 apt-get install curl
 apt-get install tesseract
 apt-get install mmv
+apt-get install python
+pip install --upgrade youtube_dl
 wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-ocr/tessdata/blob/master/ind.traineddata?raw=true"
 
 
