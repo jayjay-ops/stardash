@@ -2112,7 +2112,7 @@ case 'ytbsong':
        reply('⌯   ﹝Please wait.﹞')
 				
 				ran= getRandom('.opus')
-				exec(`youtube-dl -x --audio-format opus -o, --output ${ran} ${value}`, (err) => {
+				exec(`youtube-dl -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 					
 					
 					
