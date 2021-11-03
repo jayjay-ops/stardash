@@ -457,7 +457,7 @@ reply('⌯  ﹝𝚙𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎﹞﹝.𝚖𝚎𝚗𝚞﹞')
 //--Auto response
 switch(is) {
 case '*menu':
-reply('⌯  ﹝𝚙𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎﹞﹝.𝚖𝚎𝚗𝚞 lol﹞')
+reply('⌯  ﹝𝚙𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎﹞﹝.𝚖𝚎𝚗𝚞 lol jj﹞')
 }
 
 switch(is) {
@@ -2119,7 +2119,9 @@ case 'updatebot':
 				
 						if (err) return reply('Error')
 							
-					     reply('⌯   ﹝Bot has been updated to newest version.﹞')
+					     reply('⌯   ﹝Bot has been updated to newest version. It will now restart.﹞')
+						 
+						 process.exit(Updated Bot);
 				
 					})
 					break					
