@@ -118,7 +118,7 @@ const _website = JSON.parse(fs.readFileSync('./report/website.json'));
 
 
 //-- Help
-const { menu, menus, menusticker, menuowner, menuy, menux, menuagb, menusymbol, menu3, menusecret} = require('./help/menu');
+const { menu, menus, menusticker, menuowner, menuy, menux, menuagb, menuthree, menu3, menusecret} = require('./help/menu');
 
 const { updates, updatesold} = require('./help/updates');
 
@@ -460,7 +460,10 @@ case '*menu':
 reply('⌯  ﹝𝚙𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎﹞﹝.𝚖𝚎𝚗𝚞﹞')
 }
 
-
+switch(is) {
+case '*.menusymbol':
+reply('.𝚜𝚝𝚊𝚛𝚜 .𝚠𝚒𝚕𝚍 .𝚝𝚎𝚡𝚝𝚖𝚘𝚓𝚒𝚎 .𝚘𝚝𝚑𝚎𝚛𝚜 .𝚐𝚎𝚗𝚍𝚎𝚛')
+}
 
 
 
@@ -1447,16 +1450,16 @@ case 'premium':
    return replyimg(menus(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'sticker' ) {
     return replyimg(menusticker(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-  } else if (args[0] === 'ad' ) {
+  } else if (args[0] === 'admin' ) {
     return reply(menux(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-  } else if (args[0] === 'y' ) { 
+  } else if (args[0] === 'vip' ) { 
     return reply(menuy(prefix, tanggal, jam))
-  } else if (args[0] === 'ow' ) {
+  } else if (args[0] === 'owner' ) {
     return replyimg(menuowner(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'agb' ) {
     return replyimg(menuagb(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
-  } else if (args[0] === 'symbol' ) {
-    return replyimg(menusymbol(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
+  } else if (args[0] === 'three' ) {
+    return replyimg(menuthree(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'two' ) {
     return replyimg(menu3(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process), text, capt, thum)
   } else if (args[0] === 'secret' ) {
@@ -1489,7 +1492,7 @@ case 'update':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
 
-  capt = `Welcome to Update Center \nYour Version is:\n17.0.0.0`
+  capt = `Welcome to Update Center \nYour Version is:\n18.0.0.0`
   thum = await fs.readFileSync('./docs/update.jpg').toString('base64')
   
   if (args.length < 1) 
@@ -1711,9 +1714,14 @@ case 'gaymeter':
   const gay = _gay[Math.floor(Math.random() * _gay.length)]
   reply(`${gay}`)
 break
+
 //-- love
 case 'love':
+
+
   if (!isVerify) return reply(userB())
+	  if (args.length < 1) return reply('⌯   ﹝𝙿𝚕𝚎𝚊𝚜𝚎 𝚊𝚍𝚍 𝚝𝚠𝚘 𝚗𝚊𝚖𝚎𝚜 𝚝𝚘 𝚏𝚒𝚗𝚍 𝚘𝚞𝚝 𝚝𝚑𝚎𝚒𝚛 𝚕𝚘𝚟𝚎.﹞')
+		  
   const love = _love[Math.floor(Math.random() * _love.length)]
   reply(`${love}`)
 break
@@ -2109,7 +2117,7 @@ case 'ytbsong':
 
 
 
-       reply('⌯   ﹝Please wait.﹞')
+       reply('⌯   ﹝Please wait﹞')
 				
 				ran= getRandom('.opus')
 				exec(`youtube-dl -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {

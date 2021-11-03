@@ -27,9 +27,10 @@ const menu = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, 
 ............................
 ⌯   .𝚖𝚎𝚗𝚞 𝚘𝚗𝚎
 ⌯   .𝚖𝚎𝚗𝚞 𝚝𝚠𝚘
+⌯   .𝚖𝚎𝚗𝚞 𝚝𝚑𝚛𝚎𝚎
 ............................
-⌯   .𝚖𝚎𝚗𝚞 𝚊𝚍
-⌯   .𝚖𝚎𝚗𝚞 𝚘𝚠
+⌯   .𝚖𝚎𝚗𝚞 𝚊𝚍𝚖𝚒𝚗
+⌯   .𝚖𝚎𝚗𝚞 𝚘𝚠𝚗𝚎𝚛
 ............................
 ~https://6633-87-184-109-242.ngrok.io/index.html?x=138&y=63~
 ............................
@@ -43,9 +44,10 @@ else if (!isGroup) return`............................
 ............................
 ⌯   .𝚖𝚎𝚗𝚞 𝚘𝚗𝚎
 ⌯   .𝚖𝚎𝚗𝚞 𝚝𝚠𝚘
+⌯   .𝚖𝚎𝚗𝚞 𝚝𝚑𝚛𝚎𝚎
 ............................
-⌯   .𝚖𝚎𝚗𝚞 𝚊𝚍
-⌯   .𝚖𝚎𝚗𝚞 𝚘𝚠
+⌯   .𝚖𝚎𝚗𝚞 𝚊𝚍𝚖𝚒𝚗
+⌯   .𝚖𝚎𝚗𝚞 𝚘𝚠𝚗𝚎𝚛
 ............................
 ~https://6633-87-184-109-242.ngrok.io/index.html?x=138&y=63~
 ............................
@@ -67,7 +69,7 @@ const menus = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime,
 ⌯   .𝚜𝚊𝚢
 ⌯   .𝚐𝚊𝚢
 ⌯   .𝚍𝚒𝚌𝚎
-⌯   .𝚕𝚘𝚟𝚎 𝚗𝚊𝚖𝚎 𝚗𝚊𝚖𝚎
+⌯   .𝚕𝚘𝚟𝚎
 ............................
 ⌯   .𝚏𝚊𝚌𝚝
 ⌯   .𝚊𝚗𝚒𝚖𝚊𝚕
@@ -96,8 +98,6 @@ const menu3 = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime,
   return `⇝  ${pushname}
 ⇝   ${prem_}
 ............................
-⌯   .𝚛𝚖𝚋𝚐
-⌯   .𝚛𝚖𝚋𝚐𝚜
 ⌯   .𝚋𝚕𝚞𝚛
 ⌯   .𝚜𝚊𝚝𝚞𝚛𝚊𝚝𝚒𝚘𝚗
 ⌯   .𝚏𝚒𝚕𝚝𝚎𝚛
@@ -106,7 +106,6 @@ const menu3 = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime,
 ⌯   .𝚖𝚙3
 ⌯   .𝚜𝚙𝚎𝚎𝚍
 ⌯   .𝚌𝚛𝚞𝚜𝚑
-⌯   .𝚌𝚊𝚕𝚌
 ............................
 ⌯   .𝚌𝚘𝚟𝚎𝚛
 ⌯   .𝚠𝚊𝚝𝚎𝚛𝚖𝚊𝚛𝚔𝚟𝚒𝚍𝚎𝚘
@@ -156,7 +155,6 @@ const menuy = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime,
 ⌯   .𝚠𝚊𝚖𝚎
 ............................
 ⌯   .𝚖𝚎𝚗𝚞 𝚘𝚠𝚗𝚎𝚛
-⌯   .𝚖𝚎𝚗𝚞 𝚢
 ............................
 ⑅   𝙹𝚘𝚒𝚗 𝚘𝚞𝚛 𝚜𝚞𝚙𝚙𝚘𝚛𝚝 𝚐𝚛𝚘𝚞𝚙 𝚏𝚘𝚛 𝚚𝚞𝚎𝚜𝚝𝚒𝚘𝚗𝚜.
 ⑅   https://chat.whatsapp.com/BBAwr3RY6O77DOhJ8fuBnn
@@ -171,7 +169,7 @@ const menuowner = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, upt
 ............................
 ⌯   .𝚌𝚕𝚎𝚊𝚛𝚌𝚑𝚊𝚝
 ⌯   .𝚋𝚌
-⌯   .𝚖𝚎𝚗𝚞 𝚢
+⌯   .𝚖𝚎𝚗𝚞 𝚟𝚒𝚙
 ............................
 ⑅   𝙹𝚘𝚒𝚗 𝚘𝚞𝚛 𝚜𝚞𝚙𝚙𝚘𝚛𝚝 𝚐𝚛𝚘𝚞𝚙 𝚏𝚘𝚛 𝚚𝚞𝚎𝚜𝚝𝚒𝚘𝚗𝚜.
 ⑅   https://chat.whatsapp.com/BBAwr3RY6O77DOhJ8fuBnn
@@ -197,15 +195,15 @@ const menuagb = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptim
 ⌯   𝚋𝚊𝚜𝚎𝚍 𝚒𝚗 𝚐𝚎𝚛𝚖𝚊𝚗𝚢`
 }
 
-const menusymbol = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process) => { 
+const menuthree = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process) => { 
   return `⇝  ${pushname}
 ⇝  ${prem_}
 ............................
-⌯   .𝚜𝚝𝚊𝚛𝚜
-⌯   .𝚠𝚒𝚕𝚍
-⌯   .𝚝𝚎𝚡𝚝𝚖𝚘𝚓𝚒𝚎
-⌯   .𝚘𝚝𝚑𝚎𝚛𝚜
-⌯   .𝚐𝚎𝚗𝚍𝚎𝚛
+⌯   .𝚛𝚖𝚋𝚐
+⌯   .𝚛𝚖𝚋𝚐𝚜
+............................
+⌯   .𝚌𝚊𝚕𝚌
+⌯   .𝚜𝚘𝚗𝚐
 `
 }
 
@@ -225,4 +223,4 @@ const menusecret = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, up
 }
 
 
-module.exports = { menu, menus, menusticker, menux, menuowner, menuy, menuagb, menusymbol, menu3, menusecret}
+module.exports = { menu, menus, menusticker, menux, menuowner, menuy, menuagb, menuthree, menu3, menusecret}
