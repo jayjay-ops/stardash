@@ -2133,7 +2133,7 @@ case 'updatebot':
 //-- youtube song
 case 'song':
 case 'youtubesong':
-case 'ytbsong':
+case 'tbsong':
 
   if (!isVerify) return reply(UserB())
 	  
