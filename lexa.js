@@ -2106,13 +2106,12 @@ case 'ytbsong':
 	  
           if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')
 					
-let text = Number(args[0] + args[1] + args[3]);
 
 
        reply('⌯   ﹝Please wait.﹞')
 				
-				ran= getRandom('.opus')
-				exec(`youtube-dl -x --audio-format opus -o, --output ${ran} ${text}`, (err) => {
+				ran= getRandom('.mp3')
+				exec(`youtube-dl -x --audio-format mp3 -o, --output ${ran} ${value}`, (err) => {
 					
 					
 					
