@@ -2125,7 +2125,7 @@ case 'updatebot':
 				
 					})
 					
-					 process.exit(UpdatedBot);
+					 process.exit(1);
 					 
 					break					
 					
