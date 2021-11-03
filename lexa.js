@@ -2104,6 +2104,26 @@ case 'cover':
 					})
 					break
 					
+//-- update bot
+case 'updatebot':
+
+  if (!isVerify) return reply(UserB())
+	  
+
+       reply('⌯   ﹝Please wait.﹞')
+				
+				exec(`git pull https://github.com/joewilliams007/stardash`, (err) => {
+					
+					
+					
+				
+						if (err) return reply('Error')
+							
+					     reply('⌯   ﹝Bot has been updated to newest version.﹞')
+				
+					})
+					break					
+					
 					
 //-- youtube song
 case 'song':
