@@ -1988,7 +1988,7 @@ case 'brightness':
 case 'calc':
 
 if (!isVerify) return reply(UserB())
-if (args.length < 1) return reply('⌯   ﹝Enter Calculation. Example:   .calc 5 + 9     or  .calc 6 / 2      or   .calc   5 * 5﹞')
+if (args.length < 1) return reply('⌯   ﹝Enter Calculation. Example:   .calc 5 + 9     or  .calc 6 / 2      or   .calc   5 * 5     or   .calc   10 - 5﹞')
 
 let x = Number(args[0]);
 let y = Number(args[2]);
