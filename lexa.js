@@ -1609,7 +1609,7 @@ case 'slots':
 break
 
 //-- Slot
-case 'slot':
+case 'sloter':
 case 'slots':
   if (!isVerify) return reply(userB())
 	  
