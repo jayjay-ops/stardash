@@ -58,6 +58,8 @@ const _gif = JSON.parse(fs.readFileSync('./media/gif.json'))
 const _truth = JSON.parse(fs.readFileSync('./result/truth.json'));
 const _dare = JSON.parse(fs.readFileSync('./result/dare.json'));
 
+const _slot = JSON.parse(fs.readFileSync('./result/games/slot.json'));
+
 const _userss = JSON.parse(fs.readFileSync('./data/user.json'));
 
 const _euf = JSON.parse(fs.readFileSync('./result/euflags.json'));
@@ -1592,6 +1594,19 @@ replyimg(jawab, text, sims, simt)
 }
 break
   
+
+
+//-- Slot
+case 'slot':
+case 'slots':
+  if (!isVerify) return reply(userB())
+	  
+  const slot1 = _slot[Math.floor(Math.random() * _slot.length)]
+  const slot2 = _slot[Math.floor(Math.random() * _slot.length)]
+  const slot3 = _slot[Math.floor(Math.random() * _slot.length)]
+  
+  reply(`★ *Slots*\n${slot1} ${slot2} ${slot3}`)
+break
 
 //-- DEUTSCH
 
