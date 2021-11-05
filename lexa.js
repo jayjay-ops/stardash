@@ -1608,6 +1608,30 @@ case 'slots':
   reply(`★ *Slots*\n${slot1} ${slot2} ${slot3}`)
 break
 
+//-- Slot
+case 'slot':
+case 'slots':
+  if (!isVerify) return reply(userB())
+	  
+  const slot1 = _slot[Math.floor(Math.random() * _slot.length)]
+  const slot2 = _slot[Math.floor(Math.random() * _slot.length)]
+  const slot3 = _slot[Math.floor(Math.random() * _slot.length)]
+    const slot4 = _slot[Math.floor(Math.random() * _slot.length)]
+	const slot5 = _slot[Math.floor(Math.random() * _slot.length)]
+	const slot6 = _slot[Math.floor(Math.random() * _slot.length)]
+	const slot7 = _slot[Math.floor(Math.random() * _slot.length)]
+	const slot8 = _slot[Math.floor(Math.random() * _slot.length)]
+	const slot9 = _slot[Math.floor(Math.random() * _slot.length)]
+
+if (slot1 = slot2 = slot3) {	
+  reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ WIN\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)
+  
+} else {
+
+reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)   }
+  
+break
+
 //-- DEUTSCH
 
 
