@@ -1596,17 +1596,7 @@ break
   
 
 
-//-- Slot
-case 'slot':
-case 'slots':
-  if (!isVerify) return reply(userB())
-	  
-  const slot1 = _slot[Math.floor(Math.random() * _slot.length)]
-  const slot2 = _slot[Math.floor(Math.random() * _slot.length)]
-  const slot3 = _slot[Math.floor(Math.random() * _slot.length)]
-  
-  reply(`★ *Slots*\n${slot1} ${slot2} ${slot3}`)
-break
+
 
 //-- Slot
 case 'sloter':
