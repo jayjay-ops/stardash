@@ -1614,7 +1614,7 @@ case 'slot':
 	const slot8 = _slot[Math.floor(Math.random() * _slot.length)]
 	const slot9 = _slot[Math.floor(Math.random() * _slot.length)]
 
-if (slot1 == slot2 == slot3) {	
+if ((slot1 == slot2) && slot2 == slot3) {	
   reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)
   
 }
