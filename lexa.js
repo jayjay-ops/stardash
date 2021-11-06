@@ -1629,7 +1629,7 @@ else if (slot2 == slot3) {
   
 }
 
-} else {
+ else {
 
 reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)   }
 
