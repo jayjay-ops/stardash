@@ -1642,7 +1642,7 @@ reply(`★ 𝚂𝚕𝚘𝚝\n\n= ${slot4}${slot5}${slot6} =\n- - - - - - - - - -
  else {
 reply(`★ 𝚂𝚕𝚘𝚝\n\n= ${slot4}${slot5}${slot6} =\n- - - - - - - - - - -\n[ ${slot1}|${slot2}|${slot3}] ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - - -\n= ${slot7}${slot8}${slot9} =`)
    
-
+}
 break
 
 //-- DEUTSCH
