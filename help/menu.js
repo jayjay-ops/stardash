@@ -207,6 +207,7 @@ const menuthree = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, upt
 ⌯   .𝚌𝚊𝚕𝚌
 ⌯   .𝚜𝚘𝚗𝚐
 ⌯   .𝚛𝚊𝚗𝚍𝚘𝚖𝚜𝚘𝚗𝚐
+⌯   .𝚜𝚕𝚘𝚝
 `
 }
 
