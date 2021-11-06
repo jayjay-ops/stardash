@@ -1601,6 +1601,7 @@ break
 //-- Slot
 case 'sloter':
 case 'slots':
+case 'slot':
   if (!isVerify) return reply(userB())
 	  
   const slot1 = _slot[Math.floor(Math.random() * _slot.length)]
