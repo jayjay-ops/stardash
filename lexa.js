@@ -1616,7 +1616,7 @@ case 'slots':
 if (slot1 == slot2 == slot3) {	
   reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ WIN\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)
   
-
+}
   
   
 else if (slot1 == slot2) {	
