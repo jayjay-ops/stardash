@@ -1640,7 +1640,6 @@ let cash = fs.writeFileSync('./result/games/money.json', JSON.stringify(_moneys)
 let win = Number(2);
 let total = cash + win;
 
-_money.splice(from, 1)
 
 _moneys.push(total)
 fs.writeFileSync('./result/games/money.json', JSON.stringify(_moneys))
@@ -1656,7 +1655,6 @@ let cash = fs.writeFileSync('./result/games/money.json', JSON.stringify(_moneys)
 let win = Number(2);
 let total = cash - win
 
-_money.splice(from, 1)
 
 _moneys.push(total)
 fs.writeFileSync('./result/games/money.json', JSON.stringify(_moneys))
