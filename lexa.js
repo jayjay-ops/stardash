@@ -59,6 +59,7 @@ const _truth = JSON.parse(fs.readFileSync('./result/truth.json'));
 const _dare = JSON.parse(fs.readFileSync('./result/dare.json'));
 
 const _slot = JSON.parse(fs.readFileSync('./result/games/slot.json'));
+const _money = JSON.parse(fs.readFileSync('./result/games/money.json'));
 
 const _userss = JSON.parse(fs.readFileSync('./data/user.json'));
 
