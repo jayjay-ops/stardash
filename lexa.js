@@ -1632,9 +1632,11 @@ reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${s
 else if (slot1 == slot3) {	
 reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}|${slot2}|${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9} `) 
 
-let cash = Number(${money});
+all = ${money}
+
+let cash = Number(all);
 let win = Number(2);
-let total = cash + win
+let total = cash + win;
 
 _money.splice(from, 1)
 
