@@ -1640,7 +1640,7 @@ let total = cash + win;
 
 _money.splice(from, 1)
 
-_moneys.push(${total})
+_moneys.push(total)
 fs.writeFileSync('./result/games/money.json', JSON.stringify(_moneys))
 
 		const money3 = _money[Math.floor(Math.random() * _money.length)]
@@ -1656,7 +1656,7 @@ let total = cash - win
 
 _money.splice(from, 1)
 
-_moneys.push(${total})
+_moneys.push(total)
 fs.writeFileSync('./result/games/money.json', JSON.stringify(_moneys))
 
 		const money2 = _money[Math.floor(Math.random() * _money.length)]
