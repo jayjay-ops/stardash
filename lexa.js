@@ -1613,37 +1613,49 @@ case 'slot':
 	const slot7 = _slot[Math.floor(Math.random() * _slot.length)]
 	const slot8 = _slot[Math.floor(Math.random() * _slot.length)]
 	const slot9 = _slot[Math.floor(Math.random() * _slot.length)]
+	
+	const truth = _money[Math.floor(Math.random() * _money.length)]
 
 if ((slot1 == slot2) && slot2 == slot3) {	
-  reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}|${slot2}|${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)
-  
-}
-  
+  reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}|${slot2}|${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)  
+}  
   
 else if (slot1 == slot2) {	
-	reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}|${slot2}|${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)
-  
-
-	
-  
+	reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}|${slot2}|${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)  
 }
 
 else if (slot2 == slot3) {	
-reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}|${slot2}|${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)
-
-    
+reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}|${slot2}|${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)   
 }
 
 else if (slot1 == slot3) {	
-reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}|${slot2}|${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9} `)
-  
+reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}|${slot2}|${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9} `) 
+
+let cash = Number(${money});
+let win = Number(2);
+let total = cash + win
+
+_money.splice(from, 1)
+
+_moneys.push(${total})
+fs.writeFileSync('./result/games/money.json', JSON.stringify(_moneys))
 }
 
  else {
-reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}|${slot2}|${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)
-   
+reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}|${slot2}|${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)  
+
+let cash = Number(${money});
+let win = Number(2);
+let total = cash - win
+
+_money.splice(from, 1)
+
+_moneys.push(${total})
+fs.writeFileSync('./result/games/money.json', JSON.stringify(_moneys))
 }
 break
+
+
 
 //-- DEUTSCH
 
