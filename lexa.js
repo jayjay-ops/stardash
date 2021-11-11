@@ -2238,7 +2238,7 @@ case 'stardash':
 	  
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
 				
-
+reply('⌯   ﹝Please wait.﹞')
 	  
   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -2246,7 +2246,7 @@ case 'stardash':
 				ran= getRandom('.mp4')
 				exec(`ffmpeg -loop 1 -i ${media} -i intro.mp3 -c:v libx264 -tune stillimage -c:a aac -shortest ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('⌯   ﹝Failed﹞')
+						if (err) return reply('⌯   ﹝Does not work with this picture format. Please use a other picture.﹞')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
