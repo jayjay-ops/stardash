@@ -2227,10 +2227,31 @@ case 'starimage':
 						fs.unlinkSync(ran)
 					})
 					break
-					
 		
+//-- intro
+			
+case 'cool':
+case 'intro':
+case 'stardash':
 
+  
+	  
+			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
 				
+
+	  
+  
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.mp4')
+				exec(`ffmpeg -loop 1 -i ${media} -i intro.mp3 -c:v libx264 -tune stillimage -c:a aac -b:a192k -pix_fmt yuv420p -shortest ${ran} `, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('⌯   ﹝Failed﹞')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break
 
 case 'speed':
 case 'fast':
