@@ -2244,7 +2244,7 @@ case 'stardash':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.mp4')
-				exec(`ffmpeg -loop 1 -i ${media} -i intro.mp3 -c:v libx264 -tune stillimage -c:a aac -shortest ${ran} `, (err) => {
+				exec(`ffmpeg -loop 1 -i ${media} -i intro.mp3 -c:v libx264 -tune stillimage -c:a aac -shortest ${ran}`, (err) => {
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Failed﹞')
 						buffer = fs.readFileSync(ran)
