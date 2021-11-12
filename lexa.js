@@ -2272,28 +2272,6 @@ case 'mp3song':
 
 					
 					
-//-- stars
-case 'starimage':
-
-  if (!isVerify) return reply(UserB())
-	  
-         if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
-
-       reply('⌯   ﹝Please wait.﹞')
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.webp')
-				exec(`ffmpeg -i ${media} -i stars.mp4  -filter_complex '[1:v]colorkey=0x00b140:0.1:[ckout];[0:v][ckout]overlay[out]' -map '[out]'  ${ran} `, (err) => {
-					
-					
-					
-						fs.unlinkSync(media)
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
-						fs.unlinkSync(ran)
-					})
-					break
 		
 //-- intro
 			
@@ -2391,15 +2369,7 @@ case 'blur':
 					
 							
 			break
-			
-
-			
-
-			
-
-	
-			
-			
+						
 //-- watermark 
 case 'watermarkimage':
 
@@ -2425,10 +2395,6 @@ case 'watermarkimage':
 					
 							
 			break	
-
-
-
-
 
 //-- remove background and make sticker
 case 'nobgsticker':
@@ -2658,21 +2624,6 @@ case 'list note':
 				reply(teks.trim())
 				break
 				
-//--- Website
-case 'addweb':
-case 'website':
-
-  if (!isPrem) return reply(userPremi())
-  yoi = value
-  if (args.length < 1) return reply('Enter Link.')
-  if (yoi.length > 1000) return reply('⌯   ﹝𝚃𝚎𝚡𝚝 𝚒𝚜 𝚝𝚘𝚘 𝚕𝚘𝚗𝚐.﹞')
-  _website.push(yoi)
-  fs.writeFileSync('./report/website.json', JSON.stringify(_website), 'utf8')
-  
-  
-  
-  reply(`⌯   ﹝𝙰𝚍𝚍𝚎𝚍!﹞`)
-	break
 			
 
 //-- list wish
