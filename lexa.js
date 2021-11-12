@@ -2206,7 +2206,7 @@ case 'updatebot':
   if (!isVerify) return reply(UserB())
 	  
 
-       reply('⌯   ﹝Please wait. Also keep in mind that you may (not always) have to type   bash install.sh   to install new packages included in the update. Bot will update in 5 seconds.﹞')
+       reply('⌯   ﹝Please wait. Also keep in mind that you may (not always) have to type   *bash install.sh*   to install new packages included in the update. Bot will update in 5 seconds.﹞')
 				
 				const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
                 await delay(5000) /// waiting 5 second.
