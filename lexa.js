@@ -2225,14 +2225,14 @@ case 'tbsong':
 
 	  
           if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')					
-					reply('⌯   ﹝Status: 1/2﹞')
+					reply('⌯   ﹝Downloading: 1/2﹞')
 				
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 													
 						if (err) return reply('Error')
 							
-						reply('⌯   ﹝Status: 2/2﹞')
+						reply('⌯   ﹝Sending: 2/2﹞')
 						
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
@@ -2258,7 +2258,7 @@ case 'mp3song':
 					break			
 
 //-- youtube song wav
-case 'mp3song':
+case 'wavsong':
 
 	  
           if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')					
