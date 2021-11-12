@@ -2273,13 +2273,14 @@ case 'wavsong':
 						fs.unlinkSync(ran)
 					})
 					break
-
-//-- youtube video
-case 'youtube':
-
-          if (args.length < 1) return reply('⌯   ﹝What is the video Url﹞')					
+					
+					          if (args.length < 1) return reply('⌯   ﹝What is the video Url﹞')					
 			reply('⌯   ﹝Please wait. Estimated time: Some minutes.﹞')
 		 
+//-- youtube video
+case 'youtube':
+case 'vid':
+
 				
 				ran= getRandom('.mp4')
 				exec(`yt-dlp --max-filesize 50m --output ${ran} ${value}`, (err) => {
