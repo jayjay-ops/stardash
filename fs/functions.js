@@ -79,7 +79,7 @@ const getRandom = (ext) => {
 };
 
 const spinner = { 
-  "interval": 70,
+  "interval": 300,
   "frames": [
     "★",
     "   ✩",
