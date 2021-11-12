@@ -2257,25 +2257,7 @@ case 'mp3song':
 					})
 					break			
 
-//-- youtube song wav
-case 'wavsong':
 
-	  
-          if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')					
-			reply('⌯   ﹝Please wait﹞')
-				
-				ran= getRandom('.wav')
-				exec(`yt-dlp -x --audio-format wav -o, --output ${ran} "ytsearch:${value}"`, (err) => {
-													
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
-						fs.unlinkSync(ran)
-					})
-					break
-					
-					          if (args.length < 1) return reply('⌯   ﹝What is the video Url﹞')					
-			reply('⌯   ﹝Please wait. Estimated time: Some minutes.﹞')
 		 
 //-- youtube video
 case 'youtube':
@@ -2283,7 +2265,7 @@ case 'vid':
 
 				
 				ran= getRandom('.mp4')
-				exec(`yt-dlp --max-filesize 50m --output ${ran} ${value}`, (err) => {
+				exec(`yt-dlp --video-format mp4 --max-filesize 50m --output ${ran} ${value}`, (err) => {
 													
 						if (err) return reply('Error. Does this Youtube Url exist? Or is the video size to big?')
 						buffer = fs.readFileSync(ran)
