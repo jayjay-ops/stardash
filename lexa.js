@@ -2138,16 +2138,7 @@ case 'testing':
 const id = 'abcd@s.whatsapp.net' // the WhatsApp ID 
 
 
-// send a list message!
-const rows = [
- {title: 'Row 1', description: "Hello it's description 1", rowId:"rowid1"},
- {title: 'Row 2', description: "Hello it's description 2", rowId:"rowid2"}
-]
 
-const sections = [{title: "Section 1", rows: rows}]
-
-const delay2 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay2(5000) /// waiting 5 second.
 
 const button = {
  buttonText: 'Click Me!',
@@ -2156,7 +2147,7 @@ const button = {
  listType: 1
 }
 
-const sendMsg = await Lxa.sendMessage(id, button, MessageType.listMessage)
+Lxa.sendMessage(id, button, MessageType.listMessage)
 
 
 
