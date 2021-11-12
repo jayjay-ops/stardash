@@ -8,6 +8,7 @@ apt-get install curl
 apt-get install tesseract
 apt-get install mmv
 apt-get install python
+apt-get install pip
 
 wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-ocr/tessdata/blob/master/ind.traineddata?raw=true"
 
@@ -15,7 +16,7 @@ wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-oc
 
 npm i imgbb-uploader
 npm i
-pip install --upgrade youtube_dl
+pip install -U yt-dlp
 node index
 
 echo "[*] Shiba has installed all dependencies, please run the command \"node index\" to start the script"
