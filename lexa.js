@@ -2226,13 +2226,13 @@ case 'updatebot':
 				
 	  reply('⌯ Checking for new version 1/4﹞')
 		
-		const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay(1000) /// waiting 5 second.
+		const delay2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delay2(1000) /// waiting 5 second.
 		
 	  reply('⌯ Downloading all new files 2/4﹞')
 		
-		const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay(3000) /// waiting 5 second.
+		const delay3 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delay3(3000) /// waiting 5 second.
 		
 		
 	  reply('⌯ Checking new files 3/4﹞')
@@ -2244,8 +2244,8 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 		
 	  reply('⌯ Sucess! Bot will restart ... 4/4﹞')
 		
-				const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay(3000) /// waiting 5 second.
+				const delay4 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delay4(3000) /// waiting 5 second.
 				
 			await	exec(`git pull https://github.com/joewilliams007/stardash`, (err) => {
 																			
