@@ -2212,22 +2212,18 @@ case 'updatebot':
                 await delay(5000) /// waiting 5 second.
 				
 			await	exec(`git pull https://github.com/joewilliams007/stardash`, (err) => {
-					
-					
-					
-				
+																			
 						if (err) return reply('Error')
 							
 					     reply('⌯   ﹝Bot has been updated to newest version. It will now restart.﹞')
-						 
-						
-				
+						 				
 					})
 					
 					 process.exit(1);
 					 
-					break					
-					
+					break
+
+										
 					
 //-- youtube song opus
 case 'song':
