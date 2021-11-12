@@ -2146,8 +2146,8 @@ const rows = [
 
 const sections = [{title: "Section 1", rows: rows}]
 
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay(5000) /// waiting 5 second.
+const delay2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delay2(5000) /// waiting 5 second.
 
 const button = {
  buttonText: 'Click Me!',
