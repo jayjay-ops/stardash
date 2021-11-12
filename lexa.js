@@ -2049,7 +2049,13 @@ let y = Number(args[2]);
   } else if (args[1] === '*' ) {
 		let z = x * y;
   reply('⌯   The result of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');
+  } else if (args[1] === 'x' ) {
+		let z = x * y;
+  reply('⌯   The result of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');
   } else if (args[1] === '/' ) {
+		let z = x / y;
+	reply('⌯   The result of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');	
+  } else if (args[1] === ':' ) {
 		let z = x / y;
 	reply('⌯   The result of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');	
   } 
@@ -2069,7 +2075,7 @@ case 'saturation':
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
 					 if (args.length < 1) return reply('⌯   ﹝Enter Number of saturation from 0.5 to 2﹞')
 
-	  
+	   reply('⌯   ﹝Please wait.﹞')
   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -2090,7 +2096,8 @@ case 'flip':
   
 	  
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
-					  
+					   reply('⌯   ﹝Please wait.﹞')
+				   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
@@ -2109,7 +2116,8 @@ case 'blackwhite':
   
 	  
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
-					  
+					   reply('⌯   ﹝Please wait.﹞')
+				   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
@@ -2258,21 +2266,6 @@ case 'mp3song':
 					break			
 
 
-		 
-//-- youtube video
-case 'youtube':
-case 'vid':
-
-				
-				ran= getRandom('.mp4')
-				exec(`yt-dlp -f, --video-format mp4 --max-filesize 50m --output ${ran} ${value}`, (err) => {
-													
-						if (err) return reply('Error. Does this Youtube Url exist? Or is the video size to big?')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek})
-						fs.unlinkSync(ran)
-					})
-					break	
 
 					
 					
