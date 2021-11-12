@@ -39,6 +39,8 @@ const qrcode = require("qrcode-terminal");
 const axios = require('axios');
 const path = require('path');
 const {removeBackgroundFromImageFile} = require('remove.bg');
+import { MessageType, MessageOptions, Mimetype } from '@adiwajshing/baileys'
+
 
 //-- Data
 const up = JSON.parse(fs.readFileSync('./data/setting.json'));
@@ -2129,6 +2131,22 @@ case 'blackwhite':
 						fs.unlinkSync(ran)
 					})
 					break	
+
+
+case 'testing':
+
+const buttonMessage = {
+    contentText: "Hi it's button message",
+    footerText: 'Hello World',
+    buttons: buttons,
+    headerType: 1
+}
+
+Lxa.sendMessage(id, buttonMessage, MessageType.buttonsMessage)
+
+
+
+
 					
 //-- filter
 case 'filter':
@@ -2771,15 +2789,6 @@ case 'demote':
 		
 		
 		
-//-- join group
-case 'join':
-			    if (!isVerify) return reply(userB())
-				
-				await Lxa.acceptInvite (`${value}`)
-				console.log("joined to: " + response.gid)
-			
-	
-		break		
 		
 		
 		
