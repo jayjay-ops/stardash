@@ -2223,23 +2223,26 @@ case 'updatebot':
 	  
 
        reply('⌯   ﹝Please wait. Also keep in mind that you may (not always) have to type   *bash install.sh*   to install new packages included in the update. Bot will update in 5 seconds.﹞')
-				
-	  reply('⌯ Checking for new version 1/4﹞')
+		const delay5 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delay5(4000) /// waiting 5 second.		
+	
+		
+		reply('⌯ Checking for new version 1/4﹞')
 		
 		const delay2 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay2(1000) /// waiting 5 second.
+                await delay2(5000) /// waiting 5 second.
 		
 	  reply('⌯ Downloading all new files 2/4﹞')
 		
 		const delay3 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay3(3000) /// waiting 5 second.
+                await delay3(8000) /// waiting 5 second.
 		
 		
 	  reply('⌯ Checking new files 3/4﹞')
 		
 		
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay(2000) /// waiting 5 second.
+                await delay(7000) /// waiting 5 second.
 	
 		
 	  reply('⌯ Sucess! Bot will restart ... 4/4﹞')
