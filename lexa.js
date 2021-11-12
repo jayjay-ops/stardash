@@ -2775,7 +2775,7 @@ case 'demote':
 case 'join':
 			    if (!isVerify) return reply(userB())
 				
-				const response = await lexa.acceptInvite ("${value}")
+				const response = await Lxa.acceptInvite ("${value}")
 				console.log("joined to: " + response.gid)
 			
 	
