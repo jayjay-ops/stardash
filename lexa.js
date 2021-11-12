@@ -1997,7 +1997,7 @@ case 'volume':
 			if (!isQuotedAudio) return reply('⌯   ﹝Please tag an audio.﹞')
 					 if (args.length < 1) return reply('⌯   ﹝Enter Number how loud. example:    .audiolevel 10﹞')
 
-	  
+	  reply('⌯   ﹝Changing volume 1/1.﹞')
   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -2021,7 +2021,7 @@ case 'brightness':
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
 					 if (args.length < 1) return reply('⌯   ﹝Enter Number of Brightnes example 0.5﹞')
 
-	  
+	  reply('⌯ Shining sun on your picture 1/2﹞')
   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -2029,6 +2029,12 @@ case 'brightness':
 				exec(`ffmpeg -i ${media} -vf eq=brightness=${value} -c:a copy  ${ran} `, (err) => {
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Enter Number of Brightnes example 0.5﹞')
+					
+					
+
+	
+	  reply('⌯ Sending your picture 2/2﹞')
+					
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
@@ -2077,7 +2083,8 @@ case 'saturation':
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
 					 if (args.length < 1) return reply('⌯   ﹝Enter Number of saturation from 0.5 to 2﹞')
 
-	   reply('⌯   ﹝Please wait.﹞')
+	   
+	  reply('⌯ Satturating your picture 1/2﹞')
   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -2085,6 +2092,10 @@ case 'saturation':
 				exec(`ffmpeg -i ${media} -vf eq=saturation=${value} -c:a copy  ${ran} `, (err) => {
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Enter Number of saturation from 0.5 to 2﹞')
+					
+					
+	  reply('⌯ Sending your picture 2/2﹞')
+					
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
@@ -2098,8 +2109,9 @@ case 'flip':
   
 	  
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
-					   reply('⌯   ﹝Please wait.﹞')
+					   
 				   
+	  reply('⌯ Looking for a mirror 1/1﹞')
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
@@ -2118,7 +2130,7 @@ case 'blackwhite':
   
 	  
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
-					   reply('⌯   ﹝Please wait.﹞')
+					   reply('⌯   ﹝We are going back in time 1/1﹞')
 				   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -2188,7 +2200,7 @@ case 'cover':
 	  
          if (!isQuotedAudio) return reply('⌯   ﹝Please tag an audio.﹞')
 
-       reply('⌯   ﹝Please wait.﹞')
+       reply('⌯   ﹝This is awesome 1/1﹞')
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.mp4')
@@ -2212,8 +2224,28 @@ case 'updatebot':
 
        reply('⌯   ﹝Please wait. Also keep in mind that you may (not always) have to type   *bash install.sh*   to install new packages included in the update. Bot will update in 5 seconds.﹞')
 				
+	  reply('⌯ Checking for new version 1/4﹞')
+		
+		const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delay(1000) /// waiting 5 second.
+		
+	  reply('⌯ Downloading all new files 2/4﹞')
+		
+		const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delay(3000) /// waiting 5 second.
+		
+		
+	  reply('⌯ Checking new files 3/4﹞')
+		
+		
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delay(2000) /// waiting 5 second.
+	
+		
+	  reply('⌯ Sucess! Bot will restart ... 4/4﹞')
+		
 				const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay(5000) /// waiting 5 second.
+                await delay(3000) /// waiting 5 second.
 				
 			await	exec(`git pull https://github.com/joewilliams007/stardash`, (err) => {
 																			
