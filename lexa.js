@@ -39,7 +39,7 @@ const qrcode = require("qrcode-terminal");
 const axios = require('axios');
 const path = require('path');
 const {removeBackgroundFromImageFile} = require('remove.bg');
-import { MessageType, MessageOptions, Mimetype } from '@adiwajshing/baileys'
+
 
 
 //-- Data
