@@ -2768,6 +2768,54 @@ case 'demote':
 						Lxa.groupDemoteAdmin(from, mentioned)
 					}
 		break
+		
+		
+		
+//-- join group
+case 'join':
+			    if (!isVerify) return reply(userB())
+				
+				const response = await lexa.acceptInvite ("${value}")
+				console.log("joined to: " + response.gid)
+			
+	
+		break		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 //-- Gruppenlink
 case 'linkgrup':
