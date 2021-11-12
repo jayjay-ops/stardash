@@ -2194,7 +2194,7 @@ case 'tbsong':
        reply('⌯   ﹝Please wait﹞')
 				
 				ran= getRandom('.opus')
-				exec(`youtube-dl -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
+				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 					
 					
 					
