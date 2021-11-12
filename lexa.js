@@ -2083,7 +2083,45 @@ case 'saturation':
 					})
 					break					
 
+//-- Mirror
+case 'mirror':
+case 'miror':
+case 'flip':
+  
+	  
+			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
+					  
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.png')
+				exec(`gm convert -flop ${media} ${ran} `, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('⌯   ﹝Error﹞')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break	
 
+//-- blackwhite
+case 'bw':
+case 'blackwhite':
+  
+	  
+			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
+					  
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.png')
+				exec(`gm convert -modulate 100,0 ${media} ${ran}`, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('⌯   ﹝Error﹞')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
+						fs.unlinkSync(ran)
+					})
+					break	
+					
 //-- filter
 case 'filter':
 
@@ -2180,30 +2218,81 @@ case 'updatebot':
 					break					
 					
 					
-//-- youtube song
+//-- youtube song opus
 case 'song':
 case 'youtubesong':
 case 'tbsong':
 
 	  
-          if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')
-					
-
-
-
-       reply('⌯   ﹝Please wait﹞')
+          if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')					
+					reply('⌯   ﹝Status: 1/2﹞')
 				
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
+													
+						if (err) return reply('Error')
+							
+						reply('⌯   ﹝Status: 2/2﹞')
+						
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
+						fs.unlinkSync(ran)
+					})
+					break
 					
-					
-					
+//-- youtube song mp3
+case 'mp3song':
+
+	  
+          if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')					
+			reply('⌯   ﹝Please wait﹞')
+				
+				ran= getRandom('.mp3')
+				exec(`yt-dlp -x --audio-format mp3 -o, --output ${ran} "ytsearch:${value}"`, (err) => {
+													
+						if (err) return reply('Error')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
+						fs.unlinkSync(ran)
+					})
+					break			
+
+//-- youtube song wav
+case 'mp3song':
+
+	  
+          if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')					
+			reply('⌯   ﹝Please wait﹞')
+				
+				ran= getRandom('.wav')
+				exec(`yt-dlp -x --audio-format wav -o, --output ${ran} "ytsearch:${value}"`, (err) => {
+													
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
 					break
+
+//-- youtube video
+case 'youtube':
+
+	    if (!isPrem) return reply(userPremi())
+          if (args.length < 1) return reply('⌯   ﹝What is the video Url﹞')					
+			reply('⌯   ﹝Please wait. Estimated time: Some minutes.﹞')
+		 
+				
+				ran= getRandom('.mp4')
+				exec(`yt-dlp --max-filesize 50m --output ${ran} ${value}`, (err) => {
+													
+						if (err) return reply('Error. Does this Youtube Url exist? Or is the video size to big?')
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, video, {quoted:mek})
+						fs.unlinkSync(ran)
+					})
+					break	
+
+					
 					
 //-- stars
 case 'starimage':
@@ -2327,32 +2416,9 @@ case 'blur':
 			
 
 			
-//-- colorai
-case 'colorai':
 
-  if (!isVerify) return reply(UserB())
-	  
-				
-					
-				
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.png')
-				exec(`curl --user "acc_afd5466f6cba3bc:fd16766684514385b3debecafc187b18" ${media}`, (err) => {
-					
-					
-					
-						fs.unlinkSync(media)
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
-						fs.unlinkSync(ran)
-					})
-					
-							
-			break
 			
-	
+
 	
 			
 			
