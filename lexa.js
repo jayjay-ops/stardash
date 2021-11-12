@@ -2277,13 +2277,12 @@ case 'mp3song':
 //-- youtube video
 case 'youtube':
 
-	    if (!isPrem) return reply(userPremi())
           if (args.length < 1) return reply('⌯   ﹝What is the video Url﹞')					
 			reply('⌯   ﹝Please wait. Estimated time: Some minutes.﹞')
 		 
 				
 				ran= getRandom('.mp4')
-				exec(`yt-dlp --output ${ran} ${value}`, (err) => {
+				exec(`yt-dlp --max-filesize 50m --output ${ran} ${value}`, (err) => {
 													
 						if (err) return reply('Error. Does this Youtube Url exist? Or is the video size to big?')
 						buffer = fs.readFileSync(ran)
