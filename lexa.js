@@ -2265,7 +2265,7 @@ case 'vid':
 
 				
 				ran= getRandom('.mp4')
-				exec(`yt-dlp --video-format mp4 --max-filesize 50m --output ${ran} ${value}`, (err) => {
+				exec(`yt-dlp -f, --video-format mp4 --max-filesize 50m --output ${ran} ${value}`, (err) => {
 													
 						if (err) return reply('Error. Does this Youtube Url exist? Or is the video size to big?')
 						buffer = fs.readFileSync(ran)
