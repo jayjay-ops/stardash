@@ -2216,42 +2216,6 @@ case 'cover':
 					})
 					break
 		
-		
-
-//-- wikipedia
-case 'wiki':
-case 'wikipedia':
-
-	
-
-        
-
-       reply('⌯   ﹝This is awesome 1/1﹞')
-
-					
-
-					
-
-			const { promisify } = require('util'); 
-const exec = promisify(require('child_process').exec) 
-
-module.exports.getGitUser = async function getGitUser () { 
-// Exec output contains both stderr and stdout outputs 
-
-const nameOutput = await exec('wikit ${value}') 
-
-return { 
-
-
-reply(`${nameOutput}`)
-
-} 
-};	
-
-				
-
-		
-
 
 						
 
@@ -2263,7 +2227,7 @@ reply(`${nameOutput}`)
 
 					
 
-					break
+					
 					
 //-- update bot
 case 'updatebot':
