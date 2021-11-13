@@ -2215,6 +2215,43 @@ case 'cover':
 						fs.unlinkSync(ran)
 					})
 					break
+		
+		
+
+//-- wikipedia
+case 'wiki':
+case 'wikipedia':
+
+	
+
+        
+
+       reply('⌯   ﹝This is awesome 1/1﹞')
+
+					
+
+					
+
+				ran= getRandom('')
+
+				exec(`wikit ${value} ${ran} `, (err) => {
+
+					
+
+					
+
+
+						if (err) return reply('Error')
+
+						buffer = fs.readFileSync(ran)
+
+						Lxa.sendMessage(from, buffer, {quoted:mek, caption: '${ran}'})
+
+						fs.unlinkSync(ran)
+
+					})
+
+					break
 					
 //-- update bot
 case 'updatebot':
