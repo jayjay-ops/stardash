@@ -2243,7 +2243,7 @@ const nameOutput = await exec('wikit ${value}')
 return { 
 
 
-reply(`nameOutput`)
+reply(`${nameOutput}`)
 
 } 
 };	
