@@ -2232,24 +2232,36 @@ case 'wikipedia':
 
 					
 
-				ran= getRandom('')
+			const { promisify } = require('util'); 
+const exec = promisify(require('child_process').exec) 
 
-				exec(`wikit ${value} ${ran} `, (err) => {
+module.exports.getGitUser = async function getGitUser () { 
+// Exec output contains both stderr and stdout outputs 
+
+const wikiped = await exec('wikit ${value}') 
+
+return { 
+
+
+reply(`wikped.stdout.trim()`)
+
+} 
+};	
+
+				
+
+		
+
+
+						
+
+						
+
+						
+
+						
 
 					
-
-					
-
-
-						if (err) return reply('Error')
-
-						buffer = fs.readFileSync(ran)
-
-						Lxa.sendMessage(from, buffer, {quoted:mek, caption: '${ran}'})
-
-						fs.unlinkSync(ran)
-
-					})
 
 					break
 					
