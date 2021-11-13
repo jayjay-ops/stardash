@@ -2238,12 +2238,12 @@ const exec = promisify(require('child_process').exec)
 module.exports.getGitUser = async function getGitUser () { 
 // Exec output contains both stderr and stdout outputs 
 
-const wikiped = await exec('wikit ${value}') 
+const nameOutput = await exec('wikit ${value}') 
 
 return { 
 
 
-reply(`wikped.stdout.trim()`)
+reply(`nameOutput`)
 
 } 
 };	
