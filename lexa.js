@@ -1635,7 +1635,7 @@ const _xp1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.ne
 const xp2 = _xp1[6]	//--- xp
 
 
-let pu = Number(xp);
+let pu = Number(xp2);
 let ou = Number(1);
 
 let opu = pu + ou; 
