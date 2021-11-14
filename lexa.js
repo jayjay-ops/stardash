@@ -202,7 +202,8 @@ async function starts() {
 	fs.existsSync('./session/Lexa.json') && Lxa.loadAuthInfo('./session/Lexa.json')
 Lxa.on('connecting', () => {
         const time_connecting = moment.tz('Asia/Jakarta').format('HH:mm:ss')
-        console.log(color('[DOGGO]','aqua'), color("Verbindet bro...", "yellow"))
+        console.log(color('[DOGGO]','aqua'), color("Connecting bro...", "yellow"))
+		exec(`play start.mp3`)
     })
 Lxa.on('open', () => {
         const time_connect = moment.tz('Asia/Jakarta').format('HH:mm:ss')
@@ -2469,8 +2470,7 @@ case 'beep':
 		
 		
 		
-exec(``)
-		
+exec(`play start.mp3`)
 	
 break
 		
