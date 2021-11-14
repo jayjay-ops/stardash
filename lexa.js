@@ -3010,7 +3010,9 @@ case 'register':
 			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}*`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}"]`, function (err) {
+			const userid = Math.floor(Math.random() * 10000)
+			
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}"]`, function (err) {
 				
 				
 		
@@ -3031,6 +3033,8 @@ const me2 = _me[2]
 const me3 = _me[3]	
 const me4 = _me[4]	
 const me5 = _me[5]		
+
+  reply(`............................\n⇝${pushname}\n⇝${prem_}\n............................\n⌯   𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n⌯   𝚗𝚊𝚖𝚎\n${me2}\n⌯   𝚎𝚖𝚘𝚓𝚒𝚎\n${me3}\n⌯   𝚞𝚜𝚎𝚛 𝚒𝚍\n${me4}
   reply(`★ You Are\n\n${me}\n${me1}\n${me2}\n${me3}\n${me4}\n${me5}`)
  
 break
