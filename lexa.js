@@ -1447,7 +1447,6 @@ switch(command) {
 //-- List menu
 case 'menu':
 case 'help':
-case 'me':
 case 'premium':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
