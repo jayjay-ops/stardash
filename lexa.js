@@ -2242,20 +2242,12 @@ exec(`play error.mp3`)
                 await delay5(4000) /// waiting 5 second.		
 	
 		
-		reply('⌯ Please open termux﹞')
+		reply('⌯   ﹝Please open termux﹞')
 		
 
 		
 		
 		
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay(7000) /// waiting 5 second.
-	
-		
-	  reply('⌯ Sucess! Bot will restart ... 4/4﹞')
-		
-				const delay4 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay4(3000) /// waiting 5 second.
 				
 			await	exec(`git pull https://github.com/joewilliams007/stardash && bash install.sh`, (err) => {
 																			
