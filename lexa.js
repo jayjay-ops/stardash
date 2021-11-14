@@ -3003,7 +3003,9 @@ case 'register':
 			if (isVerify) return reply('⌯   ﹝𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍.﹞') 
 				if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age and favorite emoji﹞\n\nExample\n .register StarDash 16 🐺`)
 			    if (args.length > 3) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
-				
+				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
+				if (args[1] < 12) return reply(`⌯   ﹝Sorry kid. You are too young.﹞`) 
+						
 					_user.push(sender)
 			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
 			
@@ -3034,8 +3036,8 @@ const me3 = _me[3]
 const me4 = _me[4]	
 const me5 = _me[5]		
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me3}\n\n𝚊𝚐𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}`)
-  reply(`★ You Are\n\n${me}\n${me1}\n${me2}\n${me3}\n${me4}\n${me5}`)
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚊𝚐𝚎\n${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}`)
+
  
 break
 
