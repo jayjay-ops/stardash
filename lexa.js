@@ -32,6 +32,7 @@ const {exec} = require('child_process');
 const fetch = require('node-fetch');
 const ffmpeg = require('fluent-ffmpeg');
 const imgbb = require('imgbb-uploader');
+const beeper = require('beeper');
 const speed = require('performance-now');
 const cd = 4.32e+7 ;
 const crypto = require('crypto');
@@ -39,7 +40,7 @@ const qrcode = require("qrcode-terminal");
 const axios = require('axios');
 const path = require('path');
 const {removeBackgroundFromImageFile} = require('remove.bg');
-const beeper = import('./node_modules/beeper/index.js');
+
 
 
 //-- Data
