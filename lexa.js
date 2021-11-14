@@ -3009,7 +3009,7 @@ case 'register':
 			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}*`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, '${value}', function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["${pushname}","${value}"]`, function (err) {
 				
 				
 		
@@ -3021,9 +3021,13 @@ case 'register':
 							
 			break
 			
-	const me = _me[1]		
-
+case 'me':
+			
+	const _me = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));		
+	const me = _me[0]		
+	const me1 = _me[1]		
   reply(`★ *You Are*\n${me}`)
+  reply(`★ *You Are*\n${me1}`)
 break
 
 //--- Welcome on/off
