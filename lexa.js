@@ -1594,7 +1594,7 @@ const xp4 = _xp3[6]	//--- xp
 
 
 let pz = Number(xp4);
-let oz = Number(1);
+let oz = Number(2);
 
 let opz = pz + oz; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
@@ -1636,7 +1636,7 @@ const xp2 = _xp1[6]	//--- xp
 
 
 let pu = Number(xp2);
-let ou = Number(1);
+let ou = Number(2);
 
 let opu = pu + ou; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
