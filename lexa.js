@@ -1449,27 +1449,6 @@ case 'menu':
 case 'help':
 case 'premium':
   if (!isVerify) return reply(userB(prefix))
-	  
-  const _1xp = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const 1xp = _1xp[6]	//--- xp
-
-
-let p = Number(1xp);
-let o = Number(1);
-
-let op = p + o; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${1xp}`, op);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
-
-  
-  
 	uptime = process.uptime()
   
   capt = `☆\nMenu \nUser: ${_user.length}`
@@ -1631,25 +1610,6 @@ case 'slots':
 case 'slot':
   if (!isVerify) return reply(userB())
 	  
-  
-const _1xp = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const 1xp = _1xp[6]	//--- xp
-
-
-let p = Number(1xp);
-let o = Number(1);
-
-let op = p + o; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${1xp}`, op);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
-  
   
 	  
 const _slotme = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
