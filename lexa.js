@@ -1634,8 +1634,8 @@ if (slotme7 < 7) return reply(`﹝You have not enough money to play. Your money:
 	
 	
 	
-let x = Number(slotme7);
-let y = Number(10);
+let p = Number(slotme7);
+let 0 = Number(10);
 
 
 	
@@ -1663,12 +1663,12 @@ reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${s
  else {
 	 
 let y = Number(7);	
-let z = x - y; 
+let op = p - o; 
 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
  
-    var newValue = data.replace(`${slotme7}`, z);
+    var newValue = data.replace(`${slotme7}`, op);
  
     fs.writeFile('index.txt', newValue, 'utf-8', function(err, data) {
         if (err) throw err;
