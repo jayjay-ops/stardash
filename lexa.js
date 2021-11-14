@@ -1670,7 +1670,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
  
     var newValue = data.replace(`${slotme7}`, op);
  
-    fs.writeFile('index.txt', newValue, 'utf-8', function(err, data) {
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
         console.log('Done!');
     })
