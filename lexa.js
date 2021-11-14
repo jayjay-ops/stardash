@@ -1635,7 +1635,7 @@ if (slotme7 < 7) return reply(`﹝You have not enough money to play. Your money:
 	
 	
 let p = Number(slotme7);
-let 0 = Number(10);
+let o = Number(10);
 
 
 	
