@@ -2236,7 +2236,7 @@ case 'updatebot':
 
   if (!isVerify) return reply(UserB())
 	  
-exec(`play start.mp3`)
+exec(`play error.mp3`)
        reply('⌯   ﹝Please wait.  Bot will update in 5 seconds.﹞')
 		const delay5 = ms => new Promise(resolve => setTimeout(resolve, ms))
                 await delay5(4000) /// waiting 5 second.		
