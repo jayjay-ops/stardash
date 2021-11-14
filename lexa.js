@@ -1590,11 +1590,11 @@ if (!isVerify) return reply(userB())
 	
 
 const _xp3 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const xp4 = _xp3[6]	//--- xp
+const xp3 = _xp3[6]	//--- xp
 
 
-let pz = Number(xp4);
-let oz = Number(2);
+let pz = Number(xp3);
+let oz = Number(1);
 
 let opz = pz + oz; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
@@ -1632,10 +1632,10 @@ case 'slot':
   if (!isVerify) return reply(userB())
 	  
 const _xp1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const xp2 = _xp1[6]	//--- xp
+const xp1 = _xp1[6]	//--- xp
 
 
-let pu = Number(xp2);
+let pu = Number(xp1);
 let ou = Number(2);
 
 let opu = pu + ou; 
