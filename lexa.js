@@ -3001,14 +3001,16 @@ case 'daftar':
 case 'registrieren':
 case 'register':
 			if (isVerify) return reply('⌯   ﹝𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍.﹞') 
-			
+				if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age and favorite emoji﹞\n\nExample\n .register StarDash 16 🐺`)
+			    if (args.length > 3) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
+				
 					_user.push(sender)
 			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
 			
 			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}*`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["${pushname}", "${value}"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}"]`, function (err) {
 				
 				
 		
@@ -3025,8 +3027,8 @@ case 'me':
 	const _me = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));		
 	const me = _me[0]		
 	const me1 = _me[1]		
-  reply(`★ *You Are*\n${me}`)
-  reply(`★ *You Are*\n${me1}`)
+  reply(`★ You Are\n\n${me}\n${me1}\n${me2}\n${me4}\n${me5}`)
+ 
 break
 
 //--- Welcome on/off
