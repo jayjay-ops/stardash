@@ -1676,6 +1676,10 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
     })
 })
 
+const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot(1000) /// waiting 1 second.
+
+
 const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const slotme8 = _slotme8[7]	//--- money	
 	 
