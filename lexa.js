@@ -3025,7 +3025,7 @@ case 'me':
 	const _me = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));		
 	const me = _me[1]		
 	const me1 = _me[2]		
-  reply(`★ *You Are*\n${me}`)
+  reply(`★ *You Are*\n${me0}`)
   reply(`★ *You Are*\n${me1}`)
 break
 
