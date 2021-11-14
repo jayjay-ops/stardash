@@ -40,7 +40,7 @@ const axios = require('axios');
 const path = require('path');
 const {removeBackgroundFromImageFile} = require('remove.bg');
 
-
+import beeper from 'beeper';
 
 //-- Data
 const up = JSON.parse(fs.readFileSync('./data/setting.json'));
@@ -2473,7 +2473,27 @@ case 'rmbgs':
 							
 			break	
 
+case 'beep':
+		
+		
+		
+		
+		
+		
+await beeper();
 
+// beep one time
+
+await beeper(3);
+// beep three times
+
+await beeper('****-*-*');
+// beep, beep, beep, beep, pause, beep, pause, beep
+		
+	
+break
+		
+		
 //-- remove background
 case 'rmbg':
 case 'nobg':
