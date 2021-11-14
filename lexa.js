@@ -3008,6 +3008,11 @@ case 'register':
 			
 			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}*`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
+			
+			fs.appendFile('mynewfile1.json', 'Hello content!', function (err) {
+  if (err) throw err;
+  console.log('Account Opend.');
+});
 					
 							
 			break
