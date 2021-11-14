@@ -2479,17 +2479,9 @@ case 'beep':
 		
 		
 		
-		
-		
-await beeper();
-
-// beep one time
-
-await beeper(3);
-// beep three times
-
-await beeper('****-*-*');
-// beep, beep, beep, beep, pause, beep, pause, beep
+function alertTerminal(){
+  console.log("\007");
+}
 		
 	
 break
