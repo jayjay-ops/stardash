@@ -40,7 +40,7 @@ const axios = require('axios');
 const path = require('path');
 const {removeBackgroundFromImageFile} = require('remove.bg');
 
-import beeper from 'beeper';
+
 
 //-- Data
 const up = JSON.parse(fs.readFileSync('./data/setting.json'));
