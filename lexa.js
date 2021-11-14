@@ -1587,27 +1587,6 @@ break
 case 'bot':
 case 'simi':
 if (!isVerify) return reply(userB())
-	
-
-const _xp3 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const xp3 = _xp3[6]	//--- xp
-
-
-let pz = Number(xp3);
-let oz = Number(1);
-
-let opz = pz + oz; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${xp3}`, opz);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
-
-
 		if (args.length < 1) return reply(`Hai ${pushname}`)
 		sims = value
 		simt = await fs.readFileSync('./media/shiba.jpg').toString('base64')
@@ -1630,25 +1609,6 @@ case 'sloter':
 case 'slots':
 case 'slot':
   if (!isVerify) return reply(userB())
-	  
-const _xp1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const xp1 = _xp1[6]	//--- xp
-
-
-let pu = Number(xp1);
-let ou = Number(2);
-
-let opu = pu + ou; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${xp1}`, opu);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
-
 	  
 const _slotme = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const slotme7 = _slotme[7]	//--- money	
