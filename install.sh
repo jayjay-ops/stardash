@@ -16,6 +16,7 @@ wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-oc
 
 
 npm i imgbb-uploader
+npm install beeper
 npm i
 pip install -U yt-dlp
 node index
