@@ -38,7 +38,7 @@
     "request": "^2.81.0",
     "spinnies": "^0.5.1",
     "tiktok-scraper": "^1.4.7"
-    type="module" "beeper"
+   
   },
   "repository": {
     "type": "git",
