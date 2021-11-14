@@ -1635,14 +1635,14 @@ const _xp1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.ne
 const xp2 = _xp1[6]	//--- xp
 
 
-let p = Number(xp);
-let o = Number(1);
+let pu = Number(xp);
+let ou = Number(1);
 
-let op = p + o; 
+let opu = pu + ou; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${xp2}`, op);
+    var newValue = data.replace(`${xp2}`, opu);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
