@@ -3039,6 +3039,9 @@ case 'register':
 							
 			break
 			
+//--- Your account			
+			
+			
 case 'me':
 case 'aboutme':
 case 'account':
@@ -3052,14 +3055,23 @@ const me3 = _me[3]
 const me4 = _me[4]	
 const me5 = _me[5]		
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚊𝚐𝚎\n${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}\n............................\n𝚡𝚙\n\n\n𝚖𝚘𝚗𝚎𝚢\n\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜 𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚊𝚐𝚎\n${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}\n............................\n𝚡𝚙\n\n\n𝚖𝚘𝚗𝚎𝚢\n\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
 
  
 break
 
+
+//--- Delete account message
+
+
 case 'deletemyaccount':
 
-reply('⌯   ﹝Are you 100% sure about this? All your achievements will be lost forever and deleted from the server. If you delete your account you can never register again! To delete your account type:   .iamsure  ﹞')
+reply('Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *can never register* again! To delete your account type:   .iamsure  ﹞')
+
+
+break
+
+//--- Delete account
 
 case 'iamsure':
 
@@ -3067,7 +3079,7 @@ case 'iamsure':
 fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
   if (err) throw err;
   console.log('File deleted!');
-  reply('⌯   ﹝Your account has been sucessfully deleted. When typing .myaccount  , everything will be gone. However you can still use commands as if registered, but Errors may occur. There is no way to register normal again.﹞')
+  reply('Your account has been *sucessfully deleted.* When typing .myaccount  , everything will be gone. However you can still use commands as if registered, but Errors may occur. There is no way to register normal again.﹞')
 });
 
 
