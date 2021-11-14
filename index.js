@@ -15,9 +15,9 @@ CFonts.say(`'powered by Shiba'`, {
   colors: ['yellow']
 })
 const chalkAnimation = require('chalk-animation');
-chalkAnimation.neon('Stardash is starting Baby');
+chalkAnimation.rainbow('Stardash is starting Baby');
 setTimeout(() => {
-    neon.stop(); // Animation stops
+    rainbow.stop(); // Animation stops
 }, 2000);
 
 
