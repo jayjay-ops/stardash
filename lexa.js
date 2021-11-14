@@ -32,7 +32,6 @@ const {exec} = require('child_process');
 const fetch = require('node-fetch');
 const ffmpeg = require('fluent-ffmpeg');
 const imgbb = require('imgbb-uploader');
-const beeper = import('beeper');
 const speed = require('performance-now');
 const cd = 4.32e+7 ;
 const crypto = require('crypto');
@@ -2236,23 +2235,15 @@ case 'updatebot':
   if (!isVerify) return reply(UserB())
 	  
 
-       reply('⌯   ﹝Please wait. Also keep in mind that you may (not always) have to type   *bash install.sh*   to install new packages included in the update. Bot will update in 5 seconds.﹞')
+       reply('⌯   ﹝Please wait.  Bot will update in 5 seconds.﹞')
 		const delay5 = ms => new Promise(resolve => setTimeout(resolve, ms))
                 await delay5(4000) /// waiting 5 second.		
 	
 		
-		reply('⌯ Checking for new version 1/4﹞')
+		reply('⌯ Please open termux﹞')
 		
-		const delay2 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay2(5000) /// waiting 5 second.
+
 		
-	  reply('⌯ Downloading all new files 2/4﹞')
-		
-		const delay3 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delay3(8000) /// waiting 5 second.
-		
-		
-	  reply('⌯ Checking new files 3/4﹞')
 		
 		
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
@@ -2264,7 +2255,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 				const delay4 = ms => new Promise(resolve => setTimeout(resolve, ms))
                 await delay4(3000) /// waiting 5 second.
 				
-			await	exec(`git pull https://github.com/joewilliams007/stardash`, (err) => {
+			await	exec(`git pull https://github.com/joewilliams007/stardash && bash install.sh`, (err) => {
 																			
 						if (err) return reply('Error')
 							
@@ -2478,11 +2469,7 @@ case 'beep':
 		
 		
 		
-		process.stdout.write('\x07');
-		
-function alertTerminal(){
-  console.log("\007");
-}
+exec(``)
 		
 	
 break
