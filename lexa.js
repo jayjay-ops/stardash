@@ -1613,7 +1613,7 @@ case 'slot':
 const _slotme = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const slotme7 = _slotme[7]	//--- money	
 
-if (slotme7 < 111) return reply(`﹝You have not enough money to play. Your money: ${slotme7}﹞`) 
+if (slotme7 < 45) return reply(`﹝You have not enough money to play. Your money: ${slotme7}﹞`) 
 
 
 	  
