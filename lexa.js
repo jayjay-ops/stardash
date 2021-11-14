@@ -3143,7 +3143,7 @@ case 'register':
 			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}*`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
-			const userid = Math.floor(Math.random() * 10000)
+			const userid = Math.floor(Math.random() * 1000000000)
 			
 			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "0", "100"]`, function (err) {
 				
