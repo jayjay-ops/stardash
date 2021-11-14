@@ -15,7 +15,7 @@ CFonts.say(`'powered by Shiba'`, {
   colors: ['yellow']
 })
 
-exec(`play start.mp3`)
+play start.mp3
 
 /**
  * Start a js file
