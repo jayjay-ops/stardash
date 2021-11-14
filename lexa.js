@@ -121,7 +121,7 @@ const { negara } = require('./result/kodenegara');
 const _lapor = JSON.parse(fs.readFileSync('./report/lapor.json'));
 const _request = JSON.parse(fs.readFileSync('./report/request.json'));
 
-const _website = JSON.parse(fs.readFileSync('./report/website.json'));
+
 
 
 //-- Help
@@ -1449,7 +1449,7 @@ case 'me':
 case 'premium':
   if (!isVerify) return reply(userB(prefix))
 	uptime = process.uptime()
-    website = await JSON.parse(fs.readFileSync('./report/website.json'));
+  
   capt = `☆\nMenu \nUser: ${_user.length}`
   thum = await fs.readFileSync('./docs/mrf.jpg').toString('base64')
   if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, website), text, capt, thum)
