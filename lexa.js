@@ -39,7 +39,7 @@ const qrcode = require("qrcode-terminal");
 const axios = require('axios');
 const path = require('path');
 const {removeBackgroundFromImageFile} = require('remove.bg');
-const beeper = require('./node_modules/beeper');
+const beeper = import('./node_modules/beeper');
 
 
 //-- Data
