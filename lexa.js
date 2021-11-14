@@ -1593,14 +1593,14 @@ const _xp3 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.ne
 const xp4 = _xp3[6]	//--- xp
 
 
-let p = Number(xp4);
-let o = Number(1);
+let pz = Number(xp4);
+let oz = Number(1);
 
-let op = p + o; 
+let opz = pz + oz; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${xp4}`, op);
+    var newValue = data.replace(`${xp4}`, opz);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
