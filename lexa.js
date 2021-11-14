@@ -1589,18 +1589,18 @@ case 'simi':
 if (!isVerify) return reply(userB())
 	
 
-const _xp = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const xp = _1xp[6]	//--- xp
+const _xp3 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const xp4 = _xp3[6]	//--- xp
 
 
-let p = Number(xp);
+let p = Number(xp4);
 let o = Number(1);
 
 let op = p + o; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${xp}`, op);
+    var newValue = data.replace(`${xp4}`, op);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -1631,8 +1631,8 @@ case 'slots':
 case 'slot':
   if (!isVerify) return reply(userB())
 	  
-const _xp = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const xp = _1xp[6]	//--- xp
+const _xp1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const xp2 = _xp1[6]	//--- xp
 
 
 let p = Number(xp);
@@ -1642,7 +1642,7 @@ let op = p + o;
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${xp}`, op);
+    var newValue = data.replace(`${xp2}`, op);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
