@@ -14,11 +14,7 @@ CFonts.say(`'powered by Shiba'`, {
   align: 'center',
   colors: ['yellow']
 })
-const chalkAnimation = require('chalk-animation');
-chalkAnimation.rainbow('Stardash is starting Baby');
-setTimeout(() => {
-    rainbow.stop(); // Animation stops
-}, 2000);
+
 
 
 

@@ -20,7 +20,7 @@ npm i imgbb-uploader
 npm i
 pip install -U yt-dlp
 node index
-npm i chalk-animation
+
 
 echo "[*] Shiba has installed all dependencies, please run the command \"node index\" to start the script"
 echo "Updates : avaible in command .updates"
