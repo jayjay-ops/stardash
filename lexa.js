@@ -2476,7 +2476,7 @@ case 'rmbgs':
 
 case 'beep':
 		
-		echo -e "\a"
+		
 		
 		process.stdout.write('\x07');
 		
