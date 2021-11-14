@@ -3132,7 +3132,7 @@ case 'daftar':
 case 'registrieren':
 case 'register':
 			if (isVerify) return reply('⌯   ﹝𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍.﹞') 
-				if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age and favorite emoji﹞\n\nExample\n .register StarDash 16 🐺`)
+				if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age and favorite emoji﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n .register StarDash 16 🐺`)
 			    if (args.length > 3) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
 				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
 				if (args[1] < 12) return reply(`⌯   ﹝Sorry kid. You are too young.﹞`) 
@@ -3140,7 +3140,7 @@ case 'register':
 					_user.push(sender)
 			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
 			
-			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}*`
+			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}*\n𝙲𝚑𝚎𝚌𝚔 𝚢𝚘𝚞𝚛 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑 .me`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
 			const userid = Math.floor(Math.random() * 1000000000)
