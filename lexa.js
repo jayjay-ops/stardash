@@ -3031,7 +3031,7 @@ const me2 = _me[2]
 const me3 = _me[3]	
 const me4 = _me[4]	
 const me5 = _me[5]		
-  reply(`★ You Are\n\n${me}\n${me1}\n${me2}\n${me4}\n${me5}`)
+  reply(`★ You Are\n\n${me}\n${me1}\n${me2}\n${me3}\n${me4}\n${me5}`)
  
 break
 
