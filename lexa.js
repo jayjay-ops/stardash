@@ -42,6 +42,7 @@ const {removeBackgroundFromImageFile} = require('remove.bg');
 
 
 
+
 //-- Data
 const up = JSON.parse(fs.readFileSync('./data/setting.json'));
 const _welcom = JSON.parse(fs.readFileSync('./data/welcom.json'));
