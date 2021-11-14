@@ -1610,6 +1610,13 @@ case 'slots':
 case 'slot':
   if (!isVerify) return reply(userB())
 	  
+const _slotme = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const slotme7 = _slotme[7]	//--- money	
+
+if (slotme7 < 7) return reply(`﹝You have not enough money to play. Your money: ${slotme7}﹞`) 
+
+
+	  
   const slot1 = _slot[Math.floor(Math.random() * _slot.length)]
   const slot2 = _slot[Math.floor(Math.random() * _slot.length)]
   const slot3 = _slot[Math.floor(Math.random() * _slot.length)]
@@ -1622,26 +1629,25 @@ case 'slot':
 	
 
 
-
 if ((slot1 == slot2) && slot2 == slot3) {	
-  reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)  
+  reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme7}`)  
 }  
   
 else if (slot1 == slot2) {	
-	reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)  
+	reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme7}`)  
 }
 
 else if (slot2 == slot3) {	
-reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)   
+reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme7}`)   
 }
 
 else if (slot1 == slot3) {	
-reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9} `) 
+reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme7}`) 
 
 }
 
  else {
-reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}`)  
+reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme7}`)  
 }
 break
 
@@ -3027,7 +3033,7 @@ case 'register':
 			
 			const userid = Math.floor(Math.random() * 10000)
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "0", "100"]`, function (err) {
 				
 				
 		
@@ -3047,15 +3053,20 @@ case 'aboutme':
 case 'account':
 case 'myaccount':
 			
-	const _me = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));		
-	const me = _me[0]		
-	const me1 = _me[1]
-const me2 = _me[2]	
-const me3 = _me[3]	
-const me4 = _me[4]	
-const me5 = _me[5]		
+const _me = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚊𝚐𝚎\n${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}\n............................\n𝚡𝚙\n\n\n𝚖𝚘𝚗𝚎𝚢\n\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
+	
+const me = _me[0]	//--- phone number	
+const me1 = _me[1]  //--- pushname
+const me2 = _me[2]	//--- name
+const me3 = _me[3]	//--- age
+const me4 = _me[4]	//--- emojie
+const me5 = _me[5]	//--- user id	
+const me6 = _me[6] 	//--- xp
+const me7 = _me[7]	//--- money
+
+
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚊𝚐𝚎\n${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}\n............................\n𝚡𝚙\n${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me7}$\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
 
  
 break
