@@ -2294,7 +2294,7 @@ case 'mp3song':
 
 	  
           if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')					
-			reply('⌯   ﹝Please wait﹞')
+			sendMess('⌯   ﹝Please wait﹞')
 				
 				ran= getRandom('.mp3')
 				exec(`yt-dlp -x --audio-format mp3 -o, --output ${ran} "ytsearch:${value}"`, (err) => {
