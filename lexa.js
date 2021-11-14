@@ -2476,8 +2476,9 @@ case 'rmbgs':
 
 case 'beep':
 		
+		echo -e "\a"
 		
-		
+		process.stdout.write('\x07');
 		
 function alertTerminal(){
   console.log("\007");
