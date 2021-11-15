@@ -3490,18 +3490,19 @@ let shopnumber = Number(2);
 let starfood = Number(buy5);
 
 let newstar = starfood + shopnumber; 
+
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
     var newValue = data.replace(`${buy5}`, newstar);
 	
-    fs.writeFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
         console.log('Done!');
     })
 })
-const delaystar23 = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaystar23(2000) /// waiting 1 second.
+const delaystar234 = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delaystar234(5000) /// waiting 1 second.
 
 //--- BUYYYYYYYYYYY
 let starcost = Number(2);
