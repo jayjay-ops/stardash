@@ -3547,7 +3547,7 @@ const delaymilk = ms => new Promise(resolve => setTimeout(resolve, ms))
 else if (args[0] == 'beef') {	
 
 
-let newbeef = buy8 + shopnumber; 
+let newbeef = number(buy8) + shopnumber; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
@@ -3563,7 +3563,7 @@ const delaybeef = ms => new Promise(resolve => setTimeout(resolve, ms))
                 await delaybeef(1000) /// waiting 1 second.
 
 
-  reply(`+1 Cookie`)  
+  reply(`+1 Beef`)  
 } 
 
  else {
