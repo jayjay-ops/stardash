@@ -2471,11 +2471,45 @@ case 'fast':
 						fs.unlinkSync(media)
 						if (err) return reply('Speed must be from 0.5 to 4')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
 					break		
  
+		
+	
+
+	
+
+	
+case 'tts':
+case 'speak':
+  if (!isVerify) return reply(UserB())
+	  
+			
+
+		
+
+							
+				ran= getRandom('.mp3')
+
+				exec(`espeak -w ${ran} "${value}"`, (err) => {
+
+					
+
+					
+
+						if (err) return reply('Error')
+					buffer = fs.readFileSync(ran)
+
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
+
+						fs.unlinkSync(ran)
+
+					})
+
+					break		
+		
 //-- watermark 
 case 'watermarkvideo':
 
@@ -3132,15 +3166,16 @@ case 'daftar':
 case 'registrieren':
 case 'register':
 			if (isVerify) return reply('⌯   ﹝𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍.﹞') 
-				if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age and favorite emoji﹞\n\nExample\n .register StarDash 16 🐺`)
+				if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age and favorite emoji﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n .register StarDash 16 🐺`)
 			    if (args.length > 3) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
 				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
+	
 				if (args[1] < 12) return reply(`⌯   ﹝Sorry kid. You are too young.﹞`) 
 						
 					_user.push(sender)
 			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
 			
-			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}*`
+			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}*\n𝙲𝚑𝚎𝚌𝚔 𝚢𝚘𝚞𝚛 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑 .me`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
 			const userid = Math.floor(Math.random() * 1000000000)
@@ -3156,6 +3191,69 @@ case 'register':
 					
 							
 			break
+		
+	
+
+	
+
+	
+//--- verify after deleted
+case 'verifyagain':
+
+	
+
+	if (args.length < 3) return reply(`Please register with your first name, age and favorite emoji\n⚠️ Still in BETA. You may have to register soon again.\n\n*Example*\n\n .verifyagain StarDash 16 🐺`)
+
+			
+
+			    if (args.length > 3) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
+
+				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
+
+	
+
+				if (args[1] < 12) return reply(`⌯   ﹝Sorry kid. You are too young.﹞`) 
+
+						
+
+
+
+			
+
+			
+
+			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \n 𝚁𝚎-Registered! *${pushname}*\n𝙲𝚑𝚎𝚌𝚔 𝚢𝚘𝚞𝚛 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑 .me`
+
+			Lxa.sendMessage(from, capt, text, {quoted: mek})
+
+			
+
+			const userid2 = Math.floor(Math.random() * 1000000000)
+
+			
+
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "0", "100"]`, function (err) {
+
+				
+
+				
+
+		
+
+				
+
+  if (err) throw err;
+
+  console.log('Account Opend.');
+
+});
+
+					
+
+							
+
+			break
+		
 			
 //--- Your account			
 			
@@ -3164,6 +3262,8 @@ case 'me':
 case 'aboutme':
 case 'account':
 case 'myaccount':
+		
+		if (!isVerify) return reply(userB())
 			
 const _me = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 
@@ -3178,7 +3278,7 @@ const me6 = _me[6] 	//--- xp
 const me7 = _me[7]	//--- money
 
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚊𝚐𝚎\n${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}\n............................\n𝚡𝚙\n${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me7}$\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚊𝚐𝚎\n${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}\n............................\n𝚡𝚙\n${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me7}$\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n\n𝚍𝚊𝚝𝚎 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
 
  
 break
@@ -3189,7 +3289,7 @@ break
 
 case 'deletemyaccount':
 
-reply('Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *can never register* again! To delete your account type:   .iamsure  ﹞')
+reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *can register* again! To delete your account type:   .iamsure  ')
 
 
 break
@@ -3202,12 +3302,12 @@ case 'iamsure':
 fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
   if (err) throw err;
   console.log('File deleted!');
-  reply('Your account has been *sucessfully deleted.* When typing .myaccount  , everything will be gone. However you can still use commands as if registered, but Errors may occur. There is no way to register normal again.﹞')
+  reply('Your account has been *sucessfully deleted.* When typing .myaccount  , everything will be gone. However you can still use commands as if registered, but Errors may occur. To register new type \n\n.verifyagain')
 });
 
 
 
-
+break
 
 
 //--- Welcome on/off
