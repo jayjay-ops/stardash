@@ -3421,7 +3421,7 @@ const pet8 = _pet[8]	//--- beef
 const pet9 = _pet[9]	//--- evolution state
 const pet10 = _pet[10]	//--- pet creation date
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝙿𝚎𝚝 𝚗𝚊𝚖𝚎\n⌥ ${pet1}\n\n𝚝𝚢𝚙𝚎\n⌥ ${pet2}\n\n𝚡𝚙\n⌥ ${pet3}\n\n𝚌𝚘𝚕𝚘𝚛\n⌥ ${pet4}\n\n𝚜𝚝𝚊𝚝𝚎\n⌥ ${pet9}\n\n𝙱𝚒𝚛𝚝𝚑𝚍𝚊𝚢\n⌥ ${pet10}`)
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝙿𝚎𝚝 𝚗𝚊𝚖𝚎\n⌥ ${pet1}\n\n𝚝𝚢𝚙𝚎\n⌥ ${pet2}\n\n𝚡𝚙\n⌥ ${pet3}\n\n𝚌𝚘𝚕𝚘𝚛\n⌥ ${pet4}\n\n𝚜𝚝𝚊𝚝𝚎\n⌥ ${pet9}\n\n𝙱𝚒𝚛𝚝𝚑𝚍𝚊𝚢\n⌥ ${pet10}\n\n𝚘𝚙𝚎𝚗 𝚏𝚛𝚒𝚍𝚐𝚎\n⌥ .fridge`)
 
  
 break
@@ -3448,12 +3448,134 @@ const fridge8 = _fridge[8]	//--- beef
 const fridge9 = _fridge[9]	//--- evolution state
 const fridge10 = _fridge[10]//--- pet creation date
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n𝚏𝚛𝚒𝚍𝚐𝚎\n⌥ 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n\n𝙿𝚎𝚝 𝚗𝚊𝚖𝚎\n⌥ ${fridge1}\n\n𝚜𝚝𝚊𝚛\n⌥ ${fridge5}\n\n𝚌𝚘𝚘𝚔𝚒𝚎\n⌥ ${fridge6}\n\n𝚖𝚒𝚕𝚔\n⌥ ${fridge7}\n\n𝚋𝚎𝚎𝚏\n⌥ ${fridge6}`)
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n\n𝚏𝚛𝚒𝚍𝚐𝚎\n⌥ 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n\n𝙿𝚎𝚝 𝚗𝚊𝚖𝚎\n⌥ ${fridge1}\n\n𝚜𝚝𝚊𝚛\n⌥ ${fridge5}\n\n𝚌𝚘𝚘𝚔𝚒𝚎\n⌥ ${fridge6}\n\n𝚖𝚒𝚕𝚔\n⌥ ${fridge7}\n\n𝚋𝚎𝚎𝚏\n⌥ ${fridge8}`)
 
  
 break
 
+//--- Buy stuff
+			
+			
+case 'buy':
+		
+		if (!isVerify) return reply(userB())
+			
+const _buy = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`));	
+	
+const buy = _buy[0]	//--- phone number	
+const buy1 = _buy[1] //--- pet name
+const buy2 = _buy[2]	//--- pet type
+const buy3 = _buy[3]	//--- xp
+const buy4 = _buy[4]	//--- color
+const buy5 = _buy[5]	//--- star	
+const buy6 = _buy[6] //--- cookie
+const buy7 = _buy[7]	//--- milk
+const buy8 = _buy[8]	//--- beef
+const buy9 = _buy[9]	//--- evolution state
+const buy10 = _buy[10]//--- pet creation date
 
+ 
+
+let shopnumber = Number(1);
+
+if (args[0] == star) {	
+
+
+let newstar = buy5 + shopnumber; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${buy5}`, newstar);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+
+const delaystar = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delaystar(1000) /// waiting 1 second.
+
+
+  reply(`+1 Star`)  
+}  
+  
+else if (args[0] == cookie) {	
+
+
+let newcookie = buy6 + shopnumber; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${buy6}`, newcookie);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+
+const delaycookie = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delaycookie(1000) /// waiting 1 second.
+
+
+  reply(`+1 Cookie`)  
+} 
+
+else if (args[0] == milk) {	
+
+
+let newmilk = buy7 + shopnumber; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${buy7}`, newmilk);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+
+const delaymilk = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delaymilk(1000) /// waiting 1 second.
+
+
+  reply(`+1 Milk`)  
+} 
+
+else if (args[0] == beef) {	
+
+
+let newbeef = buy8 + shopnumber; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${buy8}`, newbeef);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+
+const delaybeef = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delaybeef(1000) /// waiting 1 second.
+
+
+  reply(`+1 Cookie`)  
+} 
+
+ else {
+	 
+
+	 
+reply(`What is the order? Choose a valid item.`)  
+}
+
+
+ 
+break
 
 
 
