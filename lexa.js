@@ -3372,7 +3372,7 @@ if (!isVerify) return reply(userB())
 
 const _yourcashname = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashname = _yourcashname[7]	//--- money	
-if (yourcashname < 7) return reply(`﹝You have not enough money to change your name. Money needed: 50$ Your money: ${yourcashname}$﹞`) 
+if (yourcashname < 50) return reply(`﹝You have not enough money to change your name. Money needed: 50$ Your money: ${yourcashname}$﹞`) 
 
 	
 const _changename = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
@@ -3428,6 +3428,10 @@ if (!isVerify) return reply(userB())
 	
 	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new age.﹞')
 
+const _yourcashage = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const yourcashage = _yourcashage[7]	//--- money	
+if (yourcashage < 150) return reply(`﹝You have not enough money to change your name. Money needed: 150$ Your money: ${yourcashage}$﹞`) 
+
 	
 const _changeage = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changeage = _changeage[3]	//--- Changeage
@@ -3451,7 +3455,7 @@ const _changeagemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.
 const changeagemoney = _changeagemoney[7]	//--- money	
 
 let ppp = Number(changeagemoney);
-let ooo = Number(50);
+let ooo = Number(150);
 let oooppp = ppp - ooo; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
@@ -3482,6 +3486,10 @@ if (!isVerify) return reply(userB())
 	
 	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new Emojie.﹞')
 
+const _yourcashemojie = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const yourcashemojie = _yourcashemojie[7]	//--- money	
+if (yourcashname < 100) return reply(`﹝You have not enough money to change your name. Money needed: 100$ Your money: ${yourcashemojie}$﹞`) 
+
 	
 const _changeemojie = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changeemojie = _changeemojie[4]	//--- Changeemojie
@@ -3505,7 +3513,7 @@ const _changeemojiemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}
 const changeemojiemoney = _changeemojiemoney[7]	//--- money	
 
 let pppp = Number(changeemojiemoney);
-let oooo = Number(50);
+let oooo = Number(100);
 let oooopppp = pppp - oooo; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
