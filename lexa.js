@@ -3373,6 +3373,8 @@ const _changename = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.what
 const changename = _changename[2]	//--- Changename
 let newname = args[0];
 
+if (changename < 7) return reply(`﹝You have not enough money to change your name. Money needed: 5$ Your money: ${changename}$﹞`) 
+
 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
