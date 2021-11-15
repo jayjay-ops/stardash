@@ -3336,7 +3336,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 
 const _changenamemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changenamemoney = _changenamemoney[8]	//--- money	
-})
+}
 
 let o = Number(50);
 let op = p + o; 
