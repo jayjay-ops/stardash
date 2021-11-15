@@ -3460,7 +3460,12 @@ case 'buy':
 		
 		if (!isVerify) return reply(userB())
 			
+const _buypurchase = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const buypurchase = _buypurchase[7]	//--- money	
 
+let cashhand = Number(buypurchase);		
+		
+			
 const _buy = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`));	
 	
 const buy = _buy[0]	//--- phone number	
@@ -3483,7 +3488,7 @@ if (args[0] == 'star') {
 
 let starfood = Number(buy5);
 
-let newstar = starfood + shopnumber; 
+let newstar = starfood + 1; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
