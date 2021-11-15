@@ -3394,13 +3394,13 @@ const delayslot51 = ms => new Promise(resolve => setTimeout(resolve, ms))
 const _changeagemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changeagemoney = _changeagemoney[7]	//--- money	
 
-let pp = Number(changeagemoney);
-let oo = Number(50);
-let oopp = pp - oo; 
+let ppp = Number(changeagemoney);
+let ooo = Number(50);
+let oooppp = ppp - ooo; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${changeagemoney}`, oopp);
+    var newValue = data.replace(`${changeagemoney}`, oooppp);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
