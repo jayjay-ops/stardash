@@ -3455,8 +3455,9 @@ const change9 = _change[9]	//--- account creation date
 
 let newchange = args[1];
 
+let senderchange = args[2];
 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+fs.readFile(`./${senderchange.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
     var newValue = data.replace(`${args[0]}`, newchange);
