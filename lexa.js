@@ -3334,6 +3334,9 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
     })
 })
 
+const delayslot5 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot5(1000) /// waiting 1 second.
+				
 const _changenamemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changenamemoney = _changenamemoney[7]	//--- money	
 
