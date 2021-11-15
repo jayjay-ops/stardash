@@ -3482,10 +3482,11 @@ const buy10 = _buy[10]//--- pet creation date
 
  
 
-const shopnumber = Number(1);
 
-if (args[0] == 'star') {	
 
+if (args[0] == 'star') {
+	
+let shopnumber = Number(1);
 let starfood = Number(buy5);
 
 let newstar = starfood + shopnumber; 
@@ -3522,6 +3523,7 @@ const delaystar = ms => new Promise(resolve => setTimeout(resolve, ms))
   
 else if (args[0] == 'cookie') {	
 
+let shopnumber = Number(1);
 let starcookie = Number(buy6);
 
 let newcookie = starcookie + shopnumber; 
@@ -3545,6 +3547,7 @@ const delaycookie = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 else if (args[0] == 'milk') {	
 
+let shopnumber = Number(1);
 let starmilk = Number(buy7);
 
 let newmilk = starmilk + shopnumber; 
@@ -3568,6 +3571,7 @@ const delaymilk = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 else if (args[0] == 'beef') {	
 
+let shopnumber = Number(1);
 let starbeef = Number(buy8);
 
 let newbeef = starbeef + shopnumber; 
