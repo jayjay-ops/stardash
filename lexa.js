@@ -3502,28 +3502,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
 })
 const delaystar23 = ms => new Promise(resolve => setTimeout(resolve, ms))
 await delaystar23(2000) /// waiting 1 second.
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy5}`, newstar);
-	
-    fs.writeFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-const delaystar234 = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaystar234(2000) /// waiting 1 second.
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy5}`, newstar);
-	
-    fs.writeFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+
 //--- BUYYYYYYYYYYY
 let starcost = Number(2);
 let money = cashhand - starcost; 
