@@ -3372,7 +3372,7 @@ if (!isVerify) return reply(userB())
 
 const _yourcashname = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashname = _yourcashname[7]	//--- money	
-if (yourcashname < 7) return reply(`﹝You have not enough money to change your name. Money needed: 5$ Your money: ${yourcashname}$﹞`) 
+if (yourcashname < 7) return reply(`﹝You have not enough money to change your name. Money needed: 50$ Your money: ${yourcashname}$﹞`) 
 
 	
 const _changename = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
