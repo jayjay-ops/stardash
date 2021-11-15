@@ -3220,7 +3220,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			thisDay = myDays[thisDay];
 			var yy = tgl.getYear()
 			var year = (yy < 1000) ? yy + 1900 : yy;
-			return `${day}. ${myMonths[bulan]}. ${year}`
+			return `${day}. ${myMonths[bulan]} ${year}`
 }			
 
 
@@ -3290,7 +3290,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			thisDay = myDays[thisDay];
 			var yy = tgl.getYear()
 			var year = (yy < 1000) ? yy + 1900 : yy;
-			return `${day}. ${myMonths[bulan]}. ${year}`
+			return `${day}. ${myMonths[bulan]} ${year}`
 }			
 
 
