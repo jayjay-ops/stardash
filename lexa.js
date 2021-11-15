@@ -1766,8 +1766,8 @@ reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${s
 	 
 
 
-let o = Number(4);
-let op = p - o; 
+let os = Number(4);
+let ops = ps - os; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
