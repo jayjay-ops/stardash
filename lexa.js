@@ -3516,8 +3516,8 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 
 const delaystar = ms => new Promise(resolve => setTimeout(resolve, ms))
                 await delaystar(1000) /// waiting 1 second.
-
-
+  
+  
   reply(`+1 Star`)  
 }  
   
