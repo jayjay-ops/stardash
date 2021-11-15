@@ -1771,7 +1771,7 @@ let ops = ps - os;
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${slotme7}`, op);
+    var newValue = data.replace(`${slotme7}`, ops);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
