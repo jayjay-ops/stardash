@@ -3488,7 +3488,7 @@ if (args[0] == 'star') {
 
 let starfood = Number(buy5);
 
-let newstar = starfood + 1; 
+let newstar = starfood + shopnumber; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
@@ -3500,7 +3500,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
     })
 })
 
-let starcost = Number(1);
+let starcost = Number();
 let money = cashhand - starcost; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
