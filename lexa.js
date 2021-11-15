@@ -3461,7 +3461,7 @@ fs.readFile(`./${args[2]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
 	
     var newValue = data.replace(`${args[0]}`, newchange);
 	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+    fs.writeFile(`./${args[2]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
     })
 })
