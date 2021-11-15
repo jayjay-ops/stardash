@@ -3361,14 +3361,13 @@ case 'pet shop':
 const _petshopmoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const petshopmoney = _petshopmoney[7]	//--- money
 
-reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝙿𝚎𝚝𝚂𝚑𝚘𝚙\n⌥ 𝚃𝚘 𝚋𝚞𝚢 𝚜𝚝𝚑 𝚝𝚢𝚙𝚎: \n\n.𝚋𝚞𝚢 6\n............................\n✯ 𝚊𝚕𝚕 𝚙𝚎𝚝𝚜 \n\n𝙱𝚞𝚝𝚝𝚎𝚛𝚏𝚕𝚢 150$\n➳ 𝙲𝚊𝚝𝚊𝚙𝚒𝚕𝚕𝚊𝚛 \n➳ 𝚌𝚘𝚌𝚞𝚗𝚎\n➳ 𝙱𝚞𝚝𝚝𝚎𝚛𝚏𝚕𝚢\n\n𝚆𝚞𝚕𝚏 250$ \n➳ 𝙳𝚘𝚐 \n➳ 𝙳𝚘𝚐𝚐𝚘\n➳ 𝚆𝚞𝚕𝚏 \n\n𝙳𝚎𝚕𝚙𝚑𝚒𝚗𝚎 300$\n➳ 𝙵𝚒𝚜𝚑 \n➳ 𝚠𝚑𝚊𝚕𝚎\n➳ 𝙳𝚎𝚕𝚙𝚑𝚒𝚗𝚎 \n\n𝙳𝚛𝚊𝚐𝚘𝚗 1000$\n➳ 𝙴𝚐𝚐 \n➳ 𝙵𝚕𝚢\n➳ 𝙳𝚛𝚊𝚐𝚘𝚗\n............................\n✯ 𝚌𝚘𝚕𝚘𝚛𝚜\n\n𝚠𝚑𝚒𝚝𝚎 20$\n𝚛𝚎𝚍 50$\n𝚢𝚎𝚕𝚕𝚘𝚠 50$\n𝚙𝚞𝚛𝚙𝚕𝚎 80$\n𝚋𝚕𝚞𝚎 100$\n𝚋𝚕𝚊𝚌𝚔 500$\n............................\n✯ 𝚏𝚘𝚘𝚍 \n\n𝚜𝚝𝚊𝚛 1$\n𝚌𝚘𝚘𝚔𝚒𝚎 2$\n𝚖𝚒𝚕𝚔 6$\n𝚋𝚎𝚎𝚏 15$\n............................\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${petshopmoney}$\n...........................`)
+reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝙿𝚎𝚝𝚂𝚑𝚘𝚙\n⌥ 𝚃𝚘 𝚋𝚞𝚢 𝚜𝚝𝚑 𝚝𝚢𝚙𝚎: \n\n.𝚋𝚞𝚢 Butterfly\n............................\n✯ 𝚊𝚕𝚕 𝚙𝚎𝚝𝚜 \n\n𝙱𝚞𝚝𝚝𝚎𝚛𝚏𝚕𝚢 150$\n➳ 𝙲𝚊𝚝𝚊𝚙𝚒𝚕𝚕𝚊𝚛 \n➳ 𝚌𝚘𝚌𝚞𝚗𝚎\n➳ 𝙱𝚞𝚝𝚝𝚎𝚛𝚏𝚕𝚢\n\n𝚆𝚞𝚕𝚏 250$ \n➳ 𝙳𝚘𝚐 \n➳ 𝙳𝚘𝚐𝚐𝚘\n➳ 𝚆𝚞𝚕𝚏 \n\n𝙳𝚎𝚕𝚙𝚑𝚒𝚗𝚎 300$\n➳ 𝙵𝚒𝚜𝚑 \n➳ 𝚠𝚑𝚊𝚕𝚎\n➳ 𝙳𝚎𝚕𝚙𝚑𝚒𝚗𝚎 \n\n𝙳𝚛𝚊𝚐𝚘𝚗 1000$\n➳ 𝙴𝚐𝚐 \n➳ 𝙵𝚕𝚢\n➳ 𝙳𝚛𝚊𝚐𝚘𝚗\n............................\n✯ 𝚌𝚘𝚕𝚘𝚛𝚜\n\n𝚠𝚑𝚒𝚝𝚎 20$\n𝚛𝚎𝚍 50$\n𝚢𝚎𝚕𝚕𝚘𝚠 50$\n𝚙𝚞𝚛𝚙𝚕𝚎 80$\n𝚋𝚕𝚞𝚎 100$\n𝚋𝚕𝚊𝚌𝚔 500$\n............................\n✯ 𝚏𝚘𝚘𝚍 \n\n𝚜𝚝𝚊𝚛 1$\n𝚌𝚘𝚘𝚔𝚒𝚎 2$\n𝚖𝚒𝚕𝚔 6$\n𝚋𝚎𝚎𝚏 15$\n............................\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${petshopmoney}$\n...........................`)
 
 
 break
 
 //--- Your account		
 
-	
 			
 			
 case 'me':
@@ -3425,6 +3424,63 @@ const pet9 = _pet[9]	//--- pet creation date
 
  
 break
+
+
+
+
+//--- Owner change everything		
+
+			
+			
+case 'change':
+
+		
+		if (!isOwner) return reply(ownerB())
+			
+const _change = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+
+	
+const change = _change[0]	//--- phone number	
+const change1 = _change[1]  //--- pushname
+const change2 = _change[2]	//--- name
+const change3 = _change[3]	//--- age
+const change4 = _change[4]	//--- emojie
+const change5 = _change[5]	//--- user id	
+const change6 = _change[6] 	//--- xp
+const change7 = _change[7]	//--- money
+const change8 = _change[8]	//--- mood
+const change9 = _change[9]	//--- account creation date
+
+
+
+let newchange = args[1];
+
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${args[0]}`, newchange);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
+
+const delayslot51 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot51(1000) /// waiting 1 second.
+				
+				
+				
+  reply(`changed ...`)
+
+ 
+break
+
+
+
+
+
+
 
 //-- changename
 case 'changename': 
