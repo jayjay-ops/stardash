@@ -11,6 +11,7 @@ apt-get install python
 apt-get install pip
 apt-get install graphicsmagick
 apt-get install sox pulseaudio
+apt-get install espeak
 
 wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-ocr/tessdata/blob/master/ind.traineddata?raw=true"
 
