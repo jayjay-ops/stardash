@@ -1901,7 +1901,6 @@ case 'pokemon':
 break
 //-- animal
 case 'animal':
-case 'pet':
   if (!isVerify) return reply(userB())
   const animal = _animal[Math.floor(Math.random() * _animal.length)]
   reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚙𝚎𝚝 𝚒𝚜...﹞\n⑅ ${animal}`)
@@ -3242,6 +3241,18 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
   console.log('Account Opend.');
 });
 					
+			
+
+			
+			
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.pet.json`, `["+${sender.split("@")[0]}", "no pet", "animal type",  "1" , "color", "2", "2", "1", "1", "evolutionstate", "${tanggal()}"]`, function (err) {
+				
+				
+		
+				
+  if (err) throw err;
+  console.log('Pet Account Opend.');
+});
 							
 			break
 		
@@ -3356,7 +3367,36 @@ const me7 = _me[7]	//--- money
 const me8 = _me[8]	//--- mood
 const me9 = _me[9]	//--- account creation date
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n⌥ ${me}\n\n𝚗𝚊𝚖𝚎\n⌥ ${me2}\n\n𝚊𝚐𝚎\n⌥ ${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n⌥ ${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n⌥ ${me5}\n............................\n𝚡𝚙\n⌥ ${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n⌥ ${me7}$\n\n𝚖𝚘𝚘𝚍\n⌥ ${me8}\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n⌥\n\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n⌥ ${me9}\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
+const _petme = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`));	
+const petme1 = _petme[1]  //--- pet name
+
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n⌥ ${me}\n\n𝚗𝚊𝚖𝚎\n⌥ ${me2}\n\n𝚊𝚐𝚎\n⌥ ${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n⌥ ${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n⌥ ${me5}\n............................\n𝚡𝚙\n⌥ ${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n⌥ ${me7}$\n\n𝚖𝚘𝚘𝚍\n⌥ ${me8}\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n⌥ ${petme1}\n\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n⌥ ${me9}\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
+
+ 
+break
+
+//--- Your Pet	
+			
+			
+case 'mypet':
+case 'pet':
+		
+		if (!isVerify) return reply(userB())
+			
+const _pet = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`));	
+	
+const pet = _pet[0]	//--- phone number	
+const pet1 = _pet[1]  //--- pet name
+const pet2 = _pet[2]	//--- pet type
+const pet3 = _pet[3]	//--- xp
+const pet4 = _pet[4]	//--- color
+const pet5 = _pet[5]	//--- star	
+const pet6 = _pet[6] 	//--- cookie
+const pet7 = _pet[7]	//--- milk
+const pet8 = _pet[8]	//--- beef
+const pet9 = _pet[9]	//--- pet creation date
+
+  reply(`............................\n⇝ ${pushname}\n⇝ 𝙿𝚎𝚝\n............................\n\n𝙿𝚎𝚝 𝚗𝚊𝚖𝚎\n⌥ ${pet1}\n\n𝚝𝚢𝚙𝚎\n⌥ ${pet2}\n\n𝚡𝚙\n⌥ ${pet3}\n\n𝚌𝚘𝚕𝚘𝚛\n⌥ ${pet4}\n\n𝙱𝚒𝚛𝚝𝚑𝚍𝚊𝚢\n⌥ ${me5}\n............................\n𝚡𝚙\n⌥ ${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n⌥ ${me7}$\n\n𝚖𝚘𝚘𝚍\n⌥ ${me8}\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n⌥\n\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n⌥ ${me9}\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
 
  
 break
