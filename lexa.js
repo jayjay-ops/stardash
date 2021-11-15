@@ -3486,7 +3486,7 @@ const buy10 = _buy[10]//--- pet creation date
 
 if (args[0] == 'star') {
 	
-let shopnumber = Number(1);
+let shopnumber = Number(2);
 let starfood = Number(buy5);
 
 let newstar = starfood + shopnumber; 
@@ -3501,7 +3501,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
     })
 })
 
-let starcost = Number();
+let starcost = Number(2);
 let money = cashhand - starcost; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
@@ -3523,7 +3523,7 @@ const delaystar = ms => new Promise(resolve => setTimeout(resolve, ms))
   
 else if (args[0] == 'cookie') {	
 
-let shopnumber = Number(1);
+let shopnumber = Number(2);
 let starcookie = Number(buy6);
 
 let newcookie = starcookie + shopnumber; 
@@ -3547,7 +3547,7 @@ const delaycookie = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 else if (args[0] == 'milk') {	
 
-let shopnumber = Number(1);
+let shopnumber = Number(2);
 let starmilk = Number(buy7);
 
 let newmilk = starmilk + shopnumber; 
@@ -3571,16 +3571,14 @@ const delaymilk = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 else if (args[0] == 'beef') {	
 
-let shopnumber = Number(1);
+let shopnumber = Number(2);
 let starbeef = Number(buy8);
 
-const delaycals2 = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaycals2(1000) /// waiting 1 second.
+
 
 let newbeef = starbeef + shopnumber; 
 
-const delaycals3 = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaycals3(1000) /// waiting 1 second.
+
 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
