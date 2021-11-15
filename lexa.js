@@ -3176,7 +3176,7 @@ case 'verifyagain':
 
 				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
 
-		if (args[0] = register) return reply(`⌯   ﹝Remove space between . and register.﹞`)
+		if (args[0] = "register") return reply(`⌯   ﹝Remove space between . and register.﹞`)
 
 				if (args[1] < 12) return reply(`⌯   ﹝Sorry kid. You are too young.﹞`) 
 
