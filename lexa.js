@@ -3222,6 +3222,8 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			var year = (yy < 1000) ? yy + 1900 : yy;
 			return `${thisDay}, ${day} - ${myMonths[bulan]} - ${year}`
 }			
+
+
 						
 					_user.push(sender)
 			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
@@ -3231,7 +3233,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			
 			const userid = Math.floor(Math.random() * 1000000000)
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}"]`, function (err) {
 				
 				
 		
@@ -3268,6 +3270,30 @@ case 'verifyagain':
 						
 
 
+function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+}
+function tanggal(){
+myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
+			myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+			var tgl = new Date();
+			var day = tgl.getDate()
+			bulan = tgl.getMonth()
+			var thisDay = tgl.getDay(),
+			thisDay = myDays[thisDay];
+			var yy = tgl.getYear()
+			var year = (yy < 1000) ? yy + 1900 : yy;
+			return `${thisDay}, ${day} - ${myMonths[bulan]} - ${year}`
+}			
+
+
 
 			
 
@@ -3283,7 +3309,7 @@ case 'verifyagain':
 
 			
 
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "1", "100", "-"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "1", "100", "-", "${tanggal()}"]`, function (err) {
 
 				
 
@@ -3328,8 +3354,9 @@ const me5 = _me[5]	//--- user id
 const me6 = _me[6] 	//--- xp
 const me7 = _me[7]	//--- money
 const me8 = _me[8]	//--- mood
+const me9 = _me[9]	//--- account creation date
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚊𝚐𝚎\n${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}\n............................\n𝚡𝚙\n${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me7}$\n\n𝚖𝚘𝚘𝚍\n${me8}\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n\n𝚍𝚊𝚝𝚎 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚊𝚐𝚎\n${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}\n............................\n𝚡𝚙\n${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me7}$\n\n𝚖𝚘𝚘𝚍\n${me8}\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n\n𝚍𝚊𝚝𝚎 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${me9}\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
 
  
 break
@@ -3457,32 +3484,7 @@ break
 
 case 'iamsure':
 
-function kyun(seconds){
-  function pad(s){
-    return (s < 10 ? '0' : '') + s;
-  }
-  var hours = Math.floor(seconds / (60*60));
-  var minutes = Math.floor(seconds % (60*60) / 60);
-  var seconds = Math.floor(seconds % 60);
 
-  return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
-}
-function tanggal(){
-myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
-			myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-			var tgl = new Date();
-			var day = tgl.getDate()
-			bulan = tgl.getMonth()
-			var thisDay = tgl.getDay(),
-			thisDay = myDays[thisDay];
-			var yy = tgl.getYear()
-			var year = (yy < 1000) ? yy + 1900 : yy;
-			return `${thisDay}, ${day} - ${myMonths[bulan]} - ${year}`
-}			
-
-
-
-reply(`${tanggal()}`)
 
 fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
   if (err) throw err;
