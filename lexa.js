@@ -3503,8 +3503,9 @@ const delaystar = ms => new Promise(resolve => setTimeout(resolve, ms))
   
 else if (args[0] == 'cookie') {	
 
+let starcookie = Number(buy6);
 
-let newcookie = buy6 + shopnumber; 
+let newcookie = starcookie + shopnumber; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
@@ -3525,8 +3526,9 @@ const delaycookie = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 else if (args[0] == 'milk') {	
 
+let starmilk = Number(buy7);
 
-let newmilk = buy7 + shopnumber; 
+let newmilk = starmilk + shopnumber; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
@@ -3547,8 +3549,9 @@ const delaymilk = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 else if (args[0] == 'beef') {	
 
+let starbeef = Number(buy8);
 
-let newbeef = buy8 + shopnumber; 
+let newbeef = starbeef + shopnumber; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
