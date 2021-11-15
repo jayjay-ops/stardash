@@ -3476,12 +3476,13 @@ const buy10 = _buy[10]//--- pet creation date
 
  
 
-let shopnumber = Number(1);
+const shopnumber = Number(1);
 
 if (args[0] == 'star') {	
 
+let starfood = Number(buy5);
 
-let newstar = buy5 + shopnumber; 
+let newstar = starfood + shopnumber; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
@@ -3547,7 +3548,7 @@ const delaymilk = ms => new Promise(resolve => setTimeout(resolve, ms))
 else if (args[0] == 'beef') {	
 
 
-let newbeef = number(buy8) + shopnumber; 
+let newbeef = buy8 + shopnumber; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
