@@ -1740,7 +1740,7 @@ reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${s
 else if (slot1 == slot3) {	
 
 let os = Number(7);
-let op = ps + os; 
+let ops = ps + os; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
