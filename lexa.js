@@ -3168,7 +3168,7 @@ case 'verifyagain':
 
 	
 
-	if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age and favorite emoji﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n .verifyagain StarDash 16 🐺`)
+	if (args.length < 3) return reply(`Please register with your first name, age and favorite emoji\n⚠️ Still in BETA. You may have to register soon again.\n\n*Example*\n\n .verifyagain StarDash 16 🐺`)
 
 			
 
