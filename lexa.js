@@ -3337,13 +3337,13 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 const _changenamemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changenamemoney = _changenamemoney[8]	//--- money	
 
-let p = Number(changenamemoney);
-let o = Number(50);
-let op = p - o; 
+let pp = Number(changenamemoney);
+let oo = Number(50);
+let oopp = pp - oo; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${changenamemoney}`, op);
+    var newValue = data.replace(`${changenamemoney}`, oopp);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
