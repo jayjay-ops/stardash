@@ -3522,7 +3522,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
         console.log('Done!');
     })
 })
---// BUYYYYYYYYYYY
+//--- BUYYYYYYYYYYY
 let starcost = Number(2);
 let money = cashhand - starcost; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
@@ -3535,7 +3535,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
         console.log('Done!');
     })
 })
---// BUYYYYYYYYYYY
+//--- BUYYYYYYYYYYY
 
 const delaystar = ms => new Promise(resolve => setTimeout(resolve, ms))
                 await delaystar(1000) /// waiting 1 second.
