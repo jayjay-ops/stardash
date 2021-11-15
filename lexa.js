@@ -2476,6 +2476,51 @@ case 'fast':
 					})
 					break		
  
+		
+	
+
+	
+
+	
+case 'tts':
+case 'speak':
+  if (!isVerify) return reply(UserB())
+	  
+				 (args.length < 1) return reply('⌯   ﹝Tag Video or Audio AND Enter Number how fast. from 0.5 - 4 example:    .speed 2﹞')
+					
+
+		
+
+					
+
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+
+				ran= getRandom('.opus')
+
+				exec(`ffmpeg -i ${media}  -filter:a "atempo=${value}" -vn  ${ran} `, (err) => {
+
+					
+
+					
+
+					
+
+						fs.unlinkSync(media)
+
+						if (err) return reply('Speed must be from 0.5 to 4')
+
+						buffer = fs.readFileSync(ran)
+
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
+
+						fs.unlinkSync(ran)
+
+					})
+
+					break		
+		
 //-- watermark 
 case 'watermarkvideo':
 
