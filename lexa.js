@@ -3574,6 +3574,9 @@ else if (args[0] == 'beef') {
 let shopnumber = Number(1);
 let starbeef = Number(buy8);
 
+const delaycals = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delaycals(1000) /// waiting 1 second.
+
 let newbeef = starbeef + shopnumber; 
 
 const delaycals = ms => new Promise(resolve => setTimeout(resolve, ms))
