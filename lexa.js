@@ -3168,7 +3168,7 @@ case 'verifyagain':
 
 	
 
-	if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age and favorite emoji﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n .register StarDash 16 🐺`)
+	if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age and favorite emoji﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n .verifyagain StarDash 16 🐺`)
 
 			
 
@@ -3253,7 +3253,7 @@ break
 
 case 'deletemyaccount':
 
-reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *can never register* again! To delete your account type:   .iamsure  ')
+reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *can register* again! To delete your account type:   .iamsure  ')
 
 
 break
@@ -3266,12 +3266,12 @@ case 'iamsure':
 fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
   if (err) throw err;
   console.log('File deleted!');
-  reply('Your account has been *sucessfully deleted.* When typing .myaccount  , everything will be gone. However you can still use commands as if registered, but Errors may occur. There is no way to register normal again.﹞')
+  reply('Your account has been *sucessfully deleted.* When typing .myaccount  , everything will be gone. However you can still use commands as if registered, but Errors may occur. To register new type \n\n.verifyagain﹞')
 });
 
 
 
-
+break
 
 
 //--- Welcome on/off
