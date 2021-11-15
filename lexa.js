@@ -3157,6 +3157,69 @@ case 'register':
 					
 							
 			break
+		
+	
+
+	
+
+	
+//--- verify after deleted
+case 'verifyagain':
+
+	
+
+	
+
+			
+
+			    if (args.length > 3) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
+
+				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
+
+		if (args[0] = register) return reply(`⌯   ﹝Remove space between . and register.﹞`)
+
+				if (args[1] < 12) return reply(`⌯   ﹝Sorry kid. You are too young.﹞`) 
+
+						
+
+
+
+			
+
+			
+
+			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \n 𝚁𝚎-Registered! *${pushname}*\n𝙲𝚑𝚎𝚌𝚔 𝚢𝚘𝚞𝚛 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑 .me`
+
+			Lxa.sendMessage(from, capt, text, {quoted: mek})
+
+			
+
+			const userid = Math.floor(Math.random() * 1000000000)
+
+			
+
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "0", "100"]`, function (err) {
+
+				
+
+				
+
+		
+
+				
+
+  if (err) throw err;
+
+  console.log('Account Opend.');
+
+});
+
+					
+
+							
+
+			break
+		
 			
 //--- Your account			
 			
