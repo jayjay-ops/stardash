@@ -3194,11 +3194,11 @@ case 'verifyagain':
 
 			
 
-			const userid = Math.floor(Math.random() * 1000000000)
+			const userid2 = Math.floor(Math.random() * 1000000000)
 
 			
 
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "0", "100"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "0", "100"]`, function (err) {
 
 				
 
