@@ -1600,9 +1600,37 @@ replyimg(jawab, text, sims, simt)
 }
 break
   
+  
+//-- Mood
+case 'mood': 
+  
+if (!isVerify) return reply(userB())
+	
+	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 mood.﹞')
+
+	
+const _mood = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const mood = _1xp[8]	//--- Mood
+
+let moodnow = args[0];
+
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${mood}`, moodnow);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
 
 
 
+ 
+  reply(`﹝𝙰𝚍𝚍𝚎𝚍!﹞`)
+  
+	break
 
 //-- Slot
 case 'sloter':
@@ -1611,7 +1639,7 @@ case 'slot':
   if (!isVerify) return reply(userB())
 	  
 const _slotme = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const slotme7 = _slotme[7]	//--- money	
+const slotme7 = _slotme[8]	//--- money	
 
 
 
@@ -3180,7 +3208,7 @@ case 'register':
 			
 			const userid = Math.floor(Math.random() * 1000000000)
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "0", "100"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "0", "100", "-"]`, function (err) {
 				
 				
 		
@@ -3276,9 +3304,9 @@ const me4 = _me[4]	//--- emojie
 const me5 = _me[5]	//--- user id	
 const me6 = _me[6] 	//--- xp
 const me7 = _me[7]	//--- money
+const me8 = _me[8]	//--- mood
 
-
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚊𝚐𝚎\n${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}\n............................\n𝚡𝚙\n${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me7}$\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n\n𝚍𝚊𝚝𝚎 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me}\n\n𝚗𝚊𝚖𝚎\n${me2}\n\n𝚊𝚐𝚎\n${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me5}\n............................\n𝚡𝚙\n${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me7}$\n\n𝚖𝚘𝚘𝚍\n${me8}\n\n𝚌𝚞𝚛𝚛𝚎𝚗𝚝 𝚙𝚎𝚝\n\n𝚍𝚊𝚝𝚎 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
 
  
 break
