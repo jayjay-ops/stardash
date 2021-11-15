@@ -3495,7 +3495,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
 	
     var newValue = data.replace(`${buy5}`, newstar);
 	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
+    fs.writeFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
         console.log('Done!');
     })
@@ -3507,7 +3507,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
 	
     var newValue = data.replace(`${buy5}`, newstar);
 	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
+    fs.writeFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
         console.log('Done!');
     })
@@ -3519,7 +3519,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
 	
     var newValue = data.replace(`${buy5}`, newstar);
 	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
+    fs.writeFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
         console.log('Done!');
     })
