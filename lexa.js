@@ -3482,7 +3482,7 @@ const buy10 = _buy[10]//--- pet creation date
 
  
 
-const shopnumber = Number(1);
+let shopnumber = Number(1);
 
 if (args[0] == 'star') {	
 
