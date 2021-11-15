@@ -3460,12 +3460,7 @@ case 'buy':
 		
 		if (!isVerify) return reply(userB())
 			
-const _buypurchase = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const buypurchase = _buypurchase[7]	//--- money	
 
-let cashhand = Number(buypurchase);		
-		
-			
 const _buy = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`));	
 	
 const buy = _buy[0]	//--- phone number	
@@ -3482,7 +3477,7 @@ const buy10 = _buy[10]//--- pet creation date
 
  
 
-let shopnumber = Number(1);
+const shopnumber = Number(1);
 
 if (args[0] == 'star') {	
 
