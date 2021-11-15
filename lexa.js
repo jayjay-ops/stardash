@@ -2493,15 +2493,11 @@ case 'speak':
 							
 				ran= getRandom('.mp3')
 
-				exec(`espeak -w ${ran}.mp3 ${value}`, (err) => {
+				exec(`espeak -w ${ran} ${value}`, (err) => {
 
 					
 
 					
-
-					
-
-						fs.unlinkSync(media)
 
 						if (err) return reply('Error')
 					buffer = fs.readFileSync(ran)
