@@ -1610,7 +1610,7 @@ if (!isVerify) return reply(userB())
 
 	
 const _mood = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const mood = _1xp[8]	//--- Mood
+const mood = _mood[8]	//--- Mood
 
 let moodnow = args[0];
 
@@ -3260,7 +3260,7 @@ case 'verifyagain':
 
 			
 
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "0", "100"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "0", "100", "-"]`, function (err) {
 
 				
 
