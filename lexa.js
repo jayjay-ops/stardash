@@ -3361,7 +3361,7 @@ const _changenamemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@
 const changenamemoney1 = _changenamemoney1[7]	//--- money	
 
  
-  reply(`Changed username from ${changename} to ${value} Money left: ${changenamemoney1}$`)
+  reply(`Changed username from ${changename} to ${value} \n\nMoney left: ${changenamemoney1}$`)
   
 break
 
@@ -3415,7 +3415,7 @@ const _changeagemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s
 const changeagemoney1 = _changeagemoney1[7]	//--- money	
 
  
-  reply(`Changed age from ${changeage} to ${value} Money left: ${changeagemoney1}$`)
+  reply(`Changed age from ${changeage} to ${value} \n\nMoney left: ${changeagemoney1}$`)
   
 break
 
