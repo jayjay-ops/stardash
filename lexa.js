@@ -3360,7 +3360,12 @@ const changenamemoney1 = _changenamemoney1[7]	//--- money
  
   reply(`Changed username to ${value} Money left: ${changenamemoney1}$`)
   
-	break
+case 'deletemyaccount':
+
+reply('Done')
+
+
+break
 
 
 //--- Delete account message
