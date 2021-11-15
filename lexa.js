@@ -3418,9 +3418,10 @@ const pet5 = _pet[5]	//--- star
 const pet6 = _pet[6] 	//--- cookie
 const pet7 = _pet[7]	//--- milk
 const pet8 = _pet[8]	//--- beef
-const pet9 = _pet[9]	//--- pet creation date
+const pet9 = _pet[9]	//--- evolution state
+const pet10 = _pet[10]	//--- pet creation date
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝙿𝚎𝚝 𝚗𝚊𝚖𝚎\n⌥ ${pet1}\n\n𝚝𝚢𝚙𝚎\n⌥ ${pet2}\n\n𝚡𝚙\n⌥ ${pet3}\n\n𝚌𝚘𝚕𝚘𝚛\n⌥ ${pet4}\n\n𝙱𝚒𝚛𝚝𝚑𝚍𝚊𝚢\n⌥ ${pet9}`)
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝙿𝚎𝚝 𝚗𝚊𝚖𝚎\n⌥ ${pet1}\n\n𝚝𝚢𝚙𝚎\n⌥ ${pet2}\n\n𝚡𝚙\n⌥ ${pet3}\n\n𝚌𝚘𝚕𝚘𝚛\n⌥ ${pet4}\n\n𝚜𝚝𝚊𝚝𝚎\n⌥ ${pet9}\n\n𝙱𝚒𝚛𝚝𝚑𝚍𝚊𝚢\n⌥ ${pet10}`)
 
  
 break
