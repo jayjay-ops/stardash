@@ -3460,6 +3460,12 @@ case 'buy':
 		
 		if (!isVerify) return reply(userB())
 			
+const _buypurchase = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const buypurchase = _buypurchase[7]	//--- money	
+
+let cashhand = Number(buypurchase);		
+		
+			
 const _buy = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`));	
 	
 const buy = _buy[0]	//--- phone number	
@@ -3489,6 +3495,19 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
     var newValue = data.replace(`${buy5}`, newstar);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+
+let starcost = Number(1);
+let money = cashhand - starcost; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${cashhand}`, money);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
         console.log('Done!');
     })
