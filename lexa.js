@@ -2493,7 +2493,7 @@ case 'speak':
 							
 				ran= getRandom('.mp3')
 
-				exec(`espeak -w ${ran} ${value}`, (err) => {
+				exec(`espeak -w ${ran} "${value}"`, (err) => {
 
 					
 
