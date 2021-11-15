@@ -3321,7 +3321,7 @@ if (!isVerify) return reply(userB())
 	
 const _changename = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changename = _changename[2]	//--- Changename
-let newname = args[2];
+let newname = args[0];
 
 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
