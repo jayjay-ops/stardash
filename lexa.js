@@ -3500,7 +3500,8 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
         console.log('Done!');
     })
 })
-
+const delaystar23 = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delaystar23(2000) /// waiting 1 second.
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
@@ -3511,7 +3512,8 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
         console.log('Done!');
     })
 })
-
+const delaystar234 = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delaystar234(2000) /// waiting 1 second.
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
@@ -3538,7 +3540,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 //--- BUYYYYYYYYYYY
 
 const delaystar = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delaystar(1000) /// waiting 1 second.
+await delaystar(1000) /// waiting 1 second.
   
   
   reply(`+1 Star`)  
