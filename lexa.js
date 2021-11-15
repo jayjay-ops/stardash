@@ -3495,9 +3495,6 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
 	
     var newValue = data.replace(`${buy5}`, newstar);
 	
-const delaybeef2 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delaybeef2(1000) /// waiting 1 second.	
-	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
         console.log('Done!');
@@ -3510,9 +3507,6 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
     if (err) throw err;
 	
     var newValue = data.replace(`${cashhand}`, money);
-	
-const delaybeef3 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delaybeef3(1000) /// waiting 1 second.	
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -3538,9 +3532,6 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
 	
     var newValue = data.replace(`${buy6}`, newcookie);
 	
-const delaybeef4 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delaybeef4(1000) /// waiting 1 second.	
-	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
         console.log('Done!');
@@ -3565,9 +3556,6 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', functi
 	
     var newValue = data.replace(`${buy7}`, newmilk);
 	
-const delaybeef5 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delaybeef5(1000) /// waiting 1 second.	
-	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
         console.log('Done!');
@@ -3587,13 +3575,16 @@ let shopnumber = Number(1);
 let starbeef = Number(buy8);
 
 let newbeef = starbeef + shopnumber; 
+
+const delaycals = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delaybeefcals(1000) /// waiting 1 second.
+
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
     var newValue = data.replace(`${buy8}`, newbeef);
 	
-const delaybeef34 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delaybeef34(1000) /// waiting 1 second.	
+
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -3602,7 +3593,7 @@ const delaybeef34 = ms => new Promise(resolve => setTimeout(resolve, ms))
 })
 
 const delaybeef = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delaybeef(1000) /// waiting 1 second.
+await delaybeef(1000) /// waiting 1 second.
 
 
   reply(`+1 Beef`)  
