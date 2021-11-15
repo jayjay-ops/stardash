@@ -3574,13 +3574,13 @@ else if (args[0] == 'beef') {
 let shopnumber = Number(1);
 let starbeef = Number(buy8);
 
-const delaycals = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaycals(1000) /// waiting 1 second.
+const delaycals2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delaycals2(1000) /// waiting 1 second.
 
 let newbeef = starbeef + shopnumber; 
 
-const delaycals = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaycals(1000) /// waiting 1 second.
+const delaycals3 = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delaycals3(1000) /// waiting 1 second.
 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
