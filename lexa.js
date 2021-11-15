@@ -3228,6 +3228,8 @@ case 'me':
 case 'aboutme':
 case 'account':
 case 'myaccount':
+		
+		if (!isVerify) return reply(userB())
 			
 const _me = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 
