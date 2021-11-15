@@ -3577,7 +3577,7 @@ let starbeef = Number(buy8);
 let newbeef = starbeef + shopnumber; 
 
 const delaycals = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaybeefcals(1000) /// waiting 1 second.
+await delaycals(1000) /// waiting 1 second.
 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
     if (err) throw err;
