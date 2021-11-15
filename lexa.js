@@ -3337,9 +3337,9 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 const _changenamemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changenamemoney = _changenamemoney[8]	//--- money	
 
-
+let p = Number(changenamemoney);
 let o = Number(50);
-let op = p + o; 
+let op = p - o; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
@@ -3351,8 +3351,8 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
     })
 })
 
-const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot(1000) /// waiting 1 second.
+const delayslot4 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot4(1000) /// waiting 1 second.
 
 const _changenamemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changenamemoney1 = _changenamemoney1[7]	//--- money	
