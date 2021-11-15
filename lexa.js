@@ -3492,8 +3492,8 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
     })
 })
 
-const delayslot51 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot51(1000) /// waiting 1 second.
+const delayslot512 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot512(1000) /// waiting 1 second.
 				
 const _changeemojiemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changeemojiemoney = _changeemojiemoney[7]	//--- money	
@@ -3512,8 +3512,8 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
     })
 })
 
-const delayslot41 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot41(1000) /// waiting 1 second.
+const delayslot412 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot412(1000) /// waiting 1 second.
 
 const _changeemojiemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changeemojiemoney1 = _changeemojiemoney1[7]	//--- money	
