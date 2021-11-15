@@ -180,8 +180,8 @@ function kyun(seconds){
   return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 }
 function tanggal(){
-myMonths = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
-			myDays = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
+			myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 			var tgl = new Date();
 			var day = tgl.getDate()
 			bulan = tgl.getMonth()
@@ -3198,7 +3198,30 @@ case 'register':
 			    if (args.length > 3) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
 				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
 	
-				if (args[1] < 12) return reply(`⌯   ﹝Sorry kid. You are too young.﹞`) 
+				if (args[1] < 12) return reply(`⌯   ﹝Sorry kid. You are too young.﹞`)
+
+function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+}
+function tanggal(){
+myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
+			myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+			var tgl = new Date();
+			var day = tgl.getDate()
+			bulan = tgl.getMonth()
+			var thisDay = tgl.getDay(),
+			thisDay = myDays[thisDay];
+			var yy = tgl.getYear()
+			var year = (yy < 1000) ? yy + 1900 : yy;
+			return `${thisDay}, ${day} - ${myMonths[bulan]} - ${year}`
+}			
 						
 					_user.push(sender)
 			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
@@ -3232,7 +3255,7 @@ case 'verifyagain':
 
 	if (args.length < 3) return reply(`Please register with your first name, age and favorite emoji\n⚠️ Still in BETA. You may have to register soon again.\n\n*Example*\n\n .verifyagain StarDash 16 🐺`)
 
-			
+
 
 			    if (args.length > 3) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
 
@@ -3433,6 +3456,32 @@ break
 //--- Delete account
 
 case 'iamsure':
+
+function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+}
+function tanggal(){
+myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
+			myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+			var tgl = new Date();
+			var day = tgl.getDate()
+			bulan = tgl.getMonth()
+			var thisDay = tgl.getDay(),
+			thisDay = myDays[thisDay];
+			var yy = tgl.getYear()
+			var year = (yy < 1000) ? yy + 1900 : yy;
+			reply(`${thisDay}, ${day} - ${myMonths[bulan]} - ${year}`)
+}			
+
+
+
 
 
 fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
