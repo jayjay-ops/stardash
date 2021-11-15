@@ -3466,8 +3466,8 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
     })
 })
 
-const delayslot51 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot51(1000) /// waiting 1 second.
+const delayslot531 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot531(1000) /// waiting 1 second.
 				
 				
 				
