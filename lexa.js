@@ -3135,6 +3135,7 @@ case 'register':
 				if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age and favorite emoji﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n .register StarDash 16 🐺`)
 			    if (args.length > 3) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
 				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
+		if (args[0] = register) return reply(`⌯   ﹝Remove space between . and register.﹞`)
 				if (args[1] < 12) return reply(`⌯   ﹝Sorry kid. You are too young.﹞`) 
 						
 					_user.push(sender)
@@ -3189,7 +3190,7 @@ break
 
 case 'deletemyaccount':
 
-reply('Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *can never register* again! To delete your account type:   .iamsure  ﹞')
+reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *can never register* again! To delete your account type:   .iamsure  ')
 
 
 break
