@@ -3245,14 +3245,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 			
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.pet.json`, `["+${sender.split("@")[0]}", "no pet", "animal type",  "1" , "color", "2", "2", "1", "1", "evolutionstate", "${tanggal()}"]`, function (err) {
-				
-				
-		
-				
-  if (err) throw err;
-  console.log('Pet Account Opend.');
-});
+
 							
 			break
 		
@@ -3414,277 +3407,61 @@ const pet1 = _pet[1]  //--- pet name
 const pet2 = _pet[2]	//--- pet type
 const pet3 = _pet[3]	//--- xp
 const pet4 = _pet[4]	//--- color
-const pet5 = _pet[5]	//--- star	
-const pet6 = _pet[6] 	//--- cookie
-const pet7 = _pet[7]	//--- milk
-const pet8 = _pet[8]	//--- beef
-const pet9 = _pet[9]	//--- evolution state
-const pet10 = _pet[10]	//--- pet creation date
+const pet5 = _pet[6]	//--- star	
+const pet10 = _pet[7]	//--- pet creation date
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝙿𝚎𝚝 𝚗𝚊𝚖𝚎\n⌥ ${pet1}\n\n𝚝𝚢𝚙𝚎\n⌥ ${pet2}\n\n𝚡𝚙\n⌥ ${pet3}\n\n𝚌𝚘𝚕𝚘𝚛\n⌥ ${pet4}\n\n𝚜𝚝𝚊𝚝𝚎\n⌥ ${pet9}\n\n𝙱𝚒𝚛𝚝𝚑𝚍𝚊𝚢\n⌥ ${pet10}\n\n𝚘𝚙𝚎𝚗 𝚏𝚛𝚒𝚍𝚐𝚎\n⌥ .fridge`)
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝙿𝚎𝚝 𝚗𝚊𝚖𝚎\n⌥ ${pet1}\n\n𝚝𝚢𝚙𝚎\n⌥ ${pet2}\n\n𝚡𝚙\n⌥ ${pet3}\n\n𝚌𝚘𝚕𝚘𝚛\n⌥ ${pet4}\n\n𝙱𝚒𝚛𝚝𝚑𝚍𝚊𝚢\n⌥ ${pet7}\n\nEat\n⌥ .feed`)
 
  
 break
 
-//--- Your Fridge
-			
-			
-case 'fridge':
-case 'cold':
-		
-		if (!isVerify) return reply(userB())
-			
-const _fridge = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`));	
-	
-const fridge = _fridge[0]	//--- phone number	
-const fridge1 = _fridge[1] //--- pet name
-const fridge2 = _fridge[2]	//--- pet type
-const fridge3 = _fridge[3]	//--- xp
-const fridge4 = _fridge[4]	//--- color
-const fridge5 = _fridge[5]	//--- star	
-const fridge6 = _fridge[6] //--- cookie
-const fridge7 = _fridge[7]	//--- milk
-const fridge8 = _fridge[8]	//--- beef
-const fridge9 = _fridge[9]	//--- evolution state
-const fridge10 = _fridge[10]//--- pet creation date
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n\n𝚏𝚛𝚒𝚍𝚐𝚎\n⌥ 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n\n𝙿𝚎𝚝 𝚗𝚊𝚖𝚎\n⌥ ${fridge1}\n\n𝚜𝚝𝚊𝚛\n⌥ ${fridge5}\n\n𝚌𝚘𝚘𝚔𝚒𝚎\n⌥ ${fridge6}\n\n𝚖𝚒𝚕𝚔\n⌥ ${fridge7}\n\n𝚋𝚎𝚎𝚏\n⌥ ${fridge8}`)
-
- 
-break
 
 //--- Buy stuff
 			
 			
-case 'buy':
-		
-		if (!isVerify) return reply(userB())
-			
-const _buypurchase = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const buypurchase = _buypurchase[7]	//--- money	
-
-let cashhand = Number(buypurchase);		
-		
-			
-const _buy = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`));	
+case 'buypet':
+ if (args[0] === 'butterfly' ) {
+ 
+	fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.pet.json`, `["+${sender.split("@")[0]}", "${args[1]}", "caterpillar",  "10" , "grey", "2", "${tanggal()}"]`, function (err) {
+	if (err) throw err;
+	console.log('Pet Account Opend.');
+	});
+ 
+  } else if (args[0] === 'wulf' ) {
+   
+   	fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.pet.json`, `["+${sender.split("@")[0]}", "${args[1]}", "dog",  "10" , "grey", "2", "${tanggal()}"]`, function (err) {
+	if (err) throw err;
+	console.log('Pet Account Opend.');
+	});
 	
-const buy = _buy[0]	//--- phone number	
-const buy1 = _buy[1] //--- pet name
-const buy2 = _buy[2]	//--- pet type
-const buy3 = _buy[3]	//--- xp
-const buy4 = _buy[4]	//--- color
-const buy5 = _buy[5]	//--- star	
-const buy6 = _buy[6] //--- cookie
-const buy7 = _buy[7]	//--- milk
-const buy8 = _buy[8]	//--- beef
-const buy9 = _buy[9]	//--- evolution state
-const buy10 = _buy[10]//--- pet creation date
+  }	else if (args[0] === 'delphine' ) {
+   
+   	fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.pet.json`, `["+${sender.split("@")[0]}", "${args[1]}", "fish",  "10" , "orange", "2", "${tanggal()}"]`, function (err) {
+	if (err) throw err;
+	console.log('Pet Account Opend.');
+	});
+	
+  }	else if (args[0] === 'dragon' ) {
+   
+   	fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.pet.json`, `["+${sender.split("@")[0]}", "${args[1]}", "fly",  "10" , "grey", "2", "${tanggal()}"]`, function (err) {
+	if (err) throw err;
+	console.log('Pet Account Opend.');
+	});
+	
+  }	else { 
+  
+ reply (`Choose a pet. Butterfly, Delphine, Wulf or Dragon.`) 
+	  
+  }				
+  
+
 
  
 
-
-
-if (args[0] == 'star') {
-	
-let shopnumber = Number(2);
-let starfood = Number(buy5);
-
-let newstar = starfood + shopnumber; 
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy5}`, newstar);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-const delaystar234 = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaystar234(5000) /// waiting 1 second.
-
-//--- BUYYYYYYYYYYY
-let starcost = Number(2);
-let money = cashhand - starcost; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${cashhand}`, money);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-//--- BUYYYYYYYYYYY
-
-const delaystar = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaystar(1000) /// waiting 1 second.
-  
-  
-  reply(`+1 Star`)  
-}  
-  
-else if (args[0] == 'cookie') {	
-
-let shopnumber = Number(1);
-let starcookie = Number(buy6);
-
-let newcookie = starcookie + shopnumber; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy6}`, newcookie);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy6}`, newcookie);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy6}`, newcookie);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-
-const delaycookie = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delaycookie(1000) /// waiting 1 second.
-
-
-  reply(`+1 Cookie`)  
-} 
-
-else if (args[0] == 'milk') {	
-
-let shopnumber = Number(1);
-let starmilk = Number(buy7);
-
-let newmilk = starmilk + shopnumber; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy7}`, newmilk);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy7}`, newmilk);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy7}`, newmilk);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-const delaymilk = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delaymilk(1000) /// waiting 1 second.
-
-
-  reply(`+1 Milk`)  
-} 
-
-else if (args[0] == 'beef') {	
-
-let shopnumber = Number(1);
-let starbeef = Number(buy8);
-
-
-
-let newbeef = starbeef + shopnumber; 
-
-
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy8}`, newbeef);
-	
-
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy8}`, newbeef);
-	
-
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${buy8}`, newbeef);
-	
-
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-
-const delaybeef = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaybeef(1000) /// waiting 1 second.
-
-
-
-  reply(`+1 Beef`)  
-} 
-
- else {
-	 
-
-	 
-reply(`What is the order? Choose a valid item.`)  
-}
-
-
- 
 break
+
+
 
 
 
