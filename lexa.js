@@ -2471,7 +2471,7 @@ case 'fast':
 						fs.unlinkSync(media)
 						if (err) return reply('Speed must be from 0.5 to 4')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
 					break		
@@ -2502,7 +2502,7 @@ case 'speak':
 						if (err) return reply('Error')
 					buffer = fs.readFileSync(ran)
 
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 
 						fs.unlinkSync(ran)
 
