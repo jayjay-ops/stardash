@@ -3428,53 +3428,6 @@ break
 
 
 
-//--- Owner change everything		
-
-			
-			
-case 'change':
-
-		
-		if (!isOwner) return reply(ownerB())
-			
-const _change = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-
-	
-const change = _change[0]	//--- phone number	
-const change1 = _change[1]  //--- pushname
-const change2 = _change[2]	//--- name
-const change3 = _change[3]	//--- age
-const change4 = _change[4]	//--- emojie
-const change5 = _change[5]	//--- user id	
-const change6 = _change[6] 	//--- xp
-const change7 = _change[7]	//--- money
-const change8 = _change[8]	//--- mood
-const change9 = _change[9]	//--- account creation date
-
-
-
-let newchange = args[1];
-
-
-fs.readFile(`./${args[2]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${args[0]}`, newchange);
-	
-    fs.writeFile(`./${args[2]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
-
-const delayslot531 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot531(1000) /// waiting 1 second.
-				
-				
-				
-  reply(`changed ...`)
-
- 
-break
 
 
 
