@@ -3361,7 +3361,61 @@ const _changenamemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@
 const changenamemoney1 = _changenamemoney1[7]	//--- money	
 
  
-  reply(`Changed username to ${value} Money left: ${changenamemoney1}$`)
+  reply(`Changed username from ${changename} to ${value} Money left: ${changenamemoney1}$`)
+  
+break
+
+//-- changeage
+case 'changeage': 
+  
+if (!isVerify) return reply(userB())
+	
+	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new age.﹞')
+
+	
+const _changeage = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changeage = _changeage[3]	//--- Changeage
+let newage = args[0];
+
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${changeage}`, newage);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
+
+const delayslot51 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot51(1000) /// waiting 1 second.
+				
+const _changeagemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changeagemoney = _changeagemoney[7]	//--- money	
+
+let pp = Number(changeagemoney);
+let oo = Number(50);
+let oopp = pp - oo; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${changeagemoney}`, oopp);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+
+const delayslot41 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot41(1000) /// waiting 1 second.
+
+const _changeagemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changeagemoney1 = _changeagemoney1[7]	//--- money	
+
+ 
+  reply(`Changed age from ${changeage} to ${value} Money left: ${changeagemoney1}$`)
   
 break
 
