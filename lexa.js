@@ -3477,12 +3477,12 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			thisDay = myDays[thisDay];
 			var yy = tgl.getYear()
 			var year = (yy < 1000) ? yy + 1900 : yy;
-			reply(`${thisDay}, ${day} - ${myMonths[bulan]} - ${year}`)
+			return `${thisDay}, ${day} - ${myMonths[bulan]} - ${year}`
 }			
 
 
 
-
+reply(`${tanggal()}`)
 
 fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
   if (err) throw err;
