@@ -3426,7 +3426,32 @@ const pet10 = _pet[10]	//--- pet creation date
  
 break
 
+//--- Your Fridge
+			
+			
+case 'fridge':
+case 'cold':
+		
+		if (!isVerify) return reply(userB())
+			
+const _fridge = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.pet.json`));	
+	
+const fridge = _fridge[0]	//--- phone number	
+const fridge1 = _fridge[1] //--- pet name
+const fridge2 = _fridge[2]	//--- pet type
+const fridge3 = _fridge[3]	//--- xp
+const fridge4 = _fridge[4]	//--- color
+const fridge5 = _fridge[5]	//--- star	
+const fridge6 = _fridge[6] //--- cookie
+const fridge7 = _fridge[7]	//--- milk
+const fridge8 = _fridge[8]	//--- beef
+const fridge9 = _fridge[9]	//--- evolution state
+const fridge10 = _fridge[10]//--- pet creation date
 
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n𝚏𝚛𝚒𝚍𝚐𝚎\n⌥ 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n\n𝙿𝚎𝚝 𝚗𝚊𝚖𝚎\n⌥ ${fridge1}\n\n𝚜𝚝𝚊𝚛\n⌥ ${fridge5}\n\n𝚌𝚘𝚘𝚔𝚒𝚎\n⌥ ${fridge6}\n\n𝚖𝚒𝚕𝚔\n⌥ ${fridge7}\n\n𝚋𝚎𝚎𝚏\n⌥ ${fridge6}`)
+
+ 
+break
 
 
 
