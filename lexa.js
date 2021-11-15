@@ -3311,6 +3311,57 @@ const me8 = _me[8]	//--- mood
  
 break
 
+//-- changename
+case 'changename': 
+  
+if (!isVerify) return reply(userB())
+	
+	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new username.﹞')
+
+	
+const _changename = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changename = _changename[2]	//--- Changename
+let newname = args[2];
+
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${changename}`, newname);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
+
+const _changenamemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changenamemoney = _changenamemoney[8]	//--- money	
+})
+
+let o = Number(50);
+let op = p + o; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${changenamemoney}`, op);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+
+const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot(1000) /// waiting 1 second.
+
+const _changenamemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changenamemoney1 = _changenamemoney1[7]	//--- money	
+
+ 
+  reply(`Changed username to ${value} Money left: ${changenamemoney1}$`)
+  
+	break
+
 
 //--- Delete account message
 
