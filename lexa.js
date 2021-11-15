@@ -3469,6 +3469,60 @@ const changeagemoney1 = _changeagemoney1[7]	//--- money
   
 break
 
+//-- changeemojie
+case 'changeemojie': 
+  
+if (!isVerify) return reply(userB())
+	
+	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new Emojie.﹞')
+
+	
+const _changeemojie = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changeemojie = _changeemojie[4]	//--- Changeemojie
+let newemojie = args[0];
+
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${changeemojie}`, newemojie);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
+
+const delayslot51 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot51(1000) /// waiting 1 second.
+				
+const _changeemojiemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changeemojiemoney = _changeemojiemoney[7]	//--- money	
+
+let pppp = Number(changeemojiemoney);
+let oooo = Number(50);
+let oooopppp = pppp - oooo; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${changeemojiemoney}`, oooopppp);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+
+const delayslot41 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delayslot41(1000) /// waiting 1 second.
+
+const _changeemojiemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changeemojiemoney1 = _changeemojiemoney1[7]	//--- money	
+
+ 
+  reply(`Changed Emojie from *${changeemojie}* to *${value}* \n\nMoney left: ${changeemojiemoney1}$`)
+  
+break
+
 
 //--- Delete account message
 
