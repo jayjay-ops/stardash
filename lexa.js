@@ -1661,7 +1661,7 @@ if (slotme7 < 7) return reply(`﹝You have not enough money to play. Your money:
 	const slot9 = _slot[Math.floor(Math.random() * _slot.length)]
 	
 	
-	
+let cash = slotme7;	
 let ps = Number(slotme7);
 
 
@@ -1672,7 +1672,7 @@ let ops = ps + os;
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${slotme7}`, ops);
+    var newValue = data.replace(`${cash}`, ops);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -1696,7 +1696,7 @@ let ops = ps + os;
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${slotme7}`, ops);
+    var newValue = data.replace(`${cash}`, ops);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -1720,7 +1720,7 @@ let ops = ps + os;
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${slotme7}`, ops);
+    var newValue = data.replace(`${cash}`, ops);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -1744,7 +1744,7 @@ let ops = ps + os;
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${slotme7}`, ops);
+    var newValue = data.replace(`${cash}`, ops);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -1771,7 +1771,7 @@ let ops = ps - os;
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${slotme7}`, ops);
+    var newValue = data.replace(`${cash}`, ops);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
