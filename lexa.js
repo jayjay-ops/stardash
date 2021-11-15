@@ -1662,17 +1662,17 @@ if (slotme7 < 7) return reply(`﹝You have not enough money to play. Your money:
 	
 	
 	
-let p = Number(slotme7);
+let ps = Number(slotme7);
 
 
 if ((slot1 == slot2) && slot2 == slot3) {	
 
-let o = Number(250);
-let op = p + o; 
+let os = Number(250);
+let ops = ps + os; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${slotme7}`, op);
+    var newValue = data.replace(`${slotme7}`, ops);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -1691,12 +1691,12 @@ const slotme8 = _slotme8[7]	//--- money
   
 else if (slot1 == slot2) {	
 
-let o = Number(7);
-let op = p + o; 
+let os = Number(7);
+let ops = ps + os; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${slotme7}`, op);
+    var newValue = data.replace(`${slotme7}`, ops);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -1715,12 +1715,12 @@ const slotme8 = _slotme8[7]	//--- money
 
 else if (slot2 == slot3) {	
 
-let o = Number(7);
-let op = p + o; 
+let os = Number(7);
+let ops = ps + os; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${slotme7}`, op);
+    var newValue = data.replace(`${slotme7}`, ops);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -1739,12 +1739,12 @@ reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${s
 
 else if (slot1 == slot3) {	
 
-let o = Number(7);
-let op = p + o; 
+let os = Number(7);
+let op = ps + os; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${slotme7}`, op);
+    var newValue = data.replace(`${slotme7}`, ops);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
