@@ -2862,7 +2862,7 @@ let oorpprsticker5 = pprrsticker5 - oorrsticker5;
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${yourcashsticker}`, oorpprsticker5);
+    var newValue = data.replace(`${yourcashsticker5}`, oorpprsticker5);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
