@@ -3862,7 +3862,7 @@ case 'design':
 if (!isVerify) return reply(userB())
 	
 	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 Design Sybmol or Emojie.﹞')
-	if (args.length > 1) return reply('⌯   ﹝Set 1 Symbol.﹞')
+	if (args.length > 1) return reply('⌯   ﹝Set 1 Symbol. And leave space between . and design. not . design BUT .design﹞')
 
 
 const _yourcashdesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
