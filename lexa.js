@@ -1675,6 +1675,7 @@ case 'sloter':
 case 'slots':
 case 'slot':
   if (!isVerify) return reply(userB())
+	   if (!isGroup) return reply(group())
 	  
 const _slotme = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const slotme7 = _slotme[7]	//--- money	
