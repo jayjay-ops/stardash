@@ -2806,54 +2806,7 @@ case 'savesticker':
 	encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 	  
-  if (!isQuotedImage) {
-	   
-const _yourcashsticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const yourcashsticker = _yourcashsticker[7]	//--- money	
-if (yourcashsticker < 22) return reply(`﹝You have not enough money to change your design. Money needed: 22$ Your money: ${yourcashsticker}$﹞`) 
-	
-let pprrsticker = Number(yourcashsticker);
-let oorrsticker = Number(22);
-let oorpprsticker = pprrsticker - oorrsticker; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${yourcashsticker}`, oorpprsticker);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
-													
-					
-			
-				
-				exec(`rm -rf ${sender.split("@")[0]}.webp`)
-				exec(`ffmpeg -i ${media} ${sender.split("@")[0]}.webp`, (err) => {
-					
-	
-					
-				fs.unlinkSync(media)
-						if (err) return reply('⌯   ﹝Error﹞')
-				
-	
-					})
-
-	
-					
-
-const delaydesign1sticker = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaydesign1sticker(1000) /// waiting 1 second.					
-															
-const _changedesignmoney1sticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changedesignmoney1sticker = _changedesignmoney1sticker[7]	//--- money	
- 
-  reply(`⌯   ﹝Saved as your sticker!  .mysticker﹞ \n\nMoney left: ${changedesignmoney1sticker}$`)
-  
-  }
-  
-  else if (!isQuotedSticker) {
+if (!isQuotedSticker) {
 	  
 	  const _yourcashsticker5 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashsticker5 = _yourcashsticker5[7]	//--- money	
@@ -2897,7 +2850,7 @@ const changedesignmoney1sticker5 = _changedesignmoney1sticker5[7]	//--- money
  
   reply(`⌯   ﹝Saved as your sticker!  .mysticker﹞ \n\nMoney left: ${changedesignmoney1sticker5}$`)
   
-  } else reply('⌯   ﹝Please tag a picture or sticker, you want to save. Cost is 22$﹞')
+  } else reply('⌯   ﹝Please tag a sticker, you want to save. Cost is 22$﹞')
   
   
 break			
