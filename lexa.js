@@ -2802,7 +2802,7 @@ case 'addsticker':
 case 'savesticker':
 
   if (!isVerify) return reply(UserB())	  
-  if (!isQuotedImage)  {
+  if (!isQuotedImage) {
 	   
 const _yourcashsticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashsticker = _yourcashsticker[7]	//--- money	
@@ -2856,7 +2856,7 @@ const changedesignmoney1sticker = _changedesignmoney1sticker[7]	//--- money
 const yourcashsticker5 = _yourcashsticker5[7]	//--- money	
 if (yourcashsticker5 < 22) return reply(`﹝You have not enough money to change your design. Money needed: 22$ Your money: ${yourcashsticker5}$﹞`) 
 	
-let pprrsticker5 = Number(yourcashsticker);
+let pprrsticker5 = Number(yourcashsticker5);
 let oorrsticker5 = Number(22);
 let oorpprsticker5 = pprrsticker5 - oorrsticker5; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
