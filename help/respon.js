@@ -37,7 +37,7 @@ const premi = () => {
 
 //--
 const userB = (prefix) => {
-  return `𝚈𝚘𝚞 𝚊𝚛𝚎 𝚗𝚘𝚝 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍. 𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚢𝚙𝚎﹝.𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛﹞ \nIf your account got deleted, it maybe because Bot is still in BETA and this may happen sometimes when bot is updated.. Just register again..`
+  return `𝚈𝚘𝚞 𝚊𝚛𝚎 𝚗𝚘𝚝 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍. 𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚢𝚙𝚎﹝.𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛﹞ \n\nIf your account got deleted, it maybe because Bot is still in BETA and this may happen sometimes when bot is updated.. Just register again..`
 }
 
 //--

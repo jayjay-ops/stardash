@@ -1655,12 +1655,12 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
     })
 })
 
-
-
  
   reply(`﹝𝙰𝚍𝚍𝚎𝚍!﹞`)
   
 	break
+	
+	
 
 
 
@@ -3268,7 +3268,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			
 			const userid = Math.floor(Math.random() * 1000000000)
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}", "-"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥"]`, function (err) {
 				
 				
 		
@@ -3295,7 +3295,7 @@ case 'verifyagain':
 
 	
 
-	if (args.length < 3) return reply(`Please register with your first name, age and favorite emoji\n⚠️ Still in BETA. You may have to register soon again.\n\n*Example*\n\n .verifyagain StarDash 16 🐺`)
+	if (args.length < 3) return reply(`Please register with your first name, age and favorite emoji\n\n⚠️ Still in BETA. You may have to register soon again.\n\n*Example*\n\n .verifyagain StarDash 16 🐺`)
 
 
 
@@ -3349,7 +3349,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 			
 
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "1", "100", "-", "${tanggal()}", "NoName"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "1", "100", "-", "${tanggal()}", "-", "⌥"]`, function (err) {
 
 				
 
@@ -3375,20 +3375,35 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 case 'shop':			
 
+if (!isVerify) return reply(userB())
+	
+
 const _shopmoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const shopmoney = _shopmoney[7]	//--- money
 		
-
+const _shopd = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const shopd = _shopd[11]	//--- account design
 		
-reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚂𝚑𝚘𝚙\n⌥ 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n\n✯ 𝙵𝚛𝚎𝚎\n\n𝚜𝚎𝚝 𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙽𝚊𝚖𝚎\n⌥ .stickerpack\n\n𝚜𝚎𝚝 𝙼𝚘𝚘𝚍\n⌥ .mood\n\n✯ 𝚐𝚊𝚖𝚎𝚜\n\n𝚂𝚕𝚘𝚝 𝙶𝚊𝚖𝚎\n➳ cost: 4$\n➳  small win = +8$\n➳  jackpot = +200$\n⌥ .slot\n\n. . . . . . . . . . . . . . .\n✯ 𝚜𝚎𝚝𝚝𝚒𝚗𝚐\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎\n➳ cost: 50$\n⌥ .changename \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚘𝚓𝚒𝚎\n➳ cost: 100$\n⌥ .changeemojie \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 150$\n⌥ .changeage\n\n. . . . . . . . . . . . . . .\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n. . . . . . . . . . . . . . .`)	
+reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚂𝚑𝚘𝚙\n${shopd} 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n\n✯ 𝙵𝚛𝚎𝚎\n\n𝚜𝚎𝚝 𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙽𝚊𝚖𝚎\n${shopd} .stickerpack\n\n𝚜𝚎𝚝 𝙼𝚘𝚘𝚍\n${shopd} .mood\n\n✯ 𝚐𝚊𝚖𝚎𝚜\n\n𝚂𝚕𝚘𝚝 𝙶𝚊𝚖𝚎\n➳ cost: 4$\n➳  small win = +8$\n➳  jackpot = +200$\n${shopd} .slot\n\n. . . . . . . . . . . . . . .\n✯ 𝚜𝚎𝚝𝚝𝚒𝚗𝚐\n\n𝚌𝚑𝚊𝚗𝚐𝚎 𝚍𝚎𝚜𝚒𝚐𝚗\n➳ cost: 25$\n${shopd} .design\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎\n➳ cost: 50$\n${shopd} .changename \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚘𝚓𝚒𝚎\n➳ cost: 100$\n${shopd} .changeemojie \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 150$\n${shopd} .changeage\n\n. . . . . . . . . . . . . . .\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n. . . . . . . . . . . . . . .`)	
 
 break
+
+
+
+
+
+
+
+
 
 //--- PetShop	
 
 case 'petshop':	
 case 'pet shop':	
 
+
+if (!isVerify) return reply(userB())
+	
 const _petshopmoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const petshopmoney = _petshopmoney[7]	//--- money
 
@@ -3424,9 +3439,11 @@ const me7 = _me[7]	//--- money
 const me8 = _me[8]	//--- mood
 const me9 = _me[9]	//--- account creation date
 const me10 = _me[10]	//--- stickerpack name
+const me11 = _me[11]	//--- account design
 
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n⌥ ${me}\n\n𝚗𝚊𝚖𝚎\n⌥ ${me2}\n\n𝚊𝚐𝚎\n⌥ ${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n⌥ ${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n⌥ ${me5}\n. . . . . . . . . . . . . . .\n𝚡𝚙\n⌥ ${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n⌥ ${me7}$\n\n𝚖𝚘𝚘𝚍\n⌥ ${me8}\n\n𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n⌥ ${me10}\n\n𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n⌥ .shop\n\n𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n⌥ .menu\n\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n⌥ ${me9}\n\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n. . . . . . . . . . . . . . .`)
+
+ reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me11} ${me}\n\n𝚗𝚊𝚖𝚎\n${me11} ${me2}\n\n𝚊𝚐𝚎\n${me11} ${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me11} ${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me11} ${me5}\n. . . . . . . . . . . . . . .\n𝚡𝚙\n${me11} ${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me11} ${me7}$\n\n𝚖𝚘𝚘𝚍\n${me11} ${me8}\n\n𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n${me11} ${me10}\n\n𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${me11} .shop\n\n𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${me11} .menu\n\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${me11} ${me9}\n\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n. . . . . . . . . . . . . . .`)
 
  
 break
@@ -3439,6 +3456,8 @@ break
 			
 			
 case 'buypet':
+
+if (!isVerify) return reply(userB())
  if (args[0] === 'butterfly' ) {
  
 	fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.pet.json`, `["+${sender.split("@")[0]}", "${args[1]}", "caterpillar",  "10" , "grey", "2", "${tanggal()}"]`, function (err) {
@@ -3663,6 +3682,65 @@ const changeemojiemoney1 = _changeemojiemoney1[7]	//--- money
   
 break
 
+//-- changedesign
+case 'design': 
+  
+if (!isVerify) return reply(userB())
+	
+	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 Design Sybmol or Emojie.﹞')
+	if (args.length > 1) return reply('⌯   ﹝Set 1 Symbol.﹞')
+
+
+const _yourcashdesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const yourcashdesign = _yourcashdesign[7]	//--- money	
+if (yourcashdesign < 25) return reply(`﹝You have not enough money to change your design. Money needed: 25$ Your money: ${yourcashdesign}$﹞`) 
+
+	
+const _changedesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changedesign = _changedesign[11]	//--- Changedesign
+let newdesign = args[0];
+
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${changedesign}`, newdesign);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
+
+const delaydesign = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delaydesign(1000) /// waiting 1 second.
+				
+const _changedesignmoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changedesignmoney = _changedesignmoney[7]	//--- money	
+
+let pprr = Number(changedesignmoney);
+let oorr = Number(25);
+let oorppr = pprr - oorr; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${changedesignmoney}`, oorppr);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+
+const delaydesign1 = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delaydesign1(1000) /// waiting 1 second.
+
+const _changedesignmoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changedesignmoney1 = _changedesignmoney1[7]	//--- money	
+
+ 
+  reply(`Changed design from *${changedesign}* to *${value}* \n\nMoney left: ${changedesignmoney1}$`)
+  
+break
 
 //--- Delete account message
 
