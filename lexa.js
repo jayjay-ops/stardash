@@ -1457,9 +1457,9 @@ shopdmen = _shopdmen[11]	//--- account design
 
   capt = `☆\nMenu \nDesign: ${shopdmen}`
   thum = await fs.readFileSync('./docs/mrf.jpg').toString('base64')
-  if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, shopdmen), text, capt, thum)
-  if (args[0] === 'one' ) {
-   return replyimg(menus(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen), text, capt, thum)
+ 
+  if (args[0] === 'des' ) {
+   return replyimg(menusdes(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen), text, capt, thum)
   } else if (args[0] === 'sticker' ) {
     return replyimg(menusticker(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen), text, capt, thum)
   } else if (args[0] === 'admin' ) {
@@ -1477,7 +1477,9 @@ shopdmen = _shopdmen[11]	//--- account design
   } else if (args[0] === 'secret' ) {
     return replyimg(menusecret(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen), text, capt, thum)
 	
-  }  
+  }  else if (args[0] === 'one' ) {
+   return replyimg(menus(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen), text, capt, thum)
+  } else if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, shopdmen), text, capt, thum)
 	   break
 	   
 //-- List show
