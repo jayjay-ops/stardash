@@ -2702,7 +2702,7 @@ case 'savesticker':
 			
 				
 				exec(`rm -rf ${sender.split("@")[0]}.webp`)
-				exec(`ffmpeg -i ${media} -preset ultrafast hi.webp`, (err) => {
+				exec(`ffmpeg -i ${media} ./userstickers/${sender.split("@")[0]}.webp`, (err) => {
 					
 					
 					
