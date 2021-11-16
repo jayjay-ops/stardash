@@ -2874,7 +2874,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 			
 				
-				exec(`mv ${media} ${sender.split("@")[0]}.webp`, (err) => {
+				exec(`Ren “${media}“ “${sender.split("@")[0]}.webp“`, (err) => {
 					
 	
 					
