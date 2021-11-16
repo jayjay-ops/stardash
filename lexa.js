@@ -2839,6 +2839,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 
 	
 					
+}
 
 const delaydesign1sticker = ms => new Promise(resolve => setTimeout(resolve, ms))
 await delaydesign1sticker(1000) /// waiting 1 second.					
@@ -2851,6 +2852,7 @@ const changedesignmoney1sticker = _changedesignmoney1sticker[7]	//--- money
 break			
 
 //-- mysticker
+
 case 'mysticker':
 case 'mys':
 
