@@ -2552,8 +2552,34 @@ case 'youtubesong':
 case 'tbsong':
 
 	  
-          if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')					
-					reply('⌯   ﹝Downloading 1/2﹞')
+          if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')			
+
+const _yourcashsong = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const yourcashsong = _yourcashsong[7]	//--- money	
+if (yourcashsong < 5) return reply(`﹝You have not enough money to download a song. Money needed: 5$ Your money: ${yourcashsong}$﹞`) 
+	
+let pprrsong = Number(yourcashsong);
+let oorrsong = Number(5);
+let oorpprsong = pprrsong - oorrsong; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${yourcashsong}`, oorpprsticker);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+													
+const delaysong = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delaysong(1000) /// waiting 1 second.					
+															
+const _changedesignmoneysong = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changedesignmoneysong = _changedesignmoneysong[7]	//--- money	
+
+			  
+					reply(`⌯   ﹝Downloading 1/2﹞ \n\nMoney left: ${changedesignmoneysong}$`)
 				
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
@@ -2566,24 +2592,16 @@ case 'tbsong':
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
-					break
-					
-//-- youtube song mp3
-case 'mp3song':
-
-	  
-          if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')					
-			reply('⌯   ﹝Please wait﹞')
 				
-				ran= getRandom('.mp3')
-				exec(`yt-dlp -x --audio-format mp3 -o, --output ${ran} "ytsearch:${value}"`, (err) => {
-													
-						if (err) return reply('Error')
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
-						fs.unlinkSync(ran)
-					})
-					break			
+					
+				
+  
+break								
+					
+					
+					
+					
+						
 
 
 
@@ -2780,13 +2798,9 @@ case 'rmbgs':
 case 'addsticker':
 case 'savesticker':
 
-
-  if (!isVerify) return reply(UserB())
-	  
-   if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture you want to save.﹞')
+  if (!isVerify) return reply(UserB())	  
+  if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture you want to save.﹞')
 	   
-
-
 const _yourcashsticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashsticker = _yourcashsticker[7]	//--- money	
 if (yourcashsticker < 22) return reply(`﹝You have not enough money to change your design. Money needed: 22$ Your money: ${yourcashsticker}$﹞`) 
@@ -2804,9 +2818,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
         console.log('Done!');
     })
 })
-					
-				
-				
+													
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 			
@@ -2826,15 +2838,10 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 					
 
 const delaydesign1sticker = ms => new Promise(resolve => setTimeout(resolve, ms))
-  await delaydesign1sticker(1000) /// waiting 1 second.					
-							
-		
-			
-				
-
+await delaydesign1sticker(1000) /// waiting 1 second.					
+															
 const _changedesignmoney1sticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changedesignmoney1sticker = _changedesignmoney1sticker[7]	//--- money	
-
  
   reply(`⌯   ﹝Saved as your sticker!  .mysticker﹞ \n\nMoney left: ${changedesignmoney1sticker}$`)
   
