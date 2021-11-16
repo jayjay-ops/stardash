@@ -2802,7 +2802,7 @@ case 'addsticker':
 case 'savesticker':
 
   if (!isVerify) return reply(UserB())	  
-  if (!isQuotedImage)  {
+  if (!isQuotedImage)  return  reply(`⌯   ﹝Tag Sticker. Cost: 22$﹞`)
 	   
 const _yourcashsticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashsticker = _yourcashsticker[7]	//--- money	
@@ -2812,7 +2812,7 @@ let pprrsticker = Number(yourcashsticker);
 let oorrsticker = Number(22);
 let oorpprsticker = pprrsticker - oorrsticker; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
+    if (err) throw err; 
 	
     var newValue = data.replace(`${yourcashsticker}`, oorpprsticker);
 	
@@ -2821,7 +2821,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
         console.log('Done!');
     })
 })
-	}												
+													
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 			
