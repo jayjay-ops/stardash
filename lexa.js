@@ -2072,7 +2072,7 @@ const stickerpack = _stickerpack[10]	//--- stickerpack name
 							})
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('StarDash', ${stickerpack})} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('StarDash', '${stickerpack}')} ${ran} -o ${ran}`, async (error) => {
 									if (error) return reply(stick())
 									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)	
@@ -2100,7 +2100,7 @@ const stickerpack = _stickerpack[10]	//--- stickerpack name
 						  })
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('StarDash', ${stickerpack})} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('StarDash', '${stickerpack}')} ${ran} -o ${ran}`, async (error) => {
 									if (error) return reply(stick())
 									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})			
 									fs.unlinkSync(media)
