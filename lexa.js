@@ -2694,8 +2694,25 @@ case 'savesticker':
 	  
    if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture you want to save.﹞')
 
+const _yourcashsticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const yourcashsticker = _yourcashsticker[7]	//--- money	
+if (yourcashsticker < 10) return reply(`﹝You have not enough money to change your design. Money needed: 10$ Your money: ${yourcashsticker}$﹞`) 
+	
+let pprrsticker = Number(changedesignmoney);
+let oorrsticker = Number(25);
+let oorpprsticker = pprrsticker - oorrsticker; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${yourcashsticker}`, oorpprsticker);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
 					
-					   reply('⌯   ﹝Please wait.﹞')
+				
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -2708,14 +2725,24 @@ case 'savesticker':
 				fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Error﹞')
 				
-			reply('⌯   ﹝Saved as your sticker!﹞')
 	
 					})
-					
+
+
+const delaydesign1sticker = ms => new Promise(resolve => setTimeout(resolve, ms))
+  await delaydesign1sticker(1000) /// waiting 1 second.					
 							
-			break	
+		
 			
-			
+				
+
+const _changedesignmoney1sticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changedesignmoney1sticker = _changedesignmoney1sticker[7]	//--- money	
+
+ 
+  reply(`⌯   ﹝Saved as your sticker!  .mysticker﹞ \n\nMoney left: ${changedesignmoney1sticker}$`)
+  
+break			
 
 //-- mysticker
 case 'mysticker':
