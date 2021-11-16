@@ -14,7 +14,7 @@ function kyun(seconds){
 
 
 
-const menu = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, website, shopdmen) => { 
+const menu = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen) => { 
   if (isGroupAdmins){
     admin = "Admin Group"
   } else if (!isGroupAdmins){
@@ -53,7 +53,7 @@ ${shopdmen}   .𝚖𝚎𝚗𝚞 𝚘𝚠𝚗𝚎𝚛
 }
 
 //---
-const menus = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, website, shopdmen) => { 
+const menus = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen) => { 
   return `⇝  ${pushname}
 ⇝   ${prem_}
 ............................
