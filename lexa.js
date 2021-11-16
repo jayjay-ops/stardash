@@ -1700,7 +1700,7 @@ const changedesignmoneyclaim = _changedesignmoneyclaim[7]	//--- money
 
 let pprrclaim = Number(changedesignmoneyclaim);
 let oorrclaim = Number(30);
-let oorpprclaim = pprrclaim - oorrclaim; 
+let oorpprclaim = pprrclaim + oorrclaim; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
