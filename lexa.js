@@ -1665,7 +1665,63 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
   reply(`﹝𝙰𝚍𝚍𝚎𝚍!﹞`)
   
 	break
+
+//-- claim money
+case 'claim': 
+  
+if (!isVerify) return reply(userB())
 	
+
+	
+const _claim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const claim = _claim[12]	//--- claim money
+
+if (claim > 2) return reply(`﹝Already claimed. Check tomorrow.﹞`) 
+
+let claimnow = Number(3);
+
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${claim}`, claimnow);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
+
+ 
+const delaydesignclaim = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delaydesignclaim(1000) /// waiting 1 second.
+				
+const _changedesignmoneyclaim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changedesignmoneyclaim = _changedesignmoneyclaim[7]	//--- money	
+
+let pprrclaim = Number(changedesignmoneyclaim);
+let oorrclaim = Number(30$);
+let oorpprclaim = pprrclaim - oorrclaim; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${changedesignmoney}`, oorpprclaim);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+
+const delaydesign1claims = ms => new Promise(resolve => setTimeout(resolve, ms))
+                await delaydesign1claims(1000) /// waiting 1 second.
+
+const _changedesignmoney1claims = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changedesignmoney1claims = _changedesignmoney1claims[7]	//--- money	
+
+ 
+  reply(`𝚌𝚕𝚊𝚒𝚖𝚎𝚍 𝚖𝚘𝚗𝚎𝚢 💸\n\nMoney left: ${changedesignmoneyclaim}$ + 30$ = ${changedesignmoney1claims}$`)
+  
+	break	
 	
 
 
@@ -3353,7 +3409,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			
 			const userid = Math.floor(Math.random() * 1000000000)
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "empty", "empty", "empty", "empty"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", "empty", "empty", "empty"]`, function (err) {
 				
 				
 		
@@ -3523,7 +3579,7 @@ const me8 = _me[8]	//--- mood
 const me9 = _me[9]	//--- account creation date
 const me10 = _me[10]	//--- stickerpack name
 const me11 = _me[11]	//--- account design
-
+const me12 = _me[12]	//--- claim money
 
 
  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me11} ${me}\n\n𝚗𝚊𝚖𝚎\n${me11} ${me2}\n\n𝚊𝚐𝚎\n${me11} ${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me11} ${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me11} ${me5}\n. . . . . . . . . . . . . . .\n𝚡𝚙\n${me11} ${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me11} ${me7}$\n\n𝚖𝚘𝚘𝚍\n${me11} ${me8}\n\n𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n${me11} ${me10}\n\n𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${me11} .shop\n\n𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${me11} .menu\n\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${me11} ${me9}\n\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n. . . . . . . . . . . . . . .`)
