@@ -2702,7 +2702,7 @@ case 'savesticker':
 			
 				
 				exec(`rm -rf ${sender.split("@")[0]}.webp`)
-				exec(`ffmpeg -i ${media} -vf scale=force_original_aspect_ratio=decrease ${sender.split("@")[0]}.webp`, (err) => {
+				exec(`ffmpeg -i ${media} -vf scale=min(320,iw) :min (320,ih) :force_original_aspect_ratio=decrease ${sender.split("@")[0]}.webp`, (err) => {
 					
 					
 				fs.unlinkSync(media)
