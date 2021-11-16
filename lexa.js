@@ -3380,7 +3380,7 @@ const shopmoney = _shopmoney[7]	//--- money
 		
 
 		
-reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚂𝚑𝚘𝚙\n⌥ 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n✯ 𝚐𝚊𝚖𝚎𝚜\n\n𝚂𝚕𝚘𝚝 𝙶𝚊𝚖𝚎\n➳ cost: 4$\n➳  small win = +8$\n➳  jackpot = +200$\n➳ .slot\n............................\n✯ 𝚜𝚎𝚝𝚝𝚒𝚗𝚐\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎\n➳ cost: 50$\n➳ .changename \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚘𝚓𝚒𝚎\n➳ cost: 100$\n➳ .changeemojie \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 150$\n➳ .changeage\n\n. . . . . . . . . . . . . . .\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n. . . . . . . . . . . . . . .`)	
+reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚂𝚑𝚘𝚙\n⌥ 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n\n𝙵𝚛𝚎𝚎\n>  𝚜𝚎𝚝 𝚂𝚝𝚒𝚌𝚔𝚎𝚛 𝙽𝚊𝚖𝚎\n\n⌥ .stickerpack\n\n>  𝚜𝚎𝚝 𝙼𝚘𝚘𝚍\n⌥ .mood\n\n✯ 𝚐𝚊𝚖𝚎𝚜\n\n𝚂𝚕𝚘𝚝 𝙶𝚊𝚖𝚎\n➳ cost: 4$\n➳  small win = +8$\n➳  jackpot = +200$\n➳ .slot\n............................\n✯ 𝚜𝚎𝚝𝚝𝚒𝚗𝚐\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎\n➳ cost: 50$\n➳ .changename \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚘𝚓𝚒𝚎\n➳ cost: 100$\n➳ .changeemojie \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 150$\n➳ .changeage\n\n. . . . . . . . . . . . . . .\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n. . . . . . . . . . . . . . .`)	
 
 break
 
