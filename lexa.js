@@ -1672,8 +1672,9 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 case 'setupclaim': 
   
 if (!isVerify) return reply(userB())
-	
-if (claim = empty) return {
+	const _claim11 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const claim11 = _claim11[12]	//--- claim money
+if (claim11 = empty) return {
 	
 const _setupclaim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const setupclaim = _setupclaim[12]	//--- claim
