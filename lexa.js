@@ -2685,6 +2685,53 @@ case 'rmbgs':
 							
 			break	
 
+//-- save picture as sticker
+case 'addsticker':
+case 'savesticker':
+
+
+  if (!isVerify) return reply(UserB())
+	  
+   if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture you want to save.﹞')
+
+					
+					   reply('⌯   ﹝Please wait.﹞')
+				
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+			
+				
+				exec(`rm -rf ${sender.split("@")[0]}.webp`)
+				exec(`ffmpeg -i ${media} -preset ultrafast ./userstickers/${sender.split("@")[0]}.webp`, (err) => {
+					
+					
+					
+						fs.unlinkSync(media)
+						if (err) return reply('⌯   ﹝Error﹞')
+				
+			reply('⌯   ﹝Saved as your sticker!﹞')
+	
+					})
+					
+							
+			break	
+			
+			
+
+//-- mysticker
+case 'mysticker':
+case 'mys':
+
+  if (!isVerify) return reply(UserB())
+	  
+
+					buffer = fs.readFileSync(`./userstickers/${sender.split("@")[0]}.webp`)
+					Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
+					
+							
+			break	
+			
+
 case 'beep':
 		
 		
