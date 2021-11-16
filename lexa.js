@@ -1710,9 +1710,9 @@ const _claim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.
 const claim = _claim[12]	//--- claim money
 
 if (claim === 'empty') return reply(`Type  .setupclaim  to get command .claim`)
-if (claim === 'claimed16') return reply(`﹝Already claimed. Check tomorrow.﹞`) 
+if (claim === '16') return reply(`﹝Already claimed. Check tomorrow.﹞`) 
 
-let claimnow = claimed16;
+let claimnow = Number(16);
 
 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
