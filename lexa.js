@@ -1703,16 +1703,16 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 case 'claim': 
   
 if (!isVerify) return reply(userB())
-	if (!isPrem)return reply(ownerB())
+	
 
 	
 const _claim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const claim = _claim[12]	//--- claim money
 
 if (claim === 'empty') return reply(`Type  .setupclaim  to get command .claim`)
-if (claim === '16') return reply(`﹝Already claimed. Check tomorrow.﹞`) 
+if (claim === '17') return reply(`﹝Already claimed. Check tomorrow.﹞`) 
 
-let claimnow = Number(16);
+let claimnow = Number(17);
 
 
 
@@ -1728,13 +1728,13 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 
  
 const delaydesignclaim = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaydesignclaim(1000) /// waiting 1 second.
+await delaydesignclaim(3000) /// waiting 1 second.
 				
 const _changedesignmoneyclaim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changedesignmoneyclaim = _changedesignmoneyclaim[7]	//--- money	
 
 let pprrclaim = Number(changedesignmoneyclaim);
-let oorrclaim = Number(30);
+let oorrclaim = Number(1);
 let oorpprclaim = pprrclaim + oorrclaim; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
@@ -1754,7 +1754,7 @@ const _changedesignmoney1claims = JSON.parse(fs.readFileSync(`./${sender.split("
 const changedesignmoney1claims = _changedesignmoney1claims[7]	//--- money	
 
  
-  reply(`𝚌𝚕𝚊𝚒𝚖𝚎𝚍 𝚖𝚘𝚗𝚎𝚢 💸\n\nMoney left: ${changedesignmoneyclaim}$ + 30$ = ${changedesignmoney1claims}$`)
+  reply(`𝚌𝚕𝚊𝚒𝚖𝚎𝚍 𝚖𝚘𝚗𝚎𝚢 💸\n\nMoney left: ${changedesignmoneyclaim}$ + $ = ${changedesignmoney1claims}$`)
   
 	break	
 	
