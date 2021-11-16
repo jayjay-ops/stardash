@@ -125,7 +125,7 @@ const _request = JSON.parse(fs.readFileSync('./report/request.json'));
 
 
 //-- Help
-const { menu, menus, menusticker, menuowner, menuy, menux, menuagb, menuthree, menu3, menusecret} = require('./help/menu');
+const { menusdes, menusdess, menu, menus, menusticker, menuowner, menuy, menux, menuagb, menuthree, menu3, menusecret} = require('./help/menu');
 
 const { updates, updatesold} = require('./help/updates');
 

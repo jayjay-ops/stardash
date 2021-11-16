@@ -246,4 +246,4 @@ ${shopdmen}   .𝚒𝚖𝚐𝚜𝚝𝚎𝚕𝚕𝚊
 }
 
 
-module.exports = { menudess, menudes, menu, menus, menusticker, menux, menuowner, menuy, menuagb, menuthree, menu3, menusecret}
+module.exports = { menusdess, menusdes, menu, menus, menusticker, menux, menuowner, menuy, menuagb, menuthree, menu3, menusecret}
