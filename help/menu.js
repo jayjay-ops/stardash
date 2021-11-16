@@ -75,7 +75,7 @@ const menus = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime,
   return `⇝  ${pushname}
 ⇝   ${prem_}
 ............................
-${shopdmen}   .𝚜𝚕𝚘𝚝
+${shopdmen}   .𝚜𝚕𝚘𝚝  // 4$   
 ${shopdmen}   .𝚍𝚒𝚌𝚎
 ${shopdmen}   .𝚏𝚕𝚊𝚐
 ${shopdmen}   .𝚎𝚞𝚏𝚕𝚊𝚐
@@ -224,7 +224,7 @@ ${shopdmen}   .𝚛𝚖𝚋𝚐𝚜
 ${shopdmen}   .𝚌𝚊𝚕𝚌
 ............................
 ${shopdmen}   .𝚌𝚘𝚘𝚕
-${shopdmen}   .𝚜𝚘𝚗𝚐
+${shopdmen}   .𝚜𝚘𝚗𝚐  // 5$
 ${shopdmen}   .𝚖𝚙3𝚜𝚘𝚗𝚐
 ${shopdmen}   .𝚛𝚊𝚗𝚍𝚘𝚖𝚜𝚘𝚗𝚐
 `
