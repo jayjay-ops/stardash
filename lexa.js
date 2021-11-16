@@ -1601,6 +1601,36 @@ replyimg(jawab, text, sims, simt)
 break
   
   
+//-- Stickerpack
+case 'setstickerpack': 
+case 'stickername': 
+case 'stickerpack': 
+  
+if (!isVerify) return reply(userB())
+	
+	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 StickerPack name.﹞')
+
+	
+const _setpack = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const setpack = _setpack[10]	//--- stickerpack
+
+let stickernow = args[0];
+
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${setpack}`, stickernow);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
+ 
+  reply(`﹝Changed StickerPack name from *${setpack}* to *${arg[1]}*﹞`)
+  
+	break
+
 //-- Mood
 case 'mood': 
   
@@ -1631,6 +1661,8 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
   reply(`﹝𝙰𝚍𝚍𝚎𝚍!﹞`)
   
 	break
+
+
 
 //-- Slot
 case 'sloter':
