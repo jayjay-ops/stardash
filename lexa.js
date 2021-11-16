@@ -2561,10 +2561,12 @@ if (yourcashsong < 5) return reply(`﹝You have not enough money to download a s
 let pprrsong = Number(yourcashsong);
 let oorrsong = Number(5);
 let oorpprsong = pprrsong - oorrsong; 
+
+
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${yourcashsong}`, oorpprsticker);
+    var newValue = data.replace(`${yourcashsong}`, oorpprsong);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
