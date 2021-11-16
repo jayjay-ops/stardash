@@ -1454,12 +1454,10 @@ case 'premium':
 const _shopdmen = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 shopdmen = _shopdmen[11]	//--- account design
 
-const delaydmen = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaydmen(1000) /// waiting 1 second.
 
-  capt = `☆\nMenu \nUser: ${_user.length}`
+  capt = `☆\nMenu \nDesign: ${shopdmen}`
   thum = await fs.readFileSync('./docs/mrf.jpg').toString('base64')
-  if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen), text, capt, thum)
+  if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, shopdmen), text, capt, thum)
   if (args[0] === 'one' ) {
    return replyimg(menus(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen), text, capt, thum)
   } else if (args[0] === 'sticker' ) {
@@ -1467,7 +1465,7 @@ await delaydmen(1000) /// waiting 1 second.
   } else if (args[0] === 'admin' ) {
     return reply(menux(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen), text, capt, thum)
   } else if (args[0] === 'vip' ) { 
-    return reply(menuy(prefix, tanggal, jam))
+    return reply(menuy(prefix, tanggal, jam, shopdmen))
   } else if (args[0] === 'owner' ) {
     return replyimg(menuowner(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen), text, capt, thum)
   } else if (args[0] === 'agb' ) {
