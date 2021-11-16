@@ -1627,7 +1627,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
     })
 })
  
-  reply(`﹝Changed StickerPack name from *${setpack}* to *${args[1]}*﹞`)
+  reply(`﹝Changed StickerPack name from *${setpack}* to *${value}*﹞`)
   
 	break
 
