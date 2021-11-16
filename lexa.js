@@ -2723,8 +2723,8 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 				
 				exec(`rm -rf ${sender.split("@")[0]}.webp`)
 				exec(`ffmpeg -i ${media} ${sender.split("@")[0]}.webp`, (err) => {
-					
-					exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack1)} ${sender.split("@")[0]}.webp -o ${sender.split("@")[0]}.webp`
+	const eish = ${sender.split("@")[0]}.webp				
+					exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack1)} ${eish} -o ${eish}`
 					
 				fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Error﹞')
