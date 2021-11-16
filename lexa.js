@@ -2805,16 +2805,14 @@ case 'savesticker':
 
 	encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-	  
-  if (!isQuotedImage) {
+	 
 	   
 
  
-  reply(`⌯   ﹝Tag Sticker!﹞`)
+
   
-  }
   
-  else if (!isQuotedSticker) {
+  if (!isQuotedSticker) {
 	  
 	  const _yourcashsticker5 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashsticker5 = _yourcashsticker5[7]	//--- money	
