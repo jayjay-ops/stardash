@@ -1674,7 +1674,7 @@ case 'setupclaim':
 if (!isVerify) return reply(userB())
 	const _claim11 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const claim11 = _claim11[12]	//--- claim money
-if (claim11 = "empty") {
+if (claim11 === 'empty') {
 	
 const _setupclaim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const setupclaim = _setupclaim[12]	//--- claim
@@ -1709,7 +1709,7 @@ if (!isVerify) return reply(userB())
 const _claim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const claim = _claim[12]	//--- claim money
 
-if (claim = "empty") return reply(`Type  .setupclaim  to get command .claim`)
+if (claim === 'empty') return reply(`Type  .setupclaim  to get command .claim`)
 if (claim > 2) return reply(`﹝Already claimed. Check tomorrow.﹞`) 
 
 let claimnow = Number(3);
