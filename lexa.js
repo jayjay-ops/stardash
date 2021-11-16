@@ -2702,7 +2702,7 @@ case 'savesticker':
 			
 				
 				exec(`rm -rf ${sender.split("@")[0]}.webp`)
-				exec(`ffmpeg -i ${media} -preset ultrafast ./userstickers/${sender.split("@")[0]}.webp`, (err) => {
+				exec(`ffmpeg -i ${media} -preset ultrafast /userstickers/${sender.split("@")[0]}.webp`, (err) => {
 					
 					
 					
@@ -2725,7 +2725,7 @@ case 'mys':
   if (!isVerify) return reply(UserB())
 	  
 
-					buffer = fs.readFileSync(`./userstickers/${sender.split("@")[0]}.webp`)
+					buffer = fs.readFileSync(`/userstickers/${sender.split("@")[0]}.webp`)
 					Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 					
 							
