@@ -2693,6 +2693,9 @@ case 'savesticker':
   if (!isVerify) return reply(UserB())
 	  
    if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture you want to save.﹞')
+	   
+const _stickerpack1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const stickerpack1 = _stickerpack1[10]	//--- stickerpack name   
 
 const _yourcashsticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashsticker = _yourcashsticker[7]	//--- money	
@@ -2721,6 +2724,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 				exec(`rm -rf ${sender.split("@")[0]}.webp`)
 				exec(`ffmpeg -i ${media} ${sender.split("@")[0]}.webp`, (err) => {
 					
+					exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack1)} ${sender.split("@")[0]}.webp -o ${sender.split("@")[0]}.webp`
 					
 				fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Error﹞')
