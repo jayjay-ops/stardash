@@ -2731,9 +2731,9 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 				
 	
 					})
-const eish = `${sender.split("@")[0]}.webp`		
+
 	
-					exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack1)} ${eish} -o ${eish}`)
+					exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack1)} ${sender.split("@")[0]}.webp -o ${sender.split("@")[0]}.webp`)
 
 const delaydesign1sticker = ms => new Promise(resolve => setTimeout(resolve, ms))
   await delaydesign1sticker(1000) /// waiting 1 second.					
