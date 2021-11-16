@@ -2698,7 +2698,7 @@ const _yourcashsticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s
 const yourcashsticker = _yourcashsticker[7]	//--- money	
 if (yourcashsticker < 10) return reply(`﹝You have not enough money to change your design. Money needed: 10$ Your money: ${yourcashsticker}$﹞`) 
 	
-let pprrsticker = Number(changedesignmoney);
+let pprrsticker = Number(yourcashsticker);
 let oorrsticker = Number(25);
 let oorpprsticker = pprrsticker - oorrsticker; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
