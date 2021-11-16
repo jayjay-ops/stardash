@@ -164,7 +164,7 @@ const menuy = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime,
 ${shopdmen}   .𝚝𝚊𝚐𝚊𝚕𝚕
 ${shopdmen}   .𝚙𝚒𝚔𝚊 𝚝𝚎𝚡𝚝
 ${shopdmen}   .𝚙𝚒𝚗𝚐
-${shopdmen}   .𝚎𝚡𝚎𝚌𝚞𝚝𝚎
+${shopdmen}   .userdata
 ............................
 ${shopdmen}   .𝚞𝚕𝚝𝚒𝚖𝚊𝚝𝚎𝚛𝚘𝚕𝚕
 ${shopdmen}   .𝚕𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢𝚛𝚘𝚕𝚕

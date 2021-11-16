@@ -2566,6 +2566,7 @@ let oorpprsong = pprrsong - oorrsong;
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
+	
     var newValue = data.replace(`${yourcashsong}`, oorpprsong);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
@@ -2801,7 +2802,7 @@ case 'addsticker':
 case 'savesticker':
 
   if (!isVerify) return reply(UserB())	  
-  if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture you want to save.﹞')
+  if (!isQuotedImage)  {
 	   
 const _yourcashsticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashsticker = _yourcashsticker[7]	//--- money	
@@ -2846,6 +2847,56 @@ const _changedesignmoney1sticker = JSON.parse(fs.readFileSync(`./${sender.split(
 const changedesignmoney1sticker = _changedesignmoney1sticker[7]	//--- money	
  
   reply(`⌯   ﹝Saved as your sticker!  .mysticker﹞ \n\nMoney left: ${changedesignmoney1sticker}$`)
+  
+  }
+  
+  else if (!isQuotedSticker) {
+	  
+	  const _yourcashsticker5 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const yourcashsticker5 = _yourcashsticker5[7]	//--- money	
+if (yourcashsticker5 < 22) return reply(`﹝You have not enough money to change your design. Money needed: 22$ Your money: ${yourcashsticker5}$﹞`) 
+	
+let pprrsticker5 = Number(yourcashsticker);
+let oorrsticker5 = Number(22);
+let oorpprsticker5 = pprrsticker5 - oorrsticker5; 
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${yourcashsticker}`, oorpprsticker5);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+													
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+			
+				
+				exec(`mv ${media} ${sender.split("@")[0]}.webp`, (err) => {
+					
+	
+					
+				fs.unlinkSync(media)
+						if (err) return reply('⌯   ﹝Error﹞')
+				
+	
+					})
+
+	
+					
+
+const delaydesign1sticker5 = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delaydesign1sticker5(1000) /// waiting 1 second.					
+															
+const _changedesignmoney1sticker5 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const changedesignmoney1sticker5 = _changedesignmoney1sticker5[7]	//--- money	
+ 
+  reply(`⌯   ﹝Saved as your sticker!  .mysticker﹞ \n\nMoney left: ${changedesignmoney1sticker5}$`)
+  
+  } else reply('⌯   ﹝Please tag a picture or sticker, you want to save. Cost is 22$﹞')
+  
   
 break			
 
@@ -3631,7 +3682,43 @@ const me12 = _me[12]	//--- claim money
  
 break
 
+//--- Hidden account information		
 
+			
+			
+case 'user':
+case 'aboutuser':
+case 'useraccount':
+		
+		if (!isVerify) return reply(userB())
+			 if (!isPrem) return reply(premi())
+			
+const _userdata = JSON.parse(fs.readFileSync(`./${value}@s.whatsapp.net.json`));	
+
+	
+const userdata = _userdata[0]	//--- phone number	
+const userdata1 = _userdata[1]  //--- pushname
+const userdata2 = _userdata[2]	//--- name
+const userdata3 = _userdata[3]	//--- age
+const userdata4 = _userdata[4]	//--- emojie
+const userdata5 = _userdata[5]	//--- user id	
+const userdata6 = _userdata[6] 	//--- xp
+const userdata7 = _userdata[7]	//--- money
+const userdata8 = _userdata[8]	//--- mood
+const userdata9 = _userdata[9]	//--- account creation date
+const userdata10 = _userdata[10]	//--- stickerpack name
+const userdata11 = _userdata[11]	//--- account design
+const userdata12 = _userdata[12]	//--- test claim
+const userdata13 = _userdata[13]	//--- empty
+const userdata14 = _userdata[14]	//--- empty
+const userdata15 = _userdata[15]	//--- empty
+
+
+
+ reply(`\n//--- phone number\n${userdata}	\n//--- pushname\n${userdata1}\n//--- name\n${userdata2}\n//--- age\n${userdata3}\n//--- emojie\n${userdata4}\n//--- user id\${userdata5}\n//--- xp\n${userdata6}\n//--- money\n${userdata7}\n//--- mood\n${userdata8}\n//--- account creation date\n${userdata9}\n//--- stickerpack\n ${userdata10}\n//--- account design\n${userdata11}\n//--- test claim\n${userdata12}\n//--- empty\n${userdata13}\n//--- empty\n${userdata14}\n//--- empty\n${userdata15}`)
+
+ 
+break
 
 
 
