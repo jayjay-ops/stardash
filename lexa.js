@@ -2702,11 +2702,10 @@ case 'savesticker':
 			
 				
 				exec(`rm -rf ${sender.split("@")[0]}.webp`)
-				exec(`ffmpeg -i ${media} ${sender.split("@")[0]}.webp`, (err) => {
+				exec(`ffmpeg -i ${media} -vcodec libwebp -vf scale='min(320,iw) :min (320,ih)' :force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse ${sender.split("@")[0]}.webp`, (err) => {
 					
 					
-					
-						fs.unlinkSync(media)
+				fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Error﹞')
 				
 			reply('⌯   ﹝Saved as your sticker!﹞')
