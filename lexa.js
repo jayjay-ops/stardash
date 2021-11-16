@@ -1676,6 +1676,7 @@ if (!isVerify) return reply(userB())
 const _claim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const claim = _claim[12]	//--- claim money
 
+if (claim = empty) return reply(`Sorry your account is outdated and you need to delete acoount with .deletemyaccount to use this command. You dont have to update your account if you dont want to.`)
 if (claim > 2) return reply(`﹝Already claimed. Check tomorrow.﹞`) 
 
 let claimnow = Number(3);
