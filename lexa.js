@@ -2801,7 +2801,11 @@ case 'rmbgs':
 case 'addsticker':
 case 'savesticker':
 
-  if (!isVerify) return reply(UserB())	  
+  if (!isVerify) return reply(UserB())	
+
+	encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+	  
   if (!isQuotedImage) {
 	   
 const _yourcashsticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
@@ -2822,8 +2826,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
     })
 })
 													
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+					
 			
 				
 				exec(`rm -rf ${sender.split("@")[0]}.webp`)
@@ -2870,8 +2873,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
     })
 })
 													
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				
 			
 				
 				exec(`Ren “${media}“ “${sender.split("@")[0]}.webp“`, (err) => {
