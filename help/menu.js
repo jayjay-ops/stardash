@@ -12,7 +12,25 @@ function kyun(seconds){
 
 
 
+const menusdess = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen) => { 
+  return `⇝  ${pushname}
+⇝   ${prem_}
+............................
+${shopdmen}   .𝚜𝚝𝚒𝚌𝚔𝚎𝚛
+${shopdmen}   .𝚒𝚖𝚊𝚐𝚎𝚜𝚝𝚒𝚌𝚔𝚎𝚛
+`
 
+}
+
+const menusdes = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen) => { 
+  return `⇝  ${pushname}
+⇝   ${prem_}
+............................
+${shopdmen}   .𝚜𝚝𝚒𝚌𝚔𝚎𝚛
+${shopdmen}   .𝚒𝚖𝚊𝚐𝚎𝚜𝚝𝚒𝚌𝚔𝚎𝚛
+`
+
+}
 
 const menu = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen) => { 
   if (isGroupAdmins){
@@ -228,4 +246,4 @@ ${shopdmen}   .𝚒𝚖𝚐𝚜𝚝𝚎𝚕𝚕𝚊
 }
 
 
-module.exports = { menu, menus, menusticker, menux, menuowner, menuy, menuagb, menuthree, menu3, menusecret}
+module.exports = { menudess, menudes, menu, menus, menusticker, menux, menuowner, menuy, menuagb, menuthree, menu3, menusecret}
