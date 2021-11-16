@@ -1454,6 +1454,9 @@ case 'premium':
 const _shopdmen = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 shopdmen = _shopdmen[11]	//--- account design
 
+const delaydmen = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delaydmen(1000) /// waiting 1 second.
+
   capt = `☆\nMenu \nUser: ${_user.length}`
   thum = await fs.readFileSync('./docs/mrf.jpg').toString('base64')
   if (args.length < 1) return replyimg(menu(tanggal, jam, pushname, sender, prem_, Lxa, prefix, _user, uptime, isGroupAdmins, groupMetadata, groupAdmins, Welcome_, AntiLink_, isGroup, process, shopdmen), text, capt, thum)
