@@ -2812,7 +2812,7 @@ case 'savesticker':
 
   
   
-  if (!isQuotedSticker) {
+  if (!isQuotedSticker) return  reply('⌯   ﹝Please tag a  sticker, you want to save. Cost is 22$﹞')
 	  
 	  const _yourcashsticker5 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashsticker5 = _yourcashsticker5[7]	//--- money	
@@ -2856,7 +2856,7 @@ const changedesignmoney1sticker5 = _changedesignmoney1sticker5[7]	//--- money
  
   reply(`⌯   ﹝Saved as your sticker!  .mysticker﹞ \n\nMoney left: ${changedesignmoney1sticker5}$`)
   
-  } else reply('⌯   ﹝Please tag a  sticker, you want to save. Cost is 22$﹞')
+ 
   
   
 break			
