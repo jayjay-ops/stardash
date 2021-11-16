@@ -2821,7 +2821,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
         console.log('Done!');
     })
 })
-													
+	}												
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 			
@@ -2839,7 +2839,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 
 	
 					
-}
+
 
 const delaydesign1sticker = ms => new Promise(resolve => setTimeout(resolve, ms))
 await delaydesign1sticker(1000) /// waiting 1 second.					
