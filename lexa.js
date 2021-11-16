@@ -2722,19 +2722,18 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 			
 				
 				exec(`rm -rf ${sender.split("@")[0]}.webp`)
-				exec(`ffmpeg -i ${media} ${sender.split("@")[0]}.webp`)
+				exec(`ffmpeg -i ${media} ${sender.split("@")[0]}.webp`, (err) => {
 					
 	
 					
 				fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Error﹞')
-							
-				const eish = `${sender.split("@")[0]}.webp`		
-	
-					exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack1)} ${eish} -o ${eish}`)
+				
 	
 					})
-
+const eish = `${sender.split("@")[0]}.webp`		
+	
+					exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack1)} ${eish} -o ${eish}`
 
 const delaydesign1sticker = ms => new Promise(resolve => setTimeout(resolve, ms))
   await delaydesign1sticker(1000) /// waiting 1 second.					
