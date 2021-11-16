@@ -2052,6 +2052,10 @@ break
 case 'stiker': case 's': case 'stikergif':
 case 'sticker': case 'stickergif': case 'sgif':
   if (!isVerify) return reply(userB())
+	  
+const _stickerpack = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const stickerpack = _stickerpack[10]	//--- stickerpack name
+
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -2068,7 +2072,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 							})
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('StarDash', pushname)} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('StarDash', ${stickerpack})} ${ran} -o ${ran}`, async (error) => {
 									if (error) return reply(stick())
 									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)	
@@ -2096,7 +2100,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 						  })
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('StarDash', pushname)} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('StarDash', ${stickerpack})} ${ran} -o ${ran}`, async (error) => {
 									if (error) return reply(stick())
 									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})			
 									fs.unlinkSync(media)
@@ -3232,7 +3236,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			
 			const userid = Math.floor(Math.random() * 1000000000)
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}", "NoName"]`, function (err) {
 				
 				
 		
@@ -3313,7 +3317,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 			
 
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "1", "100", "-", "${tanggal()}"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "1", "100", "-", "${tanggal()}", "NoName"]`, function (err) {
 
 				
 
@@ -3341,6 +3345,8 @@ case 'shop':
 
 const _shopmoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const shopmoney = _shopmoney[7]	//--- money
+		
+
 		
 reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚂𝚑𝚘𝚙\n⌥ 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n✯ 𝚐𝚊𝚖𝚎𝚜\n\n𝚂𝚕𝚘𝚝 𝙶𝚊𝚖𝚎\n➳ cost: 4$\n➳  small win = +8$\n➳  jackpot = +200$\n➳ .slot\n............................\n✯ 𝚜𝚎𝚝𝚝𝚒𝚗𝚐\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎\n➳ cost: 50$\n➳ .changename \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚘𝚓𝚒𝚎\n➳ cost: 100$\n➳ .changeemojie \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 150$\n➳ .changeage\n\n............................\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n...........................`)	
 
@@ -3372,6 +3378,8 @@ case 'myaccount':
 			
 const _me = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 
+
+
 	
 const me = _me[0]	//--- phone number	
 const me1 = _me[1]  //--- pushname
@@ -3383,9 +3391,10 @@ const me6 = _me[6] 	//--- xp
 const me7 = _me[7]	//--- money
 const me8 = _me[8]	//--- mood
 const me9 = _me[9]	//--- account creation date
+const me10 = _me[10]	//--- stickerpack name
 
 
-  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n⌥ ${me}\n\n𝚗𝚊𝚖𝚎\n⌥ ${me2}\n\n𝚊𝚐𝚎\n⌥ ${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n⌥ ${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n⌥ ${me5}\n............................\n𝚡𝚙\n⌥ ${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n⌥ ${me7}$\n\n𝚖𝚘𝚘𝚍\n⌥ ${me8}\n\n𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n⌥ .shop\n\n𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n⌥ .menu\n\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n⌥ ${me9}\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
+  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n⌥ ${me}\n\n𝚗𝚊𝚖𝚎\n⌥ ${me2}\n\n𝚊𝚐𝚎\n⌥ ${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n⌥ ${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n⌥ ${me5}\n............................\n𝚡𝚙\n⌥ ${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n⌥ ${me7}$\n\n𝚖𝚘𝚘𝚍\n⌥ ${me8}\n\n𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n⌥ ${me10}\n\n𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n⌥ .shop\n\n𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n⌥ .menu\n\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n⌥ ${me9}\n\n............................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n...........................\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n...........................`)
 
  
 break
