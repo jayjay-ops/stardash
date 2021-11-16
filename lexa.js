@@ -2694,8 +2694,7 @@ case 'savesticker':
 	  
    if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture you want to save.﹞')
 	   
-const _stickerpack1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const stickerpack1 = _stickerpack1[10]	//--- stickerpack name   
+
 
 const _yourcashsticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashsticker = _yourcashsticker[7]	//--- money	
@@ -2733,7 +2732,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 					})
 
 	
-					exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack1)} ${sender.split("@")[0]}.webp -o ${sender.split("@")[0]}.webp`)
+					
 
 const delaydesign1sticker = ms => new Promise(resolve => setTimeout(resolve, ms))
   await delaydesign1sticker(1000) /// waiting 1 second.					
