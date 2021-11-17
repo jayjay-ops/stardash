@@ -4173,6 +4173,8 @@ break
 
 case 'deletemyaccount':
 
+if (!isVerify) return reply(userB())
+	
 reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *can register* again! To delete your account type:   .iamsure  ')
 
 
@@ -4182,7 +4184,60 @@ break
 
 case 'iamsure':
 
+if (!isVerify) return reply(userB())
 
+const _iamsure = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+
+
+
+	
+const iamsure = _iamsure[0]	//--- phone number	
+const iamsure1 = _iamsure[1]  //--- pushnaiamsure
+const iamsure2 = _iamsure[2]	//--- naiamsure
+const iamsure3 = _iamsure[3]	//--- age
+const iamsure4 = _iamsure[4]	//--- emojie
+const iamsure5 = _iamsure[5]	//--- user id	
+const iamsure6 = _iamsure[6] 	//--- xp
+const iamsure7 = _iamsure[7]	//--- money
+const iamsure8 = _iamsure[8]	//--- mood
+const iamsure9 = _iamsure[9]	//--- account creation date
+const iamsure10 = _iamsure[10]	//--- stickerpack naiamsure
+const iamsure11 = _iamsure[11]	//--- account design
+const iamsure12 = _iamsure[12]	//--- claim money
+const iamsure13 = _iamsure[13]	//--- Email
+const iamsure14 = _iamsure[14]	//--- Email verified
+
+
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  auth: {
+    user: 'stardashnotification@gmail.com',
+    pass: 'stardash20%'
+  },
+});
+
+transporter.verify().then(console.log).catch(console.error);
+
+
+var mailOptions = {
+  from: 'stardashnotification@gmail.com',
+  to: `${args[3]}`,
+  subject: `StarDash Account deleted ${pushname}`,
+  text: `Your account has been deleted sucessfully and all ur information has been deleted. \n\n If you want to register again then use the coammnd    .verifyagain`
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Delete account Email sent: ' + info.response);
+  }
+});
+			
+			
+					
 
 fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
   if (err) throw err;
