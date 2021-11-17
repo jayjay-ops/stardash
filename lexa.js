@@ -1935,6 +1935,49 @@ case 'w':
   const truth = _truth[Math.floor(Math.random() * _truth.length)]
   reply(`★ *Wahrheit*\n${truth}`)
 break
+
+
+//-- email
+case 'email':
+
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'stardashpola@gmail.com',
+    pass: 'johannw2004'
+  }
+});
+
+var mailOptions = {
+  from: 'stardashpola@gmail.com',
+  to: 'myfriend@yahoo.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //-- Fakt
 case 'fakt':
 case 'fakten':
