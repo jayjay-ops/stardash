@@ -4225,7 +4225,7 @@ var mailOptions = {
   from: 'stardashnotification@gmail.com',
   to: `${iamsure13}`,
   subject: `${iamsure11} StarDash Account deleted ${pushname}`,
-  text: `Your account has been deleted sucessfully and all ur information has been deleted. \n\n If you want to register again then use the coammnd    .verifyagain`
+  text: `Your account has been deleted sucessfully and all ur information has been deleted forever. \n\nTo register agian type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com`
 };
 
 transporter.sendMail(mailOptions, function(error, info){
@@ -4242,7 +4242,7 @@ transporter.sendMail(mailOptions, function(error, info){
 fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
   if (err) throw err;
   console.log('File deleted!');
-  reply('Your account has been *sucessfully deleted.* When typing .myaccount  , everything will be gone. However you can still use commands as if registered, but Errors may occur. To register new type \n\n.verifyagain')
+  reply('Your account has been *sucessfully deleted.* When typing .myaccount   everything will be gone. However you can still use commands as if registered, but Errors may occur. To register agian type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com')
 });
 
 
