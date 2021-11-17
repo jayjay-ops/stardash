@@ -3679,13 +3679,13 @@ if (!isVerify) return reply(userB())
 	 if (!isOwner) return reply(ownerB())
 	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 data﹞')
 
+
 	
 const _changedata = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changedata = _changedata args[0]	//--- changedata
+const changedata = _changedata Number(args[0]);	//--- changedata
 
 
-
-let newwdata = args[1];
+let newwdata = ${args[1]};
 
 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
