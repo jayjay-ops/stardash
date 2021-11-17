@@ -3687,8 +3687,9 @@ let xx = args[0];
 let xxx = '['
 let xxxx = ']'
 let yy = "_changedata";
-let changedata = yy + xxx + xx + xxxx;
+let changedata1 = yy + xxx + xx + xxxx;
 
+const changedata = changedata1
 
 reply(`﹝${changedata}﹞`)
 
