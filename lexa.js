@@ -1944,13 +1944,13 @@ case 'email':
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'stardashpola@gmail.com',
-    pass: 'johannw2004'
+    user: 'stardashnotification@gmail.com',
+    pass: 'stardash20%'
   }
 });
 
 var mailOptions = {
-  from: 'stardashpola@gmail.com',
+  from: 'stardashnotification@gmail.com',
   to: 'johannimus2004@gmail.com',
   subject: 'Sending Email using Node.js',
   text: 'That was easy!'
