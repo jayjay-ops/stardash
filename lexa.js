@@ -3683,7 +3683,7 @@ if (!isVerify) return reply(userB())
 	
 const _changedata = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));
 
-let xx = '${args[0]}';
+let xx = args[0];
 let xxx = '['
 let xxxx = ']'
 let yy = "_changedata";
