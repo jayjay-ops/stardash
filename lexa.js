@@ -3769,10 +3769,7 @@ const emailss14 = _emailss[14]	//--- Email verified
 
 
 
-let xq = 'id' + Number(args[0]);
-let yq = 'id' + Number(emailss5);
-
-	if (xq === yq) return    reply('hi')
+if (args.length > 1) {
 	
  
 
@@ -3800,7 +3797,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 		
 		
    reply(`⌯  ﹝Email sucessfully verified!﹞`); 
- 
+}
 
 break
 
