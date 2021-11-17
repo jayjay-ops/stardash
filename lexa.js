@@ -3746,7 +3746,6 @@ case 'code':
 if (!isVerify) return reply(UserB())
 if (args.length < 1) return reply('⌯   ﹝Enter the code from the Email you got send to.')
 
-	
 const _emailss = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 
 
@@ -3770,7 +3769,12 @@ const emailss14 = _emailss[14]	//--- Email verified
 
 
 
+let xq = 'id' + Number(args[0]);
+let yq = 'id' + Number(emailss5);
 
+	if (xq === yq) {
+	
+   reply('hi'); 
 
 
 
@@ -3779,7 +3783,7 @@ const emailss14 = _emailss[14]	//--- Email verified
 const verifyemail = _verifyemail[14]
 
 
-reply(`⌯  ﹝Email sucessfully verified!﹞`); 
+
 
 let newwdatae = `verified`
 
@@ -3795,7 +3799,10 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 	})
 		
 		
-   
+   reply(`⌯  ﹝Email sucessfully verified!﹞`); 
+  } else {
+	  reply(`⌯  ﹝Wrong code. Look in the Email and send it like this   .code 241265 ﹞`); 
+  }
 
 break
 
