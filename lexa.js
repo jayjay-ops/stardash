@@ -3667,7 +3667,7 @@ const userdata15 = _userdata[15]	//--- empty
 
 
 
- reply(`\n//--- phone number\n${userdata}	\n\n//--- pushname\n${userdata1}\n\n//--- name\n${userdata2}\n\n//--- age\n${userdata3}\n\n//--- emojie\n${userdata4}\n\n//--- user id\n${userdata5}\n\n//--- xp\n${userdata6}\n\n//--- money\n${userdata7}\n\n//--- mood\n${userdata8}\n\n//--- account creation date\n${userdata9}\n\n//--- stickerpack\n ${userdata10}\n\n//--- account design\n${userdata11}\n\n//--- test claim\n${userdata12}\n\n//--- empty\n${userdata13}\n\n//--- empty\n${userdata14}\n\n//--- empty\n${userdata15}`)
+ reply(`\n//--- phone number\n${userdata}	\n\n//--- pushname\n${userdata1}\n\n//--- name\n${userdata2}\n\n//--- age\n${userdata3}\n\n//--- emojie\n${userdata4}\n\n//--- user id\n${userdata5}\n\n//--- xp\n${userdata6}\n\n//--- money\n${userdata7}\n\n//--- mood\n${userdata8}\n\n//--- account creation date\n${userdata9}\n\n//--- stickerpack\n ${userdata10}\n\n//--- account design\n${userdata11}\n\n//--- empty\n${userdata12}\n\n//--- empty\n${userdata13}\n\n//--- empty\n${userdata14}\n\n//--- empty\n${userdata15}`)
 
  
 break
