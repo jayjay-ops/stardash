@@ -4225,7 +4225,7 @@ var mailOptions = {
   from: 'stardashnotification@gmail.com',
   to: `${iamsure13}`,
   subject: `${iamsure11} StarDash Account deleted ${pushname}`,
-  text: `Your account has been deleted sucessfully and all ur information has been deleted forever. \n\nTo register agian type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com`
+  text: `Deer user ${iamsure2}\n\nYour account has been deleted sucessfully and all ur information has been deleted forever. \n\nTo register again type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com\n\nStarDash Team`
 };
 
 transporter.sendMail(mailOptions, function(error, info){
@@ -4237,7 +4237,7 @@ transporter.sendMail(mailOptions, function(error, info){
 });
 			
 			
-					
+fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.webp`)					
 
 fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
   if (err) throw err;
