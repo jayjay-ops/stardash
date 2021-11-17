@@ -3681,7 +3681,7 @@ if (!isVerify) return reply(userB())
 
 	
 const _changedata = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changedata = _changedata[${args[0]}]	//--- changedata
+const changedata = _changedata[args[0]]	//--- changedata
 
 let newwdata = args[1];
 
