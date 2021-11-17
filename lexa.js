@@ -2850,7 +2850,7 @@ case 'addsticker':
 case 'savesticker':
 
   if (!isVerify) return reply(UserB())	  
-  if (!isQuotedImage)  return  reply(`⌯   ﹝Tag Sticker. Cost: 22$﹞`)
+  if (!isQuotedImage)  return  reply(`⌯   ﹝Tag Image. Cost: 22$﹞`)
 	   
 const _yourcashsticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashsticker = _yourcashsticker[7]	//--- money	
