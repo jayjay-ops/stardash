@@ -1940,8 +1940,8 @@ break
 //-- email
 case 'email':
 
-const nodemailer = require('nodemailer');
-const transporter = nodemailer.createTransport({
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 587,
   auth: {
@@ -3465,8 +3465,8 @@ case 'daftar':
 case 'registrieren':
 case 'register':
 			if (isVerify) return reply('⌯   ﹝𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍.﹞') 
-				if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age and favorite emoji﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n .register StarDash 16 🐺`)
-			    if (args.length > 3) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
+				if (args.length < 4) return reply(`⌯   ﹝Please register with your first name, age, favorite emoji and email adress﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n\n .register StarDash 16 🐺 StarDash@gmail.com`)
+			    if (args.length > 4) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
 				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
 	
 				if (args[1] < 12) return reply(`⌯   ﹝Sorry kid. You are too young.﹞`)
@@ -3504,7 +3504,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			
 			const userid = Math.floor(Math.random() * 1000000000)
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", "empty", "empty", "empty"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", "${args[3]}", "notverified", "empty"]`, function (err) {
 				
 				
 		
@@ -3514,7 +3514,33 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 });
 					
 			
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  auth: {
+    user: 'stardashnotification@gmail.com',
+    pass: 'stardash20%'
+  },
+});
 
+transporter.verify().then(console.log).catch(console.error);
+
+
+var mailOptions = {
+  from: 'stardashnotification@gmail.com',
+  to: '${args[3]}',
+  subject: 'Account registered! ${pushname}',
+  text: 'Your account was sucessfully created with the name ${args[0]}. You can find the details in whatsapp under command: .me  Please verify your email adress by sending this message to bot:    .code ${userid}'
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
 			
 			
 
@@ -3531,11 +3557,11 @@ case 'verifyagain':
 
 	
 
-	if (args.length < 3) return reply(`Please register with your first name, age and favorite emoji\n\n⚠️ Still in BETA. You may have to register soon again.\n\n*Example*\n\n .verifyagain StarDash 16 🐺`)
+if (args.length < 4) return reply(`⌯   ﹝Please register with your first name, age, favorite emoji and email adress﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n\n .verifyagaian StarDash 16 🐺 StarDash@gmail.com`)
+			    if (args.length > 4) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
 
 
 
-			    if (args.length > 3) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
 
 				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
 
@@ -3585,7 +3611,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 			
 
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", "empty", "empty", "empty"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", "${args[3]}", "notverified", "empty"]`, function (err) {
 
 				
 
