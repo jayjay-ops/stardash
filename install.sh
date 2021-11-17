@@ -18,6 +18,7 @@ wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-oc
 npm i imgbb-uploader
 npm i
 pip install -U yt-dlp
+npm install nodemailer
 
 apt-get install espeak
 node index
