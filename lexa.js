@@ -3557,7 +3557,7 @@ case 'verifyagain':
 
 	
 
-if (args.length < 4) return reply(`⌯   ﹝Please register with your first name, age, favorite emoji and email adress﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n\n .verifyagaian StarDash 16 🐺 StarDash@gmail.com`)
+if (args.length < 3) return reply(`⌯   ﹝Please register with your first name, age, favorite emoji and email adress﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n\n .verifyagaian StarDash 16 🐺 StarDash@gmail.com`)
 			    if (args.length > 4) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
 
 
