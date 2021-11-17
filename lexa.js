@@ -3676,7 +3676,7 @@ break
 case 'changedata': 
   
 if (!isVerify) return reply(userB())
-	
+	 if (!isOwner) return reply(ownerB())
 	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 data﹞')
 
 	
