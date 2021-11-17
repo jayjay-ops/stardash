@@ -3744,7 +3744,7 @@ break
 case 'code':
 
 if (!isVerify) return reply(UserB())
-if (args.length < 1) return reply('⌯   ﹝Enter the code from the Email you got send to.')
+if (args.length < 1) return reply('⌯   Enter the code from the Email you got send to.')
 
 const _emailss = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 
@@ -3797,7 +3797,9 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 		
 		
    reply(`⌯  ﹝Email sucessfully verified!﹞`); 
-}
+} else {
+						reply(`⌯   ﹝wrong code﹞`)
+					}
 
 break
 
