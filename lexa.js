@@ -3800,9 +3800,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 		
 		
    reply(`⌯  ﹝Email sucessfully verified!﹞`); 
-  } else {
-	  reply(`⌯  ﹝Wrong code. Look in the Email and send it like this   .code 241265 ﹞`); 
-  }
+  } 
 
 break
 
