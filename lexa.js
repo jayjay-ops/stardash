@@ -1940,14 +1940,18 @@ break
 //-- email
 case 'email':
 
-
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
+const nodemailer = require('nodemailer');
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
   auth: {
     user: 'stardashnotification@gmail.com',
     pass: 'stardash20%'
-  }
+  },
 });
+
+
+
 
 var mailOptions = {
   from: 'stardashnotification@gmail.com',
@@ -1973,7 +1977,7 @@ transporter.sendMail(mailOptions, function(error, info){
 
 
 
-
+break
 
 
 
