@@ -3531,16 +3531,16 @@ var mailOptions = {
   from: 'stardashnotification@gmail.com',
   to: `${args[3]}`,
   subject: `StarDash Account registered! ${pushname}`,
-  text: `Deer User ${pushname},
+  text: `Dear User ${pushname},
   
-  Your account was sucessfully created with the name ${args[0]}. 
-  You can find the details in whatsapp under command: .me  
+Your account was sucessfully created with the name ${args[0]}. 
+You can find the details in whatsapp under command: .me  
   
-  Please verify your email adress by sending this message to bot (.code with number):    
+Please verify your email adress by sending this message to bot (.code with number):    
   
-  .code ${userid}
+            .code ${userid}
   
-  StarDash Team`
+StarDash Team`
 };
 
 transporter.sendMail(mailOptions, function(error, info){
@@ -3651,16 +3651,16 @@ var mailOptions = {
   from: 'stardashnotification@gmail.com',
   to: `${args[3]}`,
   subject: `StarDash Account registered! ${pushname}`,
-  text: `Deer User ${pushname},
+  text: `Dear User ${pushname},
   
-  Your account was sucessfully re- created with the name ${args[0]}. 
-  You can find the details in whatsapp under command: .me  
+Your account was sucessfully re- created with the name ${args[0]}. 
+You can find the details in whatsapp under command: .me  
   
-  Please verify your email adress by sending this message to bot (.code with number):    
+Please verify your email adress by sending this message to bot (.code with number):    
   
-  .code ${userid2}
+                 .code ${userid2}
   
-  StarDash Team`
+StarDash Team`
 };
 
 transporter.sendMail(mailOptions, function(error, info){
@@ -4270,7 +4270,7 @@ var mailOptions = {
   from: 'stardashnotification@gmail.com',
   to: `${iamsure13}`,
   subject: `${iamsure11} StarDash Account deleted ${pushname}`,
-  text: `Deer user ${iamsure2},\n\nYour account has been deleted sucessfully and all ur information has been deleted forever. \n\nTo register again type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com\n\nStarDash Team`
+  text: `Dear user ${iamsure2},\n\nYour account has been deleted sucessfully and all ur information has been deleted forever. \n\nTo register again type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com\n\nStarDash Team`
 };
 
 transporter.sendMail(mailOptions, function(error, info){
