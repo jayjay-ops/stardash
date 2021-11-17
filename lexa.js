@@ -3504,7 +3504,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			
 			const userid = Math.floor(Math.random() * 1000000000)
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", "${args[3]}", "notverified", "empty"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", "${args[3]}", "⚠️ notverified Check your Email!", "empty"]`, function (err) {
 				
 				
 		
@@ -3611,7 +3611,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 			
 
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", "${args[3]}", "notverified", "empty"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", "${args[3]}", "⚠️ notverified Check your Email!", "empty"]`, function (err) {
 
 				
 
@@ -3732,9 +3732,11 @@ const me12 = _me[12]	//--- claim money
 const me13 = _me[13]	//--- Email
 const me14 = _me[14]	//--- Email verified
 
- reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me11} ${me}\n\n𝚗𝚊𝚖𝚎\n${me11} ${me2}\n\n𝚊𝚐𝚎\n${me11} ${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me11} ${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me11} ${me5}\n. . . . . . . . . . . . . . .\n𝚡𝚙\n${me11} ${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me11} ${me7}$\n\n𝚖𝚘𝚘𝚍\n${me11} ${me8}\n\n𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n${me11} ${me10}\n\n𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${me11} .shop\n\n𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${me11} .menu\n\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${me11} ${me9}\n\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n. . . . . . . . . . . . . . .`)
+ reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me11} ${me}\n\n𝚗𝚊𝚖𝚎\n${me11} ${me2}\n\n𝚊𝚐𝚎\n${me11} ${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me11} ${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me11} ${me5}\n. . . . . . . . . . . . . . .\n𝚡𝚙\n${me11} ${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me11} ${me7}$\n\n𝚖𝚘𝚘𝚍\n${me11} ${me8}\n\n𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n${me11} ${me10}\n\n𝚎𝚖𝚊𝚒𝚕\n${me11} ${me13} \n𝚎𝚖𝚊𝚒𝚕 𝚒𝚗𝚏𝚘\n${me11} ${me14}\n\n𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${me11} .shop\n\n𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${me11} .menu\n\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${me11} ${me9}\n\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n. . . . . . . . . . . . . . .`)
 
- 
+
+
+
 break
 
 //-- verify email
@@ -3766,12 +3768,12 @@ const emailss13 = _emailss[13]	//--- Email
 const emailss14 = _emailss[14]	//--- Email verified
 
 
-if (args[0] === `${me11}` ) {
+if (args[0] === `${emailss11}` ) {
 		
 	const _verifyemail = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));
 const verifyemail = _verifyemail[14]
 
-reply(`﹝${changedata}﹞`)
+
 
 
 let newwdatae = `verified`
@@ -3831,6 +3833,8 @@ const userdata15 = _userdata[15]	//--- empty
 
 
  reply(`\n//--- phone number 0\n${userdata}	\n\n//--- pushname  \n${userdata1}\n\n//--- name \n${userdata2}\n\n//--- age 3\n${userdata3}\n\n//--- emojie 4\n${userdata4}\n\n//--- user id 5\n${userdata5}\n\n//--- xp 6\n${userdata6}\n\n//--- money 7\n${userdata7}\n\n//--- mood 8\n${userdata8}\n\n//--- account creation date 9\n${userdata9}\n\n//--- stickerpack 10\n ${userdata10}\n\n//--- account design 11\n${userdata11}\n\n//--- empty 12\n${userdata12}\n\n//--- empty 13\n${userdata13}\n\n//--- empty 14\n${userdata14}\n\n//--- empty 15\n${userdata15}\n\nchange detail with .changedata DataNumber NewNumber`)
+
+
 
  
 break
