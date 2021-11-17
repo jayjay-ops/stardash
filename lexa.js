@@ -3642,7 +3642,7 @@ var mailOptions = {
   from: 'stardashnotification@gmail.com',
   to: `${args[3]}`,
   subject: `Account registered! ${pushname}`,
-  text: `Your account was sucessfully created with the name ${args[0]}. You can find the details in whatsapp under command: .me  Please verify your email adress by sending this message to bot:    .code ${userid}`
+  text: `Your account was sucessfully created with the name ${args[0]}. You can find the details in whatsapp under command: .me  Please verify your email adress by sending this message to bot:    .code ${userid2}`
 };
 
 transporter.sendMail(mailOptions, function(error, info){
