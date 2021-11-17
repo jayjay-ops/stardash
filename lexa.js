@@ -3781,7 +3781,7 @@ let newwdatae = `verified`
 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
-	
+	)
     var newValue = data.replace(`${verifyemail}`, newwdatae);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
