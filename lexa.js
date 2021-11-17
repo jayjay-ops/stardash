@@ -4223,8 +4223,8 @@ transporter.verify().then(console.log).catch(console.error);
 
 var mailOptions = {
   from: 'stardashnotification@gmail.com',
-  to: `${args[3]}`,
-  subject: `StarDash Account deleted ${pushname}`,
+  to: `${iamsure13}`,
+  subject: `${iamsure11} StarDash Account deleted ${pushname}`,
   text: `Your account has been deleted sucessfully and all ur information has been deleted. \n\n If you want to register again then use the coammnd    .verifyagain`
 };
 
