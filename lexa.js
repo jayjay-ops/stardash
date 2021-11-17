@@ -3772,7 +3772,7 @@ const emailss14 = _emailss[14]	//--- Email verified
 let xq = Number(args[0]);
 let yq = Number(emailss5);
 
-	if (xq === yq) {
+	if (xq === `${emailss5}`) {
 	
    reply('hi'); 
 
