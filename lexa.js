@@ -484,6 +484,33 @@ reply('I wana live in Korea😭💜')
 reply('Taes wifey💜💍✨😫')
 reply('🤕💜')
 }
+
+switch(is) {
+case '🖇️':
+reply('𝚃𝚎𝚛𝚖𝚜 𝚘𝚏 𝚂𝚎𝚛𝚟𝚒𝚌𝚎
+
+𝘞𝘩𝘢𝘵 𝘪𝘴 𝘨𝘦𝘵𝘵𝘪𝘯𝘨 𝘴𝘢𝘷𝘦𝘥 𝘸𝘩𝘦𝘯 𝘪 𝘳𝘦𝘨𝘪𝘴𝘵𝘦𝘳?
+
+StarDash stores your pushname, name, age, emojie, account creation date, phone number and email adresse. 
+Other then that it saves your money, xp, mood, stickerpack name, id, email info and saved image.
+
+You can always delete your account, after created with the command, .deletemyaccount
+
+𝘞𝘩𝘰 𝘤𝘢𝘯 𝘷𝘪𝘦𝘸 𝘮𝘺 𝘥𝘢𝘵𝘢?
+
+Only you can see it, when typing  .myaccount or other commands. However if you do it in the group, all group members can see. 
+For technical problems, the Server Host (owner) can also view and change them.
+
+𝑀𝑎𝑑𝑒 𝑖𝑛 𝐺𝑒𝑟𝑚𝑎𝑛𝑦')
+}
+
+
+
+
+
+
+
+
 //--Auto response
 switch(is) {
 case '.nata':
@@ -3465,14 +3492,14 @@ case 'daftar':
 case 'registrieren':
 case 'register':
 			if (isVerify) return reply('⌯   ﹝𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍.﹞') 
-				if (args.length < 4) return reply(`_By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
+				if (args.length < 4) return reply(`By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
 
 If registering doesnt work then correct your mistakes and leave space between each word
 . . . . . . . . . . . . . . .
 
 Please add your first name, age, favorite emojie, email adress
 
-Example:_
+Example:
 
 .register StarDash 16 ✨ stardash@gmail.com
 
@@ -3577,14 +3604,14 @@ case 'verifyagain':
 
 	
 
-if (args.length < 4) return reply(`_By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
+if (args.length < 4) return reply(`By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
 
 If registering doesnt work then correct your mistakes and leave space between each word
 . . . . . . . . . . . . . . .
 
 Please add your first name, age, favorite emojie, email adress
 
-Example:_
+Example:
 
 .register StarDash 16 ✨ stardash@gmail.com
 
