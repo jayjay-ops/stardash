@@ -3772,11 +3772,11 @@ const emailss14 = _emailss[14]	//--- Email verified
 let xq = 'id' + Number(args[0]);
 let yq = 'id' + Number(emailss5);
 
-	if (xq === yq) {
+	if (xq === yq) return {
 	
    reply('hi'); 
 
-}
+
 
 		
 	const _verifyemail = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));
