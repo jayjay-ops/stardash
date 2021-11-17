@@ -3624,6 +3624,34 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
   if (err) throw err;
 
   console.log('Account Opend.');
+  
+  var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  auth: {
+    user: 'stardashnotification@gmail.com',
+    pass: 'stardash20%'
+  },
+});
+
+transporter.verify().then(console.log).catch(console.error);
+
+
+var mailOptions = {
+  from: 'stardashnotification@gmail.com',
+  to: `${args[3]}`,
+  subject: `Account registered! ${pushname}`,
+  text: `Your account was sucessfully created with the name ${args[0]}. You can find the details in whatsapp under command: .me  Please verify your email adress by sending this message to bot:    .code ${userid}`
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
 
 });
 
