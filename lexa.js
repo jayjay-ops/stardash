@@ -3531,15 +3531,15 @@ var mailOptions = {
   from: 'stardashnotification@gmail.com',
   to: `${args[3]}`,
   subject: `StarDash Account registered! ${pushname}`,
-  text: `Deer User ${pushname},
-  
-  Your account was sucessfully created with the name ${args[0]}. 
-  You can find the details in whatsapp under command: .me  
-  
-  Please verify your email adress by sending this message to bot (.code with number):    
-  
-  .code ${userid}
-  
+  text: `Deer User ${pushname},\n
+  \n
+  Your account was sucessfully created with the name ${args[0]}. \n
+  You can find the details in whatsapp under command: .me  \n
+  \n
+  Please verify your email adress by sending this message to bot (.code with number):  \n  
+  \n
+  .code ${userid}\n
+  \n
   StarDash Team`
 };
 
@@ -3651,16 +3651,16 @@ var mailOptions = {
   from: 'stardashnotification@gmail.com',
   to: `${args[3]}`,
   subject: `StarDash Account registered! ${pushname}`,
-  text: `Deer User ${pushname},
-  
-  Your account was sucessfully re- created with the name ${args[0]}. 
-  You can find the details in whatsapp under command: .me  
-  
-  Please verify your email adress by sending this message to bot (.code with number):    
-  
-  .code ${userid}
-  
-  StarDash Team`
+  text: `Deer User ${pushname},\n
+  \n
+  Your account was sucessfully re- created with the name ${args[0]}. \n
+  You can find the details in whatsapp under command: .me  \n
+  \n
+  Please verify your email adress by sending this message to bot (.code with number): \n   
+  \n
+  .code ${userid}\n
+  \n
+  StarDash Team\n`
 };
 
 transporter.sendMail(mailOptions, function(error, info){
