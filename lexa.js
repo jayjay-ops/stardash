@@ -3465,7 +3465,7 @@ case 'daftar':
 case 'registrieren':
 case 'register':
 			if (isVerify) return reply('⌯   ﹝𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍.﹞') 
-				if (args.length < 4) return reply(`⌯   ﹝Please register with your first name, age, favorite emoji and email adress﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n\n .register StarDash 16 🐺 StarDash@gmail.com`)
+				if (args.length < 4) return reply(`⌯   ﹝Please register with your first name, age, favorite emoji and email adress﹞\n\n⚠️ Most people forget to\n\nFirst Type:\n  .register *not* . register\nSecond Leave one space:\n   17 🐬 *not* 17🐬\n\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n\n .register StarDash 16 🐺 StarDash@gmail.com`)
 			    if (args.length > 4) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
 				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
 	
@@ -3557,7 +3557,7 @@ case 'verifyagain':
 
 	
 
-if (args.length < 4) return reply(`⌯   ﹝Please register with your first name, age, favorite emoji and email adress﹞\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n\n .verifyagaian StarDash 16 🐺 StarDash@gmail.com`)
+if (args.length < 4) return reply(`⌯   ﹝Please register with your first name, age, favorite emoji and email adress﹞\n\n⚠️ Most people forget to\n\nFirst Type:\n  .verifyagain *not* . verifyagain\nSecond Leave one space:\n   17 🐬 *not* 17🐬\n\n⚠️ Still in BETA. You may have to register soon again.\n\nExample\n\n .verifyagain StarDash 16 🐺 StarDash@gmail.com`)
 			    if (args.length > 4) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
 
 
