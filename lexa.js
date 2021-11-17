@@ -3838,7 +3838,8 @@ const userdata15 = _userdata[15]	//--- empty
 
 
 
- reply(`\n//--- phone number 0\n${userdata}	\n\n//--- pushname  \n${userdata1}\n\n//--- name \n${userdata2}\n\n//--- age 3\n${userdata3}\n\n//--- emojie 4\n${userdata4}\n\n//--- user id 5\n${userdata5}\n\n//--- xp 6\n${userdata6}\n\n//--- money 7\n${userdata7}\n\n//--- mood 8\n${userdata8}\n\n//--- account creation date 9\n${userdata9}\n\n//--- stickerpack 10\n ${userdata10}\n\n//--- account design 11\n${userdata11}\n\n//--- empty 12\n${userdata12}\n\n//--- empty 13\n${userdata13}\n\n//--- empty 14\n${userdata14}\n\n//--- empty 15\n${userdata15}\n\nchange detail with .changedata DataNumber NewNumber`)
+ reply(`\n//--- phone number 0\n${userdata}
+ //--- pushname  \n${userdata1}\n\n//--- name \n${userdata2}\n\n//--- age 3\n${userdata3}\n\n//--- emojie 4\n${userdata4}\n\n//--- user id 5\n${userdata5}\n\n//--- xp 6\n${userdata6}\n\n//--- money 7\n${userdata7}\n\n//--- mood 8\n${userdata8}\n\n//--- account creation date 9\n${userdata9}\n\n//--- stickerpack 10\n ${userdata10}\n\n//--- account design 11\n${userdata11}\n\n//--- empty 12\n${userdata12}\n\n//--- empty 13\n${userdata13}\n\n//--- empty 14\n${userdata14}\n\n//--- empty 15\n${userdata15}\n\nchange detail with .changedata DataNumber NewNumber`)
 
 
 
@@ -4225,7 +4226,7 @@ var mailOptions = {
   from: 'stardashnotification@gmail.com',
   to: `${iamsure13}`,
   subject: `${iamsure11} StarDash Account deleted ${pushname}`,
-  text: `Deer user ${iamsure2}\n\nYour account has been deleted sucessfully and all ur information has been deleted forever. \n\nTo register again type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com\n\nStarDash Team`
+  text: `Deer user ${iamsure2},\n\nYour account has been deleted sucessfully and all ur information has been deleted forever. \n\nTo register again type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com\n\nStarDash Team`
 };
 
 transporter.sendMail(mailOptions, function(error, info){
