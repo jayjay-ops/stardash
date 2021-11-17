@@ -4282,10 +4282,6 @@ transporter.sendMail(mailOptions, function(error, info){
 });
 			
 			
-fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.webp`, function (err) {
-  if (err) throw err;	
-
-})  
 
 fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
   if (err) throw err;
