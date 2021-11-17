@@ -1950,7 +1950,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-
+transporter.verify().then(console.log).catch(console.error);
 
 
 var mailOptions = {
