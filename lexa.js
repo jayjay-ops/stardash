@@ -3531,7 +3531,7 @@ var mailOptions = {
   from: 'stardashnotification@gmail.com',
   to: `${args[3]}`,
   subject: `Account registered! ${pushname}`,
-  text: `Your account was sucessfully created with the name ${args[0]}. You can find the details in whatsapp under command: .me  Please verify your email adress by sending this message to bot:    .code ${userid}`
+  text: `Your account was sucessfully created with the name ${args[0]}. You can find the details in whatsapp under command: .me  Please verify your email adress by sending this message to bot (.code with number):    .code ${userid}`
 };
 
 transporter.sendMail(mailOptions, function(error, info){
@@ -3642,7 +3642,7 @@ var mailOptions = {
   from: 'stardashnotification@gmail.com',
   to: `${args[3]}`,
   subject: `Account registered! ${pushname}`,
-  text: `Your account was sucessfully created with the name ${args[0]}. You can find the details in whatsapp under command: .me  Please verify your email adress by sending this message to bot:    .code ${userid2}`
+  text: `Your account was sucessfully created with the name ${args[0]}. You can find the details in whatsapp under command: .me  Please verify your email adress by sending this message to bot (.code with number):    .code ${userid2}    `
 };
 
 transporter.sendMail(mailOptions, function(error, info){
@@ -3729,12 +3729,73 @@ const me9 = _me[9]	//--- account creation date
 const me10 = _me[10]	//--- stickerpack name
 const me11 = _me[11]	//--- account design
 const me12 = _me[12]	//--- claim money
-
+const me13 = _me[13]	//--- Email
+const me14 = _me[14]	//--- Email verified
 
  reply(`............................\n⇝ ${pushname}\n⇝ ${prem_}\n............................\n\n𝚗𝚞𝚖𝚋𝚎𝚛\n${me11} ${me}\n\n𝚗𝚊𝚖𝚎\n${me11} ${me2}\n\n𝚊𝚐𝚎\n${me11} ${me3}\n\n𝚎𝚖𝚘𝚓𝚒𝚎\n${me11} ${me4}\n\n𝚞𝚜𝚎𝚛 𝚒𝚍\n${me11} ${me5}\n. . . . . . . . . . . . . . .\n𝚡𝚙\n${me11} ${me6}\n\n𝚖𝚘𝚗𝚎𝚢\n${me11} ${me7}$\n\n𝚖𝚘𝚘𝚍\n${me11} ${me8}\n\n𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n${me11} ${me10}\n\n𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${me11} .shop\n\n𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${me11} .menu\n\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${me11} ${me9}\n\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜\n𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑\n.hide\n. . . . . . . . . . . . . . .\n𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛\n𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑\n.deletemyaccount\n. . . . . . . . . . . . . . .`)
 
  
 break
+
+//-- verify email
+
+case 'code':
+
+if (!isVerify) return reply(UserB())
+if (args.length < 1) return reply('⌯   ﹝Enter the code from the Email you got send to.')
+
+const _emailss = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+
+
+
+	
+const emailss = _emailss[0]	//--- phone number	
+const emailss1 = _emailss[1]  //--- pushnaemailss
+const emailss2 = _emailss[2]	//--- naemailss
+const emailss3 = _emailss[3]	//--- age
+const emailss4 = _emailss[4]	//--- emojie
+const emailss5 = _emailss[5]	//--- user id	
+const emailss6 = _emailss[6] 	//--- xp
+const emailss7 = _emailss[7]	//--- money
+const emailss8 = _emailss[8]	//--- mood
+const emailss9 = _emailss[9]	//--- account creation date
+const emailss10 = _emailss[10]	//--- stickerpack naemailss
+const emailss11 = _emailss[11]	//--- account design
+const emailss12 = _emailss[12]	//--- claim money
+const emailss13 = _emailss[13]	//--- Email
+const emailss14 = _emailss[14]	//--- Email verified
+
+
+if (args[0] === `${me11}` ) {
+		
+	const _verifyemail = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));
+const verifyemail = _verifyemail[14]
+
+reply(`﹝${changedata}﹞`)
+
+
+let newwdatae = `verified`
+
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${verifyemail}`, newwdatae);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})	
+		
+		
+   reply(`⌯  ﹝Email sucessfully verified!﹞`); 
+  } else {
+	  reply(`⌯  ﹝Wrong code. Look in the Email and send it like this   .code 241265 ﹞`); 
+  }
+
+break
+
+
 
 //--- Hidden account information		
 
@@ -3784,7 +3845,7 @@ if (!isVerify) return reply(userB())
 
 	
 const _changedata = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));
-const changedata = changedata[7]
+const changedata = _changedata[7]
 
 reply(`﹝${changedata}﹞`)
 
