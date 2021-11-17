@@ -487,21 +487,8 @@ reply('🤕💜')
 
 switch(is) {
 case '🖇️':
-reply('𝚃𝚎𝚛𝚖𝚜 𝚘𝚏 𝚂𝚎𝚛𝚟𝚒𝚌𝚎
+reply('Soon avaible')
 
-𝘞𝘩𝘢𝘵 𝘪𝘴 𝘨𝘦𝘵𝘵𝘪𝘯𝘨 𝘴𝘢𝘷𝘦𝘥 𝘸𝘩𝘦𝘯 𝘪 𝘳𝘦𝘨𝘪𝘴𝘵𝘦𝘳?
-
-StarDash stores your pushname, name, age, emojie, account creation date, phone number and email adresse. 
-Other then that it saves your money, xp, mood, stickerpack name, id, email info and saved image.
-
-You can always delete your account, after created with the command, .deletemyaccount
-
-𝘞𝘩𝘰 𝘤𝘢𝘯 𝘷𝘪𝘦𝘸 𝘮𝘺 𝘥𝘢𝘵𝘢?
-
-Only you can see it, when typing  .myaccount or other commands. However if you do it in the group, all group members can see. 
-For technical problems, the Server Host (owner) can also view and change them.
-
-𝑀𝑎𝑑𝑒 𝑖𝑛 𝐺𝑒𝑟𝑚𝑎𝑛𝑦')
 }
 
 
