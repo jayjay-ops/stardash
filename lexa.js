@@ -3769,10 +3769,12 @@ const emailss14 = _emailss[14]	//--- Email verified
 
 
 
-if (args.length > 1) {
+if (args.length < 1) {
 	
- 
+ reply(`⌯   ﹝wrong code﹞`)
 
+} else {
+					
 
 
 		
@@ -3796,9 +3798,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 	})
 		
 		
-   reply(`⌯  ﹝Email sucessfully verified!﹞`); 
-} else {
-						reply(`⌯   ﹝wrong code﹞`)
+   reply(`⌯  ﹝Email sucessfully verified!﹞`); 	
 					}
 
 break
