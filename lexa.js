@@ -4332,12 +4332,13 @@ await transferdelayhis(1000) /// waiting 1 second.
 
 const _newtransfermoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const newtransfermoney = _newtransfermoney[7]	//--- money	
+const transferdesign = _newtransfermoney[11]	//--- account design
 
 const _hisnewtransfermoney = JSON.parse(fs.readFileSync(`${args[1].replace('@','./')}@s.whatsapp.net.json`));	
 const hisnewtransfermoney = _hisnewtransfermoney[7]	//--- money	
 const hisname = _hisnewtransfermoney[2]	//--- name
  
-  reply(`Transfered *${args[0]}* to *${hisname}* \n\nYour Money left: ${newtransfermoney}$\n\nHis Money left: ${hisnewtransfermoney}$`)
+  reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n\nYour Money left: ${newtransfermoney}$\n\nHis Money left: ${hisnewtransfermoney}$\n. . . . . . . . . . . . . . .\n✅ StarDash Transfers`)
   
 break
 
