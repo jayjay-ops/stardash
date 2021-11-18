@@ -4281,8 +4281,7 @@ if (!isVerify) return reply(userB())
 const _mytransfermoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const mytransfermoney = _mytransfermoney[7]	//--- money mine
 
-let arr = args[1].split("@");
-let arrv = arr.split(",");
+let arr = args[1].split("@",",");
 console.log(`${arr}`);
 console.log(`${arrv}`);
 const _histranfermoney = JSON.parse(fs.readFileSync(`./${arrv}@s.whatsapp.net.json`));	
