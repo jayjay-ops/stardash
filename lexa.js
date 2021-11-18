@@ -3619,7 +3619,7 @@ Please add your first name, age, favorite emojie, email adress
 
 Example:
 
-.register StarDash 16 ✨ stardash@gmail.com
+.verifyagain StarDash 16 ✨ stardash@gmail.com
 
 . . . . . . . . . . . . . . .`)
 
