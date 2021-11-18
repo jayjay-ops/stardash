@@ -4316,12 +4316,12 @@ let hismon = Number(histranfermoney);
 let hisam = Number(args[0]);
 let histransferamount = hismon - hisam; 
 
-fs.readFile(`./${args[1].split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+fs.readFile(`${args[1].replace('@','./')}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
     var newValue = data.replace(`${histranfermoney}`, histransferamount);
 	
-    fs.writeFile(`./${args[1].split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+    fs.writeFile(`${args[1].replace('@','./')}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
         console.log('Done!');
     })
@@ -4333,7 +4333,7 @@ await transferdelayhis(1000) /// waiting 1 second.
 const _newtransfermoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const newtransfermoney = _newtransfermoney[7]	//--- money	
 
-const _hisnewtransfermoney = JSON.parse(fs.readFileSync(`./${args[1].split("@")[0]}@s.whatsapp.net.json`));	
+const _hisnewtransfermoney = JSON.parse(fs.readFileSync(`${args[1].replace('@','./')}@s.whatsapp.net.json`));	
 const hisnewtransfermoney = _hisnewtransfermoney[7]	//--- money	
 const hisname = _hisnewtransfermoney[2]	//--- name
  
