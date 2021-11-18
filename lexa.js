@@ -4269,6 +4269,74 @@ const changedesignmoney1 = _changedesignmoney1[7]	//--- money
   
 break
 
+//-- transfer
+case 'transfer': 
+case 'donate': 
+  
+if (!isVerify) return reply(userB())
+	
+	if (args.length < 2) return reply('﹝Enter cash and tag person.﹞ \nExample:\n.transfer 20$ @stardash')
+	if (args.length > 2) return reply('⌯   ﹝leave no space.  NOT  . transfer but  .transfer﹞')
+
+const _mytransfermoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const mytransfermoney = _mytransfermoney[7]	//--- money mine
+
+const _histranfermoney = JSON.parse(fs.readFileSync(`./${args[1].split("@")[0]}@s.whatsapp.net.json`));	
+const histranfermoney = _histranfermoney[7]	//--- money his
+
+
+if (mytransfermoney < args[0]) return reply(`﹝You have not enough money to transfer. Money needed: ${args[0]}$ Your money: ${mytransfermoney}$﹞`) 
+
+	
+let transferamount = args[0];
+
+let mymon = Number(mytransfermoney);
+let myam = Number(args[0]);
+let transferamount = mymon - myam; 
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${mytransfermoney}`, transferamount);
+	
+    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
+
+const transferdely = ms => new Promise(resolve => setTimeout(resolve, ms))
+await transferdely(1000) /// waiting 1 second.
+				
+
+let hismon = Number(histranfermoney);
+let hisam = Number(args[0]);
+let histransferamount = hismon - hisam; 
+
+fs.readFile(`./${args[1].split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${histranfermoney}`, histransferamount);
+	
+    fs.writeFile(`./${args[1].split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Done!');
+    })
+})
+
+const transferdelayhis = ms => new Promise(resolve => setTimeout(resolve, ms))
+await transferdelayhis(1000) /// waiting 1 second.
+
+const _newtransfermoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const newtransfermoney = _newtransfermoney[7]	//--- money	
+
+const _hisnewtransfermoney = JSON.parse(fs.readFileSync(`./${args[1].split("@")[0]}@s.whatsapp.net.json`));	
+const hisnewtransfermoney = _hisnewtransfermoney[7]	//--- money	
+const hisname = _hisnewtransfermoney[2]	//--- name
+ 
+  reply(`Transfered *${args[0]}* to *${hisname}* \n\nYour Money left: ${newtransfermoney}$\n\nHis Money left: ${hisnewtransfermoney}$`)
+  
+break
+
 //--- Delete account message
 
 
