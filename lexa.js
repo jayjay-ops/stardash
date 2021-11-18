@@ -4282,9 +4282,10 @@ const _mytransfermoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s
 const mytransfermoney = _mytransfermoney[7]	//--- money mine
 
 let arr = args[1].split("@");
+let arrv = arr.split(",");
 console.log(`${arr}`);
-
-const _histranfermoney = JSON.parse(fs.readFileSync(`./${arr}@s.whatsapp.net.json`));	
+console.log(`${arrv}`);
+const _histranfermoney = JSON.parse(fs.readFileSync(`./${arrv}@s.whatsapp.net.json`));	
 const histranfermoney = _histranfermoney[7]	//--- money his
 
 
