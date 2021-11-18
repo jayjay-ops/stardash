@@ -4288,7 +4288,6 @@ const histranfermoney = _histranfermoney[7]	//--- money his
 if (mytransfermoney < args[0]) return reply(`﹝You have not enough money to transfer. Money needed: ${args[0]}$ Your money: ${mytransfermoney}$﹞`) 
 
 	
-let transferamount = args[0];
 
 let mymon = Number(mytransfermoney);
 let myam = Number(args[0]);
