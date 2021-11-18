@@ -4275,7 +4275,7 @@ case 'donate':
   
 if (!isVerify) return reply(userB())
 	
-	if (args.length < 2) return reply('﹝Enter cash and tag person.﹞ \nExample:\n.transfer 20$ @stardash')
+	if (args.length < 2) return reply('﹝Enter cash and tag person.﹞ \nExample:\n.transfer 20 @stardash')
 	if (args.length > 2) return reply('⌯   ﹝leave no space.  NOT  . transfer but  .transfer﹞')
 
 const _mytransfermoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
