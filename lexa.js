@@ -475,6 +475,30 @@ case '.symbol':
 reply('.𝚜𝚝𝚊𝚛𝚜 .𝚠𝚒𝚕𝚍 .𝚝𝚎𝚡𝚝𝚖𝚘𝚓𝚒𝚎 .𝚘𝚝𝚑𝚎𝚛𝚜 .𝚐𝚎𝚗𝚍𝚎𝚛')
 }
 
+switch(is) {
+case '.1':
+reply('2')
+reply('3')
+reply('4')
+}
+
+switch(is) {
+case '.2':
+reply('3')
+reply('4')
+}
+
+switch(is) {
+case '.3':
+reply('4')
+}
+
+switch(is) {
+case '.1':
+reply('2')
+reply('3')
+reply('4')
+}
 
 
 //--Auto response
