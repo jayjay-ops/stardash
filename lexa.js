@@ -4314,7 +4314,7 @@ await transferdely(1000) /// waiting 1 second.
 
 let hismon = Number(histranfermoney);
 let hisam = Number(args[0]);
-let histransferamount = hismon - hisam; 
+let histransferamount = hismon + hisam; 
 
 fs.readFile(`${args[1].replace('@','./')}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
