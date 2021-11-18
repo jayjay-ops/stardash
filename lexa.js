@@ -4287,7 +4287,7 @@ let arrr = args[1].split("@")[0]
 
 
 
-const _histranfermoney = JSON.parse(fs.readFileSync(`./${arr}@s.whatsapp.net.json`));	
+const _histranfermoney = JSON.parse(fs.readFileSync(`./${arrr}@s.whatsapp.net.json`));	
 const histranfermoney = _histranfermoney[7]	//--- money his
 
 
