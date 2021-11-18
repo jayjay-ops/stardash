@@ -4293,8 +4293,6 @@ const _histranfermoney = JSON.parse(fs.readFileSync(`${args[1].replace('@','./')
 const histranfermoney = _histranfermoney[7]	//--- money his
 
 
-if (mytransfermoney < args[0]) return reply(`﹝You have not enough money to transfer. Money needed: ${args[0]}$ Your money: ${mytransfermoney}$﹞`) 
-
 	
 
 let mymon = Number(mytransfermoney);
