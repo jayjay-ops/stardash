@@ -477,14 +477,11 @@ reply('.𝚜𝚝𝚊𝚛𝚜 .𝚠𝚒𝚕𝚍 .𝚝𝚎𝚡𝚝𝚖𝚘𝚓𝚒
 
 switch(is) {
 case '.1':
-reply('2')
-reply('3')
 reply('4')
 }
 
 switch(is) {
 case '.2':
-reply('3')
 reply('4')
 }
 
@@ -494,10 +491,77 @@ reply('4')
 }
 
 switch(is) {
-case '.1':
-reply('2')
-reply('3')
-reply('4')
+case '.4':
+reply('5')
+}
+
+switch(is) {
+case '.5':
+reply('8')
+}
+
+switch(is) {
+case '.6':
+reply('8')
+}
+
+switch(is) {
+case '.7':
+reply('8')
+}
+
+switch(is) {
+case '.9':
+reply('12')
+}
+
+switch(is) {
+case '.10':
+reply('12')
+}
+switch(is) {
+case '.11':
+reply('12')
+}
+switch(is) {
+case '.12':
+reply('13')
+switch(is) {
+case '.13':
+reply('16')
+}
+}
+switch(is) {
+case '.14':
+reply('16')
+}
+switch(is) {
+case '.15':
+reply('16')
+}
+switch(is) {
+case '.16':
+reply('17')
+}
+switch(is) {
+case '.17':
+reply('20')
+}
+switch(is) {
+case '.18':
+reply('20')
+}
+switch(is) {
+case '.19':
+reply('20 Haha You Loose')
+}
+switch(is) {
+case '.20':
+reply('You won!')
+}
+switch(is) {
+case '.21':
+reply('Haha You Loose')
 }
 
 
