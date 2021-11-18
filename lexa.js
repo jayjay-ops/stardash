@@ -4341,7 +4341,7 @@ const _hisnewtransfermoney = JSON.parse(fs.readFileSync(`${args[1].replace('@','
 const hisnewtransfermoney = _hisnewtransfermoney[7]	//--- money	
 const hisname = _hisnewtransfermoney[2]	//--- name
  
-  reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n\nYour Money left: ${newtransfermoney}$\n\nHis Money left: ${hisnewtransfermoney}$\n. . . . . . . . . . . . . . .\n✅ StarDash Transfers`)
+  reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n\nYour Money left: ${newtransfermoney}$\n\nHis/Her Money left: ${hisnewtransfermoney}$\n. . . . . . . . . . . . . . .\n✅ StarDash Transfers`)
   
 break
 
