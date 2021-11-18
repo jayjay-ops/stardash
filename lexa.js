@@ -3782,6 +3782,7 @@ case 'me':
 case 'aboutme':
 case 'account':
 case 'myaccount':
+case 'profile':
 		
 		if (!isVerify) return reply(userB())
 			
