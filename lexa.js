@@ -3423,12 +3423,12 @@ transporter.sendMail(mailOptions, function(error, info){
   }
 });
 			
-fs.readFile(`./data/user.json/${sender.replace('@','./')}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/user.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
     var newValue = data.replace(`${sender.replace('@','./')}@s.whatsapp.net`, DeletedAccount);
 	
-    fs.writeFile(`./data/user.json/${sender.replace('@','./')}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+    fs.writeFile(`./data/user.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
         console.log('Account Deleted!');
     })
