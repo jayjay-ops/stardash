@@ -389,13 +389,22 @@ console.error(err)
 // ---- Antilink 
 const linkwa = 'http'
 		if (budy.includes(`${linkwa}`)){
-			
-			    async acceptInvite(code: string) {
-        const json = ['action', 'invite', code]
-        const response = await this.query({json, expect200: true})
-        return response
-    }
-
+		if (!isGroup) return
+		if (!isAnti) return
+    if (!isBotGroupAdmins) return reply('⌯   ﹝𝙸 𝚗𝚎𝚎𝚍 𝚊𝚍𝚖𝚒𝚗 𝚏𝚘𝚛 𝚝𝚑𝚒𝚜 𝚝𝚘 𝚠𝚘𝚛𝚔.﹞')
+    linkgc = await Lxa.groupInviteCode (from)
+    if (budy.includes(`${linkwa}${linkgc}`)) return reply('⌯   ﹝𝙸 𝚗𝚎𝚎𝚍 𝚊𝚍𝚖𝚒𝚗 𝚏𝚘𝚛 𝚝𝚑𝚒𝚜 𝚝𝚘 𝚠𝚘𝚛𝚔.﹞')
+		if (isGroupAdmins) return reply(`⌯   ﹝𝙰𝚍𝚖𝚒𝚗.﹞`)
+		Lxa.updatePresence(from, Presence.composing)
+		var Kick = `${sender.split("@")[0]}@s.whatsapp.net`
+		setTimeout( () => {
+		}, 1100)
+		setTimeout( () => {
+		Lxa.groupRemove(from, [Kick]).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
+					}, 1000)
+		setTimeout( () => {
+		
+		}, 0)
 	}
 	
 
