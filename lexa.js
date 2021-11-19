@@ -3804,7 +3804,7 @@ const me14 = _me[14]	//--- Email verified
  ............................\n
  𝚗𝚞𝚖𝚋𝚎𝚛\n${me11} ${me}\n
  𝚗𝚊𝚖𝚎\n${me11} ${me2}\n
- 𝚊𝚐𝚎\n${me11} ${me3}\n
+ 𝚊𝚐𝚎\n${myage} ${me3}\n
  𝚎𝚖𝚘𝚓𝚒𝚎\n${me11} ${me4}\n
  𝚞𝚜𝚎𝚛 𝚒𝚍\n${me11} ${me5}
  . . . . . . . . . . . . . . .
@@ -3934,96 +3934,7 @@ const userdata15 = _userdata[15]	//--- empty
  reply(`\n//--- phone number 0\n${userdata}
  //--- pushname  \n${userdata1}\n\n//--- name \n${userdata2}\n\n//--- age 3\n${userdata3}\n\n//--- emojie 4\n${userdata4}\n\n//--- user id 5\n${userdata5}\n\n//--- xp 6\n${userdata6}\n\n//--- money 7\n${userdata7}\n\n//--- mood 8\n${userdata8}\n\n//--- account creation date 9\n${userdata9}\n\n//--- stickerpack 10\n ${userdata10}\n\n//--- account design 11\n${userdata11}\n\n//--- empty 12\n${userdata12}\n\n//--- empty 13\n${userdata13}\n\n//--- empty 14\n${userdata14}\n\n//--- empty 15\n${userdata15}\n\nchange detail with .changedata DataNumber NewNumber`)
 
-
-
- 
-break
-
-//-- change user data
-case 'changedata': 
-  
-if (!isVerify) return reply(userB())
-	 if (!isOwner) return reply(ownerB())
-	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 data﹞')
-
-
-	
-const _changedata = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));
-const changedata = _changedata[7]
-
-reply(`﹝${changedata}﹞`)
-
-
-let newwdata = args[1];
-
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${changedata}`, newwdata);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
-
- 
-  reply(`﹝Changed Value!﹞`)
-  
 	break
-
-//--- Buy stuff
-			
-			
-case 'buypet':
-
-if (!isVerify) return reply(userB())
- if (args[0] === 'butterfly' ) {
- 
-	fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.pet.json`, `["+${sender.split("@")[0]}", "${args[1]}", "caterpillar",  "10" , "grey", "2", "${tanggal()}"]`, function (err) {
-	if (err) throw err;
-	console.log('Pet Account Opend.');
-	});
- 
-  } else if (args[0] === 'wulf' ) {
-   
-   	fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.pet.json`, `["+${sender.split("@")[0]}", "${args[1]}", "dog",  "10" , "grey", "2", "${tanggal()}"]`, function (err) {
-	if (err) throw err;
-	console.log('Pet Account Opend.');
-	});
-	
-  }	else if (args[0] === 'delphine' ) {
-   
-   	fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.pet.json`, `["+${sender.split("@")[0]}", "${args[1]}", "fish",  "10" , "orange", "2", "${tanggal()}"]`, function (err) {
-	if (err) throw err;
-	console.log('Pet Account Opend.');
-	});
-	
-  }	else if (args[0] === 'dragon' ) {
-   
-   	fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.pet.json`, `["+${sender.split("@")[0]}", "${args[1]}", "fly",  "10" , "grey", "2", "${tanggal()}"]`, function (err) {
-	if (err) throw err;
-	console.log('Pet Account Opend.');
-	});
-	
-  }	else { 
-  
- reply (`Choose a pet. Butterfly, Delphine, Wulf or Dragon.`) 
-	  
-  }				
-  
-
-
- 
-
-break
-
-
-
-
-
-
-
 
 
 //-- changename
@@ -4178,7 +4089,7 @@ const delayslot5122 = ms => new Promise(resolve => setTimeout(resolve, ms))
                 await delayslot5122(1000) /// waiting 1 second.
 
 
- reply(`${email11} Changed email to *${args[0]}$*\n. . . . . . . . . . . . . . .\n✅ StarDash Mail`)
+ reply(`${email11} Changed email to ${args[0]}\n. . . . . . . . . . . . . . .\n✅ StarDash Mail`)
 				
 break
 
