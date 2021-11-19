@@ -3426,7 +3426,7 @@ transporter.sendMail(mailOptions, function(error, info){
 fs.readFile(`./data/user.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
-    var newValue = data.replace(`${sender.replace('@','./')}`, DeletedAccount);
+    var newValue = data.replace(`${sender.replace('@','./')}`, `DeletedAccount`);
 	
     fs.writeFile(`./data/user.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
