@@ -11,6 +11,7 @@ const {
   WALocationMessage,
   ReconnectMode,
   ProxyAgent,
+  WAGroupCreateResponse,
   waChatKey,
   mentionedJid,
   processTime,
