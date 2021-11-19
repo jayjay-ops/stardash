@@ -2428,6 +2428,12 @@ case 'join':
 const response = await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
 console.log("joined to: " + response.gid)
 
+
+ var responses = await Lxa.acceptInvite(value)
+ 
+ 
+ var responses = await conn.acceptInvite(value)
+
  const resultlink = await conn.query({
                             json: ["query", "invite", linkk],
                             expect200: true
