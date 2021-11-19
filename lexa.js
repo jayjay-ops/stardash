@@ -15,6 +15,7 @@ const {
   mentionedJid,
   processTime,
   ChatModification,
+  WAInitResponse
   whatsappID,
   WAConnectionTest,
 } = require('@adiwajshing/baileys');
@@ -71,8 +72,7 @@ const _emoji = JSON.parse(fs.readFileSync('./result/emoji.json'));
 const _roll = JSON.parse(fs.readFileSync('./result/roll.json'));
 
 
-const response await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
-console.log("joined to: " + response.gid)
+
 
 //-- Result ENGLISH
 const _truthen = JSON.parse(fs.readFileSync('./result/en/truthen.json'));
