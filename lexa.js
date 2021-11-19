@@ -2799,7 +2799,7 @@ const my47 = _myaccount[47]		//---
 
 		
  reply(`............................
- ⇝ ${pushname}\n⇝ ${prem_}
+ ⇝ ${pushname}\n ⇝ ${prem_}
  ............................\n
  𝚗𝚞𝚖𝚋𝚎𝚛\n${mydesign} ${mynumber}\n
  𝚗𝚊𝚖𝚎\n${mydesign} ${myname}\n
