@@ -2589,7 +2589,8 @@ case 'verify':
 case 'daftar':
 case 'registrieren':
 case 'register':
-			if (isVerify) return reply('⌯   ﹝𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍.﹞') 
+
+				if (isVerify) return reply('⌯   ﹝𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍.﹞') 
 				if (args.length < 4) return reply(`By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
 
 If registering doesnt work then correct your mistakes and leave space between each word
@@ -2686,17 +2687,9 @@ transporter.sendMail(mailOptions, function(error, info){
     console.log('Email sent: ' + info.response);
   }
 });
-			
-			
-
-							
+									
 			break
-		
-	
-
-	
-
-	
+			
 //--- verify after deleted
 case 'verifyagain':
 
@@ -3439,6 +3432,16 @@ fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
 });
 
 
+fs.readFile(`./data/user.json/${sender.replace('@','./')}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${sender.replace('@','./')}@s.whatsapp.net`, DeletedAccount);
+	
+    fs.writeFile(`./data/user.json/${sender.replace('@','./')}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Account Deleted!');
+    })
+})
 
 break
 
