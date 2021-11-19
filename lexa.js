@@ -2421,9 +2421,11 @@ case 'link':
 //-- join group
 case 'join':
 
-
+await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
 					
 				await conn.acceptInvite (`{value}`)
+			await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
+			
 			
 const response = await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
 console.log("joined to: " + response.gid)
