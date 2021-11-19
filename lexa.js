@@ -1707,7 +1707,7 @@ const changedesignmoneysong = _changedesignmoneysong[7]	//--- money
 													
 						if (err) return reply('Error')
 							
-						reply('⌯   ﹝Sending 2/2﹞')
+						reply('⌯   ﹝Sending 2/2﹞\n\n_Tipp: For 22$ you can save the song to your account by typing .savesong and tagging the audio! You can then let it be send to you with the command .mysong for free!_')
 						
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
@@ -1972,7 +1972,8 @@ break
 //-- save audio
 case 'addaudio':
 case 'saveaudio':
-
+case 'savesong':
+case 'addsong':
 
   if (!isVerify) return reply(UserB())	  
   if (!isQuotedAudio)  return  reply(`⌯   ﹝Tag Audio. Cost: 22$﹞`)
@@ -2033,7 +2034,7 @@ case 'mys':
 
 case 'myaudio':
 case 'audio':
-
+case 'mysong':
   if (!isVerify) return reply(UserB())
 	  
 
@@ -2753,7 +2754,13 @@ const shopmoney = _shopmoney[7]	//--- money
 const _shopd = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const shopd = _shopd[11]	//--- account design
 		
-reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚂𝚑𝚘𝚙\n${shopd} 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n\n𝙵𝚛𝚎𝚎\n\n𝚜𝚎𝚝 𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙽𝚊𝚖𝚎\n${shopd} .stickerpack\n\n𝚜𝚎𝚝 𝙼𝚘𝚘𝚍\n${shopd} .mood\n\n✯ 𝙱𝚞𝚢\n\nTransfer money\n➳ Send money to someone\n➳ cost: AnyCost$\n${shopd} .transfer 10 @stardash\n\n𝚜𝚊𝚟𝚎 𝚙𝚒𝚌𝚝𝚞𝚛𝚎\n➳ Save a picture\n➳ cost: 22$\n${shopd} .savesticker\n\n✯ 𝚐𝚊𝚖𝚎𝚜\n\n𝚂𝚕𝚘𝚝 𝙶𝚊𝚖𝚎\n➳ cost: 4$\n➳  small win = +8$\n➳  jackpot = +200$\n${shopd} .slot\n\n. . . . . . . . . . . . . . .\n✯ 𝚜𝚎𝚝𝚝𝚒𝚗𝚐\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚊𝚒𝚕\n➳ cost: free$\n${shopd} .changeemail\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚍𝚎𝚜𝚒𝚐𝚗\n➳ cost: 25$\n${shopd} .design\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎\n➳ cost: 5$\n${shopd} .changename \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚘𝚓𝚒𝚎\n➳ cost: 5$\n${shopd} .changeemojie \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 5$\n${shopd} .changeage\n\n. . . . . . . . . . . . . . .\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n. . . . . . . . . . . . . . .`)	
+reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚂𝚑𝚘𝚙\n${shopd} 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................
+
+𝙵𝚛𝚎𝚎\n\n𝚜𝚎𝚝 𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙽𝚊𝚖𝚎\n${shopd} .stickerpack\n\n𝚜𝚎𝚝 𝙼𝚘𝚘𝚍\n${shopd} .mood\n\n✯ 𝙱𝚞𝚢\n\nTransfer money\n➳ Send money to someone\n➳ cost: AnyCost$\n${shopd} .transfer 10 @stardash
+
+𝚜𝚊𝚟𝚎 𝚙𝚒𝚌𝚝𝚞𝚛𝚎\n➳ Save a picture\n➳ cost: 22$\n${shopd} .saveimage\n\n𝚜𝚊𝚟𝚎 song/\n➳ Save a audio or voice message\n➳ cost: 22$\n${shopd} .saveaudio\n\n✯ 𝚐𝚊𝚖𝚎𝚜\n\n𝚂𝚕𝚘𝚝 𝙶𝚊𝚖𝚎\n➳ cost: 4$\n➳  small win = +8$\n➳  jackpot = +200$\n${shopd} .slot\n\n. . . . . . . . . . . . . . .
+✯ 𝚜𝚎𝚝𝚝𝚒𝚗𝚐\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚊𝚒𝚕\n➳ cost: free$\n${shopd} .changeemail\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚍𝚎𝚜𝚒𝚐𝚗\n➳ cost: 25$\n${shopd} .design\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎\n➳ cost: 5$\n${shopd} .changename \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚘𝚓𝚒𝚎\n➳ cost: 5$\n${shopd} .changeemojie \n
+𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 5$\n${shopd} .changeage\n\n. . . . . . . . . . . . . . .\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n. . . . . . . . . . . . . . .`)	
 
 break
 
