@@ -3463,11 +3463,6 @@ fs.readFile(`./data/user.json`, 'utf-8', function(err, data) {
     })
 })			
 
-fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
-  if (err) throw err;
-  console.log('File deleted!');
-  reply('Your account has been *sucessfully deleted.* When typing .myaccount   everything will be gone. However you can still use commands as if registered, but Errors may occur. To register agian type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com')
-});
 
 
 
