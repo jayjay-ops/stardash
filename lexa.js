@@ -3195,7 +3195,7 @@ const changedesignmoney1 = _changedesignmoney1[7]	//--- money
 const cmdesignn = _changedesignmoney1[7]	//--- money	
  
 
-   reply(`${cmdesignn} Changed design from *${changeemojie}* to *${value}*\nMoney left: ${changedesignmoney1}$\n. . . . . . . . . . . . . . .\n✅ StarDash Design`)
+   reply(`${cmdesignn} Changed design from *${changedesign}* to *${value}*\nMoney left: ${changedesignmoney1}$\n. . . . . . . . . . . . . . .\n✅ StarDash Design`)
 break
 
 //-- transfer
