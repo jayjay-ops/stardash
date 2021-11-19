@@ -2425,6 +2425,9 @@ case 'join':
 					
 				await Lxa.acceptInvite (`{value}`)
 			
+const response = await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
+console.log("joined to: " + response.gid)
+
 
 				break				
 
