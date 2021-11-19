@@ -414,62 +414,8 @@ if (isCmd && isBan) return reply(banned())
 //-- Automatisch lesen, wenn es eine Nachricht gibt
 if (isCmd) Lxa.chatRead(from)
 	
-// -- User  
- if (!isVerify) {
-	
-const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-	
-const mynumber = _myaccount[0];			//--- phone number	
-const mypushname = _myaccount[1]; 		//--- pushname
-const myname = _myaccount[2];			//--- name
-const myage = _myaccount[3];				//--- age
-const myemojie = _myaccount[4];			//--- emojie
-const myid = _myaccount[5];				//--- user id	
-const myxp = _myaccount[6];				//--- xp
-const mymoney = _myaccount[7];			//--- money
-const mymood = _myaccount[8];			//--- mood
-const mydate = _myaccount[9];			//--- account creation date
-const mystickerpack = _myaccount[10];	//--- stickerpack name
-const mydesign = _myaccount[11];			//--- account design
-const myupdate = _myaccount[12];			//--- updated Account
-const myemail = _myaccount[13];		//--- Email
-const myemailinfo = _myaccount[14];		//--- Email verified
 
-const my15 = _myaccount[15]		//--- 
-const my16 = _myaccount[16]		//---
-const my17 = _myaccount[17]		//---
-const my18 = _myaccount[18]		//---
-const my19 = _myaccount[19]		//---
-const my20 = _myaccount[20]		//---
-const my21 = _myaccount[21]		//---
-const my22 = _myaccount[22]		//---
-const my23 = _myaccount[23]		//---
-const my24 = _myaccount[24]		//---
-const my25 = _myaccount[25]		//---
-const my26 = _myaccount[26]		//---
-const my27 = _myaccount[27]		//---
-const my28 = _myaccount[28]		//---
-const my29 = _myaccount[29]		//---
-const my30 = _myaccount[30]		//---
-const my31 = _myaccount[31]		//---
-const my32 = _myaccount[32]		//---
-const my33 = _myaccount[33]		//---
-const my34 = _myaccount[34]		//---
-const my35 = _myaccount[35]		//---
-const my36 = _myaccount[36]		//---
-const my37 = _myaccount[37]		//---
-const my38 = _myaccount[38]		//---
-const my39 = _myaccount[39]		//---
-const my40 = _myaccount[40]		//---
-const my41 = _myaccount[41]		//---
-const my42 = _myaccount[42]		//---
-const my43 = _myaccount[43]		//---
-const my44 = _myaccount[44]		//---
-const my45 = _myaccount[45]		//---
-const my46 = _myaccount[46]		//---
-const my47 = _myaccount[47]		//---
 
-}
 
 //--Auto response
 switch(is) {
@@ -2871,6 +2817,60 @@ case 'profile':
 		
 		if (!isVerify) return reply(userB())
 			
+// -- User  
+	
+const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+	
+const mynumber = _myaccount[0];			//--- phone number	
+const mypushname = _myaccount[1]; 		//--- pushname
+const myname = _myaccount[2];			//--- name
+const myage = _myaccount[3];				//--- age
+const myemojie = _myaccount[4];			//--- emojie
+const myid = _myaccount[5];				//--- user id	
+const myxp = _myaccount[6];				//--- xp
+const mymoney = _myaccount[7];			//--- money
+const mymood = _myaccount[8];			//--- mood
+const mydate = _myaccount[9];			//--- account creation date
+const mystickerpack = _myaccount[10];	//--- stickerpack name
+const mydesign = _myaccount[11];			//--- account design
+const myupdate = _myaccount[12];			//--- updated Account
+const myemail = _myaccount[13];		//--- Email
+const myemailinfo = _myaccount[14];		//--- Email verified
+
+const my15 = _myaccount[15]		//--- 
+const my16 = _myaccount[16]		//---
+const my17 = _myaccount[17]		//---
+const my18 = _myaccount[18]		//---
+const my19 = _myaccount[19]		//---
+const my20 = _myaccount[20]		//---
+const my21 = _myaccount[21]		//---
+const my22 = _myaccount[22]		//---
+const my23 = _myaccount[23]		//---
+const my24 = _myaccount[24]		//---
+const my25 = _myaccount[25]		//---
+const my26 = _myaccount[26]		//---
+const my27 = _myaccount[27]		//---
+const my28 = _myaccount[28]		//---
+const my29 = _myaccount[29]		//---
+const my30 = _myaccount[30]		//---
+const my31 = _myaccount[31]		//---
+const my32 = _myaccount[32]		//---
+const my33 = _myaccount[33]		//---
+const my34 = _myaccount[34]		//---
+const my35 = _myaccount[35]		//---
+const my36 = _myaccount[36]		//---
+const my37 = _myaccount[37]		//---
+const my38 = _myaccount[38]		//---
+const my39 = _myaccount[39]		//---
+const my40 = _myaccount[40]		//---
+const my41 = _myaccount[41]		//---
+const my42 = _myaccount[42]		//---
+const my43 = _myaccount[43]		//---
+const my44 = _myaccount[44]		//---
+const my45 = _myaccount[45]		//---
+const my46 = _myaccount[46]		//---
+const my47 = _myaccount[47]		//---
+
 		
  reply(`............................
  ⇝ ${pushname}\n⇝ ${prem_}
