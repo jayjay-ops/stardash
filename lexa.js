@@ -414,8 +414,8 @@ if (isCmd && isBan) return reply(banned())
 //-- Automatisch lesen, wenn es eine Nachricht gibt
 if (isCmd) Lxa.chatRead(from)
 	
-// -- User   
-if (isCmd && !isVerify) {
+// -- User  
+ if (!isVerify) {
 	
 const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 	
