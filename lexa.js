@@ -2428,8 +2428,11 @@ case 'link':
 //-- join group
 case 'join':
 
-const response await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
-console.log("joined to: " + response.gid)
+				linkgcs = await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
+				yehd = `https://chat.whatsapp.com/${linkgcs}\n\n⌯   ﹝𝙷𝚎𝚛𝚎 𝚒𝚜 𝚝𝚑𝚎 𝚐𝚛𝚘𝚞𝚙 𝚕𝚒𝚗𝚔.﹞ *${groupName}*`
+				Lxa.sendMessage(from, yehd, text, {quoted: mek})
+
+
 				break				
 
 //-- Gruppenbenachrichtigungen
