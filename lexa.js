@@ -1987,7 +1987,7 @@ let oorpprsticker4 = pprrsticker4 - oorrsticker4;
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err; 
 	
-    var newValue = data.replace(`${yourcashsticker}`, oorpprsticker4);
+    var newValue = data.replace(`${yourcashsticker4}`, oorpprsticker4);
 	
     fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
