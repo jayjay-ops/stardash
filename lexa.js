@@ -2606,7 +2606,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			
 			const userid = Math.floor(Math.random() * 1000000000)
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , ".changeage", ".changemojie", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", ".changeemojie", "⚠️ type .updateme", "empty"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , ".changeage", ".changemojie", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", ".changeemail", "⚠️ type .updateme", "empty"]`, function (err) {
 				
 				
 		
@@ -2679,7 +2679,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 			
 
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , ".changeage", ".changemojie", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", ".changeemojie", "⚠️ type .updateme", "empty"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , ".changeage", ".changemojie", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", ".changeemail", "⚠️ type .updateme", "empty"]`, function (err) {
 				
   if (err) throw err;
   
