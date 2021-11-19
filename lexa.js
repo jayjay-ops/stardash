@@ -41,9 +41,6 @@ const path = require('path');
 const {removeBackgroundFromImageFile} = require('remove.bg');
 var nodemailer = require('nodemailer');
 
-
-
-
 //-- Data
 const up = JSON.parse(fs.readFileSync('./data/setting.json'));
 const _welcom = JSON.parse(fs.readFileSync('./data/welcom.json'));
@@ -61,55 +58,38 @@ const _gif = JSON.parse(fs.readFileSync('./media/gif.json'))
 //-- Result GERMAN
 const _truth = JSON.parse(fs.readFileSync('./result/truth.json'));
 const _dare = JSON.parse(fs.readFileSync('./result/dare.json'));
-
 const _slot = JSON.parse(fs.readFileSync('./result/games/slot.json'));
 const _money = JSON.parse(fs.readFileSync('./result/games/money.json'));
 const _moneys = JSON.parse(fs.readFileSync('./result/games/money.json'));
-
 const _userss = JSON.parse(fs.readFileSync('./data/user.json'));
-
 const _euf = JSON.parse(fs.readFileSync('./result/euflags.json'));
 const _wf = JSON.parse(fs.readFileSync('./result/worldflag.json'));
-
 const _song = JSON.parse(fs.readFileSync('./result/song.json'));
-
 const _fakten = JSON.parse(fs.readFileSync('./result/fakten.json'));
 const _nsfw = JSON.parse(fs.readFileSync('./result/nsfw.json'));
 const _emoji = JSON.parse(fs.readFileSync('./result/emoji.json'));
-
 const _roll = JSON.parse(fs.readFileSync('./result/roll.json'));
+
+
 
 
 //-- Result ENGLISH
 const _truthen = JSON.parse(fs.readFileSync('./result/en/truthen.json'));
-
 const _gay = JSON.parse(fs.readFileSync('./result/gaymeter.json'));
 const _love = JSON.parse(fs.readFileSync('./result/lovemeter.json'));
-
 const _pokemon = JSON.parse(fs.readFileSync('./result/pokemon.json'));
 const _animal = JSON.parse(fs.readFileSync('./result/animal.json'));
 const _dareen = JSON.parse(fs.readFileSync('./result/en/dareen.json'));
-
 const _facten = JSON.parse(fs.readFileSync('./result/en/facten.json'));
 const _nsfwen = JSON.parse(fs.readFileSync('./result/en/nsfwen.json'));
-
-
-
 const _rollen = JSON.parse(fs.readFileSync('./result/en/dice.json'));
 const _meme = JSON.parse(fs.readFileSync('./result/meme.json'));
-
 const _rboob = JSON.parse(fs.readFileSync('./result/rboob.json'));
-
 const _imgstella = JSON.parse(fs.readFileSync('./result/imgstella.json'));
 const _cute = JSON.parse(fs.readFileSync('./result/cute.json'));
 const _dog = JSON.parse(fs.readFileSync('./result/dog.json'));
-
-
 const _ultimateroll = JSON.parse(fs.readFileSync('./result/ultimateroll.json'));
 const _legendaryroll = JSON.parse(fs.readFileSync('./result/legendaryroll.json'));
-
-
-
 
 const _ilham = JSON.parse(fs.readFileSync('./result/ilham.json'));
 const _dilan = JSON.parse(fs.readFileSync('./result/dilan.json'));
@@ -122,21 +102,13 @@ const { negara } = require('./result/kodenegara');
 const _lapor = JSON.parse(fs.readFileSync('./report/lapor.json'));
 const _request = JSON.parse(fs.readFileSync('./report/request.json'));
 
-
-
-
 //-- Help
 const { menusdes, menusdess, menu, menus, menusticker, menuowner, menuy, menux, menuagb, menuthree, menu3, menusecret} = require('./help/menu');
-
 const { updates, updatesold} = require('./help/updates');
-
 const { ass} = require('./help/nsfw/ass');
 const { boob} = require('./help/nsfw/boob');
 
-
-
 const { bgithub, showapk, bnews} = require('./help/show');
-
 const { termux } = require('./help/termux');
 const { wait, stick, err, group, ban, ownerB, premi, userB, admin, Badmin } = require('./help/respon');
 
@@ -159,15 +131,10 @@ const ownerNumber = [
   "4917626388837@s.whatsapp.net",
   ];
   
- 
-
 //-- Apikey
 const Vkey = 'apivinz'
 const Xinz = 'XinzBot'
 const Pkode = 'pais'
-
-
-
 
 //-- Zeit und Datum
 function kyun(seconds){
@@ -287,6 +254,60 @@ const botNumber = Lxa.user.jid
   const isWelcom = isGroup ? _welcom.includes(from) : false
   const isAnti = isGroup ? _antilink.includes(from) : false
   const pushname = Lxa.contacts[sender] != undefined ? Lxa.contacts[sender].vname || Lxa.contacts[sender].notify: undefined
+  
+// -- User   
+
+const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+	
+const mynumber = _myaccount[0]			//--- phone number	
+const mypushname = _myaccount[1]  		//--- pushname
+const myname = _myaccount[2]			//--- name
+const myage = _myaccount[3]				//--- age
+const myemojie = _myaccount[4]			//--- emojie
+const myid = _myaccount[5]				//--- user id	
+const myxp = _myaccount[6] 				//--- xp
+const mymoney = _myaccount[7]			//--- money
+const mymood = _myaccount[8]			//--- mood
+const mydate = _myaccount[9]			//--- account creation date
+const mystickerpack = _myaccount[10]	//--- stickerpack name
+const mydesign = _myaccount[11]			//--- account design
+const myupdate = _myaccount[12]			//--- updated Account
+const myemail = _myaccount[13]			//--- Email
+const myemailinfo = _myaccount[14]		//--- Email verified
+
+const my15 = _myaccount[15]		//--- 
+const my16 = _myaccount[16]		//---
+const my17 = _myaccount[17]		//---
+const my18 = _myaccount[18]		//---
+const my19 = _myaccount[19]		//---
+const my20 = _myaccount[20]		//---
+const my21 = _myaccount[21]		//---
+const my22 = _myaccount[22]		//---
+const my23 = _myaccount[23]		//---
+const my24 = _myaccount[24]		//---
+const my25 = _myaccount[25]		//---
+const my26 = _myaccount[26]		//---
+const my27 = _myaccount[27]		//---
+const my28 = _myaccount[28]		//---
+const my29 = _myaccount[29]		//---
+const my30 = _myaccount[30]		//---
+const my31 = _myaccount[31]		//---
+const my32 = _myaccount[32]		//---
+const my33 = _myaccount[33]		//---
+const my34 = _myaccount[34]		//---
+const my35 = _myaccount[35]		//---
+const my36 = _myaccount[36]		//---
+const my37 = _myaccount[37]		//---
+const my38 = _myaccount[38]		//---
+const my39 = _myaccount[39]		//---
+const my40 = _myaccount[40]		//---
+const my41 = _myaccount[41]		//---
+const my42 = _myaccount[42]		//---
+const my43 = _myaccount[43]		//---
+const my44 = _myaccount[44]		//---
+const my45 = _myaccount[45]		//---
+const my46 = _myaccount[46]		//---
+const my47 = _myaccount[47]		//---
 
 //-- other
   const isUrl = (url) => {
