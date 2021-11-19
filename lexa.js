@@ -3192,7 +3192,7 @@ const delaydesign1 = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 const _changedesignmoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changedesignmoney1 = _changedesignmoney1[7]	//--- money	
-const cmdesignn = _changedesignmoney1[7]	//--- money	
+const cmdesignn = _changedesignmoney1[11]	//--- money	
  
 
    reply(`${cmdesignn} Changed design from *${changedesign}* to *${value}*\nMoney left: ${changedesignmoney1}$\n. . . . . . . . . . . . . . .\n✅ StarDash Design`)
