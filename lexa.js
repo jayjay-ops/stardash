@@ -2422,29 +2422,7 @@ case 'link':
 case 'join':
 
 await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
-					
-				await conn.acceptInvite (`{value}`)
-			await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
-			
-			
-const response = await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
-console.log("joined to: " + response.gid)
 
-yehs = `https://chat.whatsapp.com/\n\n⌯   ﹝𝙷𝚎𝚛𝚎 𝚒𝚜 𝚝𝚑𝚎 𝚐𝚛𝚘𝚞𝚙 𝚕𝚒𝚗𝚔.﹞ ´*`
-				Lxa.sendMessage(from, yehs, response, text, {quoted: mek})
-
- var responses = await Lxa.acceptInvite(value)
- 
- const responsess = await conn.acceptInvite ("xxx")
-console.log("joined to: " + response.gid)
- var responses = await conn.acceptInvite(value)
-
- const resultlink = await conn.query({
-                            json: ["query", "invite", linkk],
-                            expect200: true
-                        })
-                        const { id, subject } = resultlink
-                        await conn.acceptInvite(linkk)
 				break				
 
 //-- Gruppenbenachrichtigungen
