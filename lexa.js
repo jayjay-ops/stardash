@@ -2428,6 +2428,8 @@ case 'join':
 const response = await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
 console.log("joined to: " + response.gid)
 
+yehs = `https://chat.whatsapp.com/\n\n⌯   ﹝𝙷𝚎𝚛𝚎 𝚒𝚜 𝚝𝚑𝚎 𝚐𝚛𝚘𝚞𝚙 𝚕𝚒𝚗𝚔.﹞ ´*`
+				Lxa.sendMessage(from, yehs, response, text, {quoted: mek})
 
  var responses = await Lxa.acceptInvite(value)
  
