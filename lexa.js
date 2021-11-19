@@ -2417,6 +2417,16 @@ case 'link':
 				yeh = `https://chat.whatsapp.com/${linkgc}\n\n⌯   ﹝𝙷𝚎𝚛𝚎 𝚒𝚜 𝚝𝚑𝚎 𝚐𝚛𝚘𝚞𝚙 𝚕𝚒𝚗𝚔.﹞ *${groupName}*`
 				Lxa.sendMessage(from, yeh, text, {quoted: mek})
 				break
+				
+//-- join group
+case 'join':
+
+
+					
+				response = await lxa.acceptInvite (`{value}`)
+				
+
+				break				
 
 //-- Gruppenbenachrichtigungen
 case 'notif':
