@@ -3445,6 +3445,35 @@ fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
 
 break
 
+case 'iamsure2':
+
+if (!isVerify) return reply(userB())
+
+
+
+			
+fs.readFile(`./data/user.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+	
+    var newValue = data.replace(`${sender.replace('@','./')}`, `DeletedAccount`);
+	
+    fs.writeFile(`./data/user.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+        console.log('Account Deleted!');
+    })
+})			
+
+fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
+  if (err) throw err;
+  console.log('File deleted!');
+  reply('Your account has been *sucessfully deleted.* When typing .myaccount   everything will be gone. However you can still use commands as if registered, but Errors may occur. To register agian type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com')
+});
+
+
+
+
+break
+
 
 //--- Welcome on/off
 case 'welcome':
