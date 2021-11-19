@@ -2423,8 +2423,8 @@ case 'join':
 
 
 					
-				response = await Lxa.acceptInvite (`{value}`)
-				console.log("joined to: " + response.gid)
+				await Lxa.acceptInvite (`{value}`)
+			
 
 				break				
 
