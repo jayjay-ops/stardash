@@ -3590,7 +3590,7 @@ Please add your first name, age, favorite emojie, email adress
 
 Example:
 
-.register StarDash 16 ✨ stardash@gmail.com
+.verifyagain StarDash 16 ✨ stardash@gmail.com
 
 . . . . . . . . . . . . . . .`)
 
@@ -4302,8 +4302,6 @@ const mytransfermoney = _mytransfermoney[7]	//--- money mine
 const _histranfermoney = JSON.parse(fs.readFileSync(`${args[1].replace('@','./')}@s.whatsapp.net.json`));	
 const histranfermoney = _histranfermoney[7]	//--- money his
 
-
-if (mytransfermoney < args[0]) return reply(`﹝You have not enough money to transfer. Money needed: ${args[0]}$ Your money: ${mytransfermoney}$﹞`) 
 
 	
 
