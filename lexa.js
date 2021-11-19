@@ -15,7 +15,7 @@ const {
   mentionedJid,
   processTime,
   ChatModification,
-  WAInitResponse
+  WAInitResponse,
   whatsappID,
   WAConnectionTest,
 } = require('@adiwajshing/baileys');
