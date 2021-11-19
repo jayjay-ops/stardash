@@ -3778,45 +3778,25 @@ case 'profile':
 		
 		if (!isVerify) return reply(userB())
 			
-const _me = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-
-
-
-	
-const me = _me[0]	//--- phone number	
-const me1 = _me[1]  //--- pushname
-const me2 = _me[2]	//--- name
-const me3 = _me[3]	//--- age
-const me4 = _me[4]	//--- emojie
-const me5 = _me[5]	//--- user id	
-const me6 = _me[6] 	//--- xp
-const me7 = _me[7]	//--- money
-const me8 = _me[8]	//--- mood
-const me9 = _me[9]	//--- account creation date
-const me10 = _me[10]	//--- stickerpack name
-const me11 = _me[11]	//--- account design
-const me12 = _me[12]	//--- claim money
-const me13 = _me[13]	//--- Email
-const me14 = _me[14]	//--- Email verified
-
+		
  reply(`............................
  ⇝ ${pushname}\n⇝ ${prem_}
  ............................\n
- 𝚗𝚞𝚖𝚋𝚎𝚛\n${me11} ${me}\n
- 𝚗𝚊𝚖𝚎\n${me11} ${me2}\n
- 𝚊𝚐𝚎\n${myage} ${me3}\n
- 𝚎𝚖𝚘𝚓𝚒𝚎\n${me11} ${me4}\n
- 𝚞𝚜𝚎𝚛 𝚒𝚍\n${me11} ${me5}
+ 𝚗𝚞𝚖𝚋𝚎𝚛\n${mydesign} ${mynumber}\n
+ 𝚗𝚊𝚖𝚎\n${mydesign} ${myname}\n
+ 𝚊𝚐𝚎\n${mydesign} ${myage}\n
+ 𝚎𝚖𝚘𝚓𝚒𝚎\n${mydesign} ${myemojie}\n
+ 𝚞𝚜𝚎𝚛 𝚒𝚍\n${mydesign} ${myid}
  . . . . . . . . . . . . . . .
- 𝚡𝚙\n${me11} ${me6}\n
- 𝚖𝚘𝚗𝚎𝚢\n${me11} ${me7}$\n
- 𝚖𝚘𝚘𝚍\n${me11} ${me8}\n
- 𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n${me11} ${me10}\n
- 𝚎𝚖𝚊𝚒𝚕\n${me11} ${me13} \n
- 𝚎𝚖𝚊𝚒𝚕 𝚒𝚗𝚏𝚘\n${me11} ${me14}\n
- 𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${me11} .shop\n
- 𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${me11} .menu\n
- 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${me11} ${me9}\n
+ 𝚡𝚙\n${mydesign} ${myxp}\n
+ 𝚖𝚘𝚗𝚎𝚢\n${mydesign} ${mymoney}$\n
+ 𝚖𝚘𝚘𝚍\n${mydesign} ${mymood}\n
+ 𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n${mydesign} ${mystickerpack}\n
+ 𝚎𝚖𝚊𝚒𝚕\n${mydesign} ${myemail} \n
+ 𝚎𝚖𝚊𝚒𝚕 𝚒𝚗𝚏𝚘\n${mydesign} ${myupdate}\n
+ 𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${mydesign} .shop\n
+ 𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${mydesign} .menu\n
+ 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${mydesign} ${mydate}\n
  . . . . . . . . . . . . . . .
  𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜
  𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑
@@ -3826,9 +3806,6 @@ const me14 = _me[14]	//--- Email verified
  𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑
  .deletemyaccount
  . . . . . . . . . . . . . . .`)
-
-
-
 
 break
 
