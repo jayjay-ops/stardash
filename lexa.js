@@ -2537,22 +2537,18 @@ case 'registrieren':
 case 'register':
 
 				if (isVerify) return reply('⌯   ﹝𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍.﹞') 
-				if (args.length < 4) return reply(`By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
-
-If registering doesnt work then correct your mistakes and leave space between each word
+				if (args.length < 1) return reply(`By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
 . . . . . . . . . . . . . . .
 
-Please add your first name, age, favorite emojie, email adress
+Please add a username :)
 
 Example:
 
-.register StarDash 16 ✨ stardash@gmail.com
+.register StarDash
 
 . . . . . . . . . . . . . . .`)
-			    if (args.length > 4) return reply(`⌯   ﹝Please only say 1 name.﹞`) 
-				if (args[1] > 50) return reply(`⌯   ﹝Sorry old grandma you are to old.﹞`) 
-	
-				if (args[1] < 12) return reply(`⌯   ﹝Sorry kid. You are too young.﹞`)
+			    if (args.length > 1) return reply(`⌯   ﹝Please only type   .register name﹞`) 
+			
 
 function kyun(seconds){
   function pad(s){
@@ -2587,7 +2583,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			
 			const userid = Math.floor(Math.random() * 1000000000)
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", "${args[3]}", "⚠️ Check your Email!", "empty"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , ".changeage", ".changemojie", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", ".changeemojie", "⚠️ type .updateme", "empty"]`, function (err) {
 				
 				
 		
@@ -2597,42 +2593,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 });
 					
 			
-var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  auth: {
-    user: 'stardashnotification@gmail.com',
-    pass: 'stardash20%'
-  },
-});
 
-transporter.verify().then(console.log).catch(console.error);
-
-
-var mailOptions = {
-  from: 'stardashnotification@gmail.com',
-  to: `${args[3]}`,
-  subject: `StarDash Account registered! ${pushname}`,
-  text: `Dear User ${pushname},
-  
-Your account was sucessfully created with the name ${args[0]}. 
-You can find the details in whatsapp under command: .me  
-  
-Please verify your email adress by sending this message to bot (.code with number):    
-  
-            .code ${userid}
-  
-StarDash Team`
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
 									
 			break
 			
@@ -2779,7 +2740,7 @@ const shopmoney = _shopmoney[7]	//--- money
 const _shopd = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const shopd = _shopd[11]	//--- account design
 		
-reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚂𝚑𝚘𝚙\n${shopd} 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n\n𝙵𝚛𝚎𝚎\n\n𝚜𝚎𝚝 𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙽𝚊𝚖𝚎\n${shopd} .stickerpack\n\n𝚜𝚎𝚝 𝙼𝚘𝚘𝚍\n${shopd} .mood\n\n✯ 𝙱𝚞𝚢\n\nTransfer money\n➳ Send money to someone\n➳ cost: AnyCost$\n${shopd} .transfer 10 @stardash\n\n𝚜𝚊𝚟𝚎 𝚙𝚒𝚌𝚝𝚞𝚛𝚎\n➳ Save a picture\n➳ cost: 22$\n${shopd} .savesticker\n\n✯ 𝚐𝚊𝚖𝚎𝚜\n\n𝚂𝚕𝚘𝚝 𝙶𝚊𝚖𝚎\n➳ cost: 4$\n➳  small win = +8$\n➳  jackpot = +200$\n${shopd} .slot\n\n. . . . . . . . . . . . . . .\n✯ 𝚜𝚎𝚝𝚝𝚒𝚗𝚐\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚍𝚎𝚜𝚒𝚐𝚗\n➳ cost: 25$\n${shopd} .design\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎\n➳ cost: 50$\n${shopd} .changename \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚘𝚓𝚒𝚎\n➳ cost: 100$\n${shopd} .changeemojie \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 150$\n${shopd} .changeage\n\n. . . . . . . . . . . . . . .\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n. . . . . . . . . . . . . . .`)	
+reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚂𝚑𝚘𝚙\n${shopd} 𝚠𝚎𝚕𝚌𝚘𝚖𝚎\n............................\n\n𝙵𝚛𝚎𝚎\n\n𝚜𝚎𝚝 𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙽𝚊𝚖𝚎\n${shopd} .stickerpack\n\n𝚜𝚎𝚝 𝙼𝚘𝚘𝚍\n${shopd} .mood\n\n✯ 𝙱𝚞𝚢\n\nTransfer money\n➳ Send money to someone\n➳ cost: AnyCost$\n${shopd} .transfer 10 @stardash\n\n𝚜𝚊𝚟𝚎 𝚙𝚒𝚌𝚝𝚞𝚛𝚎\n➳ Save a picture\n➳ cost: 22$\n${shopd} .savesticker\n\n✯ 𝚐𝚊𝚖𝚎𝚜\n\n𝚂𝚕𝚘𝚝 𝙶𝚊𝚖𝚎\n➳ cost: 4$\n➳  small win = +8$\n➳  jackpot = +200$\n${shopd} .slot\n\n. . . . . . . . . . . . . . .\n✯ 𝚜𝚎𝚝𝚝𝚒𝚗𝚐\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚊𝚒𝚕\n➳ cost: free$\n${shopd} .changeemail\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚍𝚎𝚜𝚒𝚐𝚗\n➳ cost: 25$\n${shopd} .design\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎\n➳ cost: 5$\n${shopd} .changename \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚘𝚓𝚒𝚎\n➳ cost: 5$\n${shopd} .changeemojie \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 5$\n${shopd} .changeage\n\n. . . . . . . . . . . . . . .\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n. . . . . . . . . . . . . . .`)	
 
 break
 
@@ -2902,71 +2863,6 @@ const my47 = _myaccount[47]		//---
 
 break
 
-//-- verify email
-
-case 'code':
-
-if (!isVerify) return reply(UserB())
-if (args.length < 1) return reply('⌯   Enter the code from the Email you got send to.')
-
-const _emailss = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-
-
-
-	
-const emailss = _emailss[0]	//--- phone number	
-const emailss1 = _emailss[1]  //--- pushnaemailss
-const emailss2 = _emailss[2]	//--- naemailss
-const emailss3 = _emailss[3]	//--- age
-const emailss4 = _emailss[4]	//--- emojie
-const emailss5 = _emailss[5]	//--- user id	
-const emailss6 = _emailss[6] 	//--- xp
-const emailss7 = _emailss[7]	//--- money
-const emailss8 = _emailss[8]	//--- mood
-const emailss9 = _emailss[9]	//--- account creation date
-const emailss10 = _emailss[10]	//--- stickerpack naemailss
-const emailss11 = _emailss[11]	//--- account design
-const emailss12 = _emailss[12]	//--- claim money
-const emailss13 = _emailss[13]	//--- Email
-const emailss14 = _emailss[14]	//--- Email verified
-
-
-
-if (args.length < 1) {
-	
- reply(`⌯   ﹝wrong code﹞`)
-
-} else {
-					
-
-
-		
-	const _verifyemail = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));
-const verifyemail = _verifyemail[14]
-
-
-
-
-let newwdatae = `verified`
-
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${verifyemail}`, newwdatae);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-	})
-		
-		
-   reply(`⌯  ﹝Email sucessfully verified!﹞`); 	
-					}
-
-break
-
-
 
 //--- Hidden account information		
 
@@ -3076,7 +2972,7 @@ if (!isVerify) return reply(userB())
 
 const _yourcashage = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashage = _yourcashage[7]	//--- money	
-if (yourcashage < 150) return reply(`﹝You have not enough money to change your name. Money needed: 150$ Your money: ${yourcashage}$﹞`) 
+if (yourcashage < 5) return reply(`﹝You have not enough money to change your name. Money needed: 150$ Your money: ${yourcashage}$﹞`) 
 
 	
 const _changeage = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
@@ -3101,7 +2997,7 @@ const _changeagemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.
 const changeagemoney = _changeagemoney[7]	//--- money	
 
 let ppp = Number(changeagemoney);
-let ooo = Number(150);
+let ooo = Number(5);
 let oooppp = ppp - ooo; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
@@ -3160,7 +3056,44 @@ const delayslot5122 = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 
  reply(`${email11} Changed email to ${args[0]}\n. . . . . . . . . . . . . . .\n✅ StarDash Mail`)
-				
+		
+
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  auth: {
+    user: 'stardashnotification@gmail.com',
+    pass: 'stardash20%'
+  },
+});
+
+transporter.verify().then(console.log).catch(console.error);
+
+
+var mailOptions = {
+  from: 'stardashnotification@gmail.com',
+  to: `${args[0]}`,
+  subject: `StarDash Email set! ${pushname}`,
+  text: `Dear User ${pushname},
+  
+Your Email was sucessfuly changed to: ${args[0]}. 
+
+To view your details send message    .me
+  
+StarDash Team`
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+
+
+		
 break
 
 //-- changeemojie
@@ -3172,7 +3105,7 @@ if (!isVerify) return reply(userB())
 
 const _yourcashemojie = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashemojie = _yourcashemojie[7]	//--- money	
-if (yourcashname < 100) return reply(`﹝You have not enough money to change your name. Money needed: 100$ Your money: ${yourcashemojie}$﹞`) 
+if (yourcashname < 5) return reply(`﹝You have not enough money to change your name. Money needed: 100$ Your money: ${yourcashemojie}$﹞`) 
 
 	
 const _changeemojie = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
@@ -3197,7 +3130,7 @@ const _changeemojiemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}
 const changeemojiemoney = _changeemojiemoney[7]	//--- money	
 
 let pppp = Number(changeemojiemoney);
-let oooo = Number(100);
+let oooo = Number(5);
 let oooopppp = pppp - oooo; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
