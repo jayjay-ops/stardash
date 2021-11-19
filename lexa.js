@@ -412,10 +412,10 @@ const linkwa = 'http'
 if (isCmd && isBan) return reply(banned())
 
 //-- Automatisch lesen, wenn es eine Nachricht gibt
-if (isCmd && isVerify) Lxa.chatRead(from)
+if (isCmd) Lxa.chatRead(from)
 	
 // -- User   
-if (isCmd)  {
+if (isCmd && isVerify)  {
 	
 const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 	
