@@ -2627,12 +2627,9 @@ case 'verifyagain':
 
 if (args.length < 1) return reply(`By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
 . . . . . . . . . . . . . . .
-
-Please add your first name, age, favorite emojie, email adress
-
 Example:
 
-.verifyagain StarDash 16 ✨ stardash@gmail.com
+.verifyagain StarDash
 
 . . . . . . . . . . . . . . .`)
 
@@ -2682,9 +2679,9 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 			
 
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , "${args[1]}", "${args[2]}", "${userid2}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", "${args[3]}", "⚠️ Check your Email!", "empty"]`, function (err) {
-
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , ".changeage", ".changemojie", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", ".changeemojie", "⚠️ type .updateme", "empty"]`, function (err) {
 				
+			
 
 				
 
@@ -2696,49 +2693,6 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
   console.log('Account Opend.');
   
-  var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  auth: {
-    user: 'stardashnotification@gmail.com',
-    pass: 'stardash20%'
-  },
-});
-
-transporter.verify().then(console.log).catch(console.error);
-
-
-var mailOptions = {
-  from: 'stardashnotification@gmail.com',
-  to: `${args[3]}`,
-  subject: `StarDash Account registered! ${pushname}`,
-  text: `Dear User ${pushname},
-  
-Your account was sucessfully re- created with the name ${args[0]}. 
-You can find the details in whatsapp under command: .me  
-  
-Please verify your email adress by sending this message to bot (.code with number):    
-  
-                 .code ${userid2}
-  
-StarDash Team`
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
-
-});
-
-					
-
-							
-
 			break
 			
 //--- Shop	
