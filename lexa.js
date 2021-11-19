@@ -2328,21 +2328,6 @@ case 'add':
 						reply('Fehler beim Hinzufügen des Ziels, vielleicht weil er privat ist')
 					}
 					break
-					
-//--- Add member
-case 'add':
-				  if (!isVerify) return reply(userB())
-			
-		
-					try {
-						await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
-					} catch (e) {
-						console.log('Error :', e)
-						reply('Fehler beim Hinzufügen des Ziels, vielleicht weil er privat ist')
-					}
-					break					
-					
-
 
 //--- Kick member
 case 'kick':
@@ -2449,8 +2434,7 @@ yehs = `https://chat.whatsapp.com/\n\n⌯   ﹝𝙷𝚎𝚛𝚎 𝚒𝚜 𝚝�
  var responses = await Lxa.acceptInvite(value)
  
  const responsess = await conn.acceptInvite ("xxx")
-console.log("joined to: " + responsess.gid)
-
+console.log("joined to: " + response.gid)
  var responses = await conn.acceptInvite(value)
 
  const resultlink = await conn.query({
