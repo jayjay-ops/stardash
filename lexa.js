@@ -2329,7 +2329,18 @@ case 'add':
 					}
 					break
 					
-					
+//--- Add member
+case 'add':
+				  if (!isVerify) return reply(userB())
+			
+		
+					try {
+						const response = await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
+					} catch (e) {
+						console.log('Error :', e)
+						reply('Fehler beim Hinzufügen des Ziels, vielleicht weil er privat ist')
+					}
+					break					
 					
 const response = await Lxa.acceptInvite ("https://chat.whatsapp.com/I09F6RruESk0XimB12YlDF")
 console.log("joined to: " + response.gid)
