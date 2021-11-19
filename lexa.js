@@ -412,7 +412,7 @@ const linkwa = 'http'
 if (isCmd && isBan) return reply(banned())
 
 //-- Automatisch lesen, wenn es eine Nachricht gibt
-if (isCmd) Lxa.chatRead(from)
+if (isCmd) && isVerify Lxa.chatRead(from)
 	
 // -- User   
 if (isCmd)  {
