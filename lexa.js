@@ -2681,14 +2681,6 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , ".changeage", ".changemojie", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", ".changeemojie", "⚠️ type .updateme", "empty"]`, function (err) {
 				
-			
-
-				
-
-		
-
-				
-
   if (err) throw err;
   
 			})
@@ -2719,9 +2711,6 @@ reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚂𝚑𝚘𝚙\n${shopd} 𝚠𝚎𝚕
 𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 5$\n${shopd} .changeage\n\n. . . . . . . . . . . . . . .\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n. . . . . . . . . . . . . . .`)	
 
 break
-
-
-
 
 
 
@@ -2823,7 +2812,7 @@ const my47 = _myaccount[47]		//---
  𝚖𝚘𝚘𝚍\n${mydesign} ${mymood}\n
  𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n${mydesign} ${mystickerpack}\n
  𝚎𝚖𝚊𝚒𝚕\n${mydesign} ${myemail} \n
- 𝚎𝚖𝚊𝚒𝚕 𝚒𝚗𝚏𝚘\n${mydesign} ${myupdate}\n
+ 𝙰𝚌𝚌𝚘𝚞𝚗𝚝 𝚟𝚎𝚛𝚜𝚒𝚘𝚗\n${mydesign} ${myupdate}\n
  𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${mydesign} .shop\n
  𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${mydesign} .menu\n
  𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${mydesign} ${mydate}\n
