@@ -2003,7 +2003,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 				exec(`rm -rf ${sender.split("@")[0]}.mp3`)
 				exec(`rm -rf ${sender.split("@")[0]}.wav`)
 	
-
+				exec(`mv ${media} ${sender.split("@")[0]}.opus`)
 	
 const delaydesign1sticker4 = ms => new Promise(resolve => setTimeout(resolve, ms))
 await delaydesign1sticker4(1000) /// waiting 1 second.					
