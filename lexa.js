@@ -2423,7 +2423,7 @@ case 'join':
 
 
 					
-				response = await lxa.acceptInvite (`{value}`)
+				response = await Lxa.acceptInvite (`{value}`)
 				
 
 				break				
