@@ -415,25 +415,25 @@ if (isCmd && isBan) return reply(banned())
 if (isCmd) Lxa.chatRead(from)
 	
 // -- User   
-if (isCmd && isVerify)  {
+if (isCmd && isVerify) {
 	
 const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 	
-const mynumber = _myaccount[0]			//--- phone number	
-const mypushname = _myaccount[1]  		//--- pushname
-const myname = _myaccount[2]			//--- name
-const myage = _myaccount[3]				//--- age
-const myemojie = _myaccount[4]			//--- emojie
-const myid = _myaccount[5]				//--- user id	
-const myxp = _myaccount[6] 				//--- xp
-const mymoney = _myaccount[7]			//--- money
-const mymood = _myaccount[8]			//--- mood
-const mydate = _myaccount[9]			//--- account creation date
-const mystickerpack = _myaccount[10]	//--- stickerpack name
-const mydesign = _myaccount[11]			//--- account design
-const myupdate = _myaccount[12]			//--- updated Account
-const myemail = _myaccount[13]			//--- Email
-const myemailinfo = _myaccount[14]		//--- Email verified
+const mynumber = _myaccount[0];			//--- phone number	
+const mypushname = _myaccount[1]; 		//--- pushname
+const myname = _myaccount[2];			//--- name
+const myage = _myaccount[3];				//--- age
+const myemojie = _myaccount[4];			//--- emojie
+const myid = _myaccount[5];				//--- user id	
+const myxp = _myaccount[6];				//--- xp
+const mymoney = _myaccount[7];			//--- money
+const mymood = _myaccount[8];			//--- mood
+const mydate = _myaccount[9];			//--- account creation date
+const mystickerpack = _myaccount[10];	//--- stickerpack name
+const mydesign = _myaccount[11];			//--- account design
+const myupdate = _myaccount[12];			//--- updated Account
+const myemail = _myaccount[13];		//--- Email
+const myemailinfo = _myaccount[14];		//--- Email verified
 
 const my15 = _myaccount[15]		//--- 
 const my16 = _myaccount[16]		//---
