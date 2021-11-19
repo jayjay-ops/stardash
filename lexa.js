@@ -10,6 +10,7 @@ const {
   MessageOptions,
   WALocationMessage,
   ReconnectMode,
+  AcceptInvite,
   ProxyAgent,
   WAMetric, 
   WAFlag, 
