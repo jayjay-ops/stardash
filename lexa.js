@@ -2648,7 +2648,6 @@ if (args.length < 1) return reply(`By signing up, you agree to our Terms of Serv
 Example:
 
 .verifyagain StarDash
-
 . . . . . . . . . . . . . . .`)
 
     if (args.length > 1) return reply(`⌯   ﹝Error. Try   .verifyagain yourname﹞`) 
@@ -2697,7 +2696,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 			
 
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , ".changeage", ".changemojie", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", ".changeemail", "⚠️ type .updateme", "empty"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , ".changeage", ".changemojie", "${userid2}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", ".changeemail", "⚠️ type .updateme", "empty"]`, function (err) {
 				
   if (err) throw err;
   
