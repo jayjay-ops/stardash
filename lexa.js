@@ -3217,7 +3217,7 @@ case 'iamsure':
 					fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
 					  if (err) throw err;
 					  console.log('File deleted!');
-					  reply('Your account has been *sucessfully deleted.* When typing .myaccount   everything will be gone. However you can still use commands as if registered, but Errors may occur. To register agian type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash')
+					  reply('Your account has been *sucessfully deleted.* When typing .myaccount   everything will be gone. However you can still use commands as if registered, but Errors may occur. You can only verifyagain with the password.\n. . . . . . . . . . . . . . .\nAsk number +4917626388837 for the password\n. . . . . . . . . . . . . . .\n✅ StarDash')
 					});
 
 	break
