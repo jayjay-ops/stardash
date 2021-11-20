@@ -3139,6 +3139,8 @@ case 'setemojie':
 //-- changedesign
 
 case 'design': 
+case 'setdesign': 
+case 'changedesign': 
   
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 Design Sybmol or Emojie.﹞')
@@ -3175,7 +3177,7 @@ case 'design':
 				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
-					var newValue = data.replace(`${changedesignmoney}`, newdesignmoney);
+					var newValue = data.replace(`${yourcashdesign}`, newdesignmoney);
 					
 					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
