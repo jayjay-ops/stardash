@@ -1639,7 +1639,7 @@ let oorpprsong = pprrsong - oorrsong;
 													
 						if (err) return reply('Error')
 							
-						reply('${songdesign} ﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: For 22$ you can save the song to your account by typing .savesong and tagging the audio! You can then let it be send to you with the command .mysong for free!_\n. . . . . . . . . . . . . . .\n✅ StarDash Songs')
+						reply(`${songdesign} ﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: For 22$ you can save the song to your account by typing .savesong and tagging the audio! You can then let it be send to you with the command .mysong for free!_\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
 						
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
