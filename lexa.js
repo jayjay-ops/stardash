@@ -1918,6 +1918,14 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
   
 break			
 
+//-- edit saved audio
+case 'editaudio':
+case 'nameaudio':
+
+	  if (!isVerify) return reply(UserB())	
+
+exec(`ffmpeg -i ${sender.split("@")[0]}.opus -metadata title='${value}' -codec copy output.mp4 && mv output.mp4 ${sender.split("@")[0]}.opus`)
+
 //-- mysticker
 
 case 'mysticker':
