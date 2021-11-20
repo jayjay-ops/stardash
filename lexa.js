@@ -2889,6 +2889,7 @@ const userdata15 = _userdata[15]	//--- empty
 
 case 'changename': 
 case 'setname': 
+
 		if (!isVerify) return reply(userB())
 		if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new username.﹞')
 
@@ -2939,203 +2940,201 @@ case 'setname':
 								
 								const changenamedesign = _changenamemoneynew[11]	//--- account design
  
-								reply(`${changenamedesign} Changed username from *${changename}* to *${value}*\n. . . . . . . . . . . . . . .\nMoney left: ${changenamemoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Mail`)
+								reply(`${changenamedesign} Changed username from *${changename}* to *${value}*\n. . . . . . . . . . . . . . .\nMoney left: ${changenamemoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Name`)
       
 									break
 
 //-- changeage
+
 case 'changeage': 
+case 'setage': 
   
-if (!isVerify) return reply(userB())
+		if (!isVerify) return reply(userB())	
+		if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new age.﹞')
+
+			const _youragemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+			const youragemoney = _youragemoney[7]	//--- money	
+
+		if (youragemoney < 5) return reply(`﹝You have not enough money to change your name. Money needed: 150$ Your money: ${yourcashage}$﹞`) 
+
 	
-	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new age.﹞')
+			const _changeage = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+			const changeage = _changeage[3]	//--- Changeage
+										
+					let newage = args[0];
 
-const _yourcashage = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const yourcashage = _yourcashage[7]	//--- money	
-if (yourcashage < 5) return reply(`﹝You have not enough money to change your name. Money needed: 150$ Your money: ${yourcashage}$﹞`) 
+					fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+						if (err) throw err;
+						
+						var newValue = data.replace(`${changeage}`, newage);
+						
+						fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+							if (err) throw err;
+						})
+					})
 
-	
-const _changeage = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changeage = _changeage[3]	//--- Changeage
-let newage = args[0];
-
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${changeage}`, newage);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
-
-const delayslot51 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot51(1000) /// waiting 1 second.
+								const changeagedelay = ms => new Promise(resolve => setTimeout(resolve, ms))
+								await changeagedelay(1000) /// waiting 1 second.
 				
-const _changeagemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changeagemoney = _changeagemoney[7]	//--- money	
 
-let ppp = Number(changeagemoney);
-let ooo = Number(5);
-let oooppp = ppp - ooo; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${changeagemoney}`, oooppp);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+				let oldagemoney = Number(youragemoney);
+				let agemoneycost = Number(5);
+				let newagemoney = oldagemoney - agemoneycost; 
 
-const delayslot41 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot41(1000) /// waiting 1 second.
 
-const _changeagemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changeagemoney1 = _changeagemoney1[7]	//--- money	
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${youragemoney}`, newagemoney);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
 
- 
-  reply(`Changed age from *${changeage}* to *${value}* \n\nMoney left: ${changeagemoney1}$`)
-  
-break
+								const changemoneyagedelay = ms => new Promise(resolve => setTimeout(resolve, ms))
+								await changemoneyagedelay(1000) /// waiting 1 second.
+
+								const _changeagemoneynew = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+								const changeagemoneynew = _changeagemoneynew[7]	//--- new money	
+
+								const changeagemoneydesign = _changenamemoneynew[11]	//--- account design
+		  
+								reply(`${changeagemoneydesign} Changed age from *${changeage}* to *${value}*\n. . . . . . . . . . . . . . .\nMoney left: ${changeagemoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Age`)
+			  
+	break
 
 //-- change email
+
 case 'changeemail': 
 case 'setemail': 
   
   
-if (!isVerify) return reply(userB())
+			if (!isVerify) return reply(userB())
 	
-const _email = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+				const _emailchange = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 
-const email13 = _email[13]	//--- Email
-const email11 = _email[11]	//--- account design
-	
-	if (args.length < 1) return reply('${email11}  ﹝𝙴𝚗𝚝𝚎𝚛 Email adresse.﹞ \n\nExample \n\n.changeemail star@gmail.com')
-    if (args.length > 1) return reply('${email11}  ﹝Remove space!﹞ \n\nExample \n\n.changeemail star@gmail.com')
+				const oldemail = _emailchange[13]	//--- Email
+				const emaildesign = _emailchange[11]	//--- account design
+				const emailname = _emailname[2]	//--- emailname
+		
+			if (args.length < 1) return reply('${emaildesign}  ﹝𝙴𝚗𝚝𝚎𝚛 Email adresse.﹞ \n\nExample \n\n.setemail star@gmail.com')
+			if (args.length > 1) return reply('${emaildesign}  ﹝Remove space!﹞ \n\nExample \n\n.setemail star@gmail.com')
 
-
-
-let newemail = args[0];
-
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${email13}`, newemail);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
-
-const delayslot5122 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot5122(1000) /// waiting 1 second.
+					let newemail = args[0];
 
 
- reply(`${email11} Changed email to ${args[0]}\n. . . . . . . . . . . . . . .\n✅ StarDash Mail`)
+					fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+						if (err) throw err;
+						
+						var newValue = data.replace(`${oldemail}`, newemail);
+						
+						fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+							if (err) throw err;
+						})
+					})
+
+						const setemaildelay = ms => new Promise(resolve => setTimeout(resolve, ms))
+						await setemaildelay(1000) /// waiting 1 second.
+
+
+			reply(`${emaildesign} Changed email to ${args[0]}\n. . . . . . . . . . . . . . .\n✅ StarDash Mail`)
 		
 
-var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  auth: {
-    user: 'stardashnotification@gmail.com',
-    pass: 'stardash20%'
-  },
-});
+						var nodemailer = require('nodemailer');
+						var transporter = nodemailer.createTransport({
+						  host: 'smtp.gmail.com',
+						  port: 587,
+						  auth: {
+							user: 'stardashnotification@gmail.com',
+							pass: 'stardash20%'
+						  },
+						});
 
-transporter.verify().then(console.log).catch(console.error);
-
-
-var mailOptions = {
-  from: 'stardashnotification@gmail.com',
-  to: `${args[0]}`,
-  subject: `StarDash Email set! ${pushname}`,
-  text: `Dear User ${pushname},
-  
-Your Email was sucessfuly changed to: ${args[0]}. 
-
-To view your details send message    .me
-  
-StarDash Team`
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
+						transporter.verify().then(console.log).catch(console.error);
 
 
+						var mailOptions = {
+						  from: 'stardashnotification@gmail.com',
+						  to: `${args[0]}`,
+						  subject: `StarDash Email set! ${emailname}`,
+						  text: `Dear User ${emailname},
+						  
+						Your Email was sucessfuly changed to: ${args[0]}. 
+
+						To view your details send message    .me
+												
+						StarDash Team`
+						};
+
+						transporter.sendMail(mailOptions, function(error, info){
+						  if (error) {
+							console.log(error);
+						  } else {
+							console.log('Email sent: ' + info.response);
+						  }
+						});
 		
-break
+		break
 
 //-- changeemojie
+
 case 'changeemojie': 
 case 'changemojie': 
-case 'emojie': 
+case 'setemojie': 
   
-if (!isVerify) return reply(userB())
+	if (!isVerify) return reply(userB())	
 	
-	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new Emojie.﹞')
-
-const _yourcashemojie = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const yourcashemojie = _yourcashemojie[7]	//--- money	
-if (yourcashemojie < 5) return reply(`﹝You have not enough money to change your name. Money needed: 100$ Your money: ${yourcashemojie}$﹞`) 
-
+		const _yourcashemojie = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const yourcashemojie = _yourcashemojie[7]	//--- money	
+		const setemojiedesign = _yourcashemojie[11]	//--- account design
+		const changeemojie = _yourcashemojie[4]	//--- Changeemojie
+	 
+	if (yourcashemojie < 5) return reply(`${setemojiedesign} ﹝You have not enough money to change your name. Money needed: 100$ Your money: ${yourcashemojie}$﹞`) 
+	if (args.length < 1) return reply('${setemojiedesign} ﹝𝙴𝚗𝚝𝚎𝚛 new Emojie.﹞')
 	
-const _changeemojie = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changeemojie = _changeemojie[4]	//--- Changeemojie
-let newemojie = args[0];
+				let newemojie = args[0];
 
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${changeemojie}`, newemojie);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+					})
+				})
 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${changeemojie}`, newemojie);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
-
-const delayslot512 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot512(1000) /// waiting 1 second.
+						const changeemojiedelay = ms => new Promise(resolve => setTimeout(resolve, ms))
+						await changeemojiedelay(1000) /// waiting 1 second.
 				
-const _changeemojiemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changeemojiemoney = _changeemojiemoney[7]	//--- money	
 
-let pppp = Number(changeemojiemoney);
-let oooo = Number(5);
-let oooopppp = pppp - oooo; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${changeemojiemoney}`, oooopppp);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+				let oldemojiecash = Number(yourcashemojie);
+				let changeemojiecost = Number(5);
+				let newemojiemoney = oldemojiecash - changeemojiecost; 
 
-const delayslot412 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot412(1000) /// waiting 1 second.
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${changeemojiemoney}`, newemojiemoney);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
 
-const _changeemojiemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changeemojiemoney1 = _changeemojiemoney1[7]	//--- money	
- const cmdesign = _changeemojiemoney1[11]	//--- account design
+						const changeemojiedelay2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+						await changeemojiedelay2(1000) /// waiting 1 second.
+
+						const _changeemojiemoneynew = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+						const changeemojiemoneynew = _changeemojiemoneynew[7]	//--- money	
+
  
- reply(`${cmdesign} Changed Emojie from *${changeemojie}* to *${value}*\nMoney left: ${changeemojiemoney1}$\n. . . . . . . . . . . . . . .\n✅ StarDash Emojie`)
-
+				reply(`${setemojiedesign} Changed Emojie from *${changeemojie}* to *${value}*\nMoney left: ${changeemojiemoney1}$\n. . . . . . . . . . . . . . .\n✅ StarDash Emojie`)
   
-break
+	break
 
 //-- changedesign
 case 'design': 
