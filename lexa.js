@@ -3137,154 +3137,137 @@ case 'setemojie':
 	break
 
 //-- changedesign
+
 case 'design': 
   
-if (!isVerify) return reply(userB())
-	
+	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 Design Sybmol or Emojie.﹞')
 	if (args.length > 1) return reply('⌯   ﹝Set 1 Symbol. And dont leave space between . and design. not . design BUT .design﹞')
 
+		const _yourcashdesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const yourcashdesign = _yourcashdesign[7]	//--- money	
 
-const _yourcashdesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const yourcashdesign = _yourcashdesign[7]	//--- money	
-if (yourcashdesign < 25) return reply(`﹝You have not enough money to change your design. Money needed: 25$ Your money: ${yourcashdesign}$﹞`) 
+	if (yourcashdesign < 25) return reply(`﹝You have not enough money to change your design. Money needed: 25$ Your money: ${yourcashdesign}$﹞`) 
 
-	
-const _changedesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changedesign = _changedesign[11]	//--- Changedesign
-let newdesign = args[0];
+		const _changedesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const changedesign = _changedesign[11]	//--- Changedesign
+		
+				let newdesign = args[0];
 
 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${changedesign}`, newdesign);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${changedesign}`, newdesign);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+					})
+				})
 
-const delaydesign = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delaydesign(1000) /// waiting 1 second.
-				
-const _changedesignmoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changedesignmoney = _changedesignmoney[7]	//--- money	
+							const delaydesign = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delaydesign(1000) /// waiting 1 second
 
-let pprr = Number(changedesignmoney);
-let oorr = Number(25);
-let oorppr = pprr - oorr; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${changedesignmoney}`, oorppr);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+				let yourolddesignmoney = Number(yourcashdesign);
+				let changedesigncost = Number(25);
+				let newdesignmoney = changedesigncost - yourolddesignmoney; 
 
-const delaydesign1 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delaydesign1(1000) /// waiting 1 second.
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${changedesignmoney}`, newdesignmoney);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
 
-const _changedesignmoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changedesignmoney1 = _changedesignmoney1[7]	//--- money	
-const cmdesignn = _changedesignmoney1[11]	//--- money	
+							const delaydesign2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delaydesign2(1000) /// waiting 1 second.
+
+							const _changedesignmoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+							const changedesignmoneynew = _changedesignmoney1[7]	//--- money	
+							const cmdesignn = _changedesignmoney1[11]	//--- money	design
  
-
-   reply(`${cmdesignn} Changed design from *${changedesign}* to *${value}*\nMoney left: ${changedesignmoney1}$\n. . . . . . . . . . . . . . .\n✅ StarDash Design`)
-break
+					reply(`${cmdesignn} Changed design from *${changedesign}* to *${value}*\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Design`)
+					
+		break
 
 //-- transfer
+
 case 'transfer': 
 case 'donate': 
   
-if (!isVerify) return reply(userB())
-	
+	if (!isVerify) return reply(userB())	
 	if (args.length < 2) return reply('﹝Enter cash and tag person.﹞ \nExample:\n.transfer 20 @stardash')
 	if (args.length > 2) return reply('⌯   ﹝leave no space.  NOT  . transfer but  .transfer﹞')
-		if (args[0] > 101) return reply('⌯   ﹝You can only transfer 1-100$ at once﹞')
-			if (args[0] < 1) return reply('⌯   ﹝You can only transfer 1-100$ at once﹞')
+	if (args[0] > 101) return reply('⌯   ﹝You can only transfer 1-100$ at once﹞')
+	if (args[0] < 1) return reply('⌯   ﹝You can only transfer 1-100$ at once﹞')
 
-const _mytransfermoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const mytransfermoney = _mytransfermoney[7]	//--- money mine
+		const _mytransfermoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const mytransfermoney = _mytransfermoney[7]	//--- money mine
 
+	if (mytransfermoney < 20) return reply(`﹝You have not enough money to transfer. Must have at least 20$ on your account. Your money: ${mytransfermoney}$﹞`) 
 
+		const _histranfermoney = JSON.parse(fs.readFileSync(`${args[1].replace('@','./')}@s.whatsapp.net.json`));	
+		const histranfermoney = _histranfermoney[7]	//--- money his
 
+				let mymon = Number(mytransfermoney);
+				let myam = Number(args[0]);
+				let transferamount = mymon - myam; 
 
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${mytransfermoney}`, transferamount);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+					})
+				})
 
-
-
-if (mytransfermoney < 20) return reply(`﹝You have not enough money to transfer. Must have at least 20$ on your account. Your money: ${mytransfermoney}$﹞`) 
-
-
-
-
-const _histranfermoney = JSON.parse(fs.readFileSync(`${args[1].replace('@','./')}@s.whatsapp.net.json`));	
-const histranfermoney = _histranfermoney[7]	//--- money his
-
-
-	
-
-let mymon = Number(mytransfermoney);
-let myam = Number(args[0]);
-let transferamount = mymon - myam; 
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${mytransfermoney}`, transferamount);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
-
-const transferdely = ms => new Promise(resolve => setTimeout(resolve, ms))
-await transferdely(1000) /// waiting 1 second.
+						const transferdely = ms => new Promise(resolve => setTimeout(resolve, ms))
+						await transferdely(1000) /// waiting 1 second.
 				
 
-let hismon = Number(histranfermoney);
-let hisam = Number(args[0]);
-let histransferamount = hismon + hisam; 
+				let hismon = Number(histranfermoney);
+				let hisam = Number(args[0]);
+				let histransferamount = hismon + hisam; 
 
-fs.readFile(`${args[1].replace('@','./')}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${histranfermoney}`, histransferamount);
-	
-    fs.writeFile(`${args[1].replace('@','./')}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+				fs.readFile(`${args[1].replace('@','./')}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${histranfermoney}`, histransferamount);
+					
+					fs.writeFile(`${args[1].replace('@','./')}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
 
-const transferdelayhis = ms => new Promise(resolve => setTimeout(resolve, ms))
-await transferdelayhis(1000) /// waiting 1 second.
+						const transferdelayhis = ms => new Promise(resolve => setTimeout(resolve, ms))
+						await transferdelayhis(1000) /// waiting 1 second.
 
-const _newtransfermoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const newtransfermoney = _newtransfermoney[7]	//--- money	
-const transferdesign = _newtransfermoney[11]	//--- account design
+							const _newtransfermoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+							const newtransfermoney = _newtransfermoney[7]	//--- money	
+							const transferdesign = _newtransfermoney[11]	//--- account design
 
-const _hisnewtransfermoney = JSON.parse(fs.readFileSync(`${args[1].replace('@','./')}@s.whatsapp.net.json`));	
-const hisnewtransfermoney = _hisnewtransfermoney[7]	//--- money	
-const hisname = _hisnewtransfermoney[2]	//--- name
+							const _hisnewtransfermoney = JSON.parse(fs.readFileSync(`${args[1].replace('@','./')}@s.whatsapp.net.json`));	
+							const hisnewtransfermoney = _hisnewtransfermoney[7]	//--- money	
+							const hisname = _hisnewtransfermoney[2]	//--- name
  
   reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n\nYour Money left: ${newtransfermoney}$\n\nHis/Her Money left: ${hisnewtransfermoney}$\n. . . . . . . . . . . . . . .\n✅ StarDash Transfers`)
   
-break
-
-
+	break
 
 //--- Delete account message
-
 
 case 'deletemyaccount':
 
 if (!isVerify) return reply(userB())
 	
-reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *can register* again! To delete your account type:   .iamsure  ')
+reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *can register* again!\n. . . . . . . . . . . . . . .\nTo delete your account type:   .iamsure  ')
 
 
 break
@@ -3293,106 +3276,75 @@ break
 
 case 'iamsure':
 
-if (!isVerify) return reply(userB())
+	if (!isVerify) return reply(userB())
 
-const _iamsure = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-
-
-
-	
-const iamsure = _iamsure[0]	//--- phone number	
-const iamsure1 = _iamsure[1]  //--- pushnaiamsure
-const iamsure2 = _iamsure[2]	//--- naiamsure
-const iamsure3 = _iamsure[3]	//--- age
-const iamsure4 = _iamsure[4]	//--- emojie
-const iamsure5 = _iamsure[5]	//--- user id	
-const iamsure6 = _iamsure[6] 	//--- xp
-const iamsure7 = _iamsure[7]	//--- money
-const iamsure8 = _iamsure[8]	//--- mood
-const iamsure9 = _iamsure[9]	//--- account creation date
-const iamsure10 = _iamsure[10]	//--- stickerpack naiamsure
-const iamsure11 = _iamsure[11]	//--- account design
-const iamsure12 = _iamsure[12]	//--- claim money
-const iamsure13 = _iamsure[13]	//--- Email
-const iamsure14 = _iamsure[14]	//--- Email verified
+		const _iamsure = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));		
+		const iamsure = _iamsure[0]	//--- phone number	
+		const iamsure1 = _iamsure[1]  //--- pushnaiamsure
+		const iamsure2 = _iamsure[2]	//--- naiamsure
+		const iamsure3 = _iamsure[3]	//--- age
+		const iamsure4 = _iamsure[4]	//--- emojie
+		const iamsure5 = _iamsure[5]	//--- user id	
+		const iamsure6 = _iamsure[6] 	//--- xp
+		const iamsure7 = _iamsure[7]	//--- money
+		const iamsure8 = _iamsure[8]	//--- mood
+		const iamsure9 = _iamsure[9]	//--- account creation date
+		const iamsure10 = _iamsure[10]	//--- stickerpack naiamsure
+		const iamsure11 = _iamsure[11]	//--- account design
+		const iamsure12 = _iamsure[12]	//--- claim money
+		const iamsure13 = _iamsure[13]	//--- Email
+		const iamsure14 = _iamsure[14]	//--- Email verified
 
 
-var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  auth: {
-    user: 'stardashnotification@gmail.com',
-    pass: 'stardash20%'
-  },
-});
+			var nodemailer = require('nodemailer');
+			var transporter = nodemailer.createTransport({
+			  host: 'smtp.gmail.com',
+			  port: 587,
+			  auth: {
+				user: 'stardashnotification@gmail.com',
+				pass: 'stardash20%'
+			  },
+			});
 
-transporter.verify().then(console.log).catch(console.error);
-
-
-var mailOptions = {
-  from: 'stardashnotification@gmail.com',
-  to: `${iamsure13}`,
-  subject: `${iamsure11} StarDash Account deleted ${pushname}`,
-  text: `Dear user ${iamsure2},\n\nYour account has been deleted sucessfully and all ur information has been deleted forever. \n\nTo register again type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com\n\nStarDash Team`
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Delete account Email sent: ' + info.response);
-  }
-});
-			
-fs.readFile(`./data/user.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${sender.replace('@','./')}`, `DeletedAccount`);
-	
-    fs.writeFile(`./data/user.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Account Deleted!');
-    })
-})			
-
-fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
-  if (err) throw err;
-  console.log('File deleted!');
-  reply('Your account has been *sucessfully deleted.* When typing .myaccount   everything will be gone. However you can still use commands as if registered, but Errors may occur. To register agian type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com')
-});
+			transporter.verify().then(console.log).catch(console.error);
 
 
+			var mailOptions = {
+			  from: 'stardashnotification@gmail.com',
+			  to: `${iamsure13}`,
+			  subject: `${iamsure11} StarDash Account deleted ${pushname}`,
+			  text: `Dear user ${iamsure2},\n\nYour account has been deleted sucessfully and all ur information has been deleted forever. \n\nTo register again type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash 16 🐺 StarDash@gmail.com\n\nStarDash Team`
+			};
 
+			transporter.sendMail(mailOptions, function(error, info){
+			  if (error) {
+				console.log(error);
+			  } else {
+				console.log('Delete account Email sent: ' + info.response);
+			  }
+			});
+						
+			fs.readFile(`./data/user.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				
+				var newValue = data.replace(`${sender.replace('@','./')}`, `DeletedAccount`);
+				
+				fs.writeFile(`./data/user.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+					console.log('Account Deleted!');
+				})
+			})			
 
-break
+					fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
+					  if (err) throw err;
+					  console.log('File deleted!');
+					  reply('Your account has been *sucessfully deleted.* When typing .myaccount   everything will be gone. However you can still use commands as if registered, but Errors may occur. To register agian type \n\n.verifyagain\n\nExample:\n\n.verifyagain StarDash')
+					});
 
-case 'iamsure2':
-
-if (!isVerify) return reply(userB())
-
-
-
-			
-fs.readFile(`./data/user.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${sender.replace('@','./')}`, `DeletedAccount`);
-	
-    fs.writeFile(`./data/user.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Account Deleted!');
-    })
-})			
-
-
-
-
-
-break
-
+	break
 
 //--- Welcome on/off
+
 case 'welcome':
 case 'wellcome':
 case 'willkommen':
@@ -3438,26 +3390,5 @@ case 'willkommen':
 					}
 					break
 
-
-//-- 
-case 'return':
-  if (!isOwner) return reply(ownerB())
-			return Lxa.sendMessage(from, JSON.stringify(eval(args.join(' ')), null, '\n'), text, { quoted: mek })
-		break
-
-//---- view web
-	case 'view':
-  case 'fetch':
-  case 'result':
-  if (!isOwner) return reply(ownerB())
-teks = args.join(` `)
-let res = await fetchText(teks)
-reply(res)
-break
-				default:
-}
-	})
-}
-starts()
 
 //-- More ? Füge dich hinzu
