@@ -3080,6 +3080,7 @@ break
 
 //-- changeemojie
 case 'changeemojie': 
+case 'changemojie': 
 case 'emojie': 
   
 if (!isVerify) return reply(userB())
