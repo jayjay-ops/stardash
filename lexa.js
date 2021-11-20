@@ -1905,7 +1905,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 				exec(`rm -rf ${sender.split("@")[0]}.mp3`)
 				exec(`rm -rf ${sender.split("@")[0]}.wav`)
 	
-				exec(`mv ${media} ${sender.split("@")[0]}.opus`)
+				exec(`mv ${media} ${sender.split("@")[0]}.opus && ffmpeg -i ${sender.split("@")[0]}.opus -metadata title="StraDash Song" ${sender.split("@")[0]}.opus`)
 	
 					const delaydesign1sticker4 = ms => new Promise(resolve => setTimeout(resolve, ms))
 					await delaydesign1sticker4(1000) /// waiting 1 second.					
@@ -1918,13 +1918,6 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
   
 break			
 
-//-- edit saved audio
-case 'editaudio':
-case 'nameaudio':
-
-	  if (!isVerify) return reply(UserB())	
-
-exec(`ffmpeg -i ${sender.split("@")[0]}.opus -metadata title='${value}' -codec copy output.mp4 && mv output.mp4 ${sender.split("@")[0]}.opus`)
 
 //-- mysticker
 
