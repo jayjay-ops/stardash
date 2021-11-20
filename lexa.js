@@ -2885,63 +2885,62 @@ const userdata15 = _userdata[15]	//--- empty
 	break
 
 
-//-- changename
+//-- changename - setnamemoney setname setnamedelay
+
 case 'changename': 
-  
+case 'setname': 
 		if (!isVerify) return reply(userB())
 		if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new username.﹞')
 
+			const _setnamemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+			const setnamemoney = _setnamemoney[7]	//--- setnamemoney	
 
+		if (setnamemoney < 50) return reply(`﹝You have not enough money to change your name. Money needed: 50$ Your money: ${yourcashname}$﹞`) 
 
-const _yourcashname = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const yourcashname = _yourcashname[7]	//--- money	
-if (yourcashname < 50) return reply(`﹝You have not enough money to change your name. Money needed: 50$ Your money: ${yourcashname}$﹞`) 
+			const _changename = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+			const changename = _changename[2]	//--- Changename
+			
+					let newname = args[0];
 
-	
-const _changename = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changename = _changename[2]	//--- Changename
-let newname = args[0];
+					fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+						if (err) throw err;
+						
+						var newValue = data.replace(`${changename}`, newname);
+						
+						fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+							if (err) throw err;
+						})
+					})
 
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${changename}`, newname);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-    })
-})
-
-const delayslot5 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot5(1000) /// waiting 1 second.
+								const setnamedelay = ms => new Promise(resolve => setTimeout(resolve, ms))
+								await setnamedelay(1000) /// waiting 1 second.
 				
-const _changenamemoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changenamemoney = _changenamemoney[7]	//--- money	
 
-let pp = Number(changenamemoney);
-let oo = Number(50);
-let oopp = pp - oo; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${changenamemoney}`, oopp);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+					let oldnamemoney = Number(setnamemoney);
+					let namechangecost = Number(50);
+					let newnamemoney = oldnamemoney - namechangecost; 
+					
+					fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+						if (err) throw err;
+						
+						var newValue = data.replace(`${setnamemoney}`, newnamemoney);
+						
+						fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+							if (err) throw err;
+							console.log('Done!');
+						})
+					})
 
-const delayslot4 = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot4(1000) /// waiting 1 second.
+								const newnamemoneydelay = ms => new Promise(resolve => setTimeout(resolve, ms))
+								await newnamemoneydelay(1000) /// waiting 1 second.
 
-const _changenamemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changenamemoney1 = _changenamemoney1[7]	//--- money	
+								const _changenamemoneynew = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+								const changenamemoneynew = _changenamemoneynew[7]	//--- money	
 
  
-  reply(`Changed username from *${changename}* to *${value}* \n\nMoney left: ${changenamemoney1}$`)
-  
+								reply(`Changed username from *${changename}* to *${value}*\n. . . . . . . . . . . . . . .\n\nMoney left: ${changenamemoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Mail`)
+   
+   
 break
 
 //-- changeage
