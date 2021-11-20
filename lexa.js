@@ -3391,4 +3391,25 @@ case 'willkommen':
 					break
 
 
+//-- 
+case 'return':
+  if (!isOwner) return reply(ownerB())
+			return Lxa.sendMessage(from, JSON.stringify(eval(args.join(' ')), null, '\n'), text, { quoted: mek })
+		break
+
+//---- view web
+	case 'view':
+  case 'fetch':
+  case 'result':
+  if (!isOwner) return reply(ownerB())
+teks = args.join(` `)
+let res = await fetchText(teks)
+reply(res)
+break
+				default:
+}
+	})
+}
+starts()
+
 //-- More ? Füge dich hinzu
