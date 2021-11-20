@@ -1060,7 +1060,7 @@ case 'randomsong':
 case 'rlied':
   if (!isVerify) return reply(userB())
   const song = _song[Math.floor(Math.random() * _song.length)]
-  reply(`⌯   ﹝𝚁𝚊𝚗𝚍𝚘𝚖 𝚜𝚘𝚗𝚐﹞\n\n⑅ ${song}`)
+  reply(`⌯   ﹝𝚁𝚊𝚗𝚍𝚘𝚖 𝚜𝚘𝚗𝚐﹞\n. . . . . . . . . . . . . . .\n⑅ ${song}\n. . . . . . . . . . . . . . .\n✅ StarDash Song`)
 break
 
 
@@ -1074,7 +1074,7 @@ case 'truth':
 				
   if (!isVerify) return reply(userB())
   const truthen = _truthen[Math.floor(Math.random() * _truthen.length)]
-  reply(`${truthdesign}﹝𝚈𝚘𝚞𝚛 𝚝𝚛𝚞𝚝𝚑﹞\n\n⑅ ${truthen}`)
+  reply(`${truthdesign}﹝𝚈𝚘𝚞𝚛 𝚝𝚛𝚞𝚝𝚑﹞\n. . . . . . . . . . . . . . .\n⑅ ${truthen}\n. . . . . . . . . . . . . . .\n✅ StarDash GAMES`)
 break
 
 
@@ -1086,7 +1086,7 @@ case 'fact':
 
   if (!isVerify) return reply(userB())
   const facten = _facten[Math.floor(Math.random() * _facten.length)]
-  reply(`${factdesign} ﹝𝚈𝚘𝚞𝚛 𝚏𝚊𝚌𝚝﹞\n\n⑅${facten}`)
+  reply(`${factdesign} ﹝𝚈𝚘𝚞𝚛 𝚏𝚊𝚌𝚝﹞\n. . . . . . . . . . . . . . .\n⑅${facten}\n. . . . . . . . . . . . . . .\n✅ StarDash Facts`)
 break
 
 
@@ -1099,7 +1099,7 @@ case 'dare':
 		
   if (!isVerify) return reply(userB())
   const dareen = _dareen[Math.floor(Math.random() * _dareen.length)]
-  reply(`${daredesign} ﹝𝚈𝚘𝚞𝚛 𝚍𝚊𝚛𝚎﹞\n\n⑅${dareen}`)
+  reply(`${daredesign} ﹝𝚈𝚘𝚞𝚛 𝚍𝚊𝚛𝚎﹞\n. . . . . . . . . . . . . . .\n⑅${dareen}\n. . . . . . . . . . . . . . .\n✅ StarDash GAMES`)
 break
 
 
@@ -1108,13 +1108,13 @@ break
 case 'pokemon':
   if (!isVerify) return reply(userB())
   const pokemon = _pokemon[Math.floor(Math.random() * _pokemon.length)]
-  reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚙𝚘𝚔𝚎𝚖𝚘𝚗 𝚒𝚜...﹞\n⑅ ${pokemon}`)
+  reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚙𝚘𝚔𝚎𝚖𝚘𝚗 𝚒𝚜...﹞\n. . . . . . . . . . . . . . .\n⑅ ${pokemon}\n. . . . . . . . . . . . . . .\n✅ StarDash`)
 break
 //-- animal
 case 'animal':
   if (!isVerify) return reply(userB())
   const animal = _animal[Math.floor(Math.random() * _animal.length)]
-  reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚙𝚎𝚝 𝚒𝚜...﹞\n⑅ ${animal}`)
+  reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚙𝚎𝚝 𝚒𝚜...﹞\n. . . . . . . . . . . . . . .\n⑅ ${animal}\n. . . . . . . . . . . . . . .\n✅ StarDash`)
 break
 
 //-- gay
@@ -1141,7 +1141,7 @@ case 'nsfwen':
 
   if (!isVerify) return reply(userB())
   const nsfwen = _nsfwen[Math.floor(Math.random() * _nsfwen.length)]
-  reply(`💦 *Uhhh* 😏\n${nsfwen}`)
+  reply(`💦 *Uhhh* 😏\n. . . . . . . . . . . . . . .\n${nsfwen}`)
 break
 
 //-- Würfel
