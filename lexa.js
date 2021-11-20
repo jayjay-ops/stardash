@@ -2704,7 +2704,7 @@ const my47 = _myaccount[47]		//---
  𝚖𝚘𝚘𝚍\n${mydesign} ${mymood}\n
  𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n${mydesign} ${mystickerpack}\n
  𝚎𝚖𝚊𝚒𝚕\n${mydesign} ${myemail} \n
- 𝙰𝚌𝚌𝚘𝚞𝚗𝚝 𝚟𝚎𝚛𝚜𝚒𝚘𝚗\n${mydesign} ${myupdate}\n
+ 𝙰𝚌𝚌𝚘𝚞𝚗𝚝 𝚟𝚎𝚛𝚜𝚒𝚘𝚗\n${mydesign} ${myupdate}
  . . . . . . . . . . . . . . .
  𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${mydesign} .shop\n
  𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${mydesign} .menu\n
