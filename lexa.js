@@ -3080,6 +3080,7 @@ break
 
 //-- changeemojie
 case 'changeemojie': 
+case 'emojie': 
   
 if (!isVerify) return reply(userB())
 	
@@ -3087,7 +3088,7 @@ if (!isVerify) return reply(userB())
 
 const _yourcashemojie = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashemojie = _yourcashemojie[7]	//--- money	
-if (yourcashname < 5) return reply(`﹝You have not enough money to change your name. Money needed: 100$ Your money: ${yourcashemojie}$﹞`) 
+if (yourcashemojie < 5) return reply(`﹝You have not enough money to change your name. Money needed: 100$ Your money: ${yourcashemojie}$﹞`) 
 
 	
 const _changeemojie = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
