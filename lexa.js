@@ -1064,29 +1064,42 @@ case 'rlied':
 break
 
 
+
+
 //-- Tod truth
 case 'truth':
+
+		const _truthdesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));		
+		const truthdesign = _truthdesign[11]	//--- account design
+				
   if (!isVerify) return reply(userB())
   const truthen = _truthen[Math.floor(Math.random() * _truthen.length)]
-  reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚝𝚛𝚞𝚝𝚑﹞\n⑅ ${truthen}`)
+  reply(`${truthdesign}﹝𝚈𝚘𝚞𝚛 𝚝𝚛𝚞𝚝𝚑﹞\n\n⑅ ${truthen}`)
 break
 
 
 //-- Fakt
 case 'fact':
 
+		const _factdesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));		
+		const factdesign = _factdesign[11]	//--- account design
+
   if (!isVerify) return reply(userB())
   const facten = _facten[Math.floor(Math.random() * _facten.length)]
-  reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚏𝚊𝚌𝚝﹞\n⑅${facten}`)
+  reply(`${factdesign} ﹝𝚈𝚘𝚞𝚛 𝚏𝚊𝚌𝚝﹞\n\n⑅${facten}`)
 break
 
 
 
 //-- Tod dare
 case 'dare':
+
+		const _daredesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));		
+		const daredesign = _daredesign[11]	//--- account design
+		
   if (!isVerify) return reply(userB())
   const dareen = _dareen[Math.floor(Math.random() * _dareen.length)]
-  reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚍𝚊𝚛𝚎﹞\n⑅${dareen}`)
+  reply(`${daredesign} ﹝𝚈𝚘𝚞𝚛 𝚍𝚊𝚛𝚎﹞\n\n⑅${dareen}`)
 break
 
 
@@ -1588,10 +1601,12 @@ case 'youtubesong':
 case 'tbsong':
 
 	   if (!isVerify) return reply(UserB())
-          if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')			
+       if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')			
 
 const _yourcashsong = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const yourcashsong = _yourcashsong[7]	//--- money	
+const songdesign = _yourcashsong[11]	//--- account design
+
 if (yourcashsong < 5) return reply(`﹝You have not enough money to download a song. Money needed: 5$ Your money: ${yourcashsong}$﹞`) 
 	
 let pprrsong = Number(yourcashsong);
@@ -1617,14 +1632,14 @@ let oorpprsong = pprrsong - oorrsong;
 				const changedesignmoneysong = _changedesignmoneysong[7]	//--- money	
 
 			  
-					reply(`⌯   ﹝Downloading 1/2﹞ \n\nMoney left: ${changedesignmoneysong}$`)
+					reply(`${songdesign} ﹝Downloading 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneysong}$\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
 				
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 													
 						if (err) return reply('Error')
 							
-						reply('⌯   ﹝Sending 2/2﹞\n\n_Tipp: For 22$ you can save the song to your account by typing .savesong and tagging the audio! You can then let it be send to you with the command .mysong for free!_')
+						reply('${songdesign} ﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: For 22$ you can save the song to your account by typing .savesong and tagging the audio! You can then let it be send to you with the command .mysong for free!_\n. . . . . . . . . . . . . . .\n✅ StarDash Songs')
 						
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
@@ -1846,8 +1861,9 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 																				
 					const _changedesignmoney1sticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 					const changedesignmoney1sticker = _changedesignmoney1sticker[7]	//--- money	
+					const savestickerdesign = _changedesignmoney1sticker[11]	//--- account design
 		 
-		  reply(`⌯   ﹝Saved as your sticker!  .mysticker﹞ \n\nMoney left: ${changedesignmoney1sticker}$`)
+		  reply(`${savestickerdesign} ﹝Saved as your sticker! Type: .mysticker﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoney1sticker}$\n. . . . . . . . . . . . . . .\n✅ StarDash Sticker`)
   
 	break
 
@@ -1887,13 +1903,14 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 	
 				exec(`mv ${media} ${sender.split("@")[0]}.opus`)
 	
-const delaydesign1sticker4 = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaydesign1sticker4(1000) /// waiting 1 second.					
-															
-const _changedesignmoney1sticker4 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changedesignmoney1sticker4 = _changedesignmoney1sticker4[7]	//--- money	
- 
-  reply(`⌯   ﹝Saved as your audio!  .myaudio﹞ \n\nMoney left: ${changedesignmoney1sticker4}$`)
+					const delaydesign1sticker4 = ms => new Promise(resolve => setTimeout(resolve, ms))
+					await delaydesign1sticker4(1000) /// waiting 1 second.					
+																				
+					const _changedesignmoney1sticker4 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+					const changedesignmoney1sticker4 = _changedesignmoney1sticker4[7]	//--- money	
+					const saveaudiodesign = _changedesignmoney1sticker4[11]	//--- account design 
+					
+  reply(`${saveaudiodesign}﹝Saved as your audio! Type:  .myaudio﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoney1sticker4}$\n. . . . . . . . . . . . . . .\n✅ StarDash Audio`)
   
 break			
 
@@ -3136,6 +3153,7 @@ case 'iamsure':
 	if (!isVerify) return reply(userB())
 
 		const _iamsure = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));		
+		
 		const iamsure = _iamsure[0]	//--- phone number	
 		const iamsure1 = _iamsure[1]  //--- pushnaiamsure
 		const iamsure2 = _iamsure[2]	//--- naiamsure
