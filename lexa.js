@@ -2498,7 +2498,9 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 //--- verify after deleted
 case 'verifyagain':
 
-	
+reply (`What is the password?`)	
+
+	break
 
 if (args.length < 1) return reply(`By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
 . . . . . . . . . . . . . . .
@@ -2536,12 +2538,6 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			var year = (yy < 1000) ? yy + 1900 : yy;
 			return `${day}. ${myMonths[bulan]} ${year}`
 }			
-
-
-
-			
-
-			
 
 			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \n 𝚁𝚎-Registered! *${pushname}*\n𝙲𝚑𝚎𝚌𝚔 𝚢𝚘𝚞𝚛 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑 .me`
 
