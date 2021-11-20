@@ -2496,11 +2496,13 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			break
 			
 //--- verify after deleted
-case 'verifyagain':
+case 'password':
 
 reply (`What is the password?`)	
 
 	break
+	
+case 'verifyagain':	
 
 if (args.length < 1) return reply(`By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
 . . . . . . . . . . . . . . .
