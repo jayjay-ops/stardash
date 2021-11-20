@@ -2999,7 +2999,7 @@ case 'setage':
 								const _changeagemoneynew = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 								const changeagemoneynew = _changeagemoneynew[7]	//--- new money	
 
-								const changeagemoneydesign = _changenamemoneynew[11]	//--- account design
+								const changeagemoneydesign = _changeagemoneynew[11]	//--- account design
 		  
 								reply(`${changeagemoneydesign} Changed age from *${changeage}* to *${value}*\n. . . . . . . . . . . . . . .\nMoney left: ${changeagemoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Age`)
 			  
@@ -3389,7 +3389,6 @@ case 'willkommen':
 						reply('⌯   ﹝.𝚊𝚗𝚝𝚒𝚕𝚒𝚗𝚔 𝚘𝚗﹞﹝.𝚊𝚗𝚝𝚒𝚕𝚒𝚗𝚔 𝚘𝚏𝚏﹞')
 					}
 					break
-
 
 //-- 
 case 'return':
