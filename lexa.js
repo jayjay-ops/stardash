@@ -717,6 +717,7 @@ break
 case 'setstickerpack': 
 case 'stickername': 
 case 'stickerpack': 
+case 'setstickerpack': 
   
 if (!isVerify) return reply(userB())
 	
@@ -745,6 +746,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 
 //-- Mood
 case 'mood': 
+case 'setmood': 
   
 if (!isVerify) return reply(userB())
 	
