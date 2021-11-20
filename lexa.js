@@ -3132,7 +3132,7 @@ case 'setemojie':
 						const changeemojiemoneynew = _changeemojiemoneynew[7]	//--- money	
 
  
-				reply(`${setemojiedesign} Changed Emojie from *${changeemojie}* to *${value}*\nMoney left: ${changeemojiemoney1}$\n. . . . . . . . . . . . . . .\n✅ StarDash Emojie`)
+				reply(`${setemojiedesign} Changed Emojie from *${changeemojie}* to *${value}*\nMoney left: ${changeemojiemoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Emojie`)
   
 	break
 
