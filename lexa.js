@@ -2888,14 +2888,13 @@ const userdata15 = _userdata[15]	//--- empty
 //-- changename
 case 'changename': 
   
-if (!isVerify) return reply(userB())
-	
-	if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new username.﹞')
+		if (!isVerify) return reply(userB())
+		if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new username.﹞')
 
+		var command = Math.floor(Math.random() * 1000000000)
 
-
-const _yourcashname = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const yourcashname = _yourcashname[7]	//--- money	
+const _${command} = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const ${command} = _${command}[7]	//--- money	
 if (yourcashname < 50) return reply(`﹝You have not enough money to change your name. Money needed: 50$ Your money: ${yourcashname}$﹞`) 
 
 	
