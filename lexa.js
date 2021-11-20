@@ -3216,6 +3216,12 @@ const mytransfermoney = _mytransfermoney[7]	//--- money mine
 
 
 
+
+if (mytransfermoney < 20) return reply(`﹝You have not enough money to transfer. Must have at least 20$ on your account. Your money: ${mytransfermoney}$﹞`) 
+
+
+
+
 const _histranfermoney = JSON.parse(fs.readFileSync(`${args[1].replace('@','./')}@s.whatsapp.net.json`));	
 const histranfermoney = _histranfermoney[7]	//--- money his
 
