@@ -3124,7 +3124,7 @@ case 'deletemyaccount':
 
 if (!isVerify) return reply(userB())
 	
-reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *can register* again!\n. . . . . . . . . . . . . . .\nTo delete your account type:   .iamsure  ')
+reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *cant register* again! ⚠️ from now on you need a password to verifyagain ⚠️\n. . . . . . . . . . . . . . .\nTo delete your account type:   .iamsure  ')
 
 
 break
