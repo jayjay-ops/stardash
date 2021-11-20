@@ -2936,12 +2936,12 @@ case 'setname':
 
 								const _changenamemoneynew = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 								const changenamemoneynew = _changenamemoneynew[7]	//--- money	
-
+								
+								const changenamedesign = _changenamemoneynew[11]	//--- account design
  
-								reply(`Changed username from *${changename}* to *${value}*\n. . . . . . . . . . . . . . .\n\nMoney left: ${changenamemoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Mail`)
-   
-   
-break
+								reply(`${changenamedesign} Changed username from *${changename}* to *${value}*\n. . . . . . . . . . . . . . .\nMoney left: ${changenamemoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Mail`)
+      
+									break
 
 //-- changeage
 case 'changeage': 
