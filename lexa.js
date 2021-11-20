@@ -2891,10 +2891,10 @@ case 'changename':
 		if (!isVerify) return reply(userB())
 		if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 new username.﹞')
 
-		var commands = Math.floor(Math.random() * 1000000000)
 
-const _${commands} = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const ${commands} = _${commands}[7]	//--- money	
+
+const _yourcashname = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const yourcashname = _yourcashname[7]	//--- money	
 if (yourcashname < 50) return reply(`﹝You have not enough money to change your name. Money needed: 50$ Your money: ${yourcashname}$﹞`) 
 
 	
