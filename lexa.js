@@ -3117,7 +3117,7 @@ case 'setemojie':
 				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
-					var newValue = data.replace(`${changeemojiemoney}`, newemojiemoney);
+					var newValue = data.replace(`${yourcashemojie}`, newemojiemoney);
 					
 					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
