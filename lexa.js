@@ -844,166 +844,153 @@ const changedesignmoney1claims = _changedesignmoney1claims[7]	//--- money
 case 'sloter':
 case 'slots':
 case 'slot':
-  if (!isVerify) return reply(userB())
-	   if (!isGroup) return reply(group())
+
+	if (!isVerify) return reply(userB())
+	if (!isGroup) return reply(group())
 	  
-const _slotme = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const slotme7 = _slotme[7]	//--- money	
+		const _slotme = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const slotme7 = _slotme[7]	//--- money	
 
-
-
-
-
-
-if (slotme7 < 7) return reply(`﹝You have not enough money to play. Your money: ${slotme7}$﹞`) 
-
-
-	  
-  const slot1 = _slot[Math.floor(Math.random() * _slot.length)]
-  const slot2 = _slot[Math.floor(Math.random() * _slot.length)]
-  const slot3 = _slot[Math.floor(Math.random() * _slot.length)]
-    const slot4 = _slot[Math.floor(Math.random() * _slot.length)]
-	const slot5 = _slot[Math.floor(Math.random() * _slot.length)]
-	const slot6 = _slot[Math.floor(Math.random() * _slot.length)]
-	const slot7 = _slot[Math.floor(Math.random() * _slot.length)]
-	const slot8 = _slot[Math.floor(Math.random() * _slot.length)]
-	const slot9 = _slot[Math.floor(Math.random() * _slot.length)]
+	if (slotme7 < 7) return reply(`﹝You have not enough money to play. Your money: ${slotme7}$﹞`) 
+		  
+		const slot1 = _slot[Math.floor(Math.random() * _slot.length)]
+		const slot2 = _slot[Math.floor(Math.random() * _slot.length)]
+		const slot3 = _slot[Math.floor(Math.random() * _slot.length)]
+		const slot4 = _slot[Math.floor(Math.random() * _slot.length)]
+		const slot5 = _slot[Math.floor(Math.random() * _slot.length)]
+		const slot6 = _slot[Math.floor(Math.random() * _slot.length)]
+		const slot7 = _slot[Math.floor(Math.random() * _slot.length)]
+		const slot8 = _slot[Math.floor(Math.random() * _slot.length)]
+		const slot9 = _slot[Math.floor(Math.random() * _slot.length)]
 	
 	
 	
-let ps = Number(slotme7);
+				let ps = Number(slotme7);
 
+				if ((slot1 == slot2) && slot2 == slot3) {	
 
-if ((slot1 == slot2) && slot2 == slot3) {	
+				let os = Number(250);
+				let ops = ps + os; 
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${slotme7}`, ops);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
 
-let os = Number(250);
-let ops = ps + os; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${slotme7}`, ops);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+						const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
+						await delayslot(3000) /// waiting 1 second.
 
-const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot(3000) /// waiting 1 second.
-
-const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const slotme8 = _slotme8[7]	//--- money	
+		const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const slotme8 = _slotme8[7]	//--- money	
 
   reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }  
   
 else if (slot1 == slot2) {	
 
-let os = Number(14);
-let ops = ps + os; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${slotme7}`, ops);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+			let os = Number(14);
+			let ops = ps + os; 
+			fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				
+				var newValue = data.replace(`${slotme7}`, ops);
+				
+				fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+					console.log('Done!');
+				})
+			})
 
-const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot(3000) /// waiting 1 second.
+					const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
+					await delayslot(3000) /// waiting 1 second.
 
-const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const slotme8 = _slotme8[7]	//--- money	
+					const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+					const slotme8 = _slotme8[7]	//--- money	
 
 	reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }
 
 else if (slot2 == slot3) {	
 
-let os = Number(14);
-let ops = ps + os; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${slotme7}`, ops);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+			let os = Number(14);
+			let ops = ps + os; 
+			fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				
+				var newValue = data.replace(`${slotme7}`, ops);
+				
+				fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+					console.log('Done!');
+				})
+			})
 
-const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
+				const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
                 await delayslot(3000) /// waiting 1 second.
 
-const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const slotme8 = _slotme8[7]	//--- money	
+				const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+				const slotme8 = _slotme8[7]	//--- money	
 
 reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)   
 }
 
 else if (slot1 == slot3) {	
 
-let os = Number(14);
-let ops = ps + os; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-    var newValue = data.replace(`${slotme7}`, ops);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+				let os = Number(14);
+				let ops = ps + os; 
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${slotme7}`, ops);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
 
-const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
-                await delayslot(3000) /// waiting 1 second.
+					const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
+					await delayslot(3000) /// waiting 1 second.
 
-const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const slotme8 = _slotme8[7]	//--- money	
+					const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+					const slotme8 = _slotme8[7]	//--- money	
 
 reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`) 
 
 }
 
  else {
-	 
-
-
-let os = Number(4);
-let ops = ps - os; 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
 	
-    var newValue = data.replace(`${slotme7}`, ops);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+			let os = Number(4);
+			let ops = ps - os; 
+			fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				
+				var newValue = data.replace(`${slotme7}`, ops);
+				
+				fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+					console.log('Done!');
+				})
+			})
 
-const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
+				const delayslot = ms => new Promise(resolve => setTimeout(resolve, ms))
                 await delayslot(3000) /// waiting 1 second.
 
-const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const slotme8 = _slotme8[7]	//--- money	
+				const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+				const slotme8 = _slotme8[7]	//--- money	
 	 
 reply(`★ 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }
 
-
 break
 
-
-
 //-- DEUTSCH
-
 
 //-- Tod truth
 case 'wahrheit':
@@ -1013,53 +1000,6 @@ case 'w':
   const truth = _truth[Math.floor(Math.random() * _truth.length)]
   reply(`★ *Wahrheit*\n${truth}`)
 break
-
-
-//-- email
-case 'email':
-
-var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  auth: {
-    user: 'stardashnotification@gmail.com',
-    pass: 'stardash20%'
-  },
-});
-
-transporter.verify().then(console.log).catch(console.error);
-
-
-var mailOptions = {
-  from: 'stardashnotification@gmail.com',
-  to: 'johannimus2004@gmail.com',
-  subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
-
-
-
-
-
-
-
-
-
-
-break
-
-
-
-
 
 
 //-- Fakt
@@ -1373,9 +1313,6 @@ const stickerpack = _stickerpack[10]	//--- stickerpack name
 					}
 					break
 
-
-
-
 //-- stiker to image
 case 'toimg':
 case 'imagesticker':
@@ -1393,9 +1330,7 @@ case 'image':
 						fs.unlinkSync(ran)
 					})
 					break
-					
-				
-					
+										
 //-- audio volume
 case 'audiolevel':
 case 'level':
@@ -1420,8 +1355,6 @@ case 'volume':
 					})
 					break
 					
-
-
 //-- brightness
 case 'brightness':
 
@@ -1481,16 +1414,13 @@ let y = Number(args[2]);
 	reply('⌯   The result of﹝'+ x +'﹞and﹝'+ y +'﹞is﹝'+ z +'﹞');	
   } 
 
-
 break
 					
 //-- saturation
 case 'saturation':
-
-  
 	  
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
-					 if (args.length < 1) return reply('⌯   ﹝Enter Number of saturation from 0.5 to 2﹞')
+			if (args.length < 1) return reply('⌯   ﹝Enter Number of saturation from 0.5 to 2﹞')
 
 	   
 	  reply('⌯ Satturating your picture 1/2﹞')
@@ -1552,8 +1482,6 @@ case 'blackwhite':
 						fs.unlinkSync(ran)
 					})
 					break	
-
-
 					
 //-- filter
 case 'filter':
@@ -1576,8 +1504,6 @@ case 'filter':
 						fs.unlinkSync(ran)
 					})
 					break
-
-			
 									
 //-- video to mp3
 case 'mp3':
@@ -1600,6 +1526,7 @@ case 'sound':
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
+					
 					break
 					
 //-- cover song
@@ -1623,20 +1550,8 @@ case 'cover':
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
+					
 					break
-		
-
-						
-
-						
-
-						
-
-						
-
-					
-
-					
 					
 //-- update bot
 case 'updatebot':
@@ -1654,13 +1569,8 @@ const delay6 = ms => new Promise(resolve => setTimeout(resolve, ms))
 	
 		
 		reply('⌯   ﹝Please open termux﹞')
-		
-
-		
-		
-		
-				
-			await	exec(`git pull https://github.com/joewilliams007/stardash && bash install.sh`, (err) => {
+						
+			await	exec(`git pull && bash install.sh`, (err) => {
 																			
 						if (err) return reply('Error')
 							
@@ -1672,8 +1582,6 @@ const delay6 = ms => new Promise(resolve => setTimeout(resolve, ms))
 					 
 					break
 
-										
-					
 //-- youtube song opus
 case 'song':
 case 'youtubesong':
@@ -1691,23 +1599,22 @@ let oorrsong = Number(5);
 let oorpprsong = pprrsong - oorrsong; 
 
 
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-    if (err) throw err;
-	
-	
-    var newValue = data.replace(`${yourcashsong}`, oorpprsong);
-	
-    fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-        if (err) throw err;
-        console.log('Done!');
-    })
-})
+		fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+			if (err) throw err;
+				
+			var newValue = data.replace(`${yourcashsong}`, oorpprsong);
+			
+			fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+				if (err) throw err;
+				console.log('Done!');
+			})
+		})
 													
-const delaysong = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaysong(1000) /// waiting 1 second.					
-															
-const _changedesignmoneysong = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changedesignmoneysong = _changedesignmoneysong[7]	//--- money	
+							const delaysong = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delaysong(1000) /// waiting 1 second.					
+																			
+				const _changedesignmoneysong = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+				const changedesignmoneysong = _changedesignmoneysong[7]	//--- money	
 
 			  
 					reply(`⌯   ﹝Downloading 1/2﹞ \n\nMoney left: ${changedesignmoneysong}$`)
@@ -1723,23 +1630,10 @@ const changedesignmoneysong = _changedesignmoneysong[7]	//--- money
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
-				
-					
-				
-  
+				 
 break								
 					
-					
-					
-					
 						
-
-
-
-
-					
-					
-		
 //-- intro
 			
 case 'cool':
@@ -1787,28 +1681,14 @@ case 'fast':
 					})
 					break		
  
-		
-	
-
-	
-
-	
 case 'tts':
 case 'speak':
   if (!isVerify) return reply(UserB())
-	  
-			
-
-		
-
-							
+	  				
 				ran= getRandom('.mp3')
 
 				exec(`espeak -w ${ran} "${value}"`, (err) => {
 
-					
-
-					
 
 						if (err) return reply('Error')
 					buffer = fs.readFileSync(ran)
@@ -1858,9 +1738,7 @@ case 'blur':
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
 				exec(`ffmpeg  -i ${media} -filter_complex "[0:v]boxblur=luma_radius=10:chroma_radius=10:luma_power=2[blurred]" -map "[blurred]"   ${ran} `, (err) => {
-					
-					
-					
+										
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
@@ -1884,17 +1762,14 @@ case 'watermarkimage':
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
 				exec(`ffmpeg  -i ${media} -i watermark.png -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.5[logo];[0][logo]overlay=(W-w)/2:(H-h)/2:format=auto,format=yuv420p" -c:a copy  ${ran} `, (err) => {
-					
-					
-					
+										
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: 'StarDash ✯'})
 						fs.unlinkSync(ran)
 					})
-					
-							
+											
 			break	
 
 //-- remove background and make sticker
@@ -1922,8 +1797,7 @@ case 'rmbgs':
 						Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
-					
-							
+										
 			break	
 
 //-- save picture as sticker
@@ -1963,21 +1837,19 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 					
 				fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Error﹞')
-				
 	
 					})
 
 	
-const delaydesign1sticker = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaydesign1sticker(1000) /// waiting 1 second.					
-															
-const _changedesignmoney1sticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const changedesignmoney1sticker = _changedesignmoney1sticker[7]	//--- money	
- 
-  reply(`⌯   ﹝Saved as your sticker!  .mysticker﹞ \n\nMoney left: ${changedesignmoney1sticker}$`)
+					const delaydesign1sticker = ms => new Promise(resolve => setTimeout(resolve, ms))
+					await delaydesign1sticker(1000) /// waiting 1 second.					
+																				
+					const _changedesignmoney1sticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+					const changedesignmoney1sticker = _changedesignmoney1sticker[7]	//--- money	
+		 
+		  reply(`⌯   ﹝Saved as your sticker!  .mysticker﹞ \n\nMoney left: ${changedesignmoney1sticker}$`)
   
-break
-
+	break
 
 //-- save audio
 case 'addaudio':
@@ -2008,8 +1880,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 													
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-			
-				
+							
 				exec(`rm -rf ${sender.split("@")[0]}.opus`)
 				exec(`rm -rf ${sender.split("@")[0]}.mp3`)
 				exec(`rm -rf ${sender.split("@")[0]}.wav`)
@@ -2036,8 +1907,7 @@ case 'mys':
 
 					buffer = fs.readFileSync(`${sender.split("@")[0]}.webp`)
 					Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
-					
-							
+											
 			break	
 			
 //-- myaudio
@@ -2050,21 +1920,15 @@ case 'mysong':
 
 					buffer = fs.readFileSync(`${sender.split("@")[0]}.opus`)
 					Lxa.sendMessage(from, buffer, audio, {quoted:mek})
-					
-							
+												
 			break			
 			
-			
-
-case 'beep':
-		
-		
+case 'beep':		
 		
 exec(`play error.mp3`)
 	
 break
-		
-		
+				
 //-- remove background
 case 'rmbg':
 case 'nobg':
@@ -2102,14 +1966,12 @@ case 'crush':
 			
 				if (!isQuotedAudio)  return reply('⌯   ﹝Please tag an audio.﹞')
 					
-				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.opus')
 				exec(`ffmpeg  -i ${media} -filter_complex "acrusher=level_in=8:level_out=18:bits=8:mode=log:aa=1"  ${ran} `, (err) => {
 					
-					
-					
+
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
@@ -2119,10 +1981,7 @@ case 'crush':
 					
 							
 			break	
-			
-
-
-			
+	
 //-- owner bot
 case 'owner':
 case 'besitzer':
@@ -2262,8 +2121,6 @@ case 'list note':
 				}
 				reply(teks.trim())
 				break
-				
-			
 
 //-- list wish
 case 'wishes':
@@ -2356,8 +2213,7 @@ case 'kick':
 						Lxa.groupRemove(from, mentioned)
 					} else {
 						
-					
-									
+				
 					buffer = fs.readFileSync('./docs/flash.webp')
 Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 					
@@ -2388,7 +2244,6 @@ case 'promote':
 						Lxa.groupMakeAdmin(from, mentioned)
 					}
 					break
-
 
 //-- Herabgestuft
 case 'demote':
