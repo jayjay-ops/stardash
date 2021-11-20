@@ -3048,7 +3048,7 @@ case 'changedesign':
 
 				let yourolddesignmoney = Number(yourcashdesign);
 				let changedesigncost = Number(25);
-				let newdesignmoney = changedesigncost - yourolddesignmoney; 
+				let newdesignmoney = yourolddesignmoney - changedesigncost; 
 
 				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
