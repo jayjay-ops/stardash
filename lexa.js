@@ -3135,7 +3135,7 @@ case 'donate':
 							const hisnewtransfermoney = _hisnewtransfermoney[7]	//--- money	
 							const hisname = _hisnewtransfermoney[2]	//--- name
  
-  reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n\nYour Money left: ${newtransfermoney}$\n\nHis/Her Money left: ${hisnewtransfermoney}$\n. . . . . . . . . . . . . . .\n✅ StarDash Transfers`)
+  reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n. . . . . . . . . . . . . . .\nYour Money left: ${newtransfermoney}$\nHis/Her Money left: ${hisnewtransfermoney}$\n. . . . . . . . . . . . . . .\n✅ StarDash Transfers`)
   
 	break
 
