@@ -3017,7 +3017,7 @@ case 'setemail':
 
 				const oldemail = _emailchange[13]	//--- Email
 				const emaildesign = _emailchange[11]	//--- account design
-				const emailname = _emailname[2]	//--- emailname
+				const emailname = _emailchange[2]	//--- emailname
 		
 			if (args.length < 1) return reply('${emaildesign}  ﹝𝙴𝚗𝚝𝚎𝚛 Email adresse.﹞ \n\nExample \n\n.setemail star@gmail.com')
 			if (args.length > 1) return reply('${emaildesign}  ﹝Remove space!﹞ \n\nExample \n\n.setemail star@gmail.com')
