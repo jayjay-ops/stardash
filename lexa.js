@@ -2699,13 +2699,13 @@ const my47 = _myaccount[47]		//---
  𝚊𝚐𝚎\n${mydesign} ${myage}\n
  𝚎𝚖𝚘𝚓𝚒𝚎\n${mydesign} ${myemojie}\n
  𝚞𝚜𝚎𝚛 𝚒𝚍\n${mydesign} ${myid}
- . . . . . . . . . . . . . . .
  𝚡𝚙\n${mydesign} ${myxp}\n
  𝚖𝚘𝚗𝚎𝚢\n${mydesign} ${mymoney}$\n
  𝚖𝚘𝚘𝚍\n${mydesign} ${mymood}\n
  𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n${mydesign} ${mystickerpack}\n
  𝚎𝚖𝚊𝚒𝚕\n${mydesign} ${myemail} \n
  𝙰𝚌𝚌𝚘𝚞𝚗𝚝 𝚟𝚎𝚛𝚜𝚒𝚘𝚗\n${mydesign} ${myupdate}\n
+ . . . . . . . . . . . . . . .
  𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${mydesign} .shop\n
  𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${mydesign} .menu\n
  𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${mydesign} ${mydate}\n
