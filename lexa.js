@@ -1776,7 +1776,7 @@ case 'send':
 
 						if (err) return reply('Error')
 							
-					buffer = fs.readFileSync(`'${value}_0.jpg'`)
+					buffer = fs.readFileSync(`${value}_0.jpg`)
 
 						Lxa.sendMessage(from, buffer, image, {quoted:mek})
 
