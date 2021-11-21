@@ -1715,6 +1715,16 @@ console.log(jsonStringweather);
   } catch (err) {
     console.log("Error parsing JSON string:", err);						 
 	}			}	)	 
+	
+	
+	fs.readFile('./weather.json', 'utf8', (error, data) => {
+     if(error){
+        console.log(error);
+        return;
+     }
+     console.log(JSON.parse(data));
+
+})
 						 break
 //-- intro
 			
