@@ -1771,7 +1771,7 @@ case 'send':
 	  				
 		
 
-				exec(`ddg-download "${value}" -l 1`, (err) => {
+				exec(`img-dataset --search=${value} --nb=1 --types=jpg`, (err) => {
 
 
 						if (err) return reply('Error')
