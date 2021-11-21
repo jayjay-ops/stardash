@@ -1660,6 +1660,24 @@ let oorpprsong = pprrsong - oorrsong;
 break								
 					
 //-- Wiki
+case 'wikis':
+
+var infobox = require('wiki-infobox');
+
+var page = 'Warsaw Metro';
+var language = 'en';
+
+infobox(page, language, function(err, data){
+  if (err) {
+    // Oh no! Something goes wrong!
+    return;
+  }
+reply(`${data}`)
+  console.log(data);
+
+});
+
+//-- Wiki
 case 'wiki':
 
 var weather = require('weather-js');
@@ -1672,12 +1690,9 @@ weather.find({search: 'Heidelberg', degreeType: 'C'}, function(err, result) {
   if(err) console.log(err);
  
   console.log(JSON.stringify(result, null, 2));
+    fs.writeFileSync('./weather.json', JSON.stringify(result))
   reply(`${result}`)
 });
-
-
-
-
 
 						
 //-- intro
