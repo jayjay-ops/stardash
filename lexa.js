@@ -2706,7 +2706,7 @@ const my47 = _myaccount[47]		//---
  𝚗𝚊𝚖𝚎\n${mydesign} ${myname}\n
  𝚊𝚐𝚎\n${mydesign} ${myage}\n
  𝚎𝚖𝚘𝚓𝚒𝚎\n${mydesign} ${myemojie}\n
- 𝚞𝚜𝚎𝚛 𝚒𝚍\n${mydesign} ${myid}
+ 𝚞𝚜𝚎𝚛 𝚒𝚍\n${mydesign} ${myid}\n
  𝚡𝚙\n${mydesign} ${myxp}\n
  𝚖𝚘𝚗𝚎𝚢\n${mydesign} ${mymoney}$\n
  𝚖𝚘𝚘𝚍\n${mydesign} ${mymood}\n
