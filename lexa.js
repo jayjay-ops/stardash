@@ -1771,7 +1771,7 @@ case 'send':
 	  				
 		
 
-				exec(`ddg-download "${value}" -l 1 -s, --size=Small`, (err) => {
+				exec(`ddg-download "${value}" -l 1`, (err) => {
 
 
 						if (err) return reply('Error')
