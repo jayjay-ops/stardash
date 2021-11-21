@@ -1723,7 +1723,7 @@ console.log(jsonStringweather);
         return;
      }
      console.log(JSON.parse(data));
-	 console.log("wind speed: " + weather.location.name);
+
 
 })
 						 break
