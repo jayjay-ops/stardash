@@ -1677,7 +1677,7 @@ weather.find({search: 'Heidelberg', degreeType: 'C'}, function(err, result) {
 reply(`${result}`)
 
 
-});
+
 						
 //-- intro
 			
