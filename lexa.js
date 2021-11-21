@@ -1771,21 +1771,18 @@ case 'send':
 	  				
 		
 
-				await exec(`ddg-download "${value}" -l 1`, (err) => {
+				exec(`ddg-download "${value}" -l 1`, (err) => {
 
 
 						if (err) return reply('Error')
 							
-					buffer = fs.readFileSync(`${value}_0.jpg`, (err) => {
-
-
-						if (err) return reply('Error')
+					buffer = fs.readFileSync(`'${value}_0.jpg'`)
 
 						Lxa.sendMessage(from, buffer, image, {quoted:mek})
 
 						
 
-					})})
+					})
 
 					break	
 					
