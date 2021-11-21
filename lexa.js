@@ -1811,14 +1811,10 @@ let oorpprimage = pprrimage - oorrimage;
 
 						if (err) return reply('Error')
 							
-						reply(`${imagedesign}﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: ${tippimage}_\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
-						
 						
 					buffer = fs.readFileSync(`${value} jpg_0.jpg`)
 
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${imagedesign} Made for ${pushname}
-. . . . . . . . . . . . . . .
-✅ StarDash Media`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${imagedesign}﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: ${tippimage}_\n. . . . . . . . . . . . . . .\n✅ StarDash Pictures`})
 
 						exec(`rm -rf ${value} jpg_0.jpg`)
 
