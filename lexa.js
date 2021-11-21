@@ -1816,7 +1816,9 @@ let oorpprimage = pprrimage - oorrimage;
 						
 					buffer = fs.readFileSync(`${value} jpg_0.jpg`)
 
-						Lxa.sendMessage(from, buffer, image, {quoted:mek})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${imagedesign} Made for ${pushname}
+. . . . . . . . . . . . . . .
+✅ StarDash Media`})
 
 						exec(`rm -rf ${value} jpg_0.jpg`)
 
