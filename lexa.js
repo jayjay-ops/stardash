@@ -1672,9 +1672,10 @@ weather.find({search: 'Heidelberg', degreeType: 'C'}, function(err, result) {
   if(err) console.log(err);
  
   console.log(JSON.stringify(result, null, 2));
+  reply(`${result}`)
 });
 
-reply(`${result}`)
+
 
 
 
