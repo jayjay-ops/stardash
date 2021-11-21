@@ -1771,17 +1771,17 @@ case 'send':
 	  				
 				ran= getRandom('.jpg')
 
-				exec(`ddg-download "${value}" -l 1 -o, --output=${ran}`, (err) => {
+				exec(`ddg-download "${value}" -l 1 -o, --output=${ran}`)
 
 
-						if (err) return reply('Error')
+			
 					buffer = fs.readFileSync(ran)
 
 						Lxa.sendMessage(from, buffer, image, {quoted:mek})
 
 						fs.unlinkSync(ran)
 
-					})
+					}
 
 					break	
 					
