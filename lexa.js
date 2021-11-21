@@ -1769,29 +1769,19 @@ case 'imagedownload':
 case 'send':
   if (!isVerify) return reply(UserB())
 	  				
-	
+				ran= (`${value}_0.jpg`)
 
-				exec(`ddg-download "${value}" -l 1 -o, --output=iamgedownload`, (err) => {
+				exec(`ddg-download "${value}" -l 1 -s, --size=Small`, (err) => {
 
 
 						if (err) return reply('Error')
-				
+					buffer = fs.readFileSync(ran)
 
-						exec(`rm -rf trash.json`)
+						Lxa.sendMessage(from, buffer, image, {quoted:mek})
 
-			
+						fs.unlinkSync(ran)
 
 					})
-					
-var testFolder = './iamgedownload/';
-
-
-fs.readdirSync(testFolder).forEach(file => {
-  console.log(file);
-  
-  buffer = (file)
-  Lxa.sendMessage(from, buffer, image, {quoted:mek})
-});
 
 					break	
 					
