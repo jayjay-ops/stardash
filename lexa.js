@@ -1775,9 +1775,9 @@ case 'send':
 
 
 						if (err) return reply('Error')
-					buffer = fs.readFileSync(ran)
+				
 
-						
+						exec(`rm -rf trash.json`)
 
 			
 
