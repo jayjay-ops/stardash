@@ -1,6 +1,8 @@
 ["For 22$ you can save a song to your account by typing *.savesong* and tagging the audio! You can then let it be send to you with the command .mysong for free!",
 "With the command: *.rsong* , you get random song name!",
 "You can view all commands, with typing:  *.menu* !",
+"You can download songs, with typing:  *.song sonname* and pictures, with typing:  *.send pikachu* !",
+"You can remove the Background of square pictures, with typing:  *.rmbgs white* or *.rmbgs black* !",
 "You can change the volume of a song, or audio with the command: *.audiolevel* . Another cool command is: *.speed* , it changes the speed of and audio to fast or slow!",
 "You can calculate numbers with the command: *.calc* . You can multiply, add, divide and more.",
 "By typing and tagging an audio with the command *.crush* , it will make it sound broken and quite funny in some cases.",
