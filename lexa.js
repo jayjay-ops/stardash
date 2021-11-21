@@ -82,6 +82,7 @@ const _roll = JSON.parse(fs.readFileSync('./result/roll.json'));
 
 //-- Result ENGLISH
 const _truthen = JSON.parse(fs.readFileSync('./result/en/truthen.json'));
+const _tipps = JSON.parse(fs.readFileSync('./result/en/tipps.json'));
 const _gay = JSON.parse(fs.readFileSync('./result/gaymeter.json'));
 const _love = JSON.parse(fs.readFileSync('./result/lovemeter.json'));
 const _pokemon = JSON.parse(fs.readFileSync('./result/pokemon.json'));
@@ -1634,16 +1635,18 @@ let oorpprsong = pprrsong - oorrsong;
 																			
 				const _changedesignmoneysong = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 				const changedesignmoneysong = _changedesignmoneysong[7]	//--- money	
-
+  
+				  if (!isVerify) return reply(userB())
+				  const tipp = _tipps[Math.floor(Math.random() * _tipps.length)]
 			  
-					reply(`${songdesign} ﹝Downloading 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneysong}$\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
+			reply(`${songdesign} ﹝Downloading 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneysong}$\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
 				
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 													
 						if (err) return reply('Error')
 							
-						reply(`${songdesign} ﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: For 22$ you can save the song to your account by typing .savesong and tagging the audio! You can then let it be send to you with the command .mysong for free!_\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
+						reply(`${songdesign} ﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: ${tipp}_\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
 						
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
