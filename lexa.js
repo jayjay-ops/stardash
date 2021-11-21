@@ -1069,7 +1069,7 @@ case 'rlied':
 		
   if (!isVerify) return reply(userB())
   const song = _song[Math.floor(Math.random() * _song.length)]
-  reply(`${rsongdesign} ﹝𝚁𝚊𝚗𝚍𝚘𝚖 𝚜𝚘𝚗𝚐﹞\n. . . . . . . . . . . . . . .\n${song}\n. . . . . . . . . . . . . . .\n✅ StarDash Song`)
+  reply(`${rsongdesign}﹝𝚁𝚊𝚗𝚍𝚘𝚖 𝚜𝚘𝚗𝚐﹞\n. . . . . . . . . . . . . . .\n${song}\n. . . . . . . . . . . . . . .\n✅ StarDash Song`)
 break
 
 
@@ -1095,7 +1095,7 @@ case 'fact':
 
   if (!isVerify) return reply(userB())
   const facten = _facten[Math.floor(Math.random() * _facten.length)]
-  reply(`${factdesign} ﹝𝚈𝚘𝚞𝚛 𝚏𝚊𝚌𝚝﹞\n. . . . . . . . . . . . . . .\n${facten}\n. . . . . . . . . . . . . . .\n✅ StarDash Facts`)
+  reply(`${factdesign}﹝𝚈𝚘𝚞𝚛 𝚏𝚊𝚌𝚝﹞\n. . . . . . . . . . . . . . .\n${facten}\n. . . . . . . . . . . . . . .\n✅ StarDash Facts`)
 break
 
 
@@ -1108,7 +1108,7 @@ case 'dare':
 		
   if (!isVerify) return reply(userB())
   const dareen = _dareen[Math.floor(Math.random() * _dareen.length)]
-  reply(`${daredesign} ﹝𝚈𝚘𝚞𝚛 𝚍𝚊𝚛𝚎﹞\n. . . . . . . . . . . . . . .\n${dareen}\n. . . . . . . . . . . . . . .\n✅ StarDash Games`)
+  reply(`${daredesign}﹝𝚈𝚘𝚞𝚛 𝚍𝚊𝚛𝚎﹞\n. . . . . . . . . . . . . . .\n${dareen}\n. . . . . . . . . . . . . . .\n✅ StarDash Games`)
 break
 
 
@@ -1643,14 +1643,14 @@ let oorpprsong = pprrsong - oorrsong;
 				  if (!isVerify) return reply(userB())
 				  const tipp = _tipps[Math.floor(Math.random() * _tipps.length)]
 			  
-			reply(`${songdesign} ﹝Downloading 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneysong}$\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
+			reply(`${songdesign}﹝Downloading 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneysong}$\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
 				
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 													
 						if (err) return reply('Error')
 							
-						reply(`${songdesign} ﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: ${tipp}_\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
+						reply(`${songdesign}﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: ${tipp}_\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
 						
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
