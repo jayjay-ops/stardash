@@ -1662,18 +1662,20 @@ break
 //-- Wiki
 case 'wiki':
 
-var infobox = require('wiki-infobox');
+var weather = require('weather-js');
+ 
+// Options:
+// search:     location name or zipcode
+// degreeType: F or C
+ 
+weather.find({search: 'Heidelberg', degreeType: 'C'}, function(err, result) {
+  if(err) console.log(err);
+ 
+  console.log(JSON.stringify(result, null, 2));
+});
 
-var page = 'Warsaw Metro';
-var language = 'en';
+reply(`${result}`)
 
-infobox(page, language, function(err, data){
-  if (err) {
-    // Oh no! Something goes wrong!
-    return;
-  }
-reply(`${data}`)
-  console.log(data);
 
 });
 						
