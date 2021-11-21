@@ -1788,9 +1788,12 @@ case 'stardash':
 	  
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
 				
-reply('⌯   ﹝Please wait.﹞')
+reply(	  `⚡ Please wait ${pushname}
+. . . . . . . . . . . . . . .
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
+. . . . . . . . . . . . . . .
+✅ StarDash Media`)
 	  
-  
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.mp4')
@@ -1855,7 +1858,11 @@ case 'watermarkvideo':
   if (!isVerify) return reply(UserB())
 	
            if (!isQuotedVideo)  return reply('⌯   ﹝Please tag an video.﹞')
-   reply('⌯   ﹝Please wait.﹞')
+   reply(	  `⚡ Please wait ${pushname}
+. . . . . . . . . . . . . . .
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
+. . . . . . . . . . . . . . .
+✅ StarDash Media`)
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1917,7 +1924,11 @@ case 'watermarkimage':
 	  
 			
 				if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
-					   reply('⌯   ﹝Please wait.﹞')
+					   reply(	  `⚡ Please wait ${pushname}
+. . . . . . . . . . . . . . .
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
+. . . . . . . . . . . . . . .
+✅ StarDash Media`)
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1947,7 +1958,11 @@ case 'rmbgs':
 
 				  if (args.length < 1) return reply('⌯   ﹝Tag an image or Sticker and Choose Color. Hex or real. Example:   .nobgs black﹞')
 					
-					   reply('⌯   ﹝Please wait.﹞')
+					   reply(	  `⚡ Please wait ${pushname}
+. . . . . . . . . . . . . . .
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
+. . . . . . . . . . . . . . .
+✅ StarDash Media`)
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -2107,7 +2122,11 @@ case 'nobg':
 	  
        if (args.length < 1) return reply('⌯   ﹝Choose Color. Hex or real. Example:   .nobg black﹞')
 
-					   reply('⌯   ﹝Please wait.﹞')
+					   reply(	  `⚡ Please wait ${pushname}
+. . . . . . . . . . . . . . .
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
+. . . . . . . . . . . . . . .
+✅ StarDash Media`)
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
