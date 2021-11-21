@@ -1776,7 +1776,7 @@ const _yourcashimage = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.w
 const yourcashimage = _yourcashimage[7]	//--- money	
 const imagedesign = _yourcashimage[11]	//--- account design
 
-if (yourcashsong < 7) return reply(`﹝You have not enough money to download a picture. Money needed: 7$ Your money: ${yourcashimage}$﹞`) 
+if (yourcashimage < 7) return reply(`﹝You have not enough money to download a picture. Money needed: 7$ Your money: ${yourcashimage}$﹞`) 
 	
 let pprrimage = Number(yourcashimage);
 let oorrimage = Number(7);
