@@ -1783,7 +1783,7 @@ case 'send':
 
 					})
 					
-var testFolder = './imagedownload/';
+var testFolder = './iamgedownload/';
 
 
 fs.readdirSync(testFolder).forEach(file => {
