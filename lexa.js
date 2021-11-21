@@ -1779,7 +1779,7 @@ case 'send':
 
 						Lxa.sendMessage(from, buffer, image, {quoted:mek})
 
-						fs.unlinkSync(ran)
+						
 
 					})
 
