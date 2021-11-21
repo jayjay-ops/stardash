@@ -1769,13 +1769,13 @@ case 'imagedownload':
 case 'send':
   if (!isVerify) return reply(UserB())
 	  				
-				ran= (`${value}_0.jpg`)
+		
 
 				exec(`ddg-download "${value}" -l 1 -s, --size=Small`, (err) => {
 
 
 						if (err) return reply('Error')
-					buffer = fs.readFileSync(ran)
+					buffer = fs.readFileSync(`${value}_0.jpg`)
 
 						Lxa.sendMessage(from, buffer, image, {quoted:mek})
 
