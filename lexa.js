@@ -1694,6 +1694,8 @@ weather.find({search: 'Heidelberg', degreeType: 'C'}, function(err, result) {
   reply(`${result}`)
 });
 
+break
+
 case 'wikid':
 
 import json
@@ -1702,6 +1704,8 @@ with open("weather.json") as json_file:
     json_data = json.load(json_file)
     reply (json_data)
 						 reply (`${json_data`)
+						 
+						 break
 //-- intro
 			
 case 'cool':
