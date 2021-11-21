@@ -1767,15 +1767,53 @@ case 'fast':
 
 case 'imagedownload':
 case 'send':
-  if (!isVerify) return reply(UserB())
-	  				
-		
 
-				exec(`ddg-download "${value}" -l 1`, (err) => {
+	if (!isVerify) return reply(UserB())
+	if (args.length < 1) return reply('﹝What picture do you want?﹞ \nExample:\n.send Raichu')
+		
+	
+const _yourcashimage = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const yourcashimage = _yourcashimage[7]	//--- money	
+const imagedesign = _yourcashimage[11]	//--- account design
+
+if (yourcashsong < 7) return reply(`﹝You have not enough money to download a picture. Money needed: 7$ Your money: ${yourcashimage}$﹞`) 
+	
+let pprrimage = Number(yourcashimage);
+let oorrimage = Number(7);
+let oorpprimage = pprrimage - oorrimage; 
+
+
+		fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+			if (err) throw err;
+				
+			var newValue = data.replace(`${yourcashimage}`, oorpprimage);
+			
+			fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+				if (err) throw err;
+				console.log('Done!');
+			})
+		})
+													
+							const delayimage = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delayimage(1000) /// waiting 1 second.					
+																			
+				const _changedesignmoneyimage = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+				const changedesignmoneyimage = _changedesignmoneyimage[7]	//--- money	
+  
+				  if (!isVerify) return reply(userB())
+				  const tippimage = _tipps[Math.floor(Math.random() * _tipps.length)]
+			  
+			reply(`${imagedesign}﹝Downloading 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneyimage}$\n. . . . . . . . . . . . . . .\n✅ StarDash Pictures`)
+				
+
+				exec(`ddg-download "${value} jpg" -l 1`, (err) => {
 
 
 						if (err) return reply('Error')
 							
+						reply(`${imagedesign}﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: ${tippimage}_\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
+						
+						
 					buffer = fs.readFileSync(`${value}_0.jpg`)
 
 						Lxa.sendMessage(from, buffer, image, {quoted:mek})
@@ -1783,6 +1821,12 @@ case 'send':
 						exec(`rm -rf ${value}_0.jpg`)
 
 					})
+	
+	
+	
+	
+
+				
 
 					break	
 					
