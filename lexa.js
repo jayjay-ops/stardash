@@ -1697,12 +1697,18 @@ weather.find({search: 'Heidelberg', degreeType: 'C'}, function(err, result) {
 break
 
 case 'wikid':
-
-let rawdata = fs.readFileSync('weather.json');
-let student = JSON.parse(rawdata);
-console.log(student);
-
-						 reply (`${student}`)
+						 
+						 
+fs.readFile("./weather.json", "utf8", (err, jsonString) => {
+  if (err) {
+    console.log("Error reading file from disk:", err);
+    return;
+  }
+  try {
+    const weather = JSON.parse(jsonString);
+	  reply(`Weather is:` weather.name,)
+  } catch (err) {
+    console.log("Error parsing JSON string:", err);						 
 						 
 						 break
 //-- intro
