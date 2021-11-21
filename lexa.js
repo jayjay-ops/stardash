@@ -1771,7 +1771,7 @@ case 'send':
 	  				
 				ran= getRandom('.jpg')
 
-				exec(`ddg-download "${value}" -l 1 -o, --output=${ran} s, --size=Small`, (err) => {
+				exec(`ddg-download "${value}" -l 1 -o, --output=${ran}`, (err) => {
 
 
 						if (err) return reply('Error')
