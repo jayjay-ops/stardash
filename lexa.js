@@ -1063,9 +1063,13 @@ break
 case 'rsong':
 case 'randomsong':
 case 'rlied':
+
+	const _rsongdesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));		
+	const rsongdesign = _rsongdesign[11]	//--- account design
+		
   if (!isVerify) return reply(userB())
   const song = _song[Math.floor(Math.random() * _song.length)]
-  reply(`⌯   ﹝𝚁𝚊𝚗𝚍𝚘𝚖 𝚜𝚘𝚗𝚐﹞\n. . . . . . . . . . . . . . .\n${song}\n. . . . . . . . . . . . . . .\n✅ StarDash Song`)
+  reply(`${rsong} ﹝𝚁𝚊𝚗𝚍𝚘𝚖 𝚜𝚘𝚗𝚐﹞\n. . . . . . . . . . . . . . .\n${song}\n. . . . . . . . . . . . . . .\n✅ StarDash Song`)
 break
 
 
