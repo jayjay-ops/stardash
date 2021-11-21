@@ -1707,6 +1707,11 @@ fs.readFile("./weather.json", "utf8", (err, jsonString) => {
   try {
     const weather = JSON.parse(jsonString);
 	  reply(`Weather is: ${weather.location}`)
+	  
+const jsonStringweather = JSON.stringify(weather);
+console.log(jsonStringweather);
+  reply(`Weather is: ${jsonStringweather}`)
+	  
   } catch (err) {
     console.log("Error parsing JSON string:", err);						 
 	}			}	)	 
