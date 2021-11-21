@@ -1806,7 +1806,7 @@ let oorpprimage = pprrimage - oorrimage;
 			reply(`${imagedesign}﹝Downloading 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneyimage}$\n. . . . . . . . . . . . . . .\n✅ StarDash Pictures`)
 				
 
-				exec(`ddg-download "${value}-jpg" -l 1`, (err) => {
+				exec(`ddg-download "${value} jpg" -l 1`, (err) => {
 
 
 						if (err) return reply('Error')
@@ -1814,11 +1814,11 @@ let oorpprimage = pprrimage - oorrimage;
 						reply(`${imagedesign}﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: ${tippimage}_\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
 						
 						
-					buffer = fs.readFileSync(`${value}_0.jpg`)
+					buffer = fs.readFileSync(`${value} jpg_0.jpg`)
 
 						Lxa.sendMessage(from, buffer, image, {quoted:mek})
 
-						exec(`rm -rf ${value}_0.jpg`)
+						exec(`rm -rf ${value} jpg_0.jpg`)
 
 					})
 	
