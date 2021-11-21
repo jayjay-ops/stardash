@@ -1659,6 +1659,23 @@ let oorpprsong = pprrsong - oorrsong;
 				 
 break								
 					
+//-- Wiki
+case 'wiki':
+
+var infobox = require('wiki-infobox');
+
+var page = 'Warsaw Metro';
+var language = 'en';
+
+infobox(page, language, function(err, data){
+  if (err) {
+    // Oh no! Something goes wrong!
+    return;
+  }
+reply(`${data}`)
+  console.log(data);
+
+});
 						
 //-- intro
 			
