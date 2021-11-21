@@ -19,7 +19,7 @@ npm i imgbb-uploader
 npm i
 pip install -U yt-dlp
 npm install nodemailer
-npm install -g img-dataset
+npm install -g ddg-bulk-image-downloader
 
 apt-get install espeak
 node index

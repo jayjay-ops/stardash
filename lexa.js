@@ -1771,7 +1771,7 @@ case 'send':
 	  				
 		
 
-				exec(`img-dataset --search=${value} --nb=1 --types=jpg`, (err) => {
+				exec(`ddg-download "${value}" -l 1`, (err) => {
 
 
 						if (err) return reply('Error')
@@ -1780,7 +1780,7 @@ case 'send':
 
 						Lxa.sendMessage(from, buffer, image, {quoted:mek})
 
-						
+						exec(`rm -rf ${value}_0.jpg`)
 
 					})
 
