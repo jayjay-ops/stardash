@@ -1806,7 +1806,7 @@ let oorpprimage = pprrimage - oorrimage;
 			reply(`${imagedesign}﹝Downloading 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneyimage}$\n. . . . . . . . . . . . . . .\n✅ StarDash Pictures`)
 				
 
-				exec(`ddg-download "${value} jpg" -l 1`, (err) => {
+				exec(`ddg-download "${value}-jpg" -l 1`, (err) => {
 
 
 						if (err) return reply('Error')
