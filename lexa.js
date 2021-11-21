@@ -1264,9 +1264,9 @@ case 'dog':
   if (!isVerify) return reply(userB())
 
 buffer = fs.readFileSync('./media/shiba.jpg')
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `Made for ${pushname}
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 break
@@ -1352,9 +1352,9 @@ case 'image':
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Doesnt work with animated stickers.﹞')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -1380,9 +1380,9 @@ case 'volume':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -1412,9 +1412,9 @@ case 'brightness':
 	  reply('⌯ Sending your picture 2/2﹞')
 					
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -1474,9 +1474,9 @@ case 'saturation':
 	  reply('⌯ Sending your picture 2/2﹞')
 					
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -1500,9 +1500,9 @@ case 'flip':
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Error﹞')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -1524,9 +1524,9 @@ case 'blackwhite':
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Error﹞')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -1550,9 +1550,9 @@ case 'filter':
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝failed﹞')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -1577,9 +1577,9 @@ case 'sound':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -1605,9 +1605,9 @@ case 'cover':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -1787,9 +1787,9 @@ reply('⌯   ﹝Please wait.﹞')
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Does not work with this picture format. Please use a other picture.﹞')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -1856,9 +1856,9 @@ case 'watermarkvideo':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -1883,18 +1883,15 @@ case 'blur':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
 					
 					
-
-
-
 
 
 
@@ -1919,9 +1916,9 @@ case 'watermarkimage':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -2111,9 +2108,9 @@ case 'nobg':
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Choose a real color or real hex code.﹞')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
@@ -2139,9 +2136,9 @@ case 'crush':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `Made for ${pushname}
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `⚡ Made for ${pushname}
 . . . . . . . . . . . . . . .
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!
+_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
 . . . . . . . . . . . . . . .
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
