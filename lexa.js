@@ -1309,8 +1309,14 @@ const stickerpack = _stickerpack[10]	//--- stickerpack name
 					} else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
 						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+						const tippsticker = _tipps[Math.floor(Math.random() * _tipps.length)]
 						ran = getRandom('.webp')
-						reply(wait())
+						reply(`⚡ Please wait ${pushname}
+. . . . . . . . . . . . . . .
+_Tipp: ${tippsticker}_
+. . . . . . . . . . . . . . .
+✅ StarDash Stickers`
+)
 						await ffmpeg(`./${media}`)
 							.inputFormat(media.split('.')[1])
 							.on('start', function (cmd) {
@@ -1338,6 +1344,11 @@ const stickerpack = _stickerpack[10]	//--- stickerpack name
 						reply(`⌯   ﹝𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚊𝚐 𝚊 𝚙𝚒𝚌𝚝𝚞𝚛𝚎.﹞`)
 					}
 					break
+
+
+
+
+
 
 //-- stiker to image
 case 'toimg':
