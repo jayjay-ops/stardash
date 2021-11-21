@@ -1706,7 +1706,7 @@ fs.readFile("./weather.json", "utf8", (err, jsonString) => {
   }
   try {
     const weather = JSON.parse(jsonString);
-	  reply(`Weather is: ${weather.location}`)
+	  reply(`Weather is: ${weather.location.name}`)
 	  
 const jsonStringweather = JSON.stringify(weather);
 console.log(jsonStringweather);
@@ -1723,6 +1723,7 @@ console.log(jsonStringweather);
         return;
      }
      console.log(JSON.parse(data));
+	 console.log("wind speed: " + weather.location.name);
 
 })
 						 break
