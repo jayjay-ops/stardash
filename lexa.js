@@ -1698,7 +1698,6 @@ break
 
 case 'wikid':
 
-import json
 
 with open("weather.json") as json_file:
     json_data = json.load(json_file)
