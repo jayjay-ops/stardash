@@ -1698,11 +1698,11 @@ break
 
 case 'wikid':
 
+let rawdata = fs.readFileSync('weather.json');
+let student = JSON.parse(rawdata);
+console.log(student);
 
-with open("weather.json") as json_file:
-    json_data = json.load(json_file)
-    reply (json_data)
-						 reply (`${json_data`)
+						 reply (`${student}`)
 						 
 						 break
 //-- intro
