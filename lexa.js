@@ -1710,74 +1710,7 @@ let oorpprsong = pprrsong - oorrsong;
 				 
 break								
 					
-//-- Wiki
-case 'wikis':
 
-var infobox = require('wiki-infobox');
-
-var page = 'Warsaw Metro';
-var language = 'en';
-
-infobox(page, language, function(err, data){
-  if (err) {
-    // Oh no! Something goes wrong!
-    return;
-  }
-reply(`${data}`)
-  console.log(data);
-
-});
-
-//-- Wiki
-case 'wiki':
-
-var weather = require('weather-js');
- 
-// Options:
-// search:     location name or zipcode
-// degreeType: F or C
- 
-weather.find({search: 'Heidelberg', degreeType: 'C'}, function(err, result) {
-  if(err) console.log(err);
- 
-  console.log(JSON.stringify(result, null, 2));
-    fs.writeFileSync('./weather.json', JSON.stringify(result))
-  reply(`${result}`)
-});
-
-break
-
-case 'wikid':
-						 
-						 
-fs.readFile("./weather.json", "utf8", (err, jsonString) => {
-  if (err) {
-    console.log("Error reading file from disk:", err);
-    return;
-  }
-  try {
-    const weather = JSON.parse(jsonString);
-	  reply(`Weather is: ${weather.location.name}`)
-	  
-const jsonStringweather = JSON.stringify(weather);
-console.log(jsonStringweather);
-  reply(`Weather is: ${jsonStringweather}`)
-	  
-  } catch (err) {
-    console.log("Error parsing JSON string:", err);						 
-	}			}	)	 
-	
-	
-	fs.readFile('./weather.json', 'utf8', (error, data) => {
-     if(error){
-        console.log(error);
-        return;
-     }
-     console.log(JSON.parse(data));
-
-
-})
-						 break
 //-- intro
 			
 case 'cool':
@@ -1830,7 +1763,28 @@ case 'fast':
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
-					break		
+					break	
+
+case 'imagedownload':
+case 'send':
+  if (!isVerify) return reply(UserB())
+	  				
+				ran= getRandom('.jpg')
+
+				exec(`ddg-download "${value}" -l 1 -o, --output=${ran} s, --size=Small`, (err) => {
+
+
+						if (err) return reply('Error')
+					buffer = fs.readFileSync(ran)
+
+						Lxa.sendMessage(from, buffer, image, {quoted:mek})
+
+						fs.unlinkSync(ran)
+
+					})
+
+					break	
+					
  
 case 'tts':
 case 'speak':
