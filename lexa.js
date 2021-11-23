@@ -3049,81 +3049,81 @@ const mypetevolution4 = _pet[43];			//--- Evolution 4
 const mypetfight = _pet[44];		     	//--- fight
 
 		
- reply(`............................
- ⇝ ${pushname}\n ⇝ ${prem_}
- ............................\n
+reply(`............................
+⇝ ${pushname}\n ⇝ ${prem_}
+............................\n
  
- 𝙿𝙴𝚃
+𝙿𝙴𝚃
  
- 𝚗𝚊𝚖𝚎
- ${mypetdesign} ${mypetname} 
- 𝚝𝚢𝚙𝚎
- ${mypetdesign} ${mypetshiny}${mypetevolution1} 
- 𝚖𝚘𝚘𝚍
- ${mypetdesign} ${mypetmood}
- 𝚑𝚞𝚗𝚐𝚎𝚛
- ${mypetdesign} ${mypethunger} 
+𝚗𝚊𝚖𝚎
+${mypetdesign} ${mypetname} 
+𝚝𝚢𝚙𝚎
+${mypetdesign} ${mypetshiny}${mypetevolution1} 
+𝚖𝚘𝚘𝚍
+${mypetdesign} ${mypetmood}
+𝚑𝚞𝚗𝚐𝚎𝚛
+${mypetdesign} ${mypethunger} 
  
- 𝚂𝚃𝙰𝚃𝚄𝚂
+𝚂𝚃𝙰𝚃𝚄𝚂
  
- 𝚜𝚝𝚊𝚝𝚞𝚜
- ${mypetdesign} ${mypetstatus} 
- 𝚑𝚎𝚊𝚕𝚝𝚑
- ${mypetdesign} ${mypethealth}
- 𝚎𝚗𝚎𝚛𝚐𝚢
- ${mypetdesign} ${mypetenergy}
- 𝚡𝚙
- ${mypetdesign} ${mypetxp}
- 𝚕𝚎𝚟𝚎𝚕
- ${mypetdesign} ${mypetlevel}
+𝚜𝚝𝚊𝚝𝚞𝚜
+${mypetdesign} ${mypetstatus} 
+𝚑𝚎𝚊𝚕𝚝𝚑
+${mypetdesign} ${mypethealth}
+𝚎𝚗𝚎𝚛𝚐𝚢
+${mypetdesign} ${mypetenergy}
+𝚡𝚙
+${mypetdesign} ${mypetxp}
+𝚕𝚎𝚟𝚎𝚕
+${mypetdesign} ${mypetlevel}
 
- 𝙿𝙴𝚃𝙸𝙽𝙵𝙾
+𝙿𝙴𝚃𝙸𝙽𝙵𝙾
 
- 𝚞𝚕𝚝𝚛𝚊 𝚜𝚔𝚒𝚕𝚕
- ${mypetdesign} ${mypetpowertype1} 
- 𝚜𝚔𝚒𝚕𝚕 𝚒𝚗𝚏𝚘
- ${mypetdesign} ${mypetpowertypeinfo1}
- 𝚊𝚋𝚘𝚞𝚝
- ${mypetdesign} ${mypetabouttypeinfo1}
- 𝚋𝚒𝚛𝚝𝚑𝚍𝚊𝚢
- ${mypetdesign} ${mypetbirthday}
+𝚞𝚕𝚝𝚛𝚊 𝚜𝚔𝚒𝚕𝚕
+${mypetdesign} ${mypetpowertype1} 
+𝚜𝚔𝚒𝚕𝚕 𝚒𝚗𝚏𝚘
+${mypetdesign} ${mypetpowertypeinfo1}
+𝚊𝚋𝚘𝚞𝚝
+${mypetdesign} ${mypetabouttypeinfo1}
+𝚋𝚒𝚛𝚝𝚑𝚍𝚊𝚢
+${mypetdesign} ${mypetbirthday}
  
- 𝙰𝙼𝙾𝚁
+𝙰𝙼𝙾𝚁
  
- 𝚠𝚎𝚊𝚙𝚘𝚗
- ${mypetdesign} ${mypetweapon}
- 𝚌𝚘𝚘𝚕𝚍𝚘𝚠𝚗
- ${mypetdesign} ${mypetcooldown}
+𝚠𝚎𝚊𝚙𝚘𝚗
+${mypetdesign} ${mypetweapon}
+𝚌𝚘𝚘𝚕𝚍𝚘𝚠𝚗
+${mypetdesign} ${mypetcooldown}
  
- 𝚏𝚒𝚛𝚜𝚝
- ${mypetdesign} ${mypetcloth1}
- 𝚜𝚎𝚌𝚘𝚗𝚍
- ${mypetdesign} ${mypetcloth2} 
- 𝚝𝚑𝚒𝚛𝚍
- ${mypetdesign} ${mypetcloth3} 
- 𝚝𝚑𝚘𝚞𝚛𝚝𝚑
- ${mypetdesign} ${mypetcloth4}
+𝚏𝚒𝚛𝚜𝚝
+${mypetdesign} ${mypetcloth1}
+𝚜𝚎𝚌𝚘𝚗𝚍
+${mypetdesign} ${mypetcloth2} 
+𝚝𝚑𝚒𝚛𝚍
+${mypetdesign} ${mypetcloth3} 
+𝚝𝚑𝚘𝚞𝚛𝚝𝚑
+${mypetdesign} ${mypetcloth4}
  
- 𝚂𝙾𝙲𝙸𝙰𝙻
+𝚂𝙾𝙲𝙸𝙰𝙻
  
- 𝚏𝚛𝚒𝚎𝚗𝚍𝚜
- ${mypetdesign} ${mypetfriends}
- 𝚘𝚠𝚗𝚎𝚛𝚜
- ${mypetdesign} ${mypetowners} 
- 𝚌𝚑𝚊𝚗𝚐𝚎𝚙𝚎𝚝
- ${mypetdesign} ${mypetchangepet} 
- 𝚏𝚒𝚐𝚑𝚝
- ${mypetdesign} ${mypetfight}
+𝚏𝚛𝚒𝚎𝚗𝚍𝚜
+${mypetdesign} ${mypetfriends}
+𝚘𝚠𝚗𝚎𝚛𝚜
+${mypetdesign} ${mypetowners} 
+𝚌𝚑𝚊𝚗𝚐𝚎𝚙𝚎𝚝
+${mypetdesign} ${mypetchangepet} 
+𝚏𝚒𝚐𝚑𝚝
+${mypetdesign} ${mypetfight}
 
- 𝚘𝚙𝚎𝚗 𝚏𝚛𝚒𝚍𝚐𝚎
- ${mypetdesign} .fridge
+𝚘𝚙𝚎𝚗 𝚏𝚛𝚒𝚍𝚐𝚎
+${mypetdesign} .fridge
 
- 𝚙𝚎𝚝𝚜𝚑𝚘𝚙
- ${mypetdesign} .petshop
+𝚙𝚎𝚝𝚜𝚑𝚘𝚙
+${mypetdesign} .petshop
 
  
- . . . . . . . . . . . . . . .
- . . . . . . . . . . . . . . .`)
+. . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .`)
 
 break
 
