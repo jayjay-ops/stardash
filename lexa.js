@@ -2771,13 +2771,16 @@ case 'buypet':
 
 const path = './${sender.split("@")[0]}.pet.json'
 
-try {
-  if (fs.existsSync(path)) {
-    //file exists
-  }
-} catch(err) {
-  console.error(err)
-}
+
+if (fs.existsSync(path)) {
+  // path exists
+  console.log("exists:", path);
+  Reply ("You already have a pet. Move it to your Bank if you want a new one."
+} else {
+ 
+
+
+
 
 function kyun(seconds){
   function pad(s){
@@ -2963,7 +2966,7 @@ else if (args[0] == 'umbreon') {
 	
 			reply ("This pet doesnt exist. Please choose one from the .petshop")		
 }
-
+}
 
 
 break
