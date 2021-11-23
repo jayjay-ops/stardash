@@ -2789,7 +2789,7 @@ try {
 				let changepet = 'no';
 				let friends = '';
 				let name = 'Wild';
-				let mood = 'Happy';
+				let petmood = 'Happy';
 				let status = 'alive';	
 				
 				let previousowner = sender.split("@");
