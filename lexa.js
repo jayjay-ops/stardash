@@ -2772,9 +2772,9 @@ const _yourcashpetshop = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s
 const yourcashpetshop = _yourcashpetshop[7]	//--- money	
 const petshopdesign = _yourcashpetshop[11]	//--- account design
 
-		if (yourcashpetshop < 100) return reply(`﹝You have not enough money to buy a pet. Money needed: 100$ Your money: ${yourcashpetshop}$﹞\n. . . . . . . . . . . . . . .\n💟 StarDash Pets`) 
-		if (args.length < 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 the Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .\nExample: .buypet Elf\n. . . . . . . . . . . . . . .\n💟 StarDash Pets`)
-		if (args.length > 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 valid Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .\nExample: .buypet Elf\n. . . . . . . . . . . . . . .\n💟 StarDash Pets`)
+		if (yourcashpetshop < 100) return reply(`﹝You have not enough money to buy a pet. Money needed: 100$ Your money: ${yourcashpetshop}$﹞\n. . . . . . . . . . . . . . .🍃\n💟 StarDash Pets`) 
+		if (args.length < 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 the Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .🍃\nExample: .buypet Elf\n. . . . . . . . . . . . . . .🍃\n💟 StarDash Pets`)
+		if (args.length > 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 valid Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .🍃\nExample: .buypet Elf\n. . . . . . . . . . . . . . .🍃\n💟 StarDash Pets`)
 			
 let petshoplivemoney = Number(yourcashpetshop);
 let petshoppetcost = Number(100);
@@ -2800,7 +2800,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 				  if (!isVerify) return reply(userB())
 				  const tipppetshop = _tipps[Math.floor(Math.random() * _tipps.length)]
 			  
-			reply(`${petshopdesign}﹝Finding a pet for you 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneypetshop}$\n. . . . . . . . . . . . . . .\n💟 StarDash Pets`)
+			reply(`${petshopdesign}﹝Finding a pet for you 1/2﹞\n. . . . . . . . . . . . . . .🍃\nMoney left: ${changedesignmoneypetshop}$\n. . . . . . . . . . . . . . .🍃\n💟 StarDash Pets`)
 
 
 exec (`rm -rf ${sender.split("@")[0]}.pet.json`)
