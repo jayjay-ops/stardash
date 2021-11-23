@@ -1279,6 +1279,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 	  
 const _stickerpack = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const stickerpack = _stickerpack[10]	//--- stickerpack name
+const stickerdesign = _stickerpack[11]	//--- account design
 
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -1311,7 +1312,7 @@ const stickerpack = _stickerpack[10]	//--- stickerpack name
 						const media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 						const tippsticker = _tipps[Math.floor(Math.random() * _tipps.length)]
 						ran = getRandom('.webp')
-						reply(`⚡ Please wait ${pushname}
+						reply(`${stickerdesign} Please wait ${pushname}
 . . . . . . . . . . . . . . .
 _Tipp: ${tippsticker}_
 . . . . . . . . . . . . . . .
