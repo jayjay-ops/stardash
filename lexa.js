@@ -3029,7 +3029,7 @@ const mypetpowertypeinfo3 = _pet[26];
 const mypetpowertypeinfo4 = _pet[27];
 
 const mypetabouttypeinfo1 = _pet[28];		//--- abouttypeinfo 1-4
-const mypetabouttypeinfo1 = _pet[29];
+const mypetabouttypeinfo2 = _pet[29];
 const mypetabouttypeinfo3 = _pet[30];
 const mypetabouttypeinfo4 = _pet[31];
 
