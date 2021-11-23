@@ -2775,7 +2775,7 @@ const path = './${sender.split("@")[0]}.pet.json'
 if (fs.existsSync(path)) {
   // path exists
   console.log("exists:", path);
-  Reply ("You already have a pet. Move it to your Bank if you want a new one."
+  Reply ("You already have a pet. Move it to your Bank if you want a new one.")
 } else {
  
 
