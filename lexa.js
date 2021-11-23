@@ -2809,6 +2809,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 				let name = 'Wild';
 				let petmood = 'Happy';
 				let status = 'alive';	
+				let fight = 'off';
 				
 				let previousowner = sender.split("@");
 				let birthday = tanggal();
@@ -2864,7 +2865,7 @@ if (args[0] == 'elf') {
 "${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
 "${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
 "${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
-"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`, function (err) {
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution}", "${fight}"]`, function (err) {
 				
   if (err) throw err;
   
@@ -2904,7 +2905,7 @@ else if (args[0] == 'dragon') {
 "${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
 "${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
 "${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
-"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`, function (err) {
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution}", "${fight}"]`, function (err) {
 				
   if (err) throw err;
   
@@ -2914,6 +2915,8 @@ else if (args[0] == 'dragon') {
 	
 				
 }
+
+
 
 else if (args[0] == 'umbreon') {	
 
@@ -2943,7 +2946,7 @@ else if (args[0] == 'umbreon') {
 "${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
 "${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
 "${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
-"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`, function (err) {
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution}", "${fight}"]`, function (err) {
 				
   if (err) throw err;
   
@@ -2960,6 +2963,184 @@ else if (args[0] == 'umbreon') {
 }
 
 
+
+break
+
+//--- Your Pet		
+
+			
+			
+case 'mypet':
+case 'pet':
+case 'elf':
+case 'dragon':
+case 'umbreon':
+		
+		if (!isVerify) return reply(userB())
+			
+// -- Pet 
+	
+const _mypetdesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const mypetdesign = _mypetdesign[11];			//--- account design	
+	
+const _mypet = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+
+mypettype = _pet[0]; 				//--- type
+mypetstage = _pet[1];				//--- stage
+mypethunger = _pet[2];				//--- hunger
+mypetlevel = _pet[3];				//--- level
+mypetxp = _pet[4];					//--- xp
+mypetchangepet = _pet[5];			//--- changepet
+
+mypetfriends = _pet[6];				//--- friends
+mypetname = _pet[7];				//--- name
+mypetmood = _pet[8];				//--- mood
+mypetstatus = _pet[9];				//--- status
+mypetowners = _pet[10];				//--- owners
+mypetbirthday = _pet[11];			//--- birthday
+mypetisshiny = _pet[12];			//--- shiny
+
+mypetcloth1 = _pet[13];    			//--- cloth 1-4
+mypetcloth2 = _pet[14];
+mypetcloth3 = _pet[15];
+mypetcloth4 = _pet[16];
+
+mypetcooldown = _pet[17];			//--- cooldown
+mypetenergy = _pet[18];				//--- energy
+mypetweapon = _pet[19];				//--- weapon
+
+mypetpowertype1 = _pet[20];			//--- powertype 1-4
+mypetpowertype2 = _pet[21];
+mypetpowertype3 = _pet[22];
+mypetpowertype4 = _pet[23];
+
+mypetpowertypeinfo1 = _pet[24];		//--- powertypeinfo 1-4
+mypetpowertypeinfo2 = _pet[25];
+mypetpowertypeinfo3 = _pet[26];
+mypetpowertypeinfo4 = _pet[27];
+
+mypetabouttypeinfo1 = _pet[28];		//--- abouttypeinfo 1-4
+mypetabouttypeinfo1 = _pet[29];
+mypetabouttypeinfo3 = _pet[30];
+mypetabouttypeinfo4 = _pet[31];
+
+mypetempty1 = _pet[32];				//--- empty 1-4
+mypetempty2 = _pet[33];
+mypetempty3 = _pet[34];
+mypetempty4 = _pet[35];
+mypetempty5 = _pet[36];
+mypetempty6 = _pet[37];
+
+mypethealth = _pet[38]; 	    	//--- Health
+mypetpower = _pet[39];    			//--- Power
+mypetevolution = _pet[40];			//--- Evolution
+mypetfight = _pet[41];		     	//--- fight
+
+		
+ reply(`............................
+ ⇝ ${pushname}\n ⇝ ${prem_}
+ ............................\n
+ 
+ 𝙿𝙴𝚃
+ 
+ 𝚗𝚊𝚖𝚎
+ ${mypetdesign} ${mypetname}
+ 
+ 𝚝𝚢𝚙𝚎
+ ${mypetdesign} ${shiny}${mypetevolution}
+ 
+ 𝚖𝚘𝚘𝚍
+ ${mypetdesign} ${mypetmood}
+ 
+ 𝚑𝚞𝚗𝚐𝚎𝚛
+ ${mypetdesign} ${mypethunger} 
+ 
+ 𝚂𝚃𝙰𝚃𝚄𝚂
+ 
+ 𝚜𝚝𝚊𝚝𝚞𝚜
+ ${mypetdesign} ${mypetstatus} 
+ 
+ 𝚑𝚎𝚊𝚕𝚝𝚑
+ ${mypetdesign} ${mypethealth}
+ 
+ 𝚎𝚗𝚎𝚛𝚐𝚢
+ ${mypetdesign} ${mypetenergy}
+ 
+ 𝚡𝚙
+ ${mypetdesign} ${mypetxp}
+ 
+ 𝚕𝚎𝚟𝚎𝚕
+ ${mypetdesign} ${mypetlevel}
+
+ 
+ 𝙿𝙴𝚃𝙸𝙽𝙵𝙾
+
+ 𝚞𝚕𝚝𝚛𝚊 𝚜𝚔𝚒𝚕𝚕
+ ${mypetdesign} ${mypetpowertype} 
+ 
+ 𝚜𝚔𝚒𝚕𝚕 𝚒𝚗𝚏𝚘
+ ${mypetdesign} ${mypetpowertypeinfo}
+ 
+ 𝚊𝚋𝚘𝚞𝚝
+ ${mypetdesign} ${mypetabouttypeinfo}
+
+ 𝚋𝚒𝚛𝚝𝚑𝚍𝚊𝚢
+ ${mypetdesign} ${mypetbirthday}
+ 
+ 𝙰𝙼𝙾𝚁
+ 
+ 𝚠𝚎𝚊𝚙𝚘𝚗
+ ${mypetdesign} ${mypetpower}
+ 
+ 𝚌𝚘𝚘𝚕𝚍𝚘𝚠𝚗
+ ${mypetdesign} ${mypetcooldown}
+ 
+ 𝚏𝚒𝚛𝚜𝚝
+ ${mypetdesign} ${mypetcloth1}
+ 
+ 𝚜𝚎𝚌𝚘𝚗𝚍
+ ${mypetdesign} ${mypetcloth2} 
+ 
+ 𝚝𝚑𝚒𝚛𝚍
+ ${mypetdesign} ${mypetcloth3} 
+ 
+ 𝚝𝚑𝚘𝚞𝚛𝚝𝚑
+ ${mypetdesign} ${mypetcloth4}
+ 
+ 𝚂𝙾𝙲𝙸𝙰𝙻
+ 
+ 𝚏𝚛𝚒𝚎𝚗𝚍𝚜
+ ${mypetdesign} ${mypetfriends}
+ 
+ 𝚘𝚠𝚗𝚎𝚛𝚜
+ ${mypetdesign} ${mypetowners} 
+ 
+ 𝚌𝚑𝚊𝚗𝚐𝚎𝚙𝚎𝚝
+ ${mypetdesign} ${mypetchangepet} 
+ 
+ 𝚏𝚒𝚐𝚑𝚝
+ ${mypetdesign} ${mypetfight}
+ 
+ 𝚘𝚙𝚎𝚗 𝚏𝚛𝚒𝚍𝚐𝚎
+ ${mypetdesign} .fridge
+
+ 𝚙𝚎𝚝𝚜𝚑𝚘𝚙
+ ${mypetdesign} .petshop
+
+ 
+ . . . . . . . . . . . . . . .
+ 𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${mydesign} .shop\n
+ 𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${mydesign} .menu\n
+ 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${mydesign} ${mydate}\n
+ . . . . . . . . . . . . . . .
+ 𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜
+ 𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑
+ .hide
+ . . . . . . . . . . . . . . .
+ 𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛
+ 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑
+ .deletemyaccount
+ . . . . . . . . . . . . . . .`)
 
 break
 
