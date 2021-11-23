@@ -2807,7 +2807,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 				let changepet = 'no';
 				let friends = '';
 				let name = 'Wild';
-				let petmood = 'Happy';
+				let petmood = ':)';
 				let status = 'alive';	
 				let fight = 'off';
 				
