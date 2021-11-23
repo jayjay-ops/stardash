@@ -2773,8 +2773,8 @@ const yourcashpetshop = _yourcashpetshop[7]	//--- money
 const petshopdesign = _yourcashpetshop[11]	//--- account design
 
 		if (yourcashpetshop < 100) return reply(`﹝You have not enough money to buy a pet. Money needed: 100$ Your money: ${yourcashpetshop}$﹞`) 
-		if (args.length < 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 the Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .\nExample: .buypet Elf\n. . . . . . . . . . . . . . .\n✅ StarDash Pets`)
-		if (args.length > 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 valid Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .\nExample: .buypet Elf\n. . . . . . . . . . . . . . .\n✅ StarDash Pets`)
+		if (args.length < 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 the Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .\nExample: .buypet Elf\n. . . . . . . . . . . . . . .\n💟 StarDash Pets`)
+		if (args.length > 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 valid Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .\nExample: .buypet Elf\n. . . . . . . . . . . . . . .\n💟 StarDash Pets`)
 			
 let petshoplivemoney = Number(yourcashpetshop);
 let petshoppetcost = Number(100);
@@ -2800,7 +2800,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 				  if (!isVerify) return reply(userB())
 				  const tipppetshop = _tipps[Math.floor(Math.random() * _tipps.length)]
 			  
-			reply(`${petshopdesign}﹝Finding a pet for you 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneypetshop}$\n. . . . . . . . . . . . . . .\n✅ StarDash Pets`)
+			reply(`${petshopdesign}﹝Finding a pet for you 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneypetshop}$\n. . . . . . . . . . . . . . .\n💟 StarDash Pets`)
 
 
 exec (`rm -rf ${sender.split("@")[0]}.pet.json`)
@@ -3128,7 +3128,7 @@ else if (args[0] == 'Umbreon') {
 			reply ("This pet doesnt exist. Please choose one from the .petshop")		
 }
 
-			reply(`${petshopdesign}﹝Found a ${args[0]}! 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: ${tipppetshop}$\n. . . . . . . . . . . . . . .\n✅ StarDash Pets`)
+			reply(`${petshopdesign}﹝Found a ${args[0]} Egg! 2/2﹞\n. . . . . . . . . . . . . . .\n_For now he is still an Egg, but i guess you cant wait until it hatches!_\n. . . . . . . . . . . . . . .\n_Tipp: Please take good care of your new pet. You can view his profile by the command *.mypet* . If you dont take good care of him, he will die._\n. . . . . . . . . . . . . . .\n💟 StarDash Pets`)
 
 break
 
