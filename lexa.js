@@ -2983,7 +2983,7 @@ case 'umbreon':
 const _mypetdesign = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const mypetdesign = _mypetdesign[11];			//--- account design	
 	
-const _mypet = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+const _pet = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
 
 mypettype = _pet[0]; 				//--- type
 mypetstage = _pet[1];				//--- stage
