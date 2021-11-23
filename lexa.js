@@ -2771,7 +2771,8 @@ case 'buypet':
 
 exec (`rm -rf ${sender.split("@")[0]}.pet.json`)
 
-
+								const petbuydelay = ms => new Promise(resolve => setTimeout(resolve, ms))
+								await petbuydelay(1000) /// waiting 1 second.
 
 function kyun(seconds){
   function pad(s){
