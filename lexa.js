@@ -2894,7 +2894,7 @@ else if (args[0] == 'umbreon') {
 }
 
 			fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
-"${friends}", "${name}", "${mood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
+"${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
 "${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
 "${cooldown}", "${energy}", "${weapon}", 
 "${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
