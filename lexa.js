@@ -3049,18 +3049,21 @@ const mypetevolution4 = _pet[43];			//--- Evolution 4
 const mypetfight = _pet[44];		     	//--- fight
 
 		
-reply(`............................
+reply(`. . . . . . . . . . . . . . .
 ⇝ ${pushname}\n ⇝ ${prem_}
-............................\n
+. . . . . . . . . . . . . . .
  
 𝙿𝙴𝚃
  
 𝚗𝚊𝚖𝚎
 ${mypetdesign} ${mypetname} 
+. . . . . . . . . . . . . . .
 𝚝𝚢𝚙𝚎
 ${mypetdesign} ${mypetshiny}${mypetevolution1} 
+. . . . . . . . . . . . . . .
 𝚖𝚘𝚘𝚍
 ${mypetdesign} ${mypetmood}
+. . . . . . . . . . . . . . .
 𝚑𝚞𝚗𝚐𝚎𝚛
 ${mypetdesign} ${mypethunger} 
  
