@@ -3091,7 +3091,7 @@ const mypetfight = _pet[44];		     	//--- fight
  ${mypetdesign} ${mypetpowertype1} 
  
  𝚜𝚔𝚒𝚕𝚕 𝚒𝚗𝚏𝚘
- ${mypetdesign} ${mypetpowertypeinfo}
+ ${mypetdesign} ${mypetpowertypeinfo1}
  
  𝚊𝚋𝚘𝚞𝚝
  ${mypetdesign} ${mypetabouttypeinfo}
