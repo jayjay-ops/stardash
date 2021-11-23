@@ -2843,7 +2843,10 @@ if (args[0] == 'elf') {
 				let health = Number(100);
 				let power = Number(1);
 				let pettype = 'Elf';	
-				let evolution = 'ElfEgg';	
+				let evolution1 = 'ElfEgg';	
+				let evolution2 = 'ElfKid';
+				let evolution3 = 'Elf';
+				let evolution4 = 'UltraElf';
 				
 				let powertype3 = 'heal';
 				let powertype4 = 'ultraheal';				
@@ -2865,7 +2868,7 @@ if (args[0] == 'elf') {
 "${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
 "${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
 "${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
-"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution}", "${fight}"]`, function (err) {
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution1}", "${evolution2}", "${evolution3}", "${evolution4}", "${fight}"]`, function (err) {
 				
   if (err) throw err;
   
@@ -2883,7 +2886,10 @@ else if (args[0] == 'dragon') {
 				let health = Number(100);
 				let power = Number(1);
 				let pettype = 'Dragon';					
-				let evolution = 'Egg';		
+				let evolution1 = 'DragonEgg';	
+				let evolution2 = 'DragonKid';
+				let evolution3 = 'Dragon';
+				let evolution4 = 'UltraDragon';		
 				
 				let powertype3 = 'burn';
 				let powertype4 = 'laserburn';	
@@ -2905,7 +2911,7 @@ else if (args[0] == 'dragon') {
 "${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
 "${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
 "${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
-"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution}", "${fight}"]`, function (err) {
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution1}", "${evolution2}", "${evolution3}", "${evolution4}", "${fight}"]`, function (err) {
 				
   if (err) throw err;
   
@@ -2924,8 +2930,11 @@ else if (args[0] == 'umbreon') {
 				let health = Number(100);
 				let power = Number(1);
 				let pettype = 'Umbreon';					
-				let evolution = 'Egg';		
-				
+				let evolution1 = 'EveeEgg';	
+				let evolution2 = 'Evee';
+				let evolution3 = 'Leafeon';
+				let evolution4 = 'Umbreon';	
+								
 				let powertype3 = 'leaf';
 				let powertype4 = 'bite';	
 				
@@ -2946,7 +2955,7 @@ else if (args[0] == 'umbreon') {
 "${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
 "${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
 "${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
-"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution}", "${fight}"]`, function (err) {
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution1}", "${evolution2}", "${evolution3}", "${evolution4}", "${fight}"]`, function (err) {
 				
   if (err) throw err;
   
@@ -2985,56 +2994,59 @@ const mypetdesign = _mypetdesign[11];			//--- account design
 	
 const _pet = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
 
-mypettype = _pet[0]; 				//--- type
-mypetstage = _pet[1];				//--- stage
-mypethunger = _pet[2];				//--- hunger
-mypetlevel = _pet[3];				//--- level
-mypetxp = _pet[4];					//--- xp
-mypetchangepet = _pet[5];			//--- changepet
+const mypettype = _pet[0]; 				//--- type
+const mypetstage = _pet[1];				//--- stage
+const mypethunger = _pet[2];			//--- hunger
+const mypetlevel = _pet[3];				//--- level
+const mypetxp = _pet[4];				//--- xp
+const mypetchangepet = _pet[5];			//--- changepet
 
-mypetfriends = _pet[6];				//--- friends
-mypetname = _pet[7];				//--- name
-mypetmood = _pet[8];				//--- mood
-mypetstatus = _pet[9];				//--- status
-mypetowners = _pet[10];				//--- owners
-mypetbirthday = _pet[11];			//--- birthday
-mypetshiny = _pet[12];			    //--- shiny
+const mypetfriends = _pet[6];			//--- friends
+const mypetname = _pet[7];				//--- name
+const mypetmood = _pet[8];				//--- mood
+const mypetstatus = _pet[9];			//--- status
+const mypetowners = _pet[10];			//--- owners
+const mypetbirthday = _pet[11];			//--- birthday
+const mypetshiny = _pet[12];			//--- shiny
 
-mypetcloth1 = _pet[13];    			//--- cloth 1-4
-mypetcloth2 = _pet[14];
-mypetcloth3 = _pet[15];
-mypetcloth4 = _pet[16];
+const mypetcloth1 = _pet[13];    		//--- cloth 1-4
+const mypetcloth2 = _pet[14];
+const mypetcloth3 = _pet[15];
+const mypetcloth4 = _pet[16];
 
-mypetcooldown = _pet[17];			//--- cooldown
-mypetenergy = _pet[18];				//--- energy
-mypetweapon = _pet[19];				//--- weapon
+const mypetcooldown = _pet[17];			//--- cooldown
+const mypetenergy = _pet[18];			//--- energy
+const mypetweapon = _pet[19];			//--- weapon
 
-mypetpowertype1 = _pet[20];			//--- powertype 1-4
-mypetpowertype2 = _pet[21];
-mypetpowertype3 = _pet[22];
-mypetpowertype4 = _pet[23];
+const mypetpowertype1 = _pet[20];				//--- powertype 1-4
+const mypetpowertype2 = _pet[21];
+const mypetpowertype3 = _pet[22];
+const mypetpowertype4 = _pet[23];
 
-mypetpowertypeinfo1 = _pet[24];		//--- powertypeinfo 1-4
-mypetpowertypeinfo2 = _pet[25];
-mypetpowertypeinfo3 = _pet[26];
-mypetpowertypeinfo4 = _pet[27];
+const mypetpowertypeinfo1 = _pet[24];		//--- powertypeinfo 1-4
+const mypetpowertypeinfo2 = _pet[25];
+const mypetpowertypeinfo3 = _pet[26];
+const mypetpowertypeinfo4 = _pet[27];
 
-mypetabouttypeinfo1 = _pet[28];		//--- abouttypeinfo 1-4
-mypetabouttypeinfo1 = _pet[29];
-mypetabouttypeinfo3 = _pet[30];
-mypetabouttypeinfo4 = _pet[31];
+const mypetabouttypeinfo1 = _pet[28];		//--- abouttypeinfo 1-4
+const mypetabouttypeinfo1 = _pet[29];
+const mypetabouttypeinfo3 = _pet[30];
+const mypetabouttypeinfo4 = _pet[31];
 
-mypetempty1 = _pet[32];				//--- empty 1-4
-mypetempty2 = _pet[33];
-mypetempty3 = _pet[34];
-mypetempty4 = _pet[35];
-mypetempty5 = _pet[36];
-mypetempty6 = _pet[37];
+const mypetempty1 = _pet[32];				//--- empty 1-4
+const mypetempty2 = _pet[33];
+const mypetempty3 = _pet[34];
+const mypetempty4 = _pet[35];
+const mypetempty5 = _pet[36];
+const mypetempty6 = _pet[37];
 
-mypethealth = _pet[38]; 	    	//--- Health
-mypetpower = _pet[39];    			//--- Power
-mypetevolution = _pet[40];			//--- Evolution
-mypetfight = _pet[41];		     	//--- fight
+const mypethealth = _pet[38]; 	    	//--- Health
+const mypetpower = _pet[39];    			//--- Power
+const mypetevolution1 = _pet[40];			//--- Evolution 1
+const mypetevolution2 = _pet[41];			//--- Evolution 2
+const mypetevolution3 = _pet[42];			//--- Evolution 3
+const mypetevolution4 = _pet[43];			//--- Evolution 4
+const mypetfight = _pet[44];		     	//--- fight
 
 		
  reply(`............................
@@ -3047,7 +3059,7 @@ mypetfight = _pet[41];		     	//--- fight
  ${mypetdesign} ${mypetname}
  
  𝚝𝚢𝚙𝚎
- ${mypetdesign} ${mypetshiny}${mypetevolution}
+ ${mypetdesign} ${mypetshiny}${mypetevolution1}
  
  𝚖𝚘𝚘𝚍
  ${mypetdesign} ${mypetmood}
@@ -3076,7 +3088,7 @@ mypetfight = _pet[41];		     	//--- fight
  𝙿𝙴𝚃𝙸𝙽𝙵𝙾
 
  𝚞𝚕𝚝𝚛𝚊 𝚜𝚔𝚒𝚕𝚕
- ${mypetdesign} ${mypetpowertype} 
+ ${mypetdesign} ${mypetpowertype1} 
  
  𝚜𝚔𝚒𝚕𝚕 𝚒𝚗𝚏𝚘
  ${mypetdesign} ${mypetpowertypeinfo}
@@ -3090,7 +3102,7 @@ mypetfight = _pet[41];		     	//--- fight
  𝙰𝙼𝙾𝚁
  
  𝚠𝚎𝚊𝚙𝚘𝚗
- ${mypetdesign} ${mypetpower}
+ ${mypetdesign} ${mypetweapon}
  
  𝚌𝚘𝚘𝚕𝚍𝚘𝚠𝚗
  ${mypetdesign} ${mypetcooldown}
