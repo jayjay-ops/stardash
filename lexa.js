@@ -1716,7 +1716,6 @@ let oorpprsong = pprrsong - oorrsong;
 				 
 break								
 					
-
 //-- intro
 			
 case 'cool':
@@ -2767,6 +2766,41 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 //--- Pet	
 
 case 'buypet':
+		
+
+const _yourcashpetshop = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const yourcashpetshop = _yourcashpetshop[7]	//--- money	
+const petshopdesign = _yourcashpetshop[11]	//--- account design
+
+		if (yourpetshop < 100) return reply(`﹝You have not enough money to buy a pet. Money needed: 100$ Your money: ${yourcashpetshop}$﹞`) 
+		if (args.length < 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 the Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .\nExample: .buypet Elf\n. . . . . . . . . . . . . . .\n✅ StarDash Pets`)
+		if (args.length > 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 valid Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .\nExample: .buypet Elf\n. . . . . . . . . . . . . . .\n✅ StarDash Pets`)
+			
+let petshoplivemoney = Number(yourcashpetshop);
+let petshoppetcost = Number(100);
+let newpetshop = petshoplivemoney - petshoppetcost;  
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+			if (err) throw err;
+				
+			var newValue = data.replace(`${yourcashpetshop}`, newpetshop);
+			
+			fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+				if (err) throw err;
+				console.log('Done!');
+			})
+		})
+													
+							const delaypetshop = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delaypetshop(1000) /// waiting 1 second.					
+																			
+				const _changedesignmoneypetshop = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+				const changedesignmoneypetshop = _changedesignmoneypetshop[7]	//--- money	
+
+				  if (!isVerify) return reply(userB())
+				  const tipppetshop = _tipps[Math.floor(Math.random() * _tipps.length)]
+			  
+			reply(`${petshopdesign}﹝Finding a pet for you 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneypetshop}$\n. . . . . . . . . . . . . . .\n✅ StarDash Pets`)
 
 
 exec (`rm -rf ${sender.split("@")[0]}.pet.json`)
@@ -2875,6 +2909,47 @@ if (args[0] == 'elf') {
 			})
 
   console.log('Pet Account Opend.');
+					
+}  
+
+if (args[0] == 'Elf') {	
+
+				//-- Different with any pet type
+				let health = Number(100);
+				let power = Number(1);
+				let pettype = 'Elf';	
+				let evolution1 = 'ElfEgg';	
+				let evolution2 = 'ElfKid';
+				let evolution3 = 'Elf';
+				let evolution4 = 'UltraElf';
+				
+				let powertype3 = 'heal';
+				let powertype4 = 'ultraheal';				
+				
+				let powertypeinfo1 = 'Just an egg sleeping. Make it sleep harder with its skill .sleep';
+				let powertypeinfo2 = 'A small Elf which is always finding out new features. It can gain Xp by the skill .explore , Dont let him annoy you though!';					
+				let powertypeinfo3 = 'The Elf is a very powerfull being. It can use magic dust which heals herself or a pet from a friend! This capibility can be used by the skill .heal';	
+				let powertypeinfo4 = 'The Ultra Elf has the skill .megaheal , which lets her steal a huge amount of health from others and gains it for herself. She can also heal other pets with the skill .heal';	
+				
+				let abouttypeinfo1 = 'Just a cute egg. Keep him warm and feed it milk!';
+				let abouttypeinfo2 = 'The Elf which is always looking arround, exploring new things and is always happy to go out and see the world.';
+				let abouttypeinfo3 = 'Flying through the woods, bringing light, where darkness lies and keeping good relations with others makes the Elf a special creature that should be taken off very good.';	
+				let abouttypeinfo4 = 'The Ultra Elf. The Queen of StarDashia!';
+				
+							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+"${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
+"${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
+"${cooldown}", "${energy}", "${weapon}", 
+"${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
+"${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
+"${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution1}", "${evolution2}", "${evolution3}", "${evolution4}", "${fight}"]`, function (err) {
+				
+  if (err) throw err;
+  
+			})
+
+  console.log('Pet Account Opend.');
 	
 				
 				
@@ -2922,9 +2997,91 @@ else if (args[0] == 'dragon') {
 				
 }
 
+else if (args[0] == 'Dragon') {	
 
+				//-- Different with any pet type
+				let health = Number(100);
+				let power = Number(1);
+				let pettype = 'Dragon';					
+				let evolution1 = 'DragonEgg';	
+				let evolution2 = 'DragonKid';
+				let evolution3 = 'Dragon';
+				let evolution4 = 'UltraDragon';		
+				
+				let powertype3 = 'burn';
+				let powertype4 = 'laserburn';	
+				
+				let powertypeinfo1 = 'Just an egg sleeping. Make it sleep harder with its skill .sleep';
+				let powertypeinfo2 = 'A small baby dragon which is always finding out new features. It can gain Xp by the skill .explore , Dont let him annoy you though!';					
+				let powertypeinfo3 = 'The Dragon can damage other Pets with its fire by burning them with the skill .burn , it can damage other even when they have Fight turned off!';					
+				let powertypeinfo4 = 'The ultra Dragon is very powerfull and he will not fear in using his ultraattack, .laserburn he can use it against others, even if their fight is off! It also reduces their money';	
+				
+				let abouttypeinfo1 = 'Just a cute egg. Keep him warm and feed it milk!';
+				let abouttypeinfo2 = 'The Dragon kid is always looking arround, exploring new things and is always happy to go out and see the world.';
+				let abouttypeinfo3 = 'One of the strongest pets out there! Burning and destroying others, everyone fears the Dragon.';
+				let abouttypeinfo4 = 'The Ultra Dragon. Feared to death.';
+				
+							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+"${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
+"${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
+"${cooldown}", "${energy}", "${weapon}", 
+"${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
+"${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
+"${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution1}", "${evolution2}", "${evolution3}", "${evolution4}", "${fight}"]`, function (err) {
+				
+  if (err) throw err;
+  
+			})
+
+  console.log('Pet Account Opend.');
+	
+				
+}
 
 else if (args[0] == 'umbreon') {	
+
+				//-- Different with any pet type
+				let health = Number(100);
+				let power = Number(1);
+				let pettype = 'Umbreon';					
+				let evolution1 = 'EveeEgg';	
+				let evolution2 = 'Evee';
+				let evolution3 = 'Leafeon';
+				let evolution4 = 'Umbreon';	
+								
+				let powertype3 = 'leaf';
+				let powertype4 = 'bite';	
+				
+				let powertypeinfo1 = 'Just an egg sleeping. Make him sleep harder with its skill .sleep';
+				let powertypeinfo2 = 'A small Evee which is always finding out new features. He can gain Xp by the skill .explore , Dont let him annoy you though!';					
+				let powertypeinfo3 = 'The Leafeon can spread his leafs with the skill .leaf , it can change the design of other users menu!';					
+				let powertypeinfo4 = 'The ultra Nachteon is very shy and only comes out at nighttime, but that doesnt mean he isnt very powerfull. his ultraattack can Bite other pets and make them loose Xp!';	
+				
+				let abouttypeinfo1 = 'Just a cute egg. Keep it warm and feed it milk!';
+				let abouttypeinfo2 = 'The cute and perfect Evee. It is amazingly cute and you can die from cuteness by it.';
+				let abouttypeinfo3 = 'One of the strongest pets out there! Burning and destroying others, everyone fears the Dragon.';
+				let abouttypeinfo4 = 'The Ultra Umbreon. Feared to death.';
+				
+							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+"${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
+"${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
+"${cooldown}", "${energy}", "${weapon}", 
+"${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
+"${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
+"${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution1}", "${evolution2}", "${evolution3}", "${evolution4}", "${fight}"]`, function (err) {
+				
+  if (err) throw err;
+  
+			})
+
+  console.log('Pet Account Opend.');
+	
+				
+}
+
+else if (args[0] == 'Umbreon') {	
 
 				//-- Different with any pet type
 				let health = Number(100);
@@ -2971,7 +3128,7 @@ else if (args[0] == 'umbreon') {
 			reply ("This pet doesnt exist. Please choose one from the .petshop")		
 }
 
-
+			reply(`${petshopdesign}﹝Found a ${args[0]}! 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: ${tipppetshop}$\n. . . . . . . . . . . . . . .\n✅ StarDash Pets`)
 
 break
 
