@@ -2839,6 +2839,16 @@ if (args[0] == 'elf') {
 				let abouttypeinfo3 = 'Flying through the woods, bringing light, where darkness lies and keeping good relations with others makes the Elf a special creature that should be taken off very good.';	
 				let abouttypeinfo4 = 'The Ultra Elf. The Queen of StarDashia!';
 				
+							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+"${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
+"${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
+"${cooldown}", "${energy}", "${weapon}", 
+"${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
+"${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
+"${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`)
+	
+				
 				
 }  
   
@@ -2863,6 +2873,16 @@ else if (args[0] == 'dragon') {
 				let abouttypeinfo3 = 'One of the strongest pets out there! Burning and destroying others, everyone fears the Dragon.';
 				let abouttypeinfo4 = 'The Ultra Dragon. Feared to death.';
 				
+							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+"${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
+"${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
+"${cooldown}", "${energy}", "${weapon}", 
+"${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
+"${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
+"${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`)
+	
+				
 }
 
 else if (args[0] == 'umbreon') {	
@@ -2886,14 +2906,7 @@ else if (args[0] == 'umbreon') {
 				let abouttypeinfo3 = 'One of the strongest pets out there! Burning and destroying others, everyone fears the Dragon.';
 				let abouttypeinfo4 = 'The Ultra Umbreon. Feared to death.';
 				
-}
-
- else {
-	
-			reply ("This pet doesnt exist. Please choose one from the .petshop")		
-}
-
-			fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
 "${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
 "${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
 "${cooldown}", "${energy}", "${weapon}", 
@@ -2902,6 +2915,15 @@ else if (args[0] == 'umbreon') {
 "${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
 "${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`)
 	
+				
+}
+
+ else {
+	
+			reply ("This pet doesnt exist. Please choose one from the .petshop")		
+}
+
+
 
 break
 
