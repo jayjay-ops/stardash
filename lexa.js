@@ -2811,7 +2811,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 				let status = 'alive';	
 				let fight = 'off';
 				
-				let previousowner = sender.split("@");
+				let previousowner = `${sender.split("@")[0]}`
 				let birthday = tanggal();
 				let isshiny = shiny;
      			let cloth1 = 'None';
@@ -3053,7 +3053,7 @@ reply(`. . . . . . . . . . . . . . .
  ⇝ ${pushname}\n ⇝ ${prem_}
 . . . . . . . . . . . . . . .
  
-𝙿𝙴𝚃 - -
+𝙿𝙴𝚃
  
 𝚗𝚊𝚖𝚎
 ${mypetdesign} ${mypetname} 
@@ -3067,7 +3067,7 @@ ${mypetdesign} ${mypetmood}
 𝚑𝚞𝚗𝚐𝚎𝚛
 ${mypetdesign} ${mypethunger} 
  
-𝚂𝚃𝙰𝚃𝚄𝚂 - -
+𝚂𝚃𝙰𝚃𝚄𝚂
  
 𝚜𝚝𝚊𝚝𝚞𝚜
 ${mypetdesign} ${mypetstatus} 
@@ -3098,7 +3098,7 @@ ${mypetdesign} ${mypetabouttypeinfo1}
 𝚋𝚒𝚛𝚝𝚑𝚍𝚊𝚢
 ${mypetdesign} ${mypetbirthday}
  
-𝙰𝙼𝙾𝚁 - -
+𝙰𝙼𝙾𝚁
  
 𝚠𝚎𝚊𝚙𝚘𝚗
 ${mypetdesign} ${mypetweapon}
@@ -3118,7 +3118,7 @@ ${mypetdesign} ${mypetcloth3}
 𝚝𝚑𝚘𝚞𝚛𝚝𝚑
 ${mypetdesign} ${mypetcloth4}
  
-𝚂𝙾𝙲𝙸𝙰𝙻 - -
+𝚂𝙾𝙲𝙸𝙰𝙻
  
 𝚏𝚛𝚒𝚎𝚗𝚍𝚜
 ${mypetdesign} ${mypetfriends}
@@ -3136,11 +3136,9 @@ ${mypetdesign} ${mypetfight}
 . . . . . . . . . . . . . . .
 𝚘𝚙𝚎𝚗 𝚏𝚛𝚒𝚍𝚐𝚎
 ${mypetdesign} .fridge
-
+. . . . . . . . . . . . . . .
 𝚙𝚎𝚝𝚜𝚑𝚘𝚙
-${mypetdesign} .petshop
-
- 
+${mypetdesign} .petshop 
 . . . . . . . . . . . . . . .
 . . . . . . . . . . . . . . .`)
 
