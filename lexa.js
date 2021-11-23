@@ -2769,15 +2769,6 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 case 'buypet':
 
 
-const path = './${sender.split("@")[0]}.pet.json'
-
-
-if (fs.existsSync(path)) {
-  // path exists
-  console.log("exists:", path);
-  Reply ("You already have a pet. Move it to your Bank if you want a new one.")
-} else {
- 
 
 
 
@@ -2966,7 +2957,7 @@ else if (args[0] == 'umbreon') {
 	
 			reply ("This pet doesnt exist. Please choose one from the .petshop")		
 }
-}
+
 
 
 break
