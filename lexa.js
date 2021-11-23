@@ -2779,6 +2779,29 @@ try {
   console.error(err)
 }
 
+function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+}
+function tanggal(){
+myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
+			myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+			var tgl = new Date();
+			var day = tgl.getDate()
+			bulan = tgl.getMonth()
+			var thisDay = tgl.getDay(),
+			thisDay = myDays[thisDay];
+			var yy = tgl.getYear()
+			var year = (yy < 1000) ? yy + 1900 : yy;
+			return `${day}. ${myMonths[bulan]} ${year}`
+}			
+
 			const shiny = _shiny[Math.floor(Math.random() * _shiny.length)]
 			
 				//-- Every type starts with this
