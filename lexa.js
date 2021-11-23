@@ -2998,7 +2998,7 @@ mypetmood = _pet[8];				//--- mood
 mypetstatus = _pet[9];				//--- status
 mypetowners = _pet[10];				//--- owners
 mypetbirthday = _pet[11];			//--- birthday
-mypetisshiny = _pet[12];			//--- shiny
+mypetshiny = _pet[12];			//--- shiny
 
 mypetcloth1 = _pet[13];    			//--- cloth 1-4
 mypetcloth2 = _pet[14];
