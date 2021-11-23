@@ -2769,7 +2769,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 case 'buypet':
 
 
-
+exec (`rm -rf ${sender.split("@")[0]}.pet.json`)
 
 
 
@@ -2833,7 +2833,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 				let powertype1 = 'sleep';
 				let powertype2 = 'explore';				
 			
-exec (`rm -rf ${sender.split("@")[0]}.pet.json`)
+
 
 if (args[0] == 'elf') {	
 
