@@ -3128,7 +3128,7 @@ else if (args[0] == 'Umbreon') {
 			reply (`⚠️ This pet doesnt exist. Please choose one from the .petshop\n. . . . . . . . . . . . . . .\n*YOU CANT GET YOUR MONEY BACK!!* , because i am too lazy to code this. Please type like the example: .buypet dragon\nIGNORE THE NEXT MESSAGE YOU  DIDNT GET AN EGG\n. . . . . . . . . . . . . . .\n💟 StarDash Pets`)		
 }
 
-			reply(`${petshopdesign}﹝Found a ${args[0]} Egg! 2/2﹞\n. . . . . . . . . . . . . . .\n_For now he is still an Egg, but i guess you cant wait until it hatches!_\n. . . . . . . . . . . . . . .\n_Tipp: Please take good care of your new pet. You can view his profile by the command *.mypet* . If you dont take good care of him, he will die._\n. . . . . . . . . . . . . . .\n💟 StarDash Pets`)
+			reply(`${petshopdesign}﹝Found a ${args[0]} Egg! 2/2﹞\n. . . . . . . . . . . . . . .🍃\n_For now he is still an Egg, but i guess you cant wait until it hatches!_\n. . . . . . . . . . . . . . .🍃\n_Tipp: Please take good care of your new pet. You can view his profile by the command *.mypet* . If you dont take good care of him, he will die._\n. . . . . . . . . . . . . . .🍃\n💟 StarDash Pets`)
 
 break
 
