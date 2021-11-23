@@ -2869,7 +2869,13 @@ if (args[0] == 'elf') {
 "${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
 "${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
 "${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
-"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`)
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`, function (err) {
+				
+  if (err) throw err;
+  
+			})
+
+  console.log('Pet Account Opend.');
 	
 				
 				
@@ -2903,7 +2909,13 @@ else if (args[0] == 'dragon') {
 "${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
 "${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
 "${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
-"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`)
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`, function (err) {
+				
+  if (err) throw err;
+  
+			})
+
+  console.log('Pet Account Opend.');
 	
 				
 }
@@ -2936,7 +2948,13 @@ else if (args[0] == 'umbreon') {
 "${powertype1}", "${powertype2}", "${powertype3}", "${powertype4}", 
 "${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
 "${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
-"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`)
+"${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}"]`, function (err) {
+				
+  if (err) throw err;
+  
+			})
+
+  console.log('Pet Account Opend.');
 	
 				
 }
