@@ -3403,7 +3403,7 @@ break
 
 //--- Your Pet ARMOR		
 			
-case 'armor':
+case 'social':
 
 		
 		if (!isVerify) return reply(userB())
