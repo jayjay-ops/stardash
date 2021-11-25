@@ -3296,7 +3296,7 @@ const mypet2fight = _pet2[44];		     	//--- fight
 reply(`» ${pushname}
 » ${prem_}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-${mypet2design} 𝑈𝑙𝑡𝑟𝑎 𝑆𝑘𝑖𝑙𝑙 » ${mypetpowertype1} 
+${mypet2design} 𝑈𝑙𝑡𝑟𝑎 𝑆𝑘𝑖𝑙𝑙 » ${mypet2powertype1} 
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𝑆𝑘𝑖𝑙𝑙 𝑖𝑛𝑓𝑜 »
 ${mypet2powertypeinfo1}
