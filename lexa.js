@@ -1074,7 +1074,7 @@ case 'rlied':
 		
   if (!isVerify) return reply(userB())
   const song = _song[Math.floor(Math.random() * _song.length)]
-  reply(`${rsongdesign}﹝𝚁𝚊𝚗𝚍𝚘𝚖 𝚜𝚘𝚗𝚐﹞\n. . . . . . . . . . . . . . .\n${song}\n. . . . . . . . . . . . . . .\n✅ StarDash Song`)
+  reply(`${rsongdesign}﹝𝚁𝚊𝚗𝚍𝚘𝚖 𝚜𝚘𝚗𝚐﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\n${song}\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Song`)
 break
 
 
@@ -1088,7 +1088,7 @@ case 'truth':
 				
   if (!isVerify) return reply(userB())
   const truthen = _truthen[Math.floor(Math.random() * _truthen.length)]
-  reply(`${truthdesign}﹝𝚈𝚘𝚞𝚛 𝚝𝚛𝚞𝚝𝚑﹞\n. . . . . . . . . . . . . . .\n${truthen}\n. . . . . . . . . . . . . . .\n✅ StarDash Games`)
+  reply(`${truthdesign}﹝𝚈𝚘𝚞𝚛 𝚝𝚛𝚞𝚝𝚑﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\n${truthen}\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Games`)
 break
 
 
@@ -1100,7 +1100,7 @@ case 'fact':
 
   if (!isVerify) return reply(userB())
   const facten = _facten[Math.floor(Math.random() * _facten.length)]
-  reply(`${factdesign}﹝𝚈𝚘𝚞𝚛 𝚏𝚊𝚌𝚝﹞\n. . . . . . . . . . . . . . .\n${facten}\n. . . . . . . . . . . . . . .\n✅ StarDash Facts`)
+  reply(`${factdesign}﹝𝚈𝚘𝚞𝚛 𝚏𝚊𝚌𝚝﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\n${facten}\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Facts`)
 break
 
 
@@ -1113,7 +1113,7 @@ case 'dare':
 		
   if (!isVerify) return reply(userB())
   const dareen = _dareen[Math.floor(Math.random() * _dareen.length)]
-  reply(`${daredesign}﹝𝚈𝚘𝚞𝚛 𝚍𝚊𝚛𝚎﹞\n. . . . . . . . . . . . . . .\n${dareen}\n. . . . . . . . . . . . . . .\n✅ StarDash Games`)
+  reply(`${daredesign}﹝𝚈𝚘𝚞𝚛 𝚍𝚊𝚛𝚎﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\n${dareen}\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Games`)
 break
 
 
@@ -1122,13 +1122,13 @@ break
 case 'pokemon':
   if (!isVerify) return reply(userB())
   const pokemon = _pokemon[Math.floor(Math.random() * _pokemon.length)]
-  reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚙𝚘𝚔𝚎𝚖𝚘𝚗 𝚒𝚜...﹞\n. . . . . . . . . . . . . . .\n${pokemon}\n. . . . . . . . . . . . . . .\n✅ StarDash`)
+  reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚙𝚘𝚔𝚎𝚖𝚘𝚗 𝚒𝚜...﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\n${pokemon}\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash`)
 break
 //-- animal
 case 'animal':
   if (!isVerify) return reply(userB())
   const animal = _animal[Math.floor(Math.random() * _animal.length)]
-  reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚙𝚎𝚝 𝚒𝚜...﹞\n. . . . . . . . . . . . . . .\n${animal}\n. . . . . . . . . . . . . . .\n✅ StarDash`)
+  reply(`⌯   ﹝𝚈𝚘𝚞𝚛 𝚙𝚎𝚝 𝚒𝚜...﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\n${animal}\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash`)
 break
 
 //-- gay
@@ -1155,7 +1155,7 @@ case 'nsfwen':
 
   if (!isVerify) return reply(userB())
   const nsfwen = _nsfwen[Math.floor(Math.random() * _nsfwen.length)]
-  reply(`💦 *Uhhh* 😏\n. . . . . . . . . . . . . . .\n${nsfwen}`)
+  reply(`💦 *Uhhh* 😏\n-.-.-.-.-.-.-.-.-.-.-.-.-\n${nsfwen}`)
 break
 
 //-- Würfel
@@ -1270,9 +1270,9 @@ case 'dog':
 
 buffer = fs.readFileSync('./media/shiba.jpg')
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 break
 
@@ -1318,9 +1318,9 @@ const stickerdesign = _stickerpack[11]	//--- account design
 						const tippsticker = _tipps[Math.floor(Math.random() * _tipps.length)]
 						ran = getRandom('.webp')
 						reply(`${stickerdesign} Please wait ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: ${tippsticker}_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Stickers`
 )
 						await ffmpeg(`./${media}`)
@@ -1370,9 +1370,9 @@ case 'image':
 						if (err) return reply('⌯   ﹝Doesnt work with animated stickers.﹞')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1398,9 +1398,9 @@ case 'volume':
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1430,9 +1430,9 @@ case 'brightness':
 					
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1492,9 +1492,9 @@ case 'saturation':
 					
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1518,9 +1518,9 @@ case 'flip':
 						if (err) return reply('⌯   ﹝Error﹞')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1542,9 +1542,9 @@ case 'blackwhite':
 						if (err) return reply('⌯   ﹝Error﹞')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1568,9 +1568,9 @@ case 'filter':
 						if (err) return reply('⌯   ﹝failed﹞')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1595,9 +1595,9 @@ case 'sound':
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1623,9 +1623,9 @@ case 'cover':
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1700,14 +1700,14 @@ let oorpprsong = pprrsong - oorrsong;
 				  if (!isVerify) return reply(userB())
 				  const tipp = _tipps[Math.floor(Math.random() * _tipps.length)]
 			  
-			reply(`${songdesign}﹝Downloading 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneysong}$\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
+			reply(`${songdesign}﹝Downloading 1/2﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changedesignmoneysong}$\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Songs`)
 				
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 													
 						if (err) return reply('Error')
 							
-						reply(`${songdesign}﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: ${tipp}_\n. . . . . . . . . . . . . . .\n✅ StarDash Songs`)
+						reply(`${songdesign}﹝Sending 2/2﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Songs`)
 						
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
@@ -1727,9 +1727,9 @@ case 'stardash':
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
 				
 reply(	  `⚡ Please wait ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`)
 	  
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -1740,9 +1740,9 @@ _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.
 						if (err) return reply('⌯   ﹝Does not work with this picture format. Please use a other picture.﹞')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1808,7 +1808,7 @@ let oorpprimage = pprrimage - oorrimage;
 				  if (!isVerify) return reply(userB())
 				  const tippimage = _tipps[Math.floor(Math.random() * _tipps.length)]
 			  
-			reply(`${imagedesign}﹝Downloading 1/2﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneyimage}$\n. . . . . . . . . . . . . . .\n✅ StarDash Pictures`)
+			reply(`${imagedesign}﹝Downloading 1/2﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changedesignmoneyimage}$\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Pictures`)
 				
 
 				exec(`ddg-download "${value} jpg" -l 1`, (err) => {
@@ -1819,7 +1819,7 @@ let oorpprimage = pprrimage - oorrimage;
 						
 					buffer = fs.readFileSync(`${value} jpg_0.jpg`)
 
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${imagedesign}﹝Sending 2/2﹞\n. . . . . . . . . . . . . . .\n_Tipp: ${tippimage}_\n. . . . . . . . . . . . . . .\n✅ StarDash Pictures`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${imagedesign}﹝Sending 2/2﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tippimage}_\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Pictures`})
 
 						exec(`rm -rf ${value} jpg_0.jpg`)
 
@@ -1861,9 +1861,9 @@ case 'watermarkvideo':
 	
            if (!isQuotedVideo)  return reply('⌯   ﹝Please tag an video.﹞')
    reply(	  `⚡ Please wait ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`)
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -1877,9 +1877,9 @@ _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1904,9 +1904,9 @@ case 'blur':
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1927,9 +1927,9 @@ case 'watermarkimage':
 			
 				if (!isQuotedImage)  return reply('⌯   ﹝Please tag a picture.﹞')
 					   reply(	  `⚡ Please wait ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`)
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -1941,9 +1941,9 @@ _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -1961,9 +1961,9 @@ case 'rmbgs':
 				  if (args.length < 1) return reply('⌯   ﹝Tag an image or Sticker and Choose Color. Hex or real. Example:   .nobgs black﹞')
 					
 					   reply(	  `⚡ Please wait ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`)
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -2030,7 +2030,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 					const changedesignmoney1sticker = _changedesignmoney1sticker[7]	//--- money	
 					const savestickerdesign = _changedesignmoney1sticker[11]	//--- account design
 		 
-		  reply(`${savestickerdesign} ﹝Saved as your sticker! Type: .mysticker﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoney1sticker}$\n. . . . . . . . . . . . . . .\n✅ StarDash Sticker`)
+		  reply(`${savestickerdesign} ﹝Saved as your sticker! Type: .mysticker﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changedesignmoney1sticker}$\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Sticker`)
   
 	break
 
@@ -2077,7 +2077,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 					const changedesignmoney1sticker4 = _changedesignmoney1sticker4[7]	//--- money	
 					const saveaudiodesign = _changedesignmoney1sticker4[11]	//--- account design 
 					
-  reply(`${saveaudiodesign}﹝Saved as your audio! Type:  .myaudio﹞\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoney1sticker4}$\n. . . . . . . . . . . . . . .\n✅ StarDash Audio`)
+  reply(`${saveaudiodesign}﹝Saved as your audio! Type:  .myaudio﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changedesignmoney1sticker4}$\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Audio`)
   
 break			
 
@@ -2125,9 +2125,9 @@ case 'nobg':
        if (args.length < 1) return reply('⌯   ﹝Choose Color. Hex or real. Example:   .nobg black﹞')
 
 					   reply(	  `⚡ Please wait ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`)
 				
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -2141,9 +2141,9 @@ _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.
 						if (err) return reply('⌯   ﹝Choose a real color or real hex code.﹞')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -2169,9 +2169,9 @@ case 'crush':
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `⚡ Made for ${pushname}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Media`})
 						fs.unlinkSync(ran)
 					})
@@ -2633,7 +2633,7 @@ case 'register':
 
 				if (isVerify) return reply('⌯   ﹝𝚈𝚘𝚞 𝚊𝚛𝚎 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚛𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍.﹞') 
 				if (args.length < 1) return reply(`By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 
 Please add a username :)
 
@@ -2641,7 +2641,7 @@ Example:
 
 .register StarDash
 
-. . . . . . . . . . . . . . .`)
+-.-.-.-.-.-.-.-.-.-.-.-.-`)
 			    if (args.length > 1) return reply(`⌯   ﹝Please only type   .register name﹞`) 
 			
 
@@ -2706,11 +2706,11 @@ case 'password':
 
 
 if (args.length < 1) return reply(`By signing up, you agree to our Terms of Service. To view, send this emojie 🖇️
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 Example:
 
 .verifyagain StarDash
-. . . . . . . . . . . . . . .`)
+-.-.-.-.-.-.-.-.-.-.-.-.-`)
 
     if (args.length > 1) return reply(`⌯   ﹝Error. Try   .verifyagain yourname﹞`) 
 
@@ -2772,9 +2772,9 @@ const _yourcashpetshop = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s
 const yourcashpetshop = _yourcashpetshop[7]	//--- money	
 const petshopdesign = _yourcashpetshop[11]	//--- account design
 
-		if (yourcashpetshop < 100) return reply(`﹝You have not enough money to buy a pet. Money needed: 100$ Your money: ${yourcashpetshop}$﹞\n. . . . . . . . . . . . . . .🍃\n💟 StarDash Pets`) 
-		if (args.length < 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 the Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .🍃\nExample: .buypet Elf\n. . . . . . . . . . . . . . .🍃\n💟 StarDash Pets`)
-		if (args.length > 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 valid Pet. You can choose between Umbreon, Dragon and Elf!﹞\n. . . . . . . . . . . . . . .🍃\nExample: .buypet Elf\n. . . . . . . . . . . . . . .🍃\n💟 StarDash Pets`)
+		if (yourcashpetshop < 100) return reply(`﹝You have not enough money to buy a pet. Money needed: 100$ Your money: ${yourcashpetshop}$﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`) 
+		if (args.length < 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 the Pet. You can choose between Umbreon, Dragon and Elf!﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nExample: .buypet Elf\n-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
+		if (args.length > 1) return reply(`${petshopdesign}﹝𝙴𝚗𝚝𝚎𝚛 valid Pet. You can choose between Umbreon, Dragon and Elf!﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nExample: .buypet Elf\n-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
 			
 let petshoplivemoney = Number(yourcashpetshop);
 let petshoppetcost = Number(100);
@@ -2800,7 +2800,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 				  if (!isVerify) return reply(userB())
 				  const tipppetshop = _tipps[Math.floor(Math.random() * _tipps.length)]
 			  
-			reply(`${petshopdesign}﹝Finding a pet for you 1/2﹞\n. . . . . . . . . . . . . . .🍃\nMoney left: ${changedesignmoneypetshop}$\n. . . . . . . . . . . . . . .🍃\n💟 StarDash Pets`)
+			reply(`${petshopdesign}﹝Finding a pet for you 1/2﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nMoney left: ${changedesignmoneypetshop}$\n-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
 
 
 exec (`rm -rf ${sender.split("@")[0]}.pet.json`)
@@ -3125,10 +3125,10 @@ else if (args[0] == 'Umbreon') {
 
  else {
 	
-			reply (`⚠️ This pet doesnt exist. Please choose one from the .petshop\n. . . . . . . . . . . . . . .\n*YOU CANT GET YOUR MONEY BACK!!* , because i am too lazy to code this. Please type like the example: .buypet dragon\nIGNORE THE NEXT MESSAGE YOU  DIDNT GET AN EGG\n. . . . . . . . . . . . . . .\n💟 StarDash Pets`)		
+			reply (`⚠️ This pet doesnt exist. Please choose one from the .petshop\n-.-.-.-.-.-.-.-.-.-.-.-.-\n*YOU CANT GET YOUR MONEY BACK!!* , because i am too lazy to code this. Please type like the example: .buypet dragon\nIGNORE THE NEXT MESSAGE YOU  DIDNT GET AN EGG\n-.-.-.-.-.-.-.-.-.-.-.-.-\n💟 StarDash Pets`)		
 }
 
-			reply(`${petshopdesign}﹝Found a ${args[0]} Egg! 2/2﹞\n. . . . . . . . . . . . . . .🍃\n_For now he is still an Egg, but i guess you cant wait until it hatches!_\n. . . . . . . . . . . . . . .🍃\n_Tipp: Please take good care of your new pet. You can view his profile by the command *.mypet* . If you dont take good care of him, he will die._\n. . . . . . . . . . . . . . .🍃\n💟 StarDash Pets`)
+			reply(`${petshopdesign}﹝Found a ${args[0]} Egg! 2/2﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_For now he is still an Egg, but i guess you cant wait until it hatches!_\n-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_Tipp: Please take good care of your new pet. You can view his profile by the command *.mypet* . If you dont take good care of him, he will die._\n-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
 
 break
 
@@ -3206,21 +3206,21 @@ const mypetevolution4 = _pet[43];			//--- Evolution 4
 const mypetfight = _pet[44];		     	//--- fight
 
 		
-reply(`. . . . . . . . . . . . . . .
+reply(`-.-.-.-.-.-.-.-.-.-.-.-.-
  ⇝ ${pushname}\n ⇝ ${prem_}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
  
 𝙿𝙴𝚃
  
 𝚗𝚊𝚖𝚎
 ${mypetdesign} ${mypetname} 
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚝𝚢𝚙𝚎
 ${mypetdesign} ${mypetshiny}${mypetevolution1} 
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚖𝚘𝚘𝚍
 ${mypetdesign} ${mypetmood}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚑𝚞𝚗𝚐𝚎𝚛
 ${mypetdesign} ${mypethunger} 
  
@@ -3228,16 +3228,16 @@ ${mypetdesign} ${mypethunger}
  
 𝚜𝚝𝚊𝚝𝚞𝚜
 ${mypetdesign} ${mypetstatus} 
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚑𝚎𝚊𝚕𝚝𝚑
 ${mypetdesign} ${mypethealth}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚎𝚗𝚎𝚛𝚐𝚢
 ${mypetdesign} ${mypetenergy}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚡𝚙
 ${mypetdesign} ${mypetxp}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚕𝚎𝚟𝚎𝚕
 ${mypetdesign} ${mypetlevel}
 
@@ -3245,13 +3245,13 @@ ${mypetdesign} ${mypetlevel}
 
 𝚞𝚕𝚝𝚛𝚊 𝚜𝚔𝚒𝚕𝚕
 ${mypetdesign} ${mypetpowertype1} 
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚜𝚔𝚒𝚕𝚕 𝚒𝚗𝚏𝚘
 ${mypetdesign} ${mypetpowertypeinfo1}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚊𝚋𝚘𝚞𝚝
 ${mypetdesign} ${mypetabouttypeinfo1}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚋𝚒𝚛𝚝𝚑𝚍𝚊𝚢
 ${mypetdesign} ${mypetbirthday}
  
@@ -3259,19 +3259,19 @@ ${mypetdesign} ${mypetbirthday}
  
 𝚠𝚎𝚊𝚙𝚘𝚗
 ${mypetdesign} ${mypetweapon}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚌𝚘𝚘𝚕𝚍𝚘𝚠𝚗
 ${mypetdesign} ${mypetcooldown}
  
 𝚏𝚒𝚛𝚜𝚝
 ${mypetdesign} ${mypetcloth1}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚜𝚎𝚌𝚘𝚗𝚍
 ${mypetdesign} ${mypetcloth2} 
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚝𝚑𝚒𝚛𝚍
 ${mypetdesign} ${mypetcloth3} 
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚝𝚑𝚘𝚞𝚛𝚝𝚑
 ${mypetdesign} ${mypetcloth4}
  
@@ -3279,25 +3279,25 @@ ${mypetdesign} ${mypetcloth4}
  
 𝚏𝚛𝚒𝚎𝚗𝚍𝚜
 ${mypetdesign} ${mypetfriends}
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚘𝚠𝚗𝚎𝚛𝚜
 ${mypetdesign} ${mypetowners} 
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚌𝚑𝚊𝚗𝚐𝚎𝚙𝚎𝚝
 ${mypetdesign} ${mypetchangepet} 
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚏𝚒𝚐𝚑𝚝
 ${mypetdesign} ${mypetfight}
 
-. . . . . . . . . . . . . . .
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚘𝚙𝚎𝚗 𝚏𝚛𝚒𝚍𝚐𝚎
 ${mypetdesign} .fridge
-. . . . . . . . . . . . . . .
+-.-.-.-.-.-.-.-.-.-.-.-.-
 𝚙𝚎𝚝𝚜𝚑𝚘𝚙
 ${mypetdesign} .petshop 
-. . . . . . . . . . . . . . .
-. . . . . . . . . . . . . . .`)
+-.-.-.-.-.-.-.-.-.-.-.-.-
+-.-.-.-.-.-.-.-.-.-.-.-.-`)
 
 break
 
@@ -3339,9 +3339,9 @@ reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚂𝚑𝚘𝚙\n${shopd} 𝚠𝚎𝚕
 
 𝙵𝚛𝚎𝚎\n\n𝚜𝚎𝚝 𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙽𝚊𝚖𝚎\n${shopd} .stickerpack\n\n𝚜𝚎𝚝 𝙼𝚘𝚘𝚍\n${shopd} .mood\n\n✯ 𝙱𝚞𝚢\n\nTransfer money\n➳ Send money to someone\n➳ cost: AnyCost$\n${shopd} .transfer 10 @stardash
 
-send 𝚙𝚒𝚌𝚝𝚞𝚛𝚎\n➳ Send Picture\n➳ cost: 7$\n${shopd} .send pikachu\n\nsend any song\n➳ Send a song\n➳ cost: 5$\n${shopd} .song songname\n\n𝚜𝚊𝚟𝚎 𝚙𝚒𝚌𝚝𝚞𝚛𝚎\n➳ Save a picture\n➳ cost: 22$\n${shopd} .saveimage\n\n𝚜𝚊𝚟𝚎 song\n➳ Save a audio or voice message\n➳ cost: 22$\n${shopd} .saveaudio\n\n✯ 𝚐𝚊𝚖𝚎𝚜\n\n𝚂𝚕𝚘𝚝 𝙶𝚊𝚖𝚎\n➳ cost: 4$\n➳  small win = +8$\n➳  jackpot = +200$\n${shopd} .slot\n\n. . . . . . . . . . . . . . .
+send 𝚙𝚒𝚌𝚝𝚞𝚛𝚎\n➳ Send Picture\n➳ cost: 7$\n${shopd} .send pikachu\n\nsend any song\n➳ Send a song\n➳ cost: 5$\n${shopd} .song songname\n\n𝚜𝚊𝚟𝚎 𝚙𝚒𝚌𝚝𝚞𝚛𝚎\n➳ Save a picture\n➳ cost: 22$\n${shopd} .saveimage\n\n𝚜𝚊𝚟𝚎 song\n➳ Save a audio or voice message\n➳ cost: 22$\n${shopd} .saveaudio\n\n✯ 𝚐𝚊𝚖𝚎𝚜\n\n𝚂𝚕𝚘𝚝 𝙶𝚊𝚖𝚎\n➳ cost: 4$\n➳  small win = +8$\n➳  jackpot = +200$\n${shopd} .slot\n\n-.-.-.-.-.-.-.-.-.-.-.-.-
 ✯ 𝚜𝚎𝚝𝚝𝚒𝚗𝚐\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚊𝚒𝚕\n➳ cost: free$\n${shopd} .changeemail\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚍𝚎𝚜𝚒𝚐𝚗\n➳ cost: 25$\n${shopd} .design\n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎\n➳ cost: 5$\n${shopd} .changename \n\n𝙲𝚑𝚊𝚗𝚐𝚎 𝚎𝚖𝚘𝚓𝚒𝚎\n➳ cost: 5$\n${shopd} .changeemojie \n
-𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 5$\n${shopd} .changeage\n\n. . . . . . . . . . . . . . .\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n. . . . . . . . . . . . . . .`)	
+𝙲𝚑𝚊𝚗𝚐𝚎 𝚊𝚐𝚎\n➳ cost: 5$\n${shopd} .changeage\n\n-.-.-.-.-.-.-.-.-.-.-.-.-\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${shopmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-`)	
 
 break
 
@@ -3584,7 +3584,7 @@ case 'setname':
 								
 								const changenamedesign = _changenamemoneynew[11]	//--- account design
  
-								reply(`${changenamedesign} Changed username from *${changename}* to *${value}*\n. . . . . . . . . . . . . . .\nMoney left: ${changenamemoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Name`)
+								reply(`${changenamedesign} Changed username from *${changename}* to *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changenamemoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Name`)
       
 									break
 
@@ -3645,7 +3645,7 @@ case 'setage':
 
 								const changeagemoneydesign = _changeagemoneynew[11]	//--- account design
 		  
-								reply(`${changeagemoneydesign} Changed age from *${changeage}* to *${value}*\n. . . . . . . . . . . . . . .\nMoney left: ${changeagemoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Age`)
+								reply(`${changeagemoneydesign} Changed age from *${changeage}* to *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changeagemoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Age`)
 			  
 	break
 
@@ -3683,7 +3683,7 @@ case 'setemail':
 						await setemaildelay(1000) /// waiting 1 second.
 
 
-			reply(`${emaildesign} Changed email to ${args[0]}\n. . . . . . . . . . . . . . .\n✅ StarDash Mail`)
+			reply(`${emaildesign} Changed email to ${args[0]}\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Mail`)
 		
 
 						var nodemailer = require('nodemailer');
@@ -3776,7 +3776,7 @@ case 'setemojie':
 						const changeemojiemoneynew = _changeemojiemoneynew[7]	//--- money	
 
  
-				reply(`${setemojiedesign} Changed Emojie from *${changeemojie}* to *${value}*\n. . . . . . . . . . . . . . .\nMoney left: ${changeemojiemoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Emojie`)
+				reply(`${setemojiedesign} Changed Emojie from *${changeemojie}* to *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changeemojiemoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Emojie`)
   
 	break
 
@@ -3836,7 +3836,7 @@ case 'changedesign':
 							const changedesignmoneynew = _changedesignmoney1[7]	//--- money	
 							const cmdesignn = _changedesignmoney1[11]	//--- money	design
  
-					reply(`${cmdesignn} Changed design from *${changedesign}* to *${value}*\n. . . . . . . . . . . . . . .\nMoney left: ${changedesignmoneynew}$\n. . . . . . . . . . . . . . .\n✅ StarDash Design`)
+					reply(`${cmdesignn} Changed design from *${changedesign}* to *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changedesignmoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Design`)
 					
 		break
 
@@ -3904,7 +3904,7 @@ case 'donate':
 							const hisnewtransfermoney = _hisnewtransfermoney[7]	//--- money	
 							const hisname = _hisnewtransfermoney[2]	//--- name
  
-  reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n. . . . . . . . . . . . . . .\nYour Money left: ${newtransfermoney}$\nHis/Her Money left: ${hisnewtransfermoney}$\n. . . . . . . . . . . . . . .\n✅ StarDash Transfers`)
+  reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n-.-.-.-.-.-.-.-.-.-.-.-.-\nYour Money left: ${newtransfermoney}$\nHis/Her Money left: ${hisnewtransfermoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Transfers`)
   
 	break
 
@@ -3915,7 +3915,7 @@ case 'deleteaccount':
 
 if (!isVerify) return reply(userB())
 	
-reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *cant register* again! ⚠️ from now on you need a password to verifyagain ⚠️\n. . . . . . . . . . . . . . .\nTo delete your account type:   .iamsure  ')
+reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *cant register* again! ⚠️ from now on you need a password to verifyagain ⚠️\n-.-.-.-.-.-.-.-.-.-.-.-.-\nTo delete your account type:   .iamsure  ')
 
 
 break
@@ -3987,7 +3987,7 @@ case 'iamsure':
 					fs.unlink(`${sender.split("@")[0]}@s.whatsapp.net.json`, function (err) {
 					  if (err) throw err;
 					  console.log('File deleted!');
-					  reply('Your account has been *sucessfully deleted.* When typing .myaccount   everything will be gone. However you can still use commands as if registered, but Errors may occur. You can only verifyagain with the password.\n. . . . . . . . . . . . . . .\nAsk number +4917626388837 for the password\n. . . . . . . . . . . . . . .\n✅ StarDash')
+					  reply('Your account has been *sucessfully deleted.* When typing .myaccount   everything will be gone. However you can still use commands as if registered, but Errors may occur. You can only verifyagain with the password.\n-.-.-.-.-.-.-.-.-.-.-.-.-\nAsk number +4917626388837 for the password\n-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash')
 					});
 
 	break
