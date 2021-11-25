@@ -3384,8 +3384,8 @@ const mypet3fight = _pet3[44];		     	//--- fight
 reply(`» ${pushname}
 » ${prem_}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-${mypet3design} 𝑊𝑒𝑎𝑝𝑜𝑛
-${mypet3design} » ${mypet3weapon}
+𝑊𝑒𝑎𝑝𝑜𝑛
+» ${mypet3weapon}
 𝐶𝑜𝑜𝑙𝑑𝑜𝑤𝑛
 » ${mypet3cooldown}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
