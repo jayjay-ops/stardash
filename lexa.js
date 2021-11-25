@@ -3133,8 +3133,6 @@ else if (args[0] == 'Umbreon') {
 break
 
 //--- Your Pet		
-
-			
 			
 case 'mypet':
 case 'pet':
@@ -3206,99 +3204,280 @@ const mypetevolution4 = _pet[43];			//--- Evolution 4
 const mypetfight = _pet[44];		     	//--- fight
 
 		
-reply(`-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
- ⇝ ${pushname}\n ⇝ ${prem_}
+reply(`» ${pushname}
+» ${prem_}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
- 
-𝙿𝙴𝚃
- 
-𝚗𝚊𝚖𝚎
-${mypetdesign} ${mypetname} 
+${mypetdesign} 𝑁𝑎𝑚𝑒 » ${mypetname}
+${mypetdesign} 𝐸𝑣𝑜𝑙𝑢𝑡𝑖𝑜𝑛 » ${mypetshiny}${mypetevolution1}
+${mypetdesign} 𝑀𝑜𝑜𝑑 » ${mypetmood}
+${mypetdesign} 𝐻𝑢𝑛𝑔𝑒𝑟 » ${mypethunger}
+${mypetdesign} 𝐸𝑛𝑒𝑟𝑔𝑦 » ${mypetenergy}
+${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚝𝚢𝚙𝚎
-${mypetdesign} ${mypetshiny}${mypetevolution1} 
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚖𝚘𝚘𝚍
-${mypetdesign} ${mypetmood}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚑𝚞𝚗𝚐𝚎𝚛
-${mypetdesign} ${mypethunger} 
- 
-𝚂𝚃𝙰𝚃𝚄𝚂
- 
-𝚜𝚝𝚊𝚝𝚞𝚜
-${mypetdesign} ${mypetstatus} 
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚑𝚎𝚊𝚕𝚝𝚑
-${mypetdesign} ${mypethealth}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚎𝚗𝚎𝚛𝚐𝚢
-${mypetdesign} ${mypetenergy}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚡𝚙
-${mypetdesign} ${mypetxp}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚕𝚎𝚟𝚎𝚕
-${mypetdesign} ${mypetlevel}
+𝑋𝑝 » ${mypetxp}
+𝐿𝑣𝑙 » ${mypetlevel}
+𝑆𝑡𝑎𝑡𝑢𝑠 » ${mypetstatus}
 
-𝙿𝙴𝚃𝙸𝙽𝙵𝙾
+» .𝑖𝑛𝑓𝑜𝑝𝑒𝑡 «
+» .𝑎𝑟𝑚𝑜𝑟 «
+» .𝑠𝑜𝑐𝑖𝑎𝑙 «
+» .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «`)
+ 
+break 
+ 
+//--- Your Pet INFOPET	
+			
+case 'infopet':
+		
+		if (!isVerify) return reply(userB())
+			
+// -- Pet 
+	const _myaccountpet2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+	const mypet2design = _myaccountpet2[11];			//--- account design
+	
+	
+const _pet2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
 
-𝚞𝚕𝚝𝚛𝚊 𝚜𝚔𝚒𝚕𝚕
-${mypetdesign} ${mypetpowertype1} 
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚜𝚔𝚒𝚕𝚕 𝚒𝚗𝚏𝚘
-${mypetdesign} ${mypetpowertypeinfo1}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚊𝚋𝚘𝚞𝚝
-${mypetdesign} ${mypetabouttypeinfo1}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚋𝚒𝚛𝚝𝚑𝚍𝚊𝚢
-${mypetdesign} ${mypetbirthday}
- 
-𝙰𝙼𝙾𝚁
- 
-𝚠𝚎𝚊𝚙𝚘𝚗
-${mypetdesign} ${mypetweapon}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚌𝚘𝚘𝚕𝚍𝚘𝚠𝚗
-${mypetdesign} ${mypetcooldown}
- 
-𝚏𝚒𝚛𝚜𝚝
-${mypetdesign} ${mypetcloth1}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚜𝚎𝚌𝚘𝚗𝚍
-${mypetdesign} ${mypetcloth2} 
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚝𝚑𝚒𝚛𝚍
-${mypetdesign} ${mypetcloth3} 
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚝𝚑𝚘𝚞𝚛𝚝𝚑
-${mypetdesign} ${mypetcloth4}
- 
-𝚂𝙾𝙲𝙸𝙰𝙻
- 
-𝚏𝚛𝚒𝚎𝚗𝚍𝚜
-${mypetdesign} ${mypetfriends}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚘𝚠𝚗𝚎𝚛𝚜
-${mypetdesign} ${mypetowners} 
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚌𝚑𝚊𝚗𝚐𝚎𝚙𝚎𝚝
-${mypetdesign} ${mypetchangepet} 
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚏𝚒𝚐𝚑𝚝
-${mypetdesign} ${mypetfight}
+const mypet2type = _pet2[0]; 				//--- type
+const mypet2stage = _pet2[1];				//--- stage
+const mypet2hunger = _pet2[2];			//--- hunger
+const mypet2level = _pet2[3];				//--- level
+const mypet2xp = _pet2[4];				//--- xp
+const mypet2changepet = _pet2[5];			//--- changepet
 
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚘𝚙𝚎𝚗 𝚏𝚛𝚒𝚍𝚐𝚎
-${mypetdesign} .fridge
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝚙𝚎𝚝𝚜𝚑𝚘𝚙
-${mypetdesign} .petshop 
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-`)
+const mypet2friends = _pet2[6];			//--- friends
+const mypet2name = _pet2[7];				//--- name
+const mypet2mood = _pet2[8];				//--- mood
+const mypet2status = _pet2[9];			//--- status
+const mypet2owners = _pet2[10];			//--- owners
+const mypet2birthday = _pet2[11];			//--- birthday
+const mypet2shiny = _pet2[12];			//--- shiny
 
+const mypet2cloth1 = _pet2[13];    		//--- cloth 1-4
+const mypet2cloth2 = _pet2[14];
+const mypet2cloth3 = _pet2[15];
+const mypet2cloth4 = _pet2[16];
+
+const mypet2cooldown = _pet2[17];			//--- cooldown
+const mypet2energy = _pet2[18];			//--- energy
+const mypet2weapon = _pet2[19];			//--- weapon
+
+const mypet2powertype1 = _pet2[20];				//--- powertype 1-4
+const mypet2powertype2 = _pet2[21];
+const mypet2powertype3 = _pet2[22];
+const mypet2powertype4 = _pet2[23];
+
+const mypet2powertypeinfo1 = _pet2[24];		//--- powertypeinfo 1-4
+const mypet2powertypeinfo2 = _pet2[25];
+const mypet2powertypeinfo3 = _pet2[26];
+const mypet2powertypeinfo4 = _pet2[27];
+
+const mypet2abouttypeinfo1 = _pet2[28];		//--- abouttypeinfo 1-4
+const mypet2abouttypeinfo2 = _pet2[29];
+const mypet2abouttypeinfo3 = _pet2[30];
+const mypet2abouttypeinfo4 = _pet2[31];
+
+const mypet2empty1 = _pet2[32];				//--- empty 1-4
+const mypet2empty2 = _pet2[33];
+const mypet2empty3 = _pet2[34];
+const mypet2empty4 = _pet2[35];
+const mypet2empty5 = _pet2[36];
+const mypet2empty6 = _pet2[37];
+
+const mypet2health = _pet2[38]; 	    	//--- Health
+const mypet2power = _pet2[39];    			//--- Power
+const mypet2evolution1 = _pet2[40];			//--- Evolution 1
+const mypet2evolution2 = _pet2[41];			//--- Evolution 2
+const mypet2evolution3 = _pet2[42];			//--- Evolution 3
+const mypet2evolution4 = _pet2[43];			//--- Evolution 4
+const mypet2fight = _pet2[44];		     	//--- fight
+
+		
+reply(`» ${pushname}
+» ${prem_}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+${mypet2design} 𝑈𝑙𝑡𝑟𝑎 𝑆𝑘𝑖𝑙𝑙 » ${mypetpowertype1} 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𝑆𝑘𝑖𝑙𝑙 𝑖𝑛𝑓𝑜 »
+${mypet2powertypeinfo1}
+𝐴𝑏𝑜𝑢𝑡 𝑝𝑒𝑡 »
+${mypet2abouttypeinfo1}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𝑠𝑖𝑛𝑐𝑒 » ${mypet2birthday}`)
+
+break
+
+//--- Your Pet		
+			
+case 'armor':
+
+		
+		if (!isVerify) return reply(userB())
+			
+// -- Pet 
+	const _myaccountpet3 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+	const mypet3design = _myaccountpet3[11];			//--- account design
+	
+	
+const _pet3 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+
+const mypet3type = _pet3[0]; 				//--- type
+const mypet3stage = _pet3[1];				//--- stage
+const mypet3hunger = _pet3[2];			//--- hunger
+const mypet3level = _pet3[3];				//--- level
+const mypet3xp = _pet3[4];				//--- xp
+const mypet3changepet = _pet3[5];			//--- changepet
+
+const mypet3friends = _pet3[6];			//--- friends
+const mypet3name = _pet3[7];				//--- name
+const mypet3mood = _pet3[8];				//--- mood
+const mypet3status = _pet3[9];			//--- status
+const mypet3owners = _pet3[10];			//--- owners
+const mypet3birthday = _pet3[11];			//--- birthday
+const mypet3shiny = _pet3[12];			//--- shiny
+
+const mypet3cloth1 = _pet3[13];    		//--- cloth 1-4
+const mypet3cloth2 = _pet3[14];
+const mypet3cloth3 = _pet3[15];
+const mypet3cloth4 = _pet3[16];
+
+const mypet3cooldown = _pet3[17];			//--- cooldown
+const mypet3energy = _pet3[18];			//--- energy
+const mypet3weapon = _pet3[19];			//--- weapon
+
+const mypet3powertype1 = _pet3[20];				//--- powertype 1-4
+const mypet3powertype2 = _pet3[21];
+const mypet3powertype3 = _pet3[22];
+const mypet3powertype4 = _pet3[23];
+
+const mypet3powertypeinfo1 = _pet3[24];		//--- powertypeinfo 1-4
+const mypet3powertypeinfo2 = _pet3[25];
+const mypet3powertypeinfo3 = _pet3[26];
+const mypet3powertypeinfo4 = _pet3[27];
+
+const mypet3abouttypeinfo1 = _pet3[28];		//--- abouttypeinfo 1-4
+const mypet3abouttypeinfo2 = _pet3[29];
+const mypet3abouttypeinfo3 = _pet3[30];
+const mypet3abouttypeinfo4 = _pet3[31];
+
+const mypet3empty1 = _pet3[32];				//--- empty 1-4
+const mypet3empty2 = _pet3[33];
+const mypet3empty3 = _pet3[34];
+const mypet3empty4 = _pet3[35];
+const mypet3empty5 = _pet3[36];
+const mypet3empty6 = _pet3[37];
+
+const mypet3health = _pet3[38]; 	    	//--- Health
+const mypet3power = _pet3[39];    			//--- Power
+const mypet3evolution1 = _pet3[40];			//--- Evolution 1
+const mypet3evolution2 = _pet3[41];			//--- Evolution 2
+const mypet3evolution3 = _pet3[42];			//--- Evolution 3
+const mypet3evolution4 = _pet3[43];			//--- Evolution 4
+const mypet3fight = _pet3[44];		     	//--- fight
+
+		
+reply(`» ${pushname}
+» ${prem_}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+${mypet3design} 𝑊𝑒𝑎𝑝𝑜𝑛
+${mypet3design} » ${mypet3weapon}
+𝐶𝑜𝑜𝑙𝑑𝑜𝑤𝑛
+» ${mypet3cooldown}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𝐻𝑎𝑡
+» ${mypet3cloth1}
+𝑇𝑜𝑝
+» ${mypet3cloth2}
+𝐵𝑜𝑑𝑦
+» ${mypet3cloth3} 
+𝑆ℎ𝑜𝑒𝑠
+» ${mypet3cloth4}`) 
+
+break
+
+
+//--- Your Pet ARMOR		
+			
+case 'armor':
+
+		
+		if (!isVerify) return reply(userB())
+			
+// -- Pet 
+	const _myaccountpet4 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+	const mypet4design = _myaccountpet4[11];			//--- account design
+	
+	
+const _pet4 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+
+const mypet4type = _pet4[0]; 				//--- type
+const mypet4stage = _pet4[1];				//--- stage
+const mypet4hunger = _pet4[2];			//--- hunger
+const mypet4level = _pet4[3];				//--- level
+const mypet4xp = _pet4[4];				//--- xp
+const mypet4changepet = _pet4[5];			//--- changepet
+
+const mypet4friends = _pet4[6];			//--- friends
+const mypet4name = _pet4[7];				//--- name
+const mypet4mood = _pet4[8];				//--- mood
+const mypet4status = _pet4[9];			//--- status
+const mypet4owners = _pet4[10];			//--- owners
+const mypet4birthday = _pet4[11];			//--- birthday
+const mypet4shiny = _pet4[12];			//--- shiny
+
+const mypet4cloth1 = _pet4[13];    		//--- cloth 1-4
+const mypet4cloth2 = _pet4[14];
+const mypet4cloth3 = _pet4[15];
+const mypet4cloth4 = _pet4[16];
+
+const mypet4cooldown = _pet4[17];			//--- cooldown
+const mypet4energy = _pet4[18];			//--- energy
+const mypet4weapon = _pet4[19];			//--- weapon
+
+const mypet4powertype1 = _pet4[20];				//--- powertype 1-4
+const mypet4powertype2 = _pet4[21];
+const mypet4powertype3 = _pet4[22];
+const mypet4powertype4 = _pet4[23];
+
+const mypet4powertypeinfo1 = _pet4[24];		//--- powertypeinfo 1-4
+const mypet4powertypeinfo2 = _pet4[25];
+const mypet4powertypeinfo3 = _pet4[26];
+const mypet4powertypeinfo4 = _pet4[27];
+
+const mypet4abouttypeinfo1 = _pet4[28];		//--- abouttypeinfo 1-4
+const mypet4abouttypeinfo2 = _pet4[29];
+const mypet4abouttypeinfo3 = _pet4[30];
+const mypet4abouttypeinfo4 = _pet4[31];
+
+const mypet4empty1 = _pet4[32];				//--- empty 1-4
+const mypet4empty2 = _pet4[33];
+const mypet4empty3 = _pet4[34];
+const mypet4empty4 = _pet4[35];
+const mypet4empty5 = _pet4[36];
+const mypet4empty6 = _pet4[37];
+
+const mypet4health = _pet4[38]; 	    	//--- Health
+const mypet4power = _pet4[39];    			//--- Power
+const mypet4evolution1 = _pet4[40];			//--- Evolution 1
+const mypet4evolution2 = _pet4[41];			//--- Evolution 2
+const mypet4evolution3 = _pet4[42];			//--- Evolution 3
+const mypet4evolution4 = _pet4[43];			//--- Evolution 4
+const mypet4fight = _pet4[44];		     	//--- fight
+
+		
+reply(`» ${pushname}
+» ${prem_}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𝐹𝑟𝑖𝑒𝑛𝑑𝑠
+» ${mypetfriends}
+𝑂𝑤𝑛𝑒𝑟𝑠 
+» ${mypetowners}
+𝑇𝑟𝑎𝑑𝑒
+» ${mypetchangepet} 
+𝐹𝑖𝑔ℎ𝑡
+» ${mypetfight}`)
+ 
+ 
 break
 
 //--- Pet Fridge
