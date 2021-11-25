@@ -3437,7 +3437,7 @@ const my47 = _myaccount[47]		//---
 ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
 ${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
-${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}$
+${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
 ${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
 -.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑚𝑜𝑟𝑒 «
