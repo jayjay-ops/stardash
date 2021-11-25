@@ -3455,23 +3455,23 @@ break
 
 case 'more':
 	
-const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const _myaccount2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 	
-const mynumber = _myaccount[0];			//--- phone number	
-const mypushname = _myaccount[1]; 		//--- pushname
-const myname = _myaccount[2];			//--- name
-const myage = _myaccount[3];				//--- age
-const myemojie = _myaccount[4];			//--- emojie
-const myid = _myaccount[5];				//--- user id	
-const myxp = _myaccount[6];				//--- xp
-const mymoney = _myaccount[7];			//--- money
-const mymood = _myaccount[8];			//--- mood
-const mydate = _myaccount[9];			//--- account creation date
-const mystickerpack = _myaccount[10];	//--- stickerpack name
-const mydesign = _myaccount[11];			//--- account design
-const myseconddesign = _myaccount[12];			//--- second design
-const myemail = _myaccount[13];		//--- Email
-const myemailinfo = _myaccount[14];		//--- Email verified
+const mynumber = _myaccount2[0];			//--- phone number	
+const mypushname = _myaccount2[1]; 		//--- pushname
+const myname = _myaccount2[2];			//--- name
+const myage = _myaccount2[3];				//--- age
+const myemojie = _myaccount2[4];			//--- emojie
+const myid = _myaccount2[5];				//--- user id	
+const myxp = _myaccount2[6];				//--- xp
+const mymoney = _myaccount2[7];			//--- money
+const mymood = _myaccount2[8];			//--- mood
+const mydate = _myaccount2[9];			//--- account creation date
+const mystickerpack = _myaccount2[10];	//--- stickerpack name
+const mydesign = _myaccount2[11];			//--- account design
+const myseconddesign = _myaccount2[12];			//--- second design
+const myemail = _myaccount2[13];		//--- Email
+const myemailinfo = _myaccount2[14];		//--- Email verified
 
  reply(`» ${pushname}
 » ${prem_}
