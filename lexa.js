@@ -359,12 +359,12 @@ if (isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕�
 
 
 //-- Status
-let prem_ = '𝙵𝚛𝚎𝚎'
+let prem_ = '𝐹𝑎𝑟𝑚𝑒𝑟'
 			if (isPrem) {
-			prem_ = '𝚅𝚒𝚙'
+			prem_ = '𝑃𝑟𝑜'
 			} 
 			if (isOwner) {
-			prem_ = '𝙾𝚠𝚗𝚎𝚛'
+			prem_ = '𝐾𝑖𝑛𝑔'
 			}
 let Welcome_ = 'Off'
 			if (isWelcom) {
@@ -3380,21 +3380,21 @@ case 'profile':
 	
 const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 	
-const mynumber = _myaccount[0];			//--- phone number	
-const mypushname = _myaccount[1]; 		//--- pushname
-const myname = _myaccount[2];			//--- name
-const myage = _myaccount[3];				//--- age
-const myemojie = _myaccount[4];			//--- emojie
-const myid = _myaccount[5];				//--- user id	
-const myxp = _myaccount[6];				//--- xp
-const mymoney = _myaccount[7];			//--- money
-const mymood = _myaccount[8];			//--- mood
-const mydate = _myaccount[9];			//--- account creation date
-const mystickerpack = _myaccount[10];	//--- stickerpack name
-const mydesign = _myaccount[11];			//--- account design
-const myupdate = _myaccount[12];			//--- updated Account
-const myemail = _myaccount[13];		//--- Email
-const myemailinfo = _myaccount[14];		//--- Email verified
+const mynumber2 = _myaccount[0];			//--- phone number	
+const mypushname2 = _myaccount[1]; 		//--- pushname
+const myname2 = _myaccount[2];			//--- name
+const myage2 = _myaccount[3];				//--- age
+const myemojie2 = _myaccount[4];			//--- emojie
+const myid2 = _myaccount[5];				//--- user id	
+const myxp2 = _myaccount[6];				//--- xp
+const mymoney2 = _myaccount[7];			//--- money
+const mymood2 = _myaccount[8];			//--- mood
+const mydate2 = _myaccount[9];			//--- account creation date
+const mystickerpack2 = _myaccount[10];	//--- stickerpack name
+const mydesign2 = _myaccount[11];			//--- account design
+const myseconddesign2 = _myaccount[12];			//--- second design
+const myemail2 = _myaccount[13];		//--- Email
+const myemailinfo2 = _myaccount[14];		//--- Email verified
 
 const my15 = _myaccount[15]		//--- 
 const my16 = _myaccount[16]		//---
@@ -3431,33 +3431,60 @@ const my46 = _myaccount[46]		//---
 const my47 = _myaccount[47]		//---
 
 		
- reply(`............................
- ⇝ ${pushname}\n ⇝ ${prem_}
- ............................\n
- 𝚗𝚞𝚖𝚋𝚎𝚛\n${mydesign} ${mynumber}\n
- 𝚗𝚊𝚖𝚎\n${mydesign} ${myname}\n
- 𝚊𝚐𝚎\n${mydesign} ${myage}\n
- 𝚎𝚖𝚘𝚓𝚒𝚎\n${mydesign} ${myemojie}\n
- 𝚞𝚜𝚎𝚛 𝚒𝚍\n${mydesign} ${myid}\n
- 𝚡𝚙\n${mydesign} ${myxp}\n
- 𝚖𝚘𝚗𝚎𝚢\n${mydesign} ${mymoney}$\n
- 𝚖𝚘𝚘𝚍\n${mydesign} ${mymood}\n
- 𝚂𝚝𝚒𝚌𝚔𝚎𝚛𝙿𝚊𝚌𝚔\n${mydesign} ${mystickerpack}\n
- 𝚎𝚖𝚊𝚒𝚕\n${mydesign} ${myemail} \n
- 𝙰𝚌𝚌𝚘𝚞𝚗𝚝 𝚟𝚎𝚛𝚜𝚒𝚘𝚗\n${mydesign} ${myupdate}
- . . . . . . . . . . . . . . .
- 𝚘𝚙𝚎𝚗 𝚜𝚑𝚘𝚙\n${mydesign} .shop\n
- 𝚘𝚙𝚎𝚗 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n${mydesign} .menu\n
- 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚌𝚛𝚎𝚊𝚝𝚎𝚍\n${mydesign} ${mydate}\n
- . . . . . . . . . . . . . . .
- 𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚒𝚜
- 𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚒𝚝𝚑
- .hide
- . . . . . . . . . . . . . . .
- 𝚍𝚎𝚕𝚎𝚝𝚎 𝚢𝚘𝚞𝚛
- 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑
- .deletemyaccount
- . . . . . . . . . . . . . . .`)
+ reply(`» ${pushname}
+» ${prem_}
+-.-.-.-.-.-.-.-.-.-.-.-.-
+${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
+${mydesign2} 𝐴𝑔𝑒 » ${myage2}
+${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
+${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}
+-.-.-.-.-.-.-.-.-.-.-.-.-
+» .𝑚𝑜𝑟𝑒 «
+» .ℎ𝑖𝑑𝑒 «
+» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
+-.-.-.-.-.-.-.-.-.-.-.-.-
+𝑠𝑖𝑛𝑐𝑒 ${mydate2}`)
+ 
+
+
+
+
+break
+
+// -- User  More 
+
+case 'more':
+	
+const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+	
+const mynumber = _myaccount[0];			//--- phone number	
+const mypushname = _myaccount[1]; 		//--- pushname
+const myname = _myaccount[2];			//--- name
+const myage = _myaccount[3];				//--- age
+const myemojie = _myaccount[4];			//--- emojie
+const myid = _myaccount[5];				//--- user id	
+const myxp = _myaccount[6];				//--- xp
+const mymoney = _myaccount[7];			//--- money
+const mymood = _myaccount[8];			//--- mood
+const mydate = _myaccount[9];			//--- account creation date
+const mystickerpack = _myaccount[10];	//--- stickerpack name
+const mydesign = _myaccount[11];			//--- account design
+const myseconddesign = _myaccount[12];			//--- second design
+const myemail = _myaccount[13];		//--- Email
+const myemailinfo = _myaccount[14];		//--- Email verified
+
+ reply(`» ${pushname}
+» ${prem_}
+-.-.-.-.-.-.-.-.-.-.-.-.-
+${mydesign} 𝑥𝑝 »
+${mydesign} 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑃𝑎𝑐𝑘 »
+-.-.-.-.-.-.-.-.-.-.-.-.-
+𝐸𝑚𝑎𝑖𝑙
+» ${myemail}
+𝑁𝑢𝑚𝑏𝑒𝑟 
+» ${mynumber}
+𝑈𝑠𝑒𝑟𝐼𝑑
+» ${myid}`)
 
 break
 
@@ -3812,6 +3839,7 @@ case 'changedesign':
 					
 		break
 
+		
 //-- transfer
 
 case 'transfer': 
