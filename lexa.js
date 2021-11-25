@@ -161,7 +161,7 @@ function kyun(seconds){
   return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 }
 function tanggal(){
-myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
+myMonths = ["Jan","Feb","March","April","May","Jun","Jul","Aug","Sept","Octob","Nov","Dec"];
 			myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 			var tgl = new Date();
 			var day = tgl.getDate()
@@ -3147,7 +3147,6 @@ case 'umbreon':
 // -- Pet 
 	const _myaccountpet = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 	const mypetdesign = _myaccountpet[11];			//--- account design
-
 	
 	
 const _pet = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
@@ -3883,6 +3882,7 @@ case 'donate':
 //--- Delete account message
 
 case 'deletemyaccount':
+case 'deleteaccount':
 
 if (!isVerify) return reply(userB())
 	
