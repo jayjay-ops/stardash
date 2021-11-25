@@ -3474,13 +3474,13 @@ reply(`» ${pushname}
 » ${prem_}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𝐹𝑟𝑖𝑒𝑛𝑑𝑠
-» ${mypetfriends}
+» ${mypet4friends}
 𝑂𝑤𝑛𝑒𝑟𝑠 
-» ${mypetowners}
+» ${mypet4owners}
 𝑇𝑟𝑎𝑑𝑒
-» ${mypetchangepet} 
+» ${mypet4changepet} 
 𝐹𝑖𝑔ℎ𝑡
-» ${mypetfight}`)
+» ${mypet4fight}`)
  
  
 break
