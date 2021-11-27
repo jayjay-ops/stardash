@@ -1676,9 +1676,9 @@ reply(`${cmflippicture} Editing 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney le
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Error﹞')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${cmblackwhite} Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${cmflippicture} Made for ${pushname}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-_Tipp: ${blackwhitetipp}_
+_Tipp: ${flippicturetipp}_
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ❇️ StarDash Effects`})
 						fs.unlinkSync(ran)
