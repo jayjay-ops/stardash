@@ -491,15 +491,6 @@ For technical problems, the Server Host (owner) can also view and change them.
 
 }
 
-
-
-
-
-
-
-
-
-
 //--Auto response
 switch(is) {
 case '.nata':
@@ -4329,7 +4320,9 @@ case 'donate':
 
 				let mymon = Number(mytransfermoney);
 				let myam = Number(args[0]);
-				let transferamount = mymon - myam; 
+				let taxes = Number(5);
+				
+				let transferamount = mymon - myam - taxes; 
 
 				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
@@ -4371,7 +4364,7 @@ case 'donate':
 							const hisnewtransfermoney = _hisnewtransfermoney[7]	//--- money	
 							const hisname = _hisnewtransfermoney[2]	//--- name
  
-  reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nYour Money left: ${newtransfermoney}$\nHis/Her Money left: ${hisnewtransfermoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Transfers`)
+  reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nTransfer Taxes are 5$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nYour Money left: ${newtransfermoney}$\nHis/Her Money left: ${hisnewtransfermoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Transfers`)
   
 	break
 
