@@ -1484,7 +1484,7 @@ reply(`${cmmakesticker} Getting ze Stickers 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 _Tipp: ${makestickertipp}_
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-❇️ StarDash Effects`)
+❇️ StarDash Stickers`)
 						await ffmpeg(`./${media}`)
 							.inputFormat(media.split('.')[1])
 							.on('start', function (cmd) {
