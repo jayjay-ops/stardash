@@ -781,15 +781,45 @@ case 'claim':
 if (!isVerify) return reply(userB())
 	 if (!isPrem) return reply(premi())
 
+
+function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+}
+function tanggal(){
+myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
+			myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+			var tgl = new Date();
+			var day = tgl.getDate()
+			bulan = tgl.getMonth()
+			var thisDay = tgl.getDay(),
+			thisDay = myDays[thisDay];
+			var yy = tgl.getYear()
+			var year = (yy < 1000) ? yy + 1900 : yy;
+			return `${day}. ${myMonths[bulan]} ${year}`
+}	
+
+
 	
 const _claim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const claim = _claim[12]	//--- claim money
+const claim = _claim[14]	//--- claim money
 
-if (claim === 'empty') return reply(`Type  .setupclaim  to get command .claim`)
-if (claim === '17') return reply(`﹝Already claimed. Check tomorrow.﹞`) 
 
-let claimnow = Number(17);
 
+if 	(mymoney2 === '${tanngal}') {
+	
+   reply(`Already claimed Today`)
+}
+
+else {
+
+let claimnow = '${tanngal}';
 
 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
@@ -804,13 +834,13 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 
  
 const delaydesignclaim = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delaydesignclaim(3000) /// waiting 1 second.
+await delaydesignclaim(2000) /// waiting 1 second.
 				
 const _changedesignmoneyclaim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const changedesignmoneyclaim = _changedesignmoneyclaim[7]	//--- money	
 
 let pprrclaim = Number(changedesignmoneyclaim);
-let oorrclaim = Number(200);
+let oorrclaim = Number(25);
 let oorpprclaim = pprrclaim + oorrclaim; 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
     if (err) throw err;
@@ -831,7 +861,9 @@ const changedesignmoney1claims = _changedesignmoney1claims[7]	//--- money
 
  
   reply(`𝚌𝚕𝚊𝚒𝚖𝚎𝚍 𝚖𝚘𝚗𝚎𝚢 💸\n\nMoney left: ${changedesignmoneyclaim}$ + $ = ${changedesignmoney1claims}$`)
-  
+ 
+}
+ 
 	break	
 	
 
@@ -3841,7 +3873,7 @@ case 'profile':
 			const mydesign2 = _myaccount[11];			//--- account design
 			const myseconddesign2 = _myaccount[12];			//--- second design
 			const myemail2 = _myaccount[13];		//--- Email
-			const myemailinfo2 = _myaccount[14];		//--- Email verified
+			const myemailinfo2 = _myaccount[14];		//--- Claimed cashh
 
 			const my15 = _myaccount[15]		//--- 
 			const my16 = _myaccount[16]		//---
