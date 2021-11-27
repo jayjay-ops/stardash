@@ -1666,7 +1666,7 @@ case 'blackwhite':
         const cmblackwhite = _yourcashblackwhite[11]	//--- money	design
 		const blackwhitetipp = _tipps[Math.floor(Math.random() * _tipps.length)]
 						  
-	if (yourcashdesign < 10) return reply(`${cmblackwhite}﹝You have not enough money for this Effect.﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney needed: 10$ Your money: ${yourcashblackwhite}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ StarDash Effects`) 
+	if (yourcashblackwhite < 10) return reply(`${cmblackwhite}﹝You have not enough money for this Effect.﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney needed: 10$ Your money: ${yourcashblackwhite}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ StarDash Effects`) 
 	
 							const delayblackwhite = ms => new Promise(resolve => setTimeout(resolve, ms))
 							await delayblackwhite(1000) /// waiting 1 second
