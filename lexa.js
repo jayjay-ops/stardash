@@ -3872,7 +3872,7 @@ case 'profile':
 			const mydesign2 = _myaccount[11];			//--- account design
 			const myseconddesign2 = _myaccount[12];			//--- second design
 			const myemail2 = _myaccount[13];		//--- Email
-			const myemailinfo2 = _myaccount[14];		//--- Claimed cashh
+			const myclaimed = _myaccount[14];		//--- Claimed cashh
 
 			const my15 = _myaccount[15]		//--- 
 			const my16 = _myaccount[16]		//---
@@ -3908,24 +3908,51 @@ case 'profile':
 			const my46 = _myaccount[46]		//---
 			const my47 = _myaccount[47]		//---
 
+
+function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+}
+function tanggal(){
+myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
+			myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+			var tgl = new Date();
+			var day = tgl.getDate()
+			bulan = tgl.getMonth()
+			var thisDay = tgl.getDay(),
+			thisDay = myDays[thisDay];
+			var yy = tgl.getYear()
+			var year = (yy < 1000) ? yy + 1900 : yy;
+			return `${day}. ${myMonths[bulan]} ${year}`
+}	
+
+
+if 	(myclaimed === '${tanngal}') {
+
 //--- This is just for fun hehehe
 
 	if 	(mymoney2 === '69') {
 		
 			 reply(`» ${pushname} 
-			» ${prem_}
-			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-			𓂸 𝑁𝑎𝑚𝑒 » ${myname2}
-			𓂸 𝐴𝑔𝑒 » ${myage2}
-			𓂸 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
-			𓂸 𝑀𝑜𝑜𝑑 » ${mymood2}
-			𓂸 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
-			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-			» .𝑚𝑜𝑟𝑒 «
-			» .ℎ𝑖𝑑𝑒 «
-			» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
-			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-			𝑠𝑖𝑛𝑐𝑒 ${mydate2}`)
+» ${prem_}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𓂸 𝑁𝑎𝑚𝑒 » ${myname2}
+𓂸 𝐴𝑔𝑒 » ${myage2}
+𓂸 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
+𓂸 𝑀𝑜𝑜𝑑 » ${mymood2}
+𓂸 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+» .𝑚𝑜𝑟𝑒 «
+» .ℎ𝑖𝑑𝑒 «
+» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𝑠𝑖𝑛𝑐𝑒 ${mydate2}`)
 	 
 	}
 
@@ -3934,21 +3961,75 @@ case 'profile':
 	else {
 
 			 reply(`» ${pushname}
-			» ${prem_}
-			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-			${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
-			${mydesign2} 𝐴𝑔𝑒 » ${myage2}
-			${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
-			${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
-			${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
-			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-			» .𝑚𝑜𝑟𝑒 «
-			» .ℎ𝑖𝑑𝑒 «
-			» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
-			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-			𝑠𝑖𝑛𝑐𝑒 ${mydate2}`)
+» ${prem_}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
+${mydesign2} 𝐴𝑔𝑒 » ${myage2}
+${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
+${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
+${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+» .𝑚𝑜𝑟𝑒 «
+» .ℎ𝑖𝑑𝑒 «
+» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𝑠𝑖𝑛𝑐𝑒 ${mydate2}`)
+
+	}	
+  
+}
+
+else {
+
+//--- This is just for fun hehehe
+
+	if 	(mymoney2 === '69') {
+		
+			 reply(`» ${pushname} 
+» ${prem_}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𓂸 𝑁𝑎𝑚𝑒 » ${myname2}
+𓂸 𝐴𝑔𝑒 » ${myage2}
+𓂸 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
+𓂸 𝑀𝑜𝑜𝑑 » ${mymood2}
+𓂸 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+» .𝑚𝑜𝑟𝑒 «
+» .ℎ𝑖𝑑𝑒 «
+» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𝑠𝑖𝑛𝑐𝑒 ${mydate2}`)
+	 
+	}
+
+//--- The real menu is here
+ 
+	else {
+
+			 reply(`» ${pushname}
+» ${prem_}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
+${mydesign2} 𝐴𝑔𝑒 » ${myage2}
+${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
+${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
+${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+» .𝑚𝑜𝑟𝑒 «
+» .ℎ𝑖𝑑𝑒 «
+» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𝑠𝑖𝑛𝑐𝑒 ${mydate2}
+
+𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ
+.𝑐𝑙𝑎𝑖𝑚`)
 
 	}
+	
+}
+
+
+
 
 break
 
@@ -3972,19 +4053,19 @@ case 'more':
 			const myseconddesign = _myaccount2[12];			//--- second design
 			const myemail = _myaccount2[13];		//--- Email
 			const myemailinfo = _myaccount2[14];		//--- Email verified
-																					reply(`» ${pushname}
-																					» ${prem_}
-																					-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-																					${mydesign} 𝑥𝑝 » ${myxp}
-																					${mydesign} 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑃𝑎𝑐𝑘 » ${mystickerpack}
-																					-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-																					𝐸𝑚𝑎𝑖𝑙
-																					» ${myemail}
-																					𝑁𝑢𝑚𝑏𝑒𝑟 
-																					» ${mynumber}
-																					𝑈𝑠𝑒𝑟𝐼𝑑
-																					» ${myid}`)
-
+																					
+reply(`» ${pushname}
+» ${prem_}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+${mydesign} 𝑥𝑝 » ${myxp}
+${mydesign} 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑃𝑎𝑐𝑘 » ${mystickerpack}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𝐸𝑚𝑎𝑖𝑙
+» ${myemail}
+𝑁𝑢𝑚𝑏𝑒𝑟 
+» ${mynumber}
+𝑈𝑠𝑒𝑟𝐼𝑑
+» ${myid}`)
 break
 
 
