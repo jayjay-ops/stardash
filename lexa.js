@@ -1445,7 +1445,7 @@ const stickerdesign = _stickerpack[11]	//--- account design
 							const _changemakestickermoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 							const changemakestickermoneynew = _changemakestickermoney1[7]	//--- money	
  
-reply(`${cmmakesticker} Getting ze Stickers 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changemakestickermoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${makestickertipp}_-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ StarDash Stickers`)
+reply(`${cmmakesticker} Getting ze Stickers 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changemakestickermoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${makestickertipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ StarDash Stickers`)
 		
  
  
