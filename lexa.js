@@ -811,7 +811,7 @@ const claim = _claim[14]	//--- claim money
 const claimdesign = _claim[11]	//--- account design
 
 
-if 	(claim === '${tanngal}') {
+if 	(claim === `${tanngal}`) {
 	
    reply(`${claimdesign} Already claimed Today`)
 }
