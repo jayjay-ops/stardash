@@ -16,7 +16,7 @@ const menusdess = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, upt
   return `⇝  ${pushname}
 ⇝   ${prem_}
 ............................
-${shopdmen}   .𝚜𝚝𝚒𝚌𝚔𝚎𝚛
+${shopdmen}   .𝚜𝚝𝚒𝚌𝚔𝚎𝚛 » 3$
 ${shopdmen}   .𝚒𝚖𝚊𝚐𝚎𝚜𝚝𝚒𝚌𝚔𝚎𝚛
 `
 
@@ -26,7 +26,7 @@ const menusdes = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, upti
   return `⇝  ${pushname}
 ⇝   ${prem_}
 ............................
-${shopdmen}   .𝚜𝚝𝚒𝚌𝚔𝚎𝚛
+${shopdmen}   .𝚜𝚝𝚒𝚌𝚔𝚎𝚛 » 3$
 ${shopdmen}   .𝚒𝚖𝚊𝚐𝚎𝚜𝚝𝚒𝚌𝚔𝚎𝚛
 `
 
@@ -103,7 +103,7 @@ const menusticker = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, u
   return `⇝  ${pushname}
 ⇝   ${prem_}
 ............................
-${shopdmen}   .𝚜𝚝𝚒𝚌𝚔𝚎𝚛
+${shopdmen}   .𝚜𝚝𝚒𝚌𝚔𝚎𝚛 » 3$ 
 ${shopdmen}   .𝚒𝚖𝚊𝚐𝚎𝚜𝚝𝚒𝚌𝚔𝚎𝚛
 `
 
@@ -114,10 +114,11 @@ const menu3 = (tanggal, jam, pushname, sender, prem_, Lxa, prefix, user, uptime,
 ⇝   ${prem_}
 ............................
 ${shopdmen}   .𝚋𝚕𝚞𝚛
-${shopdmen}   .𝚜𝚊𝚝𝚞𝚛𝚊𝚝𝚒𝚘𝚗
+${shopdmen}   .𝚜𝚊𝚝𝚞𝚛𝚊𝚝𝚒𝚘𝚗 » 10$
+${shopdmen}   .brightness » 10$
 ${shopdmen}   .𝚏𝚒𝚕𝚝𝚎𝚛
-${shopdmen}   .𝚏𝚕𝚒𝚙
-${shopdmen}   .𝚋𝚠
+${shopdmen}   .𝚏𝚕𝚒𝚙 » 10$
+${shopdmen}   .𝚋𝚠 » 10$
 ............................
 ${shopdmen}   .𝚊𝚞𝚍𝚒𝚘𝚕𝚎𝚟𝚎𝚕
 ${shopdmen}   .𝚖𝚙3
