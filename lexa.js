@@ -808,12 +808,12 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 	
 const _claim = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const claim = _claim[14]	//--- claim money
-
+const claimdesign = _claim[11]	//--- account design
 
 
 if 	(claim === '${tanngal}') {
 	
-   reply(`Already claimed Today`)
+   reply(`${claimdesign} Already claimed Today`)
 }
 
 else {
@@ -859,7 +859,7 @@ const _changedesignmoney1claims = JSON.parse(fs.readFileSync(`./${sender.split("
 const changedesignmoney1claims = _changedesignmoney1claims[7]	//--- money	
 
  
-  reply(`𝚌𝚕𝚊𝚒𝚖𝚎𝚍 𝚖𝚘𝚗𝚎𝚢 💸\n\nMoney left: ${changedesignmoneyclaim}$ + $ = ${changedesignmoney1claims}$`)
+  reply(`${claimdesign} Claimed 25$ daily Money! 💸\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changedesignmoney1claims}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Rewards`)
  
 }
  
