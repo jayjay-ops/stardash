@@ -1103,7 +1103,7 @@ reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - -
 
  else {
 	
-			let os = Number(4);
+			let os = Number(10);
 			let ops = ps - os; 
 			fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
 				if (err) throw err;
