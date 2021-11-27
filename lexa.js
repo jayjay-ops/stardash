@@ -3535,82 +3535,81 @@ break
 case 'social':
 
 		
-		if (!isVerify) return reply(userB())
+	if (!isVerify) return reply(userB())
 			
 // -- Pet 
-	const _myaccountpet4 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-	const mypet4design = _myaccountpet4[11];			//--- account design
+		const _myaccountpet4 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const mypet4design = _myaccountpet4[11];			//--- account design
+		
 	
-	
-const _pet4 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+		const _pet4 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
 
-const mypet4type = _pet4[0]; 				//--- type
-const mypet4stage = _pet4[1];				//--- stage
-const mypet4hunger = _pet4[2];			//--- hunger
-const mypet4level = _pet4[3];				//--- level
-const mypet4xp = _pet4[4];				//--- xp
-const mypet4changepet = _pet4[5];			//--- changepet
+		const mypet4type = _pet4[0]; 				//--- type
+		const mypet4stage = _pet4[1];				//--- stage
+		const mypet4hunger = _pet4[2];			//--- hunger
+		const mypet4level = _pet4[3];				//--- level
+		const mypet4xp = _pet4[4];				//--- xp
+		const mypet4changepet = _pet4[5];			//--- changepet
 
-const mypet4friends = _pet4[6];			//--- friends
-const mypet4name = _pet4[7];				//--- name
-const mypet4mood = _pet4[8];				//--- mood
-const mypet4status = _pet4[9];			//--- status
-const mypet4owners = _pet4[10];			//--- owners
-const mypet4birthday = _pet4[11];			//--- birthday
-const mypet4shiny = _pet4[12];			//--- shiny
+		const mypet4friends = _pet4[6];			//--- friends
+		const mypet4name = _pet4[7];				//--- name
+		const mypet4mood = _pet4[8];				//--- mood
+		const mypet4status = _pet4[9];			//--- status
+		const mypet4owners = _pet4[10];			//--- owners
+		const mypet4birthday = _pet4[11];			//--- birthday
+		const mypet4shiny = _pet4[12];			//--- shiny
 
-const mypet4cloth1 = _pet4[13];    		//--- cloth 1-4
-const mypet4cloth2 = _pet4[14];
-const mypet4cloth3 = _pet4[15];
-const mypet4cloth4 = _pet4[16];
+		const mypet4cloth1 = _pet4[13];    		//--- cloth 1-4
+		const mypet4cloth2 = _pet4[14];
+		const mypet4cloth3 = _pet4[15];
+		const mypet4cloth4 = _pet4[16];
 
-const mypet4cooldown = _pet4[17];			//--- cooldown
-const mypet4energy = _pet4[18];			//--- energy
-const mypet4weapon = _pet4[19];			//--- weapon
+		const mypet4cooldown = _pet4[17];			//--- cooldown
+		const mypet4energy = _pet4[18];			//--- energy
+		const mypet4weapon = _pet4[19];			//--- weapon
 
-const mypet4powertype1 = _pet4[20];				//--- powertype 1-4
-const mypet4powertype2 = _pet4[21];
-const mypet4powertype3 = _pet4[22];
-const mypet4powertype4 = _pet4[23];
+		const mypet4powertype1 = _pet4[20];				//--- powertype 1-4
+		const mypet4powertype2 = _pet4[21];
+		const mypet4powertype3 = _pet4[22];
+		const mypet4powertype4 = _pet4[23];
 
-const mypet4powertypeinfo1 = _pet4[24];		//--- powertypeinfo 1-4
-const mypet4powertypeinfo2 = _pet4[25];
-const mypet4powertypeinfo3 = _pet4[26];
-const mypet4powertypeinfo4 = _pet4[27];
+		const mypet4powertypeinfo1 = _pet4[24];		//--- powertypeinfo 1-4
+		const mypet4powertypeinfo2 = _pet4[25];
+		const mypet4powertypeinfo3 = _pet4[26];
+		const mypet4powertypeinfo4 = _pet4[27];
 
-const mypet4abouttypeinfo1 = _pet4[28];		//--- abouttypeinfo 1-4
-const mypet4abouttypeinfo2 = _pet4[29];
-const mypet4abouttypeinfo3 = _pet4[30];
-const mypet4abouttypeinfo4 = _pet4[31];
+		const mypet4abouttypeinfo1 = _pet4[28];		//--- abouttypeinfo 1-4
+		const mypet4abouttypeinfo2 = _pet4[29];
+		const mypet4abouttypeinfo3 = _pet4[30];
+		const mypet4abouttypeinfo4 = _pet4[31];
 
-const mypet4empty1 = _pet4[32];				//--- empty 1-4
-const mypet4empty2 = _pet4[33];
-const mypet4empty3 = _pet4[34];
-const mypet4empty4 = _pet4[35];
-const mypet4empty5 = _pet4[36];
-const mypet4empty6 = _pet4[37];
+		const mypet4empty1 = _pet4[32];				//--- empty 1-4
+		const mypet4empty2 = _pet4[33];
+		const mypet4empty3 = _pet4[34];
+		const mypet4empty4 = _pet4[35];
+		const mypet4empty5 = _pet4[36];
+		const mypet4empty6 = _pet4[37];
 
-const mypet4health = _pet4[38]; 	    	//--- Health
-const mypet4power = _pet4[39];    			//--- Power
-const mypet4evolution1 = _pet4[40];			//--- Evolution 1
-const mypet4evolution2 = _pet4[41];			//--- Evolution 2
-const mypet4evolution3 = _pet4[42];			//--- Evolution 3
-const mypet4evolution4 = _pet4[43];			//--- Evolution 4
-const mypet4fight = _pet4[44];		     	//--- fight
+		const mypet4health = _pet4[38]; 	    	//--- Health
+		const mypet4power = _pet4[39];    			//--- Power
+		const mypet4evolution1 = _pet4[40];			//--- Evolution 1
+		const mypet4evolution2 = _pet4[41];			//--- Evolution 2
+		const mypet4evolution3 = _pet4[42];			//--- Evolution 3
+		const mypet4evolution4 = _pet4[43];			//--- Evolution 4
+		const mypet4fight = _pet4[44];		     	//--- fight
 
 		
-reply(`» ${pushname}
-» ${prem_}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝐹𝑟𝑖𝑒𝑛𝑑𝑠
-» ${mypet4friends}
-𝑂𝑤𝑛𝑒𝑟𝑠 
-» ${mypet4owners}
-𝑇𝑟𝑎𝑑𝑒
-» ${mypet4changepet} 
-𝐹𝑖𝑔ℎ𝑡
-» ${mypet4fight}`)
- 
+			reply(`» ${pushname}
+			» ${prem_}
+			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+			𝐹𝑟𝑖𝑒𝑛𝑑𝑠
+			» ${mypet4friends}
+			𝑂𝑤𝑛𝑒𝑟𝑠 
+			» ${mypet4owners}
+			𝑇𝑟𝑎𝑑𝑒
+			» ${mypet4changepet} 
+			𝐹𝑖𝑔ℎ𝑡
+			» ${mypet4fight}`)
  
 break
 
@@ -3659,13 +3658,10 @@ send 𝚙𝚒𝚌𝚝𝚞𝚛𝚎\n➳ Send Picture\n➳ cost: 7$\n${shopd} .sen
 break
 
 
-
-
-//--- PetShop	
+//--- PetShop	// will be improved
 
 case 'petshop':	
 case 'pet shop':	
-
 
 if (!isVerify) return reply(userB())
 	
@@ -3674,12 +3670,9 @@ const petshopmoney = _petshopmoney[7]	//--- money
 
 reply (`𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝙿𝚎𝚝𝚂𝚑𝚘𝚙\n⌥ 𝚃𝚘 𝚋𝚞𝚢 𝚜𝚝𝚑 𝚝𝚢𝚙𝚎: \n\n.𝚋𝚞𝚢 Butterfly\n............................\n✯ 𝚊𝚕𝚕 𝚙𝚎𝚝𝚜 \n\n𝙱𝚞𝚝𝚝𝚎𝚛𝚏𝚕𝚢 150$\n➳ 𝙲𝚊𝚝𝚊𝚙𝚒𝚕𝚕𝚊𝚛 \n➳ 𝚌𝚘𝚌𝚞𝚗𝚎\n➳ 𝙱𝚞𝚝𝚝𝚎𝚛𝚏𝚕𝚢\n\n𝚆𝚞𝚕𝚏 250$ \n➳ 𝙳𝚘𝚐 \n➳ 𝙳𝚘𝚐𝚐𝚘\n➳ 𝚆𝚞𝚕𝚏 \n\n𝙳𝚎𝚕𝚙𝚑𝚒𝚗𝚎 300$\n➳ 𝙵𝚒𝚜𝚑 \n➳ 𝚠𝚑𝚊𝚕𝚎\n➳ 𝙳𝚎𝚕𝚙𝚑𝚒𝚗𝚎 \n\n𝙳𝚛𝚊𝚐𝚘𝚗 1000$\n➳ 𝙴𝚐𝚐 \n➳ 𝙵𝚕𝚢\n➳ 𝙳𝚛𝚊𝚐𝚘𝚗\n............................\n✯ 𝚌𝚘𝚕𝚘𝚛𝚜\n\n𝚠𝚑𝚒𝚝𝚎 20$\n𝚛𝚎𝚍 50$\n𝚢𝚎𝚕𝚕𝚘𝚠 50$\n𝚙𝚞𝚛𝚙𝚕𝚎 80$\n𝚋𝚕𝚞𝚎 100$\n𝚋𝚕𝚊𝚌𝚔 500$\n............................\n✯ 𝚏𝚘𝚘𝚍 \n\n𝚜𝚝𝚊𝚛 1$\n𝚌𝚘𝚘𝚔𝚒𝚎 2$\n𝚖𝚒𝚕𝚔 6$\n𝚋𝚎𝚎𝚏 15$\n............................\n𝚢𝚘𝚞𝚛 𝚖𝚘𝚗𝚎𝚢\n${petshopmoney}$\n...........................`)
 
-
 break
 
 //--- Your account		
-
-			
 			
 case 'me':
 case 'aboutme':
@@ -3687,178 +3680,173 @@ case 'account':
 case 'myaccount':
 case 'profile':
 		
-		if (!isVerify) return reply(userB())
+	if (!isVerify) return reply(userB())
 			
 // -- User  
 	
-const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-	
-const mynumber2 = _myaccount[0];			//--- phone number	
-const mypushname2 = _myaccount[1]; 		//--- pushname
-const myname2 = _myaccount[2];			//--- name
-const myage2 = _myaccount[3];				//--- age
-const myemojie2 = _myaccount[4];			//--- emojie
-const myid2 = _myaccount[5];				//--- user id	
-const myxp2 = _myaccount[6];				//--- xp
-const mymoney2 = _myaccount[7];			//--- money
-const mymood2 = _myaccount[8];			//--- mood
-const mydate2 = _myaccount[9];			//--- account creation date
-const mystickerpack2 = _myaccount[10];	//--- stickerpack name
-const mydesign2 = _myaccount[11];			//--- account design
-const myseconddesign2 = _myaccount[12];			//--- second design
-const myemail2 = _myaccount[13];		//--- Email
-const myemailinfo2 = _myaccount[14];		//--- Email verified
+			const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+				
+			const mynumber2 = _myaccount[0];			//--- phone number	
+			const mypushname2 = _myaccount[1]; 		//--- pushname
+			const myname2 = _myaccount[2];			//--- name
+			const myage2 = _myaccount[3];				//--- age
+			const myemojie2 = _myaccount[4];			//--- emojie
+			const myid2 = _myaccount[5];				//--- user id	
+			const myxp2 = _myaccount[6];				//--- xp
+			const mymoney2 = _myaccount[7];			//--- money
+			const mymood2 = _myaccount[8];			//--- mood
+			const mydate2 = _myaccount[9];			//--- account creation date
+			const mystickerpack2 = _myaccount[10];	//--- stickerpack name
+			const mydesign2 = _myaccount[11];			//--- account design
+			const myseconddesign2 = _myaccount[12];			//--- second design
+			const myemail2 = _myaccount[13];		//--- Email
+			const myemailinfo2 = _myaccount[14];		//--- Email verified
 
-const my15 = _myaccount[15]		//--- 
-const my16 = _myaccount[16]		//---
-const my17 = _myaccount[17]		//---
-const my18 = _myaccount[18]		//---
-const my19 = _myaccount[19]		//---
-const my20 = _myaccount[20]		//---
-const my21 = _myaccount[21]		//---
-const my22 = _myaccount[22]		//---
-const my23 = _myaccount[23]		//---
-const my24 = _myaccount[24]		//---
-const my25 = _myaccount[25]		//---
-const my26 = _myaccount[26]		//---
-const my27 = _myaccount[27]		//---
-const my28 = _myaccount[28]		//---
-const my29 = _myaccount[29]		//---
-const my30 = _myaccount[30]		//---
-const my31 = _myaccount[31]		//---
-const my32 = _myaccount[32]		//---
-const my33 = _myaccount[33]		//---
-const my34 = _myaccount[34]		//---
-const my35 = _myaccount[35]		//---
-const my36 = _myaccount[36]		//---
-const my37 = _myaccount[37]		//---
-const my38 = _myaccount[38]		//---
-const my39 = _myaccount[39]		//---
-const my40 = _myaccount[40]		//---
-const my41 = _myaccount[41]		//---
-const my42 = _myaccount[42]		//---
-const my43 = _myaccount[43]		//---
-const my44 = _myaccount[44]		//---
-const my45 = _myaccount[45]		//---
-const my46 = _myaccount[46]		//---
-const my47 = _myaccount[47]		//---
+			const my15 = _myaccount[15]		//--- 
+			const my16 = _myaccount[16]		//---
+			const my17 = _myaccount[17]		//---
+			const my18 = _myaccount[18]		//---
+			const my19 = _myaccount[19]		//---
+			const my20 = _myaccount[20]		//---
+			const my21 = _myaccount[21]		//---
+			const my22 = _myaccount[22]		//---
+			const my23 = _myaccount[23]		//---
+			const my24 = _myaccount[24]		//---
+			const my25 = _myaccount[25]		//---
+			const my26 = _myaccount[26]		//---
+			const my27 = _myaccount[27]		//---
+			const my28 = _myaccount[28]		//---
+			const my29 = _myaccount[29]		//---
+			const my30 = _myaccount[30]		//---
+			const my31 = _myaccount[31]		//---
+			const my32 = _myaccount[32]		//---
+			const my33 = _myaccount[33]		//---
+			const my34 = _myaccount[34]		//---
+			const my35 = _myaccount[35]		//---
+			const my36 = _myaccount[36]		//---
+			const my37 = _myaccount[37]		//---
+			const my38 = _myaccount[38]		//---
+			const my39 = _myaccount[39]		//---
+			const my40 = _myaccount[40]		//---
+			const my41 = _myaccount[41]		//---
+			const my42 = _myaccount[42]		//---
+			const my43 = _myaccount[43]		//---
+			const my44 = _myaccount[44]		//---
+			const my45 = _myaccount[45]		//---
+			const my46 = _myaccount[46]		//---
+			const my47 = _myaccount[47]		//---
 
-if 	(mymoney2 === '69') {
-	
- reply(`» ${pushname} 
-» ${prem_}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𓂸 𝑁𝑎𝑚𝑒 » ${myname2}
-𓂸 𝐴𝑔𝑒 » ${myage2}
-𓂸 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
-𓂸 𝑀𝑜𝑜𝑑 » ${mymood2}
-𓂸 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-» .𝑚𝑜𝑟𝑒 «
-» .ℎ𝑖𝑑𝑒 «
-» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝑠𝑖𝑛𝑐𝑒 ${mydate2}`)
+//--- This is just for fun hehehe
+
+	if 	(mymoney2 === '69') {
+		
+			 reply(`» ${pushname} 
+			» ${prem_}
+			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+			𓂸 𝑁𝑎𝑚𝑒 » ${myname2}
+			𓂸 𝐴𝑔𝑒 » ${myage2}
+			𓂸 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
+			𓂸 𝑀𝑜𝑜𝑑 » ${mymood2}
+			𓂸 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+			» .𝑚𝑜𝑟𝑒 «
+			» .ℎ𝑖𝑑𝑒 «
+			» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
+			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+			𝑠𝑖𝑛𝑐𝑒 ${mydate2}`)
+	 
+	}
+
+//--- The real menu is here
  
-}
- 
-else {
+	else {
 
- reply(`» ${pushname}
-» ${prem_}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
-${mydesign2} 𝐴𝑔𝑒 » ${myage2}
-${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
-${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
-${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-» .𝑚𝑜𝑟𝑒 «
-» .ℎ𝑖𝑑𝑒 «
-» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝑠𝑖𝑛𝑐𝑒 ${mydate2}`)
+			 reply(`» ${pushname}
+			» ${prem_}
+			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+			${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
+			${mydesign2} 𝐴𝑔𝑒 » ${myage2}
+			${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
+			${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
+			${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+			» .𝑚𝑜𝑟𝑒 «
+			» .ℎ𝑖𝑑𝑒 «
+			» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
+			-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+			𝑠𝑖𝑛𝑐𝑒 ${mydate2}`)
 
-}
+	}
 
 break
 
-// -- User  More 
+// -- UserAccount -More information
 
 case 'more':
-	
-const _myaccount2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-	
-const mynumber = _myaccount2[0];			//--- phone number	
-const mypushname = _myaccount2[1]; 		//--- pushname
-const myname = _myaccount2[2];			//--- name
-const myage = _myaccount2[3];				//--- age
-const myemojie = _myaccount2[4];			//--- emojie
-const myid = _myaccount2[5];				//--- user id	
-const myxp = _myaccount2[6];				//--- xp
-const mymoney = _myaccount2[7];			//--- money
-const mymood = _myaccount2[8];			//--- mood
-const mydate = _myaccount2[9];			//--- account creation date
-const mystickerpack = _myaccount2[10];	//--- stickerpack name
-const mydesign = _myaccount2[11];			//--- account design
-const myseconddesign = _myaccount2[12];			//--- second design
-const myemail = _myaccount2[13];		//--- Email
-const myemailinfo = _myaccount2[14];		//--- Email verified
-
- reply(`» ${pushname}
-» ${prem_}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-${mydesign} 𝑥𝑝 » ${myxp}
-${mydesign} 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑃𝑎𝑐𝑘 » ${mystickerpack}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝐸𝑚𝑎𝑖𝑙
-» ${myemail}
-𝑁𝑢𝑚𝑏𝑒𝑟 
-» ${mynumber}
-𝑈𝑠𝑒𝑟𝐼𝑑
-» ${myid}`)
+	if (!isVerify) return reply(userB())
+			const _myaccount2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));					
+			const mynumber = _myaccount2[0];			//--- phone number	
+			const mypushname = _myaccount2[1]; 		//--- pushname
+			const myname = _myaccount2[2];			//--- name
+			const myage = _myaccount2[3];				//--- age
+			const myemojie = _myaccount2[4];			//--- emojie
+			const myid = _myaccount2[5];				//--- user id	
+			const myxp = _myaccount2[6];				//--- xp
+			const mymoney = _myaccount2[7];			//--- money
+			const mymood = _myaccount2[8];			//--- mood
+			const mydate = _myaccount2[9];			//--- account creation date
+			const mystickerpack = _myaccount2[10];	//--- stickerpack name
+			const mydesign = _myaccount2[11];			//--- account design
+			const myseconddesign = _myaccount2[12];			//--- second design
+			const myemail = _myaccount2[13];		//--- Email
+			const myemailinfo = _myaccount2[14];		//--- Email verified
+																					reply(`» ${pushname}
+																					» ${prem_}
+																					-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+																					${mydesign} 𝑥𝑝 » ${myxp}
+																					${mydesign} 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑃𝑎𝑐𝑘 » ${mystickerpack}
+																					-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+																					𝐸𝑚𝑎𝑖𝑙
+																					» ${myemail}
+																					𝑁𝑢𝑚𝑏𝑒𝑟 
+																					» ${mynumber}
+																					𝑈𝑠𝑒𝑟𝐼𝑑
+																					» ${myid}`)
 
 break
 
 
-//--- Hidden account information		
-
-			
+//--- Owner view every numbers account	// This will be improved in the future
 			
 case 'user':
 case 'aboutuser':
 case 'useraccount':
 		
-		if (!isVerify) return reply(userB())
-			 if (!isPrem) return reply(premi())
+	if (!isVerify) return reply(userB())
+	if (!isPrem) return reply(premi())
 			
-const _userdata = JSON.parse(fs.readFileSync(`./${value}@s.whatsapp.net.json`));	
+		const _userdata = JSON.parse(fs.readFileSync(`./${value}@s.whatsapp.net.json`));		
+		const userdata = _userdata[0]	//--- phone number	
+		const userdata1 = _userdata[1]  //--- pushname
+		const userdata2 = _userdata[2]	//--- name
+		const userdata3 = _userdata[3]	//--- age
+		const userdata4 = _userdata[4]	//--- emojie
+		const userdata5 = _userdata[5]	//--- user id	
+		const userdata6 = _userdata[6] 	//--- xp
+		const userdata7 = _userdata[7]	//--- money
+		const userdata8 = _userdata[8]	//--- mood
+		const userdata9 = _userdata[9]	//--- account creation date
+		const userdata10 = _userdata[10]	//--- stickerpack name
+		const userdata11 = _userdata[11]	//--- account design
+		const userdata12 = _userdata[12]	//--- test claim
+		const userdata13 = _userdata[13]	//--- empty
+		const userdata14 = _userdata[14]	//--- empty
+		const userdata15 = _userdata[15]	//--- empty
 
-	
-const userdata = _userdata[0]	//--- phone number	
-const userdata1 = _userdata[1]  //--- pushname
-const userdata2 = _userdata[2]	//--- name
-const userdata3 = _userdata[3]	//--- age
-const userdata4 = _userdata[4]	//--- emojie
-const userdata5 = _userdata[5]	//--- user id	
-const userdata6 = _userdata[6] 	//--- xp
-const userdata7 = _userdata[7]	//--- money
-const userdata8 = _userdata[8]	//--- mood
-const userdata9 = _userdata[9]	//--- account creation date
-const userdata10 = _userdata[10]	//--- stickerpack name
-const userdata11 = _userdata[11]	//--- account design
-const userdata12 = _userdata[12]	//--- test claim
-const userdata13 = _userdata[13]	//--- empty
-const userdata14 = _userdata[14]	//--- empty
-const userdata15 = _userdata[15]	//--- empty
-
-
-
- reply(`\n//--- phone number 0\n${userdata}
- //--- pushname  \n${userdata1}\n\n//--- name \n${userdata2}\n\n//--- age 3\n${userdata3}\n\n//--- emojie 4\n${userdata4}\n\n//--- user id 5\n${userdata5}\n\n//--- xp 6\n${userdata6}\n\n//--- money 7\n${userdata7}\n\n//--- mood 8\n${userdata8}\n\n//--- account creation date 9\n${userdata9}\n\n//--- stickerpack 10\n ${userdata10}\n\n//--- account design 11\n${userdata11}\n\n//--- empty 12\n${userdata12}\n\n//--- empty 13\n${userdata13}\n\n//--- empty 14\n${userdata14}\n\n//--- empty 15\n${userdata15}\n\nchange detail with .changedata DataNumber NewNumber`)
+reply(`\n//--- phone number 0\n${userdata}
+//--- pushname  \n${userdata1}\n\n//--- name \n${userdata2}\n\n//--- age 3\n${userdata3}\n\n//--- emojie 4\n${userdata4}\n\n//--- user id 5\n${userdata5}\n\n//--- xp 6\n${userdata6}\n\n//--- money 7\n${userdata7}\n\n//--- mood 8\n${userdata8}\n\n//--- account creation date 9\n${userdata9}\n\n//--- stickerpack 10\n ${userdata10}\n\n//--- account design 11\n${userdata11}\n\n//--- empty 12\n${userdata12}\n\n//--- empty 13\n${userdata13}\n\n//--- empty 14\n${userdata14}\n\n//--- empty 15\n${userdata15}\n\nchange detail with .changedata DataNumber NewNumber`)
 
 	break
-
 
 //-- changename - setnamemoney setname setnamedelay
 
@@ -3917,9 +3905,9 @@ case 'setname':
  
 								reply(`${changenamedesign} Changed username from *${changename}* to *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changenamemoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Name`)
       
-									break
+		break
 
-//-- changeage
+//-- changeage - Setage
 
 case 'changeage': 
 case 'setage': 
@@ -3983,10 +3971,9 @@ case 'setage':
 //-- change email
 
 case 'changeemail': 
-case 'setemail': 
+case 'setemail':   
   
-  
-			if (!isVerify) return reply(userB())
+	if (!isVerify) return reply(userB())
 	
 				const _emailchange = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 
@@ -3994,8 +3981,8 @@ case 'setemail':
 				const emaildesign = _emailchange[11]	//--- account design
 				const emailname = _emailchange[2]	//--- emailname
 		
-			if (args.length < 1) return reply('${emaildesign}  ﹝𝙴𝚗𝚝𝚎𝚛 Email adresse.﹞ \n\nExample \n\n.setemail star@gmail.com')
-			if (args.length > 1) return reply('${emaildesign}  ﹝Remove space!﹞ \n\nExample \n\n.setemail star@gmail.com')
+	if (args.length < 1) return reply('${emaildesign}  ﹝𝙴𝚗𝚝𝚎𝚛 Email adresse.﹞ \n\nExample \n\n.setemail star@gmail.com')
+	if (args.length > 1) return reply('${emaildesign}  ﹝Remove space!﹞ \n\nExample \n\n.setemail star@gmail.com')
 
 					let newemail = args[0];
 
@@ -4050,7 +4037,6 @@ case 'setemail':
 							console.log('Email sent: ' + info.response);
 						  }
 						});
-		
 		break
 
 //-- changeemojie
@@ -4248,7 +4234,6 @@ if (!isVerify) return reply(userB())
 	
 reply('⚠️ PLEASE READ ⚠️ Are you *100% sure* about this? All your achievements will be *lost forever* and deleted from the server. If you delete your account you *cant register* again! ⚠️ from now on you need a password to verifyagain ⚠️\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nTo delete your account type:   .iamsure  ')
 
-
 break
 
 //--- Delete account
@@ -4320,7 +4305,6 @@ case 'iamsure':
 					  console.log('File deleted!');
 					  reply('Your account has been *sucessfully deleted.* When typing .myaccount   everything will be gone. However you can still use commands as if registered, but Errors may occur. You can only verifyagain with the password.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nAsk number +4917626388837 for the password\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash')
 					});
-
 	break
 
 //--- Welcome on/off
