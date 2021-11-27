@@ -1660,7 +1660,42 @@ case 'blackwhite':
   
 	  
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
-					   reply('⌯   ﹝We are going back in time 1/1﹞')
+				
+		const _yourcashblackwhite = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const yourcashblackwhite = _yourcashblackwhite[7]	//--- money	
+        const cmblackwhite = _yourcashblackwhite[11]	//--- money	design
+		const blackwhitetipp = _tipps[Math.floor(Math.random() * _tipps.length)]
+						  
+	if (yourcashdesign < 10) return reply(`${cmblackwhite}﹝You have not enough money for this Effect.﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney needed: 10$ Your money: ${yourcashblackwhite}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ StarDash Effects`) 
+	
+							const delayblackwhite = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delayblackwhite(1000) /// waiting 1 second
+
+				let youroldblackwhitemoney = Number(yourcashblackwhite);
+				let changeblackwhitecost = Number(25);
+				let newblackwhitemoney = youroldblackwhitemoney - changeblackwhitecost; 
+
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${yourcashblackwhite}`, newblackwhitemoney);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
+
+							const delayblackwhite2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delayblackwhite2(1000) /// waiting 1 second.
+
+							const _changeblackwhitemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+							const changeblackwhitemoneynew = _changeblackwhitemoney1[7]	//--- money	
+
+ 
+ 
+reply(`${cmblackwhite} Editing 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changeblackwhitemoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ StarDash Effects`)
+				
 				   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1669,11 +1704,11 @@ case 'blackwhite':
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Error﹞')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${cmblackwhite} Made for ${pushname}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
+_Tipp: ${blackwhitetipp}_
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-✅ StarDash Media`})
+❇️ StarDash Effects`})
 						fs.unlinkSync(ran)
 					})
 					break	
@@ -1825,7 +1860,7 @@ let oorpprsong = pprrsong - oorrsong;
 				const _changedesignmoneysong = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 				const changedesignmoneysong = _changedesignmoneysong[7]	//--- money	
   
-				  if (!isVerify) return reply(userB())
+	
 				  const tipp = _tipps[Math.floor(Math.random() * _tipps.length)]
 			  
 			reply(`${songdesign}﹝Downloading 1/2﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changedesignmoneysong}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Songs`)
