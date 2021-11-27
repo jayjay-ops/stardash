@@ -811,7 +811,7 @@ const claim = _claim[14]	//--- claim money
 
 
 
-if 	(mymoney2 === '${tanngal}') {
+if 	(claim === '${tanngal}') {
 	
    reply(`Already claimed Today`)
 }
