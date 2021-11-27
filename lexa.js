@@ -3743,7 +3743,7 @@ const my45 = _myaccount[45]		//---
 const my46 = _myaccount[46]		//---
 const my47 = _myaccount[47]		//---
 
-if 	(mymoney2 = 69) {
+if 	(mymoney2 === '69') {
 	
  reply(`» ${pushname}
 » ${prem_}
