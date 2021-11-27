@@ -811,14 +811,14 @@ const claim = _claim[14]	//--- claim money
 const claimdesign = _claim[11]	//--- account design
 
 
-if 	(claim === `${tanngal}`) {
+if 	(claim === `${tanggal()}`) {
 	
    reply(`${claimdesign} Already claimed Today`)
 }
 
 else {
 
-let claimnow = '${tanngal}';
+let claimnow = `${tanggal()}`;
 
 
 fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
@@ -3933,7 +3933,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 }	
 
 
-if 	(myclaimed === '${tanngal}') {
+if 	(myclaimed === `${tanggal()}`) {
 
 //--- This is just for fun hehehe
 
