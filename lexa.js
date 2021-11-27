@@ -1414,6 +1414,41 @@ const _stickerpack = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.wha
 const stickerpack = _stickerpack[10]	//--- stickerpack name
 const stickerdesign = _stickerpack[11]	//--- account design
 
+		const _yourcashmakesticker = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const yourcashmakesticker = _yourcashmakesticker[7]	//--- money	
+        const cmmakesticker = _yourcashmakesticker[11]	//--- money	design
+		const makestickertipp = _tipps[Math.floor(Math.random() * _tipps.length)]
+						  
+	if (yourcashmakesticker < 3) return reply(`${cmmakesticker}﹝You have not enough money to make a sticker﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney needed: 3$ Your money: ${yourcashmakesticker}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ StarDash Stickers`) 
+	
+							const delaymakesticker = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delaymakesticker(1000) /// waiting 1 second
+
+				let youroldmakestickermoney = Number(yourcashmakesticker);
+				let changemakestickercost = Number(3);
+				let newmakestickermoney = youroldmakestickermoney - changemakestickercost; 
+
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${yourcashmakesticker}`, newmakestickermoney);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
+
+							const delaymakesticker2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delaymakesticker2(1000) /// waiting 1 second.
+
+							const _changemakestickermoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+							const changemakestickermoneynew = _changemakestickermoney1[7]	//--- money	
+ 
+reply(`${cmmakesticker} Getting ze Stickers 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changemakestickermoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ StarDash Stickers`)
+		
+ 
+ 
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1445,12 +1480,11 @@ const stickerdesign = _stickerpack[11]	//--- account design
 						const media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 						const tippsticker = _tipps[Math.floor(Math.random() * _tipps.length)]
 						ran = getRandom('.webp')
-						reply(`${stickerdesign} Please wait ${pushname}
+						reply(`${cmmakesticker} Zending . . .
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-_Tipp: ${tippsticker}_
+_Tipp: ${makestickertipp}_
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-✅ StarDash Stickers`
-)
+❇️ StarDash Effects`)
 						await ffmpeg(`./${media}`)
 							.inputFormat(media.split('.')[1])
 							.on('start', function (cmd) {
@@ -1525,11 +1559,7 @@ case 'volume':
 						fs.unlinkSync(media)
 						if (err) return reply('Error')
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `⚡ Made for ${pushname}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-✅ StarDash Media`})
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1542,7 +1572,40 @@ case 'brightness':
 			if (!isQuotedImage) return reply('⌯   ﹝Please tag an image.﹞')
 					 if (args.length < 1) return reply('⌯   ﹝Enter Number of Brightnes example 0.5﹞')
 
-	  reply('⌯ Shining sun on your picture 1/2﹞')
+			const _yourcashbrightness = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const yourcashbrightness = _yourcashbrightness[7]	//--- money	
+        const cmbrightness = _yourcashbrightness[11]	//--- money	design
+		const brightnesstipp = _tipps[Math.floor(Math.random() * _tipps.length)]
+						  
+	if (yourcashbrightness < 10) return reply(`${cmbrightness}﹝You have not enough money for this Effect.﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney needed: 10$ Your money: ${yourcashbrightness}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ StarDash Effects`) 
+	
+							const delaybrightness = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delaybrightness(1000) /// waiting 1 second
+
+				let youroldbrightnessmoney = Number(yourcashbrightness);
+				let changebrightnesscost = Number(10);
+				let newbrightnessmoney = youroldbrightnessmoney - changebrightnesscost; 
+
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${yourcashbrightness}`, newbrightnessmoney);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
+
+							const delaybrightness2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delaybrightness2(1000) /// waiting 1 second.
+
+							const _changebrightnessmoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+							const changebrightnessmoneynew = _changebrightnessmoney1[7]	//--- money	
+ 
+reply(`${cmbrightness} Editing 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changebrightnessmoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ StarDash Effects`)
+		
+ 
   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1557,11 +1620,11 @@ case 'brightness':
 	  reply('⌯ Sending your picture 2/2﹞')
 					
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${cmbrightness} Made for ${pushname}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
+_Tipp: ${brightnesstipp}_
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-✅ StarDash Media`})
+❇️ StarDash Effects`})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1606,7 +1669,40 @@ case 'saturation':
 			if (args.length < 1) return reply('⌯   ﹝Enter Number of saturation from 0.5 to 2﹞')
 
 	   
-	  reply('⌯ Satturating your picture 1/2﹞')
+		const _yourcashsaturatepicture = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const yourcashsaturatepicture = _yourcashsaturatepicture[7]	//--- money	
+        const cmsaturatepicture = _yourcashsaturatepicture[11]	//--- money	design
+		const saturatepicturetipp = _tipps[Math.floor(Math.random() * _tipps.length)]
+						  
+	if (yourcashsaturatepicture < 10) return reply(`${cmsaturatepicture}﹝You have not enough money for this Effect.﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney needed: 10$ Your money: ${yourcashsaturatepicture}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ StarDash Effects`) 
+	
+							const delaysaturatepicture = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delaysaturatepicture(1000) /// waiting 1 second
+
+				let youroldsaturatepicturemoney = Number(yourcashsaturatepicture);
+				let changesaturatepicturecost = Number(10);
+				let newsaturatepicturemoney = youroldsaturatepicturemoney - changesaturatepicturecost; 
+
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${yourcashsaturatepicture}`, newsaturatepicturemoney);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
+
+							const delaysaturatepicture2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delaysaturatepicture2(1000) /// waiting 1 second.
+
+							const _changesaturatepicturemoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+							const changesaturatepicturemoneynew = _changesaturatepicturemoney1[7]	//--- money	
+ 
+reply(`${cmsaturatepicture} Editing 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changesaturatepicturemoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ StarDash Effects`)
+		
+ 
   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1619,11 +1715,11 @@ case 'saturation':
 	  reply('⌯ Sending your picture 2/2﹞')
 					
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `⚡ Made for ${pushname}
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${cmsaturatepicture} Made for ${pushname}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-_Tipp: For some fun and 4$ you can check out StarDas Slot game by the command *.slot*  . Have fun!_
+_Tipp: ${saturatepicturetipp}_
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-✅ StarDash Media`})
+❇️ StarDash Effects`})
 						fs.unlinkSync(ran)
 					})
 					break					
