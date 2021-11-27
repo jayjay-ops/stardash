@@ -1610,10 +1610,6 @@ reply(`${cmbrightness} Editing 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney lef
 						if (err) return reply('⌯   ﹝Enter Number of Brightnes example 0.5﹞')
 					
 					
-
-	
-	  reply('⌯ Sending your picture 2/2﹞')
-					
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${cmbrightness} Made for ${pushname}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -1696,8 +1692,6 @@ case 'saturation':
 							const changesaturatepicturemoneynew = _changesaturatepicturemoney1[7]	//--- money	
  
 reply(`${cmsaturatepicture} Editing 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changesaturatepicturemoneynew}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ StarDash Effects`)
-		
- 
   
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1706,8 +1700,7 @@ reply(`${cmsaturatepicture} Editing 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMone
 						fs.unlinkSync(media)
 						if (err) return reply('⌯   ﹝Enter Number of saturation from 0.5 to 2﹞')
 					
-					
-	  reply('⌯ Sending your picture 2/2﹞')
+	
 					
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${cmsaturatepicture} Made for ${pushname}
