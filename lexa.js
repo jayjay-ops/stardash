@@ -779,7 +779,6 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 case 'claim': 
   
 if (!isVerify) return reply(userB())
-	 if (!isPrem) return reply(premi())
 
 
 function kyun(seconds){
