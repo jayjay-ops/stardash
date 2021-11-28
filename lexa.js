@@ -5268,7 +5268,7 @@ case 'buyfridge':
 case 'getfridge':
 						
 						if (!isVerify) return reply(userB())
-							if (isFridge) return reply("You already have a fridge")
+					
 							    if (!isHaspet) return reply("You need a pet first. Visit the .petshop")
 									
 							const _mynewfridge = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
