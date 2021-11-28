@@ -1224,7 +1224,7 @@ case 'rlied':
 		
   if (!isVerify) return reply(userB())
   const song = _song[Math.floor(Math.random() * _song.length)]
-  reply(`${rsongdesign}﹝𝚁𝚊𝚗𝚍𝚘𝚖 𝚜𝚘𝚗𝚐﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${song}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Song`)
+  reply(`${rsongdesign}﹝𝚁𝚊𝚗𝚍𝚘𝚖 𝚜𝚘𝚗𝚐﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${song}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Download with .song_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Song`)
 break
 
 
