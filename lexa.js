@@ -4683,7 +4683,7 @@ const hispetfightxp = _hispetfight[4];				//--- xp
 						await attackdely2(1000) /// waiting 1 second.
 				
 
-				let mynewxp = petfightxp + Number(petfightstage); 
+				let mynewxp = Number(petfightxp) + Number(petfightstage); 
 
 				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
