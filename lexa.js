@@ -3912,7 +3912,7 @@ ${petshopdesign2} .clothstore
 
 }
 
-else (mypet4stageshop > 2) {		
+else {		
 
 reply (`𝑃𝑒𝑡𝑠ℎ𝑜𝑝
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
