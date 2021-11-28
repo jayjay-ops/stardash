@@ -4805,7 +4805,7 @@ case 'getfridge':
 							if (isFridge) return reply("You already have a fridge")
 								
 							
-					_user.push(sender)
+					_fridge.push(sender)
 			fs.writeFileSync('./data/fridge.json', JSON.stringify(_fridge))
 			
 			capt = `Fridge bought. Open fridge with .fridge`
