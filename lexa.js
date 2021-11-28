@@ -53,6 +53,7 @@ const up = JSON.parse(fs.readFileSync('./data/setting.json'));
 const _welcom = JSON.parse(fs.readFileSync('./data/welcom.json'));
 const _user = JSON.parse(fs.readFileSync('./data/user.json'));
 const _fridge = JSON.parse(fs.readFileSync('./data/fridge.json'));
+const _Haspet = JSON.parse(fs.readFileSync('./data/haspet.json'));
 const _antilink = JSON.parse(fs.readFileSync('./data/antilink.json'));
 const hit = JSON.parse(fs.readFileSync('./data/totalhit.json'))
 
