@@ -4634,7 +4634,7 @@ const petfightxp = _petfight[4];				//--- xp
 	if (petfighthunger < 2) return reply(`Your pet has no Energy... It doesnt want to fight until you feed it. \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nHis hunger: ${petfighthunger} Hungerpoints\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`) 
 
 
-const _hispetfight = JSON.parse(fs.readFileSync(`${args[1].replace('@','./')}.pet.json`));	
+const _hispetfight = JSON.parse(fs.readFileSync(`${value.replace('@','./')}.pet.json`));	
 const hispetfighthunger = _hispetfight[2];			//--- hunger
 const hispetfightname = _hispetfight[7];				//--- name
 const hispetfighthealth = _hispetfight[38]; 	    	//--- Health
