@@ -859,7 +859,7 @@ const _changedesignmoney1claims = JSON.parse(fs.readFileSync(`./${sender.split("
 const changedesignmoney1claims = _changedesignmoney1claims[7]	//--- money	
 
  
-  reply(`${claimdesign} Claimed 25$ daily Money! 💸\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changedesignmoney1claims}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Rewards`)
+  reply(`${claimdesign} Claimed 25$ daily Money! 💸\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changedesignmoney1claims}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n🎁 StarDash Rewards`)
  
 }
  
@@ -4021,7 +4021,7 @@ ${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𝑠𝑖𝑛𝑐𝑒 ${mydate2}
 
-𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ
+🎁 𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ
 .𝑐𝑙𝑎𝑖𝑚`)
 
 	}
