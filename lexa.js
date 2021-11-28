@@ -4076,7 +4076,7 @@ case 'buymilk':
 //-- Money and design
 		const _yourcashdesignmilk = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 		const yourcashdesignmilk = _yourcashdesignmilk[7]	//--- money	
-		const changedesignmilk = _changedesignmilk[11]	//--- Changedesignmilk
+		const changedesignmilk = _yourcashdesignmilk[11]	//--- Changedesignmilk
 		
 //-- XP When sth got bought		
 		const _mypetxpmilk = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
