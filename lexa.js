@@ -4120,6 +4120,24 @@ case 'buymilk':
 						console.log('Done!');
 					})
 				})
+				
+						const delaydesignmilk11 = ms => new Promise(resolve => setTimeout(resolve, ms))
+						await delaydesignmilk11(1000) /// waiting 1 second
+
+				let youroldmoneyformilk1 = Number(mypetxpmilk);
+				let changecostformilk1 = Number(5);
+				let newmoneyformilk1 = youroldmoneyformilk1 - changecostformilk1; 
+
+				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${mypetxpmilk}`, newmoneyformilk1);
+					
+					fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
 
 							const delayformilk2 = ms => new Promise(resolve => setTimeout(resolve, ms))
 							await delayformilk2(1000) /// waiting 1 second.
@@ -5233,7 +5251,7 @@ else {
 						await attackdely2(1000) /// waiting 1 second.
 				
 
-				let mynewxp = Number(petfightxp) + Number(petfightstage); 
+				let mynewxp = Number(petfightxp) + Number(10); 
 
 				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
