@@ -3537,7 +3537,7 @@ ${mypetdesign} 𝐻𝑢𝑛𝑔𝑒𝑟 » ${mypethunger}
 ${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝑋𝑝 » ${mypetxp}
-𝐿𝑣𝑙 » ${mypetlevel}
+𝐿𝑣𝑙 » ${mypetstage}
 𝑆𝑡𝑎𝑡𝑢𝑠 » ${mypetstatus}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 » .𝑖𝑛𝑓𝑜𝑝𝑒𝑡 «
@@ -3562,7 +3562,7 @@ ${mypetdesign} 𝐻𝑢𝑛𝑔𝑒𝑟 » ${mypethunger}
 ${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝑋𝑝 » ${mypetxp}
-𝐿𝑣𝑙 » ${mypetlevel}
+𝐿𝑣𝑙 » ${mypetstage}
 𝑆𝑡𝑎𝑡𝑢𝑠 » ${mypetstatus}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 » .𝑖𝑛𝑓𝑜𝑝𝑒𝑡 «
@@ -3589,7 +3589,7 @@ ${mypetdesign} 𝐻𝑢𝑛𝑔𝑒𝑟 » ${mypethunger}
 ${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝑋𝑝 » ${mypetxp}
-𝐿𝑣𝑙 » ${mypetlevel}
+𝐿𝑣𝑙 » ${mypetstage}
 𝑆𝑡𝑎𝑡𝑢𝑠 » ${mypetstatus}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 » .𝑖𝑛𝑓𝑜𝑝𝑒𝑡 «
@@ -3615,7 +3615,7 @@ ${mypetdesign} 𝐻𝑢𝑛𝑔𝑒𝑟 » ${mypethunger}
 ${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝑋𝑝 » ${mypetxp}
-𝐿𝑣𝑙 » ${mypetlevel}
+𝐿𝑣𝑙 » ${mypetstage}
 𝑆𝑡𝑎𝑡𝑢𝑠 » ${mypetstatus}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 » .𝑖𝑛𝑓𝑜𝑝𝑒𝑡 «
@@ -5040,7 +5040,7 @@ if (mypetdata < hispetdata) {
 				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
-					var newValue = data.replace(`${hispetfighthealth}`, myoutcomehealth);
+					var newValue = data.replace(`${petfighthealth}`, myoutcomehealth);
 					
 					fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
@@ -5069,7 +5069,7 @@ if (mypetdata < hispetdata) {
 				fs.readFile(`${value.replace('@','./')}.pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
-					var newValue = data.replace(`${petfighthunger}`, hisnewhunger);
+					var newValue = data.replace(`${hispetfighthunger}`, hisnewhunger);
 					
 					fs.writeFile(`${value.replace('@','./')}.pet.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
@@ -5087,7 +5087,7 @@ if (mypetdata < hispetdata) {
 				fs.readFile(`${value.replace('@','./')}.pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
-					var newValue = data.replace(`${petfightxp}`, hisnewxp);
+					var newValue = data.replace(`${hispetfightxp}`, hisnewxp);
 					
 					fs.writeFile(`${value.replace('@','./')}.pet.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
@@ -5169,17 +5169,21 @@ case 'getfridge':
 						
 						if (!isVerify) return reply(userB())
 							if (isFridge) return reply("You already have a fridge")
-								
+							    if (!isHaspet) return reply("You need a pet first. Visit the .petshop")
+									
+							const _mynewfridge = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+							const mynewfridgedesign = _mynewfridge[11]	//--- account design	
 							
 					_fridge.push(sender)
 			fs.writeFileSync('./data/fridge.json', JSON.stringify(_fridge))
 			
-			capt = `Fridge bought. Open fridge with .fridge`
+capt = `${mynewfridgedesign}﹝Got Fridge!﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_StarDash gave it to you as a gift for your pet!_\nYou can open it with _*.fridge*_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
 			
 fs.appendFile(`${sender.split("@")[0]}@s.fridge.json`, `["${pushname}", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]`, function (err) {
-								
+				
+				
   if (err) throw err;
   console.log('Fridge Opend.');
 });
