@@ -262,6 +262,7 @@ const botNumber = Lxa.user.jid
   const isOwner = ownerNumber.includes(sender)
   const isVerify = _user.includes(sender)
   const isFridge = _fridge.includes(sender)  
+  const isHaspet = _haspet.includes(sender)    
   const isPrem = premium.includes(sender) || isOwner
   const isBan = blocked.includes(sender)
   const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
@@ -3435,6 +3436,13 @@ else if (args[0] == 'Umbreon') {
 
 			reply(`${petshopdesign}﹝Found a ${args[0]} Egg! 2/2﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_For now he is still an Egg, but i guess you cant wait until it hatches!_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_Tipp: Please take good care of your new pet. You can view his profile by the command *.mypet* . If you dont take good care of him, he will die._\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
 
+						
+								
+							
+					_haspet.push(sender)
+			fs.writeFileSync('./data/haspet.json', JSON.stringify(_haspet))
+			
+			
 break
 
 //--- Your Pet		
@@ -3944,6 +3952,29 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			return `${day}. ${myMonths[bulan]} ${year}`
 }	
 
+if (isHaspet) {
+	
+let haspetmenu = ".mypet"
+
+}
+
+else {
+	
+let haspetmenu = ".buypet"
+
+}
+
+if (isFridge) {
+	
+let hasfridgemenu = ".fridge"	
+	
+}
+
+else {
+	
+let hasfridgemenu = ".buyfridge"
+
+}
 
 if 	(myclaimed === `${tanggal()}`) {
 
@@ -3985,7 +4016,10 @@ ${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
 » .ℎ𝑖𝑑𝑒 «
 » .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝑠𝑖𝑛𝑐𝑒 ${mydate2}`)
+𝑠𝑖𝑛𝑐𝑒 ${mydate2}
+
+${hasfridgemenu}
+${haspetmenu}`)
 
 	}	
   
@@ -4813,17 +4847,11 @@ case 'getfridge':
 			
 			
 fs.appendFile(`${sender.split("@")[0]}@s.fridge.json`, `["${pushname}", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]`, function (err) {
-				
-				
-		
-				
+								
   if (err) throw err;
   console.log('Fridge Opend.');
 });
-					
-			
-
-									
+														
 			break
 
 //-- PETS change name
