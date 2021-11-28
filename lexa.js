@@ -4020,6 +4020,95 @@ case 'myaccount':
 case 'profile':
 		
 	if (!isVerify) return reply(userB())
+
+//--- your foodshop
+
+case 'foodstore':	
+case 'foodshop':	
+
+if (!isVerify) return reply(userB())
+if (isHaspet) return reply(userP())
+	
+const _petshopmoneyfood = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const petshopmoneyfood = _petshopmoneyfood[7]	//--- money
+const petshopdesign2food = _petshopmoneyfood[11]	//--- account design
+
+		
+		const _myaccountpet4shopfood = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+		const mypet4stageshopfood = _myaccountpet4shopfood[1];
+		
+if (mypet4stageshopfood < 2) {		
+
+reply (`𝐹𝑜𝑜𝑑𝑆𝑡𝑜𝑟𝑒
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+𝑆𝑜𝑜𝑛
+${petshopdesign2food} .soon
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+𝐶𝑎𝑠ℎ » ${petshopmoneyfood}$`)
+
+}
+
+else {
+	
+reply (`𝐹𝑜𝑜𝑑𝑆𝑡𝑜𝑟𝑒
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+𝑆𝑜𝑜𝑛
+${petshopdesign2food} .soon
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+𝐶𝑎𝑠ℎ » ${petshopmoneyfood}$`)	
+	
+}
+
+break
+
+//--- your petstore
+
+case 'petstore':		
+
+if (!isVerify) return reply(userB())
+	
+const _petshopmoneyfood2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const petshopmoneyfood2 = _petshopmoneyfood2[7]	//--- money
+const petshopdesign2food2 = _petshopmoneyfood2[11]	//--- account design
+
+		
+		const _myaccountpet4shopfood2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+		const mypet4stageshopfood2 = _myaccountpet4shopfood2[1];
+		
+if (isHaspet)  {		
+
+reply (`⚠️
+𝙱𝚄𝚈𝙸𝙽𝙶 𝙰 𝙽𝙴𝚆 𝙿𝙴𝚃 𝙺𝙸𝙻𝙻𝚂 𝚈𝙾𝚄𝚁 𝙾𝙻𝙳 𝙿𝙴𝚃
+
+𝑃𝑒𝑡𝑆𝑡𝑜𝑟𝑒
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+𝐸𝑙𝑓
+${petshopdesign2food2} .buypet Elf
+𝑈𝑚𝑏𝑟𝑒𝑜𝑛
+${petshopdesign2food2} .buypet Umbreon
+𝐷𝑟𝑎𝑔𝑜𝑛
+${petshopdesign2food2} .buypet Elf
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+𝐶𝑎𝑠ℎ » ${petshopmoneyfood2}$`)
+
+}
+
+else {
+	
+reply (`𝑃𝑒𝑡𝑆𝑡𝑜𝑟𝑒
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+𝐸𝑙𝑓
+${petshopdesign2food2} .buypet Elf
+𝑈𝑚𝑏𝑟𝑒𝑜𝑛
+${petshopdesign2food2} .buypet Umbreon
+𝐷𝑟𝑎𝑔𝑜𝑛
+${petshopdesign2food2} .buypet Elf
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+𝐶𝑎𝑠ℎ » ${petshopmoneyfood2}$`)
+	
+}
+
+break
 			
 // -- User  
 	
