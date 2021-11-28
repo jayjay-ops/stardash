@@ -3519,6 +3519,65 @@ const mypetevolution3 = _pet[42];			//--- Evolution 3
 const mypetevolution4 = _pet[43];			//--- Evolution 4
 const mypetfight = _pet[44];		     	//--- fight
 
+
+		const _myaccountpet4shop2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+		const mypet4stageshop2 = _myaccountpet4shop2[1];
+
+//-- Pet is stage 1		
+if (mypet4stageshop2 < 2) {
+
+if 	(mypetname === `Wild`) {
+		
+reply(`𝑃𝑒𝑡𝑠
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+${mypetdesign} 𝑁𝑎𝑚𝑒 » ${mypetname}
+${mypetdesign} 𝐸𝑣𝑜𝑙𝑢𝑡𝑖𝑜𝑛 » ${mypetshiny}${mypetevolution1}
+${mypetdesign} 𝑀𝑜𝑜𝑑 » ${mypetmood}
+${mypetdesign} 𝐻𝑢𝑛𝑔𝑒𝑟 » ${mypethunger}
+${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+𝑋𝑝 » ${mypetxp}
+𝐿𝑣𝑙 » ${mypetlevel}
+𝑆𝑡𝑎𝑡𝑢𝑠 » ${mypetstatus}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+» .𝑖𝑛𝑓𝑜𝑝𝑒𝑡 «
+» .𝑓𝑟𝑖𝑑𝑔𝑒 «
+» .𝑠𝑜𝑐𝑖𝑎𝑙 «
+» .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+
+𝑃𝑙𝑒𝑎𝑠𝑒 𝑛𝑎𝑚𝑒 𝑦𝑜𝑢𝑟 𝑝𝑒𝑡 𝑤𝑖𝑡ℎ 𝑡ℎ𝑒 𝑐𝑜𝑚𝑚𝑎𝑛𝑑 
+» .petname Star`)
+ 
+}
+ 
+else {
+	
+reply(`𝑃𝑒𝑡𝑠
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+${mypetdesign} 𝑁𝑎𝑚𝑒 » ${mypetname}
+${mypetdesign} 𝐸𝑣𝑜𝑙𝑢𝑡𝑖𝑜𝑛 » ${mypetshiny}${mypetevolution1}
+${mypetdesign} 𝑀𝑜𝑜𝑑 » ${mypetmood}
+${mypetdesign} 𝐻𝑢𝑛𝑔𝑒𝑟 » ${mypethunger}
+${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+𝑋𝑝 » ${mypetxp}
+𝐿𝑣𝑙 » ${mypetlevel}
+𝑆𝑡𝑎𝑡𝑢𝑠 » ${mypetstatus}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+» .𝑖𝑛𝑓𝑜𝑝𝑒𝑡 «
+» .𝑎𝑟𝑚𝑜𝑟 «
+» .𝑓𝑟𝑖𝑑𝑔𝑒 «
+» .𝑠𝑜𝑐𝑖𝑎𝑙 «
+» .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «`)
+	
+} 
+
+}
+
+//-- Pet is stage 2		
+else (mypet4stageshop2 > 1) {
+
 if 	(mypetname === `Wild`) {
 		
 reply(`𝑃𝑒𝑡𝑠
@@ -3566,6 +3625,13 @@ ${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
 » .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «`)
 	
 } 
+
+}
+
+
+
+
+
  
 break 
  
@@ -3870,7 +3936,7 @@ send 𝚙𝚒𝚌𝚝𝚞𝚛𝚎\n➳ Send Picture\n➳ cost: 7$\n${shopd} .sen
 break
 
 
-//--- PetShop
+//--- your PetShop
 
 case 'petshop':	
 case 'pet shop':	
