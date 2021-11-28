@@ -3837,18 +3837,18 @@ if (!isVerify) return reply(userB())
 	
 const _petshopmoney = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const petshopmoney = _petshopmoney[7]	//--- money
-const petshopdesign = _petshopmoney[11]	//--- account design
+const petshopdesign2 = _petshopmoney[11]	//--- account design
 
 reply (`𝑃𝑒𝑡𝑠ℎ𝑜𝑝
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝐵𝑢𝑦 𝑦𝑜𝑢𝑟 𝑜𝑤𝑛 𝑝𝑒𝑡
-${petshopdesign} .petstore
+${petshopdesign2} .petstore
 𝐹𝑜𝑜𝑑
-${petshopdesign} .foodstore
+${petshopdesign2} .foodstore
 𝐶𝑙𝑜𝑡ℎ𝑠
-${petshopdesign} .clothstore
+${petshopdesign2} .clothstore
 𝑊𝑒𝑎𝑝𝑜𝑛𝑠
-${petshopdesign} .weaponstore
+${petshopdesign2} .weaponstore
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝐶𝑎𝑠ℎ »${petshopmoney}$`)
 
