@@ -4093,12 +4093,12 @@ case 'buymilk':
 				let newnumberoffmilk = oldnumberoffmilk + newaddedmilk; 
 
 
-				fs.readFile(`./${sender.split("@")[0]}.fridge.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/food/${sender.split("@")[0]}.milk.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
 					var newValue = data.replace(`${boughtmilk}`, newnumberoffmilk);
 					
-					fs.writeFile(`./${sender.split("@")[0]}.fridge.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/food/${sender.split("@")[0]}.milk.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 					})
 				})
