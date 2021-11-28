@@ -3912,7 +3912,7 @@ ${petshopdesign2} .clothstore
 
 }
 
-else if {		
+else (mypet4stageshop > 2) {		
 
 reply (`𝑃𝑒𝑡𝑠ℎ𝑜𝑝
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
@@ -3927,6 +3927,7 @@ ${petshopdesign2} .weaponstore
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝐶𝑎𝑠ℎ »${petshopmoney}$`)
 
+}
 }
 
 else {
