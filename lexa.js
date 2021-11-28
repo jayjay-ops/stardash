@@ -3893,7 +3893,7 @@ ${petshopdesign2} .petstore
 𝐹𝑜𝑜𝑑
 ${petshopdesign2} .foodstore
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
-𝐶𝑎𝑠ℎ »${petshopmoney}$`)
+𝐶𝑎𝑠ℎ » ${petshopmoney}$`)
 
 }
 
@@ -3908,7 +3908,7 @@ ${petshopdesign2} .foodstore
 𝐶𝑙𝑜𝑡ℎ𝑠
 ${petshopdesign2} .clothstore
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
-𝐶𝑎𝑠ℎ »${petshopmoney}$`)
+𝐶𝑎𝑠ℎ » ${petshopmoney}$`)
 
 }
 
@@ -3925,7 +3925,7 @@ ${petshopdesign2} .clothstore
 𝑊𝑒𝑎𝑝𝑜𝑛𝑠
 ${petshopdesign2} .weaponstore
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
-𝐶𝑎𝑠ℎ »${petshopmoney}$`)
+𝐶𝑎𝑠ℎ » ${petshopmoney}$`)
 
 }
 }
@@ -3937,7 +3937,7 @@ reply (`𝑃𝑒𝑡𝑠ℎ𝑜𝑝
 𝐵𝑢𝑦 𝑦𝑜𝑢𝑟 𝑜𝑤𝑛 𝑝𝑒𝑡
 ${petshopdesign2} .petstore
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
-𝐶𝑎𝑠ℎ »${petshopmoney}$`)	
+𝐶𝑎𝑠ℎ » ${petshopmoney}$`)	
 	
 }
 	
