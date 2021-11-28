@@ -4700,7 +4700,9 @@ const hispetfightxp = _hispetfight[4];				//--- xp
 						const attackdely3 = ms => new Promise(resolve => setTimeout(resolve, ms))
 						await attackdely3(1000) /// waiting 1 second.
 
-reply("done")
+reply(`🩸﹝${petfightname} attacked §{hispetfightname}﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_§{hispetfightname} lost §{myattack} Lp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_${petfightname} gained ${petfightstage} Xp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
+
+
 	break
 
 //-- 
