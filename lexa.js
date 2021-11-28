@@ -4799,7 +4799,7 @@ const petfightchangename = _petfightchangename[7];				//--- name
 					fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
 						if (err) throw err;
 						
-						var newValue = data.replace(`${changename}`, newnamepet);
+						var newValue = data.replace(`${petfightchangename}`, newnamepet);
 						
 						fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
 							if (err) throw err;
