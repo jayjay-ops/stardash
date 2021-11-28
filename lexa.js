@@ -359,7 +359,7 @@ if (isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕�
 
 
 //-- Status
-let prem_ = '𝐹𝑎𝑟𝑚𝑒𝑟'
+let prem_ = '𝐾𝑛𝑖𝑔ℎ𝑡'
 			if (isPrem) {
 			prem_ = '𝑃𝑟𝑜'
 			} 
