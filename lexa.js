@@ -3439,8 +3439,8 @@ else if (args[0] == 'Umbreon') {
 						
 								
 							
-					_haspet.push(sender)
-			fs.writeFileSync('./data/haspet.json', JSON.stringify(_haspet))
+					_Haspet.push(sender)
+			fs.writeFileSync('./data/haspet.json', JSON.stringify(_Haspet))
 			
 			
 break
