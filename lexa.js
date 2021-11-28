@@ -3517,7 +3517,7 @@ const mypetevolution3 = _pet[42];			//--- Evolution 3
 const mypetevolution4 = _pet[43];			//--- Evolution 4
 const mypetfight = _pet[44];		     	//--- fight
 
-if 	(mypetname === `wild`) {
+if 	(mypetname === `Wild`) {
 		
 reply(`𝑃𝑒𝑡𝑠
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
