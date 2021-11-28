@@ -4106,7 +4106,7 @@ case 'buymilk':
 					
 					var newValue = data.replace(`${boughtmilk}`, newnumberoffmilk);
 					
-					fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./${sender.split("@")[0]}.fridge.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 					})
 				})
