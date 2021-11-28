@@ -4083,7 +4083,7 @@ case 'buymilk':
 		const mypetxpmilk = _mypetxpmilk[4];				//--- xp
 
 //-- Fridge 
-		const fridgemilk = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.fridge.json`));
+		const _fridgemilk = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.fridge.json`));
 		
 		const boughtberries = _fridgemilk[1];				//--- Berries
 		const boughtbeef = _fridgemilk[2];				//--- Beef					
