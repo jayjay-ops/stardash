@@ -52,6 +52,7 @@ var nodemailer = require('nodemailer');
 const up = JSON.parse(fs.readFileSync('./data/setting.json'));
 const _welcom = JSON.parse(fs.readFileSync('./data/welcom.json'));
 const _user = JSON.parse(fs.readFileSync('./data/user.json'));
+const _fridge = JSON.parse(fs.readFileSync('./data/fridge.json'));
 const _antilink = JSON.parse(fs.readFileSync('./data/antilink.json'));
 const hit = JSON.parse(fs.readFileSync('./data/totalhit.json'))
 
@@ -260,6 +261,7 @@ const botNumber = Lxa.user.jid
   const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
   const isOwner = ownerNumber.includes(sender)
   const isVerify = _user.includes(sender)
+  const isFridge = _fridge.includes(sender)  
   const isPrem = premium.includes(sender) || isOwner
   const isBan = blocked.includes(sender)
   const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
@@ -4793,6 +4795,36 @@ reply(`⚔️﹝${petfightname} attacked ${hispetfightname}﹞\n-.-.-.-.-.-.-.-.
 
 }
 	break
+
+
+//--- PETS buyfridge
+case 'buyfridge':
+case 'getfridge':
+						
+						if (!isVerify) return reply(userB())
+							if (isFridge) return reply("You already have a fridge")
+								
+							
+					_user.push(sender)
+			fs.writeFileSync('./data/fridge.json', JSON.stringify(_user))
+			
+			capt = `Fridge bought. Open fridge with .fridge`
+			Lxa.sendMessage(from, capt, text, {quoted: mek})
+			
+			
+fs.appendFile(`${sender.split("@")[0]}@s.fridge.json`, `["${pushname}", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]`, function (err) {
+				
+				
+		
+				
+  if (err) throw err;
+  console.log('Fridge Opend.');
+});
+					
+			
+
+									
+			break
 
 //-- PETS change name
 
