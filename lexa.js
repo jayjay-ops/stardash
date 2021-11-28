@@ -5273,37 +5273,37 @@ capt = `${mynewfridgedesign}﹝Got Fridge!﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
 			
-fs.appendFile(`./data/food/${sender.split("@")[0]}.berries.json`, `["${pushname}", "0"]`, function (err) {				
+fs.appendFile(`./data/food/${sender.split("@")[0]}.berries.json`, `["0"]`, function (err) {				
   if (err) throw err;
   console.log('Fridge Opend.');
 });
 
-fs.appendFile(`./data/food/${sender.split("@")[0]}.beef.json`, `["${pushname}", "0"]`, function (err) {				
+fs.appendFile(`./data/food/${sender.split("@")[0]}.beef.json`, `["0"]`, function (err) {				
   if (err) throw err;
   console.log('Fridge Opend.');
 });
 
-fs.appendFile(`./data/food/${sender.split("@")[0]}.sheep.json`, `["${pushname}", "0"]`, function (err) {				
+fs.appendFile(`./data/food/${sender.split("@")[0]}.sheep.json`, `["0"]`, function (err) {				
   if (err) throw err;
   console.log('Fridge Opend.');
 });
-fs.appendFile(`./data/food/${sender.split("@")[0]}.milk.json`, `["${pushname}", "0"]`, function (err) {				
+fs.appendFile(`./data/food/${sender.split("@")[0]}.milk.json`, `["0"]`, function (err) {				
   if (err) throw err;
   console.log('Fridge Opend.');
 });
-fs.appendFile(`./data/food/${sender.split("@")[0]}.starbull.json`, `["${pushname}", "0"]`, function (err) {				
+fs.appendFile(`./data/food/${sender.split("@")[0]}.starbull.json`, `["0"]`, function (err) {				
   if (err) throw err;
   console.log('Fridge Opend.');
 });
-fs.appendFile(`./data/food/${sender.split("@")[0]}.candy.json`, `["${pushname}", "0"]`, function (err) {				
+fs.appendFile(`./data/food/${sender.split("@")[0]}.candy.json`, `["0"]`, function (err) {				
   if (err) throw err;
   console.log('Fridge Opend.');
 });
-fs.appendFile(`./data/food/${sender.split("@")[0]}.cookies.json`, `["${pushname}", "0"]`, function (err) {				
+fs.appendFile(`./data/food/${sender.split("@")[0]}.cookies.json`, `["0"]`, function (err) {				
   if (err) throw err;
   console.log('Fridge Opend.');
 });
-fs.appendFile(`./data/food/${sender.split("@")[0]}.mango.json`, `["${pushname}", "0"]`, function (err) {				
+fs.appendFile(`./data/food/${sender.split("@")[0]}.mango.json`, `["0"]`, function (err) {				
   if (err) throw err;
   console.log('Fridge Opend.');
 });														
