@@ -4647,7 +4647,10 @@ const hispetfightxp = _hispetfight[4];				//--- xp
 
 	if (hispetfightstatus === "dead") return reply(`His pet is dead... Truly sorry for him :( \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nIt will be remembered\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`) 
 
-if (number(petfightstage) < number(hispetfightstage)) {
+
+let mypetdata = number(petfightstage)
+let hispetdata = number(hispetfightstage)
+if (mypetdata < hispetdata) {
 
 	let hisattack = Number(hisfightpower);
 				let myhealth = Number(mypetfighthealth);
