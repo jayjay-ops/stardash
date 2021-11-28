@@ -4028,7 +4028,17 @@ const petshopdesign2food = _petshopmoneyfood[11]	//--- account design
 		
 		const _myaccountpet4shopfood = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
 		const mypet4stageshopfood = _myaccountpet4shopfood[1];
-		
+
+if (!isFridge) {
+	
+reply (`-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+Please buy a fridge fist. >> .buyfridge
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃`)
+	
+}
+
+else {		
+
 if (mypet4stageshopfood < 2) {		
 
 reply (`𝐹𝑜𝑜𝑑𝑆𝑡𝑜𝑟𝑒
@@ -4049,6 +4059,7 @@ ${petshopdesign2food} .soon
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝐶𝑎𝑠ℎ » ${petshopmoneyfood}$`)	
 	
+}
 }
 
 break
