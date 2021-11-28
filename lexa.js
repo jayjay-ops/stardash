@@ -5281,7 +5281,7 @@ capt = `${mynewfridgedesign}﹝Got Fridge!﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
 			
-fs.appendFile(`${sender.split("@")[0]}@s.fridge.json`, `["${pushname}", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]`, function (err) {
+fs.appendFile(`${sender.split("@")[0]}.fridge.json`, `["${pushname}", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]`, function (err) {
 				
 				
   if (err) throw err;
