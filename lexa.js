@@ -896,7 +896,7 @@ case 'slot':
 		const slot9 = _slot[Math.floor(Math.random() * _slot.length)]
 	
 	
-if 	(slotme7 < 100) {
+if 	(slotme7 < 99) {
 	
 				let ps = Number(slotme7);
 
@@ -1022,7 +1022,7 @@ reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - -
 }
 }
 
-else if 	(slotme7 > 100) {
+else if 	(slotme7 > 99) {
 	
 					let ps = Number(slotme7);
 
