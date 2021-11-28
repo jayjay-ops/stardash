@@ -4811,7 +4811,7 @@ const petfightchangename = _petfightchangename[7];				//--- name
 								await newnamemoneydelaypet(1000) /// waiting 1 second.
 
  
-								reply(`Changed pet name from *${petfightchangename}* to *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_It sure likes its new name :)\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
+								reply(`Changed pet name from *${petfightchangename}* to *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_It sure likes its new name :)_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
       
 		break
 
