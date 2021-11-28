@@ -3576,7 +3576,7 @@ ${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
 }
 
 //-- Pet is stage 2		
-else (mypet4stageshop2 > 1) {
+else {
 
 if 	(mypetname === `Wild`) {
 		
