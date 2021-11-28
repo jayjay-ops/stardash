@@ -4101,7 +4101,7 @@ case 'buymilk':
 				let newnumberoffmilk = oldnumberoffmilk + newaddedmilk; 
 
 
-				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./${sender.split("@")[0]}.fridge.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
 					var newValue = data.replace(`${boughtmilk}`, newnumberoffmilk);
@@ -4136,7 +4136,7 @@ case 'buymilk':
 							const changemoneynewformilk = _changeformilkmoney1[7]	//--- money	
 							const cmdesignnformilk = _changeformilkmoney1[11]	//--- money	design
  
-					reply(`${cmdesignnformilk} Bought one milk\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changemoneynewformilk}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Food`)
+					reply(`${cmdesignnformilk} Bought one milk\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changemoneynewformilk}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n💟 StarDash Food`)
 					
 		break
 
