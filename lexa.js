@@ -3507,9 +3507,7 @@ const mypetevolution4 = _pet[43];			//--- Evolution 4
 const mypetfight = _pet[44];		     	//--- fight
 
 		
-reply(`» ${pushname}
-» ${prem_}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+reply(`-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 ${mypetdesign} 𝑁𝑎𝑚𝑒 » ${mypetname}
 ${mypetdesign} 𝐸𝑣𝑜𝑙𝑢𝑡𝑖𝑜𝑛 » ${mypetshiny}${mypetevolution1}
 ${mypetdesign} 𝑀𝑜𝑜𝑑 » ${mypetmood}
@@ -3597,8 +3595,7 @@ const mypet2evolution4 = _pet2[43];			//--- Evolution 4
 const mypet2fight = _pet2[44];		     	//--- fight
 
 		
-reply(`» ${pushname}
-» ${prem_}
+reply(`${mypet2name}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 ${mypet2design} 𝑈𝑙𝑡𝑟𝑎 𝑆𝑘𝑖𝑙𝑙 » ${mypet2powertype1} 
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -3685,8 +3682,7 @@ const mypet3evolution4 = _pet3[43];			//--- Evolution 4
 const mypet3fight = _pet3[44];		     	//--- fight
 
 		
-reply(`» ${pushname}
-» ${prem_}
+reply(`${mypet3name}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝑊𝑒𝑎𝑝𝑜𝑛
 » ${mypet3weapon}
@@ -3774,8 +3770,7 @@ case 'social':
 		const mypet4fight = _pet4[44];		     	//--- fight
 
 		
-			reply(`» ${pushname}
-» ${prem_}
+			reply(`» ${mypet4name}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝐹𝑟𝑖𝑒𝑛𝑑𝑠
 » ${mypet4friends}
