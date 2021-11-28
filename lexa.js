@@ -4027,7 +4027,7 @@ case 'foodstore':
 case 'foodshop':	
 
 if (!isVerify) return reply(userB())
-if (isHaspet) return reply(userP())
+if (!isHaspet) return reply(userP())
 	
 const _petshopmoneyfood = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const petshopmoneyfood = _petshopmoneyfood[7]	//--- money
