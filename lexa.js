@@ -3955,25 +3955,25 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 if (isHaspet) {
 	
-let haspetmenu = ".mypet"
+const haspetmenu = ".mypet"
 
 }
 
 else {
 	
-let haspetmenu = ".buypet"
+const haspetmenu = ".buypet"
 
 }
 
 if (isFridge) {
 	
-let hasfridgemenu = ".fridge"	
+const hasfridgemenu = ".fridge"	
 	
 }
 
 else {
 	
-let hasfridgemenu = ".buyfridge"
+const hasfridgemenu = ".buyfridge"
 
 }
 
