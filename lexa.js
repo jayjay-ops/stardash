@@ -4136,7 +4136,7 @@ case 'buymilk':
 							const changemoneynewformilk = _changeformilkmoney1[7]	//--- money	
 							const cmdesignnformilk = _changeformilkmoney1[11]	//--- money	design
  
-					reply(`${cmdesignnformilk} Bought one milk.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changemoneynewformilk}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n🥛 StarDash Food`)
+					reply(`${cmdesignnformilk} Bought one milk\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changemoneynewformilk}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Food`)
 					
 		break
 
