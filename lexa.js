@@ -4011,15 +4011,6 @@ ${petshopdesign2} .petstore
 	
 break
 
-//--- Your account		
-			
-case 'me':
-case 'aboutme':
-case 'account':
-case 'myaccount':
-case 'profile':
-		
-	if (!isVerify) return reply(userB())
 
 //--- your foodshop
 
