@@ -4806,7 +4806,7 @@ case 'getfridge':
 								
 							
 					_user.push(sender)
-			fs.writeFileSync('./data/fridge.json', JSON.stringify(_user))
+			fs.writeFileSync('./data/fridge.json', JSON.stringify(_fridge))
 			
 			capt = `Fridge bought. Open fridge with .fridge`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
