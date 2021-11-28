@@ -4642,11 +4642,85 @@ const hispetfighthealth = _hispetfight[38]; 	    	//--- Health
 const hispetfightstatus = _hispetfight[9];			//--- status
 const hispetfightpower = _hispetfight[39];    			//--- Power
 const hispetfightenergy = _hispetfight[18];		     	//--- fight
+const hispetfightstage = _petfight[1];				//--- stage
 const hispetfightxp = _hispetfight[4];				//--- xp
 
 	if (hispetfightstatus === "dead") return reply(`His pet is dead... Truly sorry for him :( \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nIt will be remembered\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`) 
 
+if (number(petfightstage) < number(hispetfightstage)) {
 
+	let hisattack = Number(hisfightpower);
+				let myhealth = Number(mypetfighthealth);
+						
+				let myoutcomehealth = myhealth - hisattack; 
+
+				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${hispetfighthealth}`, myoutcomehealth);
+					
+					fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+					})
+				})
+
+						const attackdely5 = ms => new Promise(resolve => setTimeout(resolve, ms))
+						await attackdely5(1000) /// waiting 1 second.
+				
+				let mynewhunger = mypetfighthunger - Number(1); 
+
+				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${petfighthunger}`, mynewhunger);
+					
+					fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
+
+
+				let hisnewhunger = hispetfighthunger - Number(1); 
+
+				fs.readFile(`${value.replace('@','./')}.pet.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${petfighthunger}`, hisnewhunger);
+					
+					fs.writeFile(`${value.replace('@','./')}.pet.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
+				
+				
+						const attackdely6 = ms => new Promise(resolve => setTimeout(resolve, ms))
+						await attackdely6(1000) /// waiting 1 second.
+				
+
+				let hisnewxp = Number(hispetfightxp) + Number(hispetfightstage); 
+
+				fs.readFile(`${value.replace('@','./')}.pet.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${petfightxp}`, hisnewxp);
+					
+					fs.writeFile(`${value.replace('@','./')}.pet.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})				
+
+						const attackdely7 = ms => new Promise(resolve => setTimeout(resolve, ms))
+						await attackdely7(1000) /// waiting 1 second.
+
+reply(`🩸﹝${petfightname} attacked ${hispetfightname}﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_${petfightname} lost ${hisattack} Lp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_${hispetfightname} won and gained ${hispetfightstage} Xp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
+
+
+}
+
+else {	
 				let myattack = Number(petfightpower);
 				let hishealth = Number(hispetfighthealth);
 						
@@ -4700,9 +4774,9 @@ const hispetfightxp = _hispetfight[4];				//--- xp
 						const attackdely3 = ms => new Promise(resolve => setTimeout(resolve, ms))
 						await attackdely3(1000) /// waiting 1 second.
 
-reply(`🩸﹝${petfightname} attacked ${hispetfightname}﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_${hispetfightname} lost ${myattack} Lp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_${petfightname} gained ${petfightstage} Xp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
+reply(`🩸﹝${petfightname} attacked ${hispetfightname}﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_${hispetfightname} lost ${myattack} Lp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_${petfightname} won and gained ${petfightstage} Xp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
 
-
+}
 	break
 
 //-- 
