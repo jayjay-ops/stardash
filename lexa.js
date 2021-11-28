@@ -4132,7 +4132,7 @@ case 'buymilk':
 							const delayformilk2 = ms => new Promise(resolve => setTimeout(resolve, ms))
 							await delayformilk2(1000) /// waiting 1 second.
 
-							const _changemoneyformilk1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+							const _changeformilkmoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 							const changemoneynewformilk = _changeformilkmoney1[7]	//--- money	
 							const cmdesignnformilk = _changeformilkmoney1[11]	//--- money	design
  
