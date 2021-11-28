@@ -4081,7 +4081,7 @@ ${petshopdesign2food2} .buypet Elf
 𝑈𝑚𝑏𝑟𝑒𝑜𝑛
 ${petshopdesign2food2} .buypet Umbreon
 𝐷𝑟𝑎𝑔𝑜𝑛
-${petshopdesign2food2} .buypet Elf
+${petshopdesign2food2} .buypet Dragon
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝐶𝑎𝑠ℎ » ${petshopmoneyfood2}$`)
 
