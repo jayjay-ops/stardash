@@ -4082,18 +4082,10 @@ case 'buymilk':
 		const _mypetxpmilk = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
 		const mypetxpmilk = _mypetxpmilk[4];				//--- xp
 
-//-- Fridge 
-		const _fridgemilk = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.fridge.json`));
-		
-		const boughtberries = _fridgemilk[1];				//--- Berries
-		const boughtbeef = _fridgemilk[2];				//--- Beef					
-		const boughtcandy = _fridgemilk[3];				//--- Candy			
-		const boughtsheep = _fridgemilk[4];				//--- Sheep
-		
-		const boughtmilk = _fridgemilk[5];				//--- Milk	
-		const boughtstarbull = _fridgemilk[6];				//--- StarBull			
-		
-		
+//-- Food
+		const _fridgemilk = JSON.parse(fs.readFileSync(`./data/food/${sender.split("@")[0]}.milk.json`));		
+		const boughtmilk = _fridgemilk[0];				//--- milk	
+			
 	if (yourcashdesignmilk < 5) return reply(`﹝You have not enough money to buy milk. Money needed: 5$ Your money: ${yourcashdesignmilk}$﹞`) 
 		
 				let oldnumberoffmilk = Number(boughtmilk);
@@ -5281,13 +5273,40 @@ capt = `${mynewfridgedesign}﹝Got Fridge!﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
 			
-fs.appendFile(`${sender.split("@")[0]}.fridge.json`, `["${pushname}", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]`, function (err) {
-				
-				
+fs.appendFile(`./data/food/${sender.split("@")[0]}.berries.json`, `["${pushname}", "0"]`, function (err) {				
   if (err) throw err;
   console.log('Fridge Opend.');
 });
-														
+
+fs.appendFile(`./data/food/${sender.split("@")[0]}.beef.json`, `["${pushname}", "0"]`, function (err) {				
+  if (err) throw err;
+  console.log('Fridge Opend.');
+});
+
+fs.appendFile(`./data/food/${sender.split("@")[0]}.sheep.json`, `["${pushname}", "0"]`, function (err) {				
+  if (err) throw err;
+  console.log('Fridge Opend.');
+});
+fs.appendFile(`./data/food/${sender.split("@")[0]}.milk.json`, `["${pushname}", "0"]`, function (err) {				
+  if (err) throw err;
+  console.log('Fridge Opend.');
+});
+fs.appendFile(`./data/food/${sender.split("@")[0]}.starbull.json`, `["${pushname}", "0"]`, function (err) {				
+  if (err) throw err;
+  console.log('Fridge Opend.');
+});
+fs.appendFile(`./data/food/${sender.split("@")[0]}.candy.json`, `["${pushname}", "0"]`, function (err) {				
+  if (err) throw err;
+  console.log('Fridge Opend.');
+});
+fs.appendFile(`./data/food/${sender.split("@")[0]}.cookies.json`, `["${pushname}", "0"]`, function (err) {				
+  if (err) throw err;
+  console.log('Fridge Opend.');
+});
+fs.appendFile(`./data/food/${sender.split("@")[0]}.mango.json`, `["${pushname}", "0"]`, function (err) {				
+  if (err) throw err;
+  console.log('Fridge Opend.');
+});														
 			break
 
 //-- PETS change name
