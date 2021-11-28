@@ -3507,7 +3507,8 @@ const mypetevolution4 = _pet[43];			//--- Evolution 4
 const mypetfight = _pet[44];		     	//--- fight
 
 		
-reply(`-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+reply(`𝑃𝑒𝑡𝑠
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 ${mypetdesign} 𝑁𝑎𝑚𝑒 » ${mypetname}
 ${mypetdesign} 𝐸𝑣𝑜𝑙𝑢𝑡𝑖𝑜𝑛 » ${mypetshiny}${mypetevolution1}
 ${mypetdesign} 𝑀𝑜𝑜𝑑 » ${mypetmood}
