@@ -4777,10 +4777,43 @@ else {
 						const attackdely3 = ms => new Promise(resolve => setTimeout(resolve, ms))
 						await attackdely3(1000) /// waiting 1 second.
 
-reply(`🩸﹝${petfightname} attacked ${hispetfightname}﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_${hispetfightname} lost ${myattack} Lp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_${petfightname} won and gained ${petfightstage} Xp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
+reply(`👑﹝${petfightname} attacked ${hispetfightname}﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_${hispetfightname} lost ${myattack} Lp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_${petfightname} won and gained ${petfightstage} Xp_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
 
 }
 	break
+
+//-- PETS change name
+
+case 'petname': 
+ 
+
+		if (!isVerify) return reply(userB())
+		if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 its name﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nExample .petname Hasy\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets')
+        if (args.length > 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 only one name﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nExample .petname Hasy\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets')
+			
+const _petfightchangename = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+const petfightchangename = _petfightchangename[7];				//--- name
+			
+					let newname = args[0];
+
+					fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
+						if (err) throw err;
+						
+						var newValue = data.replace(`${changename}`, newname);
+						
+						fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
+							if (err) throw err;
+						})
+					})
+
+
+								const newnamemoneydelaypet = ms => new Promise(resolve => setTimeout(resolve, ms))
+								await newnamemoneydelaypet(1000) /// waiting 1 second.
+
+ 
+								reply(`Changed pet name from *${petfightchangename}* to *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n_It sure likes its new name :)\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
+      
+		break
 
 //-- 
 case 'return':
