@@ -4064,10 +4064,12 @@ const petshopmoneyfood2 = _petshopmoneyfood2[7]	//--- money
 const petshopdesign2food2 = _petshopmoneyfood2[11]	//--- account design
 
 		
-		const _myaccountpet4shopfood2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
-		const mypet4stageshopfood2 = _myaccountpet4shopfood2[1];
 		
-if (isHaspet)  {		
+if (isHaspet)  {	
+
+
+		const _myaccountpet4shopfood2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+		const mypet4stageshopfood2 = _myaccountpet4shopfood2[1];	
 
 reply (`⚠️
 𝙱𝚄𝚈𝙸𝙽𝙶 𝙰 𝙽𝙴𝚆 𝙿𝙴𝚃 𝙺𝙸𝙻𝙻𝚂 𝚈𝙾𝚄𝚁 𝙾𝙻𝙳 𝙿𝙴𝚃
