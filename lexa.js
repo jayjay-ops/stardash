@@ -3884,7 +3884,7 @@ if (isHaspet) {
 		const _myaccountpet4shop = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
 		const mypet4stageshop = _myaccountpet4shop[1];
 		
-if (mypet4stageshop = 1) {		
+if (mypet4stageshop < 2) {		
 
 reply (`𝑃𝑒𝑡𝑠ℎ𝑜𝑝
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
@@ -3897,7 +3897,7 @@ ${petshopdesign2} .foodstore
 
 }
 
-else if (mypet4stageshop = 2) {		
+else if (mypet4stageshop === 2) {		
 
 reply (`𝑃𝑒𝑡𝑠ℎ𝑜𝑝
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
