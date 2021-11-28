@@ -4012,6 +4012,7 @@ ${petshopdesign2} .petstore
 break
 
 
+
 //--- your foodshop
 
 case 'foodstore':	
@@ -4100,7 +4101,17 @@ ${petshopdesign2food2} .buypet Elf
 }
 
 break
+
+//--- Your account		
 			
+case 'me':
+case 'aboutme':
+case 'account':
+case 'myaccount':
+case 'profile':
+		
+	if (!isVerify) return reply(userB())
+		
 // -- User  
 	
 			const _myaccount = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
