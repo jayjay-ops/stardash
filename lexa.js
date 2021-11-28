@@ -4651,12 +4651,12 @@ const hispetfightxp = _hispetfight[4];				//--- xp
 						
 				let hisoutcomehealth = hishealth - myattack; 
 
-				fs.readFile(`${args[1].replace('@','./')}.pet.json`, 'utf-8', function(err, data) {
+				fs.readFile(`${value.replace('@','./')}.pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
 					var newValue = data.replace(`${hispetfighthealth}`, hisoutcomehealth);
 					
-					fs.writeFile(`${args[1].replace('@','./')}.pet.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`${value.replace('@','./')}.pet.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 					})
 				})
