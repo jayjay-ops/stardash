@@ -4136,7 +4136,7 @@ case 'buymilk':
 							const changemoneynewformilk = _changeformilkmoney1[7]	//--- money	
 							const cmdesignnformilk = _changeformilkmoney1[11]	//--- money	design
  
-					reply(`${cmdesignnformilk} Bought one *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changemoneynewformilk}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n🥛 StarDash Food`)
+					reply(`${cmdesignnformilk} Bought one milk.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changemoneynewformilk}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n🥛 StarDash Food`)
 					
 		break
 
@@ -5281,7 +5281,7 @@ capt = `${mynewfridgedesign}﹝Got Fridge!﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
 			
-fs.appendFile(`${sender.split("@")[0]}.fridge.json`, `["${pushname}", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]`, function (err) {
+fs.appendFile(`${sender.split("@")[0]}.fridge.json`, `["${pushname}", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]`, function (err) {
 				
 				
   if (err) throw err;
