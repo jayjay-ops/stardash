@@ -4032,7 +4032,8 @@ const petshopdesign2food = _petshopmoneyfood[11]	//--- account design
 if (!isFridge) {
 	
 reply (`-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
-Please buy a fridge fist. >> .buyfridge
+Please buy a fridge fist. 
+>> .buyfridge
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃`)
 	
 }
@@ -4063,6 +4064,92 @@ ${petshopdesign2food} .soon
 }
 
 break
+
+//-- Buy Food
+
+case 'buymilk': 
+  
+	if (!isVerify) return reply(userB())
+    if (!isHaspet) return reply(userP())
+    if (!isFridge) return reply("Please buy a fridge first. Open .foodstore")		
+
+//-- Money and design
+		const _yourcashdesignmilk = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+		const yourcashdesignmilk = _yourcashdesignmilk[7]	//--- money	
+		const changedesignmilk = _changedesignmilk[11]	//--- Changedesignmilk
+		
+//-- XP When sth got bought		
+		const _mypetxpmilk = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+		const mypetxpmilk = _mypetxpmilk[4];				//--- xp
+
+//-- Fridge 
+		const fridgemilk = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.fridge.json`));
+		
+		const boughtberries = _fridgemilk[1];				//--- Berries
+		const boughtbeef = _fridgemilk[2];				//--- Beef					
+		const boughtcandy = _fridgemilk[3];				//--- Candy			
+		const boughtsheep = _fridgemilk[4];				//--- Sheep
+		
+		const boughtmilk = _fridgemilk[5];				//--- Milk	
+		const boughtstarbull = _fridgemilk[6];				//--- StarBull			
+		
+		
+	if (yourcashdesignmilk < 5) return reply(`﹝You have not enough money to buy milk. Money needed: 5$ Your money: ${yourcashdesignmilk}$﹞`) 
+		
+				let oldnumberoffmilk = Number(boughtmilk);
+				let newaddedmilk = Number(1);
+				let newnumberoffmilk = oldnumberoffmilk + newaddedmilk; 
+
+
+				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${boughtmilk}`, newnumberoffmilk);
+					
+					fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+					})
+				})
+
+							const delaydesignmilk1 = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delaydesignmilk1(1000) /// waiting 1 second
+
+				let youroldmoneyformilk = Number(yourcashdesignmilk);
+				let changecostformilk = Number(5);
+				let newmoneyformilk = youroldmoneyformilk - changecostformilk; 
+
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${yourcashdesignmilk}`, newmoneyformilk);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
+
+							const delayformilk2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await delayformilk2(1000) /// waiting 1 second.
+
+							const _changemoneyformilk1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+							const changemoneynewformilk = _changeformilkmoney1[7]	//--- money	
+							const cmdesignnformilk = _changeformilkmoney1[11]	//--- money	design
+ 
+					reply(`${cmdesignnformilk} Bought one *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changemoneynewformilk}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n🥛 StarDash Food`)
+					
+		break
+
+
+
+
+
+
+
+
+
+
+
 
 //--- your petstore
 
@@ -4114,6 +4201,8 @@ ${petshopdesign2food2} .buypet Dragon
 }
 
 break
+
+
 
 //--- Your account		
 			
