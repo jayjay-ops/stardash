@@ -31,6 +31,11 @@ const ownerB = () => {
 }
 
 //--
+const userP = () => {
+  return '⌯   ﹝You dont have a pet. Visit .petshop.﹞'
+}
+
+//--
 const premi = () => {
   return '⌯   ﹝𝚃𝚑𝚒𝚜 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 𝚒𝚜 𝚘𝚗𝚕𝚢 𝚟𝚒𝚙.﹞'
 }
@@ -51,4 +56,4 @@ const Badmin = () => {
 }
 
 
-module.exports =  { wait, stick, err, group, ban, ownerB, premi, userB, admin, Badmin } 
+module.exports =  { wait, stick, err, group, ban, ownerB, userP, premi, userB, admin, Badmin } 

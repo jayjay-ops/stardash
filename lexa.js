@@ -125,7 +125,7 @@ const { boob} = require('./help/nsfw/boob');
 
 const { bgithub, showapk, bnews} = require('./help/show');
 const { termux } = require('./help/termux');
-const { wait, stick, err, group, ban, ownerB, premi, userB, admin, Badmin } = require('./help/respon');
+const { wait, stick, err, group, ban, ownerB, userP, premi, userB, admin, Badmin } = require('./help/respon');
 
 //-- Setting
 const prefix = up.prefix
