@@ -4838,7 +4838,8 @@ case 'willkommen':
 case 'fight': 
 case 'attack': 
   
-	if (!isVerify) return reply(userB())	
+	if (!isVerify) return reply(userB())
+    if (!isHaspet) return reply(userPet())		
 	if (args.length < 1) return reply('﹝Tag the pet whom you want to fight.﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nExample:\n.fight @stardash')
 	if (args.length > 1) return reply('⌯   ﹝leave no space.  NOT  . fight @star but  .fight @Star﹞')
 
