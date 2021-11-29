@@ -4509,11 +4509,11 @@ else {
 
 	reply(`⍗ 𝚄𝙿𝙳𝙰𝚃𝙴
 
-	𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑝𝑑𝑎𝑡𝑒 𝑦𝑜𝑢𝑟 𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑎𝑐𝑐𝑜𝑢𝑛𝑡, 𝑏𝑦 𝑡𝑦𝑝𝑖𝑛𝑔 
-	» .up
+𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑝𝑑𝑎𝑡𝑒 𝑦𝑜𝑢𝑟 𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑎𝑐𝑐𝑜𝑢𝑛𝑡, 𝑏𝑦 𝑡𝑦𝑝𝑖𝑛𝑔 
+» .up
 	
-	𝑊ℎ𝑎𝑡 𝑖𝑠 𝑛𝑒𝑤? 
-	» Accounts dont break anymore so often!`)
+𝑊ℎ𝑎𝑡 𝑖𝑠 𝑛𝑒𝑤? 
+» Accounts dont break anymore so often!`)
 
  }
 
@@ -5341,7 +5341,7 @@ case 'up':
 						_isUpdate.push(sender)
 				fs.writeFileSync('./data/isUpdate.json', JSON.stringify(_isUpdate))
 				
-				
+
 				let updatephonenumber = updatedphonenumber;
 
 				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
