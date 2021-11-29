@@ -5342,7 +5342,7 @@ case 'up':
 				fs.writeFileSync('./data/isUpdate.json', JSON.stringify(_isUpdate))
 				
 
-				let updatephonenumber = updatedphonenumber;
+				let updatephonenumber = "updatedphonenumber";
 
 				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
