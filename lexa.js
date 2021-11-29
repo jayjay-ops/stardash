@@ -5347,7 +5347,7 @@ case 'up':
 				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
-					var newValue = data.replace(`${upmenumber}`, updatedphonenumber);
+					var newValue = data.replace(`${upmenumber}`, updatephonenumber);
 					
 					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
