@@ -4287,6 +4287,8 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			return `${day}. ${myMonths[bulan]} ${year}`
 }	
 
+if (isUpdate) {
+
 if (isHaspet) {
 
 if 	(myclaimed === `${tanggal()}`) {
@@ -4500,8 +4502,20 @@ ${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
 	}
 	
 }
-
 }
+}
+
+else {
+
+	reply(`⍗ 𝚄𝙿𝙳𝙰𝚃𝙴
+
+	𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑝𝑑𝑎𝑡𝑒 𝑦𝑜𝑢𝑟 𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑎𝑐𝑐𝑜𝑢𝑛𝑡, 𝑏𝑦 𝑡𝑦𝑝𝑖𝑛𝑔 
+	» .up
+	
+	𝑊ℎ𝑎𝑡 𝑖𝑠 𝑛𝑒𝑤? 
+	» Accounts dont break anymore so often!`)
+
+ }
 
 break
 
@@ -5312,6 +5326,59 @@ fs.appendFile(`./data/food/${sender.split("@")[0]}.mango.json`, `["0"]`, functio
 });														
 			break
 
+//--- UPDATE ACCOUNT
+case 'up':
+
+							
+							if (!isVerify) return reply(userB())
+								if (isUpdate) return reply("✅ 𝐴𝑙𝑟𝑒𝑎𝑑𝑦 𝑢𝑝-𝑡𝑜-𝑑𝑎𝑡𝑒")
+										
+								const _upme = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+								const upmedesign = _upme[11]	//--- account design
+								const upmenumber = _upme[0]	//--- account Number
+								const upmeid = _upme[5]	//--- account id
+								
+						_isUpdate.push(sender)
+				fs.writeFileSync('./data/isUpdate.json', JSON.stringify(_isUpdate))
+				
+				
+				let updatephonenumber = updatedphonenumber;
+
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${upmenumber}`, updatedphonenumber);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+					})
+				})
+
+				const updatedelay1 = ms => new Promise(resolve => setTimeout(resolve, ms))
+				await updatedelay1(1000) /// waiting 1 second.
+
+				let updatedid = noidyet;
+
+				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${upmeid}`, updatedid);
+					
+					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+					})
+				})
+							const updatedelay2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+							await updatedelay2(1000) /// waiting 1 second.
+
+
+
+							capt = `${upmedesign}𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦 𝑈𝑝𝑑𝑎𝑡𝑒𝑑\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nYour account is now Up-To-Date!\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Accounts`
+							Lxa.sendMessage(from, capt, text, {quoted: mek})
+							
+	break				
+	
+				
 //-- PETS change name
 
 case 'petname': 
