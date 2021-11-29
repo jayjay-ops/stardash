@@ -2974,7 +2974,8 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			return `${day}. ${myMonths[bulan]} ${year}`
 }			
 
-
+_isUpdate.push(sender)
+fs.writeFileSync('./data/isUpdate.json', JSON.stringify(_isUpdate))
 						
 					_user.push(sender)
 			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
@@ -2982,9 +2983,9 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			capt = `𝔖𝔱𝔞𝔯𝔇𝔞𝔰𝔥 \nRegistered! *${pushname}*\n𝙲𝚑𝚎𝚌𝚔 𝚢𝚘𝚞𝚛 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚠𝚒𝚝𝚑 .me`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
-			const userid = Math.floor(Math.random() * 1000000000)
+
 			
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , " .setage", " .setemojie", "${userid}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", " .setemail", "⚠️ type .updateme", "empty"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["updatenumber", "${pushname}", "${args[0]}" , " .setage", " .setemojie", "nouserid", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", " .setemail", "⚠️ type .updateme", "empty"]`, function (err) {
 				
 				
 		
@@ -3000,14 +3001,6 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			
 //--- verify after deleted
 case 'verifyagain':
-
-reply (`What is the password?`)	
-
-	break
-	
-case 'password':	
-
-
 
 
 
@@ -3052,13 +3045,12 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 
-						const userid2 = Math.floor(Math.random() * 1000000000)
 			
 			
 			
 			
 
-			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["+${sender.split("@")[0]}", "${pushname}", "${args[0]}" , ".setage", ".setemojie", "${userid2}", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", ".setemail", "⚠️ type .updateme", "empty"]`, function (err) {
+			fs.appendFile(`${sender.split("@")[0]}@s.whatsapp.net.json`, `["updatednumber", "${pushname}", "${args[0]}" , ".setage", ".setemojie", "updatedid", "1", "100", "-", "${tanggal()}", "-", "⌥", "1", ".setemail", "⚠️ type .updateme", "empty"]`, function (err) {
 				
   if (err) throw err;
   
@@ -5357,7 +5349,7 @@ case 'up':
 				const updatedelay1 = ms => new Promise(resolve => setTimeout(resolve, ms))
 				await updatedelay1(1000) /// waiting 1 second.
 
-				let updatedid = noidyet;
+				let updatedid = "noidyet";
 
 				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
