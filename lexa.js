@@ -1322,7 +1322,7 @@ const numberspam = _numberspam[0]	//---  number spam
 const _hourspam = JSON.parse(fs.readFileSync(`./data/spam/${sender.split("@")[0]}.hourspam.json`));	
 const hourspam = _hourspam[0]	//---  hour spam
 
-function kyun(seconds){
+function hours(seconds){
 	function pad(s){
 	  return (s < 10 ? '0' : '') + s;
 	}
@@ -1330,7 +1330,29 @@ function kyun(seconds){
 	var minutes = Math.floor(seconds % (60*60) / 60);
 	var seconds = Math.floor(seconds % 60);
   
-	return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+	return `${pad(hours)}`
+  }
+
+  function minutes(seconds){
+	function pad(s){
+	  return (s < 10 ? '0' : '') + s;
+	}
+	var hours = Math.floor(seconds / (60*60));
+	var minutes = Math.floor(seconds % (60*60) / 60);
+	var seconds = Math.floor(seconds % 60);
+  
+	return `${pad(minutes)}`
+  }
+
+  function seconds(seconds){
+	function pad(s){
+	  return (s < 10 ? '0' : '') + s;
+	}
+	var hours = Math.floor(seconds / (60*60));
+	var minutes = Math.floor(seconds % (60*60) / 60);
+	var seconds = Math.floor(seconds % 60);
+  
+	return `${pad(seconds)}`
   }
   function tanggal(){
   myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
@@ -1348,6 +1370,25 @@ function kyun(seconds){
 
 let spamseconds = Number(secondspam) - Number(seconds)
 
+if ((((minutes == minutespam) && hours == hourspam) && tanggal == datespam) && spamseconds < Number(10)) {
+
+	reply (`${slotdesign} Please dont spam. It can result in a ban. And you may loose XP.`)
+
+	let spamnumber = Number(1);
+	let newspamnumber = spamnumber + numberspam; 
+	fs.readFile(`./${sender.split("@")[0]}.numberspam.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		
+		var newValue = data.replace(`${slotme7}`, newnumberspam);
+		
+		fs.writeFile(`./${sender.split("@")[0]}.numberspam.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('1 spam added :(');
+		})
+	})
+}
+
+else {}
 
 exec(`rm -rf ./data/spam/secondspam.json`)
 exec(`rm -rf ./data/spam/minutespam.json`)
@@ -1376,25 +1417,7 @@ fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `['${second
 
 
 
-if ((((minutes == minutespam) && hours == hourspam) && tanggal == datespam) && spamseconds < Number(10)) {
 
-	reply (`${slotdesign} Please dont spam. It can result in a ban. And you may loose XP.`)
-
-	let spamnumber = Number(1);
-	let newspamnumber = spamnumber + numberspam; 
-	fs.readFile(`./${sender.split("@")[0]}.numberspam.json`, 'utf-8', function(err, data) {
-		if (err) throw err;
-		
-		var newValue = data.replace(`${slotme7}`, newnumberspam);
-		
-		fs.writeFile(`./${sender.split("@")[0]}.numberspam.json`, newValue, 'utf-8', function(err, data) {
-			if (err) throw err;
-			console.log('1 spam added :(');
-		})
-	})
-}
-
-else {}
 
 
 break
