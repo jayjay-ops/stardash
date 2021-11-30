@@ -4747,13 +4747,26 @@ if (!isUpdate) return reply ("Please update your account with .up")
 
 	const _myaccount2leader = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 	const mydesignleader = _myaccount2leader[11];			//--- account design
+	const myxpleader = _myaccount2leader[6];			//--- account design
 
+	if (userxpleader > leaderleaderboardxp) {
+		
+		exec(`rm -rf xp.json`)
+
+		const delaydesign1claims11 = ms => new Promise(resolve => setTimeout(resolve, ms))
+        await delaydesign1claims11(1000) /// waiting 1 second.
+
+	fs.appendFile(`xp.json`, `["${userxpleader}", "${pushname}", "${userstatusleader}"]`, function (err) {				
+		if (err) throw err;
+		console.log('Winner Opend.');
+	  });
 
 	reply(`𝐿𝑒𝑎𝑑𝑒𝑟𝑏𝑜𝑎𝑟𝑑
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ${mydesignleader} 𝐿𝑒𝑎𝑑𝑒𝑟 » ${leaderleaderboardwinner}
 ${mydesignleader} 𝑥𝑝 » ${leaderleaderboardxp}
 ${mydesignleader} 𝑆𝑡𝑎𝑡𝑢𝑠 » ${leaderleaderboardstatus}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ${mydesignleader} 𝑌𝑜𝑢𝑟𝑋𝑝 » ${userxpleader}
 ${mydesignleader} 𝑌𝑜𝑢𝑟𝑆𝑡𝑎𝑡𝑢𝑠 » ${userstatusleader}
