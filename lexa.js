@@ -4059,84 +4059,6 @@ ${petshopdesign2food} .soon
 
 break
 
-//-- Buy Food
-
-case 'buymilk': 
-  
-	if (!isVerify) return reply(userB())
-    if (!isHaspet) return reply(userP())
-    if (!isFridge) return reply("Please buy a fridge first. Open .foodstore")		
-
-//-- Money and design
-		const _yourcashdesignmilk = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-		const yourcashdesignmilk = _yourcashdesignmilk[7]	//--- money	
-		const changedesignmilk = _yourcashdesignmilk[11]	//--- Changedesignmilk
-		
-//-- XP When sth got bought		
-		const _mypetxpmilk = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
-		const mypetxpmilk = _mypetxpmilk[4];				//--- xp
-
-//-- Food
-		const _fridgemilk = JSON.parse(fs.readFileSync(`./data/food/${sender.split("@")[0]}.milk.json`));		
-		const boughtmilk = _fridgemilk[0];				//--- milk	
-			
-	if (yourcashdesignmilk < 5) return reply(`﹝You have not enough money to buy milk. Money needed: 5$ Your money: ${yourcashdesignmilk}$﹞`) 
-		
-				let oldnumberoffmilk = Number(boughtmilk);
-				let newaddedmilk = Number(1);
-				let newnumberoffmilk = oldnumberoffmilk + newaddedmilk; 
-
-
-				fs.readFile(`./data/food/${sender.split("@")[0]}.milk.json`, 'utf-8', function(err, data) {
-					if (err) throw err;
-					
-					var newValue = data.replace(`${boughtmilk}`, newnumberoffmilk);
-					
-					fs.writeFile(`./data/food/${sender.split("@")[0]}.milk.json`, newValue, 'utf-8', function(err, data) {
-						if (err) throw err;
-					})
-				})
-
-							const delaydesignmilk1 = ms => new Promise(resolve => setTimeout(resolve, ms))
-							await delaydesignmilk1(1000) /// waiting 1 second
-
-				let youroldmoneyformilk = Number(yourcashdesignmilk);
-				let changecostformilk = Number(5);
-				let newmoneyformilk = youroldmoneyformilk - changecostformilk; 
-
-				fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-					if (err) throw err;
-					
-					var newValue = data.replace(`${yourcashdesignmilk}`, newmoneyformilk);
-					
-					fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
-						if (err) throw err;
-						console.log('Done!');
-					})
-				})
-				
-
-							const delayformilk2 = ms => new Promise(resolve => setTimeout(resolve, ms))
-							await delayformilk2(1000) /// waiting 1 second.
-
-							const _changeformilkmoney1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-							const changemoneynewformilk = _changeformilkmoney1[7]	//--- money	
-							const cmdesignnformilk = _changeformilkmoney1[11]	//--- money	design
- 
-					reply(`${cmdesignnformilk} Bought one milk\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nMoney left: ${changemoneynewformilk}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n💟 StarDash Food`)
-					
-		break
-
-
-
-
-
-
-
-
-
-
-
 
 //--- your petstore
 
@@ -5280,40 +5202,11 @@ capt = `${mynewfridgedesign}﹝Got Fridge!﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
 			
-fs.appendFile(`./data/food/${sender.split("@")[0]}.berries.json`, `["0"]`, function (err) {				
+fs.appendFile(`./data/food/${sender.split("@")[0]}.fridge.json`, `["0"]`, function (err) {				
   if (err) throw err;
   console.log('Fridge Opend.');
 });
-
-fs.appendFile(`./data/food/${sender.split("@")[0]}.beef.json`, `["0"]`, function (err) {				
-  if (err) throw err;
-  console.log('Fridge Opend.');
-});
-
-fs.appendFile(`./data/food/${sender.split("@")[0]}.sheep.json`, `["0"]`, function (err) {				
-  if (err) throw err;
-  console.log('Fridge Opend.');
-});
-fs.appendFile(`./data/food/${sender.split("@")[0]}.milk.json`, `["0"]`, function (err) {				
-  if (err) throw err;
-  console.log('Fridge Opend.');
-});
-fs.appendFile(`./data/food/${sender.split("@")[0]}.starbull.json`, `["0"]`, function (err) {				
-  if (err) throw err;
-  console.log('Fridge Opend.');
-});
-fs.appendFile(`./data/food/${sender.split("@")[0]}.candy.json`, `["0"]`, function (err) {				
-  if (err) throw err;
-  console.log('Fridge Opend.');
-});
-fs.appendFile(`./data/food/${sender.split("@")[0]}.cookies.json`, `["0"]`, function (err) {				
-  if (err) throw err;
-  console.log('Fridge Opend.');
-});
-fs.appendFile(`./data/food/${sender.split("@")[0]}.mango.json`, `["0"]`, function (err) {				
-  if (err) throw err;
-  console.log('Fridge Opend.');
-});														
+											
 			break
 
 //--- UPDATE ACCOUNT
