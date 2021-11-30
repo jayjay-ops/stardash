@@ -4697,7 +4697,7 @@ if ((userxpmyaccount > 100) && userxpmyaccount < 500) {
 		
 		fs.unlink(`xp.json`, function (err) {
 			if (err) throw err;
-			console.log('File deleted!');
+			console.log('File deleted!'); }
 
 	fs.appendFile(`xp.json`, `["${userxpmyaccount}", "${myname2}", "${userstatusmyaccount}"]`, function (err) {				
 		if (err) throw err;
