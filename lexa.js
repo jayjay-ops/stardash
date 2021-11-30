@@ -896,7 +896,7 @@ case 'slot':
 		
 		const _userxpslot = JSON.parse(fs.readFileSync(`./data/xp/${sender.split("@")[0]}.xp.json`));	
 		const userxpslot = _userxpslot[0]	//--- xp
-		let oldxp = Number(userxp);
+		let oldxp = Number(userxpslot);
 
 	if (slotme7 < 7) return reply(`${slotdesign} ﹝You have not enough money to play. Your money: ${slotme7}$﹞`) 
 		  
