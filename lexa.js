@@ -4749,7 +4749,7 @@ if (!isUpdate) return reply ("Please update your account with .up")
 	const mydesignleader = _myaccount2leader[11];			//--- account design
 	const myxpleader = _myaccount2leader[6];			//--- account design
 
-	if (number(userxpleader) > number(leaderleaderboardxp)) {
+	if (Number(userxpleader) > Number(leaderleaderboardxp)) {
 		
 		exec(`rm -rf xp.json`)
 
