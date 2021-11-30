@@ -4375,7 +4375,7 @@ if (isUpdate) {
 
 	const _userxpmyaccount = JSON.parse(fs.readFileSync(`./data/xp/${sender.split("@")[0]}.xp.json`));	
 	const userxpmyaccount = _userxpmyaccount[0]	//--- xp
-	const userstatusmyaccount = _userxpmyaccount[0]	//--- farmer ... 	
+	const userstatusmyaccount = _userxpmyaccount[1]	//--- farmer ... 	
 
 if (isHaspet) {
 
