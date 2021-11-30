@@ -881,13 +881,22 @@ case 'slot':
 
 	if (!isVerify) return reply(userB())
 	if (!isGroup) return reply(group())
+	if (!isUpdate) return reply(`⍗ 𝚄𝙿𝙳𝙰𝚃𝙴
+
+	𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑝𝑑𝑎𝑡𝑒 𝑦𝑜𝑢𝑟 𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑎𝑐𝑐𝑜𝑢𝑛𝑡, 𝑏𝑦 𝑡𝑦𝑝𝑖𝑛𝑔 
+	» .up
+		
+	𝑊ℎ𝑎𝑡 𝑖𝑠 𝑛𝑒𝑤? 
+	» Accounts dont break anymore so often!`)
 	  
 		const _slotme = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 		const slotme7 = _slotme[7]	//--- money	
 	
 		const slotdesign = _slotme[11]	//--- account design
 		
-
+		const _userxpslot = JSON.parse(fs.readFileSync(`./data/xp/${sender.split("@")[0]}.xp.json`));	
+		const userxpslot = _userxpslot[0]	//--- xp
+		let oldxp = Number(userxp);
 
 	if (slotme7 < 7) return reply(`${slotdesign} ﹝You have not enough money to play. Your money: ${slotme7}$﹞`) 
 		  
@@ -927,6 +936,9 @@ if 	(slotme7 < 99) {
 		const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 		const slotme8 = _slotme8[7]	//--- money	
 
+        let addxp = Number(50);
+
+
   reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }  
   
@@ -950,6 +962,8 @@ else if (slot1 == slot2) {
 
 					const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 					const slotme8 = _slotme8[7]	//--- money	
+
+					let addxp = Number(10);
 
 	reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }
@@ -975,6 +989,8 @@ else if (slot2 == slot3) {
 				const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 				const slotme8 = _slotme8[7]	//--- money	
 
+				let addxp = Number(10);
+
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)   
 }
 
@@ -998,6 +1014,8 @@ else if (slot1 == slot3) {
 
 					const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 					const slotme8 = _slotme8[7]	//--- money	
+
+					let addxp = Number(10);
 
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`) 
 
@@ -1023,6 +1041,8 @@ reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - -
 
 				const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 				const slotme8 = _slotme8[7]	//--- money	
+
+				let addxp = Number(2);
 	 
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }
@@ -1053,6 +1073,8 @@ else if 	(slotme7 > 99) {
 		const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 		const slotme8 = _slotme8[7]	//--- money	
 
+		let addxp = Number(50);
+
   reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }  
   
@@ -1076,6 +1098,8 @@ else if (slot1 == slot2) {
 
 					const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 					const slotme8 = _slotme8[7]	//--- money	
+
+					let addxp = Number(10);
 
 	reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }
@@ -1101,6 +1125,8 @@ else if (slot2 == slot3) {
 				const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 				const slotme8 = _slotme8[7]	//--- money	
 
+				let addxp = Number(10);
+
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)   
 }
 
@@ -1124,6 +1150,8 @@ else if (slot1 == slot3) {
 
 					const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 					const slotme8 = _slotme8[7]	//--- money	
+
+					let addxp = Number(10);
 
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`) 
 
@@ -1149,10 +1177,25 @@ reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - -
 
 				const _slotme8 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 				const slotme8 = _slotme8[7]	//--- money	
+
+				let addxp = Number(2);
 	 
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }
 }
+
+let newxp = oldxp + addxp; 
+
+fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+	if (err) throw err;
+	
+	var newValue = data.replace(`${userxp}`, newxp);
+	
+	fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+		if (err) throw err;
+		console.log('Gained xp!');
+	})
+})
 
 break
 
@@ -4203,6 +4246,9 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 
 if (isUpdate) {
 
+	const _userxpmyaccount = JSON.parse(fs.readFileSync(`./data/xp/${sender.split("@")[0]}.xp.json`));	
+	const userxpmyaccount = _userxpmyaccount[0]	//--- xp
+
 if (isHaspet) {
 
 if 	(myclaimed === `${tanggal()}`) {
@@ -4219,6 +4265,9 @@ if 	(myclaimed === `${tanggal()}`) {
 𓂸 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 𓂸 𝑀𝑜𝑜𝑑 » ${mymood2}
 𓂸 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+𓂸 𝑋𝑝 » ${userxpmyaccount}
+𓂸 𝑋𝑝 » ${userxpmyaccount}
+𓂸 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑚𝑦𝑝𝑒𝑡 «
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -4241,7 +4290,7 @@ ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
 ${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 ${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
-${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+${mydesign2} 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑚𝑦𝑝𝑒𝑡 «
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -4269,6 +4318,7 @@ else {
 𓂸 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 𓂸 𝑀𝑜𝑜𝑑 » ${mymood2}
 𓂸 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+𓂸 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑚𝑦𝑝𝑒𝑡 «
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -4291,7 +4341,7 @@ ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
 ${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 ${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
-${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+${mydesign2} 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑚𝑦𝑝𝑒𝑡 «
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -4327,6 +4377,7 @@ if 	(myclaimed === `${tanggal()}`) {
 𓂸 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 𓂸 𝑀𝑜𝑜𝑑 » ${mymood2}
 𓂸 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+𓂸 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -4349,7 +4400,7 @@ ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
 ${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 ${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
-${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+${mydesign2} 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -4377,6 +4428,7 @@ else {
 𓂸 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 𓂸 𝑀𝑜𝑜𝑑 » ${mymood2}
 𓂸 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+𓂸 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -4399,7 +4451,7 @@ ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
 ${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 ${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
-${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
+${mydesign2} 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -5254,7 +5306,10 @@ case 'up':
 							const updatedelay2 = ms => new Promise(resolve => setTimeout(resolve, ms))
 							await updatedelay2(1000) /// waiting 1 second.
 
-
+							fs.appendFile(`./data/xp/${sender.split("@")[0]}.xp.json`, `["1"]`, function (err) {				
+								if (err) throw err;
+								console.log('XP Opend.');
+							  });
 
 							capt = `${upmedesign} 𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦 𝑈𝑝𝑑𝑎𝑡𝑒𝑑\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nYour account is now Up-To-Date!\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Accounts`
 							Lxa.sendMessage(from, capt, text, {quoted: mek})
