@@ -4613,7 +4613,7 @@ fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, 
 	})
 })
 
-if ((userxpmyaccount > 3) && userxpmyaccount < 20) {
+if ((userxpmyaccount > 100) && userxpmyaccount < 500) {
         let newaccountstatus = "Knight"; 
 
         fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
@@ -4629,8 +4629,40 @@ if ((userxpmyaccount > 3) && userxpmyaccount < 20) {
 
 	}
 
-	else if ((userxpmyaccount > 19) && userxpmyaccount < 60) {
+	else if ((userxpmyaccount > 500) && userxpmyaccount < 1000) {
 		let newaccountstatus = "King"; 
+
+        fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+            if (err) throw err;
+            
+            var newValue = data.replace(`${userstatusmyaccount}`, newaccountstatus);
+            
+            fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+                if (err) throw err;
+                console.log('Gained xp!');
+            })
+        })
+
+	}
+
+	else if ((userxpmyaccount > 1000) && userxpmyaccount < 10000) {
+		let newaccountstatus = "Legend"; 
+
+        fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+            if (err) throw err;
+            
+            var newValue = data.replace(`${userstatusmyaccount}`, newaccountstatus);
+            
+            fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+                if (err) throw err;
+                console.log('Gained xp!');
+            })
+        })
+
+	}
+
+	else if ((userxpmyaccount > 10000) && userxpmyaccount < 11000) {
+		let newaccountstatus = "God"; 
 
         fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
