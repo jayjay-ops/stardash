@@ -4613,8 +4613,8 @@ fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, 
 	})
 })
 
-if ((userxpmyaccount > 10) && userxpmyaccount < 20) {
-        let newaccountstatus = "𝐾𝑛𝑖𝑔ℎ𝑡"; 
+if ((userxpmyaccount > 3) && userxpmyaccount < 20) {
+        let newaccountstatus = "Knight"; 
 
         fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
@@ -4630,7 +4630,7 @@ if ((userxpmyaccount > 10) && userxpmyaccount < 20) {
 	}
 
 	else if ((userxpmyaccount > 19) && userxpmyaccount < 60) {
-		let newaccountstatus = "𝐾𝑖𝑛𝑔"; 
+		let newaccountstatus = "King"; 
 
         fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
