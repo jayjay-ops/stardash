@@ -4693,18 +4693,6 @@ if ((userxpmyaccount > 100) && userxpmyaccount < 500) {
 
 	else {}
 
-	if (userxpmyaccount > myleaderboardxp) {
-		
-		exec(`rm -rf xp.json`)
-
-	fs.appendFile(`xp.json`, `["${userxpmyaccount}", "${myname2}", "${userstatusmyaccount}"]`, function (err) {				
-		if (err) throw err;
-		console.log('Winner Opend.');
-	  });
-
-}
-
-else {}
 
 }
 
