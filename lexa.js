@@ -1189,7 +1189,7 @@ let newxp = oldxp + addxp;
 fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
 	
-	var newValue = data.replace(`${userxp}`, newxp);
+	var newValue = data.replace(`${userxpslot}`, newxp);
 	
 	fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
 		if (err) throw err;
