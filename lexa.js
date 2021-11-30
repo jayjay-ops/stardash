@@ -365,12 +365,12 @@ if (isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕�
 
 
 //-- Status
-let prem_ = '𝐾𝑛𝑖𝑔ℎ𝑡'
+let prem_ = '𝚞𝚜𝚎𝚛'
 			if (isPrem) {
 			prem_ = '𝑃𝑟𝑜'
 			} 
 			if (isOwner) {
-			prem_ = '𝐾𝑖𝑛𝑔'
+			prem_ = '𝙾𝚠𝚗𝚎𝚛'
 			}
 let Welcome_ = 'Off'
 			if (isWelcom) {
@@ -2176,8 +2176,8 @@ let oorpprsong = pprrsong - oorrsong;
 					const _userxpyoutube = JSON.parse(fs.readFileSync(`./data/xp/${sender.split("@")[0]}.xp.json`));	
 					const userxpyoutube = _userxpyoutube[0]	//--- xp
 
-        let oldxpyoutube = Number(userxp);
-        let addxpyoutube = Number(10);
+        let oldxpyoutube = Number(userxpyoutube);
+        let addxpyoutube = Number(5);
         let newxpyoutube = oldxpyoutube + addxpyoutube; 
 
         fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
