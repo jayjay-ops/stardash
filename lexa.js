@@ -5055,7 +5055,7 @@ case 'donate':
   reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nTransfer Taxes are 5$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nYour Money left: ${newtransfermoney}$\nHis/Her Money left: ${hisnewtransfermoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Transfers`)
   
 
-const _userxptransfer = JSON.parse(fs.readFileSync(`./data/xp/${sender.split("@")[0]}@s.xp.json`));	
+const _userxptransfer = JSON.parse(fs.readFileSync(`./data/xp/${sender.split("@")[0]}.xp.json`));	
 const userxptransfer = _userxptransfer[0]	//--- xp
 
         let oldxptransfer = Number(userxptransfer);
