@@ -4380,6 +4380,8 @@ if (isUpdate) {
 	const _myleaderboardxp = JSON.parse(fs.readFileSync(`xp.json`));	
 	const myleaderboardxp = _myleaderboardxp[0]	//--- xp 
 	const myleaderboardwinner = _myleaderboardxp[1]	//--- xp winner
+	const myleaderboardstatus = _myleaderboardxp[2]	//--- xp status
+
 
 if (isHaspet) {
 
@@ -4755,6 +4757,41 @@ else {
 » You can now gain Xp`)
 
  }
+
+break
+
+// -- Leaderboard
+
+case 'winner':
+case 'leader':
+case 'leaderboard':
+
+if (!isVerify) return reply(userB())
+
+if (!isUpdate) return reply ("Please update your account with .up")
+
+	const _userxpleader = JSON.parse(fs.readFileSync(`./data/xp/${sender.split("@")[0]}.xp.json`));	
+	const userxpleader = _userxpleader[0]	//--- xp
+	const userstatusleader = _userxpleader[1]	//--- farmer ... 
+
+	const _myleaderboardleader = JSON.parse(fs.readFileSync(`xp.json`));	
+	const leaderleaderboardxp = _myleaderboardleader[0]	//--- xp 
+	const leaderleaderboardwinner = _myleaderboardleader[1]	//--- xp winner
+	const leaderleaderboardstatus = _myleaderboardleader[2]	//--- xp status
+
+	const _myaccount2leader = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+	const mydesignleader = _myaccount2leader[11];			//--- account design
+
+
+	reply(`𝐿𝑒𝑎𝑑𝑒𝑟𝑏𝑜𝑎𝑟𝑑
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+${mydesignleader} 𝐿𝑒𝑎𝑑𝑒𝑟 » ${leaderleaderboardwinner}
+${mydesignleader} 𝑥𝑝 » ${leaderleaderboardwinner}
+${mydesignleader} 𝑆𝑡𝑎𝑡𝑢𝑠 » ${leaderleaderboardstatus}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+${mydesignleader} 𝑌𝑜𝑢𝑟𝑋𝑝 » ${userxpleader}
+${mydesignleader} 𝑌𝑜𝑢𝑟𝑆𝑡𝑎𝑡𝑢𝑠 » ${userstatusleader}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-`)
 
 break
 
