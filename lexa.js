@@ -5506,7 +5506,7 @@ case 'up':
 							const updatedelay2 = ms => new Promise(resolve => setTimeout(resolve, ms))
 							await updatedelay2(1000) /// waiting 1 second.
 
-							fs.appendFile(`./data/xp/${sender.split("@")[0]}.xp.json`, `["1", "𝐹𝑎𝑟𝑚𝑒𝑟"]`, function (err) {				
+							fs.appendFile(`./data/xp/${sender.split("@")[0]}.xp.json`, `["1", "Farmer"]`, function (err) {				
 								if (err) throw err;
 								console.log('XP Opend.');
 							  });
