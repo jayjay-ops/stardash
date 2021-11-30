@@ -4394,8 +4394,6 @@ if 	(myclaimed === `${tanggal()}`) {
 𓂸 𝑀𝑜𝑜𝑑 » ${mymood2}
 𓂸 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
 𓂸 𝑋𝑝 » ${userxpmyaccount}
-𓂸 𝑋𝑝 » ${userxpmyaccount}
-𓂸 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑚𝑦𝑝𝑒𝑡 «
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -4418,6 +4416,7 @@ ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
 ${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 ${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
+${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
 ${mydesign2} 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑚𝑦𝑝𝑒𝑡 «
@@ -4469,6 +4468,7 @@ ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
 ${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 ${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
+${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
 ${mydesign2} 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑚𝑦𝑝𝑒𝑡 «
@@ -4528,6 +4528,7 @@ ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
 ${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 ${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
+${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
 ${mydesign2} 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «
@@ -4579,6 +4580,7 @@ ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
 ${mydesign2} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${myemojie2}
 ${mydesign2} 𝑀𝑜𝑜𝑑 » ${mymood2}
+${mydesign2} 𝑀𝑜𝑛𝑒𝑦 » ${mymoney2}$
 ${mydesign2} 𝑋𝑝 » ${userxpmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «
