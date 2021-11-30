@@ -937,6 +937,18 @@ if 	(slotme7 < 99) {
 		const slotme8 = _slotme8[7]	//--- money	
 
         let addxp = Number(50);
+		let newxp = oldxp + addxp; 
+
+		fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+			if (err) throw err;
+			
+			var newValue = data.replace(`${userxpslot}`, newxp);
+			
+			fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+				if (err) throw err;
+				console.log('Gained xp!');
+			})
+		})
 
 
   reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
@@ -964,6 +976,18 @@ else if (slot1 == slot2) {
 					const slotme8 = _slotme8[7]	//--- money	
 
 					let addxp = Number(10);
+					let newxp = oldxp + addxp; 
+
+					fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+						if (err) throw err;
+						
+						var newValue = data.replace(`${userxpslot}`, newxp);
+						
+						fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+							if (err) throw err;
+							console.log('Gained xp!');
+						})
+					})
 
 	reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }
@@ -990,6 +1014,18 @@ else if (slot2 == slot3) {
 				const slotme8 = _slotme8[7]	//--- money	
 
 				let addxp = Number(10);
+				let newxp = oldxp + addxp; 
+
+				fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${userxpslot}`, newxp);
+					
+					fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Gained xp!');
+					})
+				})
 
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)   
 }
@@ -1016,6 +1052,18 @@ else if (slot1 == slot3) {
 					const slotme8 = _slotme8[7]	//--- money	
 
 					let addxp = Number(10);
+					let newxp = oldxp + addxp; 
+
+					fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+						if (err) throw err;
+						
+						var newValue = data.replace(`${userxpslot}`, newxp);
+						
+						fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+							if (err) throw err;
+							console.log('Gained xp!');
+						})
+					})
 
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`) 
 
@@ -1043,6 +1091,18 @@ reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - -
 				const slotme8 = _slotme8[7]	//--- money	
 
 				let addxp = Number(2);
+				let newxp = oldxp + addxp; 
+
+				fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${userxpslot}`, newxp);
+					
+					fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Gained xp!');
+					})
+				})
 	 
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }
@@ -1074,6 +1134,18 @@ else if 	(slotme7 > 99) {
 		const slotme8 = _slotme8[7]	//--- money	
 
 		let addxp = Number(50);
+		let newxp = oldxp + addxp; 
+
+		fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+			if (err) throw err;
+			
+			var newValue = data.replace(`${userxpslot}`, newxp);
+			
+			fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+				if (err) throw err;
+				console.log('Gained xp!');
+			})
+		})
 
   reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }  
@@ -1100,6 +1172,18 @@ else if (slot1 == slot2) {
 					const slotme8 = _slotme8[7]	//--- money	
 
 					let addxp = Number(10);
+					let newxp = oldxp + addxp; 
+
+					fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+						if (err) throw err;
+						
+						var newValue = data.replace(`${userxpslot}`, newxp);
+						
+						fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+							if (err) throw err;
+							console.log('Gained xp!');
+						})
+					})
 
 	reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }
@@ -1126,6 +1210,18 @@ else if (slot2 == slot3) {
 				const slotme8 = _slotme8[7]	//--- money	
 
 				let addxp = Number(10);
+				let newxp = oldxp + addxp; 
+
+				fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					
+					var newValue = data.replace(`${userxpslot}`, newxp);
+					
+					fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Gained xp!');
+					})
+				})
 
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)   
 }
@@ -1152,6 +1248,18 @@ else if (slot1 == slot3) {
 					const slotme8 = _slotme8[7]	//--- money	
 
 					let addxp = Number(10);
+					let newxp = oldxp + addxp; 
+
+					fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+						if (err) throw err;
+						
+						var newValue = data.replace(`${userxpslot}`, newxp);
+						
+						fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+							if (err) throw err;
+							console.log('Gained xp!');
+						})
+					})
 
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`) 
 
@@ -1179,23 +1287,24 @@ reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - -
 				const slotme8 = _slotme8[7]	//--- money	
 
 				let addxp = Number(2);
+				let newxp = oldxp + addxp; 
+
+					fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+						if (err) throw err;
+						
+						var newValue = data.replace(`${userxpslot}`, newxp);
+						
+						fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+							if (err) throw err;
+							console.log('Gained xp!');
+						})
+					})
 	 
 reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝚖𝚘𝚗𝚎𝚢 𝚕𝚎𝚏𝚝 ${slotme8}$`)  
 }
 }
 
-let newxp = oldxp + addxp; 
 
-fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
-	if (err) throw err;
-	
-	var newValue = data.replace(`${userxpslot}`, newxp);
-	
-	fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
-		if (err) throw err;
-		console.log('Gained xp!');
-	})
-})
 
 break
 
