@@ -3308,6 +3308,8 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			
 				//-- Every type starts with this
 				let hunger = Number(10);
+				let health = Number(100);
+				let power = Number(1);
 				let level = Number(1);
 				let stage = Number(1);
 				let xp = Number(0);
@@ -3347,8 +3349,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 if (args[0] == 'elf') {	
 
 				//-- Different with any pet type
-				let health = Number(100);
-				let power = Number(1);
+
 				let pettype = 'Elf';	
 				let evolution1 = 'ElfEgg';	
 				let evolution2 = 'ElfKid';
@@ -3388,8 +3389,7 @@ if (args[0] == 'elf') {
 if (args[0] == 'Elf') {	
 
 				//-- Different with any pet type
-				let health = Number(100);
-				let power = Number(1);
+
 				let pettype = 'Elf';	
 				let evolution1 = 'ElfEgg';	
 				let evolution2 = 'ElfKid';
@@ -3431,8 +3431,7 @@ if (args[0] == 'Elf') {
 else if (args[0] == 'dragon') {	
 
 				//-- Different with any pet type
-				let health = Number(100);
-				let power = Number(1);
+
 				let pettype = 'Dragon';					
 				let evolution1 = 'DragonEgg';	
 				let evolution2 = 'DragonKid';
@@ -3473,8 +3472,7 @@ else if (args[0] == 'dragon') {
 else if (args[0] == 'Dragon') {	
 
 				//-- Different with any pet type
-				let health = Number(100);
-				let power = Number(1);
+
 				let pettype = 'Dragon';					
 				let evolution1 = 'DragonEgg';	
 				let evolution2 = 'DragonKid';
@@ -3515,8 +3513,7 @@ else if (args[0] == 'Dragon') {
 else if (args[0] == 'umbreon') {	
 
 				//-- Different with any pet type
-				let health = Number(100);
-				let power = Number(1);
+
 				let pettype = 'Umbreon';					
 				let evolution1 = 'EveeEgg';	
 				let evolution2 = 'Evee';
@@ -3557,8 +3554,7 @@ else if (args[0] == 'umbreon') {
 else if (args[0] == 'Umbreon') {	
 
 				//-- Different with any pet type
-				let health = Number(100);
-				let power = Number(1);
+
 				let pettype = 'Umbreon';					
 				let evolution1 = 'EveeEgg';	
 				let evolution2 = 'Evee';
@@ -3611,8 +3607,7 @@ else if (args[0] == 'Umbreon') {
 							
 					_Haspet.push(sender)
 			fs.writeFileSync('./data/haspet.json', JSON.stringify(_Haspet))
-			
-			
+		
 break
 
 //--- Your Pet		
