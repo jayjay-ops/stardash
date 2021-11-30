@@ -2125,6 +2125,7 @@ case 'youtubesong':
 case 'tbsong':
 
 	   if (!isVerify) return reply(UserB())
+	   if (!isUpdate) return 	reply(`⍗ 𝚄𝙿𝙳𝙰𝚃𝙴\n\n𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑝𝑑𝑎𝑡𝑒 𝑦𝑜𝑢𝑟 𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑎𝑐𝑐𝑜𝑢𝑛𝑡, 𝑏𝑦 𝑡𝑦𝑝𝑖𝑛𝑔\n» .up`)
        if (args.length < 1) return reply('⌯   ﹝What is the song name?﹞')			
 
 const _yourcashsong = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
@@ -2171,6 +2172,24 @@ let oorpprsong = pprrsong - oorrsong;
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
+
+					const _userxpyoutube = JSON.parse(fs.readFileSync(`./data/xp/${sender.split("@")[0]}.xp.json`));	
+					const userxpyoutube = _userxpyoutube[0]	//--- xp
+
+        let oldxpyoutube = Number(userxp);
+        let addxpyoutube = Number(10);
+        let newxpyoutube = oldxpyoutube + addxpyoutube; 
+
+        fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+            if (err) throw err;
+            
+            var newValue = data.replace(`${userxpyoutube}`, newxpyoutube);
+            
+            fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+                if (err) throw err;
+                console.log('Gained xp!');
+            })
+        })
 				 
 break								
 					
@@ -3126,8 +3145,7 @@ myMonths = ["January","February","März","April","May","June","Juliy","August","
 			return `${day}. ${myMonths[bulan]} ${year}`
 }			
 
-_isUpdate.push(sender)
-fs.writeFileSync('./data/isUpdate.json', JSON.stringify(_isUpdate))
+
 						
 					_user.push(sender)
 			fs.writeFileSync('./data/user.json', JSON.stringify(_user))
@@ -5451,7 +5469,7 @@ case 'up':
 							const updatedelay2 = ms => new Promise(resolve => setTimeout(resolve, ms))
 							await updatedelay2(1000) /// waiting 1 second.
 
-							fs.appendFile(`./data/xp/${sender.split("@")[0]}.xp.json`, `["1"]`, function (err) {				
+							fs.appendFile(`./data/xp/${sender.split("@")[0]}.xp.json`, `["1", "𝐹𝑎𝑟𝑚𝑒𝑟"]`, function (err) {				
 								if (err) throw err;
 								console.log('XP Opend.');
 							  });
