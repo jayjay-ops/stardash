@@ -365,12 +365,12 @@ if (isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕�
 
 
 //-- Status
-let prem_ = '𝐾𝑛𝑖𝑔ℎ𝑡'
+let prem_ = '𝚞𝚜𝚎𝚛'
 			if (isPrem) {
 			prem_ = '𝑃𝑟𝑜'
 			} 
 			if (isOwner) {
-			prem_ = '𝐾𝑖𝑛𝑔'
+			prem_ = '𝙾𝚠𝚗𝚎𝚛'
 			}
 let Welcome_ = 'Off'
 			if (isWelcom) {
