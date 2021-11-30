@@ -2177,7 +2177,7 @@ let oorpprsong = pprrsong - oorrsong;
 					const userxpyoutube = _userxpyoutube[0]	//--- xp
 
         let oldxpyoutube = Number(userxpyoutube);
-        let addxpyoutube = Number(10);
+        let addxpyoutube = Number(5);
         let newxpyoutube = oldxpyoutube + addxpyoutube; 
 
         fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
