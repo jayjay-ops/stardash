@@ -4761,6 +4761,8 @@ if (!isUpdate) return reply ("Please update your account with .up")
 		console.log('Winner Opend.');
 	  });
 
+	 else {} 
+
 	reply(`𝐿𝑒𝑎𝑑𝑒𝑟𝑏𝑜𝑎𝑟𝑑
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ${mydesignleader} 𝐿𝑒𝑎𝑑𝑒𝑟 » ${leaderleaderboardwinner}
