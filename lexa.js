@@ -4379,8 +4379,6 @@ if (isUpdate) {
 
 	const _myleaderboardxp = JSON.parse(fs.readFileSync(`xp.json`));	
 	const myleaderboardxp = _myleaderboardxp[0]	//--- xp 
-	const myleaderboardwinner = _myleaderboardxp[1]	//--- xp winner
-	const myleaderboardstatus = _myleaderboardxp[2]	//--- xp status
 
 
 if (isHaspet) {
@@ -4697,44 +4695,14 @@ if ((userxpmyaccount > 100) && userxpmyaccount < 500) {
 
 	if (userxpmyaccount > myleaderboardxp) {
 		
-	let newwinnerxp = userxpmyaccount; 
-
-	fs.readFile(`./xp.json`, 'utf-8', function(err, data) {
-		if (err) throw err;
-		
-		var newValue = data.replace(`${myleaderboardxp}`, newwinnerxp);
-		
-		fs.writeFile(`xp.json`, newValue, 'utf-8', function(err, data) {
+		fs.unlink(`xp.json`, function (err) {
 			if (err) throw err;
-			console.log('New Winner!');
-		})
-	})
+			console.log('File deleted!');
 
-	let newwinnername = myname2; 
-
-	fs.readFile(`./xp.json`, 'utf-8', function(err, data) {
+	fs.appendFile(`xp.json`, `["${userxpmyaccount}", "${myname2}", "${userstatusmyaccount}"]`, function (err) {				
 		if (err) throw err;
-		
-		var newValue = data.replace(`${myleaderboardwinner}`, newwinnername);
-		
-		fs.writeFile(`xp.json`, newValue, 'utf-8', function(err, data) {
-			if (err) throw err;
-			console.log('New Winner!');
-		})
-	})
-
-	let newwinnerstatus = userstatusmyaccount; 
-
-	fs.readFile(`./xp.json`, 'utf-8', function(err, data) {
-		if (err) throw err;
-		
-		var newValue = data.replace(`${myleaderboardstatus}`, newwinnerstatus);
-		
-		fs.writeFile(`xp.json`, newValue, 'utf-8', function(err, data) {
-			if (err) throw err;
-			console.log('New Winner!');
-		})
-	})
+		console.log('Winner Opend.');
+	  });
 
 }
 
