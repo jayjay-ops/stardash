@@ -4375,6 +4375,7 @@ if (isUpdate) {
 
 	const _userxpmyaccount = JSON.parse(fs.readFileSync(`./data/xp/${sender.split("@")[0]}.xp.json`));	
 	const userxpmyaccount = _userxpmyaccount[0]	//--- xp
+	const userstatusmyaccount = _userstatusmyaccount[0]	//--- farmer ... 	
 
 if (isHaspet) {
 
@@ -4385,7 +4386,7 @@ if 	(myclaimed === `${tanggal()}`) {
 	if 	(mymoney2 === '69') {
 		
 			 reply(`» ${pushname} 
-» ${prem_}
+» ${userstatusmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𓂸 𝑁𝑎𝑚𝑒 » ${myname2}
 𓂸 𝐴𝑔𝑒 » ${myage2}
@@ -4411,7 +4412,7 @@ if 	(myclaimed === `${tanggal()}`) {
 	else {
 
 			 reply(`» ${pushname}
-» ${prem_}
+» ${userstatusmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
@@ -4438,7 +4439,7 @@ else {
 	if 	(mymoney2 === '69') {
 		
 			 reply(`» ${pushname} 
-» ${prem_}
+» ${userstatusmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𓂸 𝑁𝑎𝑚𝑒 » ${myname2}
 𓂸 𝐴𝑔𝑒 » ${myage2}
@@ -4462,7 +4463,7 @@ else {
 	else {
 
 			 reply(`» ${pushname}
-» ${prem_}
+» ${userstatusmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
@@ -4497,7 +4498,7 @@ if 	(myclaimed === `${tanggal()}`) {
 	if 	(mymoney2 === '69') {
 		
 			 reply(`» ${pushname} 
-» ${prem_}
+» ${userstatusmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𓂸 𝑁𝑎𝑚𝑒 » ${myname2}
 𓂸 𝐴𝑔𝑒 » ${myage2}
@@ -4521,7 +4522,7 @@ if 	(myclaimed === `${tanggal()}`) {
 	else {
 
 			 reply(`» ${pushname}
-» ${prem_}
+» ${userstatusmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
@@ -4548,7 +4549,7 @@ else {
 	if 	(mymoney2 === '69') {
 		
 			 reply(`» ${pushname} 
-» ${prem_}
+» ${userstatusmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𓂸 𝑁𝑎𝑚𝑒 » ${myname2}
 𓂸 𝐴𝑔𝑒 » ${myage2}
@@ -4572,7 +4573,7 @@ else {
 	else {
 
 			 reply(`» ${pushname}
-» ${prem_}
+» ${userstatusmyaccount}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ${mydesign2} 𝑁𝑎𝑚𝑒 » ${myname2}
 ${mydesign2} 𝐴𝑔𝑒 » ${myage2}
@@ -4611,6 +4612,42 @@ fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, 
 		console.log('Gained xp!');
 	})
 })
+
+if ((userxpmyaccount > 10) && userxpmyaccount < 20) {
+        let newaccountstatus = "𝐾𝑛𝑖𝑔ℎ𝑡"; 
+
+        fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+            if (err) throw err;
+            
+            var newValue = data.replace(`${useraccountstatus}`, newaccountstatus);
+            
+            fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+                if (err) throw err;
+                console.log('Gained xp!');
+            })
+        })
+
+	}
+
+	else if ((userxpmyaccount > 19) && userxpmyaccount < 60) {
+		let newaccountstatus = "𝐾𝑖𝑛𝑔"; 
+
+        fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+            if (err) throw err;
+            
+            var newValue = data.replace(`${useraccountstatus}`, newaccountstatus);
+            
+            fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+                if (err) throw err;
+                console.log('Gained xp!');
+            })
+        })
+
+	}
+
+	else {}
+
+
 }
 
 else {
