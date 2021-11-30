@@ -4992,6 +4992,7 @@ case 'transfer':
 case 'donate': 
   
 	if (!isVerify) return reply(userB())	
+	if (!isUpdate) return 	reply(`⍗ 𝚄𝙿𝙳𝙰𝚃𝙴\n\n𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑝𝑑𝑎𝑡𝑒 𝑦𝑜𝑢𝑟 𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑎𝑐𝑐𝑜𝑢𝑛𝑡, 𝑏𝑦 𝑡𝑦𝑝𝑖𝑛𝑔\n» .up`)
 	if (args.length < 2) return reply('﹝Enter cash and tag person.﹞ \nExample:\n.transfer 20 @stardash')
 	if (args.length > 2) return reply('⌯   ﹝leave no space.  NOT  . transfer but  .transfer﹞')
 	if (args[0] > 101) return reply('⌯   ﹝You can only transfer 1-100$ at once﹞')
@@ -5053,6 +5054,25 @@ case 'donate':
  
   reply(`${transferdesign} Transferred *${args[0]}$* to *${hisname}* \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nTransfer Taxes are 5$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nYour Money left: ${newtransfermoney}$\nHis/Her Money left: ${hisnewtransfermoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Transfers`)
   
+
+const _userxptransfer = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.xp.json`));	
+const userxptransfer = _userxptransfer[0]	//--- xp
+
+        let oldxptransfer = Number(userxptransfer);
+        let addxptransfer = Number(10);
+        let newxptransfer = oldxptransfer + addxptransfer; 
+
+        fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+            if (err) throw err;
+            
+            var newValue = data.replace(`${userxptransfer}`, newxptransfer);
+            
+            fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+                if (err) throw err;
+                console.log('Gained xp!');
+            })
+        })
+
 	break
 
 //--- Delete account message
