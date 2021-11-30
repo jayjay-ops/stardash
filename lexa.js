@@ -4619,7 +4619,7 @@ if ((userxpmyaccount > 10) && userxpmyaccount < 20) {
         fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
-            var newValue = data.replace(`${useraccountstatus}`, newaccountstatus);
+            var newValue = data.replace(`${userstatusmyaccount}`, newaccountstatus);
             
             fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
                 if (err) throw err;
@@ -4635,7 +4635,7 @@ if ((userxpmyaccount > 10) && userxpmyaccount < 20) {
         fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
-            var newValue = data.replace(`${useraccountstatus}`, newaccountstatus);
+            var newValue = data.replace(`${userstatusmyaccount}`, newaccountstatus);
             
             fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
                 if (err) throw err;
