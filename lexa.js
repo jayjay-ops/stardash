@@ -1322,14 +1322,32 @@ const numberspam = _numberspam[0]	//---  number spam
 const _hourspam = JSON.parse(fs.readFileSync(`./data/spam/${sender.split("@")[0]}.hourspam.json`));	
 const hourspam = _hourspam[0]	//---  hour spam
 
+function kyun(seconds){
+	function pad(s){
+	  return (s < 10 ? '0' : '') + s;
+	}
+	var hours = Math.floor(seconds / (60*60));
+	var minutes = Math.floor(seconds % (60*60) / 60);
+	var seconds = Math.floor(seconds % 60);
+  
+	return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+  }
+  function tanggal(){
+  myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
+			  myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+			  var tgl = new Date();
+			  var day = tgl.getDate()
+			  bulan = tgl.getMonth()
+			  var thisDay = tgl.getDay(),
+			  thisDay = myDays[thisDay];
+			  var yy = tgl.getYear()
+			  var year = (yy < 1000) ? yy + 1900 : yy;
+			  return `${day}. ${myMonths[bulan]} ${year}`
+  }			
 
-let seconds = date_ob.getSeconds();
 
 let spamseconds = Number(secondspam) - Number(seconds)
 
-let minutes = date_ob.getMinutes();
-let hours = date_ob.getHours();
-let date = ("0" + date_ob.getDate()).slice(-2);
 
 exec(`rm -rf ./data/spam/secondspam.json`)
 exec(`rm -rf ./data/spam/minutespam.json`)
@@ -1346,7 +1364,7 @@ fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `['${second
 	console.log('SPAM Opend.');
   });
 
-  fs.appendFile(`./data/spam/${sender.split("@")[0]}.datespam.json`, `['${date}']`, function (err) {				
+  fs.appendFile(`./data/spam/${sender.split("@")[0]}.datespam.json`, `['${tanggal}']`, function (err) {				
 	if (err) throw err;
 	console.log('SPAM Opend.');
   });
@@ -1358,7 +1376,7 @@ fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `['${second
 
 
 
-if ((((minutes == minutespam) && hours == hourspam) && date == datespam) && spamseconds < Number(10)) {
+if ((((minutes == minutespam) && hours == hourspam) && tanggal == datespam) && spamseconds < Number(10)) {
 
 	reply (`${slotdesign} Please dont spam. It can result in a ban. And you may loose XP.`)
 
@@ -5699,7 +5717,7 @@ case 'up':
 	_isUpdatespam.push(sender)
 	fs.writeFileSync('./data/isUpdatespam.json', JSON.stringify(_isUpdatespam))
 
-	fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `["0"]`, function (err) {				
+	fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `["50"]`, function (err) {				
 		if (err) throw err;
 		console.log('SPAM Opend.');
 	  });
