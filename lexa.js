@@ -2176,7 +2176,7 @@ let oorpprsong = pprrsong - oorrsong;
 					const _userxpyoutube = JSON.parse(fs.readFileSync(`./data/xp/${sender.split("@")[0]}.xp.json`));	
 					const userxpyoutube = _userxpyoutube[0]	//--- xp
 
-        let oldxpyoutube = Number(userxp);
+        let oldxpyoutube = Number(userxpyoutube);
         let addxpyoutube = Number(10);
         let newxpyoutube = oldxpyoutube + addxpyoutube; 
 
