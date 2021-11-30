@@ -4754,7 +4754,7 @@ if (!isUpdate) return reply ("Please update your account with .up")
 	reply(`𝐿𝑒𝑎𝑑𝑒𝑟𝑏𝑜𝑎𝑟𝑑
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ${mydesignleader} 𝐿𝑒𝑎𝑑𝑒𝑟 » ${leaderleaderboardwinner}
-${mydesignleader} 𝑥𝑝 » ${leaderleaderboardwinner}
+${mydesignleader} 𝑥𝑝 » ${leaderleaderboardxp}
 ${mydesignleader} 𝑆𝑡𝑎𝑡𝑢𝑠 » ${leaderleaderboardstatus}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ${mydesignleader} 𝑌𝑜𝑢𝑟𝑋𝑝 » ${userxpleader}
