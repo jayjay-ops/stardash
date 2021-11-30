@@ -1336,7 +1336,7 @@ exec(`rm -rf ./data/spam/minutespam.json`)
 exec(`rm -rf ./data/spam/datespam.json`)
 exec(`rm -rf ./data/spam/hourspam.json`)
 
-fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `[`${seconds}`]`, function (err) {				
+fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `["${seconds}]`, function (err) {				
 	if (err) throw err;
 	console.log('SPAM Opend.');
   });
