@@ -5363,7 +5363,7 @@ case 'up':
 
 
 
-							capt = `${upmedesign}𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦 𝑈𝑝𝑑𝑎𝑡𝑒𝑑\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nYour account is now Up-To-Date!\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Accounts`
+							capt = `${upmedesign} 𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦 𝑈𝑝𝑑𝑎𝑡𝑒𝑑\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nYour account is now Up-To-Date!\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Accounts`
 							Lxa.sendMessage(from, capt, text, {quoted: mek})
 							
 	break				
