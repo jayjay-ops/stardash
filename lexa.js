@@ -1390,12 +1390,13 @@ if ((((minutes == minutespam) && hours == hourspam) && tanggal == datespam) && s
 
 else {}
 
-exec(`rm -rf ./data/spam/secondspam.json`)
-exec(`rm -rf ./data/spam/minutespam.json`)
-exec(`rm -rf ./data/spam/datespam.json`)
-exec(`rm -rf ./data/spam/hourspam.json`)
+exec(`rm -rf ./data/spam/${sender.split("@")[0]}.secondspam.json`)
+exec(`rm -rf ./data/spam/${sender.split("@")[0]}.minutespam.json`)
+exec(`rm -rf ./data/spam/${sender.split("@")[0]}.datespam.json`)
+exec(`rm -rf ./data/spam/${sender.split("@")[0]}.hourspam.json`)
 
-fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `['${seconds}']`, function (err) {				
+
+fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `['${pad(seconds)}']`, function (err) {				
 	if (err) throw err;
 	console.log('SPAM Opend.');
   });
