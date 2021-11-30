@@ -4760,6 +4760,7 @@ if (!isUpdate) return reply ("Please update your account with .up")
 		if (err) throw err;
 		console.log('Winner Opend.');
 	  });
+	}
 
 	 else {} 
 
