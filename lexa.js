@@ -4580,7 +4580,7 @@ ${mydesign2} 𝑋𝑝 » ${userxpmyaccount}
 }
 
 let oldxpmyaccount = Number(userxpmyaccount);
-let addxpmyaccount = Number(2);
+let addxpmyaccount = Number(1);
 let newxpmyaccount = oldxpmyaccount + addxpmyaccount; 
 
 fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
