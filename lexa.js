@@ -56,6 +56,8 @@ const _fridge = JSON.parse(fs.readFileSync('./data/fridge.json'));
 const _Haspet = JSON.parse(fs.readFileSync('./data/haspet.json'));
 const _antilink = JSON.parse(fs.readFileSync('./data/antilink.json'));
 const hit = JSON.parse(fs.readFileSync('./data/totalhit.json'))
+const _isUpdate = JSON.parse(fs.readFileSync('./data/isUpdate.json'));
+const _isUpdatespam = JSON.parse(fs.readFileSync('./data/isUpdatespam.json'));
 
 //-- Media
 const _stik = JSON.parse(fs.readFileSync('./media/stik.json'))
@@ -73,7 +75,6 @@ const _slot = JSON.parse(fs.readFileSync('./result/games/slot.json'));
 const _money = JSON.parse(fs.readFileSync('./result/games/money.json'));
 const _moneys = JSON.parse(fs.readFileSync('./result/games/money.json'));
 const _userss = JSON.parse(fs.readFileSync('./data/user.json'));
-const _isUpdate = JSON.parse(fs.readFileSync('./data/isUpdate.json'));
 const _euf = JSON.parse(fs.readFileSync('./result/euflags.json'));
 const _wf = JSON.parse(fs.readFileSync('./result/worldflag.json'));
 const _song = JSON.parse(fs.readFileSync('./result/song.json'));
@@ -388,6 +389,8 @@ const cmdadd = () => {
 }
   if (isCmd) cmdadd()
   const reqcmd = JSON.parse(fs.readFileSync('./data/totalhit.json'))[0].totalcmd
+
+  
 
 //--Member limit
 if (isGroup) {
@@ -1304,6 +1307,76 @@ reply(`${slotdesign} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - -
 }
 }
 
+const _secondspam = JSON.parse(fs.readFileSync(`./data/spam/${sender.split("@")[0]}.secondspam.json`));	
+const secondspam = _secondspam[0]	//--- seconds spam
+
+const _minutespam = JSON.parse(fs.readFileSync(`./data/spam/${sender.split("@")[0]}.minutespam.json`));	
+const minutespam = _minutespam[0]	//--- minute spam
+
+const _datespam = JSON.parse(fs.readFileSync(`./data/spam/${sender.split("@")[0]}.datespam.json`));	
+const datespam = _datespam[0]	//--- date spam
+
+const _numberspam = JSON.parse(fs.readFileSync(`./data/spam/${sender.split("@")[0]}.numberspam.json`));	
+const numberspam = _numberspam[0]	//---  number spam
+
+const _hourspam = JSON.parse(fs.readFileSync(`./data/spam/${sender.split("@")[0]}.hourspam.json`));	
+const hourspam = _hourspam[0]	//---  hour spam
+
+
+let seconds = date_ob.getSeconds();
+
+let spamseconds = Number(secondspam) - Number(seconds)
+
+let minutes = date_ob.getMinutes();
+let hours = date_ob.getHours();
+let date = ("0" + date_ob.getDate()).slice(-2);
+
+exec(`rm -rf ./data/spam/secondspam.json`)
+exec(`rm -rf ./data/spam/minutespam.json`)
+exec(`rm -rf ./data/spam/datespam.json`)
+exec(`rm -rf ./data/spam/hourspam.json`)
+
+fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `[`${seconds}`]`, function (err) {				
+	if (err) throw err;
+	console.log('SPAM Opend.');
+  });
+
+  fs.appendFile(`./data/spam/${sender.split("@")[0]}.minutespam.json`, `[`${minutes}`]`, function (err) {				
+	if (err) throw err;
+	console.log('SPAM Opend.');
+  });
+
+  fs.appendFile(`./data/spam/${sender.split("@")[0]}.datespam.json`, `[`${date}`]`, function (err) {				
+	if (err) throw err;
+	console.log('SPAM Opend.');
+  });
+
+  fs.appendFile(`./data/spam/${sender.split("@")[0]}.hourspam.json`, `[`${hours}`]`, function (err) {				
+	if (err) throw err;
+	console.log('SPAM Opend.');
+  });
+
+
+
+if ((((minutes == minutespam) && hours == hourspam) && date == datespam) && spamseconds < Number(10)) {
+
+	reply (`${slotdesign} Please dont spam. It can result in a ban. And you may loose XP.`)
+
+	let spamnumber = Number(1);
+	let newspamnumber = spamnumber + numberspam; 
+	fs.readFile(`./${sender.split("@")[0]}.numberspam.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		
+		var newValue = data.replace(`${slotme7}`, newnumberspam);
+		
+		fs.writeFile(`./${sender.split("@")[0]}.numberspam.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('1 spam added :(');
+		})
+	})
+}
+
+else {}
 
 
 break
@@ -4741,6 +4814,7 @@ if (!isUpdate) return reply ("Please update your account with .up")
 		
 		exec(`rm -rf xp.json`)
 
+
 		const delaydesign1claims11 = ms => new Promise(resolve => setTimeout(resolve, ms))
         await delaydesign1claims11(1000) /// waiting 1 second.
 
@@ -5611,10 +5685,46 @@ case 'up':
 								console.log('XP Opend.');
 							  });
 
+
+
 							capt = `${upmedesign} 𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦 𝑈𝑝𝑑𝑎𝑡𝑒𝑑\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nYour account is now Up-To-Date!\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Accounts`
 							Lxa.sendMessage(from, capt, text, {quoted: mek})
 							
-	break				
+	break	
+	
+	case 'upslot':
+
+
+
+	_isUpdatespam.push(sender)
+	fs.writeFileSync('./data/isUpdatespam.json', JSON.stringify(_isUpdatespam))
+
+	fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `["0"]`, function (err) {				
+		if (err) throw err;
+		console.log('SPAM Opend.');
+	  });
+
+	  fs.appendFile(`./data/spam/${sender.split("@")[0]}.minutespam.json`, `["0"]`, function (err) {				
+		if (err) throw err;
+		console.log('SPAM Opend.');
+	  });
+
+	  fs.appendFile(`./data/spam/${sender.split("@")[0]}.datespam.json`, `["0"]`, function (err) {				
+		if (err) throw err;
+		console.log('SPAM Opend.');
+	  });
+
+	  fs.appendFile(`./data/spam/${sender.split("@")[0]}.numberspam.json`, `["0"]`, function (err) {				
+		if (err) throw err;
+		console.log('SPAM Opend.');
+	  });
+
+	  fs.appendFile(`./data/spam/${sender.split("@")[0]}.hourspam.json`, `["0"]`, function (err) {				
+		if (err) throw err;
+		console.log('SPAM Opend.');
+	  });
+
+	  break	
 	
 				
 //-- PETS change name
