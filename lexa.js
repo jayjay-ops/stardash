@@ -56,7 +56,7 @@ const _fridge = JSON.parse(fs.readFileSync('./data/fridge.json'));
 const _Haspet = JSON.parse(fs.readFileSync('./data/haspet.json'));
 const _antilink = JSON.parse(fs.readFileSync('./data/antilink.json'));
 const hit = JSON.parse(fs.readFileSync('./data/totalhit.json'))
-const _isUpdate = JSON.parse(fs.readFileSync('./data/spam/isUpdate.json'));
+const _isUpdate = JSON.parse(fs.readFileSync('./data/isUpdate.json'));
 const _isUpdatespam = JSON.parse(fs.readFileSync('./data/spam/isUpdatespam.json'));
 
 //-- Media
@@ -5648,7 +5648,7 @@ case 'up':
 								const upmeid = _upme[5]	//--- account id
 								
 						_isUpdate.push(sender)
-				fs.writeFileSync('./data/spam/isUpdate.json', JSON.stringify(_isUpdate))
+				fs.writeFileSync('./data/isUpdate.json', JSON.stringify(_isUpdate))
 				
 
 				let updatephonenumber = "updatedphonenumber";
@@ -5697,7 +5697,7 @@ case 'up':
 
 
 	_isUpdatespam.push(sender)
-	fs.writeFileSync('./data/spam/isUpdatespam.json', JSON.stringify(_isUpdatespam))
+	fs.writeFileSync('./data/isUpdatespam.json', JSON.stringify(_isUpdatespam))
 
 	fs.appendFile(`./data/spam/${sender.split("@")[0]}.secondspam.json`, `["0"]`, function (err) {				
 		if (err) throw err;
