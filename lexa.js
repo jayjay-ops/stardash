@@ -4578,6 +4578,21 @@ ${mydesign2} 𝑋𝑝 » ${userxpmyaccount}
 	
 }
 }
+
+let oldxpmyaccount = Number(userxpmyaccount);
+let addxpmyaccount = Number(2);
+let newxpmyaccount = oldxpmyaccount + newxpmyaccount; 
+
+fs.readFile(`./data/xp/${sender.split("@")[0]}.xp.json`, 'utf-8', function(err, data) {
+	if (err) throw err;
+	
+	var newValue = data.replace(`${userxpmyaccount}`, newxpmyaccount);
+	
+	fs.writeFile(`./data/xp/${sender.split("@")[0]}.xp.json`, newValue, 'utf-8', function(err, data) {
+		if (err) throw err;
+		console.log('Gained xp!');
+	})
+})
 }
 
 else {
@@ -4588,7 +4603,8 @@ else {
 » .up
 	
 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑛𝑒𝑤? 
-» Accounts dont break anymore so often!`)
+» Accounts dont break anymore so often!
+» You can now gain Xp`)
 
  }
 
