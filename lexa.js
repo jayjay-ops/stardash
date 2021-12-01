@@ -5777,12 +5777,12 @@ const delayfoood23 = ms => new Promise(resolve => setTimeout(resolve, ms))
 await delayfoood23(1000) /// waiting 1 second.	
 
 const _yourcashbuyfood1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const buyfoodmoney1 = _yourcashbuyfood1[7]	//--- money	
+const buyfoodmoney11 = _yourcashbuyfood1[7]	//--- money	
 
 
 reply(`${buyfooddesign} Bought ${value}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-Money left: ${buyfoodmoney1}$
+Money left: ${buyfoodmoney11}$
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Food`)
 
