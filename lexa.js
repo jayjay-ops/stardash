@@ -4096,26 +4096,7 @@ case 'social':
  
 break
 
-//--- Pet Fridge
-
-case 'fridge':
-				//-- Fridge
-				let berries = Number(0);	
-				let coconut = Number(0);	
-				let mintbeef = Number(0);
-				let milk = Number(0);
-				let icetea = Number(0);
-				let redbull = Number(0);
-				
-				let emptyfridge1 = Number(0);
-				let emptyfridge2 = Number(0);
-				let emptyfridge3 = Number(0);
-				let emptyfridge4 = Number(0);
-				let emptyfridge5 = Number(0);
-				let emptyfridge6 = Number(0);
-
-				let petbank = 'None';
-break			
+		
 
 //--- Shop	
 
@@ -5607,13 +5588,68 @@ reply(`⚔️﹝${petfightname} attacked ${hispetfightname}﹞\n-.-.-.-.-.-.-.-.
 }
 	break
 
+//--- PETS food
+case 'buyfood':
+
+	const _buyberries = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/berries.json`));
+	const buyberries = _buyberries[0];	
+
+	const _buybeef = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/beef.json`));
+	const buybeef = _buybeef[0];
+
+	const _buymilk = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/milk.json`));
+	const buymilk = _buymilk[0];
+
+if (args[0] === 'berries' ) {
+
+	let mynewberries = Number(buyberries) + Number(4); 
+
+	fs.readFile(`./data/pets/${sender.split("@")[0]}/berries.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		
+		var newValue = data.replace(`${petfightxp}`, mynewberries);
+		
+		fs.writeFile(`./data/pets/${sender.split("@")[0]}/berries.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('Done!');
+		})
+	})		
+
+}
+
+else {}
+
+break
+
+//--- PETS fridge
+case 'fridge':
+
+	const _fridgeberries = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/berries.json`));
+	const fridgeberries = _fridgeberries[0];	
+
+	const _fridgebeef = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/beef.json`));
+	const fridgebeef = _fridgebeef[0];
+
+	const _fridgemilk = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/milk.json`));
+	const fridgemilk = _fridgemilk[0];
+
+	reply(`!!﹝BETA TESTING﹞
+	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+	${fridgeberries}
+	${fridgebeef}
+	${fridgemilk}	
+	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+	💟 StarDash Fridge`)
+
+
+break
 
 //--- PETS buyfridge
 case 'buyfridge':
 case 'getfridge':
 						
 						if (!isVerify) return reply(userB())
-							if (isFridge) return reply("You already have a fridge")
+						//--	if (isFridge) return reply("You already have a fridge")
 							    if (!isHaspet) return reply("You need a pet first. Visit the .petshop")
 									
 							const _mynewfridge = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
@@ -5626,10 +5662,20 @@ capt = `${mynewfridgedesign}﹝Got Fridge!﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 			
 			
-fs.appendFile(`./data/food/${sender.split("@")[0]}.fridge.json`, `["0"]`, function (err) {				
+fs.appendFile(`./data/fridge/${sender.split("@")[0]}/berries.json`, `["0"]`, function (err) {				
   if (err) throw err;
   console.log('Fridge Opend.');
 });
+
+fs.appendFile(`./data/fridge/${sender.split("@")[0]}/beef.json`, `["0"]`, function (err) {				
+	if (err) throw err;
+	console.log('Fridge Opend.');
+  });
+
+  fs.appendFile(`./data/fridge/${sender.split("@")[0]}/milk.json`, `["0"]`, function (err) {				
+	if (err) throw err;
+	console.log('Fridge Opend.');
+  });
 											
 			break
 
