@@ -6041,7 +6041,7 @@ const buyfoodmoney1 = _yourcashbuyfood11[7]	//--- money
 
 reply(`${buyfooddesign} Bought ${value}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-Money left: ${buyfoodmoney11}$
+Money left: ${buyfoodmoney1}$
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Food`)
 
