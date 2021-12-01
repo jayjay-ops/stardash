@@ -5604,12 +5604,12 @@ if (args[0] === 'berries' ) {
 
 	let mynewberries = Number(buyberries) + Number(4); 
 
-	fs.readFile(`./data/pets/${sender.split("@")[0]}/berries.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/fridge/${sender.split("@")[0]}/berries.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		
 		var newValue = data.replace(`${petfightxp}`, mynewberries);
 		
-		fs.writeFile(`./data/pets/${sender.split("@")[0]}/berries.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/fridge/${sender.split("@")[0]}/berries.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 			console.log('Done!');
 		})
