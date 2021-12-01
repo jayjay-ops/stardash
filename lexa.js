@@ -5953,12 +5953,18 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 
 else if (args[0] === 'beef' ) {
 
-	let mynewbeef = Number(buybeef) + Number(1); 
+	const _buybeef1 = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/beef.json`));
+	const buybeef1 = _buybeef1[0];
+
+
+
+
+	let mynewbeef = Number(buybeef1) + Number(1); 
 
 	fs.readFile(`./data/fridge/${sender.split("@")[0]}/beef.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		
-		var newValue = data.replace(`${buybeef}`, mynewbeef);
+		var newValue = data.replace(`${buybeef1}`, mynewbeef);
 		
 		fs.writeFile(`./data/fridge/${sender.split("@")[0]}/beef.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
@@ -5988,12 +5994,15 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 
 else if (args[0] === 'milk' ) {
 
-	let mynewmilk = Number(buymilk) + Number(1); 
+	const _buymilk1 = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/milk.json`));
+	const buymilk1 = _buymilk1[0];
+
+	let mynewmilk = Number(buymilk1) + Number(1); 
 
 	fs.readFile(`./data/fridge/${sender.split("@")[0]}/milk.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		
-		var newValue = data.replace(`${buymilk}`, mynewmilk);
+		var newValue = data.replace(`${buymilk1}`, mynewmilk);
 		
 		fs.writeFile(`./data/fridge/${sender.split("@")[0]}/milk.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
