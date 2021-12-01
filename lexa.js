@@ -3679,7 +3679,7 @@ case 'umbreon':
 	const mypetdesign = _myaccountpet[11];			//--- account design
 	
 	
-const _pet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));	
+const _pet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));
 
 const mypettype = _pet[0]; 				//--- type
 
@@ -5608,9 +5608,13 @@ const mypethealtheat = _healthmypeteat[0];
 const _energymypeteat = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/energy.json`));	
 const mypetenergyeat = _energymypeteat[0];
 
+const _peteat = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));
+const mypetnameeat = _peteat[7];				//--- name	
+
 if (args[0] === 'berries' ) {
 
 	if (mypethungereat > 9.5) return reply(`${eatdesign} Your pet is already full!`) 
+	if (eatberries < 1) return reply(`${eatdesign} Your dont have any berries. Buy the in the .foodstore!`) 
 
 	let eatmynewberries = Number(eatberries) - Number(1); 
 
@@ -5694,7 +5698,7 @@ fs.readFile(`./data/pets/${sender.split("@")[0]}/energy.json`, 'utf-8', function
 
 else if (args[0] === 'beef' ) {
 
-	let mynewbeef = Number(buybeef) + Number(1); 
+	let mynewbeef = Number(buybeef) - Number(1); 
 
 	fs.readFile(`./data/fridge/${sender.split("@")[0]}/beef.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -5707,29 +5711,77 @@ else if (args[0] === 'beef' ) {
 		})
 	})	
 	
-	let foodcost = Number(8);
-
-const delayfoood5 = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delayfoood5(1000) /// waiting 1 second.	
-
-let newfoodmoney = oldfoodmoney - foodcost; 
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-	if (err) throw err;
-		
-	var newValue = data.replace(`${buyfoodmoney}`, newfoodmoney);
+	const delay8987foood6 = ms => new Promise(resolve => setTimeout(resolve, ms))
+	await delay8987foood6(1000) /// waiting 1 second.	
 	
-	fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+	let mypetnewhunger = Number(mypethungereat) + Number(5); 
+	
+	fs.readFile(`./data/pets/${sender.split("@")[0]}/hunger.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
-		console.log('Done!');
+			
+		var newValue = data.replace(`${mypethungereat}`, mypetnewhunger);
+		
+		fs.writeFile(`./data/pets/${sender.split("@")[0]}/hunger.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('Done!');
+		})
 	})
-})
+	
+	const delay8987foood7 = ms => new Promise(resolve => setTimeout(resolve, ms))
+	await delay8987foood7(1000) /// waiting 1 second.	
+	
+	let mypetnewxp = Number(mypetxpeat) + Number(3); 
+	
+	fs.readFile(`./data/pets/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+			
+		var newValue = data.replace(`${mypetxpeat}`, mypetnewxp);
+		
+		fs.writeFile(`./data/pets/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('Done!');
+		})
+	})
+	
+	const delay8987foood8 = ms => new Promise(resolve => setTimeout(resolve, ms))
+	await delay8987foood8(1000) /// waiting 1 second.	
+	
+	let mypetnewhealth = Number(mypethealtheat) + Number(5); 
+	
+	fs.readFile(`./data/pets/${sender.split("@")[0]}/health.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+			
+		var newValue = data.replace(`${mypethealtheat}`, mypetnewhealth);
+		
+		fs.writeFile(`./data/pets/${sender.split("@")[0]}/health.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('Done!');
+		})
+	})
+	
+	const delay8987foood9 = ms => new Promise(resolve => setTimeout(resolve, ms))
+	await delay8987foood9(1000) /// waiting 1 second.	
+	
+	let mypetnewenergy = Number(mypetenergyeat) - Number(2); 
+	
+	fs.readFile(`./data/pets/${sender.split("@")[0]}/energy.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+			
+		var newValue = data.replace(`${mypetenergyeat}`, mypetnewenergy);
+		
+		fs.writeFile(`./data/pets/${sender.split("@")[0]}/energy.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('Done!');
+		})
+	})
+	
+	//----------------------------------
 
 }
 
 else if (args[0] === 'milk' ) {
 
-	let mynewmilk = Number(buymilk) + Number(1); 
+	let mynewmilk = Number(buymilk) - Number(1); 
 
 	fs.readFile(`./data/fridge/${sender.split("@")[0]}/milk.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -5744,26 +5796,75 @@ else if (args[0] === 'milk' ) {
 	
 	let foodcost = Number(1);
 
-const delayfoood2 = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delayfoood2(1000) /// waiting 1 second.	
-
-let newfoodmoney = oldfoodmoney - foodcost; 
-
-fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
-	if (err) throw err;
-		
-	var newValue = data.replace(`${buyfoodmoney}`, newfoodmoney);
+	const delay8987328987foood6 = ms => new Promise(resolve => setTimeout(resolve, ms))
+	await delay8987328987foood6(1000) /// waiting 1 second.	
 	
-	fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+	let mypetnewhunger = Number(mypethungereat) + Number(1); 
+	
+	fs.readFile(`./data/pets/${sender.split("@")[0]}/hunger.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
-		console.log('Done!');
+			
+		var newValue = data.replace(`${mypethungereat}`, mypetnewhunger);
+		
+		fs.writeFile(`./data/pets/${sender.split("@")[0]}/hunger.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('Done!');
+		})
 	})
-})
+	
+	const delay8987328987foood7 = ms => new Promise(resolve => setTimeout(resolve, ms))
+	await delay8987328987foood7(1000) /// waiting 1 second.	
+	
+	let mypetnewxp = Number(mypetxpeat) + Number(2); 
+	
+	fs.readFile(`./data/pets/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+			
+		var newValue = data.replace(`${mypetxpeat}`, mypetnewxp);
+		
+		fs.writeFile(`./data/pets/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('Done!');
+		})
+	})
+	
+	const delay8987328987foood8 = ms => new Promise(resolve => setTimeout(resolve, ms))
+	await delay8987328987foood8(1000) /// waiting 1 second.	
+	
+	let mypetnewhealth = Number(mypethealtheat) + Number(2); 
+	
+	fs.readFile(`./data/pets/${sender.split("@")[0]}/health.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+			
+		var newValue = data.replace(`${mypethealtheat}`, mypetnewhealth);
+		
+		fs.writeFile(`./data/pets/${sender.split("@")[0]}/health.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('Done!');
+		})
+	})
+	
+	const delay8987328987foood9 = ms => new Promise(resolve => setTimeout(resolve, ms))
+	await delay8987328987foood9(1000) /// waiting 1 second.	
+	
+	let mypetnewenergy = Number(mypetenergyeat) - Number(1); 
+	
+	fs.readFile(`./data/pets/${sender.split("@")[0]}/energy.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+			
+		var newValue = data.replace(`${mypetenergyeat}`, mypetnewenergy);
+		
+		fs.writeFile(`./data/pets/${sender.split("@")[0]}/energy.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('Done!');
+		})
+	})
+	
+	//----------------------------------
 
 }
 
-else { let foodcost = Number(0);
-
+else { 
 	reply(`${eatdesign} Error 505
 	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 	does not exist.
@@ -5773,16 +5874,9 @@ else { let foodcost = Number(0);
 }
 
 
-const delayfoood23 = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delayfoood23(1000) /// waiting 1 second.	
-
-const _yourcashbuyfood1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const buyfoodmoney11 = _yourcashbuyfood1[7]	//--- money	
-
-
-reply(`${eatdesign} Bought ${value}
+reply(`${eatdesign} ${mypetnameeat} ate ${value}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-Money left: ${buyfoodmoney11}$
+Its enjoying it! It feels much better now.
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ✅ StarDash Food`)
 
