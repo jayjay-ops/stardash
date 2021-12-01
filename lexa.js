@@ -5932,8 +5932,8 @@ else { let foodcost = Number(0);
 }
 
 
-const delayfoood23 = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delayfoood23(1000) /// waiting 1 second.	
+const delayfoood23555 = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delayfoood23555(1000) /// waiting 1 second.	
 
 const _yourcashbuyfood1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const buyfoodmoney1 = _yourcashbuyfood1[7]	//--- money	
