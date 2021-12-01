@@ -3276,9 +3276,9 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 			reply(`${petshopdesign}﹝Finding a pet for you 1/2﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nMoney left: ${changedesignmoneypetshop}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`)
 
 
-exec (`rm -rf data/pet/${sender.split("@")[0]}`)
+exec (`rm -rf data/pets/${sender.split("@")[0]}`)
 
-exec (`mkdir data/pet/${sender.split("@")[0]}`)
+exec (`mkdir data/pets/${sender.split("@")[0]}`)
 
 								const petbuydelay = ms => new Promise(resolve => setTimeout(resolve, ms))
 								await petbuydelay(1000) /// waiting 1 second.
