@@ -5607,7 +5607,7 @@ if (args[0] === 'berries' ) {
 	fs.readFile(`./data/fridge/${sender.split("@")[0]}/berries.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		
-		var newValue = data.replace(`${petfightxp}`, mynewberries);
+		var newValue = data.replace(`${buyberries}`, mynewberries);
 		
 		fs.writeFile(`./data/fridge/${sender.split("@")[0]}/berries.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
