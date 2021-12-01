@@ -5628,6 +5628,22 @@ if (args[0] === 'berries' ) {
 
 let foodcost = Number(2);
 
+const delayfoood6 = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delayfoood6(1000) /// waiting 1 second.	
+
+let newfoodmoney = oldfoodmoney - foodcost; 
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+	if (err) throw err;
+		
+	var newValue = data.replace(`${buyfoodmoney}`, newfoodmoney);
+	
+	fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+		if (err) throw err;
+		console.log('Done!');
+	})
+})
+
 												
 }
 
@@ -5648,6 +5664,22 @@ else if (args[0] === 'beef' ) {
 	
 	let foodcost = Number(8);
 
+const delayfoood5 = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delayfoood5(1000) /// waiting 1 second.	
+
+let newfoodmoney = oldfoodmoney - foodcost; 
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+	if (err) throw err;
+		
+	var newValue = data.replace(`${buyfoodmoney}`, newfoodmoney);
+	
+	fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+		if (err) throw err;
+		console.log('Done!');
+	})
+})
+
 }
 
 else if (args[0] === 'milk' ) {
@@ -5667,12 +5699,8 @@ else if (args[0] === 'milk' ) {
 	
 	let foodcost = Number(1);
 
-}
-
-else { let foodcost = Number(0); }
-
-const delayfoood = ms => new Promise(resolve => setTimeout(resolve, ms))
-await delayfoood(1000) /// waiting 1 second.	
+const delayfoood2 = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delayfoood2(1000) /// waiting 1 second.	
 
 let newfoodmoney = oldfoodmoney - foodcost; 
 
@@ -5686,6 +5714,12 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 		console.log('Done!');
 	})
 })
+
+}
+
+else { let foodcost = Number(0); }
+
+
 
 const _yourcashbuyfood1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const buyfoodmoney1 = _yourcashbuyfood1[7]	//--- money	
