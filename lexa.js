@@ -5698,6 +5698,9 @@ fs.readFile(`./data/pets/${sender.split("@")[0]}/energy.json`, 'utf-8', function
 
 else if (args[0] === 'beef' ) {
 
+	if (mypethungereat > 5) return reply(`${eatdesign} Your pet is already full! Maybe feed it sth smaller then beef.`) 
+	if (eatbeef < 1) return reply(`${eatdesign} Your dont have any Beef. Buy the in the .foodstore!`) 
+
 	let mynewbeef = Number(buybeef) - Number(1); 
 
 	fs.readFile(`./data/fridge/${sender.split("@")[0]}/beef.json`, 'utf-8', function(err, data) {
@@ -5780,6 +5783,9 @@ else if (args[0] === 'beef' ) {
 }
 
 else if (args[0] === 'milk' ) {
+
+	if (mypethungereat > 9.5) return reply(`${eatdesign} Your pet is already full!`) 
+	if (eatmilk < 1) return reply(`${eatdesign} Your dont have any milk. Buy the in the .foodstore!`) 
 
 	let mynewmilk = Number(buymilk) - Number(1); 
 
