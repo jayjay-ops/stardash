@@ -3620,7 +3620,7 @@ console.log('Pet Account Opend.');
 		  
 			})
 
-			fs.appendFile(`${sender.split("@")[0]}/level.json`, `["${level}"]`, function (err) {
+			fs.appendFile(`./data/pets/${sender.split("@")[0]}/level.json`, `["${level}"]`, function (err) {
 				
 				if (err) throw err;
 		  
