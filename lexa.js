@@ -5655,6 +5655,9 @@ case 'getfridge':
 exec (`rm -rf data/fridge/${sender.split("@")[0]}`)
 
 exec (`mkdir data/fridge/${sender.split("@")[0]}`)
+
+const petbuydelaysddsds = ms => new Promise(resolve => setTimeout(resolve, ms))
+await petbuydelaysddsds(1000) /// waiting 1 second.
 									
 							const _mynewfridge = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 							const mynewfridgedesign = _mynewfridge[11]	//--- account design	
