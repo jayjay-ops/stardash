@@ -5591,6 +5591,14 @@ reply(`⚔️﹝${petfightname} attacked ${hispetfightname}﹞\n-.-.-.-.-.-.-.-.
 //--- PETS food
 case 'buyfood':
 
+
+const _yourcashbuyfood = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const buyfoodmoney = _yourcashbuyfood[7]	//--- money	
+const buyfooddesign = _yourcashbuyfood[11]	//--- account design
+
+let oldfoodmoney = Number(buyfoodmoney);
+
+
 	const _buyberries = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/berries.json`));
 	const buyberries = _buyberries[0];	
 
@@ -5601,6 +5609,8 @@ case 'buyfood':
 	const buymilk = _buymilk[0];
 
 if (args[0] === 'berries' ) {
+
+	if (buyfoodmoney < 2) return reply(`﹝You have not enough money to buy berries. Money needed: 2$ Your money: ${buyfoodmoney}$﹞`) 
 
 	let mynewberries = Number(buyberries) + Number(4); 
 
@@ -5615,9 +5625,77 @@ if (args[0] === 'berries' ) {
 		})
 	})		
 
+
+let foodcost = Number(2);
+
+												
 }
 
-else {}
+else if (args[0] === 'beef' ) {
+
+	let mynewbeef = Number(buybeef) + Number(1); 
+
+	fs.readFile(`./data/fridge/${sender.split("@")[0]}/beef.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		
+		var newValue = data.replace(`${buybeef}`, mynewbeef);
+		
+		fs.writeFile(`./data/fridge/${sender.split("@")[0]}/beef.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('Done!');
+		})
+	})	
+	
+	let foodcost = Number(8);
+
+}
+
+else if (args[0] === 'milk' ) {
+
+	let mynewmilk = Number(buymilk) + Number(1); 
+
+	fs.readFile(`./data/fridge/${sender.split("@")[0]}/milk.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		
+		var newValue = data.replace(`${buymilk}`, mynewmilk);
+		
+		fs.writeFile(`./data/fridge/${sender.split("@")[0]}/milk.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('Done!');
+		})
+	})	
+	
+	let foodcost = Number(1);
+
+}
+
+else { let foodcost = Number(0); }
+
+const delayfoood = ms => new Promise(resolve => setTimeout(resolve, ms))
+await delayfoood(1000) /// waiting 1 second.	
+
+let newfoodmoney = oldfoodmoney - foodcost; 
+
+fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(err, data) {
+	if (err) throw err;
+		
+	var newValue = data.replace(`${buyfoodmoney}`, newfoodmoney);
+	
+	fs.writeFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, newValue, 'utf-8', function(err, data) {
+		if (err) throw err;
+		console.log('Done!');
+	})
+})
+
+const _yourcashbuyfood1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+const buyfoodmoney1 = _yourcashbuyfood1[7]	//--- money	
+
+
+reply(`${buyfooddesign} Bought ${value}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+Money left: ${buyfoodmoney1}$
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+✅ StarDash Food`)
 
 break
 
