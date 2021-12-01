@@ -3369,7 +3369,7 @@ if (args[0] == 'elf') {
 				let abouttypeinfo3 = 'Flying through the woods, bringing light, where darkness lies and keeping good relations with others makes the Elf a special creature that should be taken off very good.';	
 				let abouttypeinfo4 = 'The Ultra Elf. The Queen of StarDashia!';
 				
-							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+							fs.appendFile(`./data/pets/${sender.split("@")[0]}/pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
 "${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
 "${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
 "${cooldown}", "${energy}", "${weapon}", 
@@ -3409,7 +3409,7 @@ if (args[0] == 'Elf') {
 				let abouttypeinfo3 = 'Flying through the woods, bringing light, where darkness lies and keeping good relations with others makes the Elf a special creature that should be taken off very good.';	
 				let abouttypeinfo4 = 'The Ultra Elf. The Queen of StarDashia!';
 				
-							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+							fs.appendFile(`./data/pets/${sender.split("@")[0]}/pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
 "${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
 "${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
 "${cooldown}", "${energy}", "${weapon}", 
@@ -3451,7 +3451,7 @@ else if (args[0] == 'dragon') {
 				let abouttypeinfo3 = 'One of the strongest pets out there! Burning and destroying others, everyone fears the Dragon.';
 				let abouttypeinfo4 = 'The Ultra Dragon. Feared to death.';
 				
-							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+							fs.appendFile(`./data/pets/${sender.split("@")[0]}/pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
 "${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
 "${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
 "${cooldown}", "${energy}", "${weapon}", 
@@ -3492,7 +3492,7 @@ else if (args[0] == 'Dragon') {
 				let abouttypeinfo3 = 'One of the strongest pets out there! Burning and destroying others, everyone fears the Dragon.';
 				let abouttypeinfo4 = 'The Ultra Dragon. Feared to death.';
 				
-							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+							fs.appendFile(`./data/pets/${sender.split("@")[0]}/pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
 "${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
 "${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
 "${cooldown}", "${energy}", "${weapon}", 
@@ -3533,7 +3533,7 @@ else if (args[0] == 'umbreon') {
 				let abouttypeinfo3 = 'One of the strongest pets out there! Burning and destroying others, everyone fears the Dragon.';
 				let abouttypeinfo4 = 'The Ultra Umbreon. Feared to death.';
 				
-							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+							fs.appendFile(`./data/pets/${sender.split("@")[0]}/pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
 "${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
 "${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
 "${cooldown}", "${energy}", "${weapon}", 
@@ -3574,7 +3574,7 @@ else if (args[0] == 'Umbreon') {
 				let abouttypeinfo3 = 'One of the strongest pets out there! Burning and destroying others, everyone fears the Dragon.';
 				let abouttypeinfo4 = 'The Ultra Umbreon. Feared to death.';
 				
-							fs.appendFile(`${sender.split("@")[0]}.pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
+							fs.appendFile(`./data/pets/${sender.split("@")[0]}/pet.json`, `["${pettype}", "${stage}", "${hunger}", "${level}", "${xp}", "${changepet}", 
 "${friends}", "${name}", "${petmood}", "${status}", "${previousowner}", "${birthday}", "${isshiny}", 
 "${cloth1}", "${cloth2}", "${cloth3}", "${cloth4}",
 "${cooldown}", "${energy}", "${weapon}", 
@@ -3582,13 +3582,11 @@ else if (args[0] == 'Umbreon') {
 "${powertypeinfo1}", "${powertypeinfo2}", "${powertypeinfo3}", "${powertypeinfo4}", 
 "${abouttypeinfo1}", "${abouttypeinfo2}", "${abouttypeinfo3}", "${abouttypeinfo4}",
 "${emptytype1}", "${emptytype2}", "${emptytype3}", "${emptytype4}", "${emptytype5}", "${emptytype6}", "${health}", "${power}", "${evolution1}", "${evolution2}", "${evolution3}", "${evolution4}", "${fight}"]`, function (err) {
-				
-  if (err) throw err;
+	if (err) throw err;
   
-			})
+})
 
-  console.log('Pet Account Opend.');
-	
+console.log('Pet Account Opend.');
 				
 }
 
@@ -3607,6 +3605,60 @@ else if (args[0] == 'Umbreon') {
 							
 					_Haspet.push(sender)
 			fs.writeFileSync('./data/haspet.json', JSON.stringify(_Haspet))
+
+			fs.appendFile(`./data/pets/${sender.split("@")[0]}/stage.json`, `["${stage}"]`, function (err) {
+				
+				if (err) throw err;
+		  
+			})
+
+			fs.appendFile(`./data/pets/${sender.split("@")[0]}/hunger.json`, `["${hunger}"]`, function (err) {
+				
+				if (err) throw err;
+		  
+			})
+
+			fs.appendFile(`${sender.split("@")[0]}/level.json`, `["${level}"]`, function (err) {
+				
+				if (err) throw err;
+		  
+			})
+
+			fs.appendFile(`./data/pets/${sender.split("@")[0]}/xp.json`, `["${xp}"]`, function (err) {
+				
+				if (err) throw err;
+		  
+			})
+
+			fs.appendFile(`./data/pets/${sender.split("@")[0]}/cooldown.json`, `["${cooldown}"]`, function (err) {
+				
+				if (err) throw err;
+		  
+			})
+
+			fs.appendFile(`./data/pets/${sender.split("@")[0]}/energy.json`, `["${energy}"]`, function (err) {
+				
+				if (err) throw err;
+		  
+			})
+
+			fs.appendFile(`./data/pets/${sender.split("@")[0]}/health.json`, `["${health}"]`, function (err) {
+				
+				if (err) throw err;
+		  
+			})
+
+			fs.appendFile(`./data/pets/${sender.split("@")[0]}/power.json`, `["${power}"]`, function (err) {
+				
+				if (err) throw err;
+		  
+			})
+
+			fs.appendFile(`./data/pets/${sender.split("@")[0]}/fight.json`, `["${fight}"]`, function (err) {
+				
+				if (err) throw err;
+		  
+			})
 		
 break
 
