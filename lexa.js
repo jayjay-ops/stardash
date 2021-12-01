@@ -4161,7 +4161,7 @@ ${petshopdesign2} .petstore
 𝐹𝑜𝑜𝑑
 ${petshopdesign2} .foodstore
 𝐶𝑙𝑜𝑡ℎ𝑠
-${petshopdesign2} .clothstore
+${petshopdesign2} .clothstore -soon
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝐶𝑎𝑠ℎ » ${petshopmoney}$`)
 
@@ -4174,11 +4174,11 @@ reply (`𝑃𝑒𝑡𝑠ℎ𝑜𝑝
 𝐵𝑢𝑦 𝑦𝑜𝑢𝑟 𝑜𝑤𝑛 𝑝𝑒𝑡
 ${petshopdesign2} .petstore
 𝐹𝑜𝑜𝑑
-${petshopdesign2} .foodstore
+${petshopdesign2} .foodstore 
 𝐶𝑙𝑜𝑡ℎ𝑠
-${petshopdesign2} .clothstore
+${petshopdesign2} .clothstore -soon
 𝑊𝑒𝑎𝑝𝑜𝑛𝑠
-${petshopdesign2} .weaponstore
+${petshopdesign2} .weaponstore -soon
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 𝐶𝑎𝑠ℎ » ${petshopmoney}$`)
 
