@@ -5586,6 +5586,12 @@ case 'eat':
 case 'drink':
 case 'feed':
 
+	if (!isHaspet) return reply(userP())
+	if (!isFridge) return reply("Please buy a fridge first. Open .foodstore")
+
+	if (args.length > 1) return reply("Please open fridge to see how to feed. .fridge")
+	if (args.length < 1) return reply("Please open fridge to see how to feed. .fridge")
+
 	const _eatberries = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/berries.json`));
 	const eatberries = _eatberries[0];	
 
@@ -5896,6 +5902,13 @@ break
 case 'buyfood':
 
 
+	if (!isHaspet) return reply(userP())
+	if (!isFridge) return reply("Please buy a fridge first. Open .foodstore")
+
+	if (args.length > 1) return reply("Please choose something from the .foodstore")
+	if (args.length < 1) return reply("Please choose something from the .foodstore")
+
+
 const _yourcashbuyfood = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
 const buyfoodmoney = _yourcashbuyfood[7]	//--- money	
 const buyfooddesign = _yourcashbuyfood[11]	//--- account design
@@ -6050,6 +6063,13 @@ break
 //--- PETS fridge
 case 'fridge':
 
+
+	if (!isHaspet) return reply(userP())
+	if (!isFridge) return reply("Please buy a fridge first. Open .foodstore")
+
+	const _mynewfridgess = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
+	const mynewfridgedesignss = _mynewfridgess[11]	//--- account design	
+
 	const _fridgeberries = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/berries.json`));
 	const fridgeberries = _fridgeberries[0];	
 
@@ -6059,13 +6079,16 @@ case 'fridge':
 	const _fridgemilk = JSON.parse(fs.readFileSync(`./data/fridge/${sender.split("@")[0]}/milk.json`));
 	const fridgemilk = _fridgemilk[0];
 
-	reply(`!!﹝BETA TESTING﹞
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
-	${fridgeberries}
-	${fridgebeef}
-	${fridgemilk}	
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
-	💟 StarDash Fridge`)
+	reply(`${mynewfridgedesignss} 𝐹𝑟𝑖𝑑𝑔𝑒
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+🫐 ${fridgeberries}
+.eat berries
+🥛 ${fridgebeef}
+.eat beef
+🍖 ${fridgemilk}	
+.drink milk
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+✳️ StarDash Fridge`)
 
 
 break
