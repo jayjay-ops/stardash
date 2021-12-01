@@ -3852,7 +3852,7 @@ case 'infopet':
 	const mypet2design = _myaccountpet2[11];			//--- account design
 	
 	
-const _pet2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+const _pet2 = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));	
 
 const mypet2type = _pet2[0]; 				//--- type
 const mypet2stage = _pet2[1];				//--- stage
@@ -3939,7 +3939,7 @@ case 'armor':
 	const mypet3design = _myaccountpet3[11];			//--- account design
 	
 	
-const _pet3 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+const _pet3 = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));	
 
 const mypet3type = _pet3[0]; 				//--- type
 const mypet3stage = _pet3[1];				//--- stage
@@ -4027,7 +4027,7 @@ case 'social':
 		const mypet4design = _myaccountpet4[11];			//--- account design
 		
 	
-		const _pet4 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+		const _pet4 = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));	
 
 		const mypet4type = _pet4[0]; 				//--- type
 		const mypet4stage = _pet4[1];				//--- stage
@@ -4136,7 +4136,7 @@ const petshopdesign2 = _petshopmoney[11]	//--- account design
 
 if (isHaspet) {
 		
-		const _myaccountpet4shop = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+		const _myaccountpet4shop = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));	
 		const mypet4stageshop = _myaccountpet4shop[1];
 		
 if (mypet4stageshop < 2) {		
@@ -4213,7 +4213,7 @@ const petshopmoneyfood = _petshopmoneyfood[7]	//--- money
 const petshopdesign2food = _petshopmoneyfood[11]	//--- account design
 
 		
-		const _myaccountpet4shopfood = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+		const _myaccountpet4shopfood = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));	
 		const mypet4stageshopfood = _myaccountpet4shopfood[1];
 
 if (!isFridge) {
@@ -4261,7 +4261,7 @@ const petshopdesign2food2 = _petshopmoneyfood2[11]	//--- account design
 if (isHaspet)  {	
 
 
-		const _myaccountpet4shopfood2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+		const _myaccountpet4shopfood2 = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));	
 		const mypet4stageshopfood2 = _myaccountpet4shopfood2[1];	
 
 reply (`⚠️
