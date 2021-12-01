@@ -3673,6 +3673,7 @@ case 'dragon':
 case 'umbreon':
 		
 		if (!isVerify) return reply(userB())
+		if (!isHaspet) return reply(userP())
 			
 // -- Pet 
 	const _myaccountpet = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
