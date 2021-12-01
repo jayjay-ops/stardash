@@ -5416,30 +5416,59 @@ case 'attack':
 	if (args.length < 1) return reply('﹝Tag the pet whom you want to fight.﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nExample:\n.fight @stardash')
 	if (args.length > 1) return reply('⌯   ﹝leave no space.  NOT  . fight @star but  .fight @Star﹞')
 
-const _petfight = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
-const petfighthunger = _petfight[2];			//--- hunger
+const _petfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));	
+
 const petfightname = _petfight[7];				//--- name
-const petfighthealth = _petfight[38]; 	    	//--- Health
 const petfightstatus = _petfight[9];			//--- status
-const petfightpower = _petfight[39];    			//--- Power
-const petfightenergy = _petfight[18];		     	//--- fight
-const petfightstage = _petfight[1];				//--- stage
-const petfightxp = _petfight[4];				//--- xp
+
+
+const _stagepetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/stage.json`));
+const petfightstage = _stagepetfight[0];	
+const _hungerpetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/hunger.json`));	
+const petfighthunger = _hungerpetfight[0];
+const _levelpetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/level.json`));	
+const petfightlevel = _levelpetfight[0];
+const _xppetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/xp.json`));	
+const petfightxp = _xppetfight[0];
+const _cooldownpetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/cooldown.json`));	
+const petfightcooldown = _cooldownpetfight[0];
+const _energypetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/energy.json`));	
+const petfightenergy = _energypetfight[0];
+const _healthpetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/health.json`));	
+const petfighthealth = _healthpetfight[0];
+const _powerpetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/power.json`));
+const petfightpowerpetfight = _powerpetfight[0];	
+const _figthpetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/fight.json`));	
+const petfightfight = _fightpetfight[0];
 
 	if (petfightstatus === "dead") return reply(`Your pet is dead... Truly sorry :( \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nIt will be remembered\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`) 
 
 	if (petfighthunger < 2) return reply(`Your pet has no Energy... It doesnt want to fight until you feed it. \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nHis hunger: ${petfighthunger} Hungerpoints\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`) 
 
 
-const _hispetfight = JSON.parse(fs.readFileSync(`${value.replace('@','./')}.pet.json`));	
-const hispetfighthunger = _hispetfight[2];			//--- hunger
+const _hispetfight = JSON.parse(fs.readFileSync(`./data/pets/${value.replace('@','./')}/pet.json`));	
 const hispetfightname = _hispetfight[7];				//--- name
-const hispetfighthealth = _hispetfight[38]; 	    	//--- Health
 const hispetfightstatus = _hispetfight[9];			//--- status
-const hispetfightpower = _hispetfight[39];    			//--- Power
-const hispetfightenergy = _hispetfight[18];		     	//--- fight
-const hispetfightstage = _petfight[1];				//--- stage
-const hispetfightxp = _hispetfight[4];				//--- xp
+
+
+const _stagehispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/stage.json`));
+const hispetfightstage = _stagehispetfight[0];	
+const _hungerhispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/hunger.json`));	
+const hispetfighthunger = _hungerhispetfight[0];
+const _levelhispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/level.json`));	
+const hispetfightlevel = _levelhispetfight[0];
+const _xphispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/xp.json`));	
+const hispetfightxp = _xphispetfight[0];
+const _cooldownhispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/cooldown.json`));	
+const hispetfightcooldown = _cooldownhispetfight[0];
+const _energyhispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/energy.json`));	
+const hispetfightenergy = _energyhispetfight[0];
+const _healthhispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/health.json`));	
+const hispetfighthealth = _healthhispetfight[0];
+const _powerhispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/power.json`));
+const hispetfightpowerhispetfight = _powerhispetfight[0];	
+const _figthhispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/fight.json`));	
+const hispetfightfight = _fighthispetfight[0];
 
 	if (hispetfightstatus === "dead") return reply(`His pet is dead... Truly sorry for him :( \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nIt will be remembered\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`) 
 
@@ -5672,17 +5701,17 @@ case 'petname':
 		if (args.length < 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 its name﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nExample .petname Hasy\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets')
         if (args.length > 1) return reply('⌯   ﹝𝙴𝚗𝚝𝚎𝚛 only one name﹞\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nExample .petname Hasy\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets')
 			
-const _petfightchangename = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+const _petfightchangename = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));	
 const petfightchangename = _petfightchangename[7];				//--- name
 			
 					let newnamepet = args[0];
 
-					fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
+					fs.readFile(`./data/pets/${sender.split("@")[0]}/pet.json`, 'utf-8', function(err, data) {
 						if (err) throw err;
 						
 						var newValue = data.replace(`${petfightchangename}`, newnamepet);
 						
-						fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
+						fs.writeFile(`./data/pets/${sender.split("@")[0]}/pet.json`, newValue, 'utf-8', function(err, data) {
 							if (err) throw err;
 						})
 					})
