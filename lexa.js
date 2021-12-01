@@ -6049,7 +6049,7 @@ const delayfoood23555 = ms => new Promise(resolve => setTimeout(resolve, ms))
 await delayfoood23555(1000) /// waiting 1 second.	
 
 const _yourcashbuyfood11 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@s.whatsapp.net.json`));	
-const buyfoodmoney1 = _yourcashbuyfood11[7]	//--- money	
+const buyfoodmoney11 = _yourcashbuyfood11[7]	//--- money	
 
 
 reply(`${buyfooddesign} Bought ${value}
