@@ -6088,6 +6088,8 @@ case 'fridge':
 🍖 ${fridgemilk}	
 .drink milk
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
+.foodstore
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 ✳️ StarDash Fridge`)
 
 
