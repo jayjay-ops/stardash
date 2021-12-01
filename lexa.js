@@ -3751,7 +3751,7 @@ const mypetevolution2 = _pet[41];			//--- Evolution 2
 const mypetevolution3 = _pet[42];			//--- Evolution 3
 const mypetevolution4 = _pet[43];			//--- Evolution 4
 
-const _figthmypet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/fight.json`));	
+const _fightmypet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/fight.json`));	
 const mypetfight = _fightmypet[0];
 
 
