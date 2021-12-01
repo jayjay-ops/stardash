@@ -5764,7 +5764,7 @@ fs.readFile(`./${sender.split("@")[0]}@s.whatsapp.net.json`, 'utf-8', function(e
 
 else { let foodcost = Number(0);
 
-	reply(`${buyfooddesign} Error 505
+	reply(`${eatdesign} Error 505
 	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 	does not exist.
 	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -5780,7 +5780,7 @@ const _yourcashbuyfood1 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}@
 const buyfoodmoney11 = _yourcashbuyfood1[7]	//--- money	
 
 
-reply(`${buyfooddesign} Bought ${value}
+reply(`${eatdesign} Bought ${value}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 Money left: ${buyfoodmoney11}$
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
