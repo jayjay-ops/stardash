@@ -4307,7 +4307,6 @@ case 'myaccount':
 case 'profile':
 		
 	if (!isVerify) return reply(userB())
-		if (!isGroup) return reply(group())
 		
 // -- User  
 	
