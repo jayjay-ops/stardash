@@ -6083,9 +6083,9 @@ case 'fridge':
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 🫐 ${fridgeberries}
 .eat berries
-🥛 ${fridgebeef}
+🍖 ${fridgebeef}
 .eat beef
-🍖 ${fridgemilk}	
+🥛 ${fridgemilk}	
 .drink milk
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
 .foodstore
