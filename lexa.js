@@ -5437,7 +5437,7 @@ const petfightenergy = _energypetfight[0];
 const _healthpetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/health.json`));	
 const petfighthealth = _healthpetfight[0];
 const _powerpetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/power.json`));
-const petfightpowerpetfight = _powerpetfight[0];	
+const petfightpower = _powerpetfight[0];	
 const _fightpetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/fight.json`));	
 const petfightfight = _fightpetfight[0];
 
