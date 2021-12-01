@@ -3679,13 +3679,22 @@ case 'umbreon':
 	const mypetdesign = _myaccountpet[11];			//--- account design
 	
 	
-const _pet = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
+const _pet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/pet.json`));	
 
 const mypettype = _pet[0]; 				//--- type
-const mypetstage = _pet[1];				//--- stage
-const mypethunger = _pet[2];			//--- hunger
-const mypetlevel = _pet[3];				//--- level
-const mypetxp = _pet[4];				//--- xp
+
+const _stagemypet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/stage.json`));
+const mypetstage = _stagemypet[0];	
+
+const _hungermypet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/hunger.json`));	
+const mypethunger = _hungermypet[0];
+
+const _levelmypet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/level.json`));	
+const mypetlevel = _levelmypet[0];
+
+const _xpmypet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/xp.json`));	
+const mypetxp = _xpmypet[0];
+
 const mypetchangepet = _pet[5];			//--- changepet
 
 const mypetfriends = _pet[6];			//--- friends
@@ -3701,8 +3710,12 @@ const mypetcloth2 = _pet[14];
 const mypetcloth3 = _pet[15];
 const mypetcloth4 = _pet[16];
 
-const mypetcooldown = _pet[17];			//--- cooldown
-const mypetenergy = _pet[18];			//--- energy
+const _cooldownmypet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/cooldown.json`));	
+const mypetcooldown = _cooldownmypet[0];
+
+const _energymypet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/energy.json`));	
+const mypetenergy = _energymypet[0];
+
 const mypetweapon = _pet[19];			//--- weapon
 
 const mypetpowertype1 = _pet[20];				//--- powertype 1-4
@@ -3727,20 +3740,23 @@ const mypetempty4 = _pet[35];
 const mypetempty5 = _pet[36];
 const mypetempty6 = _pet[37];
 
-const mypethealth = _pet[38]; 	    	//--- Health
-const mypetpower = _pet[39];    			//--- Power
+const _healthmypet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/health.json`));	
+const mypethealth = _healthmypet[0];
+
+const _powermypet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/power.json`));
+const mypetpowermypet = _powermypet[0];	
+
 const mypetevolution1 = _pet[40];			//--- Evolution 1
 const mypetevolution2 = _pet[41];			//--- Evolution 2
 const mypetevolution3 = _pet[42];			//--- Evolution 3
 const mypetevolution4 = _pet[43];			//--- Evolution 4
-const mypetfight = _pet[44];		     	//--- fight
 
+const _figthmypet = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/fight.json`));	
+const mypetfight = _fightmypet[0];
 
-		const _myaccountpet4shop2 = JSON.parse(fs.readFileSync(`./${sender.split("@")[0]}.pet.json`));	
-		const mypet4stageshop2 = _myaccountpet4shop2[1];
 
 //-- Pet is stage 1		
-if (mypet4stageshop2 < 2) {
+if (mypetstage< 2) {
 
 if 	(mypetname === `Wild`) {
 		
@@ -3794,33 +3810,6 @@ ${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
 //-- Pet is stage 2		
 else {
 
-if 	(mypetname === `Wild`) {
-		
-reply(`𝑃𝑒𝑡𝑠
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
-${mypetdesign} 𝑁𝑎𝑚𝑒 » ${mypetname}
-${mypetdesign} 𝐸𝑣𝑜𝑙𝑢𝑡𝑖𝑜𝑛 » ${mypetshiny}${mypetevolution1}
-${mypetdesign} 𝑀𝑜𝑜𝑑 » ${mypetmood}
-${mypetdesign} 𝐻𝑢𝑛𝑔𝑒𝑟 » ${mypethunger}
-${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
-𝑋𝑝 » ${mypetxp}
-𝐿𝑣𝑙 » ${mypetstage}
-𝑆𝑡𝑎𝑡𝑢𝑠 » ${mypetstatus}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
-» .𝑖𝑛𝑓𝑜𝑝𝑒𝑡 «
-» .𝑎𝑟𝑚𝑜𝑟 «
-» .𝑓𝑟𝑖𝑑𝑔𝑒 «
-» .𝑠𝑜𝑐𝑖𝑎𝑙 «
-» .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
-
-𝑃𝑙𝑒𝑎𝑠𝑒 𝑛𝑎𝑚𝑒 𝑦𝑜𝑢𝑟 𝑝𝑒𝑡 𝑤𝑖𝑡ℎ 𝑡ℎ𝑒 𝑐𝑜𝑚𝑚𝑎𝑛𝑑 
-» .petname Star`)
- 
-}
- 
-else {
 	
 reply(`𝑃𝑒𝑡𝑠
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃
@@ -3840,7 +3829,7 @@ ${mypetdesign} 𝐻𝑒𝑎𝑙𝑡ℎ » ${mypethealth} 𝐿𝑝
 » .𝑠𝑜𝑐𝑖𝑎𝑙 «
 » .𝑝𝑒𝑡𝑠ℎ𝑜𝑝 «`)
 	
-} 
+
 
 }
 
