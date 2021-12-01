@@ -5467,7 +5467,7 @@ const _healthhispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.spli
 const hispetfighthealth = _healthhispetfight[0];
 const _powerhispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/power.json`));
 const hispetfightpowerhispetfight = _powerhispetfight[0];	
-const _figthhispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/fight.json`));	
+const _fighthispetfight = JSON.parse(fs.readFileSync(`./data/pets/${sender.split("@")[0]}/fight.json`));	
 const hispetfightfight = _fighthispetfight[0];
 
 	if (hispetfightstatus === "dead") return reply(`His pet is dead... Truly sorry for him :( \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\nIt will be remembered\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-🍃\n💟 StarDash Pets`) 
