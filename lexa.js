@@ -5482,12 +5482,12 @@ if (mypetdata < hispetdata) {
 						
 				let myoutcomehealth = myhealth - hisattack; 
 
-				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/pets/${sender.split("@")[0]}/pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
 					var newValue = data.replace(`${petfighthealth}`, myoutcomehealth);
 					
-					fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/pets/${sender.split("@")[0]}/pet.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 					})
 				})
@@ -5497,12 +5497,12 @@ if (mypetdata < hispetdata) {
 				
 				let mynewhunger = mypetfighthunger - Number(1); 
 
-				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/pets/${sender.split("@")[0]}/pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
 					var newValue = data.replace(`${petfighthunger}`, mynewhunger);
 					
-					fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/pets/${sender.split("@")[0]}/pet.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 						console.log('Done!');
 					})
@@ -5511,12 +5511,12 @@ if (mypetdata < hispetdata) {
 
 				let hisnewhunger = hispetfighthunger - Number(1); 
 
-				fs.readFile(`${value.replace('@','./')}.pet.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/pets/${value.replace('@','./')}/pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
 					var newValue = data.replace(`${hispetfighthunger}`, hisnewhunger);
 					
-					fs.writeFile(`${value.replace('@','./')}.pet.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/pets/${value.replace('@','./')}/pet.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 						console.log('Done!');
 					})
@@ -5529,12 +5529,12 @@ if (mypetdata < hispetdata) {
 
 				let hisnewxp = Number(hispetfightxp) + Number(hispetfightstage); 
 
-				fs.readFile(`${value.replace('@','./')}.pet.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/pets/${value.replace('@','./')}/pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
 					var newValue = data.replace(`${hispetfightxp}`, hisnewxp);
 					
-					fs.writeFile(`${value.replace('@','./')}.pet.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/pets/${value.replace('@','./')}/pet.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 						console.log('Done!');
 					})
@@ -5554,12 +5554,12 @@ else {
 						
 				let hisoutcomehealth = hishealth - myattack; 
 
-				fs.readFile(`${value.replace('@','./')}.pet.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/pets/${value.replace('@','./')}/pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
 					var newValue = data.replace(`${hispetfighthealth}`, hisoutcomehealth);
 					
-					fs.writeFile(`${value.replace('@','./')}.pet.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/pets/${value.replace('@','./')}/pet.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 					})
 				})
@@ -5570,12 +5570,12 @@ else {
 
 				let mynewhunger = petfighthunger - Number(2); 
 
-				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/pets/${sender.split("@")[0]}/pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
 					var newValue = data.replace(`${petfighthunger}`, mynewhunger);
 					
-					fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/pets/${sender.split("@")[0]}/pet.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 						console.log('Done!');
 					})
@@ -5588,12 +5588,12 @@ else {
 
 				let mynewxp = Number(petfightxp) + Number(10); 
 
-				fs.readFile(`./${sender.split("@")[0]}.pet.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/pets/${sender.split("@")[0]}/pet.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
 					var newValue = data.replace(`${petfightxp}`, mynewxp);
 					
-					fs.writeFile(`./${sender.split("@")[0]}.pet.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/pets/${sender.split("@")[0]}/pet.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 						console.log('Done!');
 					})
